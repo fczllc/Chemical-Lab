@@ -7,29 +7,9 @@ import {
   getCompareList,
   getSelectedElement
 } from './storage.js';
+import { ELEMENT_CATEGORY_LABELS, SAFETY_LABELS } from '../data/contentMeta.js';
 import { showToast } from './compare.js';
 import { navigateTo } from './router.js';
-
-const CATEGORY_LABELS = {
-  'alkali metal': '碱金属',
-  'alkaline earth metal': '碱土金属',
-  'transition metal': '过渡金属',
-  'post-transition metal': '后过渡金属',
-  metalloid: '类金属',
-  'reactive nonmetal': '非金属',
-  'noble gas': '稀有气体',
-  halogen: '卤素',
-  lanthanide: '镧系',
-  actinide: '锕系'
-};
-
-const SAFETY_LABELS = {
-  safe: '安全',
-  caution: '注意',
-  dangerous: '危险',
-  radioactive: '放射性',
-  'extremely dangerous': '极度危险'
-};
 
 let currentElectronModel = null;
 let currentSpectrumController = null;
@@ -151,9 +131,6 @@ function bindLabButton() {
     }));
 
     navigateTo('lab');
-    window.requestAnimationFrame(() => {
-      highlightRelatedExperiments(element);
-    });
   });
 }
 
@@ -325,7 +302,7 @@ function createSpectrumController(container, element, performanceMode) {
     ctx.fillText(`${element.chineseName} 发射光谱`, 16, 20);
     ctx.font = '10px "Noto Sans SC", sans-serif';
     ctx.fillStyle = '#94a3b8';
-    ctx.fillText(`${CATEGORY_LABELS[element.category] || element.category} · ${SAFETY_LABELS[element.safety] || element.safety}`, 16, 36);
+    ctx.fillText(`${ELEMENT_CATEGORY_LABELS[element.category] || element.category} · ${SAFETY_LABELS[element.safety] || element.safety}`, 16, 36);
 
     lineProfile.forEach((line, index) => {
       const x = wavelengthToX(line.wavelength, width);

@@ -4,44 +4,15 @@ import {
   getCompareList,
   removeComparedElement
 } from './storage.js';
+import {
+  COMPARE_RARITY_LABELS,
+  COMPARE_SAFETY_COLORS,
+  ELEMENT_CATEGORY_LABELS,
+  SAFETY_LABELS
+} from '../data/contentMeta.js';
 import { navigateTo } from './router.js';
 
-const CATEGORY_LABELS = {
-  'alkali metal': '碱金属',
-  'alkaline earth metal': '碱土金属',
-  'transition metal': '过渡金属',
-  'post-transition metal': '后过渡金属',
-  metalloid: '类金属',
-  'reactive nonmetal': '非金属',
-  'noble gas': '稀有气体',
-  halogen: '卤素',
-  lanthanide: '镧系',
-  actinide: '锕系'
-};
-
-const SAFETY_LABELS = {
-  safe: '安全',
-  caution: '注意',
-  dangerous: '危险',
-  radioactive: '放射性',
-  'extremely dangerous': '极度危险'
-};
-
-const RARITY_LABELS = {
-  common: '常见',
-  uncommon: '较常见',
-  rare: '稀有',
-  'very rare': '极稀有',
-  synthetic: '人工合成'
-};
-
-const SAFETY_COLORS = {
-  safe: '#22c55e',
-  caution: '#eab308',
-  dangerous: '#f97316',
-  radioactive: '#a855f7',
-  'extremely dangerous': '#ef4444'
-};
+const SAFETY_COLORS = COMPARE_SAFETY_COLORS;
 
 let elementsCatalog = [];
 let listenersBound = false;
@@ -135,10 +106,10 @@ function renderEmptyState() {
 }
 
 function renderElementCard(element) {
-  const categoryLabel = CATEGORY_LABELS[element.category] || element.category;
+  const categoryLabel = ELEMENT_CATEGORY_LABELS[element.category] || element.category;
   const safetyLabel = SAFETY_LABELS[element.safety] || element.safety;
   const safetyColor = SAFETY_COLORS[element.safety] || '#94a3b8';
-  const rarityLabel = RARITY_LABELS[element.rarity] || element.rarity;
+  const rarityLabel = COMPARE_RARITY_LABELS[element.rarity] || element.rarity;
   const topApplications = (element.applications || []).slice(0, 3);
 
   return `

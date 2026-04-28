@@ -1,6 +1,7 @@
 /** ===== 学习进度模块 ===== */
-import { achievementsData } from '../data/achievementsData.js';
-import { learningPath } from '../data/learningPath.js';
+import { EXPERIMENT_LABELS, FEATURE_LABELS, GAME_LABELS } from '../data/contentMeta.js';
+import { achievementsData } from '../data/index.js';
+import { learningPath } from '../data/index.js';
 import {
   getAchievementDates,
   getActivityLog,
@@ -16,42 +17,6 @@ import {
 
 const TOTAL_EXPERIMENTS = 5;
 const TOTAL_ELEMENTS = 118;
-const GAME_LABELS = {
-  'game-drag': '元素拖拽归位',
-  'game-memory': '元素记忆翻牌',
-  'game-reaction': '反应配对',
-  'game-collector': '元素收集',
-  'quiz-full': '完整测验挑战'
-};
-
-const EXPERIMENT_LABELS = {
-  'exp-hydrogen-combustion': '氢气燃烧',
-  'exp-iron-rusting': '铁生锈',
-  'exp-sodium-water': '钠遇水',
-  'exp-salt-formation': '盐的形成',
-  'exp-oxygen-supports-combustion': '氧气助燃'
-};
-
-const FEATURE_LABELS = {
-  'detail-panel': '元素详情面板',
-  'basic-quiz': '基础测验',
-  'collection-board': '收藏墙',
-  filters: '分类筛选',
-  search: '元素搜索',
-  'category-legend': '类别图例',
-  'compare-view': '元素对比',
-  'applications-preview': '用途预览',
-  'mini-stats': '迷你统计概览',
-  'lab-view': '实验室入口',
-  'reaction-library': '反应库',
-  'safety-guide': '安全指南',
-  'timeline-view': '发现时间线',
-  'story-mode': '故事模式',
-  'advanced-quiz': '高级测验',
-  'achievement-center': '成就中心',
-  'progress-dashboard': '进度仪表板'
-};
-
 let isBound = false;
 let selectedStageId = learningPath.stages[0]?.id || null;
 let celebrationMessage = '';

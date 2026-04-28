@@ -1,5 +1,5 @@
 /** ===== 主入口 ===== */
-import { elements } from './data/elements.js';
+import { elements } from './data/index.js';
 import {
   disposeRenderer,
   initScene,

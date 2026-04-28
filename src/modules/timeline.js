@@ -1,33 +1,11 @@
 import { getLearnedElements, setSelectedElement } from './storage.js';
 import { restoreSelectedElementView } from './renderTable.js';
+import {
+  ELEMENT_CATEGORY_LABELS,
+  ELEMENT_CATEGORY_TABLE_COLORS
+} from '../data/contentMeta.js';
 
-const categoryNames = {
-  'alkali metal': '碱金属',
-  'alkaline earth metal': '碱土金属',
-  'transition metal': '过渡金属',
-  'post-transition metal': '后过渡金属',
-  metalloid: '类金属',
-  'reactive nonmetal': '非金属',
-  'noble gas': '稀有气体',
-  halogen: '卤素',
-  lanthanide: '镧系',
-  actinide: '锕系',
-  unknown: '未知'
-};
-
-const categoryColors = {
-  'alkali metal': '#ff6b6b',
-  'alkaline earth metal': '#ffa94d',
-  'transition metal': '#ffd43b',
-  'post-transition metal': '#69db7c',
-  metalloid: '#38d9a9',
-  'reactive nonmetal': '#4dabf7',
-  'noble gas': '#9775fa',
-  halogen: '#f06595',
-  lanthanide: '#ff6b9d',
-  actinide: '#ff8fab',
-  unknown: '#868e96'
-};
+const categoryColors = ELEMENT_CATEGORY_TABLE_COLORS;
 
 const timelineState = {
   elements: [],
@@ -134,7 +112,7 @@ function renderTimelinePage() {
           <select id="timeline-category-filter">
             <option value="all">全部类别</option>
             ${categories.map((category) => `
-              <option value="${escapeAttribute(category)}"${timelineState.filters.category === category ? ' selected' : ''}>${escapeHTML(categoryNames[category] || category)}</option>
+              <option value="${escapeAttribute(category)}"${timelineState.filters.category === category ? ' selected' : ''}>${escapeHTML(ELEMENT_CATEGORY_LABELS[category] || category)}</option>
             `).join('')}
           </select>
         </label>
@@ -215,7 +193,7 @@ function renderTimelineNode(element, index, learnedElements) {
       <div class="timeline-entry-card glass-panel">
         <div class="timeline-entry-topline">
           <span class="timeline-entry-year">${escapeHTML(element.timelineYearLabel)}</span>
-          <span class="timeline-entry-category">${escapeHTML(categoryNames[element.category] || '未知类别')}</span>
+          <span class="timeline-entry-category">${escapeHTML(ELEMENT_CATEGORY_LABELS[element.category] || '未知类别')}</span>
         </div>
         <div class="timeline-entry-core">
           <span class="timeline-entry-symbol">${escapeHTML(element.symbol)}</span>
@@ -539,7 +517,7 @@ function showTooltip(element) {
     </div>
     <div class="timeline-tooltip-meta">
       <span>${escapeHTML(element.timelineYearLabel)}</span>
-      <span>${escapeHTML(categoryNames[element.category] || '未知')}</span>
+      <span>${escapeHTML(ELEMENT_CATEGORY_LABELS[element.category] || '未知')}</span>
     </div>
     <p class="timeline-tooltip-copy">${escapeHTML(element.funFact || element.timelineDescription)}</p>
   `;

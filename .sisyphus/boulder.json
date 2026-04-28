@@ -1,59 +1,95 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\agents-md-update.md",
-  "started_at": "2026-04-28T09:41:53.208Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\json-content-migration.md",
+  "started_at": "2026-04-28T15:14:42.906Z",
   "session_ids": [
-    "ses_22ccbb782ffeYlLET2HCnY94Pj"
+    "ses_22b78dab6ffe3oOrMz46zh2K6I"
   ],
   "session_origins": {
-    "ses_22ccbb782ffeYlLET2HCnY94Pj": "direct"
+    "ses_22b78dab6ffe3oOrMz46zh2K6I": "direct"
   },
-  "plan_name": "agents-md-update",
+  "plan_name": "json-content-migration",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Reconfirm the authoritative sources and exact wording anchors",
-      "session_id": "ses_22c8765beffeuSimLPxBuC6hZr",
+      "task_title": "建立统一内容访问边界与同步 JSON 约束",
+      "session_id": "ses_22b551347ffe6YPr6nx8Fp7PkT",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-low",
-      "updated_at": "2026-04-28T09:44:41.780Z"
+      "category": "unspecified-high",
+      "updated_at": "2026-04-28T15:20:19.309Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Draft the compact `AGENTS.md` structure and content rules",
-      "session_id": "ses_22c84e53dffegDAacJ8MQZzAN2",
+      "task_title": "迁移 elements 数据并保留元素校验链",
+      "session_id": "ses_22b4f8fcbffe3h2Q8OWRqEUNJe",
       "agent": "Sisyphus-Junior",
-      "category": "writing",
-      "updated_at": "2026-04-28T09:46:37.597Z"
+      "category": "unspecified-high",
+      "updated_at": "2026-04-28T15:28:52.167Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Create the root `AGENTS.md` with verified repo-specific guidance only",
-      "session_id": "ses_22c834d78ffeLqOkWgTNhuk8uV",
+      "task_title": "迁移 quizData 数据并保留测验引用校验",
+      "session_id": "ses_22b45e8e3ffeygkLPfyKByOZg9",
       "agent": "Sisyphus-Junior",
-      "category": "writing",
-      "updated_at": "2026-04-28T09:48:19.252Z"
+      "category": "quick",
+      "updated_at": "2026-04-28T15:37:42.944Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "迁移 reactions 数据并保留实验/游戏消费链",
+      "session_id": "ses_22b404953ffev813tVxWJFqQxn",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-04-28T15:42:54.708Z"
     },
     "todo:5": {
       "task_key": "todo:5",
       "task_label": "5",
-      "task_title": "Run final repo smoke verification and polish wording for durability",
-      "session_id": "ses_22c7755e0ffe4k98gH39Is1Xqz",
-      "agent": "oracle",
-      "category": "",
-      "updated_at": "2026-04-28T10:02:26.550Z"
+      "task_title": "迁移 achievementsData 数据并保留成就判定语义",
+      "session_id": "ses_22b3bb9d7ffead50Z8I7iuxDUz",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-04-28T15:48:59.655Z"
+    },
+    "todo:6": {
+      "task_key": "todo:6",
+      "task_label": "6",
+      "task_title": "迁移 learningPath 数据并保留阶段解锁语义",
+      "session_id": "ses_22b32ea3bffeiyB3GroTpf7hMW",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-04-28T15:57:29.599Z"
+    },
+    "todo:7": {
+      "task_key": "todo:7",
+      "task_label": "7",
+      "task_title": "收敛重复内容元数据到共享配置模块",
+      "session_id": "ses_22b2e8baeffeoPBa1y7mWQ50DE",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-28T16:06:03.795Z"
+    },
+    "todo:8": {
+      "task_key": "todo:8",
+      "task_label": "8",
+      "task_title": "加固验证链路、数据烟雾测试与导入审计",
+      "session_id": "ses_22b1c6553ffeOprmhxDfNRSSi9",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-28T16:40:30.444Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_22c7132e4ffeHhp59GwmQWlbis",
-      "agent": "oracle",
-      "category": "",
-      "updated_at": "2026-04-28T10:09:45.290Z"
+      "session_id": "ses_22aee413fffeCQojEH9Oh5pfs0",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-04-28T17:16:57.502Z"
     }
   }
 }

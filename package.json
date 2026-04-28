@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:elements": "node scripts/validate-elements.mjs",
+    "validate:supporting": "node scripts/validate-supporting-data.mjs",
+    "validate:data": "npm run validate:elements && npm run validate:supporting && node scripts/audit-business-data-imports.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",

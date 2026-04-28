@@ -1,20 +1,14 @@
-import { achievementsData } from '../data/achievementsData.js';
-import { learningPath } from '../data/learningPath.js';
+import { achievementsData } from '../data/index.js';
+import { learningPath } from '../data/index.js';
+import { ELEMENT_CATEGORY_META } from '../data/contentMeta.js';
 import { navigateTo } from './router.js';
 import { getCompareList, getLearnedElements, getUnlockedAchievements } from './storage.js';
 
-const CATEGORY_META = {
-  'alkali metal': { label: '碱金属', color: 'var(--alkali)' },
-  'alkaline earth metal': { label: '碱土金属', color: 'var(--alkaline)' },
-  'transition metal': { label: '过渡金属', color: 'var(--transition)' },
-  'post-transition metal': { label: '后过渡金属', color: 'var(--post-transition)' },
-  metalloid: { label: '类金属', color: 'var(--metalloid)' },
-  'reactive nonmetal': { label: '非金属', color: 'var(--nonmetal)' },
-  'noble gas': { label: '稀有气体', color: 'var(--noble)' },
-  halogen: { label: '卤素', color: 'var(--halogen)' },
-  lanthanide: { label: '镧系', color: 'var(--lanthanide)' },
-  actinide: { label: '锕系', color: 'var(--actinide)' }
-};
+const CATEGORY_META = Object.fromEntries(
+  Object.entries(ELEMENT_CATEGORY_META)
+    .filter(([, meta]) => meta.overviewColor)
+    .map(([key, meta]) => [key, { label: meta.label, color: meta.overviewColor }])
+);
 
 const TOTAL_ELEMENTS = 118;
 const COMPARE_PREVIEW_LIMIT = 3;

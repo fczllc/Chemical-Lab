@@ -1,5 +1,6 @@
 /** ===== 游戏中心模块 ===== */
-import { reactions } from '../data/reactions.js';
+import { GAME_KEYS, GAME_META } from '../data/contentMeta.js';
+import { reactions } from '../data/index.js';
 import { navigateTo } from './router.js';
 import {
   getCollectedElements,
@@ -7,36 +8,6 @@ import {
   getLearnedElements,
   updateGameScore
 } from './storage.js';
-
-const GAME_KEYS = {
-  drag: 'game-drag',
-  memory: 'game-memory',
-  reaction: 'game-reaction',
-  collector: 'game-collector'
-};
-
-const GAME_META = {
-  drag: {
-    title: '元素拖拽归位',
-    kicker: 'PERIODIC DOCKING',
-    description: '在 60 秒内把元素卡片拖到正确的周期表位置，答对加分，答错扣分。'
-  },
-  memory: {
-    title: '元素记忆翻牌',
-    kicker: 'MEMORY MATRIX',
-    description: '翻出元素符号与中文名的正确配对，用更少步数和时间拿到更高评级。'
-  },
-  reaction: {
-    title: '反应配对',
-    kicker: 'REACTION LINK',
-    description: '把反应物和正确生成物连接起来，建立化学反应的直觉。'
-  },
-  collector: {
-    title: '元素收集',
-    kicker: 'COLLECTION VAULT',
-    description: '查看已学习元素的收集墙、完成率和阶段奖励，了解下一步学习目标。'
-  }
-};
 
 const REWARD_TIERS = [10, 30, 60, 90, 118];
 const DRAG_BATCH_SIZE = 8;

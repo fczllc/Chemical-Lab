@@ -1,0 +1,56 @@
+{
+  "learningPath": {
+    "stages": [
+      {
+        "id": "stage-1",
+        "name": "初级探索者",
+        "description": "从身边最常见的元素开始，先建立“符号、名称、用途”三件事的第一印象。",
+        "requiredCount": 10,
+        "focusElements": [1, 6, 7, 8, 11, 12, 14, 16, 17, 20],
+        "unlockedGames": ["game-memory"],
+        "unlockedExperiments": ["exp-oxygen-supports-combustion"],
+        "unlockedFeatures": ["detail-panel", "basic-quiz", "collection-board"]
+      },
+      {
+        "id": "stage-2",
+        "name": "元素学徒",
+        "description": "开始观察周期表中的分类和位置，理解金属、非金属和稀有气体的分布规律。",
+        "requiredCount": 25,
+        "focusElements": [2, 3, 10, 13, 18, 19, 26, 29],
+        "unlockedGames": ["game-memory", "game-drag"],
+        "unlockedExperiments": ["exp-oxygen-supports-combustion", "exp-iron-rusting"],
+        "unlockedFeatures": ["filters", "search", "category-legend"]
+      },
+      {
+        "id": "stage-3",
+        "name": "化学助手",
+        "description": "把元素和生活中的材料、能源、电子设备联系起来，建立“学以致用”的直觉。",
+        "requiredCount": 50,
+        "focusElements": [15, 22, 24, 26, 29, 47, 53, 79],
+        "unlockedGames": ["game-memory", "game-drag", "game-collector"],
+        "unlockedExperiments": ["exp-iron-rusting", "exp-salt-formation"],
+        "unlockedFeatures": ["compare-view", "applications-preview", "mini-stats"]
+      },
+      {
+        "id": "stage-4",
+        "name": "实验室研究员",
+        "description": "开始系统观察典型化学反应，理解助燃、氧化、置换等更完整的实验场景。",
+        "requiredCount": 80,
+        "focusElements": [1, 8, 11, 16, 17, 26, 30, 35],
+        "unlockedGames": ["game-memory", "game-drag", "game-reaction", "game-collector"],
+        "unlockedExperiments": ["exp-hydrogen-combustion", "exp-sodium-water", "exp-salt-formation"],
+        "unlockedFeatures": ["lab-view", "reaction-library", "safety-guide"]
+      },
+      {
+        "id": "stage-5",
+        "name": "元素大师",
+        "description": "走向完整的元素视野，理解稀有材料、放射性元素与现代科技文明之间的连接。",
+        "requiredCount": 118,
+        "focusElements": [42, 57, 60, 74, 79, 82, 92, 118],
+        "unlockedGames": ["game-memory", "game-drag", "game-reaction", "game-collector"],
+        "unlockedExperiments": ["exp-hydrogen-combustion", "exp-iron-rusting", "exp-sodium-water", "exp-salt-formation", "exp-oxygen-supports-combustion"],
+        "unlockedFeatures": ["timeline-view", "story-mode", "advanced-quiz", "achievement-center", "progress-dashboard"]
+      }
+    ]
+  }
+}

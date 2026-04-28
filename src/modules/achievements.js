@@ -1,5 +1,9 @@
 /** ===== 成就模块 ===== */
-import { achievementsData } from '../data/achievementsData.js';
+import {
+  ACHIEVEMENT_CATEGORY_META,
+  ACHIEVEMENT_RARITY_LABELS
+} from '../data/contentMeta.js';
+import { achievementsData } from '../data/index.js';
 import {
   getAchievementDates,
   getCompletedExperiments,
@@ -10,13 +14,6 @@ import {
   getUnlockedAchievements,
   unlockAchievement
 } from './storage.js';
-
-const CATEGORY_META = {
-  learning: { label: '学习类', icon: '📚' },
-  experiment: { label: '实验类', icon: '🧪' },
-  game: { label: '游戏类', icon: '🎮' },
-  quiz: { label: '测验类', icon: '📝' }
-};
 
 let isBound = false;
 
@@ -139,7 +136,7 @@ function renderAchievements() {
 }
 
 function renderCategorySection(category, achievements, unlockedIds, unlockDates) {
-  const meta = CATEGORY_META[category] || { label: category, icon: '🏅' };
+  const meta = ACHIEVEMENT_CATEGORY_META[category] || { label: category, icon: '🏅' };
   const unlockedCount = achievements.filter((achievement) => unlockedIds.has(achievement.id)).length;
 
   return `
@@ -193,13 +190,7 @@ function groupAchievementsByCategory() {
 }
 
 function formatRarity(rarity) {
-  const rarityLabels = {
-    common: '普通',
-    rare: '稀有',
-    legendary: '传说'
-  };
-
-  return rarityLabels[rarity] || rarity || '普通';
+  return ACHIEVEMENT_RARITY_LABELS[rarity] || rarity || '普通';
 }
 
 function formatDate(value) {

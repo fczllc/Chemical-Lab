@@ -1,5 +1,5 @@
 /** ===== 故事模式模块 ===== */
-import { elements } from '../data/elements.js';
+import { elements } from '../data/index.js';
 import { getSelectedElement } from './storage.js';
 import { getCurrentSection, navigateTo } from './router.js';
 

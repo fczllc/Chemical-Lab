@@ -1,4 +1,15 @@
-import { elements, allowedCategories, allowedRarities, allowedSafetyLevels } from '../src/data/elements.js';
+import { readFile } from 'node:fs/promises';
+
+const elementsData = JSON.parse(
+  await readFile(new URL('../src/data/elements.json', import.meta.url), 'utf8')
+);
+
+const {
+  elements,
+  allowedCategories,
+  allowedRarities,
+  allowedSafetyLevels
+} = elementsData;
 
 const requiredFields = [
   'atomicNumber',

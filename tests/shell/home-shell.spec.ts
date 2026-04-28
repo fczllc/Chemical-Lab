@@ -3,9 +3,8 @@ import { test, expect } from '@playwright/test';
 test.describe('Homepage Shell Contract', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto('/');
-    // Wait for loader to disappear
-    await page.waitForSelector('#global-loader', { state: 'hidden', timeout: 10000 });
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await waitForShellReady(page);
   });
 
   test('desktop shell contract - all shell regions visible at 1440x900', async ({ page }) => {
@@ -42,10 +41,23 @@ test.describe('Homepage Shell Contract', () => {
   });
 });
 
+async function waitForShellReady(page) {
+  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId('detail-panel')).toBeVisible({ timeout: 15000 });
+  await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
+  await expect.poll(async () => {
+    return await page.evaluate(() => {
+      const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
+      const loaderHidden = document.getElementById('global-loader')?.classList.contains('hidden') ?? false;
+      return hasElements && loaderHidden;
+    });
+  }, { timeout: 15000 }).toBe(true);
+}
+
 test.describe('Responsive Layout', () => {
   test('tablet layout - navigation visible, detail panel overlay', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Navigation should be visible
@@ -63,7 +75,7 @@ test.describe('Responsive Layout', () => {
 
   test('mobile layout - hamburger menu and bottom sheet', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Mobile menu toggle should be visible
@@ -93,7 +105,7 @@ test.describe('Responsive Layout', () => {
 
   test('mobile periodic table horizontal scroll', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     const wrapper = page.locator('.periodic-table-wrapper');
@@ -107,7 +119,7 @@ test.describe('Responsive Layout', () => {
 
   test('detail panel bottom sheet on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Click on first element to open detail panel
@@ -136,7 +148,7 @@ test.describe('Responsive Layout', () => {
 test.describe('Hash-based Routing', () => {
   test('unknown route falls back to home', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto('/#/does-not-exist');
+    await page.goto('/#/does-not-exist', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Should fall back to home
@@ -151,7 +163,7 @@ test.describe('Hash-based Routing', () => {
 
   test('hash routes navigate correctly', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     const routes = [
@@ -180,7 +192,7 @@ test.describe('Hash-based Routing', () => {
 
 test.describe('Device Optimizations', () => {
   test('viewport meta prevents zoom', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     const viewport = page.locator('meta[name="viewport"]');
     await expect(viewport).toHaveAttribute('content', /maximum-scale=1\.0/);
     await expect(viewport).toHaveAttribute('content', /user-scalable=no/);
@@ -189,7 +201,7 @@ test.describe('Device Optimizations', () => {
 
 test.describe('Performance and Accessibility', () => {
   test('global loader is present and hides after init', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     const loader = page.locator('#global-loader');
     await expect(loader).toBeAttached();
 
@@ -198,7 +210,7 @@ test.describe('Performance and Accessibility', () => {
   });
 
   test('focus styles are visible', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Focus on first element cell
@@ -214,7 +226,7 @@ test.describe('Performance and Accessibility', () => {
   });
 
   test('keyboard navigation works', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
     await page.waitForLoadState('networkidle');
 
     // Press Escape to close any modal

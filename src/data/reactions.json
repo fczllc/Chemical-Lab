@@ -1,0 +1,136 @@
+{
+  "reactions": [
+    {
+      "id": "reaction-hydrogen-combustion",
+      "name": "氢气燃烧",
+      "description": "展示氢气和氧气结合生成水的过程，重点观察火焰与水蒸气的形成。",
+      "reactants": [
+        "H2",
+        "O2"
+      ],
+      "products": [
+        "H2O"
+      ],
+      "experimentId": "exp-hydrogen-combustion",
+      "safetyLevel": "dangerous",
+      "visualDescription": "蓝色火焰迅速闪亮，随后出现细小水雾与发光粒子。",
+      "steps": [
+        "检查实验舱气体比例，确认氢气与氧气已经分开储存在安全容器中。",
+        "点按启动阀门，让少量氢气进入点火区域。",
+        "观察蓝色火焰出现，并记录火焰亮度与持续时间。",
+        "留意反应后产生的水雾，理解氢气燃烧会生成水。"
+      ],
+      "safetyNotes": [
+        "氢气极易燃，真实实验必须远离明火和静电。",
+        "氧气会助燃，实验区要保持良好通风。",
+        "这里只是虚拟演示，现实中必须由老师指导。"
+      ]
+    },
+    {
+      "id": "reaction-iron-rusting",
+      "name": "铁生锈",
+      "description": "观察铁在氧气和水分作用下慢慢生成锈迹，理解缓慢氧化。",
+      "reactants": [
+        "Fe",
+        "O2",
+        "H2O"
+      ],
+      "products": [
+        "Fe2O3"
+      ],
+      "experimentId": "exp-iron-rusting",
+      "safetyLevel": "caution",
+      "visualDescription": "银灰色铁片表面逐步出现橙褐色纹理，颜色一层层扩散。",
+      "steps": [
+        "把铁片放入潮湿空气模拟舱中。",
+        "缓慢提升湿度并引入氧气，让环境接近生锈条件。",
+        "观察铁片颜色从银灰逐渐转为橙褐色。",
+        "记录这是一种缓慢发生的氧化反应。"
+      ],
+      "safetyNotes": [
+        "铁锈实验相对安全，但真实实验仍需保持器材干净。",
+        "避免直接触摸生锈金属边缘，防止划伤。",
+        "实验结束后应及时清理潮湿器材。"
+      ]
+    },
+    {
+      "id": "reaction-sodium-water",
+      "name": "钠遇水",
+      "description": "用动画呈现金属钠在水面快速移动并放出气泡的现象，强调必须远程演示。",
+      "reactants": [
+        "Na",
+        "H2O"
+      ],
+      "products": [
+        "NaOH",
+        "H2"
+      ],
+      "experimentId": "exp-sodium-water",
+      "safetyLevel": "extremely dangerous",
+      "visualDescription": "银白色小球在水面滑动，发出亮光和气泡，随后出现提示性的安全警报。",
+      "steps": [
+        "先锁定防爆罩与远程操控模式。",
+        "将极少量钠投入水面中央的虚拟反应槽。",
+        "观察钠在水面快速滑动并释放大量气泡。",
+        "记录放热与可能点燃氢气的现象，理解高危险性。"
+      ],
+      "safetyNotes": [
+        "金属钠不能徒手接触，也不能直接暴露在潮湿空气中。",
+        "真实实验必须使用防护罩、护目镜和远程操作。",
+        "如果反应过于剧烈，应立即停止并远离实验台。"
+      ]
+    },
+    {
+      "id": "reaction-salt-formation",
+      "name": "盐的形成",
+      "description": "通过钠和氯的模型结合，帮助学生理解离子化合物的形成。",
+      "reactants": [
+        "Na",
+        "Cl2"
+      ],
+      "products": [
+        "NaCl"
+      ],
+      "experimentId": "exp-salt-formation",
+      "safetyLevel": "dangerous",
+      "visualDescription": "金属与黄绿色气体图标靠近后形成整齐的晶体方块。",
+      "steps": [
+        "在密闭反应舱中分别显示钠和氯气模型。",
+        "启动电子转移示意动画，帮助理解离子形成。",
+        "观察晶体结构逐步排列生成食盐模型。",
+        "对比反应前后的粒子状态变化。"
+      ],
+      "safetyNotes": [
+        "氯气有刺激性，真实环境下绝不能随意吸入。",
+        "金属钠反应活泼，必须和空气、水分隔离。",
+        "虚拟实验只演示原理，不代表现实操作难度。"
+      ]
+    },
+    {
+      "id": "reaction-oxygen-supports-combustion",
+      "name": "氧气助燃",
+      "description": "展示氧气如何让燃烧更旺盛，帮助理解助燃和可燃的区别。",
+      "reactants": [
+        "C",
+        "O2"
+      ],
+      "products": [
+        "CO2"
+      ],
+      "experimentId": "exp-oxygen-supports-combustion",
+      "safetyLevel": "caution",
+      "visualDescription": "火焰在富氧环境中变得更明亮，周围粒子流动速度明显加快。",
+      "steps": [
+        "先点燃基础火焰，记录普通空气中的燃烧状态。",
+        "缓慢提高环境中的氧气浓度。",
+        "观察火焰颜色和高度的变化，理解助燃作用。",
+        "总结氧气本身不燃烧，但会让燃烧更猛烈。"
+      ],
+      "safetyNotes": [
+        "富氧环境会让可燃物更快燃烧，不能把氧气当作普通空气。",
+        "真实实验中应远离纸张、酒精等易燃物。",
+        "观察现象时应保持安全距离。"
+      ]
+    }
+  ]
+}

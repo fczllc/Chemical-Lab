@@ -5,50 +5,19 @@ import {
   setSelectedElement,
   getSelectedElement
 } from './storage.js';
+import {
+  ELEMENT_CATEGORY_LABELS,
+  ELEMENT_CATEGORY_META,
+  ELEMENT_CATEGORY_TABLE_COLORS,
+  ELEMENT_RARITY_LABELS,
+  RENDER_TABLE_SAFETY_META
+} from '../data/contentMeta.js';
 
-const categoryColors = {
-  'alkali metal': '#ff6b6b',
-  'alkaline earth metal': '#ffa94d',
-  'transition metal': '#ffd43b',
-  'post-transition metal': '#69db7c',
-  metalloid: '#38d9a9',
-  'reactive nonmetal': '#4dabf7',
-  'noble gas': '#9775fa',
-  halogen: '#f06595',
-  lanthanide: '#ff6b9d',
-  actinide: '#ff8fab',
-  unknown: '#868e96'
-};
+const categoryColors = ELEMENT_CATEGORY_TABLE_COLORS;
 
-const categoryNames = {
-  'alkali metal': '碱金属',
-  'alkaline earth metal': '碱土金属',
-  'transition metal': '过渡金属',
-  'post-transition metal': '后过渡金属',
-  metalloid: '类金属',
-  'reactive nonmetal': '非金属',
-  'noble gas': '稀有气体',
-  halogen: '卤素',
-  lanthanide: '镧系',
-  actinide: '锕系',
-  unknown: '未知'
-};
+const rarityNames = ELEMENT_RARITY_LABELS;
 
-const rarityNames = {
-  common: '常见',
-  uncommon: '较少见',
-  rare: '稀有',
-  'very rare': '非常稀有',
-  synthetic: '人工合成'
-};
-
-const safetyMeta = {
-  safe: { label: '安全', color: '#69db7c' },
-  caution: { label: '注意', color: '#ffd43b' },
-  dangerous: { label: '危险', color: '#ffa94d' },
-  radioactive: { label: '放射性', color: '#ff6b6b' },
-  'extremely dangerous': { label: '极度危险', color: '#ff4d6d' }
-};
+const safetyMeta = RENDER_TABLE_SAFETY_META;
 
 const PANEL_SWITCH_DURATION_MS = 320;
 
@@ -269,7 +238,7 @@ function populateDetailPanel(element) {
   const hero = document.querySelector('.element-hero');
   if (hero) {
     const accentColor = element.color || categoryColors[element.category] || '#4dabf7';
-    const categoryLabel = categoryNames[element.category] || '未知';
+    const categoryLabel = ELEMENT_CATEGORY_LABELS[element.category] || '未知';
     const rarityLabel = rarityNames[element.rarity] || element.rarity || '未知';
     const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
 
@@ -290,7 +259,7 @@ function populateDetailPanel(element) {
 
   const props = document.querySelector('.element-properties');
   if (props) {
-    const categoryLabel = categoryNames[element.category] || '未知';
+    const categoryLabel = ELEMENT_CATEGORY_LABELS[element.category] || '未知';
     const rarityLabel = rarityNames[element.rarity] || element.rarity || '未知';
     const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
     const applications = Array.isArray(element.applications) && element.applications.length > 0
@@ -343,7 +312,7 @@ function renderLegend() {
   const container = document.querySelector('.legend-items');
   if (!container) return;
 
-  container.innerHTML = Object.entries(categoryNames)
+  container.innerHTML = Object.entries(ELEMENT_CATEGORY_LABELS)
     .filter(([key]) => key !== 'unknown')
     .map(([key, name]) => `
       <div class="legend-item">
@@ -444,7 +413,7 @@ function createElementListRow(element) {
     <span class="list-symbol" style="color: ${categoryColors[element.category] || '#fff'}">${element.symbol}</span>
     <span class="list-chinese-name">${element.chineseName}</span>
     <span class="list-english-name">${element.englishName}</span>
-    <span class="list-category">${categoryNames[element.category] || element.category}</span>
+    <span class="list-category">${ELEMENT_CATEGORY_LABELS[element.category] || element.category}</span>
     <span class="list-mass">${element.atomicMass}</span>
   `;
 
@@ -507,7 +476,7 @@ function showTooltip(element) {
     </div>
     <div class="tooltip-meta">
       <span class="tooltip-atomic">#${element.atomicNumber}</span>
-      <span class="tooltip-category">${categoryNames[element.category] || element.category}</span>
+      <span class="tooltip-category">${ELEMENT_CATEGORY_LABELS[element.category] || element.category}</span>
     </div>
   `;
   tooltipEl.classList.add('show');

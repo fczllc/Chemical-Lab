@@ -1,5 +1,6 @@
 /** ===== 实验室模块 ===== */
-import { reactions } from '../data/reactions.js';
+import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
+import { reactions } from '../data/index.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
@@ -7,14 +8,6 @@ import {
   getSettings,
   markExperimentCompleted
 } from './storage.js';
-
-const SAFETY_LABELS = {
-  safe: '安全',
-  caution: '注意',
-  dangerous: '危险',
-  radioactive: '放射性',
-  'extremely dangerous': '极度危险'
-};
 
 const EQUATION_MAP = {
   'reaction-hydrogen-combustion': '2H2 + O2 → 2H2O',
@@ -24,13 +17,7 @@ const EQUATION_MAP = {
   'reaction-oxygen-supports-combustion': 'C + O2 → CO2'
 };
 
-const SAFETY_THEME = {
-  safe: { label: '安全', color: '#4ade80', glow: 'rgba(74, 222, 128, 0.35)', icon: '🟢' },
-  caution: { label: '注意', color: '#facc15', glow: 'rgba(250, 204, 21, 0.35)', icon: '🟡' },
-  dangerous: { label: '危险', color: '#fb923c', glow: 'rgba(251, 146, 60, 0.4)', icon: '🟠' },
-  radioactive: { label: '放射性', color: '#c084fc', glow: 'rgba(192, 132, 252, 0.4)', icon: '🟣' },
-  'extremely dangerous': { label: '极度危险', color: '#ef4444', glow: 'rgba(239, 68, 68, 0.45)', icon: '🔴' }
-};
+const SAFETY_THEME = LAB_SAFETY_THEME;
 
 const DANGEROUS_LEVELS = new Set(['dangerous', 'radioactive', 'extremely dangerous']);
 

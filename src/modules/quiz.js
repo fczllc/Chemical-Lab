@@ -1,5 +1,5 @@
 /** ===== 测验模块 ===== */
-import { quizData } from '../data/quizData.js';
+import { quizData } from '../data/index.js';
 import { restoreSelectedElementView } from './renderTable.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
