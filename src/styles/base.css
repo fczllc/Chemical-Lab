@@ -1,0 +1,191 @@
+/* ===== 基础变量与重置 ===== */
+:root {
+  /* 深色背景 */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1a2332;
+  --bg-panel: rgba(17, 24, 39, 0.85);
+  
+  /* 霓虹色 */
+  --neon-cyan: #00f0ff;
+  --neon-purple: #b829ff;
+  --neon-orange: #ff8c00;
+  --neon-green: #00ff88;
+  --neon-pink: #ff44aa;
+  --neon-yellow: #ffdd00;
+  
+  /* 元素类别色 */
+  --alkali: #ff6b6b;
+  --alkaline: #ffa94d;
+  --transition: #ffd43b;
+  --post-transition: #69db7c;
+  --metalloid: #38d9a9;
+  --nonmetal: #4dabf7;
+  --noble: #9775fa;
+  --halogen: #f06595;
+  --lanthanide: #ff6b9d;
+  --actinide: #ff8fab;
+  --unknown: #868e96;
+  
+  /* 文字 */
+  --text-primary: #e8ecf1;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* 边框 */
+  --border-glow: rgba(0, 240, 255, 0.3);
+  --border-subtle: rgba(148, 163, 184, 0.15);
+  
+  /* 字体 */
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+  
+  /* 尺寸 */
+  --header-height: 64px;
+  --panel-width: 380px;
+  --border-radius: 12px;
+  
+  /* 动画 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Three.js 背景画布 */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 玻璃拟态面板 */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+}
+
+/* 霓虹发光边框 */
+.neon-border {
+  border: 1px solid var(--border-glow);
+  box-shadow: 
+    0 0 8px rgba(0, 240, 255, 0.15),
+    inset 0 0 8px rgba(0, 240, 255, 0.05);
+}
+
+.neon-border-cyan {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3), inset 0 0 8px rgba(0, 240, 255, 0.1);
+}
+
+.neon-border-purple {
+  border-color: rgba(184, 41, 255, 0.5);
+  box-shadow: 0 0 12px rgba(184, 41, 255, 0.3), inset 0 0 8px rgba(184, 41, 255, 0.1);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* 选中文字 */
+::selection {
+  background: rgba(0, 240, 255, 0.3);
+  color: var(--text-primary);
+}
+
+/* 基础按钮 */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+}
+
+/* 输入框 */
+input, select {
+  font-family: var(--font-body);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+input:focus, select:focus {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+/* 禁用态 */
+[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 隐藏类 */
+.hidden {
+  display: none !important;
+}
+
+/* 页面切换动画 */
+.page-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.page-section.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}

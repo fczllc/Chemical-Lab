@@ -1,0 +1,335 @@
+你是资深前端工程师、Three.js 动效工程师、儿童科学教育产品设计师。
+请基于当前 Vite vanilla 项目，开发一个完整的儿童化学元素学习应用：
+项目名：
+Element Explorer Kids / 元素探索者
+一、技术栈
+- Vite
+- 原生 HTML / CSS / JavaScript
+- ES Modules
+- Three.js
+- GSAP
+- Canvas 2D
+- localStorage
+安装依赖：
+- three
+- gsap
+二、产品目标
+开发一个适合 6–14 岁儿童使用的元素周期表学习应用。
+核心体验：
+- 像游戏一样探索元素
+- 像实验室一样观察反应
+- 像科幻控制台一样酷炫
+- 像老师一样解释知识
+三、视觉风格
+整体 UI 参考高端科幻风元素周期表界面：
+- 深色背景
+- 霓虹蓝 / 紫 / 橙 / 绿发光
+- 玻璃拟态面板
+- 元素格子发光边框
+- 悬浮粒子背景
+- 右侧动态详情信息卡
+- 底部数据统计与学习模块
+- 顶部导航图标化
+整体必须现代、美观、统一，不允许简陋风格。
+四、页面模块
+请实现以下页面/模块：
+1. 首页 / 元素周期表
+2. 元素详情面板
+3. 元素对比
+4. 发现历史时间线
+5. 游戏中心
+6. 虚拟实验室
+7. 成就中心
+8. 学习进度
+9. 儿童故事模式
+五、文件结构
+请按以下结构组织代码：
+src/
+  main.js
+  data/
+    elements.js
+    quizData.js
+    reactions.js
+    achievementsData.js
+    learningPath.js
+  modules/
+    renderTable.js
+    detailPanel.js
+    filters.js
+    search.js
+    compare.js
+    timeline.js
+    quiz.js
+    achievements.js
+    progress.js
+    router.js
+    storyMode.js
+  games/
+    dragElementGame.js
+    memoryGame.js
+    reactionMatchGame.js
+    elementCollector.js
+  lab/
+    labScene.js
+    reactionSimulator.js
+    safetyGuide.js
+  three/
+    scene.js
+    particles.js
+    electronModel.js
+    elementEnergy.js
+  animations/
+    gsapAnimations.js
+  styles/
+    base.css
+    layout.css
+    periodic-table.css
+    panel.css
+    games.css
+    lab.css
+    achievements.css
+    responsive.css
+六、元素数据要求
+elements.js 必须包含 118 个元素。
+每个元素至少包含：
+- atomicNumber
+- symbol
+- name
+- chineseName
+- atomicMass
+- category
+- group
+- period
+- block
+- electronConfiguration
+- state
+- electronegativity
+- discoveredBy
+- discoveryYear
+- uses
+- danger
+- kidStory
+- funFact
+- dailyLifeExample
+- safetyLevel
+- rarity
+- x
+- y
+分类包括：
+- alkali metal
+- alkaline earth metal
+- transition metal
+- post-transition metal
+- metalloid
+- reactive nonmetal
+- noble gas
+- halogen
+- lanthanide
+- actinide
+- unknown
+七、首页周期表功能
+必须实现：
+1. 完整 118 元素周期表
+2. 镧系、锕系单独排布
+3. 点击元素打开右侧详情面板
+4. hover 时元素格子发光、浮起
+5. 当前选中元素高亮
+6. 分类筛选
+7. 周期筛选
+8. 搜索元素
+9. 重置筛选
+10. 分类图例
+11. 学习过的元素显示特殊标记
+12. 稀有元素显示特殊光效
+八、右侧详情面板
+点击元素后显示：
+- 元素符号
+- 中文名
+- 英文名
+- 原子序数
+- 原子量
+- 电子排布
+- 物理状态
+- 电负性
+- 发现者
+- 发现年份
+- 常见用途
+- 危险性
+- 儿童故事
+- 趣味事实
+- 生活中的例子
+- 安全等级
+- 光谱线 Canvas
+- Three.js 简化电子轨道动画
+按钮：
+- 加入对比
+- 收藏/收集
+- 听故事
+- 开始小测验
+- 查看实验
+九、Three.js 要求
+必须实现：
+1. 全屏星空粒子背景
+2. 周期表后方缓慢流动能量粒子
+3. 元素详情面板中的电子轨道模型
+4. 实验室中的 3D 实验场景容器
+5. 鼠标移动时背景粒子有轻微视差
+6. 所有 Three.js 代码模块化，不写进 main.js
+十、GSAP 动画要求
+必须实现：
+1. 页面进入动画
+2. 元素卡片 hover/点击动画
+3. 详情面板切换动画
+4. 筛选时淡入淡出
+5. 成就解锁弹窗动画
+6. 游戏答对/答错反馈动画
+7. 实验反应动画
+8. 时间线节点进入动画
+十一、元素对比功能
+要求：
+- 最多对比 3 个元素
+- 可添加/移除元素
+- 展示：
+  - 原子量
+  - 电负性
+  - 状态
+  - 类别
+  - 用途
+  - 危险性
+- 使用卡片式 UI
+- 提供清空对比按钮
+十二、历史时间线
+实现发现历史时间线：
+- 按年份展示元素发现
+- 关键节点高亮
+- 支持点击节点查看元素
+- 使用 GSAP 做节点进入动画
+- 可显示：
+  - 已知元素数量变化
+  - 重要发现
+  - 科学家故事
+十三、游戏中心
+必须实现 4 个小游戏：
+1. 元素拖拽归位游戏
+- 给出元素卡片
+- 用户拖到周期表正确位置
+- 判断正确/错误
+- 记录得分
+2. 元素记忆翻牌游戏
+- 12 张卡片
+- 符号与中文名配对
+- 翻牌动画
+- 计时与得分
+3. 反应配对游戏
+- 例：
+  H + O -> H2O
+  Na + Cl -> NaCl
+  Fe + O -> rust
+- 拖拽或点击配对
+- 正确后播放反应动画
+4. 元素收集游戏
+- 学习过的元素自动进入收藏
+- 不同稀有度显示不同边框
+- 展示收集进度：
+  已收集 / 118
+十四、虚拟实验室
+必须实现虚拟实验室页面。
+实验室功能：
+1. 实验列表
+- 氢气燃烧
+- 铁生锈
+- 钠遇水
+- 盐的形成
+- 氧气助燃
+2. 每个实验包含：
+- 实验名称
+- 参与元素
+- 现象描述
+- 安全提醒
+- 生活联系
+- 原理解释
+- 动画演示
+3. 交互要求：
+- 用户选择实验
+- 点击“开始实验”
+- 播放动画
+- 显示结果卡片
+- 显示安全提示
+4. 注意：
+这是儿童教育模拟，不是真实危险实验指导。
+避免提供可操作危险步骤。
+重点表现科学现象和安全意识。
+十五、测验系统
+实现至少 20 道题。
+题型：
+- 单选题
+- 判断题
+- 元素符号识别
+- 生活用途匹配
+- 安全知识题
+功能：
+- 显示题目
+- 选择答案
+- 判断对错
+- 解释答案
+- 记录得分
+- 保存最高分到 localStorage
+十六、学习路径
+实现儿童学习路径：
+阶段 1：认识元素
+阶段 2：元素在哪里
+阶段 3：元素能做什么
+阶段 4：元素会反应
+阶段 5：元素与人类文明
+每阶段包含：
+- 推荐元素
+- 推荐小游戏
+- 推荐实验
+- 完成状态
+十七、成就系统
+必须实现成就：
+- 初识元素：点击学习 1 个元素
+- 元素小学徒：学习 10 个元素
+- 周期表探索者：学习 30 个元素
+- 元素收藏家：收集 50 个元素
+- 化学小博士：学习 118 个元素
+- 实验新手：完成 1 个实验
+- 实验达人：完成 5 个实验
+- 测验高手：测验得分超过 80
+- 记忆大师：完成翻牌游戏
+- 反应专家：完成反应配对游戏
+localStorage 保存：
+- learnedElements
+- collectedElements
+- quizScores
+- completedExperiments
+- unlockedAchievements
+- gameScores
+十八、儿童故事模式
+实现故事模式：
+- 选择一个元素后，可以看到“元素小故事”
+- 故事语言要适合儿童
+- 每个元素至少有一句 kidStory
+- 可用弹窗或侧边面板展示
+- 支持“下一个故事”
+十九、响应式要求
+优先适配：
+- 1920×1080
+- 1600×900
+- 1366×768
+移动端：
+- 周期表允许横向滚动
+- 详情面板变为底部抽屉
+- 游戏模块卡片化显示
+二十、质量要求
+- npm run dev 能正常运行
+- 不允许出现控制台报错
+- 不允许出现未完成 TODO
+- 不允许出现乱码
+- 不允许出现英文占位符
+- UI 必须统一
+- 代码必须模块化
+- 注释清晰
+- 所有按钮都有反馈
+- 所有主要模块都能点击使用
+- 数据不足的字段可以用合理儿童科普内容补齐，但不要空着

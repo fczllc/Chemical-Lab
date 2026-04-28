@@ -1,0 +1,214 @@
+/** ===== 周期表网格 ===== */
+.periodic-grid {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 4px;
+  max-width: 1400px;
+}
+
+/* 元素卡片 */
+.element-cell {
+  aspect-ratio: 1;
+  min-width: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.element-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.element-cell:hover {
+  transform: translateY(-4px) scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.element-cell:hover::before {
+  opacity: 0.15;
+}
+
+.element-cell.selected {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
+}
+
+.element-cell.filtered-out {
+  opacity: 0.15;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+.element-cell.learned::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--neon-green);
+}
+
+.element-cell.rare {
+  animation: rare-glow 3s ease-in-out infinite;
+}
+
+@keyframes rare-glow {
+  0%, 100% { box-shadow: 0 0 4px rgba(184, 41, 255, 0.3); }
+  50% { box-shadow: 0 0 12px rgba(184, 41, 255, 0.6); }
+}
+
+/* 元素卡片内容 */
+.element-cell .atomic-num {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+
+.element-cell .symbol {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.element-cell .chinese-name {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.element-cell .atomic-mass {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  margin-top: 1px;
+}
+
+/* 类别颜色 */
+.element-cell[data-category="alkali metal"] { border-color: rgba(255, 107, 107, 0.4); }
+.element-cell[data-category="alkali metal"]:hover::before { background: var(--alkali); }
+.element-cell[data-category="alkaline earth metal"] { border-color: rgba(255, 169, 77, 0.4); }
+.element-cell[data-category="alkaline earth metal"]:hover::before { background: var(--alkaline); }
+.element-cell[data-category="transition metal"] { border-color: rgba(255, 212, 59, 0.4); }
+.element-cell[data-category="transition metal"]:hover::before { background: var(--transition); }
+.element-cell[data-category="post-transition metal"] { border-color: rgba(105, 219, 124, 0.4); }
+.element-cell[data-category="post-transition metal"]:hover::before { background: var(--post-transition); }
+.element-cell[data-category="metalloid"] { border-color: rgba(56, 217, 169, 0.4); }
+.element-cell[data-category="metalloid"]:hover::before { background: var(--metalloid); }
+.element-cell[data-category="reactive nonmetal"] { border-color: rgba(77, 171, 247, 0.4); }
+.element-cell[data-category="reactive nonmetal"]:hover::before { background: var(--nonmetal); }
+.element-cell[data-category="noble gas"] { border-color: rgba(151, 117, 250, 0.4); }
+.element-cell[data-category="noble gas"]:hover::before { background: var(--noble); }
+.element-cell[data-category="halogen"] { border-color: rgba(240, 101, 149, 0.4); }
+.element-cell[data-category="halogen"]:hover::before { background: var(--halogen); }
+.element-cell[data-category="lanthanide"] { border-color: rgba(255, 107, 157, 0.4); }
+.element-cell[data-category="lanthanide"]:hover::before { background: var(--lanthanide); }
+.element-cell[data-category="actinide"] { border-color: rgba(255, 143, 171, 0.4); }
+.element-cell[data-category="actinide"]:hover::before { background: var(--actinide); }
+.element-cell[data-category="unknown"] { border-color: rgba(134, 142, 150, 0.4); }
+.element-cell[data-category="unknown"]:hover::before { background: var(--unknown); }
+
+/* 镧系锕系标签 */
+.lanthanide-actinide-labels {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 4px;
+  margin-top: 8px;
+  max-width: 1400px;
+}
+
+.la-label, .ac-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 8px 4px;
+}
+
+.la-label .range, .ac-label .range {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+}
+
+/* 镧系锕系网格 */
+.la-grid, .ac-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 4px;
+  max-width: calc(1400px - 64px);
+  margin-left: 64px;
+}
+
+.la-grid {
+  margin-top: 4px;
+}
+
+.ac-grid {
+  margin-top: 4px;
+}
+
+/* 类别图例 */
+.category-legend {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+  max-width: 1400px;
+}
+
+.category-legend h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

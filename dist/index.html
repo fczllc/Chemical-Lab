@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素探索者 - Element Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-BjUM5qEX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CCUYIl_H.css">
+</head>
+<body>
+  <!-- Three.js 背景画布 -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- 顶部导航 -->
+  <header class="main-header">
+    <div class="logo">
+      <span class="logo-number">118</span>
+      <span class="logo-text">元素探索者</span>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-btn active" data-section="periodic-table">
+        <span class="nav-icon">&#9776;</span>
+        <span>周期表</span>
+      </button>
+      <button class="nav-btn" data-section="compare">
+        <span class="nav-icon">&#8644;</span>
+        <span>对比</span>
+      </button>
+      <button class="nav-btn" data-section="timeline">
+        <span class="nav-icon">&#8597;</span>
+        <span>历史</span>
+      </button>
+      <button class="nav-btn" data-section="games">
+        <span class="nav-icon">&#9830;</span>
+        <span>游戏</span>
+      </button>
+      <button class="nav-btn" data-section="lab">
+        <span class="nav-icon">&#9874;</span>
+        <span>实验室</span>
+      </button>
+      <button class="nav-btn" data-section="achievements">
+        <span class="nav-icon">&#9733;</span>
+        <span>成就</span>
+      </button>
+    </nav>
+    <div class="header-stats">
+      <span class="stat-item">
+        <span class="stat-label">已探索</span>
+        <span class="stat-value" id="explored-count">0</span>/118
+      </span>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="main-content">
+    <!-- 周期表页面 -->
+    <section id="periodic-table" class="page-section active">
+      <div class="table-controls">
+        <div class="view-modes">
+          <button class="control-btn active" data-view="grid">周期表</button>
+          <button class="control-btn" data-view="list">列表</button>
+        </div>
+        <div class="filters">
+          <span class="filter-label">筛选:</span>
+          <select id="category-filter">
+            <option value="all">全部类别</option>
+            <option value="alkali metal">碱金属</option>
+            <option value="alkaline earth metal">碱土金属</option>
+            <option value="transition metal">过渡金属</option>
+            <option value="post-transition metal">后过渡金属</option>
+            <option value="metalloid">类金属</option>
+            <option value="reactive nonmetal">非金属</option>
+            <option value="noble gas">稀有气体</option>
+            <option value="halogen">卤素</option>
+            <option value="lanthanide">镧系</option>
+            <option value="actinide">锕系</option>
+          </select>
+          <select id="period-filter">
+            <option value="all">全部周期</option>
+            <option value="1">第1周期</option>
+            <option value="2">第2周期</option>
+            <option value="3">第3周期</option>
+            <option value="4">第4周期</option>
+            <option value="5">第5周期</option>
+            <option value="6">第6周期</option>
+            <option value="7">第7周期</option>
+          </select>
+          <div class="search-box">
+            <input type="text" id="element-search" placeholder="搜索元素..." />
+            <button id="search-clear">&#10005;</button>
+          </div>
+          <button id="reset-filters" class="control-btn">重置</button>
+        </div>
+      </div>
+      
+      <div class="periodic-table-wrapper">
+        <div id="periodic-grid" class="periodic-grid"></div>
+        <div class="lanthanide-actinide-labels">
+          <div class="la-label">
+            <span>镧系元素</span>
+            <span class="range">57-71</span>
+          </div>
+          <div class="ac-label">
+            <span>锕系元素</span>
+            <span class="range">89-103</span>
+          </div>
+        </div>
+        <div id="la-grid" class="la-grid"></div>
+        <div id="ac-grid" class="ac-grid"></div>
+      </div>
+
+      <div class="category-legend">
+        <h3>元素类别</h3>
+        <div class="legend-items"></div>
+      </div>
+    </section>
+
+    <!-- 详情面板 (绝对定位覆盖层) -->
+    <aside id="detail-panel" class="detail-panel">
+      <div class="panel-header">
+        <button class="panel-close">&times;</button>
+        <div class="panel-actions">
+          <button id="btn-collect" title="收藏">&#9734;</button>
+          <button id="btn-compare-add" title="加入对比">+</button>
+        </div>
+      </div>
+      <div class="panel-content">
+        <div class="element-hero">
+          <span class="atomic-number"></span>
+          <span class="symbol"></span>
+          <span class="chinese-name"></span>
+          <span class="english-name"></span>
+          <span class="atomic-mass"></span>
+        </div>
+        <div id="electron-canvas" class="electron-canvas"></div>
+        <div class="element-properties"></div>
+        <div class="element-story"></div>
+        <div class="element-funfact"></div>
+        <div id="spectrum-canvas" class="spectrum-canvas"></div>
+        <div class="panel-buttons">
+          <button id="btn-story">听故事</button>
+          <button id="btn-quiz">小测验</button>
+          <button id="btn-lab">查看实验</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 对比页面 -->
+    <section id="compare" class="page-section">
+      <h2>元素对比 <span class="subtitle">(最多3个)</span></h2>
+      <div id="compare-container" class="compare-container">
+        <div class="compare-slots"></div>
+      </div>
+    </section>
+
+    <!-- 历史时间线 -->
+    <section id="timeline" class="page-section">
+      <h2>发现历史时间线</h2>
+      <div id="timeline-container" class="timeline-container"></div>
+    </section>
+
+    <!-- 游戏中心 -->
+    <section id="games" class="page-section">
+      <h2>游戏中心</h2>
+      <div class="games-grid">
+        <div class="game-card" data-game="drag">
+          <h3>元素拖拽归位</h3>
+          <p>将元素卡片拖到周期表的正确位置</p>
+          <button class="play-btn">开始游戏</button>
+        </div>
+        <div class="game-card" data-game="memory">
+          <h3>元素记忆翻牌</h3>
+          <p>配对元素的符号和中文名</p>
+          <button class="play-btn">开始游戏</button>
+        </div>
+        <div class="game-card" data-game="reaction">
+          <h3>反应配对</h3>
+          <p>配对正确的化学反应</p>
+          <button class="play-btn">开始游戏</button>
+        </div>
+        <div class="game-card" data-game="collector">
+          <h3>元素收集</h3>
+          <p>收集你学习过的元素</p>
+          <button class="play-btn">查看收藏</button>
+        </div>
+      </div>
+      <div id="game-area" class="game-area"></div>
+    </section>
+
+    <!-- 虚拟实验室 -->
+    <section id="lab" class="page-section">
+      <h2>虚拟实验室</h2>
+      <div class="lab-list">
+        <div class="lab-item" data-experiment="hydrogen">
+          <h3>氢气燃烧</h3>
+          <p class="lab-elements">H + O</p>
+          <button class="start-exp">开始实验</button>
+        </div>
+        <div class="lab-item" data-experiment="rust">
+          <h3>铁生锈</h3>
+          <p class="lab-elements">Fe + O</p>
+          <button class="start-exp">开始实验</button>
+        </div>
+        <div class="lab-item" data-experiment="sodium">
+          <h3>钠遇水</h3>
+          <p class="lab-elements">Na + H2O</p>
+          <button class="start-exp">开始实验</button>
+        </div>
+        <div class="lab-item" data-experiment="salt">
+          <h3>盐的形成</h3>
+          <p class="lab-elements">Na + Cl</p>
+          <button class="start-exp">开始实验</button>
+        </div>
+        <div class="lab-item" data-experiment="oxygen">
+          <h3>氧气助燃</h3>
+          <p class="lab-elements">O + C</p>
+          <button class="start-exp">开始实验</button>
+        </div>
+      </div>
+      <div id="lab-stage" class="lab-stage"></div>
+    </section>
+
+    <!-- 成就中心 -->
+    <section id="achievements" class="page-section">
+      <h2>成就中心</h2>
+      <div id="achievements-grid" class="achievements-grid"></div>
+    </section>
+
+    <!-- 学习进度 -->
+    <section id="progress" class="page-section">
+      <h2>学习进度</h2>
+      <div class="progress-path"></div>
+    </section>
+
+    <!-- 故事模式 -->
+    <section id="story" class="page-section">
+      <h2>元素故事</h2>
+      <div class="story-container"></div>
+    </section>
+  </main>
+
+  <!-- 测验弹窗 -->
+  <div id="quiz-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div id="quiz-content"></div>
+    </div>
+  </div>
+
+  <!-- 成就弹窗 -->
+  <div id="achievement-popup" class="achievement-popup">
+    <div class="popup-content">
+      <span class="popup-icon">&#9733;</span>
+      <h3 class="popup-title">成就解锁</h3>
+      <p class="popup-desc"></p>
+    </div>
+  </div>
+
+</body>
+</html>
