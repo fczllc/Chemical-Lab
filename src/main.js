@@ -19,6 +19,7 @@ import { initCompare } from './modules/compare.js';
 import { initHomeModules } from './modules/homeModules.js';
 import { initTimeline } from './modules/timeline.js';
 import { initQuiz } from './modules/quiz.js';
+import { initGames } from './modules/games.js';
 import { initAchievements } from './modules/achievements.js';
 import { initProgress } from './modules/progress.js';
 import { initStoryMode } from './modules/storyMode.js';
@@ -26,6 +27,7 @@ import { initLab } from './modules/lab.js';
 import {
   createStateInspectionProxy,
   getCollectedElements,
+  getCompletedExperiments,
   getLearnedElements,
   getQuizScores,
   getSettings,
@@ -74,6 +76,7 @@ async function init() {
   initCompare(elements);
   initTimeline(elements);
   initQuiz();
+  initGames(elements);
   initAchievements();
   initProgress();
   initStoryMode();
@@ -91,6 +94,7 @@ function bindLifecycleEvents() {
   window.addEventListener('elementcollected', updateStats);
   window.addEventListener('quizcompleted', updateStats);
   window.addEventListener('achievementunlocked', updateStats);
+  window.addEventListener('experimentcompleted', updateStats);
   window.addEventListener('statereset', updateStats);
   window.addEventListener('settingsupdated', handleSettingsUpdated);
   window.addEventListener('pagechange', handlePageChange);
@@ -189,6 +193,7 @@ function updateStats() {
   const miniCollected = document.getElementById('mini-collected');
   const miniQuiz = document.getElementById('mini-quiz');
   const miniAchievements = document.getElementById('mini-achievements');
+  const labCompletedCount = document.getElementById('lab-completed-count');
 
   if (miniLearned) {
     miniLearned.textContent = getLearnedElements().size;
@@ -203,6 +208,9 @@ function updateStats() {
   }
   if (miniAchievements) {
     miniAchievements.textContent = getUnlockedAchievements().size;
+  }
+  if (labCompletedCount) {
+    labCompletedCount.textContent = getCompletedExperiments().size;
   }
 }
 

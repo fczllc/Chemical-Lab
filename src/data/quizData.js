@@ -10,7 +10,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "基础认识",
-    "relatedElement": 8
+    "relatedElement": 8,
+    "explanation": "氧气是空气中的重要成分之一，能帮助生物呼吸，也能让许多燃烧现象持续进行。"
   },
   {
     "id": "quiz-2",
@@ -23,7 +24,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "符号识别",
-    "relatedElement": 1
+    "relatedElement": 1,
+    "explanation": "H 是氢元素的符号。氢是元素周期表中的第一个元素，也是宇宙中非常常见的元素。"
   },
   {
     "id": "quiz-3",
@@ -36,7 +38,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "生活用途",
-    "relatedElement": 14
+    "relatedElement": 14,
+    "explanation": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
   },
   {
     "id": "quiz-4",
@@ -49,7 +52,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "分类判断",
-    "relatedElement": 18
+    "relatedElement": 18,
+    "explanation": "氩属于稀有气体，化学性质比较稳定，常被用在灯泡和保护气体环境中。"
   },
   {
     "id": "quiz-5",
@@ -62,7 +66,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "生活用途",
-    "relatedElement": 10
+    "relatedElement": 10,
+    "explanation": "氖在通电后会发出明亮光芒，所以常被用来制作霓虹灯招牌。"
   },
   {
     "id": "quiz-6",
@@ -75,7 +80,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "生活用途",
-    "relatedElement": 29
+    "relatedElement": 29,
+    "explanation": "铜的导电性很好，又容易加工，因此常用于电线、电缆和电子元件。"
   },
   {
     "id": "quiz-7",
@@ -88,7 +94,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "生活用途",
-    "relatedElement": 20
+    "relatedElement": 20,
+    "explanation": "钙是骨骼和牙齿的重要组成元素，帮助身体保持坚固和健康。"
   },
   {
     "id": "quiz-8",
@@ -101,7 +108,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "安全知识",
-    "relatedElement": 53
+    "relatedElement": 53,
+    "explanation": "碘属于卤素，常用于碘盐补充和部分皮肤消毒用品中，但使用时也要遵循安全规范。"
   },
   {
     "id": "quiz-9",
@@ -114,7 +122,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "安全知识",
-    "relatedElement": 11
+    "relatedElement": 11,
+    "explanation": "金属钠遇水会迅速反应并放热，所以只能在严格防护下由老师或专业人员演示。"
   },
   {
     "id": "quiz-10",
@@ -127,7 +136,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "分类判断",
-    "relatedElement": 19
+    "relatedElement": 19,
+    "explanation": "钾位于元素周期表第一族，属于碱金属。碱金属通常反应活泼。"
   },
   {
     "id": "quiz-11",
@@ -140,7 +150,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "基础认识",
-    "relatedElement": 6
+    "relatedElement": 6,
+    "explanation": "铅笔芯并不是真正的铅，而是主要由碳元素形成的石墨制成。"
   },
   {
     "id": "quiz-12",
@@ -153,7 +164,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "生活用途",
-    "relatedElement": 3
+    "relatedElement": 3,
+    "explanation": "锂质量轻、储能能力强，所以许多可充电电池，比如锂电池，都离不开它。"
   },
   {
     "id": "quiz-13",
@@ -166,7 +178,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "生活用途",
-    "relatedElement": 2
+    "relatedElement": 2,
+    "explanation": "氦气比空气轻，而且比氢气更安全、不易燃，所以更适合充入飘起来的气球。"
   },
   {
     "id": "quiz-14",
@@ -179,7 +192,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "材料世界",
-    "relatedElement": 28
+    "relatedElement": 28,
+    "explanation": "镍常被加入钢材中，帮助提升耐腐蚀性和强度，是不锈钢的重要成分之一。"
   },
   {
     "id": "quiz-15",
@@ -192,7 +206,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "安全知识",
-    "relatedElement": 80
+    "relatedElement": 80,
+    "explanation": "汞在常温下就是液态金属，但具有毒性，因此接触和处理时都要特别小心。"
   },
   {
     "id": "quiz-16",
@@ -205,7 +220,8 @@ export const quizData = [
     ],
     "correctIndex": 1,
     "category": "反应概念",
-    "relatedElement": 1
+    "relatedElement": 1,
+    "explanation": "氢和氧反应后会生成水，这也是生活中最熟悉的一种化学变化结果。"
   },
   {
     "id": "quiz-17",
@@ -218,7 +234,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "材料世界",
-    "relatedElement": 79
+    "relatedElement": 79,
+    "explanation": "金的化学性质比较稳定，不容易生锈或腐蚀，因此常被制作成首饰。"
   },
   {
     "id": "quiz-18",
@@ -231,7 +248,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "分类判断",
-    "relatedElement": 60
+    "relatedElement": 60,
+    "explanation": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
   },
   {
     "id": "quiz-19",
@@ -244,7 +262,8 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "科学拓展",
-    "relatedElement": 92
+    "relatedElement": 92,
+    "explanation": "铀是一种著名的放射性元素，在核科学和部分医学、能源知识中常被提到。"
   },
   {
     "id": "quiz-20",
@@ -257,6 +276,7 @@ export const quizData = [
     ],
     "correctIndex": 0,
     "category": "科学拓展",
-    "relatedElement": 118
+    "relatedElement": 118,
+    "explanation": "鿫是人工合成的超重元素之一，存在时间很短，主要用于科学研究。"
   }
 ];

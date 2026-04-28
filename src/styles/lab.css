@@ -16,9 +16,20 @@
 .lab-item-card,
 .lab-stage-shell {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.94));
-  border: 1px solid rgba(148, 163, 184, 0.16);
+  border: 1px solid var(--lab-accent, rgba(148, 163, 184, 0.16));
   border-radius: var(--border-radius);
-  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.24);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.24), 0 0 0 1px var(--lab-accent-glow, rgba(148, 163, 184, 0.12));
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-item-card::before,
+.lab-stage-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--lab-accent-glow, rgba(0, 240, 255, 0.08)), transparent 40%);
+  pointer-events: none;
 }
 
 .lab-item-card {
@@ -28,7 +39,7 @@
 }
 
 .lab-item-card.is-active {
-  border-color: rgba(0, 240, 255, 0.34);
+  transform: translateY(-2px);
 }
 
 .lab-item-card.is-related {
@@ -49,11 +60,48 @@
 }
 
 .lab-elements,
-.lab-safety-level,
 .lab-stage-description,
-.lab-stage-visual {
+.lab-stage-visual,
+.lab-toolbar-meta,
+.lab-card-description,
+.lab-card-status,
+.lab-simulation-meta,
+.lab-canvas-overlay,
+.lab-result-grid .lab-stage-card strong,
+.lab-confirm-row span,
+.lab-safety-alert p {
   color: var(--text-secondary);
 }
+
+.lab-card-meta-row,
+.lab-detail-actions,
+.lab-simulation-meta,
+.lab-canvas-overlay,
+.lab-confirm-row,
+.lab-nav-row-split,
+.lab-games-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lab-safety-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.level-safe { color: #4ade80; }
+.level-caution { color: #facc15; }
+.level-dangerous { color: #fb923c; }
+.level-radioactive { color: #c084fc; }
+.level-extremely-dangerous { color: #ef4444; }
 
 .lab-complete-badge {
   padding: 6px 10px;
@@ -78,10 +126,23 @@
   gap: 18px;
 }
 
-.lab-stage-grid {
+.lab-stage-grid,
+.lab-result-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+}
+
+.lab-stage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.95fr);
+  gap: 18px;
+}
+
+.lab-stage-main,
+.lab-stage-sidebar {
+  display: grid;
+  gap: 16px;
 }
 
 .lab-stage-card {
@@ -91,11 +152,90 @@
   border: 1px solid rgba(148, 163, 184, 0.14);
 }
 
-.lab-stage-card span {
+.lab-stage-card span,
+.lab-equation-card span,
+.lab-notebook-title {
   display: block;
   color: var(--text-muted);
   margin-bottom: 8px;
   font-size: 0.8rem;
+}
+
+.lab-equation-card,
+.lab-notebook-card,
+.lab-safety-modal {
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: linear-gradient(180deg, rgba(8, 15, 31, 0.9), rgba(15, 23, 42, 0.85));
+  padding: 18px 20px;
+}
+
+.lab-equation-card strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
+  color: #e2f3ff;
+}
+
+.lab-notebook-card {
+  background: linear-gradient(180deg, rgba(255, 248, 220, 0.08), rgba(15, 23, 42, 0.86)), repeating-linear-gradient(180deg, transparent, transparent 31px, rgba(59, 130, 246, 0.12) 32px);
+}
+
+.lab-steps-list,
+.lab-safety-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  color: #d9ebff;
+}
+
+.lab-safety-alert {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid currentColor;
+}
+
+.lab-confirm-row {
+  justify-content: flex-start;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px dashed rgba(148, 163, 184, 0.22);
+}
+
+.lab-confirm-row input {
+  width: 18px;
+  height: 18px;
+}
+
+.lab-confirm-row.is-optional {
+  opacity: 0.9;
+}
+
+.lab-canvas-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  background: radial-gradient(circle at top, rgba(14, 165, 233, 0.14), rgba(2, 6, 23, 0.96));
+  box-shadow: inset 0 0 30px rgba(56, 189, 248, 0.14), 0 0 40px var(--lab-accent-glow, rgba(56, 189, 248, 0.14));
+}
+
+.lab-simulation-canvas {
+  width: 100%;
+  min-height: 380px;
+  display: block;
+  background: transparent;
+}
+
+.lab-canvas-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px;
+  background: linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.88));
 }
 
 .lab-nav-row {
@@ -103,14 +243,32 @@
   justify-content: flex-end;
 }
 
+.lab-games-stat {
+  margin-bottom: 16px;
+  padding: 16px 18px;
+}
+
+.lab-games-stat strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
 @media (max-width: 900px) {
   .lab-toolbar,
-  .lab-item-card-header {
+  .lab-item-card-header,
+  .lab-card-meta-row,
+  .lab-detail-actions,
+  .lab-simulation-meta,
+  .lab-canvas-overlay,
+  .lab-games-stat,
+  .lab-nav-row-split {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .lab-stage-grid {
+  .lab-stage-grid,
+  .lab-stage-layout,
+  .lab-result-grid {
     grid-template-columns: 1fr;
   }
 }

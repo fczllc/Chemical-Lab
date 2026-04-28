@@ -1,1 +1,172 @@
-/* Build-safe placeholder stylesheet for the current linked achievements view. */
+.achievements-grid,
+.progress-path,
+.progress-stage-list {
+  display: grid;
+  gap: 18px;
+}
+
+.achievements-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.achievement-card,
+.progress-dashboard,
+.progress-stage-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.94));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 22px;
+  box-shadow: 0 18px 48px rgba(2, 6, 23, 0.26);
+}
+
+.achievement-card {
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.achievement-card-top,
+.achievement-card-footer,
+.progress-dashboard-header,
+.progress-stage-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.achievement-card.is-locked {
+  opacity: 0.68;
+}
+
+.achievement-card.is-unlocked {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.achievement-card[data-rarity="uncommon"] {
+  box-shadow: 0 18px 48px rgba(34, 197, 94, 0.16);
+}
+
+.achievement-card[data-rarity="rare"] {
+  box-shadow: 0 18px 48px rgba(56, 189, 248, 0.18);
+}
+
+.achievement-card[data-rarity="very rare"] {
+  box-shadow: 0 18px 48px rgba(192, 132, 252, 0.24);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+}
+
+.achievement-rarity,
+.achievement-card-footer,
+.progress-stage-card p,
+.progress-ring span,
+.progress-stat-card span,
+.progress-stat-card small,
+.progress-stage-card .hud-kicker {
+  color: var(--text-secondary);
+}
+
+.progress-dashboard,
+.progress-stage-card {
+  padding: 20px;
+}
+
+.progress-dashboard {
+  display: grid;
+  gap: 18px;
+}
+
+.progress-ring {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.92) 44%, transparent 45%), conic-gradient(var(--neon-cyan) 0 var(--progress), rgba(148, 163, 184, 0.18) var(--progress) 100%);
+  color: #e2f3ff;
+  text-align: center;
+}
+
+.progress-ring strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.progress-stat-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.progress-stat-card {
+  flex: 1 1 180px;
+  min-width: 160px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.progress-stat-card strong {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: #f8fbff;
+}
+
+.progress-lab-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.progress-lab-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+}
+
+.progress-lab-node.is-complete {
+  color: var(--neon-green);
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.22);
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.14);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+}
+
+.progress-stage-card.is-complete {
+  border-color: rgba(34, 197, 94, 0.28);
+}
+
+@media (max-width: 900px) {
+  .progress-dashboard-header,
+  .progress-stage-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
