@@ -1,5 +1,9 @@
 /** ===== 周期表渲染 ===== */
-import { markElementLearned } from './storage.js';
+import {
+  getLearnedElements,
+  markElementLearned,
+  setSelectedElement
+} from './storage.js';
 
 const categoryColors = {
   'alkali metal': '#ff6b6b',
@@ -12,7 +16,7 @@ const categoryColors = {
   'halogen': '#f06595',
   'lanthanide': '#ff6b9d',
   'actinide': '#ff8fab',
-  'unknown': '#868e96'
+  unknown: '#868e96'
 };
 
 const categoryNames = {
@@ -20,38 +24,59 @@ const categoryNames = {
   'alkaline earth metal': '碱土金属',
   'transition metal': '过渡金属',
   'post-transition metal': '后过渡金属',
-  'metalloid': '类金属',
+  metalloid: '类金属',
   'reactive nonmetal': '非金属',
   'noble gas': '稀有气体',
-  'halogen': '卤素',
-  'lanthanide': '镧系',
-  'actinide': '锕系',
-  'unknown': '未知'
+  halogen: '卤素',
+  lanthanide: '镧系',
+  actinide: '锕系',
+  unknown: '未知'
 };
 
 let elements = [];
+let stateListenersBound = false;
 
 export function initPeriodicTable(data) {
   elements = data;
   renderTable();
   renderLegend();
   setupCellInteractions();
+  bindStateListeners();
+}
+
+function bindStateListeners() {
+  if (stateListenersBound) {
+    return;
+  }
+
+  window.addEventListener('elementlearned', (event) => {
+    const learnedCell = document.querySelector(`.element-cell[data-atomic-number="${event.detail.atomicNumber}"]`);
+    learnedCell?.classList.add('learned');
+  });
+
+  window.addEventListener('statereset', () => {
+    document.querySelectorAll('.element-cell').forEach((cell) => {
+      cell.classList.remove('learned', 'selected');
+    });
+  });
+
+  stateListenersBound = true;
 }
 
 function renderTable() {
   const grid = document.getElementById('periodic-grid');
   const laGrid = document.getElementById('la-grid');
   const acGrid = document.getElementById('ac-grid');
-  
+
   if (!grid) return;
-  
+
   grid.innerHTML = '';
   if (laGrid) laGrid.innerHTML = '';
   if (acGrid) acGrid.innerHTML = '';
-  
-  elements.forEach(element => {
+
+  elements.forEach((element) => {
     const cell = createElementCell(element);
-    
+
     if (element.category === 'lanthanide') {
       if (laGrid) laGrid.appendChild(cell);
     } else if (element.category === 'actinide') {
@@ -60,8 +85,7 @@ function renderTable() {
       grid.appendChild(cell);
     }
   });
-  
-  // 设置网格位置
+
   positionCells();
 }
 
@@ -72,33 +96,33 @@ function createElementCell(element) {
   cell.dataset.category = element.category;
   cell.dataset.period = element.period;
   cell.dataset.group = element.group;
-  
-  if (window.appState.learnedElements.has(element.atomicNumber)) {
+
+  if (getLearnedElements().has(element.atomicNumber)) {
     cell.classList.add('learned');
   }
   if (element.rarity >= 4) {
     cell.classList.add('rare');
   }
-  
+
   cell.innerHTML = `
     <span class="atomic-num">${element.atomicNumber}</span>
     <span class="symbol" style="color: ${categoryColors[element.category] || '#fff'}">${element.symbol}</span>
     <span class="chinese-name">${element.chineseName}</span>
     <span class="atomic-mass">${element.atomicMass}</span>
   `;
-  
+
   cell.addEventListener('click', () => selectElement(element));
-  
+
   return cell;
 }
 
 function positionCells() {
   const grid = document.getElementById('periodic-grid');
   if (!grid) return;
-  
-  elements.forEach(element => {
+
+  elements.forEach((element) => {
     if (element.category === 'lanthanide' || element.category === 'actinide') return;
-    
+
     const cell = grid.querySelector(`[data-atomic-number="${element.atomicNumber}"]`);
     if (cell && element.x && element.y) {
       cell.style.gridColumn = element.x;
@@ -108,29 +132,26 @@ function positionCells() {
 }
 
 function selectElement(element) {
-  window.appState.currentElement = element;
-  markElementLearned(element.atomicNumber);
-  
-  // 更新选中状态
-  document.querySelectorAll('.element-cell').forEach(cell => {
-    cell.classList.toggle('selected', 
-      parseInt(cell.dataset.atomicNumber) === element.atomicNumber);
+  setSelectedElement(element.atomicNumber);
+
+  document.querySelectorAll('.element-cell').forEach((cell) => {
+    cell.classList.toggle(
+      'selected',
+      Number.parseInt(cell.dataset.atomicNumber, 10) === element.atomicNumber
+    );
   });
-  
-  // 打开详情面板
+
   openDetailPanel(element);
-  
-  // 触发选择事件
+
   window.dispatchEvent(new CustomEvent('elementselected', { detail: { element } }));
 }
 
 function openDetailPanel(element) {
   const panel = document.getElementById('detail-panel');
   if (!panel) return;
-  
-  // 填充面板内容
+
+  markElementLearned(element.atomicNumber);
   populateDetailPanel(element);
-  
   panel.classList.add('open');
 }
 
@@ -144,8 +165,7 @@ function populateDetailPanel(element) {
     hero.querySelector('.english-name').textContent = element.name;
     hero.querySelector('.atomic-mass').textContent = element.atomicMass;
   }
-  
-  // 属性列表
+
   const props = document.querySelector('.element-properties');
   if (props) {
     props.innerHTML = `
@@ -179,8 +199,7 @@ function populateDetailPanel(element) {
       </div>
     `;
   }
-  
-  // 故事
+
   const story = document.querySelector('.element-story');
   if (story) {
     story.innerHTML = `
@@ -188,8 +207,7 @@ function populateDetailPanel(element) {
       <p>${element.kidStory}</p>
     `;
   }
-  
-  // 趣闻
+
   const funfact = document.querySelector('.element-funfact');
   if (funfact) {
     funfact.innerHTML = `
@@ -202,7 +220,7 @@ function populateDetailPanel(element) {
 function renderLegend() {
   const container = document.querySelector('.legend-items');
   if (!container) return;
-  
+
   container.innerHTML = Object.entries(categoryNames).map(([key, name]) => `
     <div class="legend-item">
       <span class="legend-color" style="background: ${categoryColors[key]}"></span>
@@ -216,15 +234,15 @@ function setupCellInteractions() {
 }
 
 export function getElementByNumber(num) {
-  return elements.find(e => e.atomicNumber === num);
+  return elements.find((element) => element.atomicNumber === num);
 }
 
 export function getElementBySymbol(sym) {
-  return elements.find(e => e.symbol === sym);
+  return elements.find((element) => element.symbol === sym);
 }
 
 export function filterCells(category, period) {
-  document.querySelectorAll('.element-cell').forEach(cell => {
+  document.querySelectorAll('.element-cell').forEach((cell) => {
     const catMatch = category === 'all' || cell.dataset.category === category;
     const periodMatch = period === 'all' || cell.dataset.period === period;
     cell.classList.toggle('filtered-out', !(catMatch && periodMatch));
@@ -234,23 +252,23 @@ export function filterCells(category, period) {
 export function searchElements(query) {
   const q = query.toLowerCase().trim();
   if (!q) {
-    document.querySelectorAll('.element-cell').forEach(cell => {
+    document.querySelectorAll('.element-cell').forEach((cell) => {
       cell.classList.remove('filtered-out');
     });
     return;
   }
-  
-  document.querySelectorAll('.element-cell').forEach(cell => {
+
+  document.querySelectorAll('.element-cell').forEach((cell) => {
     const num = cell.dataset.atomicNumber;
-    const element = elements.find(e => e.atomicNumber === parseInt(num));
+    const element = elements.find((item) => item.atomicNumber === Number.parseInt(num, 10));
     if (!element) return;
-    
-    const match = 
+
+    const match =
       element.symbol.toLowerCase().includes(q) ||
       element.name.toLowerCase().includes(q) ||
       element.chineseName.includes(q) ||
       element.atomicNumber.toString() === q;
-    
+
     cell.classList.toggle('filtered-out', !match);
   });
 }

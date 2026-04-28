@@ -179,13 +179,10 @@ input:focus, select:focus {
   transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   pointer-events: none;
-  position: absolute;
-  width: 100%;
 }
 
 .page-section.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  position: relative;
 }
