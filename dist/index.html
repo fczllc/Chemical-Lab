@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>元素探索者 - Element Explorer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-Cwtncx3s.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BirAk2VY.css">
+  <script type="module" crossorigin src="/assets/index-CCcVBje0.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BeU3b0NB.css">
 </head>
 <body>
   <!-- Three.js 背景画布 -->
@@ -53,6 +53,11 @@
         <span>故事</span>
       </button>
     </nav>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="打开菜单">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
     <div class="header-right">
       <div class="header-stats">
         <span class="stat-item">
@@ -325,6 +330,12 @@
       </aside>
     </div>
   </main>
+
+  <!-- 全局加载指示器 -->
+  <div id="global-loader" class="global-loader">
+    <div class="loader-spinner"></div>
+    <span class="loader-text">加载中...</span>
+  </div>
 
   <!-- 设置面板 -->
   <div id="settings-modal" class="modal" data-testid="settings-modal">

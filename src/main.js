@@ -24,6 +24,7 @@ import { initAchievements } from './modules/achievements.js';
 import { initProgress } from './modules/progress.js';
 import { initStoryMode } from './modules/storyMode.js';
 import { initLab } from './modules/lab.js';
+import { initMobile } from './modules/mobile.js';
 import {
   createStateInspectionProxy,
   getCollectedElements,
@@ -59,6 +60,7 @@ async function init() {
   initializeState(elements);
   attachReadOnlyAppState();
 
+  const loader = document.getElementById('global-loader');
   const canvas = document.getElementById('bg-canvas');
   const settings = getSettings();
 
@@ -82,11 +84,17 @@ async function init() {
   initStoryMode();
   initLab();
   initHomeModules(elements);
+  initMobile();
 
   initSettings();
   bindLifecycleEvents();
   updateStats();
   animate();
+
+  // 隐藏加载指示器
+  if (loader) {
+    loader.classList.add('hidden');
+  }
 }
 
 function bindLifecycleEvents() {

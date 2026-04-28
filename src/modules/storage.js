@@ -10,6 +10,8 @@ const DEFAULT_SETTINGS = {
   difficulty: 'normal'
 };
 
+const MAX_ACTIVITY_ENTRIES = 24;
+
 let appState = createDefaultState();
 let storageAdapter = createMemoryStorageAdapter();
 let saveTimer = null;
@@ -25,7 +27,10 @@ function createDefaultState(elements = []) {
     quizScores: [],
     completedExperiments: new Set(),
     unlockedAchievements: new Set(),
+    achievementDates: {},
     gameScores: {},
+    gamePlays: {},
+    activityLog: [],
     settings: { ...DEFAULT_SETTINGS }
   };
 }
@@ -141,6 +146,54 @@ function normalizeGameScores(scores) {
   }, {});
 }
 
+function normalizeCountMap(scores) {
+  if (!scores || typeof scores !== 'object' || Array.isArray(scores)) {
+    return {};
+  }
+
+  return Object.entries(scores).reduce((accumulator, [key, value]) => {
+    if (typeof key === 'string' && Number.isFinite(Number(value))) {
+      accumulator[key] = Math.max(0, Number(value));
+    }
+    return accumulator;
+  }, {});
+}
+
+function normalizeAchievementDates(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return {};
+  }
+
+  return Object.entries(value).reduce((accumulator, [key, date]) => {
+    if (typeof key === 'string' && typeof date === 'string' && date.trim()) {
+      accumulator[key] = date;
+    }
+    return accumulator;
+  }, {});
+}
+
+function normalizeActivityLog(entries) {
+  if (!Array.isArray(entries)) {
+    return [];
+  }
+
+  return entries
+    .filter((entry) => entry && typeof entry === 'object' && !Array.isArray(entry))
+    .map((entry) => ({
+      id: typeof entry.id === 'string' && entry.id.trim()
+        ? entry.id
+        : `activity-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      type: typeof entry.type === 'string' ? entry.type : 'activity',
+      title: typeof entry.title === 'string' ? entry.title : '学习活动',
+      description: typeof entry.description === 'string' ? entry.description : '',
+      timestamp: typeof entry.timestamp === 'string' ? entry.timestamp : new Date().toISOString(),
+      meta: entry.meta && typeof entry.meta === 'object' && !Array.isArray(entry.meta)
+        ? { ...entry.meta }
+        : {}
+    }))
+    .slice(0, MAX_ACTIVITY_ENTRIES);
+}
+
 function normalizeSettings(settings) {
   if (!settings || typeof settings !== 'object' || Array.isArray(settings)) {
     return { ...DEFAULT_SETTINGS };
@@ -197,6 +250,20 @@ function scheduleSave() {
   }, SAVE_DEBOUNCE_MS);
 }
 
+function appendActivity(type, title, description, meta = {}) {
+  appState.activityLog = [
+    {
+      id: `activity-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      type,
+      title,
+      description,
+      timestamp: new Date().toISOString(),
+      meta: { ...meta }
+    },
+    ...appState.activityLog
+  ].slice(0, MAX_ACTIVITY_ENTRIES);
+}
+
 function emitStateChange(field, oldValue, newValue, eventName, extraDetail = {}) {
   const detail = {
     field,
@@ -236,7 +303,13 @@ function serializeState() {
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: [...appState.completedExperiments],
     unlockedAchievements: [...appState.unlockedAchievements],
+    achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
+    gamePlays: { ...appState.gamePlays },
+    activityLog: appState.activityLog.map((entry) => ({
+      ...entry,
+      meta: { ...(entry.meta || {}) }
+    })),
     settings: { ...appState.settings }
   };
 }
@@ -256,7 +329,10 @@ function migrateV0ToV1(data) {
       : [],
     completedExperiments: data.completedExperiments || [],
     unlockedAchievements: data.unlockedAchievements || [],
+    achievementDates: data.achievementDates || {},
     gameScores: data.gameScores || {},
+    gamePlays: data.gamePlays || {},
+    activityLog: data.activityLog || [],
     settings: data.settings || {}
   };
 }
@@ -295,7 +371,10 @@ function normalizePersistedData(data) {
         ? data.unlockedAchievements.filter((item) => typeof item === 'string' && item.trim())
         : []
     ),
+    achievementDates: normalizeAchievementDates(data.achievementDates),
     gameScores: normalizeGameScores(data.gameScores),
+    gamePlays: normalizeCountMap(data.gamePlays),
+    activityLog: normalizeActivityLog(data.activityLog),
     settings: normalizeSettings(data.settings)
   };
 
@@ -419,7 +498,13 @@ export function getStateSnapshot() {
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: new Set(appState.completedExperiments),
     unlockedAchievements: new Set(appState.unlockedAchievements),
+    achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
+    gamePlays: { ...appState.gamePlays },
+    activityLog: appState.activityLog.map((entry) => ({
+      ...entry,
+      meta: { ...(entry.meta || {}) }
+    })),
     settings: { ...appState.settings }
   };
 }
@@ -565,6 +650,12 @@ export function markElementLearned(atomicNumber) {
 
   appState.learnedElements.add(normalizedAtomicNumber);
   appState.collectedElements.add(normalizedAtomicNumber);
+  appendActivity(
+    'elementlearned',
+    '学习了新元素',
+    `已把第 ${normalizedAtomicNumber} 号元素加入学习记录。`,
+    { atomicNumber: normalizedAtomicNumber }
+  );
 
   emitStateChange('learnedElements', oldLearned, appState.learnedElements, 'elementlearned', {
     atomicNumber: normalizedAtomicNumber
@@ -592,6 +683,12 @@ export function addQuizScore(scoreObj) {
 
   const oldValue = getQuizScores();
   appState.quizScores = [...appState.quizScores, normalizedScore];
+  appendActivity(
+    'quizcompleted',
+    '完成了一次测验',
+    `测验得分 ${normalizedScore.score}/${normalizedScore.total || normalizedScore.score}，正确率 ${normalizedScore.accuracy || 0}%。`,
+    { ...normalizedScore }
+  );
   emitStateChange('quizScores', oldValue, appState.quizScores, 'quizcompleted', {
     score: { ...normalizedScore }
   });
@@ -609,6 +706,12 @@ export function markExperimentCompleted(experimentId) {
 
   const oldValue = new Set(appState.completedExperiments);
   appState.completedExperiments.add(experimentId);
+  appendActivity(
+    'experimentcompleted',
+    '完成了一项实验',
+    `实验 ${experimentId} 已写入完成记录。`,
+    { experimentId }
+  );
   emitStateChange('completedExperiments', oldValue, appState.completedExperiments, 'experimentcompleted', {
     experimentId
   });
@@ -619,6 +722,10 @@ export function getUnlockedAchievements() {
   return new Set(appState.unlockedAchievements);
 }
 
+export function getAchievementDates() {
+  return { ...appState.achievementDates };
+}
+
 export function unlockAchievement(achievementId) {
   if (typeof achievementId !== 'string' || !achievementId.trim() || appState.unlockedAchievements.has(achievementId)) {
     return false;
@@ -626,8 +733,18 @@ export function unlockAchievement(achievementId) {
 
   const oldValue = new Set(appState.unlockedAchievements);
   appState.unlockedAchievements.add(achievementId);
+  if (!appState.achievementDates[achievementId]) {
+    appState.achievementDates[achievementId] = new Date().toISOString();
+  }
+  appendActivity(
+    'achievementunlocked',
+    '解锁了新成就',
+    `成就 ${achievementId} 已收入成就中心。`,
+    { achievementId, unlockedAt: appState.achievementDates[achievementId] }
+  );
   emitStateChange('unlockedAchievements', oldValue, appState.unlockedAchievements, 'achievementunlocked', {
-    achievementId
+    achievementId,
+    unlockedAt: appState.achievementDates[achievementId]
   });
   return true;
 }
@@ -640,19 +757,53 @@ export function getGameScores(gameKey) {
   return { ...appState.gameScores };
 }
 
+export function getGamePlayCounts(gameKey) {
+  if (typeof gameKey === 'string' && gameKey) {
+    return appState.gamePlays[gameKey] ?? 0;
+  }
+
+  return { ...appState.gamePlays };
+}
+
+export function getActivityLog() {
+  return appState.activityLog.map((entry) => ({
+    ...entry,
+    meta: { ...(entry.meta || {}) }
+  }));
+}
+
 export function updateGameScore(gameKey, score) {
   if (typeof gameKey !== 'string' || !gameKey || !Number.isFinite(Number(score))) {
     return getGameScores();
   }
 
   const oldValue = { ...appState.gameScores };
+  const numericScore = Number(score);
+  const previousBest = Number(appState.gameScores[gameKey] ?? 0);
   appState.gameScores = {
     ...appState.gameScores,
-    [gameKey]: Number(score)
+    [gameKey]: Math.max(previousBest, numericScore)
   };
+  appState.gamePlays = {
+    ...appState.gamePlays,
+    [gameKey]: Number(appState.gamePlays[gameKey] ?? 0) + 1
+  };
+  appendActivity(
+    'gamecompleted',
+    '完成了一次学习游戏',
+    `${gameKey} 本次得分 ${numericScore}，当前最高分 ${appState.gameScores[gameKey]}。`,
+    {
+      gameKey,
+      score: numericScore,
+      bestScore: appState.gameScores[gameKey],
+      playCount: appState.gamePlays[gameKey]
+    }
+  );
   emitStateChange('gameScores', oldValue, appState.gameScores, 'gamescoreupdated', {
     gameKey,
-    score: Number(score)
+    score: numericScore,
+    bestScore: appState.gameScores[gameKey],
+    playCount: appState.gamePlays[gameKey]
   });
   return getGameScores();
 }

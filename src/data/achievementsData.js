@@ -1,129 +1,112 @@
 export const achievementsData = [
   {
-    "id": "achievement-first-element",
-    "title": "初识元素",
-    "description": "第一次学习并点亮一个元素。",
-    "condition": "learnedElements >= 1",
-    "icon": "spark",
-    "rarity": "common",
-    "relatedElements": [
-      1
-    ]
+    id: 'achievement-first-element',
+    category: 'learning',
+    title: '初识元素',
+    description: '第一次学习一个元素，正式踏入元素探索之旅。',
+    unlockText: '学习第 1 个元素',
+    icon: '✨',
+    rarity: 'common',
+    condition: { type: 'learnedElements', count: 1 }
   },
   {
-    "id": "achievement-apprentice",
-    "title": "元素小学徒",
-    "description": "累计学习 10 个元素。",
-    "condition": "learnedElements >= 10",
-    "icon": "beaker",
-    "rarity": "common",
-    "relatedElements": [
-      1,
-      8,
-      20
-    ]
+    id: 'achievement-learning-apprentice',
+    category: 'learning',
+    title: '初级探索者',
+    description: '累计学习 10 个元素，已经能认出许多常见元素。',
+    unlockText: '学习 10 个元素',
+    icon: '🧭',
+    rarity: 'common',
+    condition: { type: 'learnedElements', count: 10 }
   },
   {
-    "id": "achievement-explorer",
-    "title": "周期表探索者",
-    "description": "累计学习 30 个元素，开始看懂元素世界。",
-    "condition": "learnedElements >= 30",
-    "icon": "orbit",
-    "rarity": "uncommon",
-    "relatedElements": [
-      6,
-      14,
-      26
-    ]
+    id: 'achievement-element-collector',
+    category: 'learning',
+    title: '元素收集家',
+    description: '累计学习 50 个元素，收藏墙开始变得丰富起来。',
+    unlockText: '学习 50 个元素',
+    icon: '🗂️',
+    rarity: 'rare',
+    condition: { type: 'learnedElements', count: 50 }
   },
   {
-    "id": "achievement-collector",
-    "title": "元素收藏家",
-    "description": "收集 50 个元素，解锁更完整的收藏柜。",
-    "condition": "collectedElements >= 50",
-    "icon": "cabinet",
-    "rarity": "rare",
-    "relatedElements": [
-      29,
-      47,
-      79
-    ]
+    id: 'achievement-element-master',
+    category: 'learning',
+    title: '元素大师',
+    description: '学习全部 118 个元素，完成完整的周期表探索。',
+    unlockText: '学习全部 118 个元素',
+    icon: '👑',
+    rarity: 'legendary',
+    condition: { type: 'learnedElements', count: 118 }
   },
   {
-    "id": "achievement-all-elements",
-    "title": "化学小博士",
-    "description": "学习全部 118 个元素，完成一次完整的周期表旅程。",
-    "condition": "learnedElements >= 118",
-    "icon": "crown",
-    "rarity": "very rare",
-    "relatedElements": [
-      1,
-      60,
-      118
-    ]
+    id: 'achievement-first-experiment',
+    category: 'experiment',
+    title: '实验室新手',
+    description: '完成第一个虚拟实验，开始理解元素反应。',
+    unlockText: '完成 1 个实验',
+    icon: '🧪',
+    rarity: 'common',
+    condition: { type: 'completedExperiments', count: 1 }
   },
   {
-    "id": "achievement-first-lab",
-    "title": "实验新手",
-    "description": "完成 1 个虚拟实验。",
-    "condition": "completedExperiments >= 1",
-    "icon": "flask",
-    "rarity": "common",
-    "relatedElements": [
-      1,
-      8
-    ]
+    id: 'achievement-lab-safety',
+    category: 'experiment',
+    title: '实验室安全员',
+    description: '完成全部 5 个实验，已经是一名可靠的小研究员。',
+    unlockText: '完成全部 5 个实验',
+    icon: '🛡️',
+    rarity: 'rare',
+    condition: { type: 'completedExperiments', count: 5 }
   },
   {
-    "id": "achievement-lab-master",
-    "title": "实验达人",
-    "description": "完成全部 5 个虚拟实验。",
-    "condition": "completedExperiments >= 5",
-    "icon": "shield",
-    "rarity": "rare",
-    "relatedElements": [
-      11,
-      17,
-      26
-    ]
+    id: 'achievement-first-quiz',
+    category: 'quiz',
+    title: '求知者',
+    description: '完成第一次测验，开始用答题巩固自己的知识。',
+    unlockText: '完成 1 次测验',
+    icon: '📘',
+    rarity: 'common',
+    condition: { type: 'quizAttempts', count: 1 }
   },
   {
-    "id": "achievement-quiz-expert",
-    "title": "测验高手",
-    "description": "任意一次测验得分率达到 80% 以上。",
-    "condition": "quizScorePercentage >= 80",
-    "icon": "medal",
-    "rarity": "uncommon",
-    "relatedElements": [
-      3,
-      14,
-      53
-    ]
+    id: 'achievement-perfect-quiz',
+    category: 'quiz',
+    title: '满分学霸',
+    description: '任意一次测验获得满分，知识掌握非常扎实。',
+    unlockText: '任意一次测验获得满分',
+    icon: '🏆',
+    rarity: 'rare',
+    condition: { type: 'quizPerfectScore' }
   },
   {
-    "id": "achievement-memory-master",
-    "title": "记忆大师",
-    "description": "完成一次元素记忆翻牌游戏。",
-    "condition": "gameCompleted:memory-game",
-    "icon": "cards",
-    "rarity": "uncommon",
-    "relatedElements": [
-      2,
-      10,
-      18
-    ]
+    id: 'achievement-first-game',
+    category: 'game',
+    title: '游戏新手',
+    description: '完成第一次学习游戏，用游戏巩固化学知识。',
+    unlockText: '完成 1 次任意游戏',
+    icon: '🎮',
+    rarity: 'common',
+    condition: { type: 'gamePlays', count: 1 }
   },
   {
-    "id": "achievement-reaction-expert",
-    "title": "反应专家",
-    "description": "完成一次反应配对游戏并全部答对。",
-    "condition": "gamePerfect:reaction-match-game",
-    "icon": "bolt",
-    "rarity": "rare",
-    "relatedElements": [
-      1,
-      11,
-      17
-    ]
+    id: 'achievement-memory-master',
+    category: 'game',
+    title: '记忆大师',
+    description: '在元素记忆翻牌中拿到高分，说明你已经建立了牢固的元素记忆。',
+    unlockText: '元素记忆翻牌最高分达到 120',
+    icon: '🧠',
+    rarity: 'rare',
+    condition: { type: 'gameScore', gameKey: 'game-memory', count: 120 }
+  },
+  {
+    id: 'achievement-reaction-expert',
+    category: 'game',
+    title: '反应专家',
+    description: '在反应配对中稳定高分，已经能快速识别典型反应结果。',
+    unlockText: '反应配对最高分达到 50',
+    icon: '⚡',
+    rarity: 'legendary',
+    condition: { type: 'gameScore', gameKey: 'game-reaction', count: 50 }
   }
 ];

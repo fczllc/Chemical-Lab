@@ -1,9 +1,35 @@
 /* ===== 响应式布局 ===== */
 
-/* 平板及小屏桌面 */
-@media (max-width: 1200px) {
+/* 大桌面端 (1920x1080, 1600x900) */
+@media (min-width: 1600px) {
+  .periodic-grid {
+    gap: 6px;
+  }
+
+  .element-cell .symbol {
+    font-size: 1.3rem;
+  }
+
+  .element-cell .chinese-name {
+    font-size: 0.7rem;
+  }
+
   .detail-panel.docked {
-    width: 320px;
+    width: 420px;
+  }
+}
+
+/* 桌面端 (1366x768 - 1599px) */
+@media (min-width: 1366px) and (max-width: 1599px) {
+  .detail-panel.docked {
+    width: 380px;
+  }
+}
+
+/* 小桌面端和大平板 (1200px - 1365px) */
+@media (max-width: 1365px) {
+  .detail-panel.docked {
+    width: 340px;
   }
 
   .bottom-modules {
@@ -20,10 +46,10 @@
   }
 }
 
-/* 平板 */
-@media (max-width: 900px) {
+/* 平板端 (768px - 1199px) */
+@media (max-width: 1199px) {
   .main-header {
-    padding: 0 12px;
+    padding: 0 16px;
   }
 
   .logo-text {
@@ -44,7 +70,7 @@
     top: var(--header-height);
     right: 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: calc(100vh - var(--header-height));
     transform: translateX(100%);
     z-index: 90;
@@ -65,7 +91,7 @@
   }
 
   .compare-slots--3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .compare-slots--2 {
@@ -103,12 +129,36 @@
     left: 9px;
     right: auto;
   }
+
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .story-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-result-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-stage-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
-/* 手机 */
-@media (max-width: 640px) {
+/* 小平板和大手机 (640px - 767px) */
+@media (max-width: 767px) {
   .main-header {
-    padding: 0 8px;
+    padding: 0 12px;
     height: 56px;
   }
 
@@ -116,12 +166,44 @@
     font-size: 1.2rem;
   }
 
-  .nav-btn {
-    padding: 4px 8px;
+  .main-nav {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: rgba(10, 14, 26, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 12px 16px;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 99;
   }
 
-  .nav-icon {
-    font-size: 1rem;
+  .main-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+
+  .nav-btn span:last-child {
+    display: inline;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
   }
 
   .header-stats {
@@ -138,15 +220,40 @@
 
   .detail-panel.docked {
     position: fixed;
-    top: 56px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     max-width: none;
-    height: calc(100vh - 56px);
-    transform: translateX(100%);
+    height: 85vh;
+    height: 85dvh;
+    transform: translateY(100%);
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    border-radius: 20px 20px 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0);
   }
 
   .detail-panel.docked.open {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+
+  .detail-panel.docked::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: var(--text-muted);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+
+  .panel-header {
+    margin-top: 12px;
   }
 
   .bottom-modules {
@@ -156,16 +263,70 @@
   }
 
   .bottom-module {
-    min-height: 220px;
+    min-height: 180px;
     padding: 10px 12px;
   }
 
-  .categories-overview {
+  .periodic-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .periodic-grid {
+    min-width: 680px;
+  }
+
+  .la-grid, .ac-grid {
+    min-width: 580px;
+  }
+
+  .page-section {
+    padding: 8px 12px;
+  }
+
+  .table-controls {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .filters {
+    gap: 6px;
+  }
+
+  .filters select {
+    min-width: 100px;
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  .search-box input {
+    width: 140px;
+    font-size: 0.8rem;
+  }
+
+  .compare-slots--1,
+  .compare-slots--2,
+  .compare-slots--3 {
     grid-template-columns: 1fr;
   }
 
-  .categories-donut {
-    margin: 0 auto;
+  .compare-card-header {
+    padding: 16px;
+  }
+
+  .compare-card-body {
+    padding: 12px 16px;
+  }
+
+  .compare-card-footer {
+    padding: 10px 16px 14px;
+  }
+
+  .compare-actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .timeline-preview-item,
@@ -204,45 +365,440 @@
     gap: 8px;
   }
 
-  .page-section {
-    padding: 8px 12px;
-  }
-
-  .table-controls {
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .filters select {
-    min-width: 100px;
-    font-size: 0.8rem;
-  }
-
-  .search-box input {
-    width: 140px;
-  }
-
-  .compare-slots--1,
-  .compare-slots--2,
-  .compare-slots--3 {
+  .games-grid {
     grid-template-columns: 1fr;
   }
 
-  .compare-card-header {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .story-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-scoreboard,
+  .quiz-scoreboard--triple,
+  .quiz-options-grid,
+  .quiz-result-hero,
+  .quiz-result-summary,
+  .quiz-game-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-card-topline,
+  .quiz-review-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lab-toolbar,
+  .lab-item-card-header,
+  .lab-card-meta-row,
+  .lab-detail-actions,
+  .lab-simulation-meta,
+  .lab-canvas-overlay,
+  .lab-games-stat,
+  .lab-nav-row-split {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lab-stage-grid,
+  .lab-stage-layout,
+  .lab-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 85vh;
+    max-height: 85dvh;
     padding: 16px;
+    margin: 16px;
   }
 
-  .compare-card-body {
-    padding: 12px 16px;
+  .achievement-popup {
+    right: -100%;
+    left: 16px;
+    top: auto;
+    bottom: 100px;
+    bottom: calc(100px + env(safe-area-inset-bottom, 0));
   }
 
-  .compare-card-footer {
-    padding: 10px 16px 14px;
+  .achievement-popup.show {
+    right: 16px;
   }
 
-  .compare-actions-bar {
+  .popup-content {
+    padding: 16px 20px;
+  }
+
+  .categories-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-donut {
+    margin: 0 auto;
+  }
+
+  .progress-dashboard-header,
+  .progress-stage-top {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+  }
+
+  .progress-stat-grid {
+    justify-content: stretch;
+  }
+
+  .progress-stat-card {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .element-hero .symbol {
+    font-size: 3rem;
+  }
+
+  .electron-canvas {
+    height: clamp(160px, 40vw, 200px);
+  }
+}
+
+/* 手机端 (小于 430px) */
+@media (max-width: 430px) {
+  .main-header {
+    padding: 0 8px;
+  }
+
+  .logo-number {
+    font-size: 1.1rem;
+  }
+
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    min-height: 40px;
+  }
+
+  .periodic-grid {
+    min-width: 600px;
+    gap: 2px;
+  }
+
+  .element-cell {
+    padding: 2px;
+    border-radius: 4px;
+  }
+
+  .element-cell .symbol {
+    font-size: 0.9rem;
+  }
+
+  .element-cell .chinese-name {
+    font-size: 0.5rem;
+  }
+
+  .element-cell .atomic-mass {
+    font-size: 0.45rem;
+  }
+
+  .element-cell .atomic-num {
+    font-size: 0.5rem;
+  }
+
+  .la-grid, .ac-grid {
+    min-width: 500px;
+    gap: 2px;
+  }
+
+  .bottom-module {
+    min-height: 160px;
+  }
+
+  .filters select {
+    min-width: 90px;
+    font-size: 0.75rem;
+  }
+
+  .search-box input {
+    width: 120px;
+    font-size: 0.75rem;
+  }
+
+  .page-section > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .compare-card-symbol-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .compare-card-symbol {
+    font-size: 1.5rem;
+  }
+
+  .quiz-option-btn {
+    min-height: 48px;
+    padding: 10px 12px;
+  }
+
+  .panel-buttons button {
+    min-width: 70px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* 超小屏幕 (小于 390px) */
+@media (max-width: 390px) {
+  .periodic-grid {
+    min-width: 560px;
+  }
+
+  .element-cell .symbol {
+    font-size: 0.8rem;
+  }
+
+  .element-cell .chinese-name {
+    font-size: 0.45rem;
+  }
+
+  .nav-btn span:last-child {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== 触摸设备优化 ===== */
+@media (hover: none) and (pointer: coarse) {
+  .element-cell:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border-subtle);
+  }
+
+  .element-cell:active {
+    transform: scale(0.95);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+  }
+
+  .element-list-row:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .element-list-row:active {
+    transform: scale(0.98);
+    border-color: var(--neon-cyan);
+  }
+
+  .nav-btn:hover {
+    color: var(--text-secondary);
+    background: none;
+  }
+
+  .nav-btn.active:hover {
+    color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.12);
+  }
+
+  .bottom-module-interactive:hover {
+    transform: none;
+    border-color: var(--border-subtle);
+    box-shadow: none;
+  }
+
+  .bottom-module-interactive:active {
+    transform: scale(0.98);
+    border-color: rgba(0, 240, 255, 0.5);
+  }
+
+  .timeline-entry:hover .timeline-entry-card {
+    transform: none;
+    border-color: color-mix(in srgb, var(--timeline-accent) 50%, transparent);
+    box-shadow: 0 14px 38px rgba(2, 8, 23, 0.4), inset 0 0 18px rgba(255, 255, 255, 0.025);
+  }
+
+  .compare-card:hover {
+    transform: none;
+  }
+
+  .category-progress-row:hover {
+    background: rgba(15, 23, 42, 0.44);
+    transform: none;
+  }
+
+  .control-btn:hover {
+    color: var(--text-secondary);
+  }
+
+  .settings-btn:hover {
+    border-color: var(--border-subtle);
+    color: var(--text-secondary);
+    box-shadow: none;
+  }
+
+  .panel-actions button:hover {
+    border-color: var(--border-subtle);
+    color: var(--text-secondary);
+    box-shadow: none;
+  }
+
+  .panel-buttons button:hover {
+    border-color: var(--border-subtle);
+    background: var(--bg-secondary);
+    box-shadow: none;
+  }
+
+  .compare-btn:hover {
+    border-color: var(--border-subtle);
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    box-shadow: none;
+  }
+
+  .compare-card-remove:hover {
+    color: var(--text-secondary);
+    background: rgba(148, 163, 184, 0.08);
+    border-color: rgba(148, 163, 184, 0.14);
+    box-shadow: none;
+  }
+
+  .quiz-option-btn:hover:not([disabled]) {
+    border-color: rgba(148, 163, 184, 0.14);
+    background: rgba(15, 23, 42, 0.78);
+    transform: none;
+    box-shadow: none;
+  }
+
+  .hud-action-btn:hover:not([disabled]) {
+    border-color: rgba(0, 240, 255, 0.28);
+    box-shadow: none;
+  }
+
+  .quiz-play-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .timeline-mini-btn:hover,
+  .timeline-reset-btn:hover,
+  .timeline-milestone-btn:hover {
+    transform: none;
+    border-color: rgba(0, 240, 255, 0.18);
+    color: var(--text-primary);
+    box-shadow: none;
+  }
+
+  .modal-close:hover {
+    color: var(--text-secondary);
+  }
+}
+
+/* ===== 安全区域适配 (横屏带刘海) ===== */
+@supports (padding: max(0px)) {
+  .main-header {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+  }
+
+  @media (max-width: 767px) {
+    .main-header {
+      padding-left: max(12px, env(safe-area-inset-left));
+      padding-right: max(12px, env(safe-area-inset-right));
+    }
+  }
+
+  .bottom-modules {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 767px) {
+    .bottom-modules {
+      padding-bottom: max(8px, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* ===== 减少动画偏好 ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .detail-panel,
+  .detail-panel.docked {
+    transition: none;
+  }
+
+  .page-section {
+    transition: none;
+  }
+
+  .modal,
+  .modal-content {
+    transition: none;
+  }
+
+  .achievement-popup {
+    transition: none;
+  }
+}
+
+/* ===== 打印样式 ===== */
+@media print {
+  .main-header,
+  .detail-panel,
+  .bottom-modules,
+  .mobile-menu-toggle,
+  #bg-canvas {
+    display: none !important;
+  }
+
+  .main-content {
+    position: static;
+    top: 0;
+  }
+
+  .page-section {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    overflow: visible;
+  }
+
+  .page-section:not(.active) {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .periodic-grid {
+    gap: 2px;
+  }
+
+  .element-cell {
+    border: 1px solid #ccc;
+    break-inside: avoid;
   }
 }

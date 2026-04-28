@@ -7,18 +7,12 @@ import {
   getGameScores,
   getQuizScores,
   getSelectedElement,
-  unlockAchievement,
   updateGameScore
 } from './storage.js';
 
 const QUICK_QUIZ_COUNT = 5;
 const FULL_QUIZ_COUNT = 20;
 const FULL_QUIZ_GAME_KEY = 'quiz-full';
-const ACHIEVEMENTS = {
-  firstQuiz: 'quiz-first-attempt',
-  perfectQuiz: 'quiz-perfect-score',
-  highAccuracy: 'quiz-high-accuracy'
-};
 
 let quizSession = createEmptySession();
 let isQuizBound = false;
@@ -236,14 +230,6 @@ function finalizeQuizSession() {
 
   if (quizSession.mode === 'full' && quizSession.score > bestScore) {
     updateGameScore(FULL_QUIZ_GAME_KEY, quizSession.score);
-  }
-
-  unlockAchievement(ACHIEVEMENTS.firstQuiz);
-  if (quizSession.score === quizSession.total) {
-    unlockAchievement(ACHIEVEMENTS.perfectQuiz);
-  }
-  if (accuracy >= 90) {
-    unlockAchievement(ACHIEVEMENTS.highAccuracy);
   }
 
   quizSession.persisted = true;

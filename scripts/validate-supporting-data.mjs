@@ -8,7 +8,7 @@ const errors = [];
 const elementIds = new Set(elements.map((element) => element.atomicNumber));
 const elementSymbols = new Set(elements.map((element) => element.symbol));
 const validFormulas = new Set(['H2', 'O2', 'Cl2', 'H2O', 'Fe2O3', 'NaOH', 'NaCl', 'CO2']);
-const validGameIds = new Set(['memory-game', 'drag-element-game', 'reaction-match-game', 'element-collector']);
+const validGameIds = new Set(['game-memory', 'game-drag', 'game-reaction', 'game-collector']);
 const validAchievementConditionPrefixes = new Set(['gameCompleted', 'gamePerfect']);
 
 if (quizData.length < 20) {
@@ -90,26 +90,35 @@ for (const achievement of achievementsData) {
   }
   achievementIds.add(achievement.id);
 
-  if (!Array.isArray(achievement.relatedElements)) {
-    errors.push(`成就 ${achievement.id} 缺少 relatedElements 数组`);
-    continue;
-  }
-
-  for (const atomicNumber of achievement.relatedElements) {
-    if (!elementIds.has(atomicNumber)) {
-      errors.push(`成就 ${achievement.id} 引用了不存在的元素 atomicNumber：${atomicNumber}`);
+  if (achievement.relatedElements) {
+    if (!Array.isArray(achievement.relatedElements)) {
+      errors.push(`成就 ${achievement.id} 的 relatedElements 必须是数组`);
+    } else {
+      for (const atomicNumber of achievement.relatedElements) {
+        if (!elementIds.has(atomicNumber)) {
+          errors.push(`成就 ${achievement.id} 引用了不存在的元素 atomicNumber：${atomicNumber}`);
+        }
+      }
     }
   }
 
-  const conditionMatch = achievement.condition.match(/^(gameCompleted|gamePerfect):(.+)$/);
-  if (conditionMatch) {
-    const [, prefix, gameId] = conditionMatch;
-    if (!validAchievementConditionPrefixes.has(prefix)) {
-      errors.push(`成就 ${achievement.id} 的条件前缀非法：${prefix}`);
+  if (typeof achievement.condition === 'string') {
+    const conditionMatch = achievement.condition.match(/^(gameCompleted|gamePerfect):(.+)$/);
+    if (conditionMatch) {
+      const [, prefix, gameId] = conditionMatch;
+      if (!validAchievementConditionPrefixes.has(prefix)) {
+        errors.push(`成就 ${achievement.id} 的条件前缀非法：${prefix}`);
+      }
+      if (!validGameIds.has(gameId)) {
+        errors.push(`成就 ${achievement.id} 引用了不存在的游戏 ID：${gameId}`);
+      }
     }
-    if (!validGameIds.has(gameId)) {
-      errors.push(`成就 ${achievement.id} 引用了不存在的游戏 ID：${gameId}`);
+  } else if (typeof achievement.condition === 'object' && achievement.condition !== null) {
+    if (!achievement.condition.type) {
+      errors.push(`成就 ${achievement.id} 的条件对象缺少 type 字段`);
     }
+  } else {
+    errors.push(`成就 ${achievement.id} 的条件格式非法`);
   }
 }
 
@@ -124,7 +133,8 @@ for (const stage of learningPath.stages) {
   }
   stageIds.add(stage.id);
 
-  for (const atomicNumber of stage.requiredElements) {
+  const requiredElements = stage.focusElements || stage.requiredElements || [];
+  for (const atomicNumber of requiredElements) {
     if (!elementIds.has(atomicNumber)) {
       errors.push(`学习阶段 ${stage.id} 引用了不存在的元素 atomicNumber：${atomicNumber}`);
     }

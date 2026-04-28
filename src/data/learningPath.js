@@ -1,136 +1,54 @@
 export const learningPath = {
-  "stages": [
+  stages: [
     {
-      "id": "stage-1",
-      "name": "阶段 1：认识元素",
-      "description": "先从最熟悉、最常见的元素开始，建立符号、名称和用途的基本印象。",
-      "requiredElements": [
-        1,
-        6,
-        7,
-        8,
-        14
-      ],
-      "unlockedGames": [
-        "memory-game"
-      ],
-      "unlockedExperiments": [],
-      "unlockedFeatures": [
-        "detail-panel",
-        "basic-quiz",
-        "collection-board"
-      ]
+      id: 'stage-1',
+      name: '初级探索者',
+      description: '从身边最常见的元素开始，先建立“符号、名称、用途”三件事的第一印象。',
+      requiredCount: 10,
+      focusElements: [1, 6, 7, 8, 11, 12, 14, 16, 17, 20],
+      unlockedGames: ['game-memory'],
+      unlockedExperiments: ['exp-oxygen-supports-combustion'],
+      unlockedFeatures: ['detail-panel', 'basic-quiz', 'collection-board']
     },
     {
-      "id": "stage-2",
-      "name": "阶段 2：元素在哪里",
-      "description": "通过周期表位置和分类，认识金属、非金属与稀有气体的分布。",
-      "requiredElements": [
-        2,
-        10,
-        11,
-        17,
-        18,
-        19,
-        20
-      ],
-      "unlockedGames": [
-        "memory-game",
-        "drag-element-game"
-      ],
-      "unlockedExperiments": [
-        "exp-oxygen-supports-combustion"
-      ],
-      "unlockedFeatures": [
-        "filters",
-        "search",
-        "category-legend"
-      ]
+      id: 'stage-2',
+      name: '元素学徒',
+      description: '开始观察周期表中的分类和位置，理解金属、非金属和稀有气体的分布规律。',
+      requiredCount: 25,
+      focusElements: [2, 3, 10, 13, 18, 19, 26, 29],
+      unlockedGames: ['game-memory', 'game-drag'],
+      unlockedExperiments: ['exp-oxygen-supports-combustion', 'exp-iron-rusting'],
+      unlockedFeatures: ['filters', 'search', 'category-legend']
     },
     {
-      "id": "stage-3",
-      "name": "阶段 3：元素能做什么",
-      "description": "把元素和日常生活连接起来，理解它们在材料、能源和电子产品中的作用。",
-      "requiredElements": [
-        3,
-        12,
-        13,
-        26,
-        29,
-        47
-      ],
-      "unlockedGames": [
-        "memory-game",
-        "drag-element-game",
-        "element-collector"
-      ],
-      "unlockedExperiments": [
-        "exp-iron-rusting"
-      ],
-      "unlockedFeatures": [
-        "compare-view",
-        "applications-preview"
-      ]
+      id: 'stage-3',
+      name: '化学助手',
+      description: '把元素和生活中的材料、能源、电子设备联系起来，建立“学以致用”的直觉。',
+      requiredCount: 50,
+      focusElements: [15, 22, 24, 26, 29, 47, 53, 79],
+      unlockedGames: ['game-memory', 'game-drag', 'game-collector'],
+      unlockedExperiments: ['exp-iron-rusting', 'exp-salt-formation'],
+      unlockedFeatures: ['compare-view', 'applications-preview', 'mini-stats']
     },
     {
-      "id": "stage-4",
-      "name": "阶段 4：元素会反应",
-      "description": "观察典型反应现象，学习助燃、氧化与盐类形成等基础概念。",
-      "requiredElements": [
-        1,
-        8,
-        11,
-        16,
-        17,
-        26
-      ],
-      "unlockedGames": [
-        "reaction-match-game",
-        "element-collector"
-      ],
-      "unlockedExperiments": [
-        "exp-hydrogen-combustion",
-        "exp-sodium-water",
-        "exp-salt-formation"
-      ],
-      "unlockedFeatures": [
-        "lab-view",
-        "reaction-library",
-        "safety-guide"
-      ]
+      id: 'stage-4',
+      name: '实验室研究员',
+      description: '开始系统观察典型化学反应，理解助燃、氧化、置换等更完整的实验场景。',
+      requiredCount: 80,
+      focusElements: [1, 8, 11, 16, 17, 26, 30, 35],
+      unlockedGames: ['game-memory', 'game-drag', 'game-reaction', 'game-collector'],
+      unlockedExperiments: ['exp-hydrogen-combustion', 'exp-sodium-water', 'exp-salt-formation'],
+      unlockedFeatures: ['lab-view', 'reaction-library', 'safety-guide']
     },
     {
-      "id": "stage-5",
-      "name": "阶段 5：元素与人类文明",
-      "description": "走向更完整的科学视角，了解稀土、放射性元素和现代科技材料的重要性。",
-      "requiredElements": [
-        60,
-        63,
-        74,
-        79,
-        92,
-        118
-      ],
-      "unlockedGames": [
-        "memory-game",
-        "drag-element-game",
-        "reaction-match-game",
-        "element-collector"
-      ],
-      "unlockedExperiments": [
-        "exp-hydrogen-combustion",
-        "exp-iron-rusting",
-        "exp-sodium-water",
-        "exp-salt-formation",
-        "exp-oxygen-supports-combustion"
-      ],
-      "unlockedFeatures": [
-        "timeline-view",
-        "story-mode",
-        "advanced-quiz",
-        "achievement-center",
-        "progress-dashboard"
-      ]
+      id: 'stage-5',
+      name: '元素大师',
+      description: '走向完整的元素视野，理解稀有材料、放射性元素与现代科技文明之间的连接。',
+      requiredCount: 118,
+      focusElements: [42, 57, 60, 74, 79, 82, 92, 118],
+      unlockedGames: ['game-memory', 'game-drag', 'game-reaction', 'game-collector'],
+      unlockedExperiments: ['exp-hydrogen-combustion', 'exp-iron-rusting', 'exp-sodium-water', 'exp-salt-formation', 'exp-oxygen-supports-combustion'],
+      unlockedFeatures: ['timeline-view', 'story-mode', 'advanced-quiz', 'achievement-center', 'progress-dashboard']
     }
   ]
 };

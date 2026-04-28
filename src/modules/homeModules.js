@@ -371,17 +371,19 @@ function getCurrentLearningStage() {
   const stages = learningPath?.stages || [];
 
   for (const stage of stages) {
-    const completed = stage.requiredElements.filter((atomicNumber) => learned.has(atomicNumber)).length;
-    if (completed < stage.requiredElements.length) {
-      return { stage, completed, total: stage.requiredElements.length };
+    const total = Number(stage.requiredCount || stage.focusElements?.length || 0);
+    const completed = Math.min(learned.size, total);
+    if (completed < total) {
+      return { stage, completed, total };
     }
   }
 
-  const lastStage = stages[stages.length - 1] || { name: '阶段信息整理中', requiredElements: [] };
+  const lastStage = stages[stages.length - 1] || { name: '阶段信息整理中', requiredCount: 0 };
+  const total = Number(lastStage.requiredCount || lastStage.focusElements?.length || 0);
   return {
     stage: lastStage,
-    completed: lastStage.requiredElements.length,
-    total: lastStage.requiredElements.length
+    completed: total,
+    total
   };
 }
 
