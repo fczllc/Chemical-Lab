@@ -7,6 +7,7 @@ import {
   getCompareList,
   getSelectedElement
 } from './storage.js';
+import { showToast } from './compare.js';
 import { navigateTo } from './router.js';
 
 const CATEGORY_LABELS = {
@@ -81,8 +82,17 @@ function bindCompareButton() {
       return;
     }
 
+    const previousLength = getCompareList().length;
     addComparedElement(element.atomicNumber);
+    const currentLength = getCompareList().length;
+
     updateCompareButton(element.atomicNumber);
+
+    if (currentLength > previousLength) {
+      showToast(`已将 ${element.chineseName} 加入对比`, 'success');
+    } else if (currentLength >= 3) {
+      showToast('对比列表已满（最多 3 个）', 'error');
+    }
   });
 }
 

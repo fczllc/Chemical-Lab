@@ -483,6 +483,11 @@ export function addComparedElement(atomicNumber) {
     return [...appState.compareList];
   }
 
+  if (appState.compareList.length >= 3) {
+    emitEvent('comparelistfull', { atomicNumber: normalizedAtomicNumber });
+    return [...appState.compareList];
+  }
+
   const nextElement = getElementFromCatalog(normalizedAtomicNumber);
   if (!nextElement) {
     return [...appState.compareList];
@@ -494,6 +499,30 @@ export function addComparedElement(atomicNumber) {
     atomicNumber: normalizedAtomicNumber
   });
   return [...appState.compareList];
+}
+
+export function removeComparedElement(atomicNumber) {
+  const normalizedAtomicNumber = sanitizeAtomicNumber(atomicNumber);
+  if (normalizedAtomicNumber === null) {
+    return [...appState.compareList];
+  }
+
+  const oldValue = [...appState.compareList];
+  const nextList = appState.compareList.filter((element) => element.atomicNumber !== normalizedAtomicNumber);
+
+  if (nextList.length === oldValue.length) {
+    return [...appState.compareList];
+  }
+
+  appState.compareList = nextList;
+  emitStateChange('compareList', oldValue, appState.compareList, 'compareupdated', {
+    atomicNumber: normalizedAtomicNumber
+  });
+  return [...appState.compareList];
+}
+
+export function clearCompareList() {
+  return clearComparedElements();
 }
 
 export function clearComparedElements() {
