@@ -93,6 +93,7 @@ function createElementCell(element) {
   const cell = document.createElement('div');
   cell.className = 'element-cell';
   cell.dataset.atomicNumber = element.atomicNumber;
+  cell.dataset.testid = `element-cell-${element.atomicNumber}`;
   cell.dataset.category = element.category;
   cell.dataset.period = element.period;
   cell.dataset.group = element.group;
@@ -100,7 +101,8 @@ function createElementCell(element) {
   if (getLearnedElements().has(element.atomicNumber)) {
     cell.classList.add('learned');
   }
-  if (element.rarity >= 4) {
+  const rarityValues = { common: 0, uncommon: 1, rare: 2, 'very rare': 3, synthetic: 4 };
+  if ((rarityValues[element.rarity] || 0) >= 4) {
     cell.classList.add('rare');
   }
 
@@ -162,7 +164,7 @@ function populateDetailPanel(element) {
     hero.querySelector('.symbol').textContent = element.symbol;
     hero.querySelector('.symbol').style.color = categoryColors[element.category] || '#fff';
     hero.querySelector('.chinese-name').textContent = element.chineseName;
-    hero.querySelector('.english-name').textContent = element.name;
+    hero.querySelector('.english-name').textContent = element.englishName;
     hero.querySelector('.atomic-mass').textContent = element.atomicMass;
   }
 
@@ -174,12 +176,8 @@ function populateDetailPanel(element) {
         <span class="property-value">${element.electronConfiguration}</span>
       </div>
       <div class="property-row">
-        <span class="property-label"><span class="icon">&#9790;</span>物理状态</span>
-        <span class="property-value">${element.state}</span>
-      </div>
-      <div class="property-row">
-        <span class="property-label"><span class="icon">&#9889;</span>电负性</span>
-        <span class="property-value">${element.electronegativity}</span>
+        <span class="property-label"><span class="icon">&#9889;</span>稀有度</span>
+        <span class="property-value">${element.rarity}</span>
       </div>
       <div class="property-row">
         <span class="property-label"><span class="icon">&#9733;</span>发现者</span>
@@ -191,11 +189,11 @@ function populateDetailPanel(element) {
       </div>
       <div class="property-row">
         <span class="property-label"><span class="icon">&#9733;</span>常见用途</span>
-        <span class="property-value">${element.uses.join('、')}</span>
+        <span class="property-value">${(element.applications || []).join('、')}</span>
       </div>
       <div class="property-row">
-        <span class="property-label"><span class="icon">&#9888;</span>危险性</span>
-        <span class="property-value" style="color: ${element.danger > 3 ? '#ff6b6b' : '#ffa94d'}">${element.danger}</span>
+        <span class="property-label"><span class="icon">&#9888;</span>安全性</span>
+        <span class="property-value" style="color: ${['radioactive', 'extremely dangerous'].includes(element.safety) ? '#ff6b6b' : element.safety === 'dangerous' ? '#ffa94d' : '#69db7c'}">${element.safety}</span>
       </div>
     `;
   }
@@ -204,7 +202,7 @@ function populateDetailPanel(element) {
   if (story) {
     story.innerHTML = `
       <h4>元素小故事</h4>
-      <p>${element.kidStory}</p>
+      <p>${element.story}</p>
     `;
   }
 
@@ -221,12 +219,14 @@ function renderLegend() {
   const container = document.querySelector('.legend-items');
   if (!container) return;
 
-  container.innerHTML = Object.entries(categoryNames).map(([key, name]) => `
-    <div class="legend-item">
-      <span class="legend-color" style="background: ${categoryColors[key]}"></span>
-      <span>${name}</span>
-    </div>
-  `).join('');
+  container.innerHTML = Object.entries(categoryNames)
+    .filter(([key]) => key !== 'unknown')
+    .map(([key, name]) => `
+      <div class="legend-item">
+        <span class="legend-color" style="background: ${categoryColors[key]}"></span>
+        <span>${name}</span>
+      </div>
+    `).join('');
 }
 
 function setupCellInteractions() {
@@ -265,7 +265,7 @@ export function searchElements(query) {
 
     const match =
       element.symbol.toLowerCase().includes(q) ||
-      element.name.toLowerCase().includes(q) ||
+      element.englishName.toLowerCase().includes(q) ||
       element.chineseName.includes(q) ||
       element.atomicNumber.toString() === q;
 

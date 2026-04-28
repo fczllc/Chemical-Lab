@@ -134,13 +134,21 @@
 .element-cell[data-category="unknown"] { border-color: rgba(134, 142, 150, 0.4); }
 .element-cell[data-category="unknown"]:hover::before { background: var(--unknown); }
 
-/* 镧系锕系标签 */
-.lanthanide-actinide-labels {
+/* 周期表包装器 */
+.periodic-table-wrapper {
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 4px;
-  margin-top: 8px;
   max-width: 1400px;
+}
+
+#periodic-grid {
+  grid-column: 1 / -1;
+}
+
+/* 镧系锕系标签 */
+.lanthanide-actinide-labels {
+  display: contents;
 }
 
 .la-label, .ac-label {
@@ -164,8 +172,6 @@
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   gap: 4px;
-  max-width: calc(1400px - 64px);
-  margin-left: 64px;
 }
 
 .la-grid {
