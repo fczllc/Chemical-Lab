@@ -218,3 +218,220 @@
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* ===== 增强悬停效果 ===== */
+.element-cell:hover {
+  transform: translateY(-4px) scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 240, 255, 0.25);
+  border-color: rgba(0, 240, 255, 0.6);
+}
+
+/* ===== 选择高亮 ===== */
+.element-cell.selected {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), inset 0 0 12px rgba(0, 240, 255, 0.15);
+  transform: scale(1.08);
+  z-index: 20;
+  animation: selected-pulse 2s ease-in-out infinite;
+}
+
+@keyframes selected-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), inset 0 0 12px rgba(0, 240, 255, 0.15); }
+  50% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.7), inset 0 0 16px rgba(0, 240, 255, 0.25); }
+}
+
+/* ===== 已学习标记 ===== */
+.element-cell.learned::after {
+  content: '\2713';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--neon-green);
+  font-size: 9px;
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* ===== 键盘焦点 ===== */
+.element-cell:focus-visible,
+.element-list-row:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
+}
+
+/* ===== 工具提示 ===== */
+.element-tooltip {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4);
+  min-width: 160px;
+}
+
+.element-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tooltip-symbol {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.tooltip-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip-chinese {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tooltip-english {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.tooltip-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.tooltip-atomic {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+}
+
+.tooltip-category {
+  color: var(--text-secondary);
+}
+
+/* ===== 列表视图 ===== */
+.periodic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 1400px;
+  max-height: calc(100vh - var(--header-height) - 140px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.element-list-row {
+  display: grid;
+  grid-template-columns: 50px 60px 120px 1fr 120px 80px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.element-list-row:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.element-list-row.selected {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.element-list-row.filtered-out {
+  opacity: 0.15;
+  pointer-events: none;
+  transform: scale(0.98);
+}
+
+.element-list-row.learned::after {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--neon-green);
+  font-size: 11px;
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.element-list-row .list-atomic-num {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.element-list-row .list-symbol {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.element-list-row .list-chinese-name {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.element-list-row .list-english-name {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.element-list-row .list-category {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.element-list-row .list-mass {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: right;
+}

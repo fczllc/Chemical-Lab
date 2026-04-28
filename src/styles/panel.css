@@ -1,11 +1,25 @@
 /** ===== 详情面板样式 ===== */
 .element-hero {
+  --element-accent: var(--neon-cyan);
   text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.3);
+  padding: 22px 20px 18px;
+  background:
+    radial-gradient(circle at top, color-mix(in srgb, var(--element-accent) 18%, transparent), transparent 60%),
+    rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(148, 163, 184, 0.12);
   border-radius: var(--border-radius);
   margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
+}
+
+.element-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 14px 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--element-accent) 65%, white), transparent);
+  opacity: 0.7;
 }
 
 .element-hero .atomic-number {
@@ -18,15 +32,17 @@
 }
 
 .element-hero .symbol {
+  display: block;
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 900;
   color: var(--text-primary);
   line-height: 1;
-  text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  text-shadow: 0 0 20px color-mix(in srgb, var(--element-accent) 40%, transparent);
 }
 
 .element-hero .chinese-name {
+  display: block;
   font-size: 1.3rem;
   color: var(--text-primary);
   margin-top: 4px;
@@ -34,43 +50,94 @@
 }
 
 .element-hero .english-name {
+  display: block;
   font-size: 0.9rem;
   color: var(--text-secondary);
   font-style: italic;
 }
 
 .element-hero .atomic-mass {
+  display: block;
   font-family: var(--font-display);
   font-size: 1rem;
   color: var(--neon-cyan);
-  margin-top: 4px;
+  margin-top: 6px;
+}
+
+.element-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.element-badge,
+.inline-badge {
+  --badge-color: var(--neon-cyan);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--badge-color) 38%, transparent);
+  background: color-mix(in srgb, var(--badge-color) 14%, rgba(15, 23, 42, 0.92));
+  color: color-mix(in srgb, var(--badge-color) 70%, white);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.element-badge-safety,
+.inline-badge-safety {
+  box-shadow: 0 0 14px color-mix(in srgb, var(--badge-color) 16%, transparent);
 }
 
 /* 电子画布 */
 .electron-canvas {
   width: 100%;
-  height: 200px;
-  background: rgba(0, 0, 0, 0.2);
+  height: clamp(180px, 26vw, 250px);
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), rgba(2, 6, 23, 0.5) 58%, rgba(0, 0, 0, 0.26));
   border-radius: var(--border-radius);
   margin-bottom: 16px;
   overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.electron-canvas.is-transitioning {
+  opacity: 0.55;
+  transform: scale(0.985);
+}
+
+.electron-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* 属性列表 */
 .element-properties {
   margin-bottom: 16px;
+  padding: 6px 0;
 }
 
 .property-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .property-row:last-child {
   border-bottom: none;
+}
+
+.property-row-stacked {
+  align-items: flex-start;
 }
 
 .property-label {
@@ -98,10 +165,46 @@
   color: var(--text-primary);
   font-weight: 500;
   text-align: right;
+  line-height: 1.5;
+}
+
+.property-value-rich {
+  max-width: 62%;
+}
+
+.property-list {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  text-align: left;
+}
+
+.property-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--text-primary);
+}
+
+.property-list li::before {
+  content: '';
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
+}
+
+.property-muted {
+  color: var(--text-muted);
+  font-weight: 400;
 }
 
 /* 故事和趣闻 */
-.element-story, .element-funfact {
+.element-story,
+.element-funfact {
   margin-bottom: 16px;
   padding: 14px;
   background: rgba(0, 0, 0, 0.2);
@@ -113,7 +216,8 @@
   border-left-color: var(--neon-green);
 }
 
-.element-story h4, .element-funfact h4 {
+.element-story h4,
+.element-funfact h4 {
   font-size: 0.85rem;
   color: var(--neon-purple);
   margin-bottom: 6px;
@@ -126,7 +230,8 @@
   color: var(--neon-green);
 }
 
-.element-story p, .element-funfact p {
+.element-story p,
+.element-funfact p {
   font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -135,16 +240,18 @@
 /* 光谱画布 */
 .spectrum-canvas {
   width: 100%;
-  height: 120px;
+  height: 130px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: var(--border-radius);
   margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
-.spectrum-canvas h4 {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  padding: 8px 12px;
+.spectrum-canvas canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* 面板按钮 */
@@ -166,8 +273,147 @@
   transition: var(--transition-fast);
 }
 
-.panel-buttons button:hover {
+.panel-buttons button:hover,
+.panel-buttons button:focus-visible {
   border-color: var(--neon-cyan);
   background: rgba(0, 240, 255, 0.1);
   box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+}
+
+.panel-actions button.is-active,
+.panel-buttons button.is-active {
+  border-color: rgba(0, 240, 255, 0.35);
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--neon-cyan);
+}
+
+.panel-actions button:disabled,
+.panel-buttons button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.button-bump {
+  animation: button-bump 0.28s ease;
+}
+
+.panel-content {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.panel-content.content-switching,
+.detail-panel.panel-opening .panel-content,
+.detail-panel.closing .panel-content {
+  animation: panel-content-fade 0.32s ease;
+}
+
+.quiz-preview h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.quiz-preview-lead {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.quiz-preview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.quiz-preview-meta span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.quiz-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(2, 6, 23, 0.78));
+}
+
+.quiz-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-option {
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.72);
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.quiz-option:hover,
+.quiz-option:focus-visible {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 240, 255, 0.08);
+}
+
+.quiz-option.is-correct {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: rgba(34, 197, 94, 0.12);
+  color: #dcfce7;
+}
+
+.quiz-option.is-wrong {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.12);
+  color: #fee2e2;
+}
+
+.quiz-feedback {
+  min-height: 24px;
+  margin-top: 14px;
+  color: var(--text-secondary);
+}
+
+.related-lab {
+  outline: 1px solid rgba(0, 240, 255, 0.38);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.14);
+  background: rgba(0, 240, 255, 0.06);
+}
+
+@keyframes panel-content-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes button-bump {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

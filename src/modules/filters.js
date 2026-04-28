@@ -1,5 +1,5 @@
 /** ===== 筛选模块 ===== */
-import { filterCells } from './renderTable.js';
+import { applyFilters } from './renderTable.js';
 
 export function initFilters(elements) {
   const categoryFilter = document.getElementById('category-filter');
@@ -12,14 +12,14 @@ export function initFilters(elements) {
   if (categoryFilter) {
     categoryFilter.addEventListener('change', (e) => {
       currentCategory = e.target.value;
-      filterCells(currentCategory, currentPeriod);
+      applyFilters({ category: currentCategory, period: currentPeriod });
     });
   }
   
   if (periodFilter) {
     periodFilter.addEventListener('change', (e) => {
       currentPeriod = e.target.value;
-      filterCells(currentCategory, currentPeriod);
+      applyFilters({ category: currentCategory, period: currentPeriod });
     });
   }
   
@@ -29,11 +29,12 @@ export function initFilters(elements) {
       if (periodFilter) periodFilter.value = 'all';
       currentCategory = 'all';
       currentPeriod = 'all';
-      filterCells('all', 'all');
       
       // 清空搜索
       const searchInput = document.getElementById('element-search');
       if (searchInput) searchInput.value = '';
+      
+      applyFilters({ category: 'all', period: 'all', query: '' });
     });
   }
 }

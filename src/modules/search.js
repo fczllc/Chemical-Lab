@@ -1,5 +1,5 @@
 /** ===== 搜索模块 ===== */
-import { searchElements } from './renderTable.js';
+import { applyFilters } from './renderTable.js';
 
 export function initSearch(elements) {
   const searchInput = document.getElementById('element-search');
@@ -11,14 +11,14 @@ export function initSearch(elements) {
     searchInput.addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
-        searchElements(e.target.value);
+        applyFilters({ query: e.target.value });
       }, 200);
     });
     
     searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         searchInput.value = '';
-        searchElements('');
+        applyFilters({ query: '' });
       }
     });
   }
@@ -27,7 +27,7 @@ export function initSearch(elements) {
     clearBtn.addEventListener('click', () => {
       if (searchInput) {
         searchInput.value = '';
-        searchElements('');
+        applyFilters({ query: '' });
         searchInput.focus();
       }
     });

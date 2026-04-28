@@ -99,6 +99,12 @@ export function getCurrentSection() {
 function closeDetailPanel() {
   const panel = document.getElementById('detail-panel');
   if (panel) {
+    panel.classList.add('closing');
+    panel.classList.remove('panel-opening');
     panel.classList.remove('open');
+    window.setTimeout(() => {
+      panel.classList.remove('closing');
+      panel.querySelector('.panel-content')?.classList.remove('content-switching');
+    }, 320);
   }
 }
