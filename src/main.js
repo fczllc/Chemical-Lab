@@ -16,11 +16,13 @@ import { initDetailPanel } from './modules/detailPanel.js';
 import { initFilters } from './modules/filters.js';
 import { initSearch } from './modules/search.js';
 import { initCompare } from './modules/compare.js';
+import { initHomeModules } from './modules/homeModules.js';
 import { initTimeline } from './modules/timeline.js';
-import { initGames } from './modules/quiz.js';
+import { initQuiz } from './modules/quiz.js';
 import { initAchievements } from './modules/achievements.js';
 import { initProgress } from './modules/progress.js';
 import { initStoryMode } from './modules/storyMode.js';
+import { initLab } from './modules/lab.js';
 import {
   createStateInspectionProxy,
   getCollectedElements,
@@ -71,10 +73,12 @@ async function init() {
   initSearch(elements);
   initCompare(elements);
   initTimeline(elements);
-  initGames();
+  initQuiz();
   initAchievements();
   initProgress();
   initStoryMode();
+  initLab();
+  initHomeModules(elements);
 
   initSettings();
   bindLifecycleEvents();

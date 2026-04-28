@@ -43,7 +43,6 @@ export function initDetailPanel() {
   bindStoryButton();
   bindQuizButton();
   bindLabButton();
-  bindQuizModalClose();
   bindPanelEvents();
 }
 
@@ -119,15 +118,6 @@ function bindQuizButton() {
       return;
     }
 
-    const modal = document.getElementById('quiz-modal');
-    const quizContent = document.getElementById('quiz-content');
-
-    if (modal && quizContent) {
-      quizContent.innerHTML = renderQuizCard(element);
-      bindQuizCardInteractions(quizContent, element);
-      modal.classList.add('show');
-    }
-
     window.dispatchEvent(new CustomEvent('startquiz', {
       detail: { element }
     }));
@@ -154,24 +144,6 @@ function bindLabButton() {
     window.requestAnimationFrame(() => {
       highlightRelatedExperiments(element);
     });
-  });
-}
-
-function bindQuizModalClose() {
-  const modal = document.getElementById('quiz-modal');
-  if (!modal) {
-    return;
-  }
-
-  const closeButton = modal.querySelector('.modal-close');
-  closeButton?.addEventListener('click', () => {
-    modal.classList.remove('show');
-  });
-
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.classList.remove('show');
-    }
   });
 }
 
@@ -515,72 +487,4 @@ function hexToRgb(color) {
     g: (number >> 8) & 255,
     b: number & 255
   };
-}
-
-function renderQuizCard(element) {
-  const safetyLabel = SAFETY_LABELS[element.safety] || element.safety;
-  const categoryLabel = CATEGORY_LABELS[element.category] || element.category;
-  const correctAnswer = element.atomicNumber.toString();
-  const options = new Set([
-    correctAnswer,
-    String(Math.max(1, element.atomicNumber - 1)),
-    String(Math.min(118, element.atomicNumber + 1)),
-    String(Math.min(118, element.atomicNumber + 8))
-  ]);
-
-  return `
-    <div class="quiz-preview">
-      <h3>${element.chineseName} 小测验</h3>
-      <p class="quiz-preview-lead">根据当前详情面板生成的一道快速复习题。</p>
-      <div class="quiz-preview-meta">
-        <span>${categoryLabel}</span>
-        <span>${safetyLabel}</span>
-        <span>${element.electronConfiguration}</span>
-      </div>
-      <div class="quiz-card">
-        <p class="quiz-question">${element.chineseName}（${element.symbol}）的原子序数是多少？</p>
-        <div class="quiz-options">
-          ${[...options].sort((a, b) => Number(a) - Number(b)).map((option) => `
-            <button class="quiz-option" data-answer="${option}" data-correct="${correctAnswer}">${option}</button>
-          `).join('')}
-        </div>
-        <p class="quiz-feedback" aria-live="polite"></p>
-      </div>
-    </div>
-  `;
-}
-
-function bindQuizCardInteractions(container, element) {
-  const feedback = container.querySelector('.quiz-feedback');
-  container.querySelectorAll('.quiz-option').forEach((optionButton) => {
-    optionButton.addEventListener('click', () => {
-      const selectedAnswer = optionButton.dataset.answer;
-      const correctAnswer = optionButton.dataset.correct;
-      const isCorrect = selectedAnswer === correctAnswer;
-
-      container.querySelectorAll('.quiz-option').forEach((button) => {
-        const buttonIsCorrect = button.dataset.answer === correctAnswer;
-        button.classList.toggle('is-correct', buttonIsCorrect);
-        button.classList.toggle('is-wrong', button === optionButton && !isCorrect);
-      });
-
-      if (feedback) {
-        feedback.textContent = isCorrect
-          ? `答对了！${element.chineseName} 的原子序数就是 ${correctAnswer}。`
-          : `这次选的是 ${selectedAnswer}，正确答案是 ${correctAnswer}。`;
-      }
-    });
-  });
-}
-
-function highlightRelatedExperiments(element) {
-  const labItems = document.querySelectorAll('.lab-item');
-  labItems.forEach((item) => item.classList.remove('related-lab'));
-
-  const relatedItems = [...labItems].filter((item) => {
-    const label = item.querySelector('.lab-elements')?.textContent || '';
-    return label.includes(element.symbol);
-  });
-
-  relatedItems.forEach((item) => item.classList.add('related-lab'));
 }

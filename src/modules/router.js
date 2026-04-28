@@ -1,4 +1,7 @@
 /** ===== 路由系统 ===== */
+import { restoreSelectedElementView } from './renderTable.js';
+import { getSelectedElement, setSelectedElement } from './storage.js';
+
 const sections = [
   'periodic-table', 'compare', 'timeline', 'games',
   'lab', 'achievements', 'progress', 'story'
@@ -20,6 +23,7 @@ const reverseRouteMap = Object.fromEntries(
 );
 
 let currentSection = 'periodic-table';
+let savedHomeSelectionAtomicNumber = null;
 
 export function initRouter() {
   const navBtns = document.querySelectorAll('.nav-btn');
@@ -65,6 +69,21 @@ export function navigateTo(section) {
 }
 
 function activateSection(section) {
+  const from = currentSection;
+  const to = section;
+
+  if (from === 'periodic-table' && to !== 'periodic-table') {
+    savedHomeSelectionAtomicNumber = getSelectedElement()?.atomicNumber ?? null;
+  }
+
+  window.dispatchEvent(new CustomEvent('beforeroutechange', {
+    detail: {
+      from,
+      to,
+      savedAtomicNumber: savedHomeSelectionAtomicNumber
+    }
+  }));
+
   // 更新导航按钮状态
   document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.section === section);
@@ -88,8 +107,20 @@ function activateSection(section) {
 
   currentSection = section;
 
+  if (section === 'periodic-table') {
+    restoreHomeSelection();
+  }
+
   // 触发页面切换事件
-  window.dispatchEvent(new CustomEvent('pagechange', { detail: { section } }));
+  window.dispatchEvent(new CustomEvent('pagechange', { detail: { section, from, to } }));
+  window.dispatchEvent(new CustomEvent('afterroutechange', {
+    detail: {
+      from,
+      to,
+      section,
+      savedAtomicNumber: savedHomeSelectionAtomicNumber
+    }
+  }));
 }
 
 export function getCurrentSection() {
@@ -107,4 +138,27 @@ function closeDetailPanel() {
       panel.querySelector('.panel-content')?.classList.remove('content-switching');
     }, 320);
   }
+}
+
+function restoreHomeSelection() {
+  const fallbackAtomicNumber = getSelectedElement()?.atomicNumber ?? null;
+  const atomicNumberToRestore = savedHomeSelectionAtomicNumber ?? fallbackAtomicNumber;
+
+  if (atomicNumberToRestore === null) {
+    return;
+  }
+
+  const restored = setSelectedElement(atomicNumberToRestore);
+  if (!restored) {
+    return;
+  }
+
+  window.requestAnimationFrame(() => {
+    restoreSelectedElementView({
+      element: restored,
+      markLearned: false,
+      emitEvent: true,
+      scroll: true
+    });
+  });
 }

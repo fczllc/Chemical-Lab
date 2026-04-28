@@ -107,8 +107,21 @@
   }
 
   .bottom-module {
-    min-height: 80px;
+    min-height: 220px;
     padding: 10px 12px;
+  }
+
+  .categories-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-donut {
+    margin: 0 auto;
+  }
+
+  .timeline-preview-item,
+  .timeline-page-card {
+    grid-template-columns: 1fr;
   }
 
   .page-section {

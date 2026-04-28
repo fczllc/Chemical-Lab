@@ -71,7 +71,12 @@ export function initPeriodicTable(data) {
 
   const selected = getSelectedElement();
   if (selected) {
-    highlightSelectedElement(selected.atomicNumber);
+    restoreSelectedElementView({
+      element: selected,
+      scroll: false,
+      emitEvent: false,
+      animated: false
+    });
   }
 }
 
@@ -174,9 +179,7 @@ function positionCells() {
 
 function selectElement(element) {
   setSelectedElement(element.atomicNumber);
-  highlightSelectedElement(element.atomicNumber);
-  openDetailPanel(element);
-  window.dispatchEvent(new CustomEvent('elementselected', { detail: { element } }));
+  restoreSelectedElementView({ element });
 }
 
 function highlightSelectedElement(atomicNumber) {
@@ -185,14 +188,16 @@ function highlightSelectedElement(atomicNumber) {
   });
 }
 
-function openDetailPanel(element) {
+function openDetailPanel(element, options = {}) {
   const panel = document.getElementById('detail-panel');
   if (!panel) return;
 
   const panelContent = panel.querySelector('.panel-content');
   const wasOpen = panel.classList.contains('open');
 
-  markElementLearned(element.atomicNumber);
+  if (options.markLearned !== false) {
+    markElementLearned(element.atomicNumber);
+  }
   populateDetailPanel(element);
 
   panel.classList.remove('closing');
@@ -212,6 +217,52 @@ function openDetailPanel(element) {
   window.setTimeout(() => {
     panel.classList.remove('panel-opening');
   }, PANEL_SWITCH_DURATION_MS);
+}
+
+export function scrollElementIntoView(atomicNumber, options = {}) {
+  if (!Number.isInteger(Number(atomicNumber))) {
+    return false;
+  }
+
+  const target = document.querySelector(
+    `.element-cell[data-atomic-number="${atomicNumber}"], .element-list-row[data-atomic-number="${atomicNumber}"]`
+  );
+
+  if (!target) {
+    return false;
+  }
+
+  target.scrollIntoView({
+    behavior: options.behavior || 'smooth',
+    block: options.block || 'center',
+    inline: options.inline || 'center'
+  });
+
+  return true;
+}
+
+export function restoreSelectedElementView(options = {}) {
+  const element = options.element || getSelectedElement();
+  if (!element) {
+    return false;
+  }
+
+  highlightSelectedElement(element.atomicNumber);
+
+  if (options.scroll !== false) {
+    scrollElementIntoView(element.atomicNumber, options.scrollOptions);
+  }
+
+  openDetailPanel(element, {
+    markLearned: options.markLearned,
+    animated: options.animated
+  });
+
+  if (options.emitEvent !== false) {
+    window.dispatchEvent(new CustomEvent('elementselected', { detail: { element } }));
+  }
+
+  return true;
 }
 
 function populateDetailPanel(element) {
