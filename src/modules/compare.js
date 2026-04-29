@@ -216,13 +216,7 @@ function renderCompareView(container, { mode }) {
   }
 
   container.innerHTML = `
-    <div class="compare-actions-bar">
-      <div class="compare-count">已选择 ${compareList.length}/3 个元素</div>
-      <div class="compare-actions">
-        <button class="compare-btn compare-btn-clear" type="button">清空对比</button>
-        <button class="compare-btn compare-btn-home" type="button">${mode === 'modal' ? '继续选元素' : '返回主页'}</button>
-      </div>
-    </div>
+    ${mode === 'modal' ? '' : renderCompareActionsBar(compareList.length)}
     <div class="compare-slots compare-slots--${compareList.length}">
       ${compareList.map((element) => renderElementCard(element)).join('')}
     </div>
@@ -231,13 +225,35 @@ function renderCompareView(container, { mode }) {
   bindCompareViewEvents(container, { mode });
 }
 
+function renderCompareActionsBar(compareCount) {
+  return `
+    <div class="compare-actions-bar">
+      <div class="compare-count">已选择 ${compareCount}/3 个元素</div>
+      <div class="compare-actions">
+        <button class="compare-btn compare-btn-clear" type="button">清空对比</button>
+        <button class="compare-btn compare-btn-home" type="button">返回主页</button>
+      </div>
+    </div>
+  `;
+}
+
 function renderEmptyState(mode = 'route') {
+  if (mode === 'modal') {
+    return `
+      <div class="compare-page-empty compare-page-empty-modal">
+        <div class="compare-empty-icon">&#8644;</div>
+        <strong>对比列表还是空的</strong>
+        <p>把元素拖入底部对比预览，或选中元素后点击空槽，这里会同步刷新。</p>
+      </div>
+    `;
+  }
+
   return `
     <div class="compare-page-empty">
       <div class="compare-empty-icon">&#8644;</div>
       <strong>对比列表还是空的</strong>
       <p>把元素拖入底部对比预览，或选中元素后点击空槽，最多可放入 3 个元素，这里和首页预览会同步刷新。</p>
-      <button class="compare-btn compare-btn-home" type="button">${mode === 'modal' ? '继续选元素' : '去添加元素'}</button>
+      <button class="compare-btn compare-btn-home" type="button">去添加元素</button>
     </div>
   `;
 }

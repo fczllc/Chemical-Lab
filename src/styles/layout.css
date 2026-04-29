@@ -901,8 +901,6 @@
 
 .categories-donut-core span,
 .preview-caption,
-.compare-preview-name,
-.compare-preview-meta,
 .stats-stage-card span,
 .compare-page-card span,
 .compare-page-card small,
@@ -1089,7 +1087,6 @@
   gap: 10px;
 }
 
-.compare-preview-tile,
 .compare-preview-empty,
 .stats-stage-card,
 .module-shell-card,
@@ -1103,7 +1100,6 @@
   padding: 12px;
 }
 
-.compare-preview-tile,
 .compare-preview-empty {
   aspect-ratio: 1;
   display: flex;
@@ -1114,25 +1110,23 @@
   padding: 4px;
 }
 
-.compare-preview-tile {
-  border-color: color-mix(in srgb, var(--tile-accent) 35%, rgba(148, 163, 184, 0.16));
-  box-shadow: inset 0 0 18px color-mix(in srgb, var(--tile-accent) 14%, transparent);
-}
-
 .compare-preview-empty {
   border-style: dashed;
 }
 
-.compare-preview-symbol,
 .compare-page-symbol,
 .story-preview-topline span {
   font-family: var(--font-display);
   font-size: 1.3rem;
 }
 
-.compare-preview-symbol,
 .compare-page-symbol {
   color: var(--tile-accent, var(--compare-accent));
+}
+
+.compare-preview-grid .element-cell {
+  width: 100%;
+  min-width: 0;
 }
 
 .compare-preview-empty span {
@@ -1291,19 +1285,20 @@
     radial-gradient(circle at 18% 20%, rgba(0, 240, 255, 0.12), transparent 32%),
     radial-gradient(circle at 82% 76%, rgba(184, 41, 255, 0.10), transparent 30%),
     rgba(2, 6, 23, 0.62);
-  backdrop-filter: blur(22px) saturate(1.25);
-  -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   padding: 24px;
 }
 
 .compare-modal-content {
-  width: min(1120px, calc(100vw - 48px));
-  max-width: none;
-  max-height: min(84vh, 860px);
-  padding: 28px;
+  width: 1180px;
+  max-width: calc(100vw - 48px);
+  max-height: none;
+  padding: 24px;
+  overflow: visible;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent 38%),
-    rgba(3, 5, 8, 0.78);
+    rgba(3, 5, 8, 0.68);
   border-color: rgba(148, 163, 184, 0.22);
   box-shadow:
     0 32px 80px rgba(0, 0, 0, 0.58),
@@ -1316,7 +1311,7 @@
 .compare-modal-heading {
   display: grid;
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-right: 40px;
 }
 
@@ -1344,18 +1339,80 @@
 }
 
 .compare-container-modal {
-  min-height: 220px;
+  min-height: 0;
+}
+
+.compare-modal .compare-slots {
+  gap: 14px;
+}
+
+.compare-modal .compare-slots--1 {
+  grid-template-columns: minmax(280px, 380px);
+}
+
+.compare-modal .compare-slots--2 {
+  grid-template-columns: repeat(2, minmax(280px, 380px));
 }
 
 .compare-modal .compare-slots--3 {
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .compare-modal .compare-page-empty {
-  min-height: 240px;
+  min-height: 220px;
   background: rgba(15, 23, 42, 0.48);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.compare-modal .compare-card-header {
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.compare-modal .compare-card-symbol-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+}
+
+.compare-modal .compare-card-symbol {
+  font-size: 1.55rem;
+}
+
+.compare-modal .compare-card-cn {
+  font-size: 1rem;
+}
+
+.compare-modal .compare-card-en {
+  font-size: 0.74rem;
+}
+
+.compare-modal .compare-card-body {
+  padding: 10px 16px;
+}
+
+.compare-modal .compare-attr-row {
+  gap: 8px;
+  padding: 5px 0;
+}
+
+.compare-modal .compare-attr-label {
+  font-size: 0.72rem;
+  min-width: 48px;
+}
+
+.compare-modal .compare-attr-value {
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.compare-modal .compare-card-footer {
+  padding: 10px 16px 14px;
+}
+
+.compare-modal .compare-card-remove {
+  padding: 7px 10px;
 }
 
 /* ===== 设置面板 ===== */
@@ -1563,6 +1620,18 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.compare-modal .compare-slots {
+  gap: 14px;
+}
+
+.compare-modal .compare-slots.compare-slots--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.compare-modal .compare-card {
+  min-width: 0;
+}
+
 /* 对比卡片 */
 .compare-card {
   position: relative;
@@ -1588,6 +1657,10 @@
     0 0 72px rgba(var(--card-accent-rgb), 0.2),
     0 0 96px rgba(var(--card-accent-rgb), 0.1),
     0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.compare-modal .compare-card:hover {
+  transform: none;
 }
 
 .compare-card-glow {
