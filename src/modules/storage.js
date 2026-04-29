@@ -586,6 +586,41 @@ export function addComparedElement(atomicNumber) {
   return [...appState.compareList];
 }
 
+export function replaceComparedElementAt(slotIndex, atomicNumber) {
+  const normalizedSlotIndex = Number(slotIndex);
+  const normalizedAtomicNumber = sanitizeAtomicNumber(atomicNumber);
+  if (!Number.isInteger(normalizedSlotIndex) || normalizedSlotIndex < 0 || normalizedAtomicNumber === null) {
+    return [...appState.compareList];
+  }
+
+  if (normalizedSlotIndex >= appState.compareList.length) {
+    return [...appState.compareList];
+  }
+
+  const nextElement = getElementFromCatalog(normalizedAtomicNumber);
+  if (!nextElement) {
+    return [...appState.compareList];
+  }
+
+  const targetElement = appState.compareList[normalizedSlotIndex];
+  if (targetElement?.atomicNumber === normalizedAtomicNumber) {
+    return [...appState.compareList];
+  }
+
+  const oldValue = [...appState.compareList];
+  const nextList = appState.compareList
+    .map((element, index) => (index === normalizedSlotIndex ? nextElement : element))
+    .filter((element, index) => index === normalizedSlotIndex || element.atomicNumber !== normalizedAtomicNumber);
+
+  appState.compareList = nextList;
+  emitStateChange('compareList', oldValue, appState.compareList, 'compareupdated', {
+    atomicNumber: normalizedAtomicNumber,
+    replacedAtomicNumber: targetElement?.atomicNumber ?? null,
+    slotIndex: normalizedSlotIndex
+  });
+  return [...appState.compareList];
+}
+
 export function removeComparedElement(atomicNumber) {
   const normalizedAtomicNumber = sanitizeAtomicNumber(atomicNumber);
   if (normalizedAtomicNumber === null) {

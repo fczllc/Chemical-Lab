@@ -9,7 +9,8 @@ import {
   getCompareList,
   getLearnedElements,
   getSelectedElement,
-  getUnlockedAchievements
+  getUnlockedAchievements,
+  replaceComparedElementAt
 } from './storage.js';
 
 const CATEGORY_META = Object.fromEntries(
@@ -209,7 +210,7 @@ function renderComparePreview() {
         <button class="preview-metric module-link" type="button" data-action="open-compare">对比</button>
       </div>
       <div class="compare-preview-grid">
-        ${compareList.map((element) => renderComparePreviewElement(element)).join('')}
+        ${compareList.map((element, index) => renderComparePreviewElement(element, index)).join('')}
         ${Array.from({ length: emptySlots }, (_, index) => `
           <div class="compare-preview-empty" role="button" tabindex="0" aria-label="添加当前选中的元素到对比槽位 ${compareList.length + index + 1}">
             <span>+</span>
@@ -229,9 +230,9 @@ function renderComparePreview() {
   bindCompareEmptySlots();
 }
 
-function renderComparePreviewElement(element) {
+function renderComparePreviewElement(element, index) {
   return `
-    <article class="compare-preview-tile element-cell" data-category="${element.category}" data-atomic-number="${element.atomicNumber}" aria-label="${element.chineseName} ${element.symbol}">
+    <article class="compare-preview-tile element-cell" data-category="${element.category}" data-atomic-number="${element.atomicNumber}" data-slot-index="${index}" aria-label="${element.chineseName} ${element.symbol}">
       <span class="atomic-num">${element.atomicNumber}</span>
       <span class="symbol">${element.symbol}</span>
       <span class="chinese-name">${element.chineseName}</span>
@@ -266,8 +267,14 @@ function bindCompareDropTarget() {
 
   card.addEventListener('drop', (event) => {
     const atomicNumber = readDraggedAtomicNumber(event.dataTransfer);
+    const replacementSlot = getCompareReplacementSlot(event.target);
     card.classList.remove('compare-drop-active');
     event.preventDefault();
+
+    if (replacementSlot) {
+      replaceElementInCompareSlot(replacementSlot.dataset.slotIndex, atomicNumber);
+      return;
+    }
 
     if (!addElementToCompare(atomicNumber)) {
       return;
@@ -310,6 +317,15 @@ function hasElementDragPayload(dataTransfer) {
   return [...dataTransfer.types].some((type) => type === ELEMENT_ATOMIC_NUMBER_MIME || type === 'text/plain');
 }
 
+function getCompareReplacementSlot(target) {
+  if (!(target instanceof Element)) {
+    return null;
+  }
+
+  const slot = target.closest('.compare-preview-tile[data-slot-index]');
+  return cardRefs.compareCard.contains(slot) ? slot : null;
+}
+
 function getCurrentSelectedAtomicNumber() {
   const selectedElement = getSelectedElement();
   if (selectedElement?.atomicNumber) {
@@ -336,6 +352,31 @@ function addElementToCompare(value) {
   }
 
   addComparedElement(atomicNumber);
+  return true;
+}
+
+function replaceElementInCompareSlot(slotIndex, value) {
+  const atomicNumber = Number(value);
+  if (!Number.isInteger(atomicNumber)) {
+    return false;
+  }
+
+  const normalizedSlotIndex = Number(slotIndex);
+  if (!Number.isInteger(normalizedSlotIndex) || normalizedSlotIndex < 0) {
+    return false;
+  }
+
+  const compareList = getCompareList();
+  if (normalizedSlotIndex >= compareList.length) {
+    return false;
+  }
+
+  const elementExists = allElements.some((element) => element.atomicNumber === atomicNumber);
+  if (!elementExists) {
+    return false;
+  }
+
+  replaceComparedElementAt(normalizedSlotIndex, atomicNumber);
   return true;
 }
 
