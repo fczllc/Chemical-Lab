@@ -13,6 +13,11 @@ import {
   RENDER_TABLE_SAFETY_META
 } from '../data/contentMeta.js';
 
+function hexToRgb(hex) {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '0, 240, 255';
+}
+
 const categoryColors = ELEMENT_CATEGORY_TABLE_COLORS;
 
 const rarityNames = ELEMENT_RARITY_LABELS;
@@ -25,7 +30,7 @@ let elements = [];
 let stateListenersBound = false;
 let tooltipEl = null;
 
-let filterState = { category: 'all', period: 'all', query: '' };
+let filterState = { selectedCategories: new Set(), period: 'all' };
 
 export function initPeriodicTable(data) {
   elements = data;
@@ -106,6 +111,7 @@ function createElementCell(element) {
   cell.dataset.category = element.category;
   cell.dataset.period = element.period;
   cell.dataset.group = element.group;
+  cell.draggable = true;
   cell.tabIndex = 0;
 
   if (getLearnedElements().has(element.atomicNumber)) {
@@ -119,12 +125,13 @@ function createElementCell(element) {
 
   cell.innerHTML = `
     <span class="atomic-num">${element.atomicNumber}</span>
-    <span class="symbol" style="color: ${categoryColors[element.category] || '#fff'}">${element.symbol}</span>
+    <span class="symbol">${element.symbol}</span>
     <span class="chinese-name">${element.chineseName}</span>
     <span class="atomic-mass">${element.atomicMass}</span>
   `;
 
   cell.addEventListener('click', () => selectElement(element));
+  setupElementDrag(cell, element);
   setupCellHover(cell, element);
   setupCellKeyboard(cell, element);
 
@@ -243,16 +250,19 @@ function populateDetailPanel(element) {
     const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
 
     hero.style.setProperty('--element-accent', accentColor);
+    hero.style.setProperty('--element-accent-rgb', hexToRgb(accentColor));
     hero.innerHTML = `
-      <span class="atomic-number">${element.atomicNumber}</span>
+      <div class="element-hero-top">
+        <span class="atomic-number">${element.atomicNumber}</span>
+        <span class="atomic-mass">${element.atomicMass}</span>
+      </div>
       <span class="symbol" style="color: ${categoryColors[element.category] || accentColor}">${element.symbol}</span>
       <span class="chinese-name">${element.chineseName}</span>
       <span class="english-name">${element.englishName}</span>
-      <span class="atomic-mass">原子质量 ${element.atomicMass}</span>
       <div class="element-badges">
-        <span class="element-badge" style="--badge-color: ${categoryColors[element.category] || '#64748b'}">${categoryLabel}</span>
-        <span class="element-badge" style="--badge-color: ${accentColor}">${rarityLabel}</span>
-        <span class="element-badge element-badge-safety" style="--badge-color: ${safety.color}">${safety.label}</span>
+        <span class="element-badge" style="--badge-color: ${categoryColors[element.category] || '#64748b'}; --badge-color-rgb: ${hexToRgb(categoryColors[element.category] || '#64748b')}">${categoryLabel}</span>
+        <span class="element-badge" style="--badge-color: ${accentColor}; --badge-color-rgb: ${hexToRgb(accentColor)}">${rarityLabel}</span>
+        <span class="element-badge element-badge-safety" style="--badge-color: ${safety.color}; --badge-color-rgb: ${hexToRgb(safety.color)}">${safety.label}</span>
       </div>
     `;
   }
@@ -315,11 +325,29 @@ function renderLegend() {
   container.innerHTML = Object.entries(ELEMENT_CATEGORY_LABELS)
     .filter(([key]) => key !== 'unknown')
     .map(([key, name]) => `
-      <div class="legend-item">
+      <button type="button" class="legend-item" data-category="${key}" aria-pressed="false">
         <span class="legend-color" style="background: ${categoryColors[key]}"></span>
         <span>${name}</span>
-      </div>
+      </button>
     `).join('');
+
+  container.querySelectorAll('.legend-item[data-category]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.category;
+      if (!category) return;
+
+      const selectedCategories = new Set(filterState.selectedCategories);
+      if (selectedCategories.has(category)) {
+        selectedCategories.delete(category);
+      } else {
+        selectedCategories.add(category);
+      }
+
+      applyFilters({ selectedCategories });
+    });
+  });
+
+  syncLegendButtons();
 }
 
 function setupCellInteractions() {
@@ -335,38 +363,58 @@ export function getElementBySymbol(sym) {
 }
 
 export function applyFilters(updates = {}) {
-  filterState = { ...filterState, ...updates };
-  const { category, period, query } = filterState;
-  const q = query.toLowerCase().trim();
+  if (updates.selectedCategories) {
+    filterState = {
+      ...filterState,
+      ...updates,
+      selectedCategories: new Set(updates.selectedCategories)
+    };
+  } else {
+    filterState = { ...filterState, ...updates };
+  }
+
+  const { selectedCategories, period } = filterState;
+  const hasCategoryFilter = selectedCategories.size > 0;
 
   document.querySelectorAll('.element-cell, .element-list-row').forEach((cell) => {
-    const atomicNumber = Number.parseInt(cell.dataset.atomicNumber, 10);
-    const element = elements.find((item) => item.atomicNumber === atomicNumber);
-    if (!element) return;
-
-    const catMatch = category === 'all' || cell.dataset.category === category;
+    const catMatch = !hasCategoryFilter || selectedCategories.has(cell.dataset.category);
     const periodMatch = period === 'all' || cell.dataset.period === period;
-
-    let queryMatch = true;
-    if (q) {
-      queryMatch =
-        element.symbol.toLowerCase().includes(q) ||
-        element.englishName.toLowerCase().includes(q) ||
-        element.chineseName.includes(q) ||
-        element.atomicNumber.toString() === q;
-    }
-
-    const isMatch = catMatch && periodMatch && queryMatch;
+    const isMatch = catMatch && periodMatch;
     cell.classList.toggle('filtered-out', !isMatch);
   });
+
+  syncLegendButtons();
 }
 
-export function filterCells(category, period) {
-  applyFilters({ category, period });
+export function selectLegendCategory(category) {
+  if (category === 'all') {
+    applyFilters({ selectedCategories: new Set() });
+    document.querySelector('.legend-item[data-category]')?.focus();
+    return true;
+  }
+
+  const button = [...document.querySelectorAll('.legend-item[data-category]')]
+    .find((item) => item.dataset.category === category);
+  if (!button) {
+    return false;
+  }
+
+  if (button.getAttribute('aria-pressed') !== 'true') {
+    const selectedCategories = new Set(filterState.selectedCategories);
+    selectedCategories.add(category);
+    applyFilters({ selectedCategories });
+  }
+
+  button.focus();
+  return true;
 }
 
-export function searchElements(query) {
-  applyFilters({ query });
+function syncLegendButtons() {
+  document.querySelectorAll('.legend-item[data-category]').forEach((button) => {
+    const isSelected = filterState.selectedCategories.has(button.dataset.category);
+    button.classList.toggle('selected', isSelected);
+    button.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+  });
 }
 
 /* ===== 列表视图 ===== */
@@ -398,6 +446,7 @@ function createElementListRow(element) {
   row.dataset.category = element.category;
   row.dataset.period = element.period;
   row.dataset.group = element.group;
+  row.draggable = true;
   row.tabIndex = 0;
 
   if (getLearnedElements().has(element.atomicNumber)) {
@@ -418,6 +467,7 @@ function createElementListRow(element) {
   `;
 
   row.addEventListener('click', () => selectElement(element));
+  setupElementDrag(row, element);
   setupCellHover(row, element);
   setupCellKeyboard(row, element);
 
@@ -439,16 +489,13 @@ function initViewModes() {
 function showView(view) {
   const wrapper = document.querySelector('.periodic-table-wrapper');
   const list = document.getElementById('periodic-list');
-  const legend = document.querySelector('.category-legend');
 
   if (view === 'list') {
     wrapper?.classList.add('hidden');
     list?.classList.remove('hidden');
-    legend?.classList.add('hidden');
   } else {
     wrapper?.classList.remove('hidden');
     list?.classList.add('hidden');
-    legend?.classList.remove('hidden');
   }
 
   applyFilters();
@@ -501,6 +548,19 @@ function setupCellHover(el, element) {
   el.addEventListener('mouseenter', () => showTooltip(element));
   el.addEventListener('mousemove', moveTooltip);
   el.addEventListener('mouseleave', hideTooltip);
+}
+
+function setupElementDrag(el, element) {
+  el.addEventListener('dragstart', (event) => {
+    const atomicNumber = String(element.atomicNumber);
+
+    event.dataTransfer?.setData('application/x-element-atomic-number', atomicNumber);
+    event.dataTransfer?.setData('text/plain', atomicNumber);
+
+    if (event.dataTransfer) {
+      event.dataTransfer.effectAllowed = 'copy';
+    }
+  });
 }
 
 /* ===== 键盘导航 ===== */
