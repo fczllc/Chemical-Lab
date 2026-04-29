@@ -209,13 +209,7 @@ function renderComparePreview() {
         <button class="preview-metric module-link" type="button" data-action="open-compare">对比</button>
       </div>
       <div class="compare-preview-grid">
-        ${compareList.map((element) => `
-          <article class="compare-preview-tile" style="--tile-accent: ${element.color || 'var(--neon-cyan)'}">
-            <span class="compare-preview-symbol">${element.symbol}</span>
-            <span class="compare-preview-name">${element.chineseName}</span>
-            <span class="compare-preview-meta">#${element.atomicNumber}</span>
-          </article>
-        `).join('')}
+        ${compareList.map((element) => renderComparePreviewElement(element)).join('')}
         ${Array.from({ length: emptySlots }, (_, index) => `
           <div class="compare-preview-empty" role="button" tabindex="0" aria-label="添加当前选中的元素到对比槽位 ${compareList.length + index + 1}">
             <span>+</span>
@@ -233,6 +227,17 @@ function renderComparePreview() {
   });
 
   bindCompareEmptySlots();
+}
+
+function renderComparePreviewElement(element) {
+  return `
+    <article class="compare-preview-tile element-cell" data-category="${element.category}" data-atomic-number="${element.atomicNumber}" aria-label="${element.chineseName} ${element.symbol}">
+      <span class="atomic-num">${element.atomicNumber}</span>
+      <span class="symbol">${element.symbol}</span>
+      <span class="chinese-name">${element.chineseName}</span>
+      <span class="atomic-mass">${element.atomicMass}</span>
+    </article>
+  `;
 }
 
 function bindCompareDropTarget() {
