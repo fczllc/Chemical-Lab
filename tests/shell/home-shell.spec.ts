@@ -273,7 +273,13 @@ test.describe('Bottom Widget Contract', () => {
 
     const initialHash = await page.evaluate(() => window.location.hash);
     await contrastBtn.click();
-    await expect(page.getByTestId('compare-modal')).toHaveClass(/show/);
+    const modal = page.getByTestId('compare-modal');
+    await expect(modal).toHaveClass(/show/);
+    await expect(modal).not.toContainText('清空对比');
+    await expect(modal).not.toContainText('继续选元素');
+    await expect(modal).not.toContainText('已选择');
+    await expect(modal).not.toContainText('最多3个');
+    await expect(modal).not.toContainText('最多可放入 3 个元素');
     await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
   });
 
@@ -305,11 +311,59 @@ test.describe('Bottom Widget Contract', () => {
     expect(overflow).toBe(true);
   });
 
+  test('compare modal fits three elements side-by-side without panel scrollbars', async ({ page }) => {
+    for (const atomicNumber of [1, 2, 3]) {
+      await page.locator(`[data-testid="element-cell-${atomicNumber}"]`).click();
+      await page.locator('.compare-preview-empty').first().click();
+    }
+
+    await page.getByTestId('bottom-compare').locator('[data-action="open-compare"]').click();
+    const modal = page.getByTestId('compare-modal');
+    await expect(modal).toHaveClass(/show/);
+    await expect(modal.locator('.compare-card')).toHaveCount(3);
+    await expect(modal).not.toContainText('清空对比');
+    await expect(modal).not.toContainText('继续选元素');
+    await expect(modal).not.toContainText('已选择');
+    await expect(modal).not.toContainText('最多3个');
+
+    const modalLayout = await page.evaluate(() => {
+      const panel = document.querySelector('.compare-modal-content');
+      const cards = Array.from(document.querySelectorAll('.compare-modal .compare-card'));
+      const panelBox = panel?.getBoundingClientRect();
+      const cardBoxes = cards.map((card) => card.getBoundingClientRect());
+      const panelStyles = panel ? window.getComputedStyle(panel) : null;
+
+      return {
+        panelBottom: panelBox?.bottom ?? 0,
+        viewportHeight: window.innerHeight,
+        panelScrollHeight: panel?.scrollHeight ?? 0,
+        panelClientHeight: panel?.clientHeight ?? 0,
+        panelOverflowY: panelStyles?.overflowY,
+        sameRow: cardBoxes.length === 3 && cardBoxes.every((box) => Math.abs(box.top - cardBoxes[0].top) <= 1),
+        increasingLeft: cardBoxes.length === 3 && cardBoxes[0].left < cardBoxes[1].left && cardBoxes[1].left < cardBoxes[2].left,
+      };
+    });
+
+    expect(modalLayout.sameRow).toBe(true);
+    expect(modalLayout.increasingLeft).toBe(true);
+    expect(modalLayout.panelBottom).toBeLessThanOrEqual(modalLayout.viewportHeight - 12);
+    expect(modalLayout.panelScrollHeight).toBeLessThanOrEqual(modalLayout.panelClientHeight + 1);
+    expect(modalLayout.panelOverflowY).toBe('visible');
+  });
+
   test('compare state edge case does not restore old count badge', async ({ page }) => {
     // Add hydrogen to compare via selected-element empty slot
     await page.locator('[data-testid="element-cell-1"]').click();
     await expect(page.getByTestId('detail-panel')).toHaveClass(/open|docked/);
     await page.locator('.compare-preview-empty').first().click();
+
+    const hydrogenPreview = page.getByTestId('bottom-compare').locator('.compare-preview-tile.element-cell[data-atomic-number="1"]');
+    await expect(hydrogenPreview).toBeVisible();
+    await expect(hydrogenPreview).toHaveAttribute('data-category', 'reactive nonmetal');
+    await expect(hydrogenPreview.locator('.atomic-num')).toHaveText('1');
+    await expect(hydrogenPreview.locator('.symbol')).toHaveText('H');
+    await expect(hydrogenPreview.locator('.chinese-name')).toHaveText('氢');
+    await expect(hydrogenPreview.locator('.atomic-mass')).toHaveText('1.008');
 
     // Return home and verify compare card still shows 对比, not N/3
     await page.getByTestId('nav-home').click();
@@ -324,7 +378,31 @@ test.describe('Bottom Widget Contract', () => {
     // Click 对比 opens modal without hash navigation
     const initialHash = await page.evaluate(() => window.location.hash);
     await compareCard.locator('[data-action="open-compare"]').click();
-    await expect(page.getByTestId('compare-modal')).toHaveClass(/show/);
+    const modal = page.getByTestId('compare-modal');
+    await expect(modal).toHaveClass(/show/);
+    await expect(modal).not.toContainText('清空对比');
+    await expect(modal).not.toContainText('继续选元素');
+    await expect(modal).not.toContainText('已选择');
+    await expect(modal).not.toContainText('最多3个');
+
+    const modalStyles = await page.evaluate(() => {
+      const overlay = document.getElementById('compare-modal');
+      const panel = document.querySelector('.compare-modal-content');
+      const overlayStyles = overlay ? window.getComputedStyle(overlay) : null;
+      const panelStyles = panel ? window.getComputedStyle(panel) : null;
+
+      return {
+        overlayBackdropFilter: overlayStyles?.backdropFilter,
+        panelBackdropFilter: panelStyles?.backdropFilter,
+        panelOverflowY: panelStyles?.overflowY,
+        panelWidth: panel?.getBoundingClientRect().width ?? 0,
+      };
+    });
+
+    expect(modalStyles.overlayBackdropFilter === 'none' || modalStyles.overlayBackdropFilter === '').toBe(true);
+    expect(modalStyles.panelBackdropFilter).toContain('blur');
+    expect(modalStyles.panelOverflowY).toBe('visible');
+    expect(modalStyles.panelWidth).toBeGreaterThanOrEqual(1100);
     await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
   });
 });
