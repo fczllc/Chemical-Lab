@@ -17,6 +17,7 @@ export default async function globalSetup() {
   await mkdir(RUNTIME_DIR, { recursive: true });
 
   if (await isServerReady()) {
+    await rm(PID_FILE, { force: true });
     return;
   }
 
@@ -61,7 +62,7 @@ async function isServerReady() {
     const response = await fetch(SERVER_URL, { signal: controller.signal });
     const html = await response.text();
     clearTimeout(timeoutId);
-    return response.ok && html.includes('/src/main.js');
+    return response.ok && (html.includes('/src/main.js') || /\/assets\/index-[^"'<>\s]+\.js/.test(html));
   } catch {
     return false;
   }

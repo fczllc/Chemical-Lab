@@ -1,0 +1,43 @@
+{
+  "source": ".sisyphus/evidence/task-0-layering-contract.json",
+  "contract": {
+    "canvas": {
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "pointerEvents": "none",
+      "zIndex": "0",
+      "position": "fixed"
+    },
+    "header": {
+      "zIndex": "100",
+      "position": "fixed"
+    },
+    "panel": {
+      "zIndex": "1",
+      "position": "relative",
+      "transform": "none"
+    },
+    "settingsModal": {
+      "zIndex": "200",
+      "position": "fixed",
+      "opacity": "0",
+      "visibility": "visible"
+    },
+    "quizModal": {
+      "zIndex": "200",
+      "position": "fixed",
+      "opacity": "0",
+      "visibility": "visible"
+    },
+    "achievementPopup": {
+      "zIndex": "120",
+      "position": "fixed",
+      "right": "24px"
+    },
+    "bottomModules": {
+      "display": "grid",
+      "position": "static"
+    }
+  }
+}

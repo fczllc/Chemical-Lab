@@ -14,7 +14,6 @@ import { initRouter } from './modules/router.js';
 import { initPeriodicTable } from './modules/renderTable.js';
 import { initDetailPanel } from './modules/detailPanel.js';
 import { initFilters } from './modules/filters.js';
-import { initSearch } from './modules/search.js';
 import { initCompare } from './modules/compare.js';
 import { initHomeModules } from './modules/homeModules.js';
 import { initTimeline } from './modules/timeline.js';
@@ -24,7 +23,6 @@ import { initAchievements } from './modules/achievements.js';
 import { initProgress } from './modules/progress.js';
 import { initStoryMode } from './modules/storyMode.js';
 import { initLab } from './modules/lab.js';
-import { initMobile } from './modules/mobile.js';
 import {
   createStateInspectionProxy,
   getCollectedElements,
@@ -73,8 +71,7 @@ async function init() {
   initRouter();
   initPeriodicTable(elements);
   initDetailPanel();
-  initFilters(elements);
-  initSearch(elements);
+  initFilters();
   initCompare(elements);
   initTimeline(elements);
   initQuiz();
@@ -84,7 +81,6 @@ async function init() {
   initStoryMode();
   initLab();
   initHomeModules(elements);
-  initMobile();
 
   initSettings();
   bindLifecycleEvents();

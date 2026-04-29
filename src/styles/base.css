@@ -1,10 +1,10 @@
 /* ===== 基础变量与重置 ===== */
 :root {
-  /* 深色背景 */
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1a2332;
-  --bg-panel: rgba(17, 24, 39, 0.85);
+  /* 深色背景 - 接近纯黑 */
+  --bg-primary: #000000;
+  --bg-secondary: #030508;
+  --bg-tertiary: #060a10;
+  --bg-panel: rgba(3, 5, 8, 0.95);
   
   /* 霓虹色 */
   --neon-cyan: #00f0ff;
@@ -14,18 +14,29 @@
   --neon-pink: #ff44aa;
   --neon-yellow: #ffdd00;
   
-  /* 元素类别色 */
-  --alkali: #ff6b6b;
-  --alkaline: #ffa94d;
-  --transition: #ffd43b;
-  --post-transition: #69db7c;
-  --metalloid: #38d9a9;
+  /* 元素类别色 - 高饱和度霓虹光谱 */
+  --alkali: #ff2a6d;
+  --alkali-rgb: 255, 42, 109;
+  --alkaline: #ff7e00;
+  --alkaline-rgb: 255, 126, 0;
+  --transition: #ffd700;
+  --transition-rgb: 255, 215, 0;
+  --post-transition: #7ee787;
+  --post-transition-rgb: 126, 231, 135;
+  --metalloid: #00f0ff;
+  --metalloid-rgb: 0, 240, 255;
   --nonmetal: #4dabf7;
-  --noble: #9775fa;
-  --halogen: #f06595;
-  --lanthanide: #ff6b9d;
+  --nonmetal-rgb: 77, 171, 247;
+  --noble: #b829ff;
+  --noble-rgb: 184, 41, 255;
+  --halogen: #ff6b9d;
+  --halogen-rgb: 255, 107, 157;
+  --lanthanide: #ff44aa;
+  --lanthanide-rgb: 255, 68, 170;
   --actinide: #ff8fab;
+  --actinide-rgb: 255, 143, 171;
   --unknown: #868e96;
+  --unknown-rgb: 134, 142, 150;
   
   /* 文字 */
   --text-primary: #e8ecf1;
@@ -33,12 +44,12 @@
   --text-muted: #64748b;
   
   /* 边框 */
-  --border-glow: rgba(0, 240, 255, 0.3);
-  --border-subtle: rgba(148, 163, 184, 0.15);
+  --border-glow: rgba(0, 212, 255, 0.16);
+  --border-subtle: rgba(120, 144, 168, 0.14);
   
   /* 字体 */
-  --font-display: 'Orbitron', sans-serif;
-  --font-body: 'Noto Sans SC', sans-serif;
+  --font-display: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
   /* 尺寸 */
   --header-height: 64px;
@@ -73,7 +84,6 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   line-height: 1.6;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 /* Three.js 背景画布 */
@@ -85,6 +95,8 @@ body {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* 玻璃拟态面板 */
@@ -100,18 +112,18 @@ body {
 .neon-border {
   border: 1px solid var(--border-glow);
   box-shadow: 
-    0 0 8px rgba(0, 240, 255, 0.15),
-    inset 0 0 8px rgba(0, 240, 255, 0.05);
+    0 0 4px rgba(0, 212, 255, 0.08),
+    inset 0 0 4px rgba(0, 212, 255, 0.03);
 }
 
 .neon-border-cyan {
   border-color: rgba(0, 240, 255, 0.5);
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3), inset 0 0 8px rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.14), inset 0 0 4px rgba(0, 212, 255, 0.05);
 }
 
 .neon-border-purple {
   border-color: rgba(184, 41, 255, 0.5);
-  box-shadow: 0 0 12px rgba(184, 41, 255, 0.3), inset 0 0 8px rgba(184, 41, 255, 0.1);
+  box-shadow: 0 0 6px rgba(184, 41, 255, 0.14), inset 0 0 4px rgba(184, 41, 255, 0.05);
 }
 
 /* 滚动条 */
@@ -166,9 +178,8 @@ button {
 
 /* 全局 focus 样式 */
 *:focus-visible {
-  outline: 2px solid var(--neon-cyan);
+  outline: 2px solid var(--text-muted);
   outline-offset: 2px;
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
 }
 
 /* 禁用默认 focus outline，使用自定义样式 */
@@ -176,15 +187,10 @@ button {
   outline: none;
 }
 
-*:focus-visible {
-  outline: 2px solid var(--neon-cyan);
-  outline-offset: 2px;
-}
-
 /* 输入框 */
 input, select {
   font-family: var(--font-body);
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
   padding: 8px 12px;
@@ -194,29 +200,13 @@ input, select {
 }
 
 input:focus, select:focus {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+  border-color: var(--text-muted);
 }
 
 /* 禁用态 */
 [disabled] {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-/* 触摸激活状态 */
-.touch-active {
-  opacity: 0.8;
-  transform: scale(0.97);
-}
-
-/* 键盘打开时的调整 */
-body.keyboard-open .main-content {
-  overflow-y: auto;
-}
-
-body.keyboard-open .bottom-modules {
-  display: none;
 }
 
 /* 隐藏类 */

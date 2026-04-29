@@ -1,0 +1,22 @@
+Task 4 Feature Breakpoint Search
+Timestamp: 2026-04-29
+Scope: src/styles/achievements.css, src/styles/games.css, src/styles/lab.css
+
+Required search command:
+Select-String -Path "src/styles/achievements.css","src/styles/games.css","src/styles/lab.css" -Pattern "max-width: 640px","max-width:640px","max-width: 767px","max-width: 430px","max-width: 390px","max-width: 900px" | Format-Table Path,LineNumber,Line -AutoSize
+
+Initial results before Task 4 edits:
+D:\Chemical-Laboratory\src\styles\achievements.css        427 @media (max-width: 900px) {
+D:\Chemical-Laboratory\src\styles\achievements.css        447 @media (max-width: 640px) {
+D:\Chemical-Laboratory\src\styles\games.css               519 @media (max-width: 900px) {
+D:\Chemical-Laboratory\src\styles\lab.css                 256 @media (max-width: 900px) {
+
+Final results after Task 4 edits:
+D:\Chemical-Laboratory\src\styles\achievements.css        427 @media (min-width: 768px) and (max-width: 900px) {
+D:\Chemical-Laboratory\src\styles\games.css               519 @media (min-width: 768px) and (max-width: 900px) {
+D:\Chemical-Laboratory\src\styles\lab.css                 256 @media (min-width: 768px) and (max-width: 900px) {
+
+Conclusion:
+- Removed the achievements `max-width: 640px` phone-only feature rule classified as REMOVE_PHONE_ONLY by Task 1.
+- Rewrote the achievements, games, and lab `max-width: 900px` feature rules to the tablet-only range `min-width: 768px` and `max-width: 900px`, preserving Task 1 REWRITE_FOR_TABLET_DESKTOP behavior without applying those adaptations below the tablet floor.
+- No active `max-width: 640px`, `max-width:640px`, `max-width: 767px`, `max-width: 430px`, or `max-width: 390px` feature breakpoint remains in the Task 4 CSS scope.

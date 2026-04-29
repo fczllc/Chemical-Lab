@@ -1,0 +1,13 @@
+Task 5 static stale phone-search evidence
+Timestamp: 2026-04-29T18:24:45.8956805+08:00
+Patterns: 390, 430, 390x844, 430x932, mobile-shell, mobile, hamburger, #mobile-menu-toggle, \.main-nav\.open, bottom sheet, bottom-sheet, maximum-scale, user-scalable
+mobile-shell file exists: False
+
+Matches found:
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:76: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:87: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:98: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:253: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:76: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+
+All remaining matches are required absence assertions: True

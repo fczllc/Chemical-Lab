@@ -1,0 +1,44 @@
+Task 6 final static phone-adaptation removal report
+Timestamp: 2026-04-29T18:28:32.6305500+08:00
+Scope: src/ and tests/ source files only; evidence/notepad/plan text intentionally excluded.
+tests/ui/mobile-shell.spec.ts exists: False
+
+## phone CSS max-width 767/430/390
+NO MATCHES
+
+## runtime window.innerWidth <= 767
+NO MATCHES
+
+## isMobileViewport
+NO MATCHES
+
+## initMobile
+NO MATCHES
+
+## mobile-shell
+NO MATCHES
+
+## phone hamburger selectors
+.\tests\shell\home-shell.spec.ts:76: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\shell\home-shell.spec.ts:87: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\shell\home-shell.spec.ts:98: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\ui\periodic-table-controls.spec.ts:253: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\ui\route-shells.spec.ts:76: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+
+## keyboard-open
+NO MATCHES
+
+## touch-active
+NO MATCHES
+
+## phone bottom-sheet expectations
+NO MATCHES
+
+## mobile-menu-toggle interpretation
+.\tests\shell\home-shell.spec.ts:76: absence_assertion=True: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\shell\home-shell.spec.ts:87: absence_assertion=True: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\shell\home-shell.spec.ts:98: absence_assertion=True: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\ui\periodic-table-controls.spec.ts:253: absence_assertion=True: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+.\tests\ui\route-shells.spec.ts:76: absence_assertion=True: await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+
+Conclusion: Review matches above; active source/test phone adaptation must be absent, with #mobile-menu-toggle allowed only as absence assertions.

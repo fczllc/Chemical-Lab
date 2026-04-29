@@ -1,0 +1,12 @@
+{
+  "source": ".sisyphus/evidence/task-1-background-policy.json",
+  "ambientTermsDetected": [],
+  "contract": {
+    "display": "block",
+    "visibility": "hidden",
+    "opacity": "0",
+    "pointerEvents": "none",
+    "zIndex": "0",
+    "bodyBackground": "rgb(2, 5, 11)"
+  }
+}

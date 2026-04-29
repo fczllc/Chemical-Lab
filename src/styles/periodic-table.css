@@ -6,12 +6,30 @@
   max-width: 1400px;
 }
 
-/* 元素卡片 */
+/* 类别颜色变量映射 */
+.element-cell[data-category="alkali metal"], .element-list-row[data-category="alkali metal"] { --cat-color: var(--alkali); --cat-color-rgb: var(--alkali-rgb); }
+.element-cell[data-category="alkaline earth metal"], .element-list-row[data-category="alkaline earth metal"] { --cat-color: var(--alkaline); --cat-color-rgb: var(--alkaline-rgb); }
+.element-cell[data-category="transition metal"], .element-list-row[data-category="transition metal"] { --cat-color: var(--transition); --cat-color-rgb: var(--transition-rgb); }
+.element-cell[data-category="post-transition metal"], .element-list-row[data-category="post-transition metal"] { --cat-color: var(--post-transition); --cat-color-rgb: var(--post-transition-rgb); }
+.element-cell[data-category="metalloid"], .element-list-row[data-category="metalloid"] { --cat-color: var(--metalloid); --cat-color-rgb: var(--metalloid-rgb); }
+.element-cell[data-category="reactive nonmetal"], .element-list-row[data-category="reactive nonmetal"] { --cat-color: var(--nonmetal); --cat-color-rgb: var(--nonmetal-rgb); }
+.element-cell[data-category="noble gas"], .element-list-row[data-category="noble gas"] { --cat-color: var(--noble); --cat-color-rgb: var(--noble-rgb); }
+.element-cell[data-category="halogen"], .element-list-row[data-category="halogen"] { --cat-color: var(--halogen); --cat-color-rgb: var(--halogen-rgb); }
+.element-cell[data-category="lanthanide"], .element-list-row[data-category="lanthanide"] { --cat-color: var(--lanthanide); --cat-color-rgb: var(--lanthanide-rgb); }
+.element-cell[data-category="actinide"], .element-list-row[data-category="actinide"] { --cat-color: var(--actinide); --cat-color-rgb: var(--actinide-rgb); }
+.element-cell[data-category="unknown"], .element-list-row[data-category="unknown"] { --cat-color: var(--unknown); --cat-color-rgb: var(--unknown-rgb); }
+
+/* 元素卡片 - 霓虹光谱风格（参考效果图实现） */
 .element-cell {
   aspect-ratio: 1;
   min-width: 0;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  /* 背景：中心径向渐变 + 半透明底色 */
+  background: radial-gradient(circle at center,
+    rgba(var(--cat-color-rgb, 120, 144, 168), 0.3) 0%,
+    rgba(var(--cat-color-rgb, 120, 144, 168), 0.12) 50%,
+    transparent 100%);
+  background-color: rgba(var(--cat-color-rgb, 120, 144, 168), 0.08);
+  border: 1px solid rgba(var(--cat-color-rgb, 120, 144, 168), 0.9);
   border-radius: 6px;
   padding: 4px;
   display: flex;
@@ -19,136 +37,181 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  /* 多层内外阴影叠加 - 增强发光 */
+  box-shadow:
+    /* 外发光 1: 近层 */
+    0 0 8px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
+    /* 外发光 2: 中层 */
+    0 0 16px rgba(var(--cat-color-rgb, 120, 144, 168), 0.4),
+    /* 外发光 3: 远层 */
+    0 0 32px rgba(var(--cat-color-rgb, 120, 144, 168), 0.2),
+    /* 内发光 1: 紧贴边框的强光层 */
+    inset 0 0 12px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
+    /* 内发光 2: 向中心扩散的柔光层 */
+    inset 0 0 30px rgba(var(--cat-color-rgb, 120, 144, 168), 0.25),
+    /* 内发光 3: 极细的边缘白色高亮 */
+    inset 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 .element-cell::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
   border-radius: inherit;
 }
 
 .element-cell:hover {
-  transform: translateY(-4px) scale(1.05);
+  transform: translateY(-3px) scale(1.05);
   z-index: 10;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: rgba(var(--cat-color-rgb), 1);
+  box-shadow:
+    /* 外发光增强 */
+    0 0 24px rgba(var(--cat-color-rgb), 0.8),
+    0 0 48px rgba(var(--cat-color-rgb), 0.5),
+    0 0 72px rgba(var(--cat-color-rgb), 0.3),
+    /* 内发光增强 */
+    inset 0 0 20px rgba(var(--cat-color-rgb), 0.8),
+    inset 0 0 50px rgba(var(--cat-color-rgb), 0.4),
+    inset 0 0 6px rgba(255, 255, 255, 0.7);
 }
 
-.element-cell:hover::before {
-  opacity: 0.15;
-}
-
-.element-cell.selected {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
-}
-
-.element-cell.filtered-out {
-  opacity: 0.15;
-  pointer-events: none;
-  transform: scale(0.9);
-}
-
-.element-cell.learned::after {
-  content: '';
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 6px;
-  height: 6px;
-  background: var(--neon-green);
-  border-radius: 50%;
-  box-shadow: 0 0 4px var(--neon-green);
-}
-
-.element-cell.rare {
-  animation: rare-glow 3s ease-in-out infinite;
-}
-
-@keyframes rare-glow {
-  0%, 100% { box-shadow: 0 0 4px rgba(184, 41, 255, 0.3); }
-  50% { box-shadow: 0 0 12px rgba(184, 41, 255, 0.6); }
-}
-
-/* 元素卡片内容 */
+/* 元素卡片内容 - 霓虹发光文字 */
 .element-cell .atomic-num {
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: #ffffff;
   font-family: var(--font-display);
   position: absolute;
-  top: 3px;
-  left: 4px;
+  top: 4px;
+  left: 6px;
+  font-weight: 500;
+  text-shadow: 
+    0 0 4px rgba(255, 255, 255, 0.8),
+    0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .element-cell .symbol {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
   line-height: 1;
+  margin-top: 2px;
+  color: #ffffff !important;
+  /* 文字发光统一白色，不体现类别色 */
+  text-shadow: 
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(255, 255, 255, 0.6),
+    0 0 18px rgba(255, 255, 255, 0.3) !important;
 }
 
 .element-cell .chinese-name {
   font-size: 0.6rem;
-  color: var(--text-secondary);
+  color: #ffffff;
   margin-top: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
+  max-width: 90%;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-shadow: 
+    0 0 4px rgba(255, 255, 255, 0.7),
+    0 0 8px rgba(255, 255, 255, 0.35);
 }
 
 .element-cell .atomic-mass {
   font-size: 0.55rem;
-  color: var(--text-muted);
+  color: #ffffff;
   font-family: var(--font-display);
   margin-top: 1px;
+  text-shadow: 
+    0 0 4px rgba(255, 255, 255, 0.7),
+    0 0 8px rgba(255, 255, 255, 0.35);
 }
 
-/* 类别颜色 */
-.element-cell[data-category="alkali metal"] { border-color: rgba(255, 107, 107, 0.4); }
-.element-cell[data-category="alkali metal"]:hover::before { background: var(--alkali); }
-.element-cell[data-category="alkaline earth metal"] { border-color: rgba(255, 169, 77, 0.4); }
-.element-cell[data-category="alkaline earth metal"]:hover::before { background: var(--alkaline); }
-.element-cell[data-category="transition metal"] { border-color: rgba(255, 212, 59, 0.4); }
-.element-cell[data-category="transition metal"]:hover::before { background: var(--transition); }
-.element-cell[data-category="post-transition metal"] { border-color: rgba(105, 219, 124, 0.4); }
-.element-cell[data-category="post-transition metal"]:hover::before { background: var(--post-transition); }
-.element-cell[data-category="metalloid"] { border-color: rgba(56, 217, 169, 0.4); }
-.element-cell[data-category="metalloid"]:hover::before { background: var(--metalloid); }
-.element-cell[data-category="reactive nonmetal"] { border-color: rgba(77, 171, 247, 0.4); }
-.element-cell[data-category="reactive nonmetal"]:hover::before { background: var(--nonmetal); }
-.element-cell[data-category="noble gas"] { border-color: rgba(151, 117, 250, 0.4); }
-.element-cell[data-category="noble gas"]:hover::before { background: var(--noble); }
-.element-cell[data-category="halogen"] { border-color: rgba(240, 101, 149, 0.4); }
-.element-cell[data-category="halogen"]:hover::before { background: var(--halogen); }
-.element-cell[data-category="lanthanide"] { border-color: rgba(255, 107, 157, 0.4); }
-.element-cell[data-category="lanthanide"]:hover::before { background: var(--lanthanide); }
-.element-cell[data-category="actinide"] { border-color: rgba(255, 143, 171, 0.4); }
-.element-cell[data-category="actinide"]:hover::before { background: var(--actinide); }
-.element-cell[data-category="unknown"] { border-color: rgba(134, 142, 150, 0.4); }
-.element-cell[data-category="unknown"]:hover::before { background: var(--unknown); }
+/* ===== 状态修饰 ===== */
+
+/* 选择高亮 */
+.element-cell.selected {
+  border-color: var(--neon-cyan);
+  box-shadow: 
+    0 0 0 1px var(--neon-cyan),
+    0 0 24px rgba(0, 240, 255, 0.6),
+    0 0 48px rgba(0, 240, 255, 0.35),
+    0 0 72px rgba(0, 240, 255, 0.2),
+    0 0 96px rgba(0, 240, 255, 0.1),
+    inset 0 0 24px rgba(0, 240, 255, 0.2);
+  transform: scale(1.08);
+  z-index: 20;
+}
+
+.element-cell.selected::before {
+  opacity: 1;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.35), transparent 80%);
+}
+
+/* 过滤掉的状态 */
+.element-cell.filtered-out {
+  opacity: 0.15;
+  pointer-events: none;
+  transform: scale(0.95);
+  filter: grayscale(80%);
+}
+
+/* 已学习标记 */
+.element-cell.learned::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 4px;
+  height: 4px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--neon-green);
+}
+
+/* 稀有元素 */
+.element-cell.rare {
+  animation: rare-pulse 4s ease-in-out infinite;
+}
+
+@keyframes rare-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(184, 41, 255, 0.1); }
+  50% { box-shadow: inset 0 0 0 1px rgba(184, 41, 255, 0.4), 0 0 8px rgba(184, 41, 255, 0.15); }
+}
 
 /* 周期表包装器 */
 .periodic-table-wrapper {
   display: grid;
-  grid-template-columns: 60px 1fr;
+  grid-template-columns: 60px minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
   gap: 4px;
   max-width: 1400px;
 }
 
 #periodic-grid {
   grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 /* 镧系锕系标签 */
 .lanthanide-actinide-labels {
   display: contents;
+}
+
+.la-label {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.ac-label {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .la-label, .ac-label {
@@ -172,92 +235,129 @@
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   gap: 4px;
+  width: 100%;
+  min-width: 0;
 }
 
-.la-grid {
-  margin-top: 4px;
+#la-grid {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 8px;
 }
 
-.ac-grid {
+#ac-grid {
+  grid-column: 2;
+  grid-row: 3;
   margin-top: 4px;
 }
 
 /* 类别图例 */
 .category-legend {
-  margin-top: 20px;
-  padding: 16px;
-  background: var(--bg-panel);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--border-radius);
-  max-width: 1400px;
+  display: flex;
+  flex: 1 1 560px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+  max-width: 900px;
+  margin-left: auto;
+  padding: 4px 0;
 }
 
 .category-legend h3 {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.18);
+  white-space: nowrap;
 }
 
 .legend-items {
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: 6px;
+  min-width: 0;
 }
 
 .legend-item {
+  --legend-color: var(--text-muted);
+  --legend-rgb: 120, 144, 168;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 1px solid rgba(var(--legend-rgb), 0.28);
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(var(--legend-rgb), 0.12), rgba(0, 0, 0, 0.36));
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0.86;
+  box-shadow: inset 0 0 10px rgba(var(--legend-rgb), 0.05);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+}
+
+.legend-item[data-category="alkali metal"] { --legend-color: var(--alkali); --legend-rgb: var(--alkali-rgb); }
+.legend-item[data-category="alkaline earth metal"] { --legend-color: var(--alkaline); --legend-rgb: var(--alkaline-rgb); }
+.legend-item[data-category="transition metal"] { --legend-color: var(--transition); --legend-rgb: var(--transition-rgb); }
+.legend-item[data-category="post-transition metal"] { --legend-color: var(--post-transition); --legend-rgb: var(--post-transition-rgb); }
+.legend-item[data-category="metalloid"] { --legend-color: var(--metalloid); --legend-rgb: var(--metalloid-rgb); }
+.legend-item[data-category="reactive nonmetal"] { --legend-color: var(--nonmetal); --legend-rgb: var(--nonmetal-rgb); }
+.legend-item[data-category="noble gas"] { --legend-color: var(--noble); --legend-rgb: var(--noble-rgb); }
+.legend-item[data-category="halogen"] { --legend-color: var(--halogen); --legend-rgb: var(--halogen-rgb); }
+.legend-item[data-category="lanthanide"] { --legend-color: var(--lanthanide); --legend-rgb: var(--lanthanide-rgb); }
+.legend-item[data-category="actinide"] { --legend-color: var(--actinide); --legend-rgb: var(--actinide-rgb); }
+
+.legend-item:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(var(--legend-rgb), 0.18), rgba(0, 0, 0, 0.42));
+  border-color: rgba(var(--legend-rgb), 0.5);
+  box-shadow: 0 0 12px rgba(var(--legend-rgb), 0.16), inset 0 0 12px rgba(var(--legend-rgb), 0.08);
+}
+
+.legend-item.selected {
+  opacity: 1;
+  outline: 1px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 2px;
+  border-color: rgba(var(--legend-rgb), 0.9);
+  background: radial-gradient(circle at left, rgba(var(--legend-rgb), 0.34), rgba(var(--legend-rgb), 0.14) 42%, rgba(0, 0, 0, 0.5) 100%);
+  box-shadow:
+    0 0 0 1px rgba(var(--legend-rgb), 0.3),
+    0 0 18px rgba(var(--legend-rgb), 0.5),
+    inset 0 0 16px rgba(var(--legend-rgb), 0.18);
+}
+
+.legend-item:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+  box-shadow:
+    0 0 0 4px rgba(0, 0, 0, 0.85),
+    0 0 0 6px var(--neon-cyan),
+    0 0 18px rgba(0, 240, 255, 0.42),
+    inset 0 0 12px rgba(var(--legend-rgb), 0.12);
 }
 
 .legend-color {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* ===== 增强悬停效果 ===== */
-.element-cell:hover {
-  transform: translateY(-4px) scale(1.05);
-  z-index: 10;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 240, 255, 0.25);
-  border-color: rgba(0, 240, 255, 0.6);
-}
-
-/* ===== 选择高亮 ===== */
-.element-cell.selected {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), inset 0 0 12px rgba(0, 240, 255, 0.15);
-  transform: scale(1.08);
-  z-index: 20;
-  animation: selected-pulse 2s ease-in-out infinite;
-}
-
-@keyframes selected-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), inset 0 0 12px rgba(0, 240, 255, 0.15); }
-  50% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.7), inset 0 0 16px rgba(0, 240, 255, 0.25); }
-}
-
-/* ===== 已学习标记 ===== */
-.element-cell.learned::after {
-  content: '\2713';
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  width: 14px;
-  height: 14px;
-  background: var(--neon-green);
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  box-shadow: 0 0 6px var(--neon-green);
-  font-size: 9px;
-  color: var(--bg-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+  color: var(--legend-color);
+  box-shadow: 
+    0 0 8px currentColor,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 /* ===== 键盘焦点 ===== */
@@ -265,7 +365,7 @@
 .element-list-row:focus-visible {
   outline: 2px solid var(--neon-cyan);
   outline-offset: 2px;
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
 }
 
 /* ===== 工具提示 ===== */
@@ -274,75 +374,83 @@
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  background: rgba(10, 14, 26, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--neon-cyan);
+  transform: translateY(4px) scale(0.98);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   padding: 12px 16px;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4);
-  min-width: 160px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
 }
 
 .element-tooltip.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .tooltip-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .tooltip-symbol {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .tooltip-names {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .tooltip-chinese {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .tooltip-english {
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-style: italic;
+  line-height: 1.2;
 }
 
 .tooltip-meta {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.8rem;
-  color: var(--text-muted);
 }
 
 .tooltip-atomic {
   font-family: var(--font-display);
-  color: var(--neon-cyan);
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
 .tooltip-category {
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* ===== 列表视图 ===== */
 .periodic-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   max-width: 1400px;
   max-height: calc(100vh - var(--header-height) - 140px);
   overflow-y: auto;
@@ -351,71 +459,82 @@
 
 .element-list-row {
   display: grid;
-  grid-template-columns: 50px 60px 120px 1fr 120px 80px;
+  grid-template-columns: 48px 56px 120px 1fr 120px 80px;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
+  gap: 16px;
+  padding: 8px 16px;
   background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-left: 3px solid var(--cat-color, var(--border-subtle));
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   position: relative;
 }
 
 .element-list-row:hover {
-  border-color: rgba(0, 240, 255, 0.5);
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.15);
-  transform: translateX(4px);
+  background: var(--bg-tertiary);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--cat-color);
+  transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .element-list-row.selected {
   border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
-  background: rgba(0, 240, 255, 0.05);
+  border-left-color: var(--neon-cyan);
+  background: color-mix(in srgb, var(--neon-cyan) 5%, var(--bg-secondary));
+  box-shadow: 0 0 0 1px var(--neon-cyan), 0 4px 12px rgba(0, 240, 255, 0.1);
 }
 
 .element-list-row.filtered-out {
   opacity: 0.15;
   pointer-events: none;
   transform: scale(0.98);
+  filter: grayscale(80%);
 }
 
 .element-list-row.learned::after {
-  content: '\2713';
+  content: '';
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 16px;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
+  width: 6px;
+  height: 6px;
   background: var(--neon-green);
   border-radius: 50%;
   box-shadow: 0 0 6px var(--neon-green);
-  font-size: 11px;
-  color: var(--bg-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+}
+
+.element-list-row.rare {
+  box-shadow: inset 0 0 0 1px rgba(184, 41, 255, 0.22), 0 0 8px rgba(184, 41, 255, 0.08);
+}
+
+@keyframes rare-pulse-list {
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(184, 41, 255, 0.05); }
+  50% { box-shadow: inset 0 0 0 1px rgba(184, 41, 255, 0.2), 0 0 8px rgba(184, 41, 255, 0.1); }
 }
 
 .element-list-row .list-atomic-num {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .element-list-row .list-symbol {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
 .element-list-row .list-chinese-name {
   font-size: 0.95rem;
   color: var(--text-primary);
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .element-list-row .list-english-name {

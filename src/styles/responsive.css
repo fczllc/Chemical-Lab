@@ -27,7 +27,7 @@
 }
 
 /* 小桌面端和大平板 (1200px - 1365px) */
-@media (max-width: 1365px) {
+@media (min-width: 768px) and (max-width: 1365px) {
   .detail-panel.docked {
     width: 340px;
   }
@@ -47,7 +47,7 @@
 }
 
 /* 平板端 (768px - 1199px) */
-@media (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .main-header {
     padding: 0 16px;
   }
@@ -67,11 +67,11 @@
 
   .detail-panel.docked {
     position: fixed;
-    top: var(--header-height);
+    top: var(--shell-header-offset);
     right: 0;
     width: 100%;
     max-width: 420px;
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--shell-header-offset));
     transform: translateX(100%);
     z-index: 90;
   }
@@ -152,431 +152,6 @@
 
   .lab-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-/* 小平板和大手机 (640px - 767px) */
-@media (max-width: 767px) {
-  .main-header {
-    padding: 0 12px;
-    height: 56px;
-  }
-
-  .logo-number {
-    font-size: 1.2rem;
-  }
-
-  .main-nav {
-    position: fixed;
-    top: 56px;
-    left: 0;
-    right: 0;
-    background: rgba(10, 14, 26, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 12px 16px;
-    gap: 4px;
-    flex-wrap: wrap;
-    justify-content: center;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 99;
-  }
-
-  .main-nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-btn {
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    min-height: 44px;
-  }
-
-  .nav-btn span:last-child {
-    display: inline;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-
-  .header-stats {
-    display: none;
-  }
-
-  .main-content {
-    top: 56px;
-  }
-
-  .app-layout {
-    flex-direction: column;
-  }
-
-  .detail-panel.docked {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: none;
-    height: 85vh;
-    height: 85dvh;
-    transform: translateY(100%);
-    border-left: none;
-    border-top: 1px solid var(--border-subtle);
-    border-radius: 20px 20px 0 0;
-    padding-bottom: env(safe-area-inset-bottom, 0);
-  }
-
-  .detail-panel.docked.open {
-    transform: translateY(0);
-  }
-
-  .detail-panel.docked::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 4px;
-    background: var(--text-muted);
-    border-radius: 2px;
-    opacity: 0.5;
-  }
-
-  .panel-header {
-    margin-top: 12px;
-  }
-
-  .bottom-modules {
-    grid-template-columns: 1fr;
-    padding: 8px 12px;
-    gap: 8px;
-  }
-
-  .bottom-module {
-    min-height: 180px;
-    padding: 10px 12px;
-  }
-
-  .periodic-table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
-  }
-
-  .periodic-grid {
-    min-width: 680px;
-  }
-
-  .la-grid, .ac-grid {
-    min-width: 580px;
-  }
-
-  .page-section {
-    padding: 8px 12px;
-  }
-
-  .table-controls {
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .filters {
-    gap: 6px;
-  }
-
-  .filters select {
-    min-width: 100px;
-    font-size: 0.8rem;
-    padding: 6px 8px;
-  }
-
-  .search-box input {
-    width: 140px;
-    font-size: 0.8rem;
-  }
-
-  .compare-slots--1,
-  .compare-slots--2,
-  .compare-slots--3 {
-    grid-template-columns: 1fr;
-  }
-
-  .compare-card-header {
-    padding: 16px;
-  }
-
-  .compare-card-body {
-    padding: 12px 16px;
-  }
-
-  .compare-card-footer {
-    padding: 10px 16px 14px;
-  }
-
-  .compare-actions-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .timeline-preview-item,
-  .timeline-page-card {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-controls {
-    grid-template-columns: 1fr;
-  }
-
-  .timeline-search-box,
-  .timeline-jump-box,
-  .timeline-entry-core,
-  .timeline-entry-topline,
-  .timeline-entry-meta {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .timeline-entry-core {
-    align-items: flex-start;
-  }
-
-  .timeline-entry-symbol {
-    width: 56px;
-    height: 56px;
-  }
-
-  .timeline-entry-card {
-    padding: 16px;
-  }
-
-  .timeline-milestones {
-    gap: 8px;
-  }
-
-  .games-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .story-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .story-meta-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .quiz-scoreboard,
-  .quiz-scoreboard--triple,
-  .quiz-options-grid,
-  .quiz-result-hero,
-  .quiz-result-summary,
-  .quiz-game-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .quiz-card-topline,
-  .quiz-review-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .lab-toolbar,
-  .lab-item-card-header,
-  .lab-card-meta-row,
-  .lab-detail-actions,
-  .lab-simulation-meta,
-  .lab-canvas-overlay,
-  .lab-games-stat,
-  .lab-nav-row-split {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .lab-stage-grid,
-  .lab-stage-layout,
-  .lab-result-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .lab-list {
-    grid-template-columns: 1fr;
-  }
-
-  .modal-content {
-    width: 95%;
-    max-height: 85vh;
-    max-height: 85dvh;
-    padding: 16px;
-    margin: 16px;
-  }
-
-  .achievement-popup {
-    right: -100%;
-    left: 16px;
-    top: auto;
-    bottom: 100px;
-    bottom: calc(100px + env(safe-area-inset-bottom, 0));
-  }
-
-  .achievement-popup.show {
-    right: 16px;
-  }
-
-  .popup-content {
-    padding: 16px 20px;
-  }
-
-  .categories-overview {
-    grid-template-columns: 1fr;
-  }
-
-  .categories-donut {
-    margin: 0 auto;
-  }
-
-  .progress-dashboard-header,
-  .progress-stage-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .progress-stat-grid {
-    justify-content: stretch;
-  }
-
-  .progress-stat-card {
-    flex: 1 1 100%;
-    min-width: auto;
-  }
-
-  .element-hero .symbol {
-    font-size: 3rem;
-  }
-
-  .electron-canvas {
-    height: clamp(160px, 40vw, 200px);
-  }
-}
-
-/* 手机端 (小于 430px) */
-@media (max-width: 430px) {
-  .main-header {
-    padding: 0 8px;
-  }
-
-  .logo-number {
-    font-size: 1.1rem;
-  }
-
-  .nav-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    min-height: 40px;
-  }
-
-  .periodic-grid {
-    min-width: 600px;
-    gap: 2px;
-  }
-
-  .element-cell {
-    padding: 2px;
-    border-radius: 4px;
-  }
-
-  .element-cell .symbol {
-    font-size: 0.9rem;
-  }
-
-  .element-cell .chinese-name {
-    font-size: 0.5rem;
-  }
-
-  .element-cell .atomic-mass {
-    font-size: 0.45rem;
-  }
-
-  .element-cell .atomic-num {
-    font-size: 0.5rem;
-  }
-
-  .la-grid, .ac-grid {
-    min-width: 500px;
-    gap: 2px;
-  }
-
-  .bottom-module {
-    min-height: 160px;
-  }
-
-  .filters select {
-    min-width: 90px;
-    font-size: 0.75rem;
-  }
-
-  .search-box input {
-    width: 120px;
-    font-size: 0.75rem;
-  }
-
-  .page-section > h2 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-  }
-
-  .compare-card-symbol-box {
-    width: 60px;
-    height: 60px;
-  }
-
-  .compare-card-symbol {
-    font-size: 1.5rem;
-  }
-
-  .quiz-option-btn {
-    min-height: 48px;
-    padding: 10px 12px;
-  }
-
-  .panel-buttons button {
-    min-width: 70px;
-    padding: 8px 12px;
-    font-size: 0.8rem;
-  }
-}
-
-/* 超小屏幕 (小于 390px) */
-@media (max-width: 390px) {
-  .periodic-grid {
-    min-width: 560px;
-  }
-
-  .element-cell .symbol {
-    font-size: 0.8rem;
-  }
-
-  .element-cell .chinese-name {
-    font-size: 0.45rem;
-  }
-
-  .nav-btn span:last-child {
-    font-size: 0.75rem;
   }
 }
 
@@ -714,21 +289,8 @@
     padding-right: max(24px, env(safe-area-inset-right));
   }
 
-  @media (max-width: 767px) {
-    .main-header {
-      padding-left: max(12px, env(safe-area-inset-left));
-      padding-right: max(12px, env(safe-area-inset-right));
-    }
-  }
-
   .bottom-modules {
     padding-bottom: max(16px, env(safe-area-inset-bottom));
-  }
-
-  @media (max-width: 767px) {
-    .bottom-modules {
-      padding-bottom: max(8px, env(safe-area-inset-bottom));
-    }
   }
 }
 
@@ -766,7 +328,6 @@
   .main-header,
   .detail-panel,
   .bottom-modules,
-  .mobile-menu-toggle,
   #bg-canvas {
     display: none !important;
   }

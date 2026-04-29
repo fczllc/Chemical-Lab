@@ -152,17 +152,17 @@
 }
 
 .achievement-card.is-unlocked {
-  border-color: rgba(56, 189, 248, 0.34);
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.18), 0 18px 48px rgba(56, 189, 248, 0.16);
+  border-color: rgba(148, 163, 184, 0.34);
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.18), 0 18px 48px rgba(2, 6, 23, 0.3);
 }
 
 .achievement-card[data-rarity="rare"].is-unlocked {
-  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.2), 0 18px 52px rgba(250, 204, 21, 0.14);
+  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.2), 0 18px 52px rgba(2, 6, 23, 0.3);
 }
 
 .achievement-card[data-rarity="legendary"].is-unlocked {
   border-color: rgba(192, 132, 252, 0.35);
-  box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.18), 0 18px 52px rgba(192, 132, 252, 0.2);
+  box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.18), 0 18px 52px rgba(2, 6, 23, 0.3);
 }
 
 .achievement-icon {
@@ -218,7 +218,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.92) 44%, transparent 45%), conic-gradient(var(--neon-cyan) 0 var(--progress), rgba(148, 163, 184, 0.16) var(--progress) 100%);
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.92) 44%, transparent 45%), conic-gradient(rgba(148, 163, 184, 0.8) 0 var(--progress), rgba(148, 163, 184, 0.16) var(--progress) 100%);
   color: #e2f3ff;
   text-align: center;
 }
@@ -235,10 +235,9 @@
 .stage-celebration-banner {
   padding: 14px 16px;
   border-radius: 18px;
-  background: linear-gradient(90deg, rgba(0, 240, 255, 0.16), rgba(184, 41, 255, 0.18));
-  border: 1px solid rgba(0, 240, 255, 0.32);
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.16), rgba(148, 163, 184, 0.08));
+  border: 1px solid rgba(148, 163, 184, 0.32);
   color: #f8fbff;
-  animation: stagePulse 0.8s ease;
 }
 
 .progress-metric-panel,
@@ -267,8 +266,8 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.35);
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.8), rgba(148, 163, 184, 0.4));
+  box-shadow: none;
   margin-top: 6px;
 }
 
@@ -312,13 +311,13 @@
 }
 
 .progress-stage-card.is-current {
-  border-color: rgba(0, 240, 255, 0.36);
-  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.14), 0 0 24px rgba(0, 240, 255, 0.16);
+  border-color: rgba(148, 163, 184, 0.36);
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.14), 0 8px 24px rgba(2, 6, 23, 0.2);
 }
 
 .progress-stage-card.is-complete {
   border-color: rgba(34, 197, 94, 0.36);
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.12), 0 0 24px rgba(34, 197, 94, 0.18);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.12), 0 8px 24px rgba(2, 6, 23, 0.2);
 }
 
 .progress-stage-rewards {
@@ -338,7 +337,7 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.8), rgba(148, 163, 184, 0.4));
 }
 
 .stage-element-chip-list {
@@ -389,9 +388,9 @@
   max-width: 360px;
   padding: 18px 20px;
   border-radius: 20px;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(49, 46, 129, 0.96));
-  border: 1px solid rgba(0, 240, 255, 0.34);
-  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.42), 0 0 22px rgba(0, 240, 255, 0.18);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.42);
 }
 
 .achievement-popup .popup-icon {
@@ -425,7 +424,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .achievement-overview-copy,
   .achievement-category-header,
   .progress-dashboard-header,
@@ -442,26 +441,5 @@
   .game-stat-item {
     flex-direction: column;
     align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .achievement-overview,
-  .achievement-category-block,
-  .progress-dashboard,
-  .progress-learning-path,
-  .progress-stage-detail {
-    padding: 16px;
-  }
-
-  .achievement-popup {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-  }
-
-  .achievement-popup .popup-content {
-    min-width: 0;
-    width: 100%;
   }
 }

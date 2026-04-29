@@ -1,0 +1,18 @@
+Baseline verification summary
+
+- `npm run build`: PASS
+- `node scripts/validate-elements.mjs`: PASS
+- `node scripts/validate-supporting-data.mjs`: PASS
+- `npx playwright test tests/shell/home-shell.spec.ts`: PASS (12/12)
+
+Baseline screenshots captured:
+- `.sisyphus/evidence/task-0-home-baseline.png`
+- `.sisyphus/evidence/task-0-compare-baseline.png`
+- `.sisyphus/evidence/task-0-timeline-baseline.png`
+- `.sisyphus/evidence/task-0-progress-baseline.png`
+
+Layering evidence:
+- `.sisyphus/evidence/task-0-layering-contract.json`
+
+Console note:
+- only browser error observed was `favicon.ico` 404 at preview server startup

@@ -54,94 +54,57 @@ async function waitForShellReady(page) {
   }, { timeout: 15000 }).toBe(true);
 }
 
+async function expectPrimaryNavigationVisible(page) {
+  await expect(page.locator('.main-nav')).toBeVisible();
+  await expect(page.getByTestId('nav-home')).toBeVisible();
+  await expect(page.getByTestId('nav-compare')).toBeVisible();
+  await expect(page.getByTestId('nav-timeline')).toBeVisible();
+  await expect(page.getByTestId('nav-games')).toBeVisible();
+  await expect(page.getByTestId('nav-lab')).toBeVisible();
+  await expect(page.getByTestId('nav-achievements')).toBeVisible();
+  await expect(page.getByTestId('nav-progress')).toBeVisible();
+  await expect(page.getByTestId('nav-story')).toBeVisible();
+}
+
 test.describe('Responsive Layout', () => {
-  test('tablet layout - navigation visible, detail panel overlay', async ({ page }) => {
+  test('desktop layout keeps primary navigation visible at 1366x768', async ({ page }) => {
+    await page.setViewportSize({ width: 1366, height: 768 });
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await waitForShellReady(page);
+
+    await expectPrimaryNavigationVisible(page);
+    await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+    await expect(page.getByTestId('detail-panel')).toBeVisible();
+    await expect(page.locator('.periodic-table-wrapper')).toBeVisible();
+  });
+
+  test('tablet landscape keeps primary navigation visible at 1024x768', async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 768 });
     await page.goto('/', { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
+    await waitForShellReady(page);
 
-    // Navigation should be visible
-    await expect(page.getByTestId('nav-home')).toBeVisible();
-    await expect(page.getByTestId('nav-compare')).toBeVisible();
-
-    // Detail panel should be hidden by default (overlay mode)
-    const panel = page.getByTestId('detail-panel');
-    await expect(panel).toBeVisible();
-
-    // Bottom modules should be 2 columns
-    const bottomModules = page.locator('.bottom-modules');
-    await expect(bottomModules).toBeVisible();
+    await expectPrimaryNavigationVisible(page);
+    await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
+    await expect(page.getByTestId('detail-panel')).toBeVisible();
+    await expect(page.locator('#bottom-modules')).toBeVisible();
   });
 
-  test('mobile layout - hamburger menu and bottom sheet', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
+  test('tablet portrait supports navigation and element details at 768x1024', async ({ page }) => {
+    await page.setViewportSize({ width: 768, height: 1024 });
     await page.goto('/', { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
+    await waitForShellReady(page);
 
-    // Mobile menu toggle should be visible
-    const mobileToggle = page.locator('#mobile-menu-toggle');
-    await expect(mobileToggle).toBeVisible();
+    await expectPrimaryNavigationVisible(page);
+    await expect(page.locator('#mobile-menu-toggle')).toHaveCount(0);
 
-    // Navigation should be hidden initially
-    const nav = page.locator('.main-nav');
-    await expect(nav).not.toHaveClass(/open/);
-
-    // Click hamburger to open menu
-    await mobileToggle.click();
-    await expect(nav).toHaveClass(/open/);
-
-    // Click nav item should close menu
-    await page.getByTestId('nav-compare').click();
-    await expect(nav).not.toHaveClass(/open/);
-
-    // Navigate back to home to check bottom modules
-    await page.evaluate(() => window.location.hash = '#/');
-    await page.waitForURL(/#\/$/);
-
-    // Bottom modules should be visible on home page
-    const bottomModules = page.locator('#bottom-modules');
-    await expect(bottomModules).toBeVisible({ timeout: 10000 });
-  });
-
-  test('mobile periodic table horizontal scroll', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/', { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
-
-    const wrapper = page.locator('.periodic-table-wrapper');
-    await expect(wrapper).toBeVisible();
-
-    // Check if wrapper has horizontal scroll capability
-    const scrollWidth = await wrapper.evaluate((el) => el.scrollWidth);
-    const clientWidth = await wrapper.evaluate((el) => el.clientWidth);
-    expect(scrollWidth).toBeGreaterThan(clientWidth);
-  });
-
-  test('detail panel bottom sheet on mobile', async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/', { waitUntil: 'domcontentloaded' });
-    await page.waitForLoadState('networkidle');
-
-    // Click on first element to open detail panel
     const firstElement = page.locator('.element-cell').first();
+    await expect(firstElement).toBeVisible();
     await firstElement.click();
 
-    // Detail panel should be visible as bottom sheet
     const panel = page.getByTestId('detail-panel');
+    await expect(panel).toBeVisible();
     await expect(panel).toHaveClass(/open/);
-
-    // Panel should have bottom-sheet styling
-    const panelStyles = await panel.evaluate((el) => {
-      const computed = window.getComputedStyle(el);
-      return {
-        bottom: computed.bottom,
-        left: computed.left,
-        right: computed.right,
-        borderRadius: computed.borderRadius
-      };
-    });
-
-    expect(panelStyles.borderRadius).toContain('20px');
+    await expect(panel.locator('.element-hero .symbol')).toBeVisible();
   });
 });
 
@@ -191,11 +154,10 @@ test.describe('Hash-based Routing', () => {
 });
 
 test.describe('Device Optimizations', () => {
-  test('viewport meta prevents zoom', async ({ page }) => {
+  test('viewport meta uses standard responsive scaling', async ({ page }) => {
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     const viewport = page.locator('meta[name="viewport"]');
-    await expect(viewport).toHaveAttribute('content', /maximum-scale=1\.0/);
-    await expect(viewport).toHaveAttribute('content', /user-scalable=no/);
+    await expect(viewport).toHaveAttribute('content', 'width=device-width, initial-scale=1.0');
   });
 });
 

@@ -1,0 +1,98 @@
+Task 1 Static Search Evidence
+Timestamp: 2026-04-29T09:59:00Z
+
+Search terms required by plan:
+- max-width: 767
+- max-width: 430
+- max-width: 390
+- initMobile
+- isMobileViewport
+- keyboard-open
+- touch-active
+- hamburger
+
+Direct tool note:
+- The specialized Grep tool returned no matches for combined regex searches in this workspace, despite direct Read confirming the constructs. `rg` is not installed in this environment. Therefore the verification below is based on direct Read of the affected files plus AST-grep for JS runtime branches.
+
+Confirmed matches from direct Read / AST-grep:
+
+JS / HTML:
+- index.html:5 viewport meta contains `maximum-scale=1.0`, `user-scalable=no`, `viewport-fit=cover`.
+- index.html:60-64 contains `#mobile-menu-toggle` and `.hamburger-line` markup.
+- src/main.js:26 imports `initMobile`.
+- src/main.js:85 calls `initMobile()`.
+- src/modules/mobile.js:6 declares `initMobile()`.
+- src/modules/mobile.js:33 contains `window.innerWidth <= 767`.
+- src/modules/mobile.js:88 and 95 contain `window.innerWidth > 767` guards for phone swipe behavior.
+- src/modules/mobile.js:133 and 142 toggle `keyboard-open`.
+- src/modules/mobile.js:64, 68, 72 toggle `touch-active`.
+- src/modules/mobile.js:155-157 declares `isMobileViewport()` returning `window.innerWidth <= 767`.
+
+CSS:
+- src/styles/responsive.css:159 starts `@media (max-width: 767px)`.
+- src/styles/responsive.css:490 starts `@media (max-width: 430px)`.
+- src/styles/responsive.css:590 starts `@media (max-width: 390px)`.
+- src/styles/responsive.css:209-211 displays `.mobile-menu-toggle` for phone.
+- src/styles/responsive.css:225-257 implements phone bottom-sheet detail panel styling.
+- src/styles/responsive.css:274-286 implements phone horizontal periodic table scrolling/min-width behavior.
+- src/styles/responsive.css:742 and 753 contain nested `@media (max-width: 767px)` safe-area overrides.
+- src/styles/base.css:215-219 contains `.touch-active`.
+- src/styles/base.css:221-228 contains `body.keyboard-open` rules.
+
+Tests:
+- tests/shell/home-shell.spec.ts:76-145 contains phone `390x844` hamburger, table scroll, and bottom-sheet assertions.
+- tests/shell/home-shell.spec.ts:193-199 expects mobile zoom-lock viewport meta.
+- tests/ui/mobile-shell.spec.ts is dedicated phone/mobile coverage at `390x844` and `430x932`.
+- tests/ui/periodic-table-controls.spec.ts contains a phone `390x844` overflow/table-wrapper test.
+
+All confirmed matches are represented in `.sisyphus/evidence/task-1-classification.md`.
+
+PowerShell Select-String verification output captured during Atlas gate:
+
+--- max-width:\s*767px
+D:\Chemical-Laboratory\src\styles\responsive.css:159: @media (max-width: 767px) {
+D:\Chemical-Laboratory\src\styles\responsive.css:742: @media (max-width: 767px) {
+D:\Chemical-Laboratory\src\styles\responsive.css:753: @media (max-width: 767px) {
+--- max-width:\s*430px
+D:\Chemical-Laboratory\src\styles\responsive.css:490: @media (max-width: 430px) {
+--- max-width:\s*390px
+D:\Chemical-Laboratory\src\styles\responsive.css:590: @media (max-width: 390px) {
+--- initMobile
+D:\Chemical-Laboratory\src\main.js:26: import { initMobile } from './modules/mobile.js';
+D:\Chemical-Laboratory\src\main.js:85: initMobile();
+D:\Chemical-Laboratory\src\modules\mobile.js:6: export function initMobile() {
+D:\Chemical-Laboratory\src\modules\mobile.js:10: initMobileMenu();
+D:\Chemical-Laboratory\src\modules\mobile.js:17: function initMobileMenu() {
+--- isMobileViewport
+D:\Chemical-Laboratory\src\modules\mobile.js:155: export function isMobileViewport() {
+--- keyboard-open
+D:\Chemical-Laboratory\src\modules\mobile.js:133: document.body.classList.add('keyboard-open');
+D:\Chemical-Laboratory\src\modules\mobile.js:142: document.body.classList.remove('keyboard-open');
+D:\Chemical-Laboratory\src\styles\base.css:222: body.keyboard-open .main-content {
+D:\Chemical-Laboratory\src\styles\base.css:226: body.keyboard-open .bottom-modules {
+--- touch-active
+D:\Chemical-Laboratory\src\modules\mobile.js:64: el.classList.add('touch-active');
+D:\Chemical-Laboratory\src\modules\mobile.js:68: el.classList.remove('touch-active');
+D:\Chemical-Laboratory\src\modules\mobile.js:72: el.classList.remove('touch-active');
+D:\Chemical-Laboratory\src\styles\base.css:216: .touch-active {
+--- hamburger
+D:\Chemical-Laboratory\index.html:61: <span class="hamburger-line"></span>
+D:\Chemical-Laboratory\index.html:62: <span class="hamburger-line"></span>
+D:\Chemical-Laboratory\index.html:63: <span class="hamburger-line"></span>
+D:\Chemical-Laboratory\src\styles\layout.css:66: .hamburger-line {
+D:\Chemical-Laboratory\src\styles\layout.css:75: .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+D:\Chemical-Laboratory\src\styles\layout.css:80: .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+D:\Chemical-Laboratory\src\styles\layout.css:84: .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:76: test('mobile layout - hamburger menu and bottom sheet', async ({ page }) => {
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:89: // Click hamburger to open menu
+--- mobile-menu-toggle
+D:\Chemical-Laboratory\index.html:60: <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="打开菜单">
+D:\Chemical-Laboratory\src\modules\mobile.js:18: const toggle = document.getElementById('mobile-menu-toggle');
+D:\Chemical-Laboratory\src\styles\layout.css:51: .mobile-menu-toggle {
+D:\Chemical-Laboratory\src\styles\layout.css:75: .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+D:\Chemical-Laboratory\src\styles\layout.css:80: .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+D:\Chemical-Laboratory\src\styles\layout.css:84: .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+D:\Chemical-Laboratory\src\styles\responsive.css:209: .mobile-menu-toggle {
+D:\Chemical-Laboratory\src\styles\responsive.css:794: .mobile-menu-toggle,
+D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:82: const mobileToggle = page.locator('#mobile-menu-toggle');
+D:\Chemical-Laboratory\tests\ui\mobile-shell.spec.ts:31: const mobileMenuToggle = page.locator('#mobile-menu-toggle');

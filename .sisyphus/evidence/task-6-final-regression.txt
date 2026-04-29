@@ -1,0 +1,2 @@
+Task 6 final regression passed with an explicit reduced-motion Playwright contract added to tests/ui/visual-polish-regression.spec.ts.
+Verification results: npm run build passed, node scripts/validate-elements.mjs passed, node scripts/validate-supporting-data.mjs passed, and the required Playwright suite passed with 18/18 tests green.

@@ -1,0 +1,8 @@
+{
+  "tag": "BUTTON",
+  "id": null,
+  "className": "nav-btn active",
+  "outlineStyle": "none",
+  "outlineColor": "rgb(232, 236, 241)",
+  "outlineWidth": "3px"
+}

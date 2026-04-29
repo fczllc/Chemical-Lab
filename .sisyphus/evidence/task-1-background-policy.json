@@ -1,0 +1,8 @@
+{
+  "display": "block",
+  "visibility": "hidden",
+  "opacity": "0",
+  "pointerEvents": "none",
+  "zIndex": "0",
+  "bodyBackground": "rgb(2, 5, 11)"
+}

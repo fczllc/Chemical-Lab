@@ -1,0 +1,13 @@
+
+> element-explorer-kids@1.0.0 validate:data
+> npm run validate:elements && npm run validate:supporting && node scripts/audit-business-data-imports.mjs
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+鍏冪礌鏁版嵁鏍￠獙閫氳繃锛氬叡 118 涓厓绱狅紝鍘熷瓙搴忔暟涓庣鍙峰潎鍞竴銆?
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?0 閬撻銆? 涓弽搴斻€?1 涓垚灏便€? 涓涔犻樁娈点€?涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?15 涓叆鍙?妯″潡鏂囦欢銆?

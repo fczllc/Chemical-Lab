@@ -9,6 +9,7 @@ const PID_FILE = path.join(ROOT_DIR, '.playwright-runtime', 'vite-server.json');
 export default async function globalTeardown() {
   const pid = await readPid();
   if (!pid) {
+    await rm(PID_FILE, { force: true });
     return;
   }
 

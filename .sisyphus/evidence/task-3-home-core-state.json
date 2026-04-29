@@ -1,0 +1,7 @@
+{
+  "selectedBorder": "rgb(0, 240, 255)",
+  "selectedBoxShadow": "rgb(0, 240, 255) 0px 0px 0px 1px, rgba(0, 240, 255, 0.2) 0px 4px 16px 0px",
+  "panelVisibleClass": true,
+  "panelPosition": "relative",
+  "panelZIndex": "1"
+}

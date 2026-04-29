@@ -1,0 +1,2 @@
+Reduced-motion contract check passed: Playwright emulated prefers-reduced-motion: reduce, verified matchMedia('(prefers-reduced-motion: reduce)') === true, confirmed body background-image stays none, confirmed #bg-canvas remains visually hidden and non-interactive, and confirmed the compare route shell remains understandable without motion cues.
+Closure summary: missing evidence filenames were restored as exact plan-expected artifacts, and the requested verification path now has no remaining blocker.

@@ -1,0 +1,15 @@
+Task 2 static removal search
+Timestamp: 2026-04-29T18:02:26.8195026+08:00
+Runtime scope: src/**/*.{js,mjs,ts,tsx,jsx}
+Patterns: initMobile, isMobileViewport, innerWidth <= 767, innerWidth<=767, mobile-menu-toggle, hamburger-line
+
+Result: no active runtime matches found in src JS/TS files.
+
+CSS note: CSS selector cleanup is Task 3-owned and was not modified in Task 2 per MUST NOT DO.
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\layout.css:51: .mobile-menu-toggle {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\layout.css:66: .hamburger-line {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\layout.css:75: .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\layout.css:80: .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\layout.css:84: .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\responsive.css:209: .mobile-menu-toggle {
+CSS-only remaining: D:\Chemical-Laboratory\src\styles\responsive.css:794: .mobile-menu-toggle,
