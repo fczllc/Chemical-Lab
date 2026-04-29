@@ -279,16 +279,16 @@ function renderElementCard(element) {
         </div>
       </div>
       <div class="compare-card-body">
-        ${renderAttrRow('原子质量', element.atomicMass)}
-        ${renderAttrRow('类别', `<span class="compare-tag" style="--tag-color: ${element.color || '#38bdf8'}">${categoryLabel}</span>`)}
-        ${renderAttrRow('周期', `第 ${element.period} 周期`)}
-        ${renderAttrRow('族', `第 ${element.group} 族`)}
-        ${renderAttrRow('电子排布', element.electronConfiguration)}
-        ${renderAttrRow('发现年份', element.discoveryYear)}
-        ${renderAttrRow('发现者', element.discoveredBy)}
-        ${renderAttrRow('用途', topApplications.length > 0 ? `<ul class="compare-app-list">${topApplications.map((app) => `<li>${app}</li>`).join('')}</ul>` : '—')}
-        ${renderAttrRow('安全性', `<span class="compare-safety-badge" style="--safety-color: ${safetyColor}">${safetyLabel}</span>`)}
-        ${renderAttrRow('稀有度', rarityLabel)}
+        ${renderAttrRow('原子质量', element.atomicMass, 'atomicMass')}
+        ${renderAttrRow('类别', `<span class="compare-tag" style="--tag-color: ${element.color || '#38bdf8'}">${categoryLabel}</span>`, 'category')}
+        ${renderAttrRow('周期', `第 ${element.period} 周期`, 'period')}
+        ${renderAttrRow('族', `第 ${element.group} 族`, 'group')}
+        ${renderAttrRow('电子排布', element.electronConfiguration, 'electronConfiguration')}
+        ${renderAttrRow('发现年份', element.discoveryYear, 'discoveryYear')}
+        ${renderAttrRow('发现者', element.discoveredBy, 'discoveredBy')}
+        ${renderAttrRow('用途', topApplications.length > 0 ? `<ul class="compare-app-list">${topApplications.map((app) => `<li>${app}</li>`).join('')}</ul>` : '—', 'applications')}
+        ${renderAttrRow('安全性', `<span class="compare-safety-badge" style="--safety-color: ${safetyColor}">${safetyLabel}</span>`, 'safety')}
+        ${renderAttrRow('稀有度', rarityLabel, 'rarity')}
       </div>
       <div class="compare-card-footer">
         <button class="compare-card-remove" type="button" data-atomic-number="${element.atomicNumber}" title="从对比中移除">
@@ -299,13 +299,24 @@ function renderElementCard(element) {
   `;
 }
 
-function renderAttrRow(label, value) {
+function renderAttrRow(label, value, fieldKey = '') {
+  const fieldClass = fieldKey ? ` compare-attr-row--${toKebabCase(fieldKey)}` : '';
+  const fieldAttr = fieldKey ? ` data-compare-field="${fieldKey}"` : '';
+
   return `
-    <div class="compare-attr-row">
+    <div class="compare-attr-row${fieldClass}"${fieldAttr}>
       <span class="compare-attr-label">${label}</span>
       <span class="compare-attr-value">${value || '—'}</span>
     </div>
   `;
+}
+
+function toKebabCase(value) {
+  return String(value)
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
 }
 
 function bindCompareViewEvents(container, { mode }) {

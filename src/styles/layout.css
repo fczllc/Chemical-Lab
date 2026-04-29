@@ -1129,6 +1129,19 @@
   min-width: 0;
 }
 
+[data-testid="bottom-compare"] .compare-preview-tile.element-cell:hover {
+  transform: none;
+  z-index: auto;
+  border-color: rgba(var(--cat-color-rgb, 120, 144, 168), 0.9);
+  box-shadow:
+    0 0 8px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
+    0 0 16px rgba(var(--cat-color-rgb, 120, 144, 168), 0.4),
+    0 0 32px rgba(var(--cat-color-rgb, 120, 144, 168), 0.2),
+    inset 0 0 12px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
+    inset 0 0 30px rgba(var(--cat-color-rgb, 120, 144, 168), 0.25),
+    inset 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
 .compare-preview-empty span {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1298,7 +1311,7 @@
   overflow: visible;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.045), transparent 38%),
-    rgba(3, 5, 8, 0.68);
+    rgba(3, 5, 8, 0.48);
   border-color: rgba(148, 163, 184, 0.22);
   box-shadow:
     0 32px 80px rgba(0, 0, 0, 0.58),
@@ -1344,6 +1357,7 @@
 
 .compare-modal .compare-slots {
   gap: 14px;
+  align-items: stretch;
 }
 
 .compare-modal .compare-slots--1 {
@@ -1390,6 +1404,7 @@
 
 .compare-modal .compare-card-body {
   padding: 10px 16px;
+  flex: 1;
 }
 
 .compare-modal .compare-attr-row {
@@ -1404,10 +1419,32 @@
 
 .compare-modal .compare-attr-value {
   font-size: 0.76rem;
+  max-width: 100%;
   line-height: 1.35;
 }
 
+.compare-modal .compare-attr-row--discovered-by,
+.compare-modal .compare-attr-row--applications {
+  box-sizing: border-box;
+}
+
+.compare-modal .compare-attr-row--discovered-by {
+  height: 3.55rem;
+}
+
+.compare-modal .compare-attr-row--applications {
+  height: 5.35rem;
+}
+
+.compare-modal .compare-attr-row--discovered-by .compare-attr-value,
+.compare-modal .compare-attr-row--applications .compare-attr-value {
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
 .compare-modal .compare-card-footer {
+  margin-top: auto;
   padding: 10px 16px 14px;
 }
 
@@ -1622,6 +1659,7 @@
 
 .compare-modal .compare-slots {
   gap: 14px;
+  align-items: stretch;
 }
 
 .compare-modal .compare-slots.compare-slots--3 {
@@ -1629,6 +1667,9 @@
 }
 
 .compare-modal .compare-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   min-width: 0;
 }
 
