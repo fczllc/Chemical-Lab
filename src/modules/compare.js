@@ -13,15 +13,51 @@ import {
 import { navigateTo } from './router.js';
 
 const SAFETY_COLORS = COMPARE_SAFETY_COLORS;
+const ROUTE_COMPARE_CONTAINER_ID = 'compare-container';
+const MODAL_COMPARE_ID = 'compare-modal';
+const MODAL_COMPARE_CONTENT_ID = 'compare-modal-content';
 
 let elementsCatalog = [];
 let listenersBound = false;
+let modalListenersBound = false;
 let toastTimer = null;
+let compareModalOpener = null;
 
 export function initCompare(elements) {
   elementsCatalog = Array.isArray(elements) ? [...elements] : [];
-  renderComparePage();
+  renderCompareViews();
   bindCompareEvents();
+  bindCompareModalEvents();
+}
+
+export function openCompareModal() {
+  const modal = document.getElementById(MODAL_COMPARE_ID);
+  if (!modal) {
+    return;
+  }
+
+  compareModalOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  renderCompareModal();
+  modal.removeAttribute('inert');
+  modal.classList.add('show');
+  modal.setAttribute('aria-hidden', 'false');
+  document.getElementById('compare-modal-close')?.focus();
+}
+
+export function closeCompareModal() {
+  const modal = document.getElementById(MODAL_COMPARE_ID);
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove('show');
+  modal.setAttribute('aria-hidden', 'true');
+
+  if (compareModalOpener?.isConnected) {
+    compareModalOpener.focus();
+  }
+  modal.setAttribute('inert', '');
+  compareModalOpener = null;
 }
 
 export function showToast(message, type = 'info') {
@@ -53,28 +89,129 @@ function bindCompareEvents() {
   }
 
   window.addEventListener('statechange', handleStateChange);
-  window.addEventListener('compareupdated', renderComparePage);
-  window.addEventListener('statereset', renderComparePage);
+  window.addEventListener('compareupdated', renderCompareViews);
+  window.addEventListener('statereset', renderCompareViews);
   listenersBound = true;
+}
+
+function bindCompareModalEvents() {
+  if (modalListenersBound) {
+    return;
+  }
+
+  const modal = document.getElementById(MODAL_COMPARE_ID);
+  const closeBtn = document.getElementById('compare-modal-close');
+  if (!modal) {
+    return;
+  }
+
+  if (!modal.classList.contains('show')) {
+    modal.setAttribute('inert', '');
+  }
+
+  closeBtn?.addEventListener('click', closeCompareModal);
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      closeCompareModal();
+    }
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (!modal.classList.contains('show')) {
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closeCompareModal();
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      trapCompareModalFocus(event, modal);
+    }
+  }, true);
+
+  modalListenersBound = true;
+}
+
+function trapCompareModalFocus(event, modal) {
+  const focusableElements = getFocusableElements(modal);
+  if (focusableElements.length === 0) {
+    event.preventDefault();
+    return;
+  }
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (event.shiftKey && document.activeElement === firstElement) {
+    event.preventDefault();
+    lastElement.focus();
+    return;
+  }
+
+  if (!event.shiftKey && document.activeElement === lastElement) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
+function getFocusableElements(container) {
+  return [...container.querySelectorAll([
+    'a[href]',
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(','))].filter((element) => {
+    if (!(element instanceof HTMLElement)) {
+      return false;
+    }
+
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden';
+  });
 }
 
 function handleStateChange(event) {
   if (event?.detail?.field === 'compareList') {
-    renderComparePage();
+    renderCompareViews();
   }
 }
 
+function renderCompareViews() {
+  renderComparePage();
+  renderCompareModal();
+}
+
 function renderComparePage() {
-  const container = document.getElementById('compare-container');
+  const container = document.getElementById(ROUTE_COMPARE_CONTAINER_ID);
   if (!container) {
     return;
   }
 
+  renderCompareView(container, { mode: 'route' });
+}
+
+function renderCompareModal() {
+  const container = document.getElementById(MODAL_COMPARE_CONTENT_ID);
+  if (!container) {
+    return;
+  }
+
+  renderCompareView(container, { mode: 'modal' });
+}
+
+function renderCompareView(container, { mode }) {
   const compareList = getCompareList();
 
   if (compareList.length === 0) {
-    container.innerHTML = renderEmptyState();
-    bindEmptyStateEvents();
+    container.innerHTML = renderEmptyState(mode);
+    bindCompareViewEvents(container, { mode });
     return;
   }
 
@@ -83,7 +220,7 @@ function renderComparePage() {
       <div class="compare-count">已选择 ${compareList.length}/3 个元素</div>
       <div class="compare-actions">
         <button class="compare-btn compare-btn-clear" type="button">清空对比</button>
-        <button class="compare-btn compare-btn-home" type="button">返回主页</button>
+        <button class="compare-btn compare-btn-home" type="button">${mode === 'modal' ? '继续选元素' : '返回主页'}</button>
       </div>
     </div>
     <div class="compare-slots compare-slots--${compareList.length}">
@@ -91,16 +228,16 @@ function renderComparePage() {
     </div>
   `;
 
-  bindCardEvents();
+  bindCompareViewEvents(container, { mode });
 }
 
-function renderEmptyState() {
+function renderEmptyState(mode = 'route') {
   return `
     <div class="compare-page-empty">
       <div class="compare-empty-icon">&#8644;</div>
       <strong>对比列表还是空的</strong>
-      <p>在右侧详情面板点击“加入对比”，最多可放入 3 个元素，这里和首页预览会同步刷新。</p>
-      <button class="compare-btn compare-btn-home" type="button">去添加元素</button>
+      <p>把元素拖入底部对比预览，或选中元素后点击空槽，最多可放入 3 个元素，这里和首页预览会同步刷新。</p>
+      <button class="compare-btn compare-btn-home" type="button">${mode === 'modal' ? '继续选元素' : '去添加元素'}</button>
     </div>
   `;
 }
@@ -155,8 +292,7 @@ function renderAttrRow(label, value) {
   `;
 }
 
-function bindCardEvents() {
-  const container = document.getElementById('compare-container');
+function bindCompareViewEvents(container, { mode }) {
   if (!container) {
     return;
   }
@@ -181,18 +317,13 @@ function bindCardEvents() {
 
   const homeBtn = container.querySelector('.compare-btn-home');
   if (homeBtn) {
-    homeBtn.addEventListener('click', () => navigateTo('periodic-table'));
-  }
-}
+    homeBtn.addEventListener('click', () => {
+      if (mode === 'modal') {
+        closeCompareModal();
+        return;
+      }
 
-function bindEmptyStateEvents() {
-  const container = document.getElementById('compare-container');
-  if (!container) {
-    return;
-  }
-
-  const homeBtn = container.querySelector('.compare-btn-home');
-  if (homeBtn) {
-    homeBtn.addEventListener('click', () => navigateTo('periodic-table'));
+      navigateTo('periodic-table');
+    });
   }
 }

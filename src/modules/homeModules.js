@@ -1,8 +1,16 @@
 import { achievementsData } from '../data/index.js';
 import { learningPath } from '../data/index.js';
 import { ELEMENT_CATEGORY_META } from '../data/contentMeta.js';
+import { selectLegendCategory } from './renderTable.js';
+import { openCompareModal } from './compare.js';
 import { navigateTo } from './router.js';
-import { getCompareList, getLearnedElements, getUnlockedAchievements } from './storage.js';
+import {
+  addComparedElement,
+  getCompareList,
+  getLearnedElements,
+  getSelectedElement,
+  getUnlockedAchievements
+} from './storage.js';
 
 const CATEGORY_META = Object.fromEntries(
   Object.entries(ELEMENT_CATEGORY_META)
@@ -12,8 +20,8 @@ const CATEGORY_META = Object.fromEntries(
 
 const TOTAL_ELEMENTS = 118;
 const COMPARE_PREVIEW_LIMIT = 3;
-const TIMELINE_PREVIEW_COUNT = 4;
 const RECENT_ACHIEVEMENT_LIMIT = 2;
+const ELEMENT_ATOMIC_NUMBER_MIME = 'application/x-element-atomic-number';
 
 let allElements = [];
 let cardRefs = null;
@@ -39,11 +47,11 @@ function getCardRefs() {
   return {
     categoriesCard: document.querySelector('[data-testid="bottom-categories"]'),
     compareCard: document.querySelector('[data-testid="bottom-compare"]'),
-    timelineCard: document.querySelector('[data-testid="bottom-timeline"]'),
+    elementStatsCard: document.querySelector('[data-testid="bottom-element-stats"]'),
     statsCard: document.querySelector('[data-testid="bottom-stats"]'),
     categoriesContent: document.getElementById('bottom-categories-content'),
     compareContent: document.getElementById('bottom-compare-content'),
-    timelineContent: document.getElementById('bottom-timeline-content'),
+    elementStatsContent: document.getElementById('bottom-element-stats-content'),
     statsContent: document.getElementById('bottom-stats-content')
   };
 }
@@ -52,41 +60,41 @@ function hasRequiredContainers(refs) {
   return Boolean(
     refs?.categoriesCard
       && refs?.compareCard
-      && refs?.timelineCard
+      && refs?.elementStatsCard
       && refs?.statsCard
       && refs?.categoriesContent
       && refs?.compareContent
-      && refs?.timelineContent
+      && refs?.elementStatsContent
       && refs?.statsContent
   );
 }
 
 function enhanceCards() {
   [
-    [cardRefs.categoriesCard, '查看类别筛选'],
     [cardRefs.compareCard, '查看元素对比'],
-    [cardRefs.timelineCard, '查看发现历史'],
+    [cardRefs.elementStatsCard, '元素统计'],
     [cardRefs.statsCard, '查看学习进度']
   ].forEach(([card, label]) => {
     if (!card) {
       return;
     }
 
+    card.setAttribute('aria-label', label);
+
+    if (card === cardRefs.elementStatsCard) {
+      return;
+    }
+
     card.classList.add('bottom-module-interactive');
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', label);
   });
 }
 
 function bindCardEvents() {
-  bindCardAction(cardRefs.categoriesCard, () => {
-    const defaultCategory = buildCategoryStats().find((item) => item.learnedCount > 0)?.category ?? 'all';
-    focusCategory(defaultCategory);
-  });
-  bindCardAction(cardRefs.compareCard, () => navigateTo('compare'));
-  bindCardAction(cardRefs.timelineCard, () => navigateTo('timeline'));
+  bindCardAction(cardRefs.compareCard, openCompareModal);
   bindCardAction(cardRefs.statsCard, () => navigateTo('progress'));
+  bindCompareDropTarget();
 }
 
 function bindCardAction(card, action) {
@@ -150,7 +158,7 @@ function handleAchievementUnlocked(event) {
 function renderAllPreviews() {
   renderCategoriesPreview();
   renderComparePreview();
-  renderTimelinePreview();
+  renderElementQuickStatsPreview();
   renderStatsPreview();
 }
 
@@ -162,7 +170,7 @@ function renderCategoriesPreview() {
   cardRefs.categoriesContent.innerHTML = `
     <div class="preview-card-shell preview-categories-shell">
       <div class="preview-card-topline">
-        <span class="preview-eyebrow">LEARNING DISTRIBUTION</span>
+        <h4>类别概览</h4>
         <span class="preview-metric">${learnedCount}/${TOTAL_ELEMENTS}</span>
       </div>
       <div class="categories-overview">
@@ -176,37 +184,17 @@ function renderCategoriesPreview() {
           ${categoryStats.map((item) => renderCategoryRow(item)).join('')}
         </div>
       </div>
-      <button class="module-link module-link-inline" type="button" data-action="open-category">跳到分类筛选 →</button>
     </div>
   `;
-
-  cardRefs.categoriesContent.querySelectorAll('[data-category]').forEach((button) => {
-    button.addEventListener('click', (event) => {
-      event.stopPropagation();
-      focusCategory(button.dataset.category || 'all');
-    });
-  });
-
-  cardRefs.categoriesContent.querySelector('[data-action="open-category"]')?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const defaultCategory = categoryStats.find((item) => item.learnedCount > 0)?.category ?? 'all';
-    focusCategory(defaultCategory);
-  });
 }
 
 function renderCategoryRow(item) {
-  const percentage = item.totalCount > 0 ? Math.round((item.learnedCount / item.totalCount) * 100) : 0;
   return `
-    <button class="category-progress-row" type="button" data-category="${item.category}">
+    <div class="category-progress-row" data-category="${item.category}">
       <span class="category-chip" style="--category-accent: ${item.color}"></span>
-      <span class="category-progress-copy">
-        <span class="category-progress-name">${item.label}</span>
-        <span class="category-progress-ratio">${item.learnedCount}/${item.totalCount}</span>
-      </span>
-      <span class="category-progress-bar">
-        <span class="category-progress-fill" style="width: ${percentage}%; --category-accent: ${item.color}"></span>
-      </span>
-    </button>
+      <span class="category-progress-name">${item.label}</span>
+      <span class="category-progress-ratio">${item.learnedCount}/${item.totalCount}</span>
+    </div>
   `;
 }
 
@@ -217,8 +205,8 @@ function renderComparePreview() {
   cardRefs.compareContent.innerHTML = `
     <div class="preview-card-shell preview-compare-shell">
       <div class="preview-card-topline">
-        <span class="preview-eyebrow">COMPARE QUEUE</span>
-        <span class="preview-metric">${compareList.length}/${COMPARE_PREVIEW_LIMIT}</span>
+        <h4>对比预览</h4>
+        <button class="preview-metric module-link" type="button" data-action="open-compare">对比</button>
       </div>
       <div class="compare-preview-grid">
         ${compareList.map((element) => `
@@ -229,94 +217,194 @@ function renderComparePreview() {
           </article>
         `).join('')}
         ${Array.from({ length: emptySlots }, (_, index) => `
-          <div class="compare-preview-empty">
+          <div class="compare-preview-empty" role="button" tabindex="0" aria-label="添加当前选中的元素到对比槽位 ${compareList.length + index + 1}">
             <span>+</span>
             <small>槽位 ${compareList.length + index + 1}</small>
           </div>
         `).join('')}
       </div>
-      <p class="preview-caption">${compareList.length > 0 ? '已加入的元素会在这里实时刷新。' : '从右侧详情面板把元素加入对比，就会立刻出现在这里。'}</p>
-      <button class="module-link module-link-inline" type="button" data-action="open-compare">打开对比页 →</button>
+      <p class="preview-caption">${compareList.length > 0 ? '已加入的元素会在这里实时刷新。' : '拖入元素，或选中元素后点空槽加入对比。'}</p>
     </div>
   `;
 
   cardRefs.compareContent.querySelector('[data-action="open-compare"]')?.addEventListener('click', (event) => {
     event.stopPropagation();
-    navigateTo('compare');
+    openCompareModal();
+  });
+
+  bindCompareEmptySlots();
+}
+
+function bindCompareDropTarget() {
+  const card = cardRefs.compareCard;
+  if (!card || card.dataset.compareDropBound === 'true') {
+    return;
+  }
+
+  card.addEventListener('dragover', (event) => {
+    if (!hasElementDragPayload(event.dataTransfer)) {
+      return;
+    }
+
+    event.preventDefault();
+    if (event.dataTransfer) {
+      event.dataTransfer.dropEffect = 'copy';
+    }
+    card.classList.add('compare-drop-active');
+  });
+
+  card.addEventListener('dragleave', (event) => {
+    if (!card.contains(event.relatedTarget)) {
+      card.classList.remove('compare-drop-active');
+    }
+  });
+
+  card.addEventListener('drop', (event) => {
+    const atomicNumber = readDraggedAtomicNumber(event.dataTransfer);
+    card.classList.remove('compare-drop-active');
+    event.preventDefault();
+
+    if (!addElementToCompare(atomicNumber)) {
+      return;
+    }
+  });
+
+  card.dataset.compareDropBound = 'true';
+}
+
+function bindCompareEmptySlots() {
+  cardRefs.compareContent.querySelectorAll('.compare-preview-empty').forEach((slot) => {
+    slot.addEventListener('click', handleCompareSlotActivation);
+    slot.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleCompareSlotActivation(event);
+      }
+    });
   });
 }
 
-function renderTimelinePreview() {
-  const recentElements = getTimelinePreviewElements();
+function handleCompareSlotActivation(event) {
+  event.stopPropagation();
+  addElementToCompare(getCurrentSelectedAtomicNumber());
+}
 
-  cardRefs.timelineContent.innerHTML = `
-    <div class="preview-card-shell preview-timeline-shell">
+function readDraggedAtomicNumber(dataTransfer) {
+  if (!dataTransfer) {
+    return null;
+  }
+
+  return dataTransfer.getData(ELEMENT_ATOMIC_NUMBER_MIME) || dataTransfer.getData('text/plain');
+}
+
+function hasElementDragPayload(dataTransfer) {
+  if (!dataTransfer) {
+    return false;
+  }
+
+  return [...dataTransfer.types].some((type) => type === ELEMENT_ATOMIC_NUMBER_MIME || type === 'text/plain');
+}
+
+function getCurrentSelectedAtomicNumber() {
+  const selectedElement = getSelectedElement();
+  if (selectedElement?.atomicNumber) {
+    return selectedElement.atomicNumber;
+  }
+
+  const selectedNode = document.querySelector('.element-cell.selected, .element-list-row.selected');
+  if (selectedNode?.dataset.atomicNumber) {
+    return selectedNode.dataset.atomicNumber;
+  }
+
+  return document.querySelector('.element-hero .atomic-number')?.textContent || null;
+}
+
+function addElementToCompare(value) {
+  const atomicNumber = Number(value);
+  if (!Number.isInteger(atomicNumber)) {
+    return false;
+  }
+
+  const elementExists = allElements.some((element) => element.atomicNumber === atomicNumber);
+  if (!elementExists) {
+    return false;
+  }
+
+  addComparedElement(atomicNumber);
+  return true;
+}
+
+function renderElementQuickStatsPreview() {
+  const stats = buildElementQuickStats();
+  const totalElements = allElements.length || 1;
+
+  cardRefs.elementStatsContent.innerHTML = `
+    <div class="preview-card-shell element-quick-stats-shell">
       <div class="preview-card-topline">
-        <span class="preview-eyebrow">LATEST DISCOVERIES</span>
-        <span class="preview-metric">${recentElements.length} 项</span>
+        <h4>元素统计</h4>
+        <span class="preview-metric">${allElements.length} 项</span>
       </div>
-      <div class="timeline-preview-list">
-        ${recentElements.map((element, index) => `
-          <article class="timeline-preview-item" style="--timeline-accent: ${element.color || 'var(--neon-purple)'}">
-            <span class="timeline-preview-year">${element.discoveryYear}</span>
-            <span class="timeline-preview-node"></span>
-            <div class="timeline-preview-copy">
-              <strong>${element.symbol} · ${element.chineseName}</strong>
-              <span>${index === 0 ? '最晚进入现代化学视野' : '进入发现序列'}</span>
-            </div>
-          </article>
-        `).join('')}
+      <div class="element-stat-list">
+        ${stats.map((item) => renderElementStatRow(item, totalElements)).join('')}
       </div>
-      <button class="module-link module-link-inline" type="button" data-action="open-timeline">查看完整时间线 →</button>
     </div>
   `;
+}
 
-  cardRefs.timelineContent.querySelector('[data-action="open-timeline"]')?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    navigateTo('timeline');
-  });
+function renderElementStatRow(item, totalElements) {
+  const percentage = (item.count / totalElements) * 100;
+
+  return `
+    <div class="element-stat-row">
+      <span class="element-stat-label">${item.label}</span>
+      <span class="element-stat-count">${item.count}</span>
+      <span class="element-stat-track">
+        <span class="element-stat-fill" style="--stat-width: ${percentage}%"></span>
+      </span>
+    </div>
+  `;
+}
+
+function buildElementQuickStats() {
+  const totalElements = allElements.length;
+  const naturalCount = allElements.filter((element) => element.rarity && element.rarity !== 'synthetic').length;
+  const syntheticCount = allElements.filter((element) => element.rarity === 'synthetic').length;
+  const nonRadioactiveCount = allElements.filter((element) => element.safety && element.safety !== 'radioactive').length;
+  const radioactiveCount = allElements.filter((element) => element.safety === 'radioactive').length;
+
+  return [
+    { label: '已发现元素', count: totalElements },
+    { label: '天然元素', count: naturalCount },
+    { label: '人工合成', count: syntheticCount },
+    { label: '非放射性元素', count: nonRadioactiveCount },
+    { label: '放射性元素', count: radioactiveCount }
+  ];
 }
 
 function renderStatsPreview() {
   const learnedCount = getLearnedElements().size;
   const progressPercent = Math.round((learnedCount / TOTAL_ELEMENTS) * 100) || 0;
   const currentStage = getCurrentLearningStage();
-  const recentAchievements = getRecentAchievements(getUnlockedAchievements());
 
   cardRefs.statsContent.innerHTML = `
     <div class="preview-card-shell preview-stats-shell">
-      <div class="stats-hero-line">
-        <div>
-          <span class="preview-eyebrow">EXPLORATION STATUS</span>
-          <div class="stats-main-metric">${learnedCount}<small>/ ${TOTAL_ELEMENTS}</small></div>
-        </div>
+      <div class="preview-card-topline">
+        <h4>统计概览</h4>
         <div class="stats-progress-badge">${progressPercent}%</div>
       </div>
-      <div class="stats-progress-track">
-        <span class="stats-progress-fill" style="width: ${progressPercent}%"></span>
+      <div class="stats-inline-progress">
+        <div class="stats-main-metric">${learnedCount}<small>/ ${TOTAL_ELEMENTS}</small></div>
+        <div class="stats-progress-track">
+          <span class="stats-progress-fill" style="width: ${progressPercent}%"></span>
+        </div>
       </div>
       <div class="stats-stage-card">
         <span class="stats-stage-label">当前阶段</span>
         <strong>${currentStage.stage.name}</strong>
         <span>${currentStage.completed}/${currentStage.total} 个关键元素已掌握</span>
       </div>
-      <div class="stats-achievement-list">
-        <span class="stats-stage-label">最近解锁成就</span>
-        ${recentAchievements.length > 0 ? recentAchievements.map((achievement) => `
-          <div class="stats-achievement-item">
-            <strong>${achievement.title}</strong>
-            <span>${achievement.description}</span>
-          </div>
-        `).join('') : '<div class="stats-achievement-item is-empty"><strong>尚未解锁</strong><span>学习第一个元素后，新的成就会出现在这里。</span></div>'}
-      </div>
-      <button class="module-link module-link-inline" type="button" data-action="open-progress">打开学习进度 →</button>
     </div>
   `;
-
-  cardRefs.statsContent.querySelector('[data-action="open-progress"]')?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    navigateTo('progress');
-  });
 }
 
 function buildCategoryStats() {
@@ -353,13 +441,6 @@ function buildCategoryChartStyle(categoryStats, learnedCount) {
   return `background: conic-gradient(${segments.join(', ')});`;
 }
 
-function getTimelinePreviewElements() {
-  return allElements
-    .filter((element) => Number.isFinite(Number(element.discoveryYear)))
-    .sort((left, right) => Number(right.discoveryYear) - Number(left.discoveryYear))
-    .slice(0, TIMELINE_PREVIEW_COUNT);
-}
-
 function getCurrentLearningStage() {
   const learned = getLearnedElements();
   const stages = learningPath?.stages || [];
@@ -381,14 +462,6 @@ function getCurrentLearningStage() {
   };
 }
 
-function getRecentAchievements(unlockedIds) {
-  return recentAchievementIds
-    .filter((id) => unlockedIds.has(id))
-    .map((id) => achievementsData.find((achievement) => achievement.id === id))
-    .filter(Boolean)
-    .slice(0, RECENT_ACHIEVEMENT_LIMIT);
-}
-
 function seedRecentAchievements() {
   const unlockedIds = getUnlockedAchievements();
   recentAchievementIds = achievementsData
@@ -402,13 +475,6 @@ function focusCategory(category) {
   navigateTo('periodic-table');
 
   window.requestAnimationFrame(() => {
-    const categoryFilter = document.getElementById('category-filter');
-    if (!categoryFilter) {
-      return;
-    }
-
-    categoryFilter.value = category;
-    categoryFilter.dispatchEvent(new Event('change', { bubbles: true }));
-    categoryFilter.focus();
+    selectLegendCategory(category);
   });
 }

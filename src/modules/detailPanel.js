@@ -1,14 +1,11 @@
 /** ===== 详情面板 ===== */
 import { createElectronModel } from '../three/electronModel.js';
 import {
-  addComparedElement,
   collectElement,
   getCollectedElements,
-  getCompareList,
   getSelectedElement
 } from './storage.js';
 import { ELEMENT_CATEGORY_LABELS, SAFETY_LABELS } from '../data/contentMeta.js';
-import { showToast } from './compare.js';
 import { navigateTo } from './router.js';
 
 let currentElectronModel = null;
@@ -20,7 +17,6 @@ function getPerformanceMode() {
 
 export function initDetailPanel() {
   bindCollectButton();
-  bindCompareButton();
   bindStoryButton();
   bindQuizButton();
   bindLabButton();
@@ -46,32 +42,6 @@ function bindCollectButton() {
       collectBtn.classList.remove('button-bump');
       void collectBtn.offsetWidth;
       collectBtn.classList.add('button-bump');
-    }
-  });
-}
-
-function bindCompareButton() {
-  const compareBtn = document.getElementById('btn-compare-add');
-  if (!compareBtn) {
-    return;
-  }
-
-  compareBtn.addEventListener('click', () => {
-    const element = getSelectedElement();
-    if (!element) {
-      return;
-    }
-
-    const previousLength = getCompareList().length;
-    addComparedElement(element.atomicNumber);
-    const currentLength = getCompareList().length;
-
-    updateCompareButton(element.atomicNumber);
-
-    if (currentLength > previousLength) {
-      showToast(`已将 ${element.chineseName} 加入对比`, 'success');
-    } else if (currentLength >= 3) {
-      showToast('对比列表已满（最多 3 个）', 'error');
     }
   });
 }
@@ -139,7 +109,6 @@ function bindPanelEvents() {
     updateElectronModel(event.detail.element, { animated: true });
     updateSpectrum(event.detail.element);
     updateCollectButton(event.detail.element.atomicNumber);
-    updateCompareButton(event.detail.element.atomicNumber);
   });
 
   window.addEventListener('elementcollected', (event) => {
@@ -147,11 +116,6 @@ function bindPanelEvents() {
     if (selectedElement?.atomicNumber === event.detail.atomicNumber) {
       updateCollectButton(event.detail.atomicNumber);
     }
-  });
-
-  window.addEventListener('compareupdated', () => {
-    const selectedElement = getSelectedElement();
-    updateCompareButton(selectedElement?.atomicNumber ?? null);
   });
 
   window.addEventListener('performancemodechange', () => {
@@ -171,7 +135,6 @@ function bindPanelEvents() {
 
   window.addEventListener('statereset', () => {
     updateCollectButton(null);
-    updateCompareButton(null);
   });
 }
 
@@ -186,27 +149,6 @@ function updateCollectButton(atomicNumber) {
   collectBtn.textContent = isCollected ? '★' : '☆';
   collectBtn.title = isCollected ? '已自动收集' : '加入收藏';
   collectBtn.classList.toggle('is-active', isCollected);
-}
-
-function updateCompareButton(atomicNumber) {
-  const compareBtn = document.getElementById('btn-compare-add');
-  if (!compareBtn) {
-    return;
-  }
-
-  const compareList = getCompareList();
-  const isInCompare = atomicNumber !== null && compareList.some((item) => item.atomicNumber === atomicNumber);
-  const isFull = compareList.length >= 3;
-  const isDisabled = atomicNumber === null || isInCompare || isFull;
-
-  compareBtn.disabled = isDisabled;
-  compareBtn.classList.toggle('is-active', isInCompare);
-  compareBtn.textContent = isInCompare ? '✓' : '+';
-  compareBtn.title = isInCompare
-    ? '已加入对比'
-    : isFull
-      ? '对比列表已满（最多 3 个）'
-      : '加入对比';
 }
 
 function updateElectronModel(element, options = {}) {
