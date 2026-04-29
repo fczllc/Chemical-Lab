@@ -2,12 +2,6 @@ import { test, expect } from '@playwright/test';
 
 const ROUTES = [
   {
-    hash: '#/compare',
-    section: 'compare',
-    nav: 'nav-compare',
-    anchor: '#compare-container'
-  },
-  {
     hash: '#/timeline',
     section: 'timeline',
     nav: 'nav-timeline',
@@ -67,6 +61,15 @@ test.describe('Route shell rendering sanity', () => {
     }
   });
 
+  test('direct compare route renders compare shell without top navigation entry', async ({ page }) => {
+    await page.goto('/#/compare', { waitUntil: 'domcontentloaded' });
+    await waitForShellReady(page);
+
+    await expect(page.locator('#compare')).toHaveClass(/active/);
+    await expect(page.locator('#compare-container')).toBeVisible({ timeout: 15000 });
+    await expect(page.getByTestId('nav-compare')).toHaveCount(0);
+  });
+
   test('tablet portrait routes keep primary navigation visible without phone chrome', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
     await page.goto('/', { waitUntil: 'domcontentloaded' });
@@ -107,7 +110,7 @@ async function waitForShellReady(page) {
 async function expectPrimaryNavigationVisible(page) {
   await expect(page.locator('.main-nav')).toBeVisible();
   await expect(page.getByTestId('nav-home')).toBeVisible();
-  await expect(page.getByTestId('nav-compare')).toBeVisible();
+  await expect(page.getByTestId('nav-compare')).toHaveCount(0);
   await expect(page.getByTestId('nav-timeline')).toBeVisible();
   await expect(page.getByTestId('nav-games')).toBeVisible();
   await expect(page.getByTestId('nav-lab')).toBeVisible();

@@ -47,7 +47,7 @@ async function expectNoCatastrophicHorizontalOverflow(page: Page) {
 async function expectPrimaryNavigationVisible(page: Page) {
   await expect(page.locator('.main-nav')).toBeVisible();
   await expect(page.getByTestId('nav-home')).toBeVisible();
-  await expect(page.getByTestId('nav-compare')).toBeVisible();
+  await expect(page.getByTestId('nav-compare')).toHaveCount(0);
   await expect(page.getByTestId('nav-timeline')).toBeVisible();
   await expect(page.getByTestId('nav-games')).toBeVisible();
   await expect(page.getByTestId('nav-lab')).toBeVisible();

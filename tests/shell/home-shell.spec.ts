@@ -10,7 +10,7 @@ test.describe('Homepage Shell Contract', () => {
   test('desktop shell contract - all shell regions visible at 1440x900', async ({ page }) => {
     // Top navigation buttons
     await expect(page.getByTestId('nav-home')).toBeVisible();
-    await expect(page.getByTestId('nav-compare')).toBeVisible();
+    await expect(page.getByTestId('nav-compare')).toHaveCount(0);
     await expect(page.getByTestId('nav-timeline')).toBeVisible();
     await expect(page.getByTestId('nav-games')).toBeVisible();
     await expect(page.getByTestId('nav-lab')).toBeVisible();
@@ -27,8 +27,35 @@ test.describe('Homepage Shell Contract', () => {
     // Bottom modules
     await expect(page.getByTestId('bottom-categories')).toBeVisible();
     await expect(page.getByTestId('bottom-compare')).toBeVisible();
-    await expect(page.getByTestId('bottom-timeline')).toBeVisible();
-    await expect(page.getByTestId('bottom-stats')).toBeVisible();
+    const elementStatsCard = page.getByTestId('bottom-element-stats');
+    await expect(elementStatsCard).toBeVisible();
+    await expect(elementStatsCard.locator('.element-stat-row').filter({ hasText: /已发现元素\s*118/ })).toBeVisible();
+    await expect(elementStatsCard.locator('.element-stat-row').filter({ hasText: /天然元素\s*91/ })).toBeVisible();
+    await expect(elementStatsCard.locator('.element-stat-row').filter({ hasText: /人工合成\s*27/ })).toBeVisible();
+    await expect(elementStatsCard.locator('.element-stat-row').filter({ hasText: /非放射性元素\s*81/ })).toBeVisible();
+    await expect(elementStatsCard.locator('.element-stat-row').filter({ hasText: /放射性元素\s*37/ })).toBeVisible();
+    await expect(elementStatsCard.locator('[data-action="open-timeline"]')).toHaveCount(0);
+
+    const initialHash = await page.evaluate(() => window.location.hash);
+    await elementStatsCard.click();
+    await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
+
+    const listSizing = await elementStatsCard.locator('.element-stat-list').evaluate((element) => {
+      const styles = window.getComputedStyle(element);
+      return {
+        maxHeight: styles.maxHeight,
+        boundingHeight: element.getBoundingClientRect().height
+      };
+    });
+    expect(listSizing.maxHeight === '100px' || listSizing.boundingHeight <= 110).toBe(true);
+    const bottomStats = page.getByTestId('bottom-stats');
+    await expect(bottomStats).toBeVisible();
+    await expect(bottomStats).toContainText('统计概览');
+    await expect(bottomStats).toContainText('当前阶段');
+    await expect(bottomStats).not.toContainText('最近解锁成就');
+    await expect(bottomStats).not.toContainText('最近解决成就');
+    await expect(bottomStats).not.toContainText('打开学习进度');
+    await expect(bottomStats.locator('[data-action="open-progress"]')).toHaveCount(0);
   });
 
   test('settings panel opens and contains performance mode toggle', async ({ page }) => {
@@ -57,7 +84,7 @@ async function waitForShellReady(page) {
 async function expectPrimaryNavigationVisible(page) {
   await expect(page.locator('.main-nav')).toBeVisible();
   await expect(page.getByTestId('nav-home')).toBeVisible();
-  await expect(page.getByTestId('nav-compare')).toBeVisible();
+  await expect(page.getByTestId('nav-compare')).toHaveCount(0);
   await expect(page.getByTestId('nav-timeline')).toBeVisible();
   await expect(page.getByTestId('nav-games')).toBeVisible();
   await expect(page.getByTestId('nav-lab')).toBeVisible();
@@ -130,7 +157,6 @@ test.describe('Hash-based Routing', () => {
     await page.waitForLoadState('networkidle');
 
     const routes = [
-      { nav: 'nav-compare', section: 'compare', hash: '#/compare' },
       { nav: 'nav-timeline', section: 'timeline', hash: '#/timeline' },
       { nav: 'nav-games', section: 'games', hash: '#/games' },
       { nav: 'nav-lab', section: 'lab', hash: '#/lab' },
@@ -145,6 +171,11 @@ test.describe('Hash-based Routing', () => {
       await expect(page.locator(`#${route.section}`)).toHaveClass(/active/);
       await expect(page.getByTestId(route.nav)).toHaveClass(/active/);
     }
+
+    await page.goto('/#/compare', { waitUntil: 'domcontentloaded' });
+    await expect(page).toHaveURL(/#\/compare$/);
+    await expect(page.locator('#compare')).toHaveClass(/active/);
+    await expect(page.getByTestId('nav-compare')).toHaveCount(0);
 
     // Navigate back to home
     await page.getByTestId('nav-home').click();
@@ -198,5 +229,102 @@ test.describe('Performance and Accessibility', () => {
     await page.keyboard.press('Tab');
     const focusedElement = await page.evaluate(() => document.activeElement?.tagName);
     expect(focusedElement).toBeDefined();
+  });
+});
+
+test.describe('Bottom Widget Contract', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 1366, height: 768 });
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await waitForShellReady(page);
+  });
+
+  test('bottom widget DOM order is compare → categories → element-stats → stats', async ({ page }) => {
+    const order = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('#bottom-modules > [data-testid]')).map((el) => el.getAttribute('data-testid'))
+    );
+    expect(order).toEqual(['bottom-compare', 'bottom-categories', 'bottom-element-stats', 'bottom-stats']);
+  });
+
+  test('category overview is display-only with no interactive descendants', async ({ page }) => {
+    const categoriesCard = page.getByTestId('bottom-categories');
+    await expect(categoriesCard).toBeVisible();
+    await expect(categoriesCard).not.toContainText('跳到分类筛选');
+
+    const forbidden = await categoriesCard.locator('button, a, [role="button"], [tabindex="0"]').count();
+    expect(forbidden).toBe(0);
+
+    const initialHash = await page.evaluate(() => window.location.hash);
+    await categoriesCard.locator('.category-progress-row').first().click();
+    await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
+  });
+
+  test('compare preview has top-right 对比 action and no old CTA or count badge', async ({ page }) => {
+    const compareCard = page.getByTestId('bottom-compare');
+    await expect(compareCard).toBeVisible();
+
+    const contrastBtn = compareCard.locator('[data-action="open-compare"]');
+    await expect(contrastBtn).toHaveText('对比');
+    await expect(compareCard).not.toContainText('打开对比页');
+    await expect(compareCard).not.toContainText('0/3');
+    await expect(compareCard).not.toContainText('1/3');
+    await expect(compareCard).not.toContainText('2/3');
+    await expect(compareCard).not.toContainText('3/3');
+
+    const initialHash = await page.evaluate(() => window.location.hash);
+    await contrastBtn.click();
+    await expect(page.getByTestId('compare-modal')).toHaveClass(/show/);
+    await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
+  });
+
+  test('bottom widgets are transparent with no top border', async ({ page }) => {
+    const styles = await page.evaluate(() => {
+      const modules = document.getElementById('bottom-modules');
+      const firstModule = document.querySelector('.bottom-module');
+      const mStyles = window.getComputedStyle(modules);
+      const modStyles = window.getComputedStyle(firstModule);
+      return {
+        modulesBg: mStyles.backgroundColor,
+        modulesBorderTop: mStyles.borderTopWidth,
+        moduleBg: modStyles.backgroundColor,
+        moduleBorder: modStyles.borderWidth
+      };
+    });
+
+    const isTransparent = (color) => color === 'rgba(0, 0, 0, 0)' || color === 'transparent';
+    expect(isTransparent(styles.modulesBg)).toBe(true);
+    expect(isTransparent(styles.moduleBg)).toBe(true);
+    expect(styles.modulesBorderTop).toBe('0px');
+    expect(styles.moduleBorder).toBe('0px');
+  });
+
+  test('no vertical overflow at 1366x768', async ({ page }) => {
+    const overflow = await page.evaluate(() => {
+      return document.documentElement.scrollHeight <= window.innerHeight + 1;
+    });
+    expect(overflow).toBe(true);
+  });
+
+  test('compare state edge case does not restore old count badge', async ({ page }) => {
+    // Add hydrogen to compare via selected-element empty slot
+    await page.locator('[data-testid="element-cell-1"]').click();
+    await expect(page.getByTestId('detail-panel')).toHaveClass(/open|docked/);
+    await page.locator('.compare-preview-empty').first().click();
+
+    // Return home and verify compare card still shows 对比, not N/3
+    await page.getByTestId('nav-home').click();
+    await expect(page.locator('#periodic-table')).toHaveClass(/active/);
+
+    const compareCard = page.getByTestId('bottom-compare');
+    await expect(compareCard.locator('[data-action="open-compare"]')).toHaveText('对比');
+    await expect(compareCard).not.toContainText('1/3');
+    await expect(compareCard).not.toContainText('2/3');
+    await expect(compareCard).not.toContainText('3/3');
+
+    // Click 对比 opens modal without hash navigation
+    const initialHash = await page.evaluate(() => window.location.hash);
+    await compareCard.locator('[data-action="open-compare"]').click();
+    await expect(page.getByTestId('compare-modal')).toHaveClass(/show/);
+    await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
   });
 });
