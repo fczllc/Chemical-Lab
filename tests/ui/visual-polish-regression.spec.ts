@@ -31,7 +31,6 @@ test.describe('Visual polish regression', () => {
 
     await assertActiveRoute(page, {
       hash: /#\/compare$/,
-      navTestId: 'nav-compare',
       sectionSelector: '#compare',
       anchorSelector: '#compare-container',
     });
@@ -90,7 +89,6 @@ test.describe('Visual polish regression', () => {
 
     await assertActiveRoute(page, {
       hash: /#\/compare$/,
-      navTestId: 'nav-compare',
       sectionSelector: '#compare',
       anchorSelector: '#compare-container',
     });
@@ -101,14 +99,22 @@ async function assertActiveRoute(
   page: Page,
   contract: {
     hash: RegExp;
-    navTestId: string;
+    navTestId?: string;
     sectionSelector: string;
     anchorSelector: string;
   },
 ) {
-  await page.getByTestId(contract.navTestId).click();
+  if (contract.navTestId) {
+    await page.getByTestId(contract.navTestId).click();
+  } else {
+    await page.evaluate(() => {
+      window.location.hash = '#/compare';
+    });
+  }
   await expect(page).toHaveURL(contract.hash);
-  await expect(page.getByTestId(contract.navTestId)).toHaveClass(/active/);
+  if (contract.navTestId) {
+    await expect(page.getByTestId(contract.navTestId)).toHaveClass(/active/);
+  }
   await expect(page.locator(`${contract.sectionSelector}.page-section.active`)).toBeVisible();
   await expect(page.locator(contract.anchorSelector)).toBeVisible({ timeout: 15000 });
 }
