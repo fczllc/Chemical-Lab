@@ -166,7 +166,6 @@ function renderAllPreviews() {
 function renderCategoriesPreview() {
   const categoryStats = buildCategoryStats();
   const learnedCount = getLearnedElements().size;
-  const progress = Math.round((learnedCount / TOTAL_ELEMENTS) * 100) || 0;
 
   cardRefs.categoriesContent.innerHTML = `
     <div class="preview-card-shell preview-categories-shell">
@@ -175,12 +174,6 @@ function renderCategoriesPreview() {
         <span class="preview-metric">${learnedCount}/${TOTAL_ELEMENTS}</span>
       </div>
       <div class="categories-overview">
-        <div class="categories-donut" style="${buildCategoryChartStyle(categoryStats, learnedCount)}">
-          <div class="categories-donut-core">
-            <strong>${progress}%</strong>
-            <span>已学习</span>
-          </div>
-        </div>
         <div class="categories-legend-list">
           ${categoryStats.map((item) => renderCategoryRow(item)).join('')}
         </div>
@@ -206,7 +199,7 @@ function renderComparePreview() {
   cardRefs.compareContent.innerHTML = `
     <div class="preview-card-shell preview-compare-shell">
       <div class="preview-card-topline">
-        <h4>对比预览</h4>
+        <h4>元素对比</h4>
         <button class="preview-metric module-link" type="button" data-action="open-compare">对比</button>
       </div>
       <div class="compare-preview-grid">
@@ -435,7 +428,7 @@ function renderStatsPreview() {
   cardRefs.statsContent.innerHTML = `
     <div class="preview-card-shell preview-stats-shell">
       <div class="preview-card-topline">
-        <h4>统计概览</h4>
+        <h4>学习进度</h4>
         <div class="stats-progress-badge">${progressPercent}%</div>
       </div>
       <div class="stats-inline-progress">
@@ -467,24 +460,6 @@ function buildCategoryStats() {
       }, 0)
     };
   });
-}
-
-function buildCategoryChartStyle(categoryStats, learnedCount) {
-  if (learnedCount === 0) {
-    return 'background: radial-gradient(circle at center, rgba(148, 163, 184, 0.24), rgba(15, 23, 42, 0.94));';
-  }
-
-  let currentStop = 0;
-  const segments = categoryStats
-    .filter((item) => item.learnedCount > 0)
-    .map((item) => {
-      const size = (item.learnedCount / learnedCount) * 360;
-      const start = currentStop;
-      currentStop += size;
-      return `${item.color} ${start}deg ${currentStop}deg`;
-    });
-
-  return `background: conic-gradient(${segments.join(', ')});`;
 }
 
 function getCurrentLearningStage() {

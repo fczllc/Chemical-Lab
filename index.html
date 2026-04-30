@@ -217,18 +217,19 @@
 
         <!-- 底部模块 -->
         <div class="bottom-modules" id="bottom-modules">
-          <div class="bottom-module" data-testid="bottom-compare">
+          <div class="bottom-module" data-testid="bottom-stats">
             <div class="module-header">
-              <h4>对比预览</h4>
+              <h4>学习进度</h4>
             </div>
-            <div class="module-content" id="bottom-compare-content">
-              <div class="compare-mini-slots">
-                <div class="mini-slot empty">+</div>
-                <div class="mini-slot empty">+</div>
-                <div class="mini-slot empty">+</div>
+            <div class="module-content" id="bottom-stats-content">
+              <div class="stats-mini-grid">
+                <div class="stat-mini"><span class="stat-label">已学习</span><span class="stat-num" id="mini-learned">0</span></div>
+                <div class="stat-mini"><span class="stat-label">已收藏</span><span class="stat-num" id="mini-collected">0</span></div>
+                <div class="stat-mini"><span class="stat-label">测验分</span><span class="stat-num" id="mini-quiz">0</span></div>
+                <div class="stat-mini"><span class="stat-label">成就数</span><span class="stat-num" id="mini-achievements">0</span></div>
               </div>
             </div>
-            <div class="lock-overlay" data-testid="lock-overlay-compare" style="display:none;">
+            <div class="lock-overlay" data-testid="lock-overlay-stats" style="display:none;">
               <span class="lock-icon">&#128274;</span>
               <span>未解锁</span>
             </div>
@@ -255,19 +256,18 @@
               <span>未解锁</span>
             </div>
           </div>
-          <div class="bottom-module" data-testid="bottom-stats">
+          <div class="bottom-module" data-testid="bottom-compare">
             <div class="module-header">
-              <h4>统计概览</h4>
+              <h4>元素对比</h4>
             </div>
-            <div class="module-content" id="bottom-stats-content">
-              <div class="stats-mini-grid">
-                <div class="stat-mini"><span class="stat-label">已学习</span><span class="stat-num" id="mini-learned">0</span></div>
-                <div class="stat-mini"><span class="stat-label">已收藏</span><span class="stat-num" id="mini-collected">0</span></div>
-                <div class="stat-mini"><span class="stat-label">测验分</span><span class="stat-num" id="mini-quiz">0</span></div>
-                <div class="stat-mini"><span class="stat-label">成就数</span><span class="stat-num" id="mini-achievements">0</span></div>
+            <div class="module-content" id="bottom-compare-content">
+              <div class="compare-mini-slots">
+                <div class="mini-slot empty">+</div>
+                <div class="mini-slot empty">+</div>
+                <div class="mini-slot empty">+</div>
               </div>
             </div>
-            <div class="lock-overlay" data-testid="lock-overlay-stats" style="display:none;">
+            <div class="lock-overlay" data-testid="lock-overlay-compare" style="display:none;">
               <span class="lock-icon">&#128274;</span>
               <span>未解锁</span>
             </div>
