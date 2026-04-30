@@ -2,12 +2,10 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>元素探索者 - Element Explorer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-BQIaKiID.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BeU3b0NB.css">
+  <script type="module" crossorigin src="/assets/index-XK2_R3uo.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-gDuvctT7.css">
 </head>
 <body>
   <!-- Three.js 背景画布 -->
@@ -23,10 +21,6 @@
       <button class="nav-btn active" data-section="periodic-table" data-testid="nav-home">
         <span class="nav-icon">&#9776;</span>
         <span>周期表</span>
-      </button>
-      <button class="nav-btn" data-section="compare" data-testid="nav-compare">
-        <span class="nav-icon">&#8644;</span>
-        <span>对比</span>
       </button>
       <button class="nav-btn" data-section="timeline" data-testid="nav-timeline">
         <span class="nav-icon">&#8597;</span>
@@ -53,11 +47,6 @@
         <span>故事</span>
       </button>
     </nav>
-    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="打开菜单">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
     <div class="header-right">
       <div class="header-stats">
         <span class="stat-item">
@@ -85,19 +74,6 @@
             </div>
             <div class="filters">
               <span class="filter-label">筛选:</span>
-              <select id="category-filter">
-                <option value="all">全部类别</option>
-                <option value="alkali metal">碱金属</option>
-                <option value="alkaline earth metal">碱土金属</option>
-                <option value="transition metal">过渡金属</option>
-                <option value="post-transition metal">后过渡金属</option>
-                <option value="metalloid">类金属</option>
-                <option value="reactive nonmetal">非金属</option>
-                <option value="noble gas">稀有气体</option>
-                <option value="halogen">卤素</option>
-                <option value="lanthanide">镧系</option>
-                <option value="actinide">锕系</option>
-              </select>
               <select id="period-filter">
                 <option value="all">全部周期</option>
                 <option value="1">第1周期</option>
@@ -108,11 +84,10 @@
                 <option value="6">第6周期</option>
                 <option value="7">第7周期</option>
               </select>
-              <div class="search-box">
-                <input type="text" id="element-search" placeholder="搜索元素..." />
-                <button id="search-clear">&#10005;</button>
-              </div>
-              <button id="reset-filters" class="control-btn">重置</button>
+            </div>
+            <div class="category-legend">
+              <h3>元素类别</h3>
+              <div class="legend-items"></div>
             </div>
           </div>
 
@@ -132,10 +107,6 @@
             <div id="ac-grid" class="ac-grid"></div>
           </div>
 
-          <div class="category-legend">
-            <h3>元素类别</h3>
-            <div class="legend-items"></div>
-          </div>
         </section>
 
         <!-- 对比页面 -->
@@ -240,18 +211,6 @@
 
         <!-- 底部模块 -->
         <div class="bottom-modules" id="bottom-modules">
-          <div class="bottom-module" data-testid="bottom-categories">
-            <div class="module-header">
-              <h4>类别概览</h4>
-            </div>
-            <div class="module-content" id="bottom-categories-content">
-              <div class="category-mini-grid"></div>
-            </div>
-            <div class="lock-overlay" data-testid="lock-overlay-categories" style="display:none;">
-              <span class="lock-icon">&#128274;</span>
-              <span>未解锁</span>
-            </div>
-          </div>
           <div class="bottom-module" data-testid="bottom-compare">
             <div class="module-header">
               <h4>对比预览</h4>
@@ -268,14 +227,24 @@
               <span>未解锁</span>
             </div>
           </div>
-          <div class="bottom-module" data-testid="bottom-timeline">
+          <div class="bottom-module" data-testid="bottom-categories">
             <div class="module-header">
-              <h4>发现时间线</h4>
+              <h4>类别概览</h4>
             </div>
-            <div class="module-content" id="bottom-timeline-content">
-              <div class="timeline-mini-chart"></div>
+            <div class="module-content" id="bottom-categories-content">
+              <div class="category-mini-grid"></div>
             </div>
-            <div class="lock-overlay" data-testid="lock-overlay-timeline" style="display:none;">
+            <div class="lock-overlay" data-testid="lock-overlay-categories" style="display:none;">
+              <span class="lock-icon">&#128274;</span>
+              <span>未解锁</span>
+            </div>
+          </div>
+          <div class="bottom-module" data-testid="bottom-element-stats">
+            <div class="module-header">
+              <h4>元素统计</h4>
+            </div>
+            <div class="module-content" id="bottom-element-stats-content"></div>
+            <div class="lock-overlay" data-testid="lock-overlay-element-stats" style="display:none;">
               <span class="lock-icon">&#128274;</span>
               <span>未解锁</span>
             </div>
@@ -305,7 +274,6 @@
         <div class="panel-header">
           <div class="panel-actions">
             <button id="btn-collect" title="收藏">&#9734;</button>
-            <button id="btn-compare-add" title="加入对比">+</button>
           </div>
         </div>
         <div class="panel-content">
@@ -353,6 +321,18 @@
         </div>
         <p class="setting-desc">开启高性能模式以提升动画流畅度（消耗更多电量）</p>
       </div>
+    </div>
+  </div>
+
+  <!-- 对比弹窗 -->
+  <div id="compare-modal" class="modal compare-modal" data-testid="compare-modal" aria-hidden="true" inert>
+    <div class="modal-content compare-modal-content" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title">
+      <button class="modal-close" id="compare-modal-close" type="button" aria-label="关闭对比弹窗">&times;</button>
+      <div class="compare-modal-heading">
+        <span class="compare-modal-kicker">ELEMENT COMPARE</span>
+        <h2 id="compare-modal-title">元素对比</h2>
+      </div>
+      <div id="compare-modal-content" class="compare-container compare-container-modal"></div>
     </div>
   </div>
 
