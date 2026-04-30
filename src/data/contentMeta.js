@@ -1,27 +1,27 @@
 export const ELEMENT_CATEGORY_META = {
   'alkali metal': {
     label: '碱金属',
-    tableColor: '#ff6b6b',
+    tableColor: '#ff2a6d',
     overviewColor: 'var(--alkali)'
   },
   'alkaline earth metal': {
     label: '碱土金属',
-    tableColor: '#ffa94d',
+    tableColor: '#ff7e00',
     overviewColor: 'var(--alkaline)'
   },
   'transition metal': {
     label: '过渡金属',
-    tableColor: '#ffd43b',
+    tableColor: '#ffd700',
     overviewColor: 'var(--transition)'
   },
   'post-transition metal': {
     label: '后过渡金属',
-    tableColor: '#69db7c',
+    tableColor: '#7ee787',
     overviewColor: 'var(--post-transition)'
   },
   metalloid: {
     label: '类金属',
-    tableColor: '#38d9a9',
+    tableColor: '#00f0ff',
     overviewColor: 'var(--metalloid)'
   },
   'reactive nonmetal': {
@@ -31,17 +31,17 @@ export const ELEMENT_CATEGORY_META = {
   },
   'noble gas': {
     label: '稀有气体',
-    tableColor: '#9775fa',
+    tableColor: '#b829ff',
     overviewColor: 'var(--noble)'
   },
   halogen: {
     label: '卤素',
-    tableColor: '#f06595',
+    tableColor: '#ff6b9d',
     overviewColor: 'var(--halogen)'
   },
   lanthanide: {
     label: '镧系',
-    tableColor: '#ff6b9d',
+    tableColor: '#ff44aa',
     overviewColor: 'var(--lanthanide)'
   },
   actinide: {
