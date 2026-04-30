@@ -23,6 +23,9 @@ const TOTAL_ELEMENTS = 118;
 const COMPARE_PREVIEW_LIMIT = 3;
 const RECENT_ACHIEVEMENT_LIMIT = 2;
 const ELEMENT_ATOMIC_NUMBER_MIME = 'application/x-element-atomic-number';
+const BOTTOM_PANEL_COLLAPSED_LABEL = '点击展开';
+const BOTTOM_PANEL_EXPANDED_LABEL = '点击收起';
+const BOTTOM_PANEL_TITLE_ROW_CLASS = 'bottom-modules-title-row';
 
 let allElements = [];
 let cardRefs = null;
@@ -31,6 +34,7 @@ let recentAchievementIds = [];
 
 export function initHomeModules(elements = []) {
   allElements = Array.isArray(elements) ? [...elements] : [];
+  ensureBottomPanelTitleRow();
   cardRefs = getCardRefs();
 
   if (!hasRequiredContainers(cardRefs)) {
@@ -44,8 +48,29 @@ export function initHomeModules(elements = []) {
   renderAllPreviews();
 }
 
+function ensureBottomPanelTitleRow() {
+  const root = document.getElementById('bottom-modules');
+  if (!root || root.querySelector(`.${BOTTOM_PANEL_TITLE_ROW_CLASS}`)) {
+    return;
+  }
+
+  const titleRow = document.createElement('button');
+  titleRow.className = BOTTOM_PANEL_TITLE_ROW_CLASS;
+  titleRow.type = 'button';
+  titleRow.setAttribute('aria-expanded', 'false');
+  titleRow.innerHTML = `
+    <span class="bottom-modules-kicker">学习仪表盘</span>
+    <span class="bottom-modules-hint">${BOTTOM_PANEL_COLLAPSED_LABEL}</span>
+  `;
+
+  root.prepend(titleRow);
+}
+
 function getCardRefs() {
   return {
+    modulesRoot: document.getElementById('bottom-modules'),
+    modulesToggle: document.querySelector('#bottom-modules .bottom-modules-title-row'),
+    modulesHint: document.querySelector('#bottom-modules .bottom-modules-hint'),
     categoriesCard: document.querySelector('[data-testid="bottom-categories"]'),
     compareCard: document.querySelector('[data-testid="bottom-compare"]'),
     elementStatsCard: document.querySelector('[data-testid="bottom-element-stats"]'),
@@ -90,12 +115,62 @@ function enhanceCards() {
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
   });
+
+  setBottomPanelCollapsed(true);
 }
 
 function bindCardEvents() {
+  bindBottomPanelToggle();
   bindCardAction(cardRefs.compareCard, openCompareModal);
   bindCardAction(cardRefs.statsCard, () => navigateTo('progress'));
   bindCompareDropTarget();
+}
+
+function bindBottomPanelToggle() {
+  const toggle = cardRefs.modulesToggle;
+  if (!toggle || toggle.dataset.bottomPanelToggleBound === 'true') {
+    return;
+  }
+
+  toggle.addEventListener('click', () => {
+    const isCollapsed = cardRefs.modulesRoot?.dataset.collapsed !== 'false';
+    setBottomPanelCollapsed(!isCollapsed);
+  });
+
+  toggle.dataset.bottomPanelToggleBound = 'true';
+}
+
+function setBottomPanelCollapsed(isCollapsed) {
+  const root = cardRefs?.modulesRoot;
+  const toggle = cardRefs?.modulesToggle;
+  const hint = cardRefs?.modulesHint;
+
+  if (!root || !toggle) {
+    return;
+  }
+
+  root.classList.toggle('is-collapsed', isCollapsed);
+  root.classList.toggle('is-expanded', !isCollapsed);
+  root.dataset.collapsed = String(isCollapsed);
+  toggle.setAttribute('aria-expanded', String(!isCollapsed));
+  toggle.setAttribute('aria-label', isCollapsed ? '展开面板' : '收起面板');
+
+  if (hint) {
+    hint.textContent = isCollapsed ? BOTTOM_PANEL_COLLAPSED_LABEL : BOTTOM_PANEL_EXPANDED_LABEL;
+  }
+
+  [cardRefs.compareCard, cardRefs.categoriesCard, cardRefs.elementStatsCard, cardRefs.statsCard].forEach((card) => {
+    if (!card) {
+      return;
+    }
+
+    card.setAttribute('aria-hidden', String(isCollapsed));
+    card.inert = isCollapsed;
+
+    if (card.classList.contains('bottom-module-interactive')) {
+      card.tabIndex = isCollapsed ? -1 : 0;
+    }
+  });
 }
 
 function bindCardAction(card, action) {
@@ -195,12 +270,13 @@ function renderCategoryRow(item) {
 function renderComparePreview() {
   const compareList = getCompareList().slice(0, COMPARE_PREVIEW_LIMIT);
   const emptySlots = Math.max(0, COMPARE_PREVIEW_LIMIT - compareList.length);
+  const compareSlotStatus = `${compareList.length}/${COMPARE_PREVIEW_LIMIT}`;
 
   cardRefs.compareContent.innerHTML = `
     <div class="preview-card-shell preview-compare-shell">
       <div class="preview-card-topline">
         <h4>元素对比</h4>
-        <button class="preview-metric module-link" type="button" data-action="open-compare">对比</button>
+        <span class="preview-metric compare-preview-status" aria-label="对比槽位 ${compareSlotStatus}">${compareSlotStatus}</span>
       </div>
       <div class="compare-preview-grid">
         ${compareList.map((element, index) => renderComparePreviewElement(element, index)).join('')}
@@ -211,13 +287,20 @@ function renderComparePreview() {
           </div>
         `).join('')}
       </div>
-      <p class="preview-caption">${compareList.length > 0 ? '已加入的元素会在这里实时刷新。' : '拖入元素，或选中元素后点空槽加入对比。'}</p>
+      <div class="compare-preview-footer">
+        <p class="preview-caption">${compareList.length > 0 ? '已加入的元素会在这里实时刷新。' : '拖入元素，或选中元素后点空槽加入对比。'}</p>
+        <button class="module-link compare-preview-action" type="button" data-action="open-compare">对比</button>
+      </div>
     </div>
   `;
 
-  cardRefs.compareContent.querySelector('[data-action="open-compare"]')?.addEventListener('click', (event) => {
+  const compareAction = cardRefs.compareContent.querySelector('[data-action="open-compare"]');
+  compareAction?.addEventListener('click', (event) => {
     event.stopPropagation();
     openCompareModal();
+  });
+  compareAction?.addEventListener('keydown', (event) => {
+    event.stopPropagation();
   });
 
   bindCompareEmptySlots();

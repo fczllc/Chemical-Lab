@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   gap: 4px;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* 类别颜色变量映射 */
@@ -54,6 +55,24 @@
     inset 0 0 30px rgba(var(--cat-color-rgb, 120, 144, 168), 0.25),
     /* 内发光 3: 极细的边缘白色高亮 */
     inset 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+#periodic-grid .element-cell {
+  --main-cell-x-scale: 1.18;
+  transform: scaleX(var(--main-cell-x-scale));
+  transform-origin: center;
+}
+
+#periodic-grid .element-cell:hover {
+  transform: translateY(-3px) scaleX(var(--main-cell-x-scale)) scale(1.05);
+}
+
+#periodic-grid .element-cell.selected {
+  transform: scaleX(var(--main-cell-x-scale)) scale(1.08);
+}
+
+#periodic-grid .element-cell.filtered-out {
+  transform: scaleX(var(--main-cell-x-scale)) scale(0.95);
 }
 
 .element-cell::before {
@@ -191,7 +210,8 @@
   grid-template-columns: 60px minmax(0, 1fr);
   grid-template-rows: auto auto auto;
   gap: 4px;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 #periodic-grid {
