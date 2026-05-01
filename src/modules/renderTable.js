@@ -210,7 +210,7 @@ export function scrollElementIntoView(atomicNumber, options = {}) {
 
   target.scrollIntoView({
     behavior: options.behavior || 'smooth',
-    block: options.block || 'center',
+    block: options.block || 'nearest',
     inline: options.inline || 'center'
   });
 
@@ -248,17 +248,26 @@ function populateDetailPanel(element) {
     const categoryLabel = ELEMENT_CATEGORY_LABELS[element.category] || '未知';
     const rarityLabel = rarityNames[element.rarity] || element.rarity || '未知';
     const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
+    const phonetic = element.phonetic ? ` <span class="phonetic">${element.phonetic}</span>` : '';
 
     hero.style.setProperty('--element-accent', accentColor);
     hero.style.setProperty('--element-accent-rgb', hexToRgb(accentColor));
     hero.innerHTML = `
-      <div class="element-hero-top">
+      <span class="atomic-side atomic-side-number">
+        <span class="atomic-label">原子序数</span>
         <span class="atomic-number">${element.atomicNumber}</span>
+      </span>
+      <span class="atomic-side atomic-side-mass">
+        <span class="atomic-label">原子质量</span>
         <span class="atomic-mass">${element.atomicMass}</span>
+      </span>
+      <div class="element-title-row">
+        <div class="symbol" style="color: ${categoryColors[element.category] || accentColor}">${element.symbol}</div>
+        <div class="chinese-name">${element.chineseName}</div>
       </div>
-      <span class="symbol" style="color: ${categoryColors[element.category] || accentColor}">${element.symbol}</span>
-      <span class="chinese-name">${element.chineseName}</span>
-      <span class="english-name">${element.englishName}</span>
+      <div class="element-hero-top">
+        <span class="english-name">${element.englishName}${phonetic}</span>
+      </div>
       <div class="element-badges">
         <span class="element-badge" style="--badge-color: ${categoryColors[element.category] || '#64748b'}; --badge-color-rgb: ${hexToRgb(categoryColors[element.category] || '#64748b')}">${categoryLabel}</span>
         <span class="element-badge" style="--badge-color: ${accentColor}; --badge-color-rgb: ${hexToRgb(accentColor)}">${rarityLabel}</span>
@@ -269,26 +278,15 @@ function populateDetailPanel(element) {
 
   const props = document.querySelector('.element-properties');
   if (props) {
-    const categoryLabel = ELEMENT_CATEGORY_LABELS[element.category] || '未知';
-    const rarityLabel = rarityNames[element.rarity] || element.rarity || '未知';
-    const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
     const applications = Array.isArray(element.applications) && element.applications.length > 0
       ? `<ul class="property-list">${element.applications.map((item) => `<li>${item}</li>`).join('')}</ul>`
       : '<span class="property-muted">暂无记录</span>';
 
     props.innerHTML = `
-      ${renderPropertyRow('ⓘ', '原子序数', `${element.atomicNumber}`)}
-      ${renderPropertyRow('⚛', '符号', element.symbol)}
-      ${renderPropertyRow('汉', '中文名', element.chineseName)}
-      ${renderPropertyRow('EN', '英文名', element.englishName)}
-      ${renderPropertyRow('⚖', '原子质量', element.atomicMass)}
-      ${renderPropertyRow('☄', '类别', `<span class="inline-badge" style="--badge-color: ${categoryColors[element.category] || '#64748b'}">${categoryLabel}</span>`)}
-      ${renderPropertyRow('✦', '稀有度', `<span class="inline-badge" style="--badge-color: ${element.color || '#38bdf8'}">${rarityLabel}</span>`)}
-      ${renderPropertyRow('❄', '电子排布', element.electronConfiguration || '未知')}
-      ${renderPropertyRow('★', '发现者', element.discoveredBy || '未知')}
-      ${renderPropertyRow('⌛', '发现年份', `${element.discoveryYear ?? '未知'}`)}
-      ${renderPropertyRow('⚠', '安全性', `<span class="inline-badge inline-badge-safety" style="--badge-color: ${safety.color}">${safety.label}</span>`)}
-      ${renderPropertyRow('✎', '常见用途', applications, true)}
+      ${renderPropertyRow('发现年份', `${element.discoveryYear ?? '未知'}`)}
+      ${renderPropertyRow('电子排布', element.electronConfiguration || '未知')}
+      ${renderPropertyRow('发现者', element.discoveredBy || '未知')}
+      ${renderPropertyListRow('常见用途', applications)}
     `;
   }
 
@@ -309,11 +307,20 @@ function populateDetailPanel(element) {
   }
 }
 
-function renderPropertyRow(icon, label, valueHtml, stacked = false) {
+function renderPropertyRow(label, valueHtml) {
   return `
-    <div class="property-row${stacked ? ' property-row-stacked' : ''}">
-      <span class="property-label"><span class="icon">${icon}</span>${label}</span>
-      <span class="property-value${stacked ? ' property-value-rich' : ''}">${valueHtml}</span>
+    <div class="property-row">
+      <span class="property-label">${label}</span>
+      <span class="property-value">${valueHtml}</span>
+    </div>
+  `;
+}
+
+function renderPropertyListRow(label, valueHtml) {
+  return `
+    <div class="property-row property-row-stacked">
+      <span class="property-label">${label}</span>
+      <span class="property-value property-value-rich">${valueHtml}</span>
     </div>
   `;
 }
