@@ -1,0 +1,1656 @@
+{
+  "elements": [
+    {
+      "atomicNumber": 1,
+      "symbol": "H",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/001-h-discovery.webp",
+        "altZh": "氢（H）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/001-h-specimen.webp",
+        "altZh": "氢（H）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 2,
+      "symbol": "He",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/002-he-discovery.webp",
+        "altZh": "氦（He）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/002-he-specimen.webp",
+        "altZh": "氦（He）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 3,
+      "symbol": "Li",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/003-li-discovery.webp",
+        "altZh": "锂（Li）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/003-li-specimen.webp",
+        "altZh": "锂（Li）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 4,
+      "symbol": "Be",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/004-be-discovery.webp",
+        "altZh": "铍（Be）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/004-be-specimen.webp",
+        "altZh": "铍（Be）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 5,
+      "symbol": "B",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/005-b-discovery.webp",
+        "altZh": "硼（B）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/005-b-specimen.webp",
+        "altZh": "硼（B）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 6,
+      "symbol": "C",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/006-c-discovery.webp",
+        "altZh": "碳（C）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/006-c-specimen.webp",
+        "altZh": "碳（C）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 7,
+      "symbol": "N",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/007-n-discovery.webp",
+        "altZh": "氮（N）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/007-n-specimen.webp",
+        "altZh": "氮（N）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 8,
+      "symbol": "O",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/008-o-discovery.webp",
+        "altZh": "氧（O）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/008-o-specimen.webp",
+        "altZh": "氧（O）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 9,
+      "symbol": "F",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/009-f-discovery.webp",
+        "altZh": "氟（F）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/009-f-specimen.webp",
+        "altZh": "氟（F）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 10,
+      "symbol": "Ne",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/010-ne-discovery.webp",
+        "altZh": "氖（Ne）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/010-ne-specimen.webp",
+        "altZh": "氖（Ne）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 11,
+      "symbol": "Na",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/011-na-discovery.webp",
+        "altZh": "钠（Na）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/011-na-specimen.webp",
+        "altZh": "钠（Na）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 12,
+      "symbol": "Mg",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/012-mg-discovery.webp",
+        "altZh": "镁（Mg）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/012-mg-specimen.webp",
+        "altZh": "镁（Mg）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 13,
+      "symbol": "Al",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/013-al-discovery.webp",
+        "altZh": "铝（Al）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/013-al-specimen.webp",
+        "altZh": "铝（Al）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 14,
+      "symbol": "Si",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/014-si-discovery.webp",
+        "altZh": "硅（Si）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/014-si-specimen.webp",
+        "altZh": "硅（Si）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 15,
+      "symbol": "P",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/015-p-discovery.webp",
+        "altZh": "磷（P）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/015-p-specimen.webp",
+        "altZh": "磷（P）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 16,
+      "symbol": "S",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/016-s-discovery.webp",
+        "altZh": "硫（S）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/016-s-specimen.webp",
+        "altZh": "硫（S）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 17,
+      "symbol": "Cl",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/017-cl-discovery.webp",
+        "altZh": "氯（Cl）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/017-cl-specimen.webp",
+        "altZh": "氯（Cl）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 18,
+      "symbol": "Ar",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/018-ar-discovery.webp",
+        "altZh": "氩（Ar）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/018-ar-specimen.webp",
+        "altZh": "氩（Ar）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 19,
+      "symbol": "K",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/019-k-discovery.webp",
+        "altZh": "钾（K）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/019-k-specimen.webp",
+        "altZh": "钾（K）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 20,
+      "symbol": "Ca",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/020-ca-discovery.webp",
+        "altZh": "钙（Ca）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/020-ca-specimen.webp",
+        "altZh": "钙（Ca）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 21,
+      "symbol": "Sc",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/021-sc-discovery.webp",
+        "altZh": "钪（Sc）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/021-sc-specimen.webp",
+        "altZh": "钪（Sc）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 22,
+      "symbol": "Ti",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/022-ti-discovery.webp",
+        "altZh": "钛（Ti）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/022-ti-specimen.webp",
+        "altZh": "钛（Ti）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 23,
+      "symbol": "V",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/023-v-discovery.webp",
+        "altZh": "钒（V）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/023-v-specimen.webp",
+        "altZh": "钒（V）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 24,
+      "symbol": "Cr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/024-cr-discovery.webp",
+        "altZh": "铬（Cr）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/024-cr-specimen.webp",
+        "altZh": "铬（Cr）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 25,
+      "symbol": "Mn",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/025-mn-discovery.webp",
+        "altZh": "锰（Mn）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/025-mn-specimen.webp",
+        "altZh": "锰（Mn）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 26,
+      "symbol": "Fe",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/026-fe-discovery.webp",
+        "altZh": "铁（Fe）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/026-fe-specimen.webp",
+        "altZh": "铁（Fe）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 27,
+      "symbol": "Co",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/027-co-discovery.webp",
+        "altZh": "钴（Co）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/027-co-specimen.webp",
+        "altZh": "钴（Co）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 28,
+      "symbol": "Ni",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/028-ni-discovery.webp",
+        "altZh": "镍（Ni）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/028-ni-specimen.webp",
+        "altZh": "镍（Ni）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 29,
+      "symbol": "Cu",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/029-cu-discovery.webp",
+        "altZh": "铜（Cu）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/029-cu-specimen.webp",
+        "altZh": "铜（Cu）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 30,
+      "symbol": "Zn",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/030-zn-discovery.webp",
+        "altZh": "锌（Zn）的发现故事科普示意图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/030-zn-specimen.webp",
+        "altZh": "锌（Zn）的安全样品科普示意图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 31,
+      "symbol": "Ga",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/031-ga-discovery.webp",
+        "altZh": "镓的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/031-ga-specimen.webp",
+        "altZh": "镓的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 32,
+      "symbol": "Ge",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/032-ge-discovery.webp",
+        "altZh": "锗的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/032-ge-specimen.webp",
+        "altZh": "锗的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 33,
+      "symbol": "As",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/033-as-discovery.webp",
+        "altZh": "砷的古代认识故事插图，画面展示历史器物和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/033-as-specimen.webp",
+        "altZh": "砷的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 34,
+      "symbol": "Se",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/034-se-discovery.webp",
+        "altZh": "硒的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/034-se-specimen.webp",
+        "altZh": "硒的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 35,
+      "symbol": "Br",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/035-br-discovery.webp",
+        "altZh": "溴的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/035-br-specimen.webp",
+        "altZh": "溴的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 36,
+      "symbol": "Kr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/036-kr-discovery.webp",
+        "altZh": "氪的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/036-kr-specimen.webp",
+        "altZh": "氪的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 37,
+      "symbol": "Rb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/037-rb-discovery.webp",
+        "altZh": "铷的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/037-rb-specimen.webp",
+        "altZh": "铷的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 38,
+      "symbol": "Sr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/038-sr-discovery.webp",
+        "altZh": "锶的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/038-sr-specimen.webp",
+        "altZh": "锶的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 39,
+      "symbol": "Y",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/039-y-discovery.webp",
+        "altZh": "钇的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/039-y-specimen.webp",
+        "altZh": "钇的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 40,
+      "symbol": "Zr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/040-zr-discovery.webp",
+        "altZh": "锆的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/040-zr-specimen.webp",
+        "altZh": "锆的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 41,
+      "symbol": "Nb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/041-nb-discovery.webp",
+        "altZh": "铌的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/041-nb-specimen.webp",
+        "altZh": "铌的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 42,
+      "symbol": "Mo",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/042-mo-discovery.webp",
+        "altZh": "钼的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/042-mo-specimen.webp",
+        "altZh": "钼的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 43,
+      "symbol": "Tc",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/043-tc-discovery.webp",
+        "altZh": "锝的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/043-tc-specimen.webp",
+        "altZh": "锝的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 44,
+      "symbol": "Ru",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/044-ru-discovery.webp",
+        "altZh": "钌的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/044-ru-specimen.webp",
+        "altZh": "钌的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 45,
+      "symbol": "Rh",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/045-rh-discovery.webp",
+        "altZh": "铑的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/045-rh-specimen.webp",
+        "altZh": "铑的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 46,
+      "symbol": "Pd",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/046-pd-discovery.webp",
+        "altZh": "钯的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/046-pd-specimen.webp",
+        "altZh": "钯的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 47,
+      "symbol": "Ag",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/047-ag-discovery.webp",
+        "altZh": "银的古代认识故事插图，画面展示历史器物和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/047-ag-specimen.webp",
+        "altZh": "银的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 48,
+      "symbol": "Cd",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/048-cd-discovery.webp",
+        "altZh": "镉的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/048-cd-specimen.webp",
+        "altZh": "镉的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 49,
+      "symbol": "In",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/049-in-discovery.webp",
+        "altZh": "铟的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/049-in-specimen.webp",
+        "altZh": "铟的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 50,
+      "symbol": "Sn",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/050-sn-discovery.webp",
+        "altZh": "锡的古代认识故事插图，画面展示历史器物和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/050-sn-specimen.webp",
+        "altZh": "锡的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 51,
+      "symbol": "Sb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/051-sb-discovery.webp",
+        "altZh": "锑的古代认识故事插图，画面展示历史器物和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/051-sb-specimen.webp",
+        "altZh": "锑的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 52,
+      "symbol": "Te",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/052-te-discovery.webp",
+        "altZh": "碲的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/052-te-specimen.webp",
+        "altZh": "碲的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 53,
+      "symbol": "I",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/053-i-discovery.webp",
+        "altZh": "碘的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": "gw.geneanet.org"
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/053-i-specimen.webp",
+        "altZh": "碘的密封安全样品插图，画面强调不可直接接触",
+        "source": "wikidoc.org"
+      }
+    },
+    {
+      "atomicNumber": 54,
+      "symbol": "Xe",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/054-xe-discovery.webp",
+        "altZh": "氙的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/054-xe-specimen.webp",
+        "altZh": "氙的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 55,
+      "symbol": "Cs",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/055-cs-discovery.webp",
+        "altZh": "铯的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/055-cs-specimen.webp",
+        "altZh": "铯的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 56,
+      "symbol": "Ba",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/056-ba-discovery.webp",
+        "altZh": "钡的发现故事仪器插图，画面展示安全的实验设备和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/056-ba-specimen.webp",
+        "altZh": "钡的密封安全样品插图，画面强调不可直接接触",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 57,
+      "symbol": "La",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/057-la-discovery.webp",
+        "altZh": "镧的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/057-la-specimen.webp",
+        "altZh": "镧的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 58,
+      "symbol": "Ce",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/058-ce-discovery.webp",
+        "altZh": "铈的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/058-ce-specimen.webp",
+        "altZh": "铈的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 59,
+      "symbol": "Pr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/059-pr-discovery.webp",
+        "altZh": "镨的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/059-pr-specimen.webp",
+        "altZh": "镨的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 60,
+      "symbol": "Nd",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/060-nd-discovery.webp",
+        "altZh": "钕的发现故事插图，画面展示矿物研究或实验桌和元素符号",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/060-nd-specimen.webp",
+        "altZh": "钕的安全材料样品插图，画面展示抽象化元素实物",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 61,
+      "symbol": "Pm",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/061-pm-discovery.webp",
+        "altZh": "钷（Pm）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/061-pm-specimen.webp",
+        "altZh": "钷（Pm）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 62,
+      "symbol": "Sm",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/062-sm-discovery.webp",
+        "altZh": "钐（Sm）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/062-sm-specimen.webp",
+        "altZh": "钐（Sm）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 63,
+      "symbol": "Eu",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/063-eu-discovery.webp",
+        "altZh": "铕（Eu）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/063-eu-specimen.webp",
+        "altZh": "铕（Eu）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 64,
+      "symbol": "Gd",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/064-gd-discovery.webp",
+        "altZh": "钆（Gd）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/064-gd-specimen.webp",
+        "altZh": "钆（Gd）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 65,
+      "symbol": "Tb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/065-tb-discovery.webp",
+        "altZh": "铽（Tb）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/065-tb-specimen.webp",
+        "altZh": "铽（Tb）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 66,
+      "symbol": "Dy",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/066-dy-discovery.webp",
+        "altZh": "镝（Dy）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/066-dy-specimen.webp",
+        "altZh": "镝（Dy）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 67,
+      "symbol": "Ho",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/067-ho-discovery.webp",
+        "altZh": "钬（Ho）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/067-ho-specimen.webp",
+        "altZh": "钬（Ho）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 68,
+      "symbol": "Er",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/068-er-discovery.webp",
+        "altZh": "铒（Er）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/068-er-specimen.webp",
+        "altZh": "铒（Er）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 69,
+      "symbol": "Tm",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/069-tm-discovery.webp",
+        "altZh": "铥（Tm）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/069-tm-specimen.webp",
+        "altZh": "铥（Tm）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 70,
+      "symbol": "Yb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/070-yb-discovery.webp",
+        "altZh": "镱（Yb）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/070-yb-specimen.webp",
+        "altZh": "镱（Yb）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 71,
+      "symbol": "Lu",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/071-lu-discovery.webp",
+        "altZh": "镥（Lu）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/071-lu-specimen.webp",
+        "altZh": "镥（Lu）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 72,
+      "symbol": "Hf",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/072-hf-discovery.webp",
+        "altZh": "铪（Hf）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/072-hf-specimen.webp",
+        "altZh": "铪（Hf）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 73,
+      "symbol": "Ta",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/073-ta-discovery.webp",
+        "altZh": "钽（Ta）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/073-ta-specimen.webp",
+        "altZh": "钽（Ta）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 74,
+      "symbol": "W",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/074-w-discovery.webp",
+        "altZh": "钨（W）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/074-w-specimen.webp",
+        "altZh": "钨（W）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 75,
+      "symbol": "Re",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/075-re-discovery.webp",
+        "altZh": "铼（Re）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/075-re-specimen.webp",
+        "altZh": "铼（Re）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 76,
+      "symbol": "Os",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/076-os-discovery.webp",
+        "altZh": "锇（Os）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/076-os-specimen.webp",
+        "altZh": "锇（Os）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 77,
+      "symbol": "Ir",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/077-ir-discovery.webp",
+        "altZh": "铱（Ir）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/077-ir-specimen.webp",
+        "altZh": "铱（Ir）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 78,
+      "symbol": "Pt",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/078-pt-discovery.webp",
+        "altZh": "铂（Pt）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/078-pt-specimen.webp",
+        "altZh": "铂（Pt）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 79,
+      "symbol": "Au",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/079-au-discovery.webp",
+        "altZh": "金（Au）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/079-au-specimen.webp",
+        "altZh": "金（Au）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 80,
+      "symbol": "Hg",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/080-hg-discovery.webp",
+        "altZh": "汞（Hg）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/080-hg-specimen.webp",
+        "altZh": "汞（Hg）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 81,
+      "symbol": "Tl",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/081-tl-discovery.webp",
+        "altZh": "铊（Tl）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/081-tl-specimen.webp",
+        "altZh": "铊（Tl）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 82,
+      "symbol": "Pb",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/082-pb-discovery.webp",
+        "altZh": "铅（Pb）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/082-pb-specimen.webp",
+        "altZh": "铅（Pb）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 83,
+      "symbol": "Bi",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/083-bi-discovery.webp",
+        "altZh": "铋（Bi）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/083-bi-specimen.webp",
+        "altZh": "铋（Bi）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 84,
+      "symbol": "Po",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/084-po-discovery.webp",
+        "altZh": "钋（Po）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/084-po-specimen.webp",
+        "altZh": "钋（Po）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 85,
+      "symbol": "At",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/085-at-discovery.webp",
+        "altZh": "砹（At）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/085-at-specimen.webp",
+        "altZh": "砹（At）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 86,
+      "symbol": "Rn",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/086-rn-discovery.webp",
+        "altZh": "氡（Rn）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/086-rn-specimen.webp",
+        "altZh": "氡（Rn）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 87,
+      "symbol": "Fr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/087-fr-discovery.webp",
+        "altZh": "钫（Fr）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/087-fr-specimen.webp",
+        "altZh": "钫（Fr）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 88,
+      "symbol": "Ra",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/088-ra-discovery.webp",
+        "altZh": "镭（Ra）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/088-ra-specimen.webp",
+        "altZh": "镭（Ra）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 89,
+      "symbol": "Ac",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/089-ac-discovery.webp",
+        "altZh": "锕（Ac）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/089-ac-specimen.webp",
+        "altZh": "锕（Ac）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 90,
+      "symbol": "Th",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/090-th-discovery.webp",
+        "altZh": "钍（Th）的发现故事教育插图",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/090-th-specimen.webp",
+        "altZh": "钍（Th）的安全观察教育插图",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 91,
+      "symbol": "Pa",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/091-pa-discovery.webp",
+        "altZh": "镤发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/091-pa-specimen.webp",
+        "altZh": "镤安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 92,
+      "symbol": "U",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/092-u-discovery.webp",
+        "altZh": "铀发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/092-u-specimen.webp",
+        "altZh": "铀安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 93,
+      "symbol": "Np",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/093-np-discovery.webp",
+        "altZh": "镎发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/093-np-specimen.webp",
+        "altZh": "镎安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 94,
+      "symbol": "Pu",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/094-pu-discovery.webp",
+        "altZh": "钚发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/094-pu-specimen.webp",
+        "altZh": "钚安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 95,
+      "symbol": "Am",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/095-am-discovery.webp",
+        "altZh": "镅发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/095-am-specimen.webp",
+        "altZh": "镅安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 96,
+      "symbol": "Cm",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/096-cm-discovery.webp",
+        "altZh": "锔发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/096-cm-specimen.webp",
+        "altZh": "锔安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 97,
+      "symbol": "Bk",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/097-bk-discovery.webp",
+        "altZh": "锫发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/097-bk-specimen.webp",
+        "altZh": "锫安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 98,
+      "symbol": "Cf",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/098-cf-discovery.webp",
+        "altZh": "锎发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/098-cf-specimen.webp",
+        "altZh": "锎安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 99,
+      "symbol": "Es",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/099-es-discovery.webp",
+        "altZh": "锿发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/099-es-specimen.webp",
+        "altZh": "锿安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 100,
+      "symbol": "Fm",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/100-fm-discovery.webp",
+        "altZh": "镄发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/100-fm-specimen.webp",
+        "altZh": "镄安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 101,
+      "symbol": "Md",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/101-md-discovery.webp",
+        "altZh": "钔发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/101-md-specimen.webp",
+        "altZh": "钔安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 102,
+      "symbol": "No",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/102-no-discovery.webp",
+        "altZh": "锘发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/102-no-specimen.webp",
+        "altZh": "锘安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 103,
+      "symbol": "Lr",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/103-lr-discovery.webp",
+        "altZh": "铹发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/103-lr-specimen.webp",
+        "altZh": "铹安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 104,
+      "symbol": "Rf",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/104-rf-discovery.webp",
+        "altZh": "𬬻发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/104-rf-specimen.webp",
+        "altZh": "𬬻安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 105,
+      "symbol": "Db",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/105-db-discovery.webp",
+        "altZh": "𬭊发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/105-db-specimen.webp",
+        "altZh": "𬭊安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 106,
+      "symbol": "Sg",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/106-sg-discovery.webp",
+        "altZh": "𬭳发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/106-sg-specimen.webp",
+        "altZh": "𬭳安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 107,
+      "symbol": "Bh",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/107-bh-discovery.webp",
+        "altZh": "𬭛发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/107-bh-specimen.webp",
+        "altZh": "𬭛安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 108,
+      "symbol": "Hs",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/108-hs-discovery.webp",
+        "altZh": "𬭶发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/108-hs-specimen.webp",
+        "altZh": "𬭶安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 109,
+      "symbol": "Mt",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/109-mt-discovery.webp",
+        "altZh": "鿏发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/109-mt-specimen.webp",
+        "altZh": "鿏安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 110,
+      "symbol": "Ds",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/110-ds-discovery.webp",
+        "altZh": "𫟼发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/110-ds-specimen.webp",
+        "altZh": "𫟼安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 111,
+      "symbol": "Rg",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/111-rg-discovery.webp",
+        "altZh": "𬬭发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/111-rg-specimen.webp",
+        "altZh": "𬬭安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 112,
+      "symbol": "Cn",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/112-cn-discovery.webp",
+        "altZh": "鿔发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/112-cn-specimen.webp",
+        "altZh": "鿔安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 113,
+      "symbol": "Nh",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/113-nh-discovery.webp",
+        "altZh": "鿭发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/113-nh-specimen.webp",
+        "altZh": "鿭安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 114,
+      "symbol": "Fl",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/114-fl-discovery.webp",
+        "altZh": "𫓧发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/114-fl-specimen.webp",
+        "altZh": "𫓧安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 115,
+      "symbol": "Mc",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/115-mc-discovery.webp",
+        "altZh": "镆发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/115-mc-specimen.webp",
+        "altZh": "镆安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 116,
+      "symbol": "Lv",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/116-lv-discovery.webp",
+        "altZh": "𫟷发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/116-lv-specimen.webp",
+        "altZh": "𫟷安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 117,
+      "symbol": "Ts",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/117-ts-discovery.webp",
+        "altZh": "鿬发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/117-ts-specimen.webp",
+        "altZh": "鿬安全样品或探测信号插画",
+        "source": ""
+      }
+    },
+    {
+      "atomicNumber": 118,
+      "symbol": "Og",
+      "discoveryImage": {
+        "src": "/assets/elements/discovery/118-og-discovery.webp",
+        "altZh": "鿫发现故事的安全实验仪器插画",
+        "source": ""
+      },
+      "specimenImage": {
+        "src": "/assets/elements/specimens/118-og-specimen.webp",
+        "altZh": "鿫安全样品或探测信号插画",
+        "source": ""
+      }
+    }
+  ]
+}

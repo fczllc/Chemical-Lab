@@ -5,6 +5,17 @@ import quizDataset from './quizData.json' with { type: 'json' };
 import learningPathData from './learningPath.json' with { type: 'json' };
 import reactionsData from './reactions.json' with { type: 'json' };
 import spectralLinesDataset from './spectralLines.json' with { type: 'json' };
+import storyMediaData from './storyMedia/media.json' with { type: 'json' };
+
+// Stable element-level shape for UI consumers
+export const storyMedia = storyMediaData.elements.map((el) => ({
+  atomicNumber: el.atomicNumber,
+  symbol: el.symbol,
+  discoveryMedia: el.discoveryImage,
+  specimenMedia: el.specimenImage
+}));
+
+export const storyMediaByAtomicNumber = new Map(storyMedia.map((record) => [record.atomicNumber, record]));
 
 export const {
   allowedCategories,
