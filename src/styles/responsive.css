@@ -142,6 +142,10 @@
     grid-template-columns: 1fr;
   }
 
+  .story-orbital-badge {
+    min-height: 128px;
+  }
+
   .quiz-result-hero {
     grid-template-columns: 1fr;
   }
@@ -152,6 +156,54 @@
 
   .lab-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* 手机端 (767px 以下) */
+@media (max-width: 767px) {
+  .story-shell {
+    padding: 16px;
+  }
+
+  .story-hero,
+  .story-media-grid,
+  .story-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-hero {
+    gap: 16px;
+  }
+
+  .story-orbital-badge {
+    min-height: 120px;
+  }
+
+  .story-symbol {
+    font-size: 3.2rem;
+  }
+
+  .story-media-topline,
+  .story-transcript-header,
+  .story-nav-row {
+    align-items: flex-start;
+  }
+
+  .story-media-topline,
+  .story-transcript-header {
+    flex-direction: column;
+  }
+
+  .story-media-badge {
+    max-width: 100%;
+  }
+
+  .story-nav-row {
+    flex-wrap: wrap;
+  }
+
+  .story-nav-row .hud-action-btn {
+    flex: 1 1 132px;
   }
 }
 
