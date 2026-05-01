@@ -5,6 +5,9 @@
   gap: 4px;
   width: 100%;
   max-width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
 }
 
 /* 类别颜色变量映射 */
@@ -22,7 +25,7 @@
 
 /* 元素卡片 - 霓虹光谱风格（参考效果图实现） */
 .element-cell {
-  aspect-ratio: 1;
+  aspect-ratio: 1.02/1;
   min-width: 0;
   /* 背景：中心径向渐变 + 半透明底色 */
   background: radial-gradient(circle at center,
@@ -44,9 +47,9 @@
   /* 多层内外阴影叠加 - 增强发光 */
   box-shadow:
     /* 外发光 1: 近层 */
-    0 0 8px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
+    0 0 2px rgba(var(--cat-color-rgb, 120, 144, 168), 0.6),
     /* 外发光 2: 中层 */
-    0 0 16px rgba(var(--cat-color-rgb, 120, 144, 168), 0.4),
+    0 0 6px rgba(var(--cat-color-rgb, 120, 144, 168), 0.4),
     /* 外发光 3: 远层 */
     0 0 32px rgba(var(--cat-color-rgb, 120, 144, 168), 0.2),
     /* 内发光 1: 紧贴边框的强光层 */
@@ -58,13 +61,13 @@
 }
 
 #periodic-grid .element-cell {
-  --main-cell-x-scale: 1.18;
+  --main-cell-x-scale: 1.0;
   transform: scaleX(var(--main-cell-x-scale));
   transform-origin: center;
 }
 
 #periodic-grid .element-cell:hover {
-  transform: translateY(-3px) scaleX(var(--main-cell-x-scale)) scale(1.05);
+  transform: scaleX(var(--main-cell-x-scale)) scale(1.05);
 }
 
 #periodic-grid .element-cell.selected {
@@ -85,23 +88,23 @@
 }
 
 .element-cell:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: scale(1.05);
   z-index: 10;
   border-color: rgba(var(--cat-color-rgb), 1);
   box-shadow:
     /* 外发光增强 */
-    0 0 24px rgba(var(--cat-color-rgb), 0.8),
-    0 0 48px rgba(var(--cat-color-rgb), 0.5),
-    0 0 72px rgba(var(--cat-color-rgb), 0.3),
+    0 0 12px rgba(var(--cat-color-rgb), 0.4),
+    0 0 24px rgba(var(--cat-color-rgb), 0.25),
+    0 0 36px rgba(var(--cat-color-rgb), 0.15),
     /* 内发光增强 */
-    inset 0 0 20px rgba(var(--cat-color-rgb), 0.8),
-    inset 0 0 50px rgba(var(--cat-color-rgb), 0.4),
-    inset 0 0 6px rgba(255, 255, 255, 0.7);
+    inset 0 0 10px rgba(var(--cat-color-rgb), 0.4),
+    inset 0 0 25px rgba(var(--cat-color-rgb), 0.2),
+    inset 0 0 3px rgba(255, 255, 255, 0.35);
 }
 
 /* 元素卡片内容 - 霓虹发光文字 */
 .element-cell .atomic-num {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   color: #ffffff;
   font-family: var(--font-display);
   position: absolute;
@@ -143,7 +146,7 @@
 }
 
 .element-cell .atomic-mass {
-  font-size: 0.55rem;
+  font-size: 0.8rem;
   color: #ffffff;
   font-family: var(--font-display);
   margin-top: 1px;
@@ -159,12 +162,11 @@
   border-color: var(--neon-cyan);
   box-shadow: 
     0 0 0 1px var(--neon-cyan),
-    0 0 24px rgba(0, 240, 255, 0.6),
-    0 0 48px rgba(0, 240, 255, 0.35),
-    0 0 72px rgba(0, 240, 255, 0.2),
-    0 0 96px rgba(0, 240, 255, 0.1),
+    0 0 12px rgba(0, 240, 255, 0.6),
+    0 0 24px rgba(0, 240, 255, 0.35),
+    0 0 36px rgba(0, 240, 255, 0.2),
     inset 0 0 24px rgba(0, 240, 255, 0.2);
-  transform: scale(1.08);
+  transform: scale(1.04);
   z-index: 20;
 }
 
@@ -245,7 +247,7 @@
 }
 
 .la-label .range, .ac-label .range {
-  font-size: 0.65rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   font-family: var(--font-display);
 }
@@ -253,16 +255,48 @@
 /* 镧系锕系网格 */
 .la-grid, .ac-grid {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(15, minmax(0, 0.82fr));
+  justify-content: space-between;
+  gap: 8px;
   width: 100%;
   min-width: 0;
+  padding: 2px 6px;
+  box-sizing: border-box;
+}
+
+.la-grid .element-cell,
+.ac-grid .element-cell {
+  aspect-ratio: 1;
+  padding: 3px;
+}
+
+.la-grid .element-cell .atomic-num,
+.ac-grid .element-cell .atomic-num {
+  font-size: 0.8rem;
+  top: 3px;
+  left: 5px;
+}
+
+.la-grid .element-cell .symbol,
+.ac-grid .element-cell .symbol {
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.la-grid .element-cell .chinese-name,
+.ac-grid .element-cell .chinese-name {
+  font-size: 0.52rem;
+}
+
+.la-grid .element-cell .atomic-mass,
+.ac-grid .element-cell .atomic-mass {
+  font-size: 0.8rem;
 }
 
 #la-grid {
   grid-column: 2;
   grid-row: 2;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 #ac-grid {
