@@ -16,6 +16,7 @@ const requiredFields = [
   'symbol',
   'chineseName',
   'englishName',
+  'phonetic',
   'atomicMass',
   'category',
   'period',
@@ -46,6 +47,10 @@ for (const element of elements) {
     if (value === undefined || value === null || value === '' || isEmptyArray) {
       errors.push(`元素 ${element.symbol || element.atomicNumber} 缺少必填字段：${field}`);
     }
+  }
+
+  if (typeof element.phonetic !== 'string' || !element.phonetic.trim()) {
+    errors.push(`元素 ${element.symbol || element.atomicNumber} 的 phonetic 必须是非空字符串`);
   }
 
   if (!Number.isInteger(element.atomicNumber) || element.atomicNumber < 1 || element.atomicNumber > 118) {

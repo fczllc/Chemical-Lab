@@ -446,6 +446,42 @@ function renderListView() {
   });
 }
 
+function formatListPhonetic(element) {
+  if (typeof element.phonetic !== 'string') {
+    return '—';
+  }
+
+  return element.phonetic.trim() ? element.phonetic : '—';
+}
+
+function formatDiscoveryYear(value) {
+  if (value === null || value === undefined) {
+    return '—';
+  }
+
+  const normalizedValue = String(value).trim();
+  if (!normalizedValue) {
+    return '—';
+  }
+
+  if (normalizedValue === '古代' || normalizedValue.toLowerCase().includes('ancient')) {
+    return '古代';
+  }
+
+  return normalizedValue;
+}
+
+function renderListCharacteristicBadges(element) {
+  const accentColor = element.color || categoryColors[element.category] || '#4dabf7';
+  const rarityLabel = rarityNames[element.rarity] || element.rarity || '未知';
+  const safety = safetyMeta[element.safety] || { label: element.safety || '未知', color: '#94a3b8' };
+
+  return `
+    <span class="element-badge list-characteristic-badge" style="--badge-color: ${accentColor}; --badge-color-rgb: ${hexToRgb(accentColor)}">${rarityLabel}</span>
+    <span class="element-badge element-badge-safety list-characteristic-badge" style="--badge-color: ${safety.color}; --badge-color-rgb: ${hexToRgb(safety.color)}">${safety.label}</span>
+  `;
+}
+
 function createElementListRow(element) {
   const row = document.createElement('div');
   row.className = 'element-list-row';
@@ -468,9 +504,12 @@ function createElementListRow(element) {
     <span class="list-atomic-num">${element.atomicNumber}</span>
     <span class="list-symbol" style="color: ${categoryColors[element.category] || '#fff'}">${element.symbol}</span>
     <span class="list-chinese-name">${element.chineseName}</span>
-    <span class="list-english-name">${element.englishName}</span>
+    <span class="list-english-name">${element.englishName} ${formatListPhonetic(element)}</span>
     <span class="list-category">${ELEMENT_CATEGORY_LABELS[element.category] || element.category}</span>
+    <span class="list-characteristics">${renderListCharacteristicBadges(element)}</span>
+    <span class="list-discovery-year">${formatDiscoveryYear(element.discoveryYear)}</span>
     <span class="list-mass">${element.atomicMass}</span>
+    <span class="list-status"><span class="list-status-dot" aria-hidden="true"></span></span>
   `;
 
   row.addEventListener('click', () => selectElement(element));
