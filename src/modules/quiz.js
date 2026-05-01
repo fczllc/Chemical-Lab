@@ -395,18 +395,30 @@ function renderResultMarkup() {
 }
 
 function renderGamesHub() {
-  const gamesGrid = document.querySelector('#games .games-grid');
-  if (!gamesGrid) {
+  const supportArea = document.querySelector('[data-testid="games-support-area"]')
+    || document.querySelector('#games .games-grid:not([data-testid="games-primary-grid"])');
+  if (!supportArea) {
     return;
   }
 
-  let card = gamesGrid.querySelector('[data-game="full-quiz"]');
+  const existingSupportCard = supportArea.querySelector('[data-game="full-quiz"]');
+  document.querySelectorAll('[data-game="full-quiz"]').forEach((quizCard) => {
+    if (quizCard !== existingSupportCard) {
+      quizCard.remove();
+    }
+  });
+
+  let card = existingSupportCard;
   if (!card) {
     card = document.createElement('div');
     card.className = 'game-card game-card--quiz';
     card.dataset.game = 'full-quiz';
-    gamesGrid.prepend(card);
+    card.dataset.testid = 'full-quiz-support-card';
+    supportArea.prepend(card);
   }
+
+  card.dataset.testid = 'full-quiz-support-card';
+  card.classList.add('game-card', 'game-card--quiz');
 
   const bestScore = getBestScoreValue();
   const quizHistory = getQuizScores();

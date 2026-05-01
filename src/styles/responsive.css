@@ -146,8 +146,21 @@
     right: auto;
   }
 
-  .games-grid {
-    grid-template-columns: repeat(2, 1fr);
+  #games {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  #games [data-testid="games-primary-grid"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #games [data-testid="games-support-area"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #games .games-overview-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .achievements-grid {
@@ -177,6 +190,70 @@
 
 /* 手机端 (767px 以下) */
 @media (max-width: 767px) {
+  #games {
+    padding: 12px;
+    gap: 14px;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  #games .games-hero {
+    padding: 18px;
+    min-height: 156px;
+  }
+
+  #games .games-hero::after {
+    right: 18px;
+    bottom: 14px;
+    width: 46vw;
+  }
+
+  #games [data-testid="games-primary-grid"],
+  #games [data-testid="games-support-area"],
+  #games .games-overview-stats,
+  #games [data-testid="games-primary-grid"] .game-card-stats,
+  #games [data-testid="games-support-area"] .quiz-game-stats {
+    grid-template-columns: 1fr;
+  }
+
+  #games [data-testid="games-primary-grid"] > .game-card {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  #games [data-testid="games-primary-grid"] .game-card-stats span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #games [data-testid="games-primary-grid"] .game-card-stats strong {
+    display: inline;
+    margin-top: 0;
+  }
+
+  #games [data-testid="games-support-area"] > .game-card--quiz,
+  #games [data-testid="lab-progress-support-card"],
+  #games .game-area-idle {
+    padding: 16px;
+  }
+
+  #games [data-testid="lab-progress-support-card"] {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #games .hud-shell-header,
+  #games .games-overview-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #games .hud-action-btn {
+    width: 100%;
+  }
+
   .story-shell {
     padding: 16px;
   }

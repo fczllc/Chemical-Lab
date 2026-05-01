@@ -33,7 +33,8 @@ export function initGames(elements = []) {
   allElements = Array.isArray(elements) ? elements : [];
 
   const gamesSection = document.getElementById('games');
-  const cards = gamesSection?.querySelectorAll('.game-card');
+  const primaryGrid = gamesSection?.querySelector('[data-testid="games-primary-grid"]');
+  const cards = primaryGrid?.querySelectorAll('.game-card');
   const gameArea = document.getElementById('game-area');
   if (!gamesSection || !cards?.length || !gameArea) {
     return;
@@ -122,7 +123,6 @@ function renderGamesHub() {
         <p class="hud-kicker">SCIENCE ARCADE</p>
         <h3>选择一个小游戏开始训练</h3>
       </div>
-      <button class="hud-action-btn" data-action="back-home">返回主页</button>
     </div>
     <div class="games-overview-stats">
       <div class="quiz-stat-card"><span>当前最高分</span><strong>${topScore}</strong></div>
@@ -133,13 +133,11 @@ function renderGamesHub() {
     <p class="games-overview-copy">从周期表定位、记忆配对到反应识别，这里会根据你的学习进度实时刷新分数与收藏状态。</p>
   `;
 
-  gameArea.querySelector('[data-action="back-home"]')?.addEventListener('click', () => {
-    navigateTo('periodic-table');
-  });
+
 }
 
 function renderGameCards() {
-  document.querySelectorAll('#games .game-card').forEach((card) => {
+  document.querySelectorAll('#games [data-testid="games-primary-grid"] .game-card').forEach((card) => {
     const gameName = card.dataset.game;
     const meta = GAME_META[gameName];
     if (!meta) {
@@ -163,7 +161,7 @@ function renderGameCards() {
     `;
   });
 
-  document.querySelectorAll('#games .game-card .play-btn').forEach((button) => {
+  document.querySelectorAll('#games [data-testid="games-primary-grid"] .game-card .play-btn').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.stopPropagation();
       const gameName = event.currentTarget.closest('.game-card')?.dataset.game;
@@ -868,10 +866,6 @@ function renderResultScreen({ title, kicker, score, rating, stats, summary }) {
 
 function bindOverlayActions(options = {}) {
   document.querySelector('[data-action="close-game"]')?.addEventListener('click', closeActiveGame);
-  document.querySelector('[data-action="back-home"]')?.addEventListener('click', () => {
-    closeActiveGame();
-    navigateTo('periodic-table');
-  });
   document.querySelector('[data-action="play-again"]')?.addEventListener('click', () => {
     if (!activeSession) {
       return;
@@ -922,7 +916,6 @@ function buildGameFrame({ title, kicker, summary, stats, body }) {
           <p class="game-summary">${summary}</p>
         </div>
         <div class="game-frame-actions">
-          <button class="hud-action-btn" data-action="back-home">返回主页</button>
           <button class="hud-action-btn" data-action="close-game">关闭</button>
         </div>
       </div>

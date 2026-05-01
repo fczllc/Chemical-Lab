@@ -131,15 +131,20 @@
 
         <!-- 游戏中心 -->
         <section id="games" class="page-section">
-          <h2>游戏中心</h2>
-          <div class="lab-games-stat hud-shell">
-            <div>
-              <p class="hud-kicker">LAB MISSION STATUS</p>
-              <strong><span id="lab-completed-count">0</span>/5 个实验已完成</strong>
-            </div>
-            <p>实验进度会在 T14 游戏中心继续联动展示。</p>
+          <div class="games-hero hud-shell">
+            <p class="hud-kicker">SCIENCE ARCADE</p>
+            <h2>游戏任务板</h2>
           </div>
-          <div class="games-grid">
+          <div class="games-support-area games-grid" data-testid="games-support-area">
+            <div class="lab-games-stat hud-shell" data-testid="lab-progress-support-card">
+              <div>
+                <p class="hud-kicker">LAB MISSION STATUS</p>
+                <strong><span id="lab-completed-count">0</span>/5 个实验已完成</strong>
+              </div>
+              <p>实验进度会在 T14 游戏中心继续联动展示。</p>
+            </div>
+          </div>
+          <div class="games-grid games-primary-grid" data-testid="games-primary-grid">
             <div class="game-card" data-game="drag">
               <h3>元素拖拽归位</h3>
               <p>将元素卡片拖到周期表的正确位置</p>
@@ -161,7 +166,7 @@
               <button class="play-btn">查看收藏</button>
             </div>
           </div>
-          <div id="game-area" class="game-area"></div>
+          <div id="game-area" class="game-area" data-testid="active-game-stage"></div>
         </section>
 
         <!-- 虚拟实验室 -->
