@@ -1,4 +1,11 @@
 /* ===== 基础变量与重置 ===== */
+@font-face {
+  font-family: 'Alte DIN 1451 Mittelschrift';
+  src: url('/fonts/AlteDIN1451Mittelschrift.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-024F, U+0250-02AF;
+}
+
 :root {
   /* 深色背景 - 接近纯黑 */
   --bg-primary: #000000;
@@ -48,8 +55,8 @@
   --border-subtle: rgba(120, 144, 168, 0.14);
   
   /* 字体 */
-  --font-display: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Alte DIN 1451 Mittelschrift', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Alte DIN 1451 Mittelschrift', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
   /* 尺寸 */
   --header-height: 64px;
