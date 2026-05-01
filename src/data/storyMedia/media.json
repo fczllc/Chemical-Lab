@@ -384,12 +384,12 @@
       "discoveryImage": {
         "src": "/assets/elements/discovery/028-ni-discovery.webp",
         "altZh": "镍（Ni）的发现故事科普示意图",
-        "source": ""
+        "source": "wikidata.org"
       },
       "specimenImage": {
         "src": "/assets/elements/specimens/028-ni-specimen.webp",
         "altZh": "镍（Ni）的安全样品科普示意图",
-        "source": ""
+        "source": "stc.atlas.pk"
       }
     },
     {
