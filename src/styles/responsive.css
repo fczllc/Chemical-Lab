@@ -40,6 +40,14 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .timeline-control-field-jump {
+    grid-column: auto;
+  }
+
+  .timeline-jump-box {
+    grid-template-columns: minmax(0, 1fr) var(--timeline-action-width);
+  }
+
   .timeline-reset-btn {
     grid-column: span 3;
     justify-self: start;
@@ -106,9 +114,17 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .timeline-control-field-jump {
+    grid-column: auto;
+  }
+
+  .timeline-jump-box {
+    grid-template-columns: minmax(0, 1fr) var(--timeline-action-width);
+  }
+
   .timeline-reset-btn {
     grid-column: auto;
-    justify-self: stretch;
+    justify-self: start;
   }
 
   .timeline-list::before {
@@ -250,12 +266,6 @@
   .bottom-module-interactive:active {
     transform: scale(0.98);
     border-color: rgba(0, 240, 255, 0.5);
-  }
-
-  .timeline-entry:hover .timeline-entry-card {
-    transform: none;
-    border-color: color-mix(in srgb, var(--timeline-accent) 50%, transparent);
-    box-shadow: 0 14px 38px rgba(2, 8, 23, 0.4), inset 0 0 18px rgba(255, 255, 255, 0.025);
   }
 
   .compare-card:hover {

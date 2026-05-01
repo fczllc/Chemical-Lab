@@ -233,7 +233,7 @@
 
 .timeline-hero-text {
   color: var(--text-secondary);
-  max-width: 68ch;
+  max-width: 72ch;
 }
 
 .timeline-hero-stats {
@@ -259,13 +259,18 @@
 
 .timeline-stat-label {
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.8rem;
 }
 
 .timeline-controls {
+  --timeline-controls-gap: 12px;
+  --timeline-controls-gap-total: 60px;
+  --timeline-action-width: 112px;
+  --timeline-control-height: calc(1.6em + 18px);
+  --timeline-control-track: minmax(0, calc((100% - var(--timeline-action-width) - var(--timeline-controls-gap-total)) / 6.25));
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
-  gap: 12px;
+  grid-template-columns: repeat(5, var(--timeline-control-track)) var(--timeline-action-width) var(--timeline-action-width);
+  gap: var(--timeline-controls-gap);
   padding: 16px;
   align-items: end;
 }
@@ -273,6 +278,7 @@
 .timeline-control-field {
   display: grid;
   gap: 6px;
+  min-width: 0;
 }
 
 .timeline-control-field span {
@@ -283,6 +289,10 @@
 .timeline-control-field-search,
 .timeline-control-field-jump {
   min-width: 0;
+}
+
+.timeline-control-field-jump {
+  grid-column: 5 / span 2;
 }
 
 .timeline-search-box,
@@ -296,9 +306,18 @@
   position: relative;
 }
 
+.timeline-jump-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--timeline-action-width);
+  gap: var(--timeline-controls-gap);
+}
+
+.timeline-control-field > select,
 .timeline-search-box input,
 .timeline-jump-box select {
+  min-width: 0;
   width: 100%;
+  height: var(--timeline-control-height);
 }
 
 .timeline-search-box input {
@@ -323,8 +342,22 @@
 }
 
 .timeline-reset-btn {
-  min-width: 112px;
-  align-self: stretch;
+  grid-column: 7;
+  align-self: end;
+}
+
+.timeline-mini-btn,
+.timeline-reset-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--timeline-action-width);
+  width: var(--timeline-action-width);
+  min-width: var(--timeline-action-width);
+  height: var(--timeline-control-height);
+  padding: 8px 12px;
+  white-space: nowrap;
 }
 
 .timeline-mini-btn:hover,
@@ -356,6 +389,10 @@
 }
 
 .timeline-list {
+  --timeline-card-width: calc(45% - 30.6px);
+  --timeline-center-gap: 34px;
+  --timeline-card-anchor-offset: calc(50% - var(--timeline-center-gap) - var(--timeline-card-width));
+  --timeline-dot-anchor-offset: -43px;
   position: relative;
   display: grid;
   gap: 22px;
@@ -378,16 +415,16 @@
 
 .timeline-entry {
   position: relative;
-  width: calc(50% - 34px);
+  width: var(--timeline-card-width);
   opacity: 0;
-  transform: translateY(30px) scale(0.97);
+  transform: translateY(30px);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
   outline: none;
 }
 
 .timeline-entry.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 .timeline-entry-left {
@@ -398,12 +435,22 @@
   justify-self: end;
 }
 
+@media (min-width: 1200px) {
+  .timeline-entry-left {
+    margin-left: var(--timeline-card-anchor-offset);
+  }
+
+  .timeline-entry-right {
+    margin-right: var(--timeline-card-anchor-offset);
+  }
+}
+
 .timeline-entry-dot {
   position: absolute;
   top: 34px;
   width: 18px;
   height: 18px;
-  right: -43px;
+  right: var(--timeline-dot-anchor-offset);
   border-radius: 5px;
   background: var(--timeline-accent);
   border: 3px solid rgba(15, 23, 42, 0.94);
@@ -412,7 +459,7 @@
 
 .timeline-entry-right .timeline-entry-dot {
   right: auto;
-  left: -43px;
+  left: var(--timeline-dot-anchor-offset);
 }
 
 .timeline-entry-card {
@@ -436,20 +483,44 @@
   pointer-events: none;
 }
 
-.timeline-entry:hover .timeline-entry-card,
-.timeline-entry:focus-visible .timeline-entry-card,
-.timeline-entry:focus .timeline-entry-card {
-  transform: translateY(-6px) scale(1.015);
-  border-color: color-mix(in srgb, var(--timeline-accent) 80%, white 8%);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.34), 0 0 22px color-mix(in srgb, var(--timeline-accent) 34%, transparent);
+.timeline-entry:focus-visible .timeline-entry-card {
+  outline: 2px solid color-mix(in srgb, var(--timeline-accent) 68%, white 12%);
+  outline-offset: 3px;
 }
 
 .timeline-entry.is-learned .timeline-entry-card {
   box-shadow: 0 18px 42px rgba(2, 6, 23, 0.4), 0 0 0 1px color-mix(in srgb, var(--timeline-accent) 30%, transparent), inset 0 0 20px color-mix(in srgb, var(--timeline-accent) 10%, transparent);
 }
 
+.timeline-entry.is-selected .timeline-entry-card {
+  border-color: color-mix(in srgb, var(--timeline-accent) 78%, white 10%);
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--timeline-accent) 18%, transparent), transparent 42%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.025), transparent 42%),
+    rgba(11, 16, 29, 0.92);
+  box-shadow:
+    0 18px 42px rgba(2, 6, 23, 0.45),
+    0 0 0 1px color-mix(in srgb, var(--timeline-accent) 42%, transparent),
+    0 0 30px color-mix(in srgb, var(--timeline-accent) 34%, transparent),
+    0 0 58px color-mix(in srgb, var(--timeline-accent) 18%, transparent),
+    inset 0 0 24px color-mix(in srgb, var(--timeline-accent) 12%, transparent);
+}
+
+.timeline-entry.is-selected .timeline-entry-card::before {
+  background: linear-gradient(120deg, color-mix(in srgb, var(--timeline-accent) 26%, transparent), transparent 34%, rgba(255, 255, 255, 0.025));
+}
+
 .timeline-entry.is-learned .timeline-entry-dot {
   box-shadow: 0 0 0 6px color-mix(in srgb, var(--timeline-accent) 20%, transparent), 0 0 16px color-mix(in srgb, var(--timeline-accent) 40%, transparent);
+  border-radius: 50%;
+}
+
+.timeline-entry.is-selected .timeline-entry-dot {
+  box-shadow:
+    0 0 0 6px color-mix(in srgb, var(--timeline-accent) 24%, transparent),
+    0 0 18px color-mix(in srgb, var(--timeline-accent) 56%, transparent),
+    0 0 34px color-mix(in srgb, var(--timeline-accent) 28%, transparent);
+  border-radius: 50%;
 }
 
 .timeline-entry-topline,
@@ -481,6 +552,7 @@
 .timeline-entry-names p,
 .timeline-entry-story {
   color: var(--text-secondary);
+  font-size: 0.8rem;
 }
 
 .timeline-entry-category,
@@ -540,58 +612,6 @@
 .timeline-empty strong {
   display: block;
   margin-bottom: 8px;
-}
-
-.timeline-tooltip {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: min(320px, calc(100vw - 24px));
-  padding: 14px;
-  border-radius: 5px;
-  background: rgba(15, 23, 42, 0.94);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.4);
-  backdrop-filter: blur(14px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
-  z-index: 120;
-}
-
-.timeline-tooltip.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.timeline-tooltip-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.timeline-tooltip-symbol {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--timeline-tooltip-accent, var(--text-primary));
-}
-
-.timeline-tooltip-header p,
-.timeline-tooltip-copy,
-.timeline-tooltip-meta {
-  color: var(--text-secondary);
-}
-
-.timeline-tooltip-meta {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-  font-size: 0.82rem;
 }
 
 /* ===== 周期表控制栏 ===== */
