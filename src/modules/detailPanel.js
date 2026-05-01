@@ -6,6 +6,7 @@ import {
   getSelectedElement
 } from './storage.js';
 import { ELEMENT_CATEGORY_LABELS, SAFETY_LABELS } from '../data/contentMeta.js';
+import { spectralLines } from '../data/index.js';
 import { navigateTo } from './router.js';
 
 let currentElectronModel = null;
@@ -16,34 +17,11 @@ function getPerformanceMode() {
 }
 
 export function initDetailPanel() {
-  bindCollectButton();
   bindStoryButton();
   bindQuizButton();
   bindLabButton();
+  bindCollectButton();
   bindPanelEvents();
-}
-
-function bindCollectButton() {
-  const collectBtn = document.getElementById('btn-collect');
-  if (!collectBtn) {
-    return;
-  }
-
-  collectBtn.addEventListener('click', () => {
-    const element = getSelectedElement();
-    if (!element) {
-      return;
-    }
-
-    const didCollect = collectElement(element.atomicNumber);
-    updateCollectButton(element.atomicNumber);
-
-    if (!didCollect) {
-      collectBtn.classList.remove('button-bump');
-      void collectBtn.offsetWidth;
-      collectBtn.classList.add('button-bump');
-    }
-  });
 }
 
 function bindStoryButton() {
@@ -104,37 +82,26 @@ function bindLabButton() {
   });
 }
 
-function bindPanelEvents() {
-  window.addEventListener('elementselected', (event) => {
-    updateElectronModel(event.detail.element, { animated: true });
-    updateSpectrum(event.detail.element);
-    updateCollectButton(event.detail.element.atomicNumber);
-  });
+function bindCollectButton() {
+  const collectBtn = document.getElementById('btn-collect');
+  if (!collectBtn) {
+    return;
+  }
 
-  window.addEventListener('elementcollected', (event) => {
-    const selectedElement = getSelectedElement();
-    if (selectedElement?.atomicNumber === event.detail.atomicNumber) {
-      updateCollectButton(event.detail.atomicNumber);
-    }
-  });
-
-  window.addEventListener('performancemodechange', () => {
-    const selectedElement = getSelectedElement();
-    if (!selectedElement) {
+  collectBtn.addEventListener('click', () => {
+    const element = getSelectedElement();
+    if (!element) {
       return;
     }
 
-    updateElectronModel(selectedElement, { animated: false });
-    updateSpectrum(selectedElement);
-  });
+    const didCollect = collectElement(element.atomicNumber);
+    updateCollectButton(element.atomicNumber);
 
-  window.addEventListener('resize', () => {
-    currentElectronModel?.resize?.();
-    currentSpectrumController?.resize?.();
-  });
-
-  window.addEventListener('statereset', () => {
-    updateCollectButton(null);
+    if (!didCollect) {
+      collectBtn.classList.remove('button-bump');
+      void collectBtn.offsetWidth;
+      collectBtn.classList.add('button-bump');
+    }
   });
 }
 
@@ -174,6 +141,40 @@ function updateElectronModel(element, options = {}) {
   }, 320);
 }
 
+function bindPanelEvents() {
+  window.addEventListener('elementselected', (event) => {
+    updateElectronModel(event.detail.element, { animated: true });
+    updateCollectButton(event.detail.element.atomicNumber);
+    updateSpectrum(event.detail.element);
+  });
+
+  window.addEventListener('elementcollected', (event) => {
+    const selectedElement = getSelectedElement();
+    if (selectedElement?.atomicNumber === event.detail.atomicNumber) {
+      updateCollectButton(event.detail.atomicNumber);
+    }
+  });
+
+  window.addEventListener('performancemodechange', () => {
+    const selectedElement = getSelectedElement();
+    if (!selectedElement) {
+      return;
+    }
+
+    updateElectronModel(selectedElement, { animated: false });
+    updateSpectrum(selectedElement);
+  });
+
+  window.addEventListener('resize', () => {
+    currentElectronModel?.resize?.();
+    currentSpectrumController?.resize?.();
+  });
+
+  window.addEventListener('statereset', () => {
+    updateCollectButton(null);
+  });
+}
+
 function updateSpectrum(element) {
   const container = document.getElementById('spectrum-canvas');
   if (!container) {
@@ -191,7 +192,14 @@ function createSpectrumController(container, element, performanceMode) {
   container.appendChild(canvas);
 
   const ctx = canvas.getContext('2d');
-  const lineProfile = buildSpectrumProfile(element, performanceMode);
+  const spectrumProfile = buildSpectrumProfile(element, performanceMode);
+  canvas.dataset.spectrumSource = spectrumProfile.source;
+  canvas.dataset.spectrumSymbol = element.symbol;
+  canvas.dataset.spectrumRange = `${spectrumProfile.range[0]}-${spectrumProfile.range[1]}`;
+  canvas.dataset.spectrumLineCount = String(spectrumProfile.lines.length);
+  canvas.dataset.spectrumWavelengths = spectrumProfile.lines
+    .map((line) => line.wavelength.toFixed(4))
+    .join(',');
   const shouldAnimate = true;
   const pulseAmplitude = performanceMode === 'normal' ? 0.05 : 0.12;
   const flickerSpeed = performanceMode === 'normal' ? 1.15 : 2.1;
@@ -237,21 +245,35 @@ function createSpectrumController(container, element, performanceMode) {
     ctx.fillRect(24, height - 28, width - 48, 8);
     ctx.globalAlpha = 1;
 
-    drawScale(ctx, width, height);
+    drawScale(ctx, width, height, spectrumProfile.range);
 
     ctx.fillStyle = '#cbd5e1';
     ctx.font = '600 12px "Noto Sans SC", sans-serif';
     ctx.fillText(`${element.chineseName} 发射光谱`, 16, 20);
+    ctx.save();
+    ctx.fillStyle = '#64748b';
     ctx.font = '10px "Noto Sans SC", sans-serif';
-    ctx.fillStyle = '#94a3b8';
-    ctx.fillText(`${ELEMENT_CATEGORY_LABELS[element.category] || element.category} · ${SAFETY_LABELS[element.safety] || element.safety}`, 16, 36);
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText('数据来源于NIST', width - 16, 20);
+    ctx.restore();
 
-    lineProfile.forEach((line, index) => {
-      const x = wavelengthToX(line.wavelength, width);
+    if (spectrumProfile.lines.length === 0) {
+      ctx.save();
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '600 13px "Noto Sans SC", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('暂无可见光谱数据', width / 2, height / 2 + 8);
+      ctx.restore();
+      return;
+    }
+
+    spectrumProfile.lines.forEach((line, index) => {
+      const x = wavelengthToX(line.wavelength, width, spectrumProfile.range);
       const flicker = 0.82 + Math.sin(tick * (line.speed + index * 0.08) + line.phase) * 0.18;
-      const intensity = line.intensity * pulse * flicker;
-      const top = 44 + (index % 2) * 4;
-      const bottom = height - 36 - (index % 3) * 2;
+      const intensity = clamp(line.intensity * pulse * flicker, 0.18, 1);
+      const top = 44;
+      const bottom = height - 36;
 
       ctx.save();
       ctx.strokeStyle = line.color;
@@ -265,12 +287,6 @@ function createSpectrumController(container, element, performanceMode) {
       ctx.stroke();
       ctx.restore();
 
-      ctx.save();
-      ctx.fillStyle = accent;
-      ctx.globalAlpha = 0.7;
-      ctx.font = '9px "Noto Sans SC", sans-serif';
-      ctx.fillText(`${line.wavelength}nm`, Math.max(8, x - 14), bottom + 14);
-      ctx.restore();
     });
   }
 
@@ -303,14 +319,14 @@ function createSpectrumController(container, element, performanceMode) {
   };
 }
 
-function drawScale(ctx, width, height) {
-  const ticks = [400, 450, 500, 550, 600, 650, 700];
+function drawScale(ctx, width, height, range) {
+  const ticks = getSpectrumTicks(range);
   ctx.strokeStyle = 'rgba(148, 163, 184, 0.35)';
   ctx.fillStyle = '#64748b';
   ctx.font = '10px "Noto Sans SC", sans-serif';
 
   ticks.forEach((tick) => {
-    const x = wavelengthToX(tick, width);
+    const x = wavelengthToX(tick, width, range);
     ctx.beginPath();
     ctx.moveTo(x, height - 32);
     ctx.lineTo(x, height - 18);
@@ -319,46 +335,156 @@ function drawScale(ctx, width, height) {
   });
 }
 
-function wavelengthToX(wavelength, width) {
+function wavelengthToX(wavelength, width, range = getSpectrumRange()) {
   const start = 24;
   const end = width - 24;
-  return start + ((wavelength - 400) / 300) * (end - start);
+  return clamp(start + ((wavelength - range[0]) / (range[1] - range[0])) * (end - start), start, end);
 }
 
 function buildSpectrumProfile(element, performanceMode) {
-  const baseCount = performanceMode === 'normal' ? 4 : 7;
-  const normalizedConfig = normalizeElectronConfig(element.electronConfiguration);
-  const shellMatches = Array.from(normalizedConfig.matchAll(/(\d)[spdf](\d+)/g));
+  const range = getSpectrumRange();
+  const entry = spectralLines.elements?.[element.symbol];
   const accent = element.color || '#38bdf8';
+  const visibleLines = (entry?.lines || [])
+    .map((line) => ({ ...line, wavelength: Number(line.wavelengthNm) }))
+    .filter((line) => Number.isFinite(line.wavelength) && line.wavelength >= range[0] && line.wavelength <= range[1])
+    .sort((a, b) => a.wavelength - b.wavelength);
 
-  const lines = shellMatches.slice(0, baseCount).map((match, index) => {
-    const shell = Number(match[1]);
-    const electrons = Number(match[2]);
-    const wavelength = 410 + ((element.atomicNumber * 17 + shell * 37 + electrons * 11 + index * 23) % 270);
+  if (visibleLines.length === 0) {
     return {
-      wavelength,
-      width: performanceMode === 'normal' ? 1.8 : 2.4 + (electrons % 2) * 0.4,
-      intensity: 0.48 + ((electrons + shell) % 5) * 0.1,
-      color: blendColor(accent, getSpectrumBandColor(wavelength), 0.58),
-      speed: 0.8 + shell * 0.2,
-      phase: index * 0.7 + element.atomicNumber * 0.05
+      source: 'empty',
+      range,
+      lines: []
+    };
+  }
+
+  const maxima = getIntensityMaxima(visibleLines);
+  const lines = visibleLines.map((line, index) => {
+    const normalizedIntensity = clamp(resolveLineIntensity(line, maxima), 0, 1);
+    return {
+      wavelength: line.wavelength,
+      source: line.wavelengthSource || 'unknown',
+      label: `${formatWavelengthLabel(line.wavelength)}nm`,
+      width: performanceMode === 'normal'
+        ? 1 + normalizedIntensity * 1.8
+        : 1.2 + normalizedIntensity * 2.2,
+      intensity: clamp(normalizedIntensity, 0.18, 1),
+      normalizedIntensity,
+      color: blendColor(accent, getSpectrumBandColor(line.wavelength), 0.65),
+      speed: 0.8 + (index % 7) * 0.12,
+      phase: index * 0.37 + element.atomicNumber * 0.05,
+      showLabel: false
     };
   });
 
-  while (lines.length < baseCount) {
-    const index = lines.length;
-    const wavelength = 420 + ((element.atomicNumber * 29 + index * 41) % 250);
-    lines.push({
-      wavelength,
-      width: performanceMode === 'normal' ? 1.8 : 2.2,
-      intensity: 0.5 + (index % 3) * 0.12,
-      color: blendColor(accent, getSpectrumBandColor(wavelength), 0.52),
-      speed: 1 + index * 0.14,
-      phase: index * 0.9
-    });
+  markSpectrumLabels(lines);
+
+  return {
+    source: 'nist',
+    range,
+    lines
+  };
+}
+
+function getSpectrumRange() {
+  const range = spectralLines.query?.wavelengthRangeNm;
+  if (Array.isArray(range) && range.length >= 2) {
+    const start = Number(range[0]);
+    const end = Number(range[1]);
+    if (Number.isFinite(start) && Number.isFinite(end) && start < end) {
+      return [start, end];
+    }
   }
 
-  return lines.sort((a, b) => a.wavelength - b.wavelength);
+  return [380, 780];
+}
+
+function getSpectrumTicks(range) {
+  const ticks = [range[0]];
+  for (let tick = range[0] + 50; tick < range[1]; tick += 50) {
+    ticks.push(tick);
+  }
+  ticks.push(range[1]);
+  return Array.from(new Set(ticks));
+}
+
+function formatWavelengthLabel(wavelength) {
+  return wavelength % 1 === 0
+    ? wavelength.toFixed(0)
+    : wavelength.toFixed(1);
+}
+
+function getIntensityMaxima(lines) {
+  return {
+    intensity: getPositiveMax(lines, 'intensity'),
+    akiS1: getPositiveMax(lines, 'akiS1'),
+    fik: getPositiveMax(lines, 'fik')
+  };
+}
+
+function getPositiveMax(lines, key) {
+  return lines.reduce((max, line) => {
+    const value = Number(line[key]);
+    return Number.isFinite(value) && value > max ? value : max;
+  }, 0);
+}
+
+function resolveLineIntensity(line, maxima) {
+  const relativeIntensity = toFiniteNumber(line.relativeIntensity);
+  if (relativeIntensity !== null) {
+    return relativeIntensity;
+  }
+
+  const intensity = toFiniteNumber(line.intensity);
+  if (intensity !== null && intensity > 0 && maxima.intensity > 0) {
+    return intensity / maxima.intensity;
+  }
+
+  const akiS1 = toFiniteNumber(line.akiS1);
+  if (akiS1 !== null && akiS1 > 0 && maxima.akiS1 > 0) {
+    return akiS1 / maxima.akiS1;
+  }
+
+  const fik = toFiniteNumber(line.fik);
+  if (fik !== null && fik > 0 && maxima.fik > 0) {
+    return fik / maxima.fik;
+  }
+
+  return 0.22;
+}
+
+function toFiniteNumber(value) {
+  if (value === null || value === undefined || value === '') {
+    return null;
+  }
+
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function markSpectrumLabels(lines) {
+  const strongestIndexes = new Set(lines
+    .map((line, index) => ({ line, index }))
+    .sort((a, b) => b.line.normalizedIntensity - a.line.normalizedIntensity || a.line.wavelength - b.line.wavelength)
+    .slice(0, 5)
+    .map(({ index }) => index));
+  const candidates = lines
+    .map((line, index) => ({ line, index }))
+    .filter(({ line, index }) => strongestIndexes.has(index) || line.normalizedIntensity >= 0.7)
+    .sort((a, b) => b.line.normalizedIntensity - a.line.normalizedIntensity || a.line.wavelength - b.line.wavelength);
+  const labeledWavelengths = [];
+
+  candidates.forEach(({ line }) => {
+    const isDuplicate = labeledWavelengths.some((wavelength) => Math.abs(wavelength - line.wavelength) < 1);
+    if (!isDuplicate) {
+      line.showLabel = true;
+      labeledWavelengths.push(line.wavelength);
+    }
+  });
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
 }
 
 function getSpectrumBandColor(wavelength) {
@@ -368,25 +494,6 @@ function getSpectrumBandColor(wavelength) {
   if (wavelength < 590) return '#eab308';
   if (wavelength < 620) return '#f97316';
   return '#ef4444';
-}
-
-function normalizeElectronConfig(config = '') {
-  return config
-    .replace(/\[[^\]]+\]/g, ' ')
-    .replace(/[¹²³⁴⁵⁶⁷⁸⁹⁰]/g, (digit) => ({
-      '⁰': '0',
-      '¹': '1',
-      '²': '2',
-      '³': '3',
-      '⁴': '4',
-      '⁵': '5',
-      '⁶': '6',
-      '⁷': '7',
-      '⁸': '8',
-      '⁹': '9'
-    }[digit] || digit))
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 function blendColor(primary, secondary, ratio) {

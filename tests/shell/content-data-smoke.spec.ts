@@ -52,12 +52,93 @@ test.describe('Content Data Smoke', () => {
     await quizModal.locator('.quiz-option-btn').first().click();
     await expect(quizModal.locator('[data-quiz-next]')).toBeEnabled();
   });
+
+  test('renders the selected element spectrum from real spectral data', async ({ page }) => {
+    await openHydrogenDetail(page);
+
+    const canvas = await waitForSpectrumCanvas(page);
+    const metadata = await canvas.evaluate((node) => ({
+      source: node.dataset.spectrumSource,
+      symbol: node.dataset.spectrumSymbol,
+      range: node.dataset.spectrumRange,
+      lineCount: Number(node.dataset.spectrumLineCount || 0),
+      wavelengths: node.dataset.spectrumWavelengths || ''
+    }));
+
+    expect(metadata.source).toBe('nist');
+    expect(metadata.symbol).toBe('H');
+    expect(metadata.range).toBe('380-780');
+    expect(metadata.lineCount).toBeGreaterThan(0);
+    expect(metadata.wavelengths).toContain('656.2790');
+    expect(metadata.wavelengths).toContain('486.1350');
+    expect(metadata.wavelengths).toContain('434.0472');
+
+    const samples = await page.evaluate(() => {
+      const canvas = document.querySelector('#spectrum-canvas canvas');
+      if (!(canvas instanceof HTMLCanvasElement)) {
+        throw new Error('Spectrum canvas is missing');
+      }
+
+      const context = canvas.getContext('2d');
+      if (!context) {
+        throw new Error('Spectrum canvas context is missing');
+      }
+
+      const margin = 24;
+      const [start, end] = [380, 780];
+      const width = canvas.width;
+      const height = canvas.height;
+      const top = 44;
+      const bottom = Math.max(top + 1, height - 36);
+      const wavelengthToX = (wavelength) => Math.round(margin + ((wavelength - start) / (end - start)) * (width - margin * 2));
+      const brightnessAt = (wavelength) => {
+        const x = wavelengthToX(wavelength);
+        let maxBrightness = 0;
+
+        for (let y = top; y < bottom; y += 1) {
+          for (let dx = -1; dx <= 1; dx += 1) {
+            const safeX = Math.min(width - 1, Math.max(0, x + dx));
+            const [red, green, blue] = context.getImageData(safeX, y, 1, 1).data;
+            maxBrightness = Math.max(maxBrightness, red + green + blue);
+          }
+        }
+
+        return { x, brightness: maxBrightness };
+      };
+
+      return {
+        control: brightnessAt(540),
+        hAlpha: brightnessAt(656.279),
+        hBeta: brightnessAt(486.135),
+        hGamma: brightnessAt(434.0472)
+      };
+    });
+
+    expect(samples.hAlpha.brightness - samples.control.brightness).toBeGreaterThan(20);
+    expect(samples.hBeta.brightness - samples.control.brightness).toBeGreaterThan(20);
+    expect(samples.hGamma.brightness - samples.control.brightness).toBeGreaterThan(20);
+  });
 });
 
 async function openHydrogenDetail(page) {
   await page.getByTestId('element-cell-1').click();
   await expect(page.locator('#detail-panel')).toHaveClass(/open|docked/);
   await expect(page.locator('#detail-panel .element-hero .symbol')).toHaveText('H');
+}
+
+async function waitForSpectrumCanvas(page) {
+  const canvas = page.locator('#spectrum-canvas canvas');
+  await expect(canvas).toBeAttached({ timeout: 15000 });
+  await expect.poll(async () => {
+    return await canvas.evaluate((node) => {
+      return node instanceof HTMLCanvasElement
+        && node.width > 0
+        && node.height > 0
+        && node.clientWidth > 0
+        && node.clientHeight > 0;
+    });
+  }, { timeout: 15000 }).toBe(true);
+  return canvas;
 }
 
 async function waitForShellReady(page) {
