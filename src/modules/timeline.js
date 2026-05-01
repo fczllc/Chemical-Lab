@@ -1,4 +1,4 @@
-import { getLearnedElements, setSelectedElement } from './storage.js';
+import { getLearnedElements, getSelectedElement, setSelectedElement } from './storage.js';
 import { restoreSelectedElementView } from './renderTable.js';
 import {
   ELEMENT_CATEGORY_LABELS,
@@ -16,10 +16,6 @@ const timelineState = {
     search: ''
   },
   observer: null,
-  tooltipEl: null,
-  tooltipTarget: null,
-  tooltipPointer: null,
-  tooltipFrame: 0,
   focusedIndex: -1
 };
 
@@ -66,6 +62,7 @@ function renderTimelinePage() {
 
   const filteredElements = getFilteredElements();
   const learnedElements = getLearnedElements();
+  const selectedAtomicNumber = getSelectedAtomicNumber();
   const categories = getCategoryOptions();
   const jumpYears = getJumpYears(filteredElements);
   const learnedCount = timelineState.elements.filter((element) => learnedElements.has(element.atomicNumber)).length;
@@ -75,7 +72,7 @@ function renderTimelinePage() {
       <section class="timeline-hero glass-panel neon-border">
         <div class="timeline-hero-copy">
           <p class="timeline-kicker">元素发现博物馆</p>
-          <h3>沿着霓虹时间轴，看看 118 种元素如何一步步走进人类视野。</h3>
+          <h3>沿着霓虹时间轴，看看 118 种元素如何一步步走进人类的视野。</h3>
           <p class="timeline-hero-text">从古代熟知的碳、硫，到现代实验室中新合成的超重元素，这条时间线把发现顺序、发现者和学习进度放在同一条科学旅程里。</p>
         </div>
         <div class="timeline-hero-stats" aria-label="时间线统计">
@@ -157,7 +154,7 @@ function renderTimelinePage() {
       </section>
 
       <div id="timeline-list" class="timeline-list" tabindex="0" aria-label="元素发现历史时间线">
-        ${filteredElements.length > 0 ? filteredElements.map((element, index) => renderTimelineNode(element, index, learnedElements)).join('') : `
+        ${filteredElements.length > 0 ? filteredElements.map((element, index) => renderTimelineNode(element, index, learnedElements, selectedAtomicNumber)).join('') : `
           <div class="timeline-empty glass-panel">
             <strong>没有找到匹配的元素</strong>
             <p>试试放宽筛选条件，或者换个名字、符号、发现者重新搜索。</p>
@@ -167,26 +164,27 @@ function renderTimelinePage() {
     </div>
   `;
 
-  ensureTooltip();
   bindRenderedInteractions(container);
   observeTimelineCards();
 }
 
-function renderTimelineNode(element, index, learnedElements) {
+function renderTimelineNode(element, index, learnedElements, selectedAtomicNumber) {
   const accent = getSafeAccentColor(element);
   const side = index % 2 === 0 ? 'left' : 'right';
   const isLearned = learnedElements.has(element.atomicNumber);
+  const isSelected = selectedAtomicNumber === element.atomicNumber;
 
   return `
     <article
       id="timeline-anchor-${element.atomicNumber}"
-      class="timeline-entry timeline-entry-${side} ${isLearned ? 'is-learned' : ''}"
+      class="timeline-entry timeline-entry-${side}${isLearned ? ' is-learned' : ''}${isSelected ? ' is-selected' : ''}"
       style="--timeline-accent: ${escapeAttribute(accent)}"
       data-atomic-number="${element.atomicNumber}"
       data-year="${escapeAttribute(formatJumpYear(element.discoveryYear))}"
       data-search-key="${escapeAttribute(element.timelineSearchText)}"
       tabindex="0"
       role="button"
+      aria-pressed="${isSelected ? 'true' : 'false'}"
       aria-label="查看 ${escapeAttribute(element.chineseName)} ${escapeAttribute(element.englishName)} 的详情"
     >
       <div class="timeline-entry-dot" aria-hidden="true"></div>
@@ -226,6 +224,11 @@ function bindTimelineEvents() {
 function bindStateListeners() {
   window.addEventListener('elementlearned', rerenderTimelineFromState);
   window.addEventListener('statereset', rerenderTimelineFromState);
+  window.addEventListener('selectedelementchanged', handleSelectedElementChanged);
+}
+
+function handleSelectedElementChanged(event) {
+  updateSelectedTimelineEntry(event?.detail?.atomicNumber ?? event?.detail?.newValue?.atomicNumber ?? null);
 }
 
 function rerenderTimelineFromState() {
@@ -308,15 +311,7 @@ function bindRenderedInteractions(container) {
     });
     entry.addEventListener('focus', () => {
       timelineState.focusedIndex = index;
-      showTooltip(element);
     });
-    entry.addEventListener('blur', hideTooltip);
-    entry.addEventListener('mouseenter', () => {
-      timelineState.focusedIndex = index;
-      showTooltip(element);
-    });
-    entry.addEventListener('mousemove', queueTooltipMove);
-    entry.addEventListener('mouseleave', hideTooltip);
   });
 }
 
@@ -349,31 +344,36 @@ function handleTimelineListKeydown(event) {
 }
 
 function navigateToElement(element) {
-  const targetAtomicNumber = element.atomicNumber;
+  const selected = setSelectedElement(element.atomicNumber);
+  if (!selected) {
+    return;
+  }
 
-  const handleAfterRouteChange = (event) => {
-    if (event?.detail?.section !== 'periodic-table') {
-      return;
-    }
+  updateSelectedTimelineEntry(selected.atomicNumber);
 
-    window.removeEventListener('afterroutechange', handleAfterRouteChange);
-    const selected = setSelectedElement(targetAtomicNumber);
-    if (!selected) {
-      return;
-    }
-
-    window.requestAnimationFrame(() => {
-      restoreSelectedElementView({
-        element: selected,
-        markLearned: false,
-        emitEvent: true,
-        scroll: true
-      });
+  window.requestAnimationFrame(() => {
+    restoreSelectedElementView({
+      element: selected,
+      markLearned: false,
+      emitEvent: true,
+      scroll: false
     });
-  };
+  });
+}
 
-  window.addEventListener('afterroutechange', handleAfterRouteChange);
-  window.location.hash = '#/';
+function updateSelectedTimelineEntry(atomicNumber) {
+  const selectedAtomicNumber = normalizeAtomicNumber(atomicNumber);
+  document.querySelectorAll('.timeline-entry').forEach((entry) => {
+    const entryAtomicNumber = Number.parseInt(entry.dataset.atomicNumber || '', 10);
+    const isSelected = selectedAtomicNumber > 0 && entryAtomicNumber === selectedAtomicNumber;
+
+    entry.classList.toggle('is-selected', isSelected);
+    entry.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+  });
+}
+
+function getSelectedAtomicNumber() {
+  return normalizeAtomicNumber(getSelectedElement()?.atomicNumber);
 }
 
 function getFilteredElements() {
@@ -418,7 +418,7 @@ function getSummaryText(elements) {
 
   const first = elements[0];
   const last = elements[elements.length - 1];
-  return `当前展示 ${elements.length} 个元素，从 ${first.timelineYearLabel} 的 ${sanitizePlainText(first.chineseName, '未知元素')} 一直到 ${last.timelineYearLabel} 的 ${sanitizePlainText(last.chineseName, '未知元素')}。点击任意节点可返回主页并打开对应详情。`;
+  return `当前展示 ${elements.length} 个元素，从 ${first.timelineYearLabel} 的 ${sanitizePlainText(first.chineseName, '未知元素')} 一直到 ${last.timelineYearLabel} 的 ${sanitizePlainText(last.chineseName, '未知元素')}。点击任意节点可在右侧打开对应详情。`;
 }
 
 function renderMilestoneButtons(elements) {
@@ -486,72 +486,6 @@ function observeTimelineCards() {
     card.classList.remove('is-visible');
     timelineState.observer?.observe(card);
   });
-}
-
-function ensureTooltip() {
-  if (timelineState.tooltipEl) {
-    return;
-  }
-
-  const tooltip = document.createElement('div');
-  tooltip.className = 'timeline-tooltip';
-  tooltip.id = 'timeline-tooltip';
-  document.body.appendChild(tooltip);
-  timelineState.tooltipEl = tooltip;
-}
-
-function showTooltip(element) {
-  if (!timelineState.tooltipEl) {
-    return;
-  }
-
-  const accent = getSafeAccentColor(element);
-  timelineState.tooltipEl.style.setProperty('--timeline-tooltip-accent', accent);
-  timelineState.tooltipEl.innerHTML = `
-    <div class="timeline-tooltip-header">
-      <span class="timeline-tooltip-symbol">${escapeHTML(element.symbol)}</span>
-      <div>
-        <strong>${escapeHTML(element.chineseName)}</strong>
-        <p>${escapeHTML(element.englishName)}</p>
-      </div>
-    </div>
-    <div class="timeline-tooltip-meta">
-      <span>${escapeHTML(element.timelineYearLabel)}</span>
-      <span>${escapeHTML(ELEMENT_CATEGORY_LABELS[element.category] || '未知')}</span>
-    </div>
-    <p class="timeline-tooltip-copy">${escapeHTML(element.funFact || element.timelineDescription)}</p>
-  `;
-  timelineState.tooltipEl.classList.add('show');
-}
-
-function queueTooltipMove(event) {
-  timelineState.tooltipPointer = { x: event.clientX, y: event.clientY };
-  if (timelineState.tooltipFrame) {
-    return;
-  }
-
-  timelineState.tooltipFrame = window.requestAnimationFrame(() => {
-    timelineState.tooltipFrame = 0;
-    moveTooltip();
-  });
-}
-
-function moveTooltip() {
-  if (!timelineState.tooltipEl || !timelineState.tooltipPointer) {
-    return;
-  }
-
-  const rect = timelineState.tooltipEl.getBoundingClientRect();
-  const maxX = window.innerWidth - rect.width - 12;
-  const maxY = window.innerHeight - rect.height - 12;
-  const x = Math.min(timelineState.tooltipPointer.x + 18, maxX);
-  const y = Math.min(timelineState.tooltipPointer.y + 18, maxY);
-  timelineState.tooltipEl.style.left = `${Math.max(12, x)}px`;
-  timelineState.tooltipEl.style.top = `${Math.max(12, y)}px`;
-}
-
-function hideTooltip() {
-  timelineState.tooltipEl?.classList.remove('show');
 }
 
 function getDiscoverySortYear(discoveryYear) {
