@@ -4,6 +4,7 @@ import achievementsDataset from './achievementsData.json' with { type: 'json' };
 import quizDataset from './quizData.json' with { type: 'json' };
 import learningPathData from './learningPath.json' with { type: 'json' };
 import reactionsData from './reactions.json' with { type: 'json' };
+import spectralLinesDataset from './spectralLines.json' with { type: 'json' };
 
 export const {
   allowedCategories,
@@ -16,3 +17,4 @@ export const { quizData } = quizDataset;
 export const { learningPath } = learningPathData;
 export const { reactions } = reactionsData;
 export const { achievementsData } = achievementsDataset;
+export const { spectralLines } = spectralLinesDataset;

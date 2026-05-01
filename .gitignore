@@ -11,6 +11,9 @@ test-results/
 # Vite
 .vite/
 
+# Cache
+.cache/nist-asd/
+
 # OS
 .DS_Store
 Thumbs.db
