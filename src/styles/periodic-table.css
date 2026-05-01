@@ -34,7 +34,7 @@
     transparent 100%);
   background-color: rgba(var(--cat-color-rgb, 120, 144, 168), 0.08);
   border: 1px solid rgba(var(--cat-color-rgb, 120, 144, 168), 0.9);
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 4px;
   display: flex;
   flex-direction: column;
@@ -188,7 +188,7 @@
   width: 4px;
   height: 4px;
   background: var(--neon-green);
-  border-radius: 50%;
+  border-radius: 5px;
   box-shadow: 0 0 6px var(--neon-green);
 }
 
@@ -345,7 +345,7 @@
   min-height: 30px;
   padding: 5px 8px;
   border: 1px solid rgba(var(--legend-rgb), 0.28);
-  border-radius: 6px;
+  border-radius: 5px;
   background: linear-gradient(135deg, rgba(var(--legend-rgb), 0.12), rgba(0, 0, 0, 0.36));
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -403,7 +403,7 @@
   flex: 0 0 auto;
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+  border-radius: 5px;
   color: var(--legend-color);
   box-shadow: 
     0 0 8px currentColor,
@@ -430,7 +430,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 12px 16px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.2);
   min-width: 180px;
@@ -523,7 +523,7 @@
   background: var(--bg-secondary);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-left: 3px solid var(--cat-color, var(--border-subtle));
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -662,7 +662,7 @@
   display: block;
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: 5px;
   background: transparent;
   opacity: 0;
   transition: opacity var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);

@@ -61,7 +61,7 @@
   /* 尺寸 */
   --header-height: 64px;
   --panel-width: 380px;
-  --border-radius: 12px;
+  --border-radius: 5px;
   
   /* 动画 */
   --transition-fast: 0.15s ease;
@@ -145,7 +145,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--text-muted);
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -201,7 +201,7 @@ input, select {
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: 5px;
   outline: none;
   transition: var(--transition-fast);
 }
@@ -247,7 +247,7 @@ input:focus, select:focus {
   height: 48px;
   border: 3px solid rgba(0, 240, 255, 0.2);
   border-top-color: var(--neon-cyan);
-  border-radius: 50%;
+  border-radius: 5px;
   animation: loader-spin 0.8s linear infinite;
 }
 

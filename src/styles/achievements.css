@@ -14,7 +14,7 @@
 .progress-metric-panel {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.96));
   border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 24px;
+  border-radius: 5px;
   box-shadow: 0 20px 52px rgba(2, 6, 23, 0.28);
 }
 
@@ -86,7 +86,7 @@
 .progress-detail-card,
 .game-stat-item {
   padding: 16px;
-  border-radius: 18px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.74);
   border: 1px solid rgba(148, 163, 184, 0.14);
 }
@@ -125,7 +125,7 @@
   display: grid;
   gap: 14px;
   padding: 18px;
-  border-radius: 22px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.82);
   border: 1px solid rgba(148, 163, 184, 0.14);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), opacity var(--transition-normal);
@@ -171,7 +171,7 @@
 
 .achievement-rarity {
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 5px;
   font-size: 0.82rem;
   background: rgba(148, 163, 184, 0.12);
 }
@@ -215,7 +215,7 @@
 .progress-ring {
   width: 128px;
   height: 128px;
-  border-radius: 50%;
+  border-radius: 5px;
   display: grid;
   place-items: center;
   background: radial-gradient(circle at center, rgba(15, 23, 42, 0.92) 44%, transparent 45%), conic-gradient(rgba(148, 163, 184, 0.8) 0 var(--progress), rgba(148, 163, 184, 0.16) var(--progress) 100%);
@@ -234,7 +234,7 @@
 
 .stage-celebration-banner {
   padding: 14px 16px;
-  border-radius: 18px;
+  border-radius: 5px;
   background: linear-gradient(90deg, rgba(148, 163, 184, 0.16), rgba(148, 163, 184, 0.08));
   border: 1px solid rgba(148, 163, 184, 0.32);
   color: #f8fbff;
@@ -265,7 +265,7 @@
 .activity-dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 5px;
   background: linear-gradient(135deg, rgba(148, 163, 184, 0.8), rgba(148, 163, 184, 0.4));
   box-shadow: none;
   margin-top: 6px;
@@ -328,7 +328,7 @@
 .progress-bar-track {
   width: 100%;
   height: 10px;
-  border-radius: 999px;
+  border-radius: 5px;
   background: rgba(148, 163, 184, 0.14);
   overflow: hidden;
 }
@@ -346,7 +346,7 @@
 
 .stage-element-chip {
   padding: 10px 12px;
-  border-radius: 14px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.8);
   border: 1px solid rgba(148, 163, 184, 0.12);
   color: var(--text-secondary);
@@ -387,7 +387,7 @@
   min-width: 280px;
   max-width: 360px;
   padding: 18px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96));
   border: 1px solid rgba(148, 163, 184, 0.34);
   box-shadow: 0 20px 60px rgba(2, 6, 23, 0.42);
@@ -399,7 +399,7 @@
   width: 42px;
   height: 42px;
   margin-bottom: 8px;
-  border-radius: 50%;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.08);
   font-size: 1.4rem;
 }

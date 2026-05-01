@@ -173,7 +173,7 @@
   justify-content: center;
   gap: 6px;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid rgba(var(--badge-color-rgb), 0.5);
   background: rgba(var(--badge-color-rgb), 0.15);
   color: #ffffff;
@@ -194,7 +194,7 @@
   margin-bottom: 16px;
   padding: 0;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid rgba(0, 240, 255, 0.15);
   box-shadow: 0 0 16px rgba(0, 240, 255, 0.06), inset 0 0 16px rgba(0, 240, 255, 0.03);
 }
@@ -276,7 +276,7 @@
   left: 0;
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: 5px;
   background: var(--neon-cyan);
   box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
 }
@@ -292,7 +292,7 @@
   margin-bottom: 16px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-left: 3px solid var(--neon-purple);
   box-shadow: 0 0 16px rgba(184, 41, 255, 0.1), inset 0 0 12px rgba(184, 41, 255, 0.03);
@@ -331,7 +331,7 @@
   width: 100%;
   height: 130px;
   background: rgba(10, 14, 26, 0.4);
-  border-radius: 12px;
+  border-radius: 5px;
   margin-bottom: 16px;
   overflow: hidden;
   border: 1px solid rgba(0, 240, 255, 0.1);
@@ -357,7 +357,7 @@
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  border-radius: 5px;
   color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 500;
@@ -421,7 +421,7 @@
 
 .quiz-preview-meta span {
   padding: 4px 10px;
-  border-radius: 999px;
+  border-radius: 5px;
   background: rgba(148, 163, 184, 0.12);
   color: var(--text-secondary);
   font-size: 0.78rem;
@@ -429,7 +429,7 @@
 
 .quiz-card {
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 20px;
   background: rgba(15, 23, 42, 0.4);
 }
@@ -450,7 +450,7 @@
   width: 100%;
   text-align: left;
   padding: 14px 16px;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(255, 255, 255, 0.02);
   color: var(--text-secondary);

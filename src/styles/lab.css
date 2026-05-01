@@ -91,7 +91,7 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: 5px;
   border: 1px solid currentColor;
   font-size: 0.82rem;
   font-weight: 600;
@@ -105,7 +105,7 @@
 
 .lab-complete-badge {
   padding: 6px 10px;
-  border-radius: 999px;
+  border-radius: 5px;
   background: rgba(148, 163, 184, 0.12);
   color: var(--text-muted);
   font-size: 0.8rem;
@@ -147,7 +147,7 @@
 
 .lab-stage-card {
   padding: 16px;
-  border-radius: 18px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.78);
   border: 1px solid rgba(148, 163, 184, 0.14);
 }
@@ -164,7 +164,7 @@
 .lab-equation-card,
 .lab-notebook-card,
 .lab-safety-modal {
-  border-radius: 22px;
+  border-radius: 5px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: linear-gradient(180deg, rgba(8, 15, 31, 0.9), rgba(15, 23, 42, 0.85));
   padding: 18px 20px;
@@ -191,7 +191,7 @@
 
 .lab-safety-alert {
   padding: 16px 18px;
-  border-radius: 18px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.92);
   border: 1px solid currentColor;
 }
@@ -199,7 +199,7 @@
 .lab-confirm-row {
   justify-content: flex-start;
   padding: 14px 16px;
-  border-radius: 16px;
+  border-radius: 5px;
   background: rgba(15, 23, 42, 0.72);
   border: 1px dashed rgba(148, 163, 184, 0.22);
 }
@@ -215,7 +215,7 @@
 
 .lab-canvas-frame {
   position: relative;
-  border-radius: 24px;
+  border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.24);
   background: radial-gradient(circle at top, rgba(148, 163, 184, 0.14), rgba(2, 6, 23, 0.96));
