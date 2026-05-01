@@ -24,6 +24,7 @@ test.describe('Content Data Smoke', () => {
     await expect(page).toHaveURL(/#\/story$/);
     await expect(page.locator('#story')).toHaveClass(/active/);
     await expect(page.locator('#story .story-shell h3')).toContainText('氢 · H');
+    await expectStoryMediaCards(page);
     await expect
       .poll(async () => ((await page.locator('#story .story-body').textContent()) || '').trim().length)
       .toBeGreaterThan(20);
@@ -139,6 +140,39 @@ async function waitForSpectrumCanvas(page) {
     });
   }, { timeout: 15000 }).toBe(true);
   return canvas;
+}
+
+async function expectStoryMediaCards(page) {
+  const cards = page.locator('#story .story-media-card');
+  await expect(cards).toHaveCount(2);
+
+  for (let index = 0; index < 2; index += 1) {
+    const card = cards.nth(index);
+    const image = card.locator('img');
+
+    await expect(card).toBeVisible();
+    await expect(image).toBeVisible();
+    await expect(image).toHaveAttribute('alt', /\S/);
+    await expect(image).toHaveAttribute('loading', 'lazy');
+    await expect(image).toHaveAttribute('decoding', 'async');
+    await expect(image).toHaveAttribute('width', '800');
+    await expect(image).toHaveAttribute('height', '520');
+
+    const rawSrc = await image.getAttribute('src');
+    expect(rawSrc).toMatch(/^\/assets\/elements\/(discovery|specimens)\/[\w.-]+\.webp$/);
+    expect(rawSrc).not.toMatch(/^https?:\/\//);
+
+    await expect(card.locator('.story-media-attribution')).toBeVisible();
+    await expect.poll(async () => {
+      return ((await card.locator('.story-media-attribution').textContent()) || '').trim().length;
+    }).toBeGreaterThan(0);
+  }
+
+  await expect.poll(async () => {
+    return await cards.locator('img').evaluateAll((images) => {
+      return images.every((image) => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0);
+    });
+  }, { timeout: 15000 }).toBe(true);
 }
 
 async function waitForShellReady(page) {

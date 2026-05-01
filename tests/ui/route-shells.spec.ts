@@ -70,6 +70,19 @@ test.describe('Route shell rendering sanity', () => {
     await expect(page.getByTestId('nav-compare')).toHaveCount(0);
   });
 
+  test('story route renders media cards for the selected element with fallback disclosure', async ({ page }) => {
+    await page.getByTestId('element-cell-6').click();
+    await expect(page.locator('#detail-panel')).toHaveClass(/open|docked/);
+    await expect(page.locator('#detail-panel .element-hero .symbol')).toHaveText('C');
+
+    await page.getByTestId('nav-story').click();
+
+    await expect(page).toHaveURL(/#\/story$/);
+    await expect(page.locator('#story')).toHaveClass(/active/);
+    await expect(page.locator('#story .story-shell h3')).toContainText('碳 · C');
+    await expectStoryMediaCards(page, { expectFallbackDisclosure: true });
+  });
+
   test('tablet portrait routes keep primary navigation visible without phone chrome', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
     await page.goto('/', { waitUntil: 'domcontentloaded' });
@@ -103,6 +116,46 @@ async function waitForShellReady(page) {
       const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
       const loaderHidden = document.getElementById('global-loader')?.classList.contains('hidden') ?? false;
       return hasElements && loaderHidden;
+    });
+  }, { timeout: 15000 }).toBe(true);
+}
+
+async function expectStoryMediaCards(page, options = {}) {
+  const cards = page.locator('#story .story-media-card');
+  await expect(cards).toHaveCount(2);
+
+  for (let index = 0; index < 2; index += 1) {
+    const card = cards.nth(index);
+    const image = card.locator('img');
+
+    await expect(card).toBeVisible();
+    await expect(image).toBeVisible();
+    await expect(image).toHaveAttribute('alt', /\S/);
+    await expect(image).toHaveAttribute('loading', 'lazy');
+    await expect(image).toHaveAttribute('decoding', 'async');
+    await expect(image).toHaveAttribute('width', '800');
+    await expect(image).toHaveAttribute('height', '520');
+
+    const rawSrc = await image.getAttribute('src');
+    expect(rawSrc).toMatch(/^\/assets\/elements\/(discovery|specimens)\/[\w.-]+\.webp$/);
+    expect(rawSrc).not.toMatch(/^https?:\/\//);
+
+    await expect(card.locator('.story-media-attribution')).toBeVisible();
+    await expect.poll(async () => {
+      return ((await card.locator('.story-media-attribution').textContent()) || '').trim().length;
+    }).toBeGreaterThan(0);
+
+    if (options.expectFallbackDisclosure) {
+      await expect(card.locator('.story-media-disclosure')).toBeVisible();
+      await expect.poll(async () => {
+        return ((await card.locator('.story-media-disclosure').textContent()) || '').trim().length;
+      }).toBeGreaterThan(0);
+    }
+  }
+
+  await expect.poll(async () => {
+    return await cards.locator('img').evaluateAll((images) => {
+      return images.every((image) => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0);
     });
   }, { timeout: 15000 }).toBe(true);
 }
