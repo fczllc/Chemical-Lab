@@ -40,6 +40,24 @@ export function initGames(elements = []) {
     return;
   }
 
+  // 绑定 support-area 中 collector 卡片的事件
+  const collectorCard = gamesSection.querySelector('[data-testid="games-support-area"] .game-card--collector');
+  if (collectorCard) {
+    const button = collectorCard.querySelector('.play-btn');
+    if (button) {
+      collectorCard.addEventListener('click', (event) => {
+        if (event.target.closest('.play-btn')) {
+          return;
+        }
+        launchGame('collector');
+      });
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        launchGame('collector');
+      });
+    }
+  }
+
   cards.forEach((card) => {
     const gameName = card.dataset.game;
     const button = card.querySelector('.play-btn');
@@ -51,11 +69,19 @@ export function initGames(elements = []) {
       if (event.target.closest('.play-btn')) {
         return;
       }
+      if (gameName === 'full-quiz') {
+        window.dispatchEvent(new CustomEvent('startfullquiz'));
+        return;
+      }
       launchGame(gameName);
     });
 
     button.addEventListener('click', (event) => {
       event.preventDefault();
+      if (gameName === 'full-quiz') {
+        window.dispatchEvent(new CustomEvent('startfullquiz'));
+        return;
+      }
       launchGame(gameName);
     });
   });
@@ -118,19 +144,12 @@ function renderGamesHub() {
 
   gameArea.className = 'game-area game-area-idle hud-shell';
   gameArea.innerHTML = `
-    <div class="hud-shell-header games-overview-header">
-      <div>
-        <p class="hud-kicker">SCIENCE ARCADE</p>
-        <h3>选择一个小游戏开始训练</h3>
-      </div>
-    </div>
     <div class="games-overview-stats">
       <div class="quiz-stat-card"><span>当前最高分</span><strong>${topScore}</strong></div>
       <div class="quiz-stat-card"><span>本次会话次数</span><strong>${totalAttempts}</strong></div>
       <div class="quiz-stat-card"><span>已学习元素</span><strong>${learnedCount}/118</strong></div>
       <div class="quiz-stat-card"><span>收藏完成率</span><strong>${progressPercent}%</strong></div>
     </div>
-    <p class="games-overview-copy">从周期表定位、记忆配对到反应识别，这里会根据你的学习进度实时刷新分数与收藏状态。</p>
   `;
 
 
@@ -139,6 +158,9 @@ function renderGamesHub() {
 function renderGameCards() {
   document.querySelectorAll('#games [data-testid="games-primary-grid"] .game-card').forEach((card) => {
     const gameName = card.dataset.game;
+    if (gameName === 'full-quiz') {
+      return;
+    }
     const meta = GAME_META[gameName];
     if (!meta) {
       return;
@@ -165,11 +187,38 @@ function renderGameCards() {
     button.addEventListener('click', (event) => {
       event.stopPropagation();
       const gameName = event.currentTarget.closest('.game-card')?.dataset.game;
+      if (gameName === 'full-quiz') {
+        window.dispatchEvent(new CustomEvent('startfullquiz'));
+        return;
+      }
       if (gameName) {
         launchGame(gameName);
       }
     });
   });
+
+  // 渲染 support-area 中的 collector 卡片
+  const collectorCard = document.querySelector('#games [data-testid="games-support-area"] .game-card--collector');
+  if (collectorCard) {
+    const meta = GAME_META.collector;
+    const gameKey = GAME_KEYS.collector;
+    const stats = getCardStats(gameKey);
+    collectorCard.innerHTML = `
+      <p class="hud-kicker">${meta.kicker}</p>
+      <h3>${meta.title}</h3>
+      <p>${meta.description}</p>
+      <div class="game-card-stats">
+        <span>最高分 <strong>${stats.bestScore}</strong></span>
+        <span>最近分 <strong>${stats.recentScore}</strong></span>
+        <span>游戏次数 <strong>${stats.attempts}</strong></span>
+      </div>
+      <button class="play-btn">查看收藏</button>
+    `;
+    collectorCard.querySelector('.play-btn')?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      launchGame('collector');
+    });
+  }
 }
 
 function getCardStats(gameKey) {
@@ -191,6 +240,11 @@ function launchGame(gameName) {
   const gameKey = GAME_KEYS[gameName];
   viewState.attempts[gameKey] = (viewState.attempts[gameKey] ?? 0) + 1;
   viewState.feedback = '';
+
+  const gamesSection = document.getElementById('games');
+  if (gamesSection) {
+    gamesSection.classList.add('games--game-active');
+  }
 
   if (gameName === 'drag') {
     startDragGame();
@@ -890,6 +944,10 @@ function closeActiveGame(options = {}) {
   }
 
   if (!options.preserveView) {
+    const gamesSection = document.getElementById('games');
+    if (gamesSection) {
+      gamesSection.classList.remove('games--game-active');
+    }
     renderGamesHub();
   }
 }
@@ -916,7 +974,7 @@ function buildGameFrame({ title, kicker, summary, stats, body }) {
           <p class="game-summary">${summary}</p>
         </div>
         <div class="game-frame-actions">
-          <button class="hud-action-btn" data-action="close-game">关闭</button>
+          <button class="hud-action-btn" data-action="close-game">返回</button>
         </div>
       </div>
       <div class="quiz-scoreboard game-scoreboard">
