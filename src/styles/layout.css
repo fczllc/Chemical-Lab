@@ -451,7 +451,7 @@
   width: 18px;
   height: 18px;
   right: var(--timeline-dot-anchor-offset);
-  border-radius: 5px;
+  border-radius: 50%;
   background: var(--timeline-accent);
   border: 3px solid rgba(15, 23, 42, 0.94);
   box-shadow: 0 0 0 4px rgba(148, 163, 184, 0.12);

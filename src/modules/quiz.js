@@ -30,7 +30,6 @@ export function initQuiz() {
     return;
   }
 
-  modal.querySelector('.modal-close')?.addEventListener('click', closeQuiz);
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
       closeQuiz();
@@ -395,47 +394,46 @@ function renderResultMarkup() {
 }
 
 function renderGamesHub() {
-  const supportArea = document.querySelector('[data-testid="games-support-area"]')
-    || document.querySelector('#games .games-grid:not([data-testid="games-primary-grid"])');
-  if (!supportArea) {
+  const primaryGrid = document.querySelector('[data-testid="games-primary-grid"]');
+  if (!primaryGrid) {
     return;
   }
 
-  const existingSupportCard = supportArea.querySelector('[data-game="full-quiz"]');
+  const existingCard = primaryGrid.querySelector('[data-game="full-quiz"]');
   document.querySelectorAll('[data-game="full-quiz"]').forEach((quizCard) => {
-    if (quizCard !== existingSupportCard) {
+    if (quizCard !== existingCard) {
       quizCard.remove();
     }
   });
 
-  let card = existingSupportCard;
+  let card = existingCard;
   if (!card) {
     card = document.createElement('div');
     card.className = 'game-card game-card--quiz';
     card.dataset.game = 'full-quiz';
-    card.dataset.testid = 'full-quiz-support-card';
-    supportArea.prepend(card);
+    card.dataset.testid = 'full-quiz-primary-card';
+    primaryGrid.append(card);
   }
 
-  card.dataset.testid = 'full-quiz-support-card';
+  card.dataset.testid = 'full-quiz-primary-card';
   card.classList.add('game-card', 'game-card--quiz');
 
   const bestScore = getBestScoreValue();
   const quizHistory = getQuizScores();
 
   card.innerHTML = `
-    <div class="game-card-orbit"></div>
-    <p class="hud-kicker">QUIZ ENGINE</p>
+    <p class="game-card-kicker">QUIZ ENGINE</p>
     <h3>完整测验挑战</h3>
     <p>一次回答 20 道题，立即获得反馈、解析、评级和错题回顾。</p>
-    <div class="quiz-game-stats">
-      <div class="quiz-game-stat"><span>历史最高分</span><strong>${bestScore} / ${FULL_QUIZ_COUNT}</strong></div>
-      <div class="quiz-game-stat"><span>累计测验次数</span><strong>${quizHistory.length}</strong></div>
+    <div class="game-card-stats">
+      <span>最高分 <strong>${bestScore}</strong></span>
+      <span>最近分 <strong>${quizHistory.length > 0 ? quizHistory[quizHistory.length - 1].score : 0}</strong></span>
+      <span>测验次数 <strong>${quizHistory.length}</strong></span>
     </div>
-    <button class="play-btn quiz-play-btn" type="button">开始完整测验</button>
+    <button class="play-btn">开始完整测验</button>
   `;
 
-  card.querySelector('.quiz-play-btn')?.addEventListener('click', () => {
+  card.querySelector('.play-btn')?.addEventListener('click', () => {
     window.dispatchEvent(new CustomEvent('startfullquiz'));
   });
 }

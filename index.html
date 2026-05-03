@@ -135,15 +135,6 @@
             <p class="hud-kicker">SCIENCE ARCADE</p>
             <h2>游戏任务板</h2>
           </div>
-          <div class="games-support-area games-grid" data-testid="games-support-area">
-            <div class="lab-games-stat hud-shell" data-testid="lab-progress-support-card">
-              <div>
-                <p class="hud-kicker">LAB MISSION STATUS</p>
-                <strong><span id="lab-completed-count">0</span>/5 个实验已完成</strong>
-              </div>
-              <p>实验进度会在 T14 游戏中心继续联动展示。</p>
-            </div>
-          </div>
           <div class="games-grid games-primary-grid" data-testid="games-primary-grid">
             <div class="game-card" data-game="drag">
               <h3>元素拖拽归位</h3>
@@ -160,9 +151,22 @@
               <p>配对正确的化学反应</p>
               <button class="play-btn">开始游戏</button>
             </div>
-            <div class="game-card" data-game="collector">
+            <div class="game-card" data-game="full-quiz">
+              <h3>完整测验挑战</h3>
+              <p>一次回答 20 道题，立即获得反馈、解析、评级和错题回顾。</p>
+              <button class="play-btn">开始完整测验</button>
+            </div>
+          </div>
+          <div class="games-support-area games-grid" data-testid="games-support-area">
+            <div class="lab-games-stat hud-shell" data-testid="lab-progress-support-card">
+              <p class="hud-kicker">LAB MISSION STATUS</p>
+              <h3><span id="lab-completed-count">0</span>/5 个实验已完成</h3>
+              <p>实验进度会在 T14 游戏中心继续联动展示。</p>
+            </div>
+            <div class="game-card game-card--collector" data-game="collector">
+              <p class="hud-kicker">COLLECTION VAULT</p>
               <h3>元素收集</h3>
-              <p>收集你学习过的元素</p>
+              <p>查看已学习元素的收集墙、完成率和阶段奖励，了解下一步学习目标。</p>
               <button class="play-btn">查看收藏</button>
             </div>
           </div>
@@ -344,7 +348,6 @@
   <!-- 测验弹窗 -->
   <div id="quiz-modal" class="modal">
     <div class="modal-content">
-      <button class="modal-close">&times;</button>
       <div id="quiz-content"></div>
     </div>
   </div>
