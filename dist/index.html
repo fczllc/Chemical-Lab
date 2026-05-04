@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>元素探索者 - Element Explorer</title>
-  <script type="module" crossorigin src="/assets/index-XK2_R3uo.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-gDuvctT7.css">
+  <title>元素探索者 - Element Explorer</title>
+  <script type="module" crossorigin src="/assets/index-Db9vAptT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DOXbbsyh.css">
 </head>
 <body>
   <!-- Three.js 背景画布 -->
@@ -125,15 +125,11 @@
 
         <!-- 游戏中心 -->
         <section id="games" class="page-section">
-          <h2>游戏中心</h2>
-          <div class="lab-games-stat hud-shell">
-            <div>
-              <p class="hud-kicker">LAB MISSION STATUS</p>
-              <strong><span id="lab-completed-count">0</span>/5 个实验已完成</strong>
-            </div>
-            <p>实验进度会在 T14 游戏中心继续联动展示。</p>
+          <div class="games-hero hud-shell">
+            <p class="hud-kicker">SCIENCE ARCADE</p>
+            <h2>游戏任务板</h2>
           </div>
-          <div class="games-grid">
+          <div class="games-grid games-primary-grid" data-testid="games-primary-grid">
             <div class="game-card" data-game="drag">
               <h3>元素拖拽归位</h3>
               <p>将元素卡片拖到周期表的正确位置</p>
@@ -149,13 +145,26 @@
               <p>配对正确的化学反应</p>
               <button class="play-btn">开始游戏</button>
             </div>
-            <div class="game-card" data-game="collector">
+            <div class="game-card" data-game="full-quiz">
+              <h3>完整测验挑战</h3>
+              <p>一次回答 20 道题，立即获得反馈、解析、评级和错题回顾。</p>
+              <button class="play-btn">开始完整测验</button>
+            </div>
+          </div>
+          <div class="games-support-area games-grid" data-testid="games-support-area">
+            <div class="lab-games-stat hud-shell" data-testid="lab-progress-support-card">
+              <p class="hud-kicker">LAB MISSION STATUS</p>
+              <h3><span id="lab-completed-count">0</span>/5 个实验已完成</h3>
+              <p>实验进度会在 T14 游戏中心继续联动展示。</p>
+            </div>
+            <div class="game-card game-card--collector" data-game="collector">
+              <p class="hud-kicker">COLLECTION VAULT</p>
               <h3>元素收集</h3>
-              <p>收集你学习过的元素</p>
+              <p>查看已学习元素的收集墙、完成率和阶段奖励，了解下一步学习目标。</p>
               <button class="play-btn">查看收藏</button>
             </div>
           </div>
-          <div id="game-area" class="game-area"></div>
+          <div id="game-area" class="game-area" data-testid="active-game-stage"></div>
         </section>
 
         <!-- 虚拟实验室 -->
@@ -211,18 +220,19 @@
 
         <!-- 底部模块 -->
         <div class="bottom-modules" id="bottom-modules">
-          <div class="bottom-module" data-testid="bottom-compare">
+          <div class="bottom-module" data-testid="bottom-stats">
             <div class="module-header">
-              <h4>对比预览</h4>
+              <h4>学习进度</h4>
             </div>
-            <div class="module-content" id="bottom-compare-content">
-              <div class="compare-mini-slots">
-                <div class="mini-slot empty">+</div>
-                <div class="mini-slot empty">+</div>
-                <div class="mini-slot empty">+</div>
+            <div class="module-content" id="bottom-stats-content">
+              <div class="stats-mini-grid">
+                <div class="stat-mini"><span class="stat-label">已学习</span><span class="stat-num" id="mini-learned">0</span></div>
+                <div class="stat-mini"><span class="stat-label">已收藏</span><span class="stat-num" id="mini-collected">0</span></div>
+                <div class="stat-mini"><span class="stat-label">测验分</span><span class="stat-num" id="mini-quiz">0</span></div>
+                <div class="stat-mini"><span class="stat-label">成就数</span><span class="stat-num" id="mini-achievements">0</span></div>
               </div>
             </div>
-            <div class="lock-overlay" data-testid="lock-overlay-compare" style="display:none;">
+            <div class="lock-overlay" data-testid="lock-overlay-stats" style="display:none;">
               <span class="lock-icon">&#128274;</span>
               <span>未解锁</span>
             </div>
@@ -249,19 +259,18 @@
               <span>未解锁</span>
             </div>
           </div>
-          <div class="bottom-module" data-testid="bottom-stats">
+          <div class="bottom-module" data-testid="bottom-compare">
             <div class="module-header">
-              <h4>统计概览</h4>
+              <h4>元素对比</h4>
             </div>
-            <div class="module-content" id="bottom-stats-content">
-              <div class="stats-mini-grid">
-                <div class="stat-mini"><span class="stat-label">已学习</span><span class="stat-num" id="mini-learned">0</span></div>
-                <div class="stat-mini"><span class="stat-label">已收藏</span><span class="stat-num" id="mini-collected">0</span></div>
-                <div class="stat-mini"><span class="stat-label">测验分</span><span class="stat-num" id="mini-quiz">0</span></div>
-                <div class="stat-mini"><span class="stat-label">成就数</span><span class="stat-num" id="mini-achievements">0</span></div>
+            <div class="module-content" id="bottom-compare-content">
+              <div class="compare-mini-slots">
+                <div class="mini-slot empty">+</div>
+                <div class="mini-slot empty">+</div>
+                <div class="mini-slot empty">+</div>
               </div>
             </div>
-            <div class="lock-overlay" data-testid="lock-overlay-stats" style="display:none;">
+            <div class="lock-overlay" data-testid="lock-overlay-compare" style="display:none;">
               <span class="lock-icon">&#128274;</span>
               <span>未解锁</span>
             </div>
@@ -271,11 +280,6 @@
 
       <!-- 右侧详情面板 (固定侧边栏) -->
       <aside id="detail-panel" class="detail-panel docked" data-testid="detail-panel">
-        <div class="panel-header">
-          <div class="panel-actions">
-            <button id="btn-collect" title="收藏">&#9734;</button>
-          </div>
-        </div>
         <div class="panel-content">
           <div class="element-hero">
             <span class="atomic-number"></span>
@@ -284,11 +288,10 @@
             <span class="english-name"></span>
             <span class="atomic-mass"></span>
           </div>
-          <div id="electron-canvas" class="electron-canvas"></div>
           <div class="element-properties"></div>
+          <div id="spectrum-canvas" class="spectrum-canvas"></div>
           <div class="element-story"></div>
           <div class="element-funfact"></div>
-          <div id="spectrum-canvas" class="spectrum-canvas"></div>
           <div class="panel-buttons">
             <button id="btn-story">听故事</button>
             <button id="btn-quiz">小测验</button>
@@ -339,7 +342,6 @@
   <!-- 测验弹窗 -->
   <div id="quiz-modal" class="modal">
     <div class="modal-content">
-      <button class="modal-close">&times;</button>
       <div id="quiz-content"></div>
     </div>
   </div>
@@ -352,6 +354,6 @@
       <p class="popup-desc"></p>
     </div>
   </div>
-
+
 </body>
 </html>

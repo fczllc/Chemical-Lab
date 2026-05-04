@@ -27,6 +27,7 @@ let currentView = 'detail';
 let safetyConfirmed = false;
 let simulationRunId = 0;
 let completionTimer = null;
+let activeModal = null;
 
 export function initLab() {
   renderLabShell();
@@ -47,15 +48,17 @@ export function initLab() {
       return;
     }
 
+    closeSimulationModal();
     clearSimulationTimer();
   });
 
   window.addEventListener('performancemodechange', () => {
     if (getCurrentSection() === 'lab' && currentView === 'simulation') {
-      renderLabShell();
       const activeReaction = reactions.find((item) => item.id === activeReactionId);
       if (activeReaction) {
-        startSimulation(activeReaction);
+        closeSimulationModal();
+        clearSimulationTimer();
+        openSimulationModal(activeReaction);
       }
     }
   });
@@ -63,12 +66,22 @@ export function initLab() {
   window.addEventListener('statereset', () => {
     currentView = 'detail';
     safetyConfirmed = false;
+    closeSimulationModal();
     clearSimulationTimer();
     renderLabShell();
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && getCurrentSection() === 'lab') {
+      if (activeModal) {
+        closeSimulationModal();
+        clearSimulationTimer();
+        currentView = 'detail';
+        safetyConfirmed = false;
+        renderLabShell();
+        return;
+      }
+
       if (currentView === 'detail') {
         navigateTo('periodic-table');
         return;
@@ -109,7 +122,7 @@ function renderLabShell() {
         <div class="lab-item-card-header">
           <div>
             <h3>${reaction.name}</h3>
-            <p class="lab-elements">${reaction.reactants.join(' + ')}</p>
+            <p class="lab-elements">${reaction.reactants.map(formatFormula).join(' + ')}</p>
           </div>
           <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}">${isCompleted ? '✓ 已完成' : '未完成'}</span>
         </div>
@@ -183,7 +196,7 @@ function bindStageEvents(stage, activeReaction, isCompleted) {
 
     currentView = 'simulation';
     renderLabShell();
-    startSimulation(activeReaction, isCompleted);
+    openSimulationModal(activeReaction);
   });
 }
 
@@ -212,10 +225,6 @@ function ensureLabToolbar(section, selectedElement) {
 function renderStageContent(reaction, isCompleted) {
   if (currentView === 'safety') {
     return renderSafetyView(reaction, isCompleted);
-  }
-
-  if (currentView === 'simulation') {
-    return renderSimulationView(reaction);
   }
 
   if (currentView === 'result') {
@@ -340,34 +349,75 @@ function renderSafetyView(reaction, isCompleted) {
   `;
 }
 
-function renderSimulationView(reaction) {
+function openSimulationModal(reaction) {
+  closeSimulationModal();
+
   const safetyTheme = getSafetyTheme(reaction.safetyLevel);
   const performanceMode = getSettings().performanceMode || 'normal';
   const isSimplified = performanceMode === 'normal';
   const duration = getSimulationDuration(reaction.id, performanceMode);
 
-  return `
-    <div class="lab-stage-shell hud-shell lab-simulation-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
-      <div class="hud-shell-header">
-        <div>
-          <p class="hud-kicker">REACTION IN PROGRESS</p>
-          <h3>${reaction.name}</h3>
-        </div>
-        <button class="hud-action-btn" data-lab-back>中止并返回</button>
+  const backdrop = document.createElement('div');
+  backdrop.className = 'lab-modal-backdrop';
+
+  const modal = document.createElement('div');
+  modal.className = 'lab-modal';
+  modal.setAttribute('style', `--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}`);
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.innerHTML = `
+    <div class="lab-modal-header">
+      <div>
+        <p class="hud-kicker">REACTION IN PROGRESS</p>
+        <h3>${reaction.name}</h3>
       </div>
-      <div class="lab-simulation-meta">
-        <span>${formatFormula(EQUATION_MAP[reaction.id] || '')}</span>
-        <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
-      </div>
-      <div class="lab-canvas-frame">
-        <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
-        <div class="lab-canvas-overlay">
-          <span>反应视觉描述：${reaction.visualDescription}</span>
-          <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
-        </div>
+      <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
+    </div>
+    <div class="lab-simulation-meta">
+      <span>${formatFormula(EQUATION_MAP[reaction.id] || '')}</span>
+      <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
+    </div>
+    <div class="lab-canvas-frame">
+      <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
+      <div class="lab-canvas-overlay">
+        <span>反应视觉描述：${reaction.visualDescription}</span>
+        <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
       </div>
     </div>
   `;
+
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
+  activeModal = backdrop;
+
+  modal.querySelector('[data-lab-modal-close]')?.addEventListener('click', () => {
+    closeSimulationModal();
+    clearSimulationTimer();
+    currentView = 'detail';
+    safetyConfirmed = false;
+    renderLabShell();
+  });
+
+  backdrop.addEventListener('click', (event) => {
+    if (event.target === backdrop) {
+      closeSimulationModal();
+      clearSimulationTimer();
+      currentView = 'detail';
+      safetyConfirmed = false;
+      renderLabShell();
+    }
+  });
+
+  window.requestAnimationFrame(() => {
+    startSimulation(reaction);
+  });
+}
+
+function closeSimulationModal() {
+  if (activeModal) {
+    activeModal.remove();
+    activeModal = null;
+  }
 }
 
 function renderResultView(reaction, isCompleted) {
@@ -426,6 +476,7 @@ function startSimulation(reaction) {
       return;
     }
 
+    closeSimulationModal();
     markExperimentCompleted(reaction.experimentId);
     currentView = 'result';
     renderLabShell();
@@ -686,5 +737,5 @@ function getSafetyTheme(level) {
 }
 
 function formatFormula(value) {
-  return String(value || '').replace(/(\d+)/g, '<sub>$1</sub>');
+  return String(value || '').replace(/([A-Z][a-z]?)(\d+)/g, '$1<sub>$2</sub>');
 }

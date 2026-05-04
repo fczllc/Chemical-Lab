@@ -1,3 +1,12 @@
+body:has(#lab.active) .detail-panel.docked {
+  display: none;
+}
+
+#lab.active {
+  padding-left: clamp(12px, 4vw, 56px);
+  padding-right: clamp(12px, 4vw, 56px);
+}
+
 .lab-toolbar {
   display: flex;
   align-items: center;
@@ -59,7 +68,6 @@
   margin-bottom: 6px;
 }
 
-.lab-elements,
 .lab-stage-description,
 .lab-stage-visual,
 .lab-toolbar-meta,
@@ -71,6 +79,12 @@
 .lab-confirm-row span,
 .lab-safety-alert p {
   color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.lab-elements {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
 }
 
 .lab-card-meta-row,
@@ -251,6 +265,43 @@
 .lab-games-stat strong {
   font-family: var(--font-display);
   font-size: 1.6rem;
+}
+
+.lab-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 4vw, 40px);
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.lab-modal {
+  width: min(1100px, 92vw);
+  max-height: min(760px, 88vh);
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 0.96));
+  border: 1px solid var(--lab-accent, rgba(148, 163, 184, 0.22));
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.35), 0 0 0 1px var(--lab-accent-glow, rgba(148, 163, 184, 0.14));
+  overflow: auto;
+}
+
+.lab-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lab-modal-header h3 {
+  font-family: var(--font-display);
+  margin-bottom: 6px;
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
