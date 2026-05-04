@@ -2,6 +2,7 @@
 import { elements, storyMediaByAtomicNumber } from '../data/index.js';
 import { getSelectedElement } from './storage.js';
 import { getCurrentSection, navigateTo } from './router.js';
+import { electronConfigHTML } from './chemNotation.js';
 
 const SAFE_COLOR_PATTERN = /^(#[0-9a-fA-F]{3,8}|rgba?\([\d\s.,%]+\)|hsla?\([\d\s.,%]+\)|[a-zA-Z-]+|var\(--[a-zA-Z0-9-]+\))$/;
 const LOCAL_STORY_MEDIA_PATTERN = /^\/assets\/elements\/(discovery|specimens)\/[\w.-]+\.webp$/;
@@ -94,7 +95,7 @@ function renderStoryShell() {
       <div class="story-transcript-panel">
         <div class="story-transcript-header">
           <span class="hud-kicker">NARRATIVE FEED</span>
-          <span>${escapeHTML(element.electronConfiguration || '电子排布待补充')}</span>
+          <span>${electronConfigHTML(element.electronConfiguration || '电子排布待补充')}</span>
         </div>
         <div class="story-body" aria-live="polite"></div>
       </div>

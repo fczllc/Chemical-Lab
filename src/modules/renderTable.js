@@ -12,6 +12,7 @@ import {
   ELEMENT_RARITY_LABELS,
   RENDER_TABLE_SAFETY_META
 } from '../data/contentMeta.js';
+import { electronConfigHTML } from './chemNotation.js';
 
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -282,9 +283,13 @@ function populateDetailPanel(element) {
       ? `<ul class="property-list">${element.applications.map((item) => `<li>${item}</li>`).join('')}</ul>`
       : '<span class="property-muted">暂无记录</span>';
 
+    const electronConfig = element.electronConfiguration
+      ? electronConfigHTML(element.electronConfiguration)
+      : '未知';
+
     props.innerHTML = `
       ${renderPropertyRow('发现年份', `${element.discoveryYear ?? '未知'}`)}
-      ${renderPropertyRow('电子排布', element.electronConfiguration || '未知')}
+      ${renderPropertyRow('电子排布', electronConfig)}
       ${renderPropertyRow('发现者', element.discoveredBy || '未知')}
       ${renderPropertyListRow('常见用途', applications)}
     `;

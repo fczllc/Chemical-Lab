@@ -11,6 +11,7 @@ import {
   SAFETY_LABELS
 } from '../data/contentMeta.js';
 import { navigateTo } from './router.js';
+import { electronConfigHTML } from './chemNotation.js';
 
 const SAFETY_COLORS = COMPARE_SAFETY_COLORS;
 const ROUTE_COMPARE_CONTAINER_ID = 'compare-container';
@@ -283,7 +284,7 @@ function renderElementCard(element) {
         ${renderAttrRow('类别', `<span class="compare-tag" style="--tag-color: ${element.color || '#38bdf8'}">${categoryLabel}</span>`, 'category')}
         ${renderAttrRow('周期', `第 ${element.period} 周期`, 'period')}
         ${renderAttrRow('族', `第 ${element.group} 族`, 'group')}
-        ${renderAttrRow('电子排布', element.electronConfiguration, 'electronConfiguration')}
+        ${renderAttrRow('电子排布', element.electronConfiguration ? electronConfigHTML(element.electronConfiguration) : '—', 'electronConfiguration')}
         ${renderAttrRow('发现年份', element.discoveryYear, 'discoveryYear')}
         ${renderAttrRow('发现者', element.discoveredBy, 'discoveredBy')}
         ${renderAttrRow('用途', topApplications.length > 0 ? `<ul class="compare-app-list">${topApplications.map((app) => `<li>${app}</li>`).join('')}</ul>` : '—', 'applications')}
