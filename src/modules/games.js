@@ -1,6 +1,7 @@
 /** ===== 游戏中心模块 ===== */
 import { GAME_KEYS, GAME_META } from '../data/contentMeta.js';
 import { reactions } from '../data/index.js';
+import { formulaHTML } from './chemNotation.js';
 import { navigateTo } from './router.js';
 import {
   getCollectedElements,
@@ -691,7 +692,7 @@ function renderReactionGame() {
     return `
       <button class="reaction-chip ${selected ? 'is-selected' : ''} ${matched ? 'is-matched' : ''}" data-reaction-left="${reaction.id}" ${matched ? 'disabled' : ''}>
         <small>${reaction.name}</small>
-        <strong>${reaction.reactants.join(' + ')}</strong>
+        <strong data-chem-notation="reactants">${reaction.reactants.map((reactant) => formulaHTML(reactant)).join(' + ')}</strong>
       </button>
     `;
   }).join('');
@@ -701,7 +702,7 @@ function renderReactionGame() {
     return `
       <button class="reaction-chip reaction-chip-product ${matched ? 'is-matched' : ''}" data-reaction-right="${product.id}" ${matched ? 'disabled' : ''}>
         <small>生成物</small>
-        <strong>${product.label}</strong>
+        <strong data-chem-notation="products">${renderProductFormulaLabel(product)}</strong>
       </button>
     `;
   }).join('');
@@ -743,6 +744,15 @@ function renderReactionGame() {
   document.querySelectorAll('[data-reaction-right]').forEach((button) => {
     button.addEventListener('click', () => handleReactionSelection(button.dataset.reactionRight));
   });
+}
+
+function renderProductFormulaLabel(product) {
+  const reaction = activeSession?.reactions.find((item) => item.id === product.id);
+  const productFormulas = Array.isArray(reaction?.products) && reaction.products.length > 0
+    ? reaction.products
+    : String(product.label || '').split(/\s+\+\s+/).filter(Boolean);
+
+  return productFormulas.map((formula) => formulaHTML(formula)).join(' + ');
 }
 
 function handleReactionSelection(productId) {
