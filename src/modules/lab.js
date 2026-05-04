@@ -8,6 +8,7 @@ import {
   getSettings,
   markExperimentCompleted
 } from './storage.js';
+import { formulaHTML, equationHTML } from './chemNotation.js';
 
 const EQUATION_MAP = {
   'reaction-hydrogen-combustion': '2H2 + O2 → 2H2O',
@@ -122,7 +123,7 @@ function renderLabShell() {
         <div class="lab-item-card-header">
           <div>
             <h3>${reaction.name}</h3>
-            <p class="lab-elements">${reaction.reactants.map(formatFormula).join(' + ')}</p>
+            <p class="lab-elements" data-chem-notation="reactants">${reaction.reactants.map((r) => formulaHTML(r)).join(' + ')}</p>
           </div>
           <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}">${isCompleted ? '✓ 已完成' : '未完成'}</span>
         </div>
@@ -248,18 +249,18 @@ function renderReactionDetail(reaction, isCompleted) {
           <button class="hud-action-btn" data-lab-back>返回列表</button>
         </div>
       </div>
-      <div class="lab-equation-card">
+      <div class="lab-equation-card" data-chem-notation="equation">
         <span>反应方程式</span>
-        <strong>${formatFormula(EQUATION_MAP[reaction.id] || `${reaction.reactants.join(' + ')} → ${reaction.products.join(' + ')}`)}</strong>
+        <strong>${equationHTML(EQUATION_MAP[reaction.id] || `${reaction.reactants.join(' + ')} → ${reaction.products.join(' + ')}`)}</strong>
       </div>
       <div class="lab-stage-grid">
-        <div class="lab-stage-card">
+        <div class="lab-stage-card" data-chem-notation="reactants">
           <span>反应物</span>
-          <strong>${reaction.reactants.map(formatFormula).join(' + ')}</strong>
+          <strong>${equationHTML(reaction.reactants.join(' + '))}</strong>
         </div>
-        <div class="lab-stage-card">
+        <div class="lab-stage-card" data-chem-notation="products">
           <span>生成物</span>
-          <strong>${reaction.products.map(formatFormula).join(' + ')}</strong>
+          <strong>${equationHTML(reaction.products.join(' + '))}</strong>
         </div>
         <div class="lab-stage-card">
           <span>安全级别</span>
@@ -373,8 +374,8 @@ function openSimulationModal(reaction) {
       </div>
       <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
     </div>
-    <div class="lab-simulation-meta">
-      <span>${formatFormula(EQUATION_MAP[reaction.id] || '')}</span>
+    <div class="lab-simulation-meta" data-chem-notation="equation">
+      <span>${equationHTML(EQUATION_MAP[reaction.id] || '')}</span>
       <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
     </div>
     <div class="lab-canvas-frame">
@@ -736,6 +737,4 @@ function getSafetyTheme(level) {
   return SAFETY_THEME[level] || SAFETY_THEME.caution;
 }
 
-function formatFormula(value) {
-  return String(value || '').replace(/([A-Z][a-z]?)(\d+)/g, '$1<sub>$2</sub>');
-}
+

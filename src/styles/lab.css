@@ -166,8 +166,8 @@ body:has(#lab.active) .detail-panel.docked {
   border: 1px solid rgba(148, 163, 184, 0.14);
 }
 
-.lab-stage-card span,
-.lab-equation-card span,
+.lab-stage-card > span,
+.lab-equation-card > span,
 .lab-notebook-title {
   display: block;
   color: var(--text-muted);
@@ -184,10 +184,44 @@ body:has(#lab.active) .detail-panel.docked {
   padding: 18px 20px;
 }
 
-.lab-equation-card strong {
+.lab-equation-card strong,
+.lab-stage-card strong {
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 2vw, 1.8rem);
-  color: #e2f3ff;
+  color: #ffffff;
+}
+
+.lab-stage-card[data-chem-notation] strong {
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.lab-stage-card:not([data-chem-notation]) strong {
+  font-size: 0.9rem;
+}
+
+.lab-stage-card:not([data-chem-notation]) .lab-safety-pill {
+  font-size: 0.9rem;
+}
+
+.lab-equation-card .chem-notation,
+.lab-stage-card .chem-notation,
+.lab-simulation-meta .chem-notation,
+.lab-equation-card .chem-notation .katex,
+.lab-stage-card .chem-notation .katex,
+.lab-simulation-meta .chem-notation .katex,
+.lab-equation-card .chem-notation .katex-html,
+.lab-stage-card .chem-notation .katex-html,
+.lab-simulation-meta .chem-notation .katex-html {
+  color: #ffffff !important;
+}
+
+.lab-equation-card .chem-notation .katex *,
+.lab-stage-card .chem-notation .katex *,
+.lab-simulation-meta .chem-notation .katex * {
+  color: #ffffff !important;
 }
 
 .lab-notebook-card {
@@ -201,6 +235,7 @@ body:has(#lab.active) .detail-panel.docked {
   display: grid;
   gap: 10px;
   color: #d9ebff;
+  font-size: 0.8rem;
 }
 
 .lab-safety-alert {
