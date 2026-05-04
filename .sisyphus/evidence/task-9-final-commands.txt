@@ -1,0 +1,31 @@
+Task 9 final command evidence
+
+Commands run:
+
+1. `npm run validate:data`
+Result: BLOCKED by pre-existing missing story media file.
+Output excerpt:
+`ENOENT: no such file or directory, open 'I:\Chemical-Lab\src\data\storyMedia\media-001-030.json'`
+
+2. `npm run build`
+Result: PASS.
+Output excerpt:
+`✓ built in 4.57s`
+KaTeX font assets emitted under `dist/assets/KaTeX_*`.
+
+3. `npx playwright test tests/content/chem-notation.spec.ts`
+Result: PASS.
+Output excerpt:
+`5 passed (17.4s)`
+
+4. `npx playwright test tests/ui/periodic-table-controls.spec.ts --reporter=line`
+Result: PASS.
+Output excerpt:
+`7 passed (28.1s)`
+
+5. Combined notation + shell + controls regression command was attempted earlier.
+Result: BLOCKED by existing/unrelated `tests/shell/home-shell.spec.ts` bottom-widget failures documented in `.sisyphus/notepads/latex-chemical-notation/problems.md` and `.sisyphus/evidence/task-8-regression-tests.txt`.
+
+Notes:
+- Build no longer reports the previous CSS unexpected-`}` warning after the stray trailing brace in `src/styles/periodic-table.css` was removed.
+- Chunk-size warning remains from the existing large application bundle and KaTeX dependency; it is not a correctness failure.

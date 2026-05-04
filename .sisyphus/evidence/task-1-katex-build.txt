@@ -1,0 +1,29 @@
+Task 1 KaTeX build evidence
+Date: 2026-05-04
+
+Changes verified:
+- `npm install katex` completed successfully: added 10 packages, audited 27 packages, found 0 vulnerabilities.
+- `package.json` dependencies include `"katex": "^0.16.45"`.
+- `package-lock.json` root package dependencies include `"katex": "^0.16.45"`.
+- `src/main.js` imports `katex/dist/katex.min.css` from the app bootstrap path.
+
+Production build:
+- Command: `npm run build`
+- Result: exit 0, `✓ built in 4.31s`
+- Note: build emitted an existing CSS minify warning: `Unexpected "}" [css-syntax-error]` at stdin:2430, but completed successfully.
+
+Asset handling:
+- Initial build emitted KaTeX assets but inlined one small KaTeX font in CSS as `data:font/woff2`.
+- Added minimal `vite.config.js` with `build.assetsInlineLimit: 0` to force KaTeX fonts to emitted files.
+- Final `dist/assets` listing includes bundled CSS `index-CUSxwVTQ.css` and emitted KaTeX font files including:
+  - `KaTeX_AMS-Regular-BQhdFMY1.woff2`
+  - `KaTeX_Main-Regular-B22Nviop.woff2`
+  - `KaTeX_Size3-Regular-gV2CO0n9.woff2`
+  - `KaTeX_Size3-Regular-CTq5MqoE.woff`
+  - `KaTeX_Size3-Regular-DgpXs0kz.ttf`
+  - `KaTeX_Typewriter-Regular-CO6r4hn1.woff2`
+- Final CSS check: `Select-String -Path "dist\\assets\\index-CUSxwVTQ.css" -Pattern "data:font"` returned no output.
+- Final CSS check found `/assets/KaTeX_Size3-Regular-gV2CO0n9.woff2`, confirming the previously inlined font is now file-backed.
+
+Diagnostics:
+- `lsp_diagnostics` could not initialize because the workspace does not include a valid TypeScript installation/tsserver path.

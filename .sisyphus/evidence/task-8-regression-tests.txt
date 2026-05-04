@@ -1,0 +1,21 @@
+Task 8 regression evidence
+
+Command attempted:
+npx playwright test tests/content/chem-notation.spec.ts tests/shell/home-shell.spec.ts tests/ui/periodic-table-controls.spec.ts
+
+Result:
+BLOCKED outside chemistry-notation scope.
+
+Passing portion:
+- `tests/content/chem-notation.spec.ts`: all 5 tests passed.
+
+Blocking failures:
+- `tests/shell/home-shell.spec.ts`: bottom-widget contract failures unrelated to KaTeX notation rendering.
+- Examples from Playwright output:
+  - `bottom-categories` expected visible but received hidden/inert.
+  - Bottom widget DOM order expected compare → categories → element-stats → stats, but received stats → categories → element-stats → compare.
+  - Compare preview click timed out due pointer interception by `main.main-content` / bottom panel toggle.
+
+Decision:
+- Do not weaken or rewrite unrelated shell/control assertions as part of Task 8.
+- Carry blocker into Task 9/final hardening notes.

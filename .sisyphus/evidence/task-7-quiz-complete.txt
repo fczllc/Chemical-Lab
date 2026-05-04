@@ -1,0 +1,23 @@
+Task 7 quiz notation migration evidence - 2026-05-04
+
+Files changed:
+- src/modules/quiz.js only
+
+Implementation evidence:
+- Imported formulaHTML and plainChemText from ./chemNotation.js.
+- Added renderChemText(text), renderFormulaLikeToken(token), isFormulaLikeToken(token), and local escapeHTML(value).
+- Applied renderChemText() to visible quiz question text, option text, feedback text, explanation text, and wrong-answer review question/selected/correct/explanation text.
+- Standalone element symbols are explicitly rejected by /^[A-Z][a-z]?$/ in isFormulaLikeToken(), so quiz-2 "元素符号 H" remains plain text.
+- Formula-like snippets such as H2O, CO2, and NaOH are detected as display tokens and rendered through formulaHTML().
+
+Scoring/storage preservation evidence:
+- handleAnswer still computes correctness with: selectedIndex === question.correctIndex.
+- getOptionState still compares quizSession.selectedIndex and question.correctIndex.
+- Option buttons still store only data-option-index; no data-option-value is present in src/modules/quiz.js.
+- addQuizScore payload remains score/total/accuracy/questionIds based; no rendered HTML is stored in quizScores.
+- correctIndex values and src/data/quizData.js were not modified.
+
+Verification commands and results:
+- lsp_diagnostics I:\Chemical-Lab\src\modules\quiz.js: unavailable because the workspace has no valid TypeScript installation / tsserver path.
+- Select-String -Path "src/modules/quiz.js" -Pattern "formulaHTML|plainChemText|renderChemText|correctIndex|addQuizScore|data-option-index|data-option-value": confirmed notation helper use, correctIndex scoring references, data-option-index usage, and no data-option-value matches.
+- npm run build: PASS. Vite built successfully in 4.97s. Existing warnings remained: CSS minify warning for an unexpected "}" and Rollup chunk-size warning.

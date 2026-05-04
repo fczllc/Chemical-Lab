@@ -1,0 +1,10 @@
+Task 3: Migrate lab and reaction displays to centralized chemistry notation renderer
+
+- Modified: src/modules/lab.js
+- Imported formulaHTML and renderEquationToElement from ./chemNotation.js
+- Replaced all formatFormula() calls with formulaHTML() in template strings
+- Removed old formatFormula() helper
+- Added data-chem-notation attributes to formula containers
+- Build: PASS (npm run build completed successfully)
+- No remaining formatFormula references in lab.js
+

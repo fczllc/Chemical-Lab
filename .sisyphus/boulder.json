@@ -1,95 +1,108 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\json-content-migration.md",
-  "started_at": "2026-04-28T15:14:42.906Z",
+  "active_plan": "I:\\Chemical-Lab\\.sisyphus\\plans\\latex-chemical-notation.md",
+  "started_at": "2026-05-04T09:53:28.807Z",
   "session_ids": [
-    "ses_22b78dab6ffe3oOrMz46zh2K6I"
+    "ses_20dc1bb88ffeqak3FSyWFS4eN9",
+    "ses_20d89c146ffe5BTMcb6FMzyUTI",
+    "ses_20d898829ffe44A1ELc7o2lYdD",
+    "ses_20d894c35ffejApogFMCBmuaXD",
+    "ses_20d851769ffep3pFcmXFZsA4bZ",
+    "ses_20d84da84ffehKoCV0eIghl4ny",
+    "ses_20d51a258ffewC9cbNu4KtpneJ",
+    "ses_20d51a1a5ffeR4bF7Bpp4df476",
+    "ses_20ce4699affeKOQn75WO0ad2sR",
+    "ses_20ce46820ffeQT1yOiDzqCF6La",
+    "ses_20ccc4603ffeAvvQisNRa7Q8rC",
+    "ses_20ccc451cffeoKlZg5EfQ9Npim"
   ],
   "session_origins": {
-    "ses_22b78dab6ffe3oOrMz46zh2K6I": "direct"
+    "ses_20dc1bb88ffeqak3FSyWFS4eN9": "direct",
+    "ses_20d89c146ffe5BTMcb6FMzyUTI": "appended",
+    "ses_20d898829ffe44A1ELc7o2lYdD": "appended",
+    "ses_20d894c35ffejApogFMCBmuaXD": "appended",
+    "ses_20d851769ffep3pFcmXFZsA4bZ": "appended",
+    "ses_20d84da84ffehKoCV0eIghl4ny": "appended",
+    "ses_20d51a258ffewC9cbNu4KtpneJ": "appended",
+    "ses_20d51a1a5ffeR4bF7Bpp4df476": "appended",
+    "ses_20ce4699affeKOQn75WO0ad2sR": "appended",
+    "ses_20ce46820ffeQT1yOiDzqCF6La": "appended",
+    "ses_20ccc4603ffeAvvQisNRa7Q8rC": "appended",
+    "ses_20ccc451cffeoKlZg5EfQ9Npim": "appended"
   },
-  "plan_name": "json-content-migration",
+  "plan_name": "latex-chemical-notation",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "建立统一内容访问边界与同步 JSON 约束",
-      "session_id": "ses_22b551347ffe6YPr6nx8Fp7PkT",
+      "task_title": "Add KaTeX dependency and Vite asset baseline",
+      "session_id": "ses_20d96a06affevKgEjHrj54Fmi2",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-04-28T15:20:19.309Z"
+      "category": "business-logic",
+      "updated_at": "2026-05-04T09:58:59.330Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "迁移 elements 数据并保留元素校验链",
-      "session_id": "ses_22b4f8fcbffe3h2Q8OWRqEUNJe",
+      "task_title": "Create centralized chemistry notation renderer",
+      "session_id": "ses_20d9151c6ffexOBKY7UR6XZfoD",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-04-28T15:28:52.167Z"
+      "category": "business-logic",
+      "updated_at": "2026-05-04T10:07:21.755Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "迁移 quizData 数据并保留测验引用校验",
-      "session_id": "ses_22b45e8e3ffeygkLPfyKByOZg9",
+      "task_title": "Migrate lab and reaction displays to the renderer",
+      "session_id": "ses_20d89c146ffe5BTMcb6FMzyUTI",
       "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-04-28T15:37:42.944Z"
-    },
-    "todo:4": {
-      "task_key": "todo:4",
-      "task_label": "4",
-      "task_title": "迁移 reactions 数据并保留实验/游戏消费链",
-      "session_id": "ses_22b404953ffev813tVxWJFqQxn",
-      "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-04-28T15:42:54.708Z"
-    },
-    "todo:5": {
-      "task_key": "todo:5",
-      "task_label": "5",
-      "task_title": "迁移 achievementsData 数据并保留成就判定语义",
-      "session_id": "ses_22b3bb9d7ffead50Z8I7iuxDUz",
-      "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-04-28T15:48:59.655Z"
+      "category": "visual-engineering",
+      "updated_at": "2026-05-04T10:12:03.045Z"
     },
     "todo:6": {
       "task_key": "todo:6",
       "task_label": "6",
-      "task_title": "迁移 learningPath 数据并保留阶段解锁语义",
-      "session_id": "ses_22b32ea3bffeiyB3GroTpf7hMW",
+      "task_title": "Migrate reaction game formula displays",
+      "session_id": "ses_20d84da84ffehKoCV0eIghl4ny",
       "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-04-28T15:57:29.599Z"
-    },
-    "todo:7": {
-      "task_key": "todo:7",
-      "task_label": "7",
-      "task_title": "收敛重复内容元数据到共享配置模块",
-      "session_id": "ses_22b2e8baeffeoPBa1y7mWQ50DE",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-04-28T16:06:03.795Z"
+      "category": "business-logic",
+      "updated_at": "2026-05-04T10:19:19.979Z"
     },
     "todo:8": {
       "task_key": "todo:8",
       "task_label": "8",
-      "task_title": "加固验证链路、数据烟雾测试与导入审计",
-      "session_id": "ses_22b1c6553ffeOprmhxDfNRSSi9",
+      "task_title": "Add and update Playwright notation coverage",
+      "session_id": "ses_20d51a258ffewC9cbNu4KtpneJ",
+      "agent": "explore",
+      "category": "",
+      "updated_at": "2026-05-04T11:12:04.713Z"
+    },
+    "todo:9": {
+      "task_key": "todo:9",
+      "task_label": "9",
+      "task_title": "Final build, layout, performance, accessibility, and security hardening",
+      "session_id": "ses_20d0746b7ffeAsjUB5FL9NWXCL",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-04-28T16:40:30.444Z"
+      "category": "deep",
+      "updated_at": "2026-05-04T13:01:20.868Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_22aee413fffeCQojEH9Oh5pfs0",
+      "session_id": "ses_20ccad456ffeClVa4PD6ZczBel",
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
-      "updated_at": "2026-04-28T17:16:57.502Z"
+      "updated_at": "2026-05-04T13:43:29.399Z"
+    },
+    "final-wave:f4": {
+      "task_key": "final-wave:f4",
+      "task_label": "F4",
+      "task_title": "Scope Fidelity Check — deep",
+      "session_id": "ses_20cc8280effestTEBhYDal4J7e",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-05-04T13:44:30.113Z"
     }
   }
 }

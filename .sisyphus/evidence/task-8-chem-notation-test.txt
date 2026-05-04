@@ -1,0 +1,20 @@
+Task 8 chemistry notation Playwright evidence
+
+Command:
+npx playwright test tests/content/chem-notation.spec.ts
+
+Result:
+PASS after fixing lab full-equation rendering to use equationHTML().
+
+Observed passing tests:
+- lab equation card renders KaTeX
+- detail panel electron config renders KaTeX
+- periodic table cell symbol stays plain
+- no KaTeX console errors
+- responsive layout at mobile width
+
+Follow-up regression command attempted:
+npx playwright test tests/content/chem-notation.spec.ts tests/shell/home-shell.spec.ts tests/ui/periodic-table-controls.spec.ts
+
+Result:
+Chem notation tests passed, but home-shell bottom-widget assertions failed/timeout due hidden/inert bottom widgets, unexpected bottom module order, and compare preview click interception. Details documented in `.sisyphus/notepads/latex-chemical-notation/problems.md`.

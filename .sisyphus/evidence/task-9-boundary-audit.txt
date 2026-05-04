@@ -1,0 +1,25 @@
+Task 9 boundary audit evidence
+
+KaTeX API boundary search:
+Command: `Select-String -Path src\**\* -Pattern "katex\.render|renderToString|trust:\s*true"`
+
+Results:
+- `src/modules/chemNotation.js:223:katex.render(latex, element, katexOptions);`
+- `src/modules/chemNotation.js:254:const html = katex.renderToString(latex, katexOptions);`
+- No `trust: true` matches found.
+
+Data mutation audit:
+Command: `git diff --name-only -- ':!node_modules' | Where-Object { $_ -match '^src/data/' }`
+Result: no `src/data/` files modified.
+
+Production font inlining audit:
+Command: scan built CSS files in `dist/` for `data:font`.
+Result: `OK: index-DBhllzSU.css`; no `data:font` in production CSS.
+
+CSS/style boundary:
+- Added scoped `src/styles/chemNotation.css` for `.chem-notation` and nested KaTeX wrapping only.
+- Imported after KaTeX CSS from `src/main.js`.
+
+Known blockers outside notation scope:
+- `npm run validate:data` fails because `src/data/storyMedia/media-001-030.json` is missing.
+- `tests/shell/home-shell.spec.ts` bottom-widget contract has hidden/inert/order/click-interception failures unrelated to chemistry notation.

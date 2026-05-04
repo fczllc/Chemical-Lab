@@ -1,0 +1,23 @@
+Task 6 reaction game notation migration evidence
+Date: 2026-05-04
+
+Files changed:
+- src/modules/games.js
+- .sisyphus/notepads/latex-chemical-notation/learnings.md
+
+Source evidence from src/modules/games.js:
+- Line 4 imports formulaHTML from ./chemNotation.js.
+- Reaction reactant chip keeps data-reaction-left="${reaction.id}" and matched/selected classes; formula container now uses data-chem-notation="reactants" with reaction.reactants.map((reactant) => formulaHTML(reactant)).join(' + ').
+- Reaction product chip keeps data-reaction-right="${product.id}" and matched/disabled behavior; formula container now uses data-chem-notation="products" with formulaHTML(product.label).
+- Existing querySelectorAll('[data-reaction-left]') and querySelectorAll('[data-reaction-right]') click handler bindings remain present.
+- Memory card rendering remains plain text via <strong>${card.label}</strong>; collector/element-symbol game rendering was not modified.
+
+Verification:
+- lsp_diagnostics on src/modules/games.js attempted, but the workspace LSP failed to initialize: "Could not find a valid TypeScript installation. Please ensure that the \"typescript\" dependency is installed in the workspace or that a valid `tsserver.path` is specified."
+- npm run build passed.
+- Build output summary: Vite v6.4.2 transformed 43 modules and completed with "✓ built in 4.93s".
+- Build emitted existing warnings for CSS minify unexpected "}" and chunk size >500 kB, but exited successfully.
+
+Scope preservation:
+- No changes made to game scoring, timer, randomization, activeSession structure, product IDs, or chip click handlers.
+- No data files modified.

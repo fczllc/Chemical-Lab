@@ -58,6 +58,7 @@
 .activity-item span,
 .activity-empty {
   color: var(--text-secondary);
+  font-size: 0.8rem;
 }
 
 .achievement-overview-stats,

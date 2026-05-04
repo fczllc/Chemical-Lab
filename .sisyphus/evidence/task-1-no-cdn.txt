@@ -1,0 +1,17 @@
+Task 1 prohibited KaTeX usage search evidence
+Date: 2026-05-04
+
+Required search terms:
+- `cdn.jsdelivr`
+- `renderMathInElement`
+- `auto-render`
+
+Dedicated Grep tool status:
+- Attempted Grep searches failed because `rg` is not available in PATH: `Executable not found in $PATH: "rg"`.
+
+Fallback command used:
+`Get-ChildItem -Path "src" -Recurse -File -Include *.js,*.ts,*.css,*.html | Select-String -Pattern "cdn\\.jsdelivr","renderMathInElement","auto-render"; Select-String -Path "index.html" -Pattern "cdn\\.jsdelivr","renderMathInElement","auto-render"`
+
+Result:
+- No output / no matches in `src/` or `index.html`.
+- No CDN scripts, KaTeX auto-render extension, MathJax, or global DOM scanning were added.

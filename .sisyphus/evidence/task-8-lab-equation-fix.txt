@@ -1,0 +1,13 @@
+Task 8: Fix lab equation cards to use equationHTML
+
+- Modified: src/modules/chemNotation.js
+  - Added exported equationHTML(value, options = {}) helper calling renderHTML('equation', value, equationToLatex, options)
+- Modified: src/modules/lab.js
+  - Imported equationHTML from ./chemNotation.js
+  - Replaced formulaHTML with equationHTML in .lab-equation-card strong
+  - Replaced formulaHTML with equationHTML in .lab-simulation-meta span
+  - Kept formulaHTML for reactants/products lists
+- Preserved: EQUATION_MAP, reactions data, safety flow, modal behavior
+- Build: PASS (npm run build completed successfully)
+- Playwright: PASS (5/5 tests passed in 21.3s)
+
