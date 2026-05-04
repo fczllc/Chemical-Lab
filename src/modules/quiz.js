@@ -1,5 +1,6 @@
 /** ===== 测验模块 ===== */
 import { quizData } from '../data/index.js';
+import { formulaHTML, plainChemText } from './chemNotation.js';
 import { restoreSelectedElementView } from './renderTable.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
@@ -13,6 +14,7 @@ import {
 const QUICK_QUIZ_COUNT = 5;
 const FULL_QUIZ_COUNT = 20;
 const FULL_QUIZ_GAME_KEY = 'quiz-full';
+const FORMULA_TOKEN_PATTERN = /(^|[^A-Za-z0-9])((?:\d+)?(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*)(?:(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*|[·.])*)[↑↓]?)(?=$|[^A-Za-z0-9])/g;
 
 let quizSession = createEmptySession();
 let isQuizBound = false;
@@ -268,13 +270,13 @@ function renderQuestionMarkup(question) {
           <p class="quiz-question-category">${question.category || '元素知识'}</p>
           <span class="quiz-mode-badge">${quizSession.mode === 'full' ? '20题完整挑战' : '5题快速挑战'}</span>
         </div>
-        <h4 class="quiz-question-text">${question.question}</h4>
+        <h4 class="quiz-question-text">${renderChemText(question.question)}</h4>
         <div class="quiz-options-grid">
           ${question.options.map((option, optionIndex) => renderOptionButton(question, option, optionIndex)).join('')}
         </div>
         <div class="quiz-feedback-panel ${quizSession.answered ? `is-${quizSession.feedbackTone}` : ''}" aria-live="polite">
-          <p class="quiz-feedback-text">${quizSession.feedbackMessage || '请选择一个答案，系统会立刻显示反馈和解析。'}</p>
-          <p class="quiz-explanation-text">${quizSession.lastExplanation || '每道题都带有知识解析，帮助你快速复盘。'}</p>
+          <p class="quiz-feedback-text">${renderChemText(quizSession.feedbackMessage || '请选择一个答案，系统会立刻显示反馈和解析。')}</p>
+          <p class="quiz-explanation-text">${renderChemText(quizSession.lastExplanation || '每道题都带有知识解析，帮助你快速复盘。')}</p>
         </div>
       </div>
 
@@ -304,9 +306,56 @@ function renderOptionButton(question, option, optionIndex) {
   return `
     <button class="${classNames.join(' ')}" data-option-index="${optionIndex}" ${quizSession.answered ? 'disabled' : ''}>
       <span class="quiz-option-prefix">${String.fromCharCode(65 + optionIndex)}</span>
-      <span>${option}</span>
+      <span>${renderChemText(option)}</span>
     </button>
   `;
+}
+
+function renderChemText(text) {
+  const plainText = plainChemText(text);
+  if (!plainText) {
+    return '';
+  }
+
+  let output = '';
+  let lastIndex = 0;
+
+  plainText.replace(FORMULA_TOKEN_PATTERN, (match, prefix, token, offset) => {
+    const tokenStart = offset + prefix.length;
+    output += escapeHTML(plainText.slice(lastIndex, tokenStart));
+    output += renderFormulaLikeToken(token);
+    lastIndex = tokenStart + token.length;
+    return match;
+  });
+
+  output += escapeHTML(plainText.slice(lastIndex));
+  return output;
+}
+
+function renderFormulaLikeToken(token) {
+  const plainToken = plainChemText(token);
+  if (!isFormulaLikeToken(plainToken)) {
+    return escapeHTML(token);
+  }
+
+  const rendered = formulaHTML(token);
+  return rendered.includes('class="katex') ? rendered : escapeHTML(token);
+}
+
+function isFormulaLikeToken(token) {
+  if (!token || /^[A-Z][a-z]?$/.test(token)) {
+    return false;
+  }
+
+  const elementMatches = token.match(/[A-Z][a-z]?/g) || [];
+  return elementMatches.length > 1 || /\d|[₀₁₂₃₄₅₆₇₈₉]|[()[\]{}·.^↑↓+-]/.test(token);
+}
+
+function escapeHTML(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 function getOptionState(question, optionIndex) {
@@ -375,10 +424,10 @@ function renderResultMarkup() {
           <div class="quiz-review-list">
             ${wrongAnswers.map((item) => `
               <article class="quiz-review-item">
-                <p class="quiz-review-question">${item.question}</p>
-                <p class="quiz-review-answer"><span>你的答案：</span>${item.selectedText}</p>
-                <p class="quiz-review-answer is-correct"><span>正确答案：</span>${item.correctText}</p>
-                <p class="quiz-review-explanation">${item.explanation}</p>
+                <p class="quiz-review-question">${renderChemText(item.question)}</p>
+                <p class="quiz-review-answer"><span>你的答案：</span>${renderChemText(item.selectedText)}</p>
+                <p class="quiz-review-answer is-correct"><span>正确答案：</span>${renderChemText(item.correctText)}</p>
+                <p class="quiz-review-explanation">${renderChemText(item.explanation)}</p>
               </article>
             `).join('')}
           </div>
