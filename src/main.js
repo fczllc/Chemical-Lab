@@ -1,4 +1,6 @@
 /** ===== 主入口 ===== */
+import 'katex/dist/katex.min.css';
+import './styles/chemNotation.css';
 import { elements } from './data/index.js';
 import {
   disposeRenderer,

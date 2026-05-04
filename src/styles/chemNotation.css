@@ -1,0 +1,57 @@
+.chem-notation {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 0;
+  vertical-align: baseline;
+  overflow-wrap: anywhere;
+}
+
+.chem-notation .katex {
+  max-width: 100%;
+  font-size: 1em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.chem-notation .katex-html {
+  max-width: 100%;
+  overflow-wrap: normal;
+}
+
+/* Lab cards: keep equations on one line with local scroll for very long formulas */
+.lab-equation-card .chem-notation,
+.lab-stage-card .chem-notation,
+.lab-simulation-meta .chem-notation {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.lab-equation-card .chem-notation .katex,
+.lab-stage-card .chem-notation .katex,
+.lab-simulation-meta .chem-notation .katex {
+  max-width: none;
+  white-space: nowrap;
+}
+
+.lab-equation-card .chem-notation .katex-html,
+.lab-stage-card .chem-notation .katex-html,
+.lab-simulation-meta .chem-notation .katex-html {
+  max-width: none;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.chem-notation--display {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+@media (max-width: 767px) {
+  .chem-notation .katex {
+    font-size: 0.95em;
+  }
+}
