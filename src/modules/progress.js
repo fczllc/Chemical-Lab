@@ -1,6 +1,6 @@
 /** ===== 学习进度模块 ===== */
 import { EXPERIMENT_LABELS, FEATURE_LABELS, GAME_LABELS } from '../data/contentMeta.js';
-import { achievementsData } from '../data/index.js';
+import { achievementsData, curriculumTags, elements, quizData, reactions } from '../data/index.js';
 import { learningPath } from '../data/index.js';
 import {
   getAchievementDates,
@@ -21,6 +21,113 @@ let isBound = false;
 let selectedStageId = learningPath.stages[0]?.id || null;
 let celebrationMessage = '';
 let celebrationTimer = null;
+
+/** Build a map of curriculum tag -> canonical metadata for label lookups */
+const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
+
+const ELEMENT_BY_SYMBOL = new Map((elements || []).map((element) => [element.symbol, element]));
+
+function hasCurriculumTag(record, tagId) {
+  return Array.isArray(record?.curriculumTags) && record.curriculumTags.includes(tagId);
+}
+
+function isQuizCompleted(quizId, quizScores) {
+  return quizScores.some((score) => (
+    score.id === quizId
+    || score.quizId === quizId
+    || (Array.isArray(score.questionIds) && score.questionIds.includes(quizId))
+  ));
+}
+
+export const __progressTestHooks = {
+  isQuizCompleted,
+  computeTopicMastery
+};
+
+function extractAtomicNumbersFromFormula(value) {
+  if (typeof value !== 'string') {
+    return [];
+  }
+
+  return [...value.matchAll(/[A-Z][a-z]?/g)]
+    .map((match) => ELEMENT_BY_SYMBOL.get(match[0])?.atomicNumber)
+    .filter((atomicNumber) => Number.isInteger(atomicNumber));
+}
+
+/** Collect sample activities tagged with a curriculum topic for mastery checks. */
+function getActivitiesForTag(tagId) {
+  const taggedQuizzes = (quizData || []).filter((quiz) => hasCurriculumTag(quiz, tagId));
+  const taggedReactions = (reactions || []).filter((reaction) => hasCurriculumTag(reaction, tagId));
+  const elementNumbers = new Set();
+
+  taggedQuizzes.forEach((quiz) => {
+    if (Number.isInteger(Number(quiz.relatedElement))) {
+      elementNumbers.add(Number(quiz.relatedElement));
+    }
+  });
+
+  taggedReactions.forEach((reaction) => {
+    [...(reaction.reactants || []), ...(reaction.products || [])]
+      .flatMap((formula) => extractAtomicNumbersFromFormula(formula))
+      .forEach((atomicNumber) => elementNumbers.add(atomicNumber));
+  });
+
+  return {
+    elements: [...elementNumbers],
+    quizzes: taggedQuizzes.map((quiz) => quiz.id).filter(Boolean),
+    experiments: taggedReactions.map((reaction) => reaction.experimentId).filter(Boolean)
+  };
+}
+
+/** Compute topic mastery for a single tag based on current state. */
+function computeTopicMastery(tagId, learned, completedExperiments, quizScores) {
+  const meta = CURRICULUM_TAG_MAP.get(tagId);
+  if (!meta) {
+    return null;
+  }
+
+  const { elements: topicElements, quizzes, experiments } = getActivitiesForTag(tagId);
+  const completedElements = topicElements.filter((atomicNumber) => learned?.has(atomicNumber));
+  const completedQuizzes = quizzes.filter((quizId) => isQuizCompleted(quizId, quizScores));
+  const completedExperimentIds = experiments.filter((experimentId) => completedExperiments.has(experimentId));
+  const totalActivities = topicElements.length + quizzes.length + experiments.length;
+  const completedActivities = completedElements.length + completedQuizzes.length + completedExperimentIds.length;
+  const hasTouched = completedActivities > 0;
+  const isCompleted = totalActivities > 0 && completedActivities >= totalActivities;
+
+  return {
+    tagId,
+    grade: meta.grade || '',
+    chapter: meta.chapter || '',
+    topic: meta.topic || '',
+    displayPath: meta.displayPath || '',
+    started: hasTouched,
+    completed: isCompleted,
+    totalActivities,
+    completedActivities,
+    elementCount: topicElements.length,
+    quizCount: quizzes.length,
+    experimentCount: experiments.length
+  };
+}
+
+/** Compute curriculum summary for a stage using its curriculumTags. */
+function computeStageCurriculum(stage, learned, completedExperiments, quizScores) {
+  const tags = (stage.curriculumTags || []).filter((tagId) => CURRICULUM_TAG_MAP.has(tagId));
+  const topics = tags.map((tagId) => computeTopicMastery(tagId, learned, completedExperiments, quizScores)).filter(Boolean);
+  const startedCount = topics.filter((topic) => topic.started).length;
+  const completedCount = topics.filter((topic) => topic.completed).length;
+  const totalActivities = topics.reduce((sum, topic) => sum + topic.totalActivities, 0);
+  const completedActivities = topics.reduce((sum, topic) => sum + topic.completedActivities, 0);
+  return {
+    topics,
+    startedCount,
+    completedCount,
+    totalTopics: topics.length,
+    totalActivities,
+    completedActivities
+  };
+}
 
 export function initProgress() {
   renderProgress();
@@ -91,7 +198,7 @@ function renderProgress() {
   const gameScores = getGameScores();
   const gamePlays = getGamePlayCounts();
   const pathStages = learningPath?.stages || [];
-  const stageStates = getStageStates(pathStages, learned.size);
+  const stageStates = getStageStates(pathStages, learned, completedExperiments, quizScores);
   const currentStage = stageStates.find((stage) => stage.status === 'current')
     || [...stageStates].reverse().find((stage) => stage.status === 'complete')
     || stageStates[0]
@@ -208,15 +315,18 @@ function bindStageInteractions() {
   });
 }
 
-function getStageStates(stages, learnedCount) {
+function getStageStates(stages, learned, completedExperiments, quizScores) {
+  const learnedCount = learned.size;
   let previousStageComplete = true;
 
   return stages.map((stage) => {
+    const curriculum = computeStageCurriculum(stage, learned, completedExperiments, quizScores);
+    const hasCurriculumCompletion = curriculum.totalTopics > 0 && curriculum.completedCount >= curriculum.totalTopics;
     const completedCount = Math.min(learnedCount, stage.requiredCount);
     const progressPercent = stage.requiredCount > 0
       ? Math.round((completedCount / stage.requiredCount) * 100)
       : 0;
-    const isComplete = learnedCount >= stage.requiredCount;
+    const isComplete = learnedCount >= stage.requiredCount || hasCurriculumCompletion;
     const isUnlocked = previousStageComplete;
     let status = 'locked';
 
@@ -235,13 +345,20 @@ function getStageStates(stages, learnedCount) {
       progressPercent,
       completedCount,
       remainingCount: Math.max(stage.requiredCount - learnedCount, 0),
-      status
+      status,
+      curriculum
     };
   });
 }
 
 function renderStageCard(stage, learnedCount) {
   const icon = stage.status === 'complete' ? '✅' : stage.status === 'current' ? '🌟' : '🔒';
+  const curriculumLabels = (stage.curriculum?.topics || [])
+    .map((topic) => topic.displayPath)
+    .filter(Boolean);
+  const curriculumLabelHtml = curriculumLabels.length
+    ? `<div class="progress-stage-curriculum">${curriculumLabels.map((l) => `<span class="curriculum-chip">${l}</span>`).join('')}</div>`
+    : '';
   return `
     <article class="progress-stage-card hud-shell is-${stage.status}">
       <button class="progress-stage-button" type="button" data-stage-select="${stage.id}">
@@ -253,6 +370,7 @@ function renderStageCard(stage, learnedCount) {
           <strong>${stage.completedCount}/${stage.requiredCount}</strong>
         </div>
         <p>${stage.description}</p>
+        ${curriculumLabelHtml}
         <div class="progress-stage-meta-row">
           <span>需要元素：${stage.requiredCount}</span>
           <span>${stage.status === 'locked' ? '尚未解锁' : stage.status === 'complete' ? '已完成' : `还差 ${stage.remainingCount} 个`}</span>
@@ -261,6 +379,7 @@ function renderStageCard(stage, learnedCount) {
           <span class="progress-bar-fill" style="width:${stage.progressPercent}%"></span>
         </div>
         <div class="progress-stage-rewards">
+          ${stage.curriculum?.totalTopics ? `<span>主题 ${stage.curriculum.completedCount}/${stage.curriculum.totalTopics}</span>` : ''}
           <span>解锁 ${stage.unlockedGames.length} 个游戏</span>
           <span>${stage.unlockedExperiments.length} 个实验</span>
           <span>${stage.unlockedFeatures.length} 项功能</span>
@@ -273,6 +392,21 @@ function renderStageCard(stage, learnedCount) {
 function renderStageDetail(stage, snapshot) {
   const elementsMap = new Map(snapshot.elements.map((element) => [element.atomicNumber, element]));
   const learned = getLearnedElements();
+  const curriculum = stage.curriculum || { topics: [] };
+  const curriculumHtml = curriculum.topics.length
+    ? `
+      <div class="progress-detail-card">
+        <span>课程主题进度</span>
+        <div class="curriculum-topic-list">
+          ${curriculum.topics.map((t) => `
+            <div class="curriculum-topic-row">
+              <span class="curriculum-topic-path">${t.displayPath}</span>
+              <span class="curriculum-topic-status">${t.completed ? '✅' : t.started ? '🌟' : '○'} ${t.completed ? '已完成' : t.started ? '进行中' : '未开始'} · ${t.completedActivities}/${t.totalActivities || 0}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>`
+    : '';
 
   return `
     <article class="progress-stage-detail hud-shell">
@@ -299,6 +433,7 @@ function renderStageDetail(stage, snapshot) {
             ${stage.unlockedFeatures.map((featureKey) => `<li>✨ ${FEATURE_LABELS[featureKey] || featureKey}</li>`).join('')}
           </ul>
         </div>
+        ${curriculumHtml}
       </div>
     </article>
   `;

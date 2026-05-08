@@ -1,6 +1,6 @@
 /** ===== 统一学习状态与持久化 ===== */
 const STORAGE_KEY = 'element-explorer-kids-state';
-const SCHEMA_VERSION = 'v1';
+const SCHEMA_VERSION = 'v2';
 const SAVE_DEBOUNCE_MS = 500;
 
 const DEFAULT_SETTINGS = {
@@ -337,6 +337,41 @@ function migrateV0ToV1(data) {
   };
 }
 
+function getVersionedPayload(envelope) {
+  if (!envelope || typeof envelope !== 'object' || Array.isArray(envelope)) {
+    return null;
+  }
+
+  if (envelope.data && typeof envelope.data === 'object' && !Array.isArray(envelope.data)) {
+    return envelope.data;
+  }
+
+  return envelope;
+}
+
+function migratePersistedEnvelope(envelope) {
+  if (!envelope || typeof envelope !== 'object' || Array.isArray(envelope)) {
+    return null;
+  }
+
+  if (!envelope.version) {
+    return migrateV0ToV1(envelope);
+  }
+
+  const payload = getVersionedPayload(envelope);
+
+  if (envelope.version === 'v0') {
+    return migrateV0ToV1(payload);
+  }
+
+  if (envelope.version === 'v1' || envelope.version === SCHEMA_VERSION) {
+    return migrateV0ToV1(payload);
+  }
+
+  console.warn(`[storage] 未知状态版本 ${envelope.version}，正在尝试保留可识别的进度字段。`);
+  return migrateV0ToV1(payload);
+}
+
 function normalizePersistedData(data) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     return null;
@@ -404,45 +439,18 @@ function hydrateState() {
   const envelope = parseStoredEnvelope(rawValue);
 
   if (!envelope) {
-    return getStateSnapshot();
-  }
-
-  if (!envelope.version) {
-    const migratedLegacyData = migrateV0ToV1(envelope);
-    if (migratedLegacyData) {
-      normalizePersistedData(migratedLegacyData);
-      saveProgress();
-      return getStateSnapshot();
-    }
-
-    console.warn('[storage] 旧版状态无法迁移，已回退到默认状态。');
-    appState = createDefaultState(appState.elements);
     saveProgress();
     return getStateSnapshot();
   }
 
-  if (envelope.version === SCHEMA_VERSION) {
-    const normalized = normalizePersistedData(envelope.data);
-    if (!normalized) {
-      console.warn('[storage] 状态结构无效，已合并默认值。');
-      appState = createDefaultState(appState.elements);
-      saveProgress();
-    }
+  const migratedData = migratePersistedEnvelope(envelope);
+  const normalized = normalizePersistedData(migratedData);
 
-    return getStateSnapshot();
+  if (!normalized) {
+    console.warn('[storage] 状态结构无效，已合并默认值。');
+    appState = createDefaultState(appState.elements);
   }
 
-  if (envelope.version === 'v0') {
-    const migratedData = migrateV0ToV1(envelope.data);
-    if (migratedData) {
-      normalizePersistedData(migratedData);
-      saveProgress();
-      return getStateSnapshot();
-    }
-  }
-
-  console.warn(`[storage] 未知状态版本 ${envelope.version}，将使用默认状态。`);
-  appState = createDefaultState(appState.elements);
   saveProgress();
   return getStateSnapshot();
 }
@@ -898,4 +906,4 @@ export function resetAll() {
   return getStateSnapshot();
 }
 
-export { STORAGE_KEY, SCHEMA_VERSION, migrateV0ToV1 };
+export { STORAGE_KEY, SCHEMA_VERSION, migratePersistedEnvelope, migrateV0ToV1 };

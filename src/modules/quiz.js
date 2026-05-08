@@ -1,6 +1,6 @@
 /** ===== 测验模块 ===== */
 import { quizData } from '../data/index.js';
-import { formulaHTML, plainChemText } from './chemNotation.js';
+import { chemicalNotationFieldHTML, formulaHTML, plainChemText } from './chemNotation.js';
 import { restoreSelectedElementView } from './renderTable.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
@@ -15,6 +15,7 @@ const QUICK_QUIZ_COUNT = 5;
 const FULL_QUIZ_COUNT = 20;
 const FULL_QUIZ_GAME_KEY = 'quiz-full';
 const FORMULA_TOKEN_PATTERN = /(^|[^A-Za-z0-9])((?:\d+)?(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*)(?:(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*|[·.])*)[↑↓]?)(?=$|[^A-Za-z0-9])/g;
+const CURRICULUM_SCOPE_FIELDS = ['grade', 'chapter', 'topic'];
 
 let quizSession = createEmptySession();
 let isQuizBound = false;
@@ -65,6 +66,20 @@ function handleStateChange(event) {
   if (field === 'quizScores' || field === 'gameScores') {
     renderGamesHub();
   }
+}
+
+export function getQuizCurriculumMetadata(question = {}) {
+  const curriculumTags = normalizeCurriculumTags(question.curriculumTags);
+  const metadata = {
+    curriculumTags,
+    difficulty: normalizeCurriculumField(question.difficulty)
+  };
+
+  CURRICULUM_SCOPE_FIELDS.forEach((field) => {
+    metadata[field] = normalizeCurriculumField(question[field]);
+  });
+
+  return metadata;
 }
 
 function handleKeydown(event) {
@@ -244,9 +259,10 @@ function renderQuestionMarkup(question) {
   const relatedLabel = quizSession.mode === 'quick' && quizSession.element
     ? `${quizSession.element.chineseName} · ${quizSession.element.symbol}`
     : '元素知识挑战';
+  const curriculumMetadata = question.curriculumMetadata || getQuizCurriculumMetadata(question);
 
   return `
-    <div class="quiz-shell hud-shell ${quizSession.answered ? `quiz-shell--${quizSession.feedbackTone}` : ''}" style="--quiz-accent: ${accentColor};">
+    <div class="quiz-shell hud-shell ${quizSession.answered ? `quiz-shell--${quizSession.feedbackTone}` : ''}" style="--quiz-accent: ${accentColor};" data-curriculum-tags="${escapeHTML(curriculumMetadata.curriculumTags.join('|'))}" data-curriculum-difficulty="${escapeHTML(curriculumMetadata.difficulty)}" data-curriculum-grade="${escapeHTML(curriculumMetadata.grade)}" data-curriculum-chapter="${escapeHTML(curriculumMetadata.chapter)}" data-curriculum-topic="${escapeHTML(curriculumMetadata.topic)}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">${quizSession.mode === 'full' ? 'FULL QUIZ PROTOCOL' : 'QUICK QUIZ PROTOCOL'}</p>
@@ -271,6 +287,7 @@ function renderQuestionMarkup(question) {
           <span class="quiz-mode-badge">${quizSession.mode === 'full' ? '20题完整挑战' : '5题快速挑战'}</span>
         </div>
         <h4 class="quiz-question-text">${renderChemText(question.question)}</h4>
+        ${renderQuestionNotationMarkup(question)}
         <div class="quiz-options-grid">
           ${question.options.map((option, optionIndex) => renderOptionButton(question, option, optionIndex)).join('')}
         </div>
@@ -287,6 +304,26 @@ function renderQuestionMarkup(question) {
       </div>
     </div>
   `;
+}
+
+function renderQuestionNotationMarkup(question) {
+  const notationItems = [
+    { fieldName: 'formulaText', label: '已审核化学式' },
+    { fieldName: 'equationText', label: '已审核方程式' }
+  ].map(({ fieldName, label }) => {
+    const markup = chemicalNotationFieldHTML(question, fieldName);
+    if (!markup) {
+      return '';
+    }
+
+    return `<span class="quiz-reviewed-notation-item" data-chem-field="${fieldName}"><span>${label}</span><strong>${markup}</strong></span>`;
+  }).filter(Boolean);
+
+  if (notationItems.length === 0) {
+    return '';
+  }
+
+  return `<div class="quiz-reviewed-notation-row" data-chem-notation="reviewed-question-fields">${notationItems.join('')}</div>`;
 }
 
 function renderOptionButton(question, option, optionIndex) {
@@ -490,9 +527,12 @@ function renderGamesHub() {
 function createSession({ mode, element }) {
   const currentSection = getCurrentSection();
   const currentSelection = getSelectedElement();
-  const questions = mode === 'full'
+  const questions = (mode === 'full'
     ? shuffleArray([...quizData]).slice(0, FULL_QUIZ_COUNT)
-    : getQuickQuizQuestions(element);
+    : getQuickQuizQuestions(element)).map((question) => ({
+      ...question,
+      curriculumMetadata: getQuizCurriculumMetadata(question)
+    }));
 
   return {
     mode,
@@ -527,6 +567,18 @@ function getQuickQuizQuestions(element) {
   );
 
   return [...relatedQuestions, ...fillerQuestions].slice(0, QUICK_QUIZ_COUNT);
+}
+
+function normalizeCurriculumTags(tags) {
+  if (!Array.isArray(tags)) {
+    return [];
+  }
+
+  return [...new Set(tags.filter((tag) => typeof tag === 'string' && tag.trim()).map((tag) => tag.trim()))];
+}
+
+function normalizeCurriculumField(value) {
+  return typeof value === 'string' && value.trim() ? value.trim() : '';
 }
 
 function getWrongAnswerReview() {

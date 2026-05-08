@@ -57,6 +57,8 @@ const OPERATOR_LATEX = {
   '↓': '\\downarrow'
 };
 
+const STATE_SYMBOLS = new Set(['s', 'l', 'g', 'aq']);
+
 const CACHE_LIMIT = 250;
 const renderCache = new Map();
 
@@ -136,6 +138,12 @@ export function equationToLatex(value) {
   let hasFormula = false;
 
   for (const token of tokens) {
+    const conditionArrow = arrowConditionToLatex(token);
+    if (conditionArrow) {
+      converted.push(conditionArrow);
+      continue;
+    }
+
     if (OPERATOR_LATEX[token]) {
       converted.push(OPERATOR_LATEX[token]);
       continue;
@@ -188,6 +196,31 @@ export function electronConfigHTML(value, options = {}) {
   return renderHTML('electron-config', value, electronConfigToLatex, options);
 }
 
+export function chemicalNotationFieldHTML(record, fieldName, options = {}) {
+  const notationKind = chemicalNotationFieldKind(fieldName);
+  if (!notationKind || !record) {
+    return '';
+  }
+
+  const value = record[fieldName];
+  if (notationKind === 'formula') {
+    return formulaHTML(value, options);
+  }
+
+  return equationHTML(value, options);
+}
+
+export function chemicalNotationFieldKind(fieldName) {
+  if (fieldName === 'formulaText' || /FormulaText$/.test(fieldName)) {
+    return 'formula';
+  }
+
+  if (fieldName === 'equationText' || /EquationText$/.test(fieldName)) {
+    return 'equation';
+  }
+
+  return '';
+}
 function renderToElement(category, value, element, converter, options) {
   if (!element) {
     return null;
@@ -268,10 +301,15 @@ function convertFormulaBodyWithCharge(value) {
     body = body.slice(0, -1);
   }
 
+  const state = readStateSuffix(body);
+  if (state) {
+    suffix = `\\mathrm{(${state.value})}${suffix}`;
+    body = state.body;
+  }
+
   const chargeMatch = body.match(/\^([0-9]*[+-]|[+-][0-9]*)$/);
   if (chargeMatch) {
     body = body.slice(0, -chargeMatch[0].length);
-    suffix = `${suffix ? `${suffix}` : ''}`;
     const parsedBody = parseFormulaBody(body);
     return parsedBody ? { body: `${parsedBody}^{${chargeMatch[1]}}`, suffix } : null;
   }
@@ -329,8 +367,9 @@ function parseFormulaBody(value) {
     }
 
     if (char === '·' || char === '.') {
-      output += '\\cdot ';
-      index += 1;
+      const hydrateCoefficient = readDigits(value, index + 1);
+      output += `\\cdot ${hydrateCoefficient.value}`;
+      index = hydrateCoefficient.nextIndex;
       continue;
     }
 
@@ -356,7 +395,9 @@ function convertElectronConfigToken(token) {
 
 function tokenizeEquation(value) {
   return value
-    .replace(/(->|⟶|→|<-|←|↔|⇌|=)/g, ' $1 ')
+    .replace(/--([^\s-][^-]*?)-->/g, ' --$1--> ')
+    .replace(/([^\s-])-\[([^\]]+)\]->/g, '$1 -[$2]-> ')
+    .replace(/((?<!-)->|⟶|→|<-|←|↔|⇌|=)/g, ' $1 ')
     .replace(/\s\+\s/g, ' + ')
     .trim()
     .split(/\s+/)
@@ -373,8 +414,42 @@ function normalizeFormulaInput(value) {
     .replace(/\s+/g, ' ')
     .trim();
 
-  input = input.replace(/\s*(->|⟶|→|<-|←|↔|⇌|=)\s*/g, ' $1 ');
+  input = input.replace(/\s*((?<!-)->|⟶|→|<-|←|↔|⇌|=)\s*/g, ' $1 ');
   return input;
+}
+
+function arrowConditionToLatex(token) {
+  const conditionMatch = token.match(/^--([^-]+)-->$|^-\[([^\]]+)\]->$/);
+  if (!conditionMatch) {
+    return '';
+  }
+
+  const condition = sanitizeConditionText(conditionMatch[1] || conditionMatch[2]);
+  return condition ? `\\xrightarrow{\\mathrm{${condition}}}` : '';
+}
+
+function sanitizeConditionText(value) {
+  return String(value || '')
+    .trim()
+    .replace(/[^A-Za-z0-9+\-.,° ]/g, '')
+    .replace(/\s+/g, '\\;');
+}
+
+function readStateSuffix(value) {
+  const match = value.match(/\((s|l|g|aq)\)$/i);
+  if (!match) {
+    return null;
+  }
+
+  const state = match[1].toLowerCase();
+  if (!STATE_SYMBOLS.has(state)) {
+    return null;
+  }
+
+  return {
+    value: state,
+    body: value.slice(0, -match[0].length)
+  };
 }
 
 function readDigits(value, startIndex) {

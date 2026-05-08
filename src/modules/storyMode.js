@@ -139,6 +139,8 @@ function renderStoryMediaCard(media, label, side) {
   const alt = sanitizePlainText(media.altZh, `${media.symbol || ''}${label}图片`);
   const source = sanitizePlainText(media.source, '图片来源：');
 
+  const disclosure = getMediaDisclosure(media);
+
   return `
     <article class="story-media-card story-media-card-${escapeAttribute(side)}">
       <div class="story-media-frame">
@@ -151,7 +153,11 @@ function renderStoryMediaCard(media, label, side) {
           height="520"
         />
       </div>
-      <div class="story-media-source">图片来源：${escapeHTML(source)}</div>
+      <div class="story-media-attribution">${escapeHTML(source)}</div>
+      <div class="story-media-disclosure">
+        <span class="story-media-badge">${escapeHTML(disclosure.badge)}</span>
+        <span>${escapeHTML(disclosure.note)}</span>
+      </div>
     </article>
   `;
 }
@@ -160,32 +166,32 @@ function getMediaDisclosure(media) {
   if (media.sourceOrigin === 'ai_generated') {
     return {
       badge: 'AI教学场景',
-      note: sanitizePlainText(media.aiDisclosureZh, media.fallbackReason || '')
+      note: sanitizePlainText(media.aiDisclosureZh, media.fallbackReason || '本图像为AI生成的教学示意图，仅供学习参考。')
     };
   }
 
   if (media.sourceOrigin === 'project_generated') {
     return {
       badge: media.fallbackReason ? '教学场景' : '项目生成',
-      note: sanitizePlainText(media.fallbackReason, '')
+      note: sanitizePlainText(media.fallbackReason, '本图像为项目生成的教学示意图，仅供学习参考。')
     };
   }
 
   if (media.fallbackReason) {
     return {
       badge: '替代图像',
-      note: sanitizePlainText(media.fallbackReason, '')
+      note: sanitizePlainText(media.fallbackReason, '本图像为替代教学示意图，仅供学习参考。')
     };
   }
 
   if (media.aiDisclosureZh) {
     return {
       badge: 'AI说明',
-      note: sanitizePlainText(media.aiDisclosureZh, '')
+      note: sanitizePlainText(media.aiDisclosureZh, '本图像为AI生成的教学示意图，仅供学习参考。')
     };
   }
 
-  return { badge: '', note: '' };
+  return { badge: '教学示意图', note: '本图像为教学示意图，仅供学习参考。' };
 }
 
 function isLocalStoryMediaSrc(src) {
