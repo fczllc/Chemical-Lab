@@ -10,8 +10,22 @@
     "validate:elements": "node scripts/validate-elements.mjs",
     "validate:supporting": "node scripts/validate-supporting-data.mjs",
     "validate:spectral": "node scripts/validate-spectral-lines.mjs",
+    "validate:curriculum": "node scripts/validate-curriculum.mjs",
+    "validate:textbook-assets": "node scripts/validate-textbook-assets.mjs",
+    "validate:textbook-batch": "node scripts/textbook/validate-batch-contract.mjs",
+    "validate:textbook-drafts": "node scripts/textbook/validate-draft-schema.mjs",
+    "validate:textbook-experiments": "node scripts/textbook/validate-experiment-backlog.mjs",
+    "textbook:extract": "node scripts/textbook/extract-textbook.mjs",
+    "textbook:generate-drafts": "node scripts/textbook/generate-drafts.mjs",
+    "textbook:coverage": "node scripts/textbook/generate-coverage.mjs",
+    "textbook:promote": "node scripts/textbook/promote-topic.mjs",
+    "validate:textbook-runtime-boundary": "node scripts/textbook/validate-runtime-boundary.mjs",
+    "validate:textbook-workflow": "node scripts/textbook/validate-workflow.mjs",
+    "validate:all:safe": "npm run validate:elements && npm run validate:supporting && npm run validate:spectral && npm run validate:curriculum && npm run validate:textbook-assets && node scripts/audit-business-data-imports.mjs && npm run build",
     "validate:data": "npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs",
-    "validate:story-media": "node scripts/validate-story-media.mjs"
+    "validate:story-media": "node scripts/validate-story-media.mjs",
+    "validate:chem-notation": "node scripts/validate-chem-notation.mjs",
+    "validate:textbook-coverage": "node scripts/textbook/validate-coverage.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
