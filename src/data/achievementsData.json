@@ -8,7 +8,14 @@
       "unlockText": "学习第 1 个元素",
       "icon": "✨",
       "rarity": "common",
-      "condition": { "type": "learnedElements", "count": 1 }
+      "condition": {
+        "type": "learnedElements",
+        "count": 1
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "入门"
     },
     {
       "id": "achievement-learning-apprentice",
@@ -18,7 +25,14 @@
       "unlockText": "学习 10 个元素",
       "icon": "🧭",
       "rarity": "common",
-      "condition": { "type": "learnedElements", "count": 10 }
+      "condition": {
+        "type": "learnedElements",
+        "count": 10
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "入门"
     },
     {
       "id": "achievement-element-collector",
@@ -28,7 +42,14 @@
       "unlockText": "学习 50 个元素",
       "icon": "🗂️",
       "rarity": "rare",
-      "condition": { "type": "learnedElements", "count": 50 }
+      "condition": {
+        "type": "learnedElements",
+        "count": 50
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
     },
     {
       "id": "achievement-element-master",
@@ -38,7 +59,14 @@
       "unlockText": "学习全部 118 个元素",
       "icon": "👑",
       "rarity": "legendary",
-      "condition": { "type": "learnedElements", "count": 118 }
+      "condition": {
+        "type": "learnedElements",
+        "count": 118
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "高中基础"
     },
     {
       "id": "achievement-first-experiment",
@@ -48,7 +76,14 @@
       "unlockText": "完成 1 个实验",
       "icon": "🧪",
       "rarity": "common",
-      "condition": { "type": "completedExperiments", "count": 1 }
+      "condition": {
+        "type": "completedExperiments",
+        "count": 1
+      },
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "difficulty": "入门"
     },
     {
       "id": "achievement-lab-safety",
@@ -58,7 +93,14 @@
       "unlockText": "完成全部 5 个实验",
       "icon": "🛡️",
       "rarity": "rare",
-      "condition": { "type": "completedExperiments", "count": 5 }
+      "condition": {
+        "type": "completedExperiments",
+        "count": 5
+      },
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "difficulty": "初中"
     },
     {
       "id": "achievement-first-quiz",
@@ -68,7 +110,14 @@
       "unlockText": "完成 1 次测验",
       "icon": "📘",
       "rarity": "common",
-      "condition": { "type": "quizAttempts", "count": 1 }
+      "condition": {
+        "type": "quizAttempts",
+        "count": 1
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "入门"
     },
     {
       "id": "achievement-perfect-quiz",
@@ -78,7 +127,13 @@
       "unlockText": "任意一次测验获得满分",
       "icon": "🏆",
       "rarity": "rare",
-      "condition": { "type": "quizPerfectScore" }
+      "condition": {
+        "type": "quizPerfectScore"
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
     },
     {
       "id": "achievement-first-game",
@@ -88,7 +143,14 @@
       "unlockText": "完成 1 次任意游戏",
       "icon": "🎮",
       "rarity": "common",
-      "condition": { "type": "gamePlays", "count": 1 }
+      "condition": {
+        "type": "gamePlays",
+        "count": 1
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "入门"
     },
     {
       "id": "achievement-memory-master",
@@ -98,7 +160,15 @@
       "unlockText": "元素记忆翻牌最高分达到 120",
       "icon": "🧠",
       "rarity": "rare",
-      "condition": { "type": "gameScore", "gameKey": "game-memory", "count": 120 }
+      "condition": {
+        "type": "gameScore",
+        "gameKey": "game-memory",
+        "count": 120
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
     },
     {
       "id": "achievement-reaction-expert",
@@ -108,7 +178,82 @@
       "unlockText": "反应配对最高分达到 50",
       "icon": "⚡",
       "rarity": "legendary",
-      "condition": { "type": "gameScore", "gameKey": "game-reaction", "count": 50 }
+      "condition": {
+        "type": "gameScore",
+        "gameKey": "game-reaction",
+        "count": 50
+      },
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "difficulty": "高中基础"
+    },
+    {
+      "id": "achievement-carbon-allotrope-comparison",
+      "category": "quiz",
+      "title": "碳单质比较家",
+      "description": "完成金刚石、石墨与 C60 的比较主题学习，能说出结构、性质与用途之间的联系。",
+      "unlockText": "完成碳单质比较主题测验",
+      "icon": "💎",
+      "rarity": "rare",
+      "condition": {
+        "type": "curriculumQuizComplete",
+        "curriculumTagId": "g9-carbon-allotropes-comparison",
+        "count": 3
+      },
+      "curriculumTags": [
+        "g9-carbon-allotropes-comparison"
+      ],
+      "difficulty": "初中",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourceReviewStatus": "reviewed",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "volumeId": "pep-chemistry-g9-2024",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "练习与应用",
+          "lineRange": "3432-3462",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "candidateId": "achievement-0295-source-section-l3610-l3664-d45787521d",
+          "reviewedBy": "textbook-reviewer",
+          "reviewedAt": "2026-05-08T00:00:00.000Z",
+          "assetReferences": [
+            {
+              "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-01",
+              "sourceLineNumber": 3651
+            },
+            {
+              "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-02",
+              "sourceLineNumber": 3654
+            }
+          ],
+          "note": "Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-achievement"
+        },
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "volumeId": "pep-chemistry-g9-2024",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "练习与应用",
+          "lineRange": "3494-3504",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "candidateId": "achievement-0295-source-section-l3610-l3664-d45787521d",
+          "reviewedBy": "textbook-reviewer",
+          "reviewedAt": "2026-05-08T00:00:00.000Z",
+          "assetReferences": [
+            {
+              "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-01",
+              "sourceLineNumber": 3651
+            },
+            {
+              "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-02",
+              "sourceLineNumber": 3654
+            }
+          ],
+          "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+          "note": "Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-achievement supplemental C60 evidence"
+        }
+      ]
     }
   ]
 }

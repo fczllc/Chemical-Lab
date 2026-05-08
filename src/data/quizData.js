@@ -11,7 +11,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "基础认识",
     "relatedElement": 8,
-    "explanation": "氧气是空气中的重要成分之一，能帮助生物呼吸，也能让许多燃烧现象持续进行。"
+    "explanation": "氧气是空气中的重要成分之一，能帮助生物呼吸，也能让许多燃烧现象持续进行。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-2",
@@ -25,7 +29,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "符号识别",
     "relatedElement": 1,
-    "explanation": "H 是氢元素的符号。氢是元素周期表中的第一个元素，也是宇宙中非常常见的元素。"
+    "explanation": "H 是氢元素的符号。氢是元素周期表中的第一个元素，也是宇宙中非常常见的元素。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-3",
@@ -39,7 +47,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "生活用途",
     "relatedElement": 14,
-    "explanation": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
+    "explanation": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-4",
@@ -53,7 +65,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "分类判断",
     "relatedElement": 18,
-    "explanation": "氩属于稀有气体，化学性质比较稳定，常被用在灯泡和保护气体环境中。"
+    "explanation": "氩属于稀有气体，化学性质比较稳定，常被用在灯泡和保护气体环境中。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-5",
@@ -67,7 +83,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "生活用途",
     "relatedElement": 10,
-    "explanation": "氖在通电后会发出明亮光芒，所以常被用来制作霓虹灯招牌。"
+    "explanation": "氖在通电后会发出明亮光芒，所以常被用来制作霓虹灯招牌。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-6",
@@ -81,7 +101,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "生活用途",
     "relatedElement": 29,
-    "explanation": "铜的导电性很好，又容易加工，因此常用于电线、电缆和电子元件。"
+    "explanation": "铜的导电性很好，又容易加工，因此常用于电线、电缆和电子元件。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-7",
@@ -95,7 +119,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "生活用途",
     "relatedElement": 20,
-    "explanation": "钙是骨骼和牙齿的重要组成元素，帮助身体保持坚固和健康。"
+    "explanation": "钙是骨骼和牙齿的重要组成元素，帮助身体保持坚固和健康。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-8",
@@ -109,7 +137,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "安全知识",
     "relatedElement": 53,
-    "explanation": "碘属于卤素，常用于碘盐补充和部分皮肤消毒用品中，但使用时也要遵循安全规范。"
+    "explanation": "碘属于卤素，常用于碘盐补充和部分皮肤消毒用品中，但使用时也要遵循安全规范。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-9",
@@ -123,7 +155,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "安全知识",
     "relatedElement": 11,
-    "explanation": "金属钠遇水会迅速反应并放热，所以只能在严格防护下由老师或专业人员演示。"
+    "explanation": "金属钠遇水会迅速反应并放热，所以只能在严格防护下由老师或专业人员演示。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-10",
@@ -137,7 +173,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "分类判断",
     "relatedElement": 19,
-    "explanation": "钾位于元素周期表第一族，属于碱金属。碱金属通常反应活泼。"
+    "explanation": "钾位于元素周期表第一族，属于碱金属。碱金属通常反应活泼。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-11",
@@ -151,7 +191,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "基础认识",
     "relatedElement": 6,
-    "explanation": "铅笔芯并不是真正的铅，而是主要由碳元素形成的石墨制成。"
+    "explanation": "铅笔芯并不是真正的铅，而是主要由碳元素形成的石墨制成。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-12",
@@ -165,7 +209,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "生活用途",
     "relatedElement": 3,
-    "explanation": "锂质量轻、储能能力强，所以许多可充电电池，比如锂电池，都离不开它。"
+    "explanation": "锂质量轻、储能能力强，所以许多可充电电池，比如锂电池，都离不开它。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-13",
@@ -179,7 +227,11 @@ export const quizData = [
     "correctIndex": 1,
     "category": "生活用途",
     "relatedElement": 2,
-    "explanation": "氦气比空气轻，而且比氢气更安全、不易燃，所以更适合充入飘起来的气球。"
+    "explanation": "氦气比空气轻，而且比氢气更安全、不易燃，所以更适合充入飘起来的气球。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-14",
@@ -193,7 +245,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "材料世界",
     "relatedElement": 28,
-    "explanation": "镍常被加入钢材中，帮助提升耐腐蚀性和强度，是不锈钢的重要成分之一。"
+    "explanation": "镍常被加入钢材中，帮助提升耐腐蚀性和强度，是不锈钢的重要成分之一。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-15",
@@ -207,7 +263,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "安全知识",
     "relatedElement": 80,
-    "explanation": "汞在常温下就是液态金属，但具有毒性，因此接触和处理时都要特别小心。"
+    "explanation": "汞在常温下就是液态金属，但具有毒性，因此接触和处理时都要特别小心。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-16",
@@ -221,7 +281,12 @@ export const quizData = [
     "correctIndex": 1,
     "category": "反应概念",
     "relatedElement": 1,
-    "explanation": "氢和氧反应后会生成水，这也是生活中最熟悉的一种化学变化结果。"
+    "explanation": "氢和氧反应后会生成水，这也是生活中最熟悉的一种化学变化结果。",
+    "curriculumTags": [
+      "intro-element-symbols",
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-17",
@@ -235,7 +300,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "材料世界",
     "relatedElement": 79,
-    "explanation": "金的化学性质比较稳定，不容易生锈或腐蚀，因此常被制作成首饰。"
+    "explanation": "金的化学性质比较稳定，不容易生锈或腐蚀，因此常被制作成首饰。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-18",
@@ -249,7 +318,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "分类判断",
     "relatedElement": 60,
-    "explanation": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
+    "explanation": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-19",
@@ -263,7 +336,11 @@ export const quizData = [
     "correctIndex": 0,
     "category": "科学拓展",
     "relatedElement": 92,
-    "explanation": "铀是一种著名的放射性元素，在核科学和部分医学、能源知识中常被提到。"
+    "explanation": "铀是一种著名的放射性元素，在核科学和部分医学、能源知识中常被提到。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
   },
   {
     "id": "quiz-20",
@@ -277,6 +354,220 @@ export const quizData = [
     "correctIndex": 0,
     "category": "科学拓展",
     "relatedElement": 118,
-    "explanation": "鿫是人工合成的超重元素之一，存在时间很短，主要用于科学研究。"
+    "explanation": "鿫是人工合成的超重元素之一，存在时间很短，主要用于科学研究。",
+    "curriculumTags": [
+      "intro-element-symbols"
+    ],
+    "difficulty": "入门"
+  },
+  {
+    "id": "quiz-c60-structure-source",
+    "question": "教材图6-4说明，C60 的分子结构和什么相似？",
+    "options": [
+      "足球",
+      "雪花",
+      "水滴",
+      "立方体"
+    ],
+    "correctIndex": 0,
+    "category": "教材结构识别",
+    "relatedElement": 6,
+    "explanation": "教材图6-4说明 C60 的分子结构和足球相似。",
+    "curriculumTags": [
+      "g9-carbon-c60-allotrope"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3494-3504",
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 分子结构和足球相似的题干与答案来自九年级上册第3494-3504行及图6-4。"
+      }
+    ],
+    "formulaText": "C60",
+    "notationReviewStatus": "reviewed",
+    "textbookAssetReferences": [
+      {
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "usage": "formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 公式文本已由九年级上册 book.md:3494-3504 与图6-4 人工复核。"
+      }
+    ]
+  },
+  {
+    "id": "quiz-c60-carbon-allotrope",
+    "question": "教材介绍 C60 时，把它归入哪一类碳物质？",
+    "options": [
+      "以单质形式存在的碳",
+      "由钠和氯形成的盐",
+      "由氢和氧形成的水",
+      "含铁元素的金属"
+    ],
+    "correctIndex": 0,
+    "category": "教材概念识别",
+    "relatedElement": 6,
+    "explanation": "教材说除了金刚石、石墨，还有一些以单质形式存在的碳，其中发现较早的是 C60。",
+    "curriculumTags": [
+      "g9-carbon-c60-allotrope"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3494-3504",
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 作为以单质形式存在的碳，依据九年级上册第3496行的已审核正文。"
+      }
+    ],
+    "formulaText": "C60",
+    "notationReviewStatus": "reviewed",
+    "textbookAssetReferences": [
+      {
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "usage": "formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 公式文本已由九年级上册 book.md:3494-3504 与图6-4 人工复核。"
+      }
+    ]
+  },
+  {
+    "id": "quiz-c60-reviewed-formula-application",
+    "question": "根据教材正文，每个 C60 分子由多少个碳原子构成？",
+    "options": [
+      "60个",
+      "6个",
+      "12个",
+      "120个"
+    ],
+    "correctIndex": 0,
+    "category": "教材公式应用",
+    "relatedElement": 6,
+    "explanation": "教材正文说明，每个 C60 分子是由60个碳原子构成的。",
+    "curriculumTags": [
+      "g9-carbon-c60-allotrope"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3494-3504",
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 公式和“60个碳原子”的应用题来自九年级上册第3498行及图6-4已审核来源。"
+      }
+    ],
+    "formulaText": "C60",
+    "notationReviewStatus": "reviewed",
+    "textbookAssetReferences": [
+      {
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "usage": "formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 公式文本已由九年级上册 book.md:3494-3504 与图6-4 人工复核。"
+      }
+    ]
+  },
+  {
+    "id": "quiz-carbon-allotropes-comparison-1",
+    "question": "金刚石、石墨和 C60 之间共同点是什么？",
+    "options": [
+      "都属于碳的单质",
+      "都属于金属",
+      "都属于盐类",
+      "都属于氧化物"
+    ],
+    "correctIndex": 0,
+    "category": "comparison-topic",
+    "relatedElement": 6,
+    "explanation": "教材说明金刚石、石墨和 C60 都是由碳元素组成的单质。",
+    "curriculumTags": [
+      "g9-carbon-allotropes-comparison"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3432-3462",
+        "note": "comparison core evidence for pep-g9-2024-up-carbon-diamond-graphite-comparison"
+      }
+    ]
+  },
+  {
+    "id": "quiz-carbon-allotropes-comparison-2",
+    "question": "金刚石和石墨的物理性质差异主要与什么有关？",
+    "options": [
+      "原子排列方式不同",
+      "元素周期表位置不同",
+      "是否含水不同",
+      "颜色不同"
+    ],
+    "correctIndex": 0,
+    "category": "comparison-topic",
+    "relatedElement": 6,
+    "explanation": "教材说明它们的原子排列方式不同，所以物理性质有明显差异。",
+    "curriculumTags": [
+      "g9-carbon-allotropes-comparison"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3432-3462",
+        "note": "comparison physical property evidence for pep-g9-2024-up-carbon-diamond-graphite-comparison"
+      }
+    ]
+  },
+  {
+    "id": "quiz-carbon-allotropes-comparison-3",
+    "question": "C60 的分子结构和什么相似？",
+    "options": [
+      "足球",
+      "正方体",
+      "雪花",
+      "水滴"
+    ],
+    "correctIndex": 0,
+    "category": "comparison-topic",
+    "relatedElement": 6,
+    "explanation": "教材图6-4说明 C60 的分子结构和足球相似。",
+    "curriculumTags": [
+      "g9-carbon-allotropes-comparison"
+    ],
+    "difficulty": "初中",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "volumeId": "pep-chemistry-g9-2024",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "lineRange": "3494-3504",
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 comparison evidence from pep-g9-2024-up-figure-6-4-c60-formula"
+      }
+    ],
+    "formulaText": "C60",
+    "notationReviewStatus": "reviewed",
+    "textbookAssetReferences": [
+      {
+        "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+        "usage": "formula",
+        "reviewedTextField": "formulaText",
+        "note": "C60 comparison evidence from pep-g9-2024-up-figure-6-4-c60-formula"
+      }
+    ]
   }
 ];

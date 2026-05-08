@@ -23,7 +23,27 @@ export const reactions = [
       "氢气极易燃，真实实验必须远离明火和静电。",
       "氧气会助燃，实验区要保持良好通风。",
       "这里只是虚拟演示，现实中必须由老师指导。"
-    ]
+    ],
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "safetyLevels": [
+        "dangerous"
+      ],
+      "stageIds": [
+        "stage-4"
+      ],
+      "minimumLearnedElements": 80,
+      "grade": "高一",
+      "chapter": "氧化还原"
+    },
+    "equationText": "2H2 + O2 → 2H2O",
+    "notationReviewStatus": "reviewed"
   },
   {
     "id": "reaction-iron-rusting",
@@ -50,7 +70,25 @@ export const reactions = [
       "铁锈实验相对安全，但真实实验仍需保持器材干净。",
       "避免直接触摸生锈金属边缘，防止划伤。",
       "实验结束后应及时清理潮湿器材。"
-    ]
+    ],
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "safetyLevels": [
+        "caution"
+      ],
+      "stageIds": [
+        "stage-2"
+      ],
+      "minimumLearnedElements": 10,
+      "grade": "高一",
+      "chapter": "氧化还原"
+    }
   },
   {
     "id": "reaction-sodium-water",
@@ -77,7 +115,25 @@ export const reactions = [
       "金属钠不能徒手接触，也不能直接暴露在潮湿空气中。",
       "真实实验必须使用防护罩、护目镜和远程操作。",
       "如果反应过于剧烈，应立即停止并远离实验台。"
-    ]
+    ],
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "safetyLevels": [
+        "extremely dangerous"
+      ],
+      "stageIds": [
+        "stage-4"
+      ],
+      "minimumLearnedElements": 80,
+      "grade": "高一",
+      "chapter": "氧化还原"
+    }
   },
   {
     "id": "reaction-salt-formation",
@@ -103,7 +159,25 @@ export const reactions = [
       "氯气有刺激性，真实环境下绝不能随意吸入。",
       "金属钠反应活泼，必须和空气、水分隔离。",
       "虚拟实验只演示原理，不代表现实操作难度。"
-    ]
+    ],
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "safetyLevels": [
+        "dangerous"
+      ],
+      "stageIds": [
+        "stage-3"
+      ],
+      "minimumLearnedElements": 25,
+      "grade": "高一",
+      "chapter": "氧化还原"
+    }
   },
   {
     "id": "reaction-oxygen-supports-combustion",
@@ -129,6 +203,24 @@ export const reactions = [
       "富氧环境会让可燃物更快燃烧，不能把氧气当作普通空气。",
       "真实实验中应远离纸张、酒精等易燃物。",
       "观察现象时应保持安全距离。"
-    ]
+    ],
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g10-redox-valence-change"
+      ],
+      "safetyLevels": [
+        "caution"
+      ],
+      "stageIds": [
+        "stage-1"
+      ],
+      "minimumLearnedElements": 0,
+      "grade": "高一",
+      "chapter": "氧化还原"
+    }
   }
 ];

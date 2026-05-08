@@ -3,6 +3,11 @@ import elementsData from './elements.json' with { type: 'json' };
 import achievementsDataset from './achievementsData.json' with { type: 'json' };
 import quizDataset from './quizData.json' with { type: 'json' };
 import learningPathData from './learningPath.json' with { type: 'json' };
+import curriculumDataset from './curriculum.js';
+import textbookAssetManifest, {
+  textbookAssetExtractionStatuses,
+  textbookAssetTypes
+} from './textbookAssets.js';
 import reactionsData from './reactions.json' with { type: 'json' };
 import spectralLinesDataset from './spectralLines.json' with { type: 'json' };
 import storyMediaData from './storyMedia/media.json' with { type: 'json' };
@@ -26,6 +31,9 @@ export const {
 
 export const { quizData } = quizDataset;
 export const { learningPath } = learningPathData;
+export const { curriculumTags } = curriculumDataset;
+export { textbookAssetExtractionStatuses, textbookAssetManifest, textbookAssetTypes };
 export const { reactions } = reactionsData;
 export const { achievementsData } = achievementsDataset;
 export const { spectralLines } = spectralLinesDataset;
+

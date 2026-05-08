@@ -6,50 +6,260 @@
         "name": "初级探索者",
         "description": "从身边最常见的元素开始，先建立“符号、名称、用途”三件事的第一印象。",
         "requiredCount": 10,
-        "focusElements": [1, 6, 7, 8, 11, 12, 14, 16, 17, 20],
-        "unlockedGames": ["game-memory"],
-        "unlockedExperiments": ["exp-oxygen-supports-combustion"],
-        "unlockedFeatures": ["detail-panel", "basic-quiz", "collection-board"]
+        "focusElements": [
+          1,
+          6,
+          7,
+          8,
+          11,
+          12,
+          14,
+          16,
+          17,
+          20
+        ],
+        "unlockedGames": [
+          "game-memory"
+        ],
+        "unlockedExperiments": [
+          "exp-oxygen-supports-combustion"
+        ],
+        "unlockedFeatures": [
+          "detail-panel",
+          "basic-quiz",
+          "collection-board"
+        ],
+        "curriculumTags": [
+          "intro-element-symbols"
+        ],
+        "difficulty": "入门"
       },
       {
         "id": "stage-2",
         "name": "元素学徒",
         "description": "开始观察周期表中的分类和位置，理解金属、非金属和稀有气体的分布规律。",
         "requiredCount": 25,
-        "focusElements": [2, 3, 10, 13, 18, 19, 26, 29],
-        "unlockedGames": ["game-memory", "game-drag"],
-        "unlockedExperiments": ["exp-oxygen-supports-combustion", "exp-iron-rusting"],
-        "unlockedFeatures": ["filters", "search", "category-legend"]
+        "focusElements": [
+          2,
+          3,
+          10,
+          13,
+          18,
+          19,
+          26,
+          29
+        ],
+        "unlockedGames": [
+          "game-memory",
+          "game-drag"
+        ],
+        "unlockedExperiments": [
+          "exp-oxygen-supports-combustion",
+          "exp-iron-rusting"
+        ],
+        "unlockedFeatures": [
+          "filters",
+          "search",
+          "category-legend"
+        ],
+        "curriculumTags": [
+          "intro-element-symbols"
+        ],
+        "difficulty": "入门"
       },
       {
         "id": "stage-3",
         "name": "化学助手",
         "description": "把元素和生活中的材料、能源、电子设备联系起来，建立“学以致用”的直觉。",
         "requiredCount": 50,
-        "focusElements": [15, 22, 24, 26, 29, 47, 53, 79],
-        "unlockedGames": ["game-memory", "game-drag", "game-collector"],
-        "unlockedExperiments": ["exp-iron-rusting", "exp-salt-formation"],
-        "unlockedFeatures": ["compare-view", "applications-preview", "mini-stats"]
+        "focusElements": [
+          15,
+          22,
+          24,
+          26,
+          29,
+          47,
+          53,
+          79
+        ],
+        "unlockedGames": [
+          "game-memory",
+          "game-drag",
+          "game-collector"
+        ],
+        "unlockedExperiments": [
+          "exp-iron-rusting",
+          "exp-salt-formation"
+        ],
+        "unlockedFeatures": [
+          "compare-view",
+          "applications-preview",
+          "mini-stats"
+        ],
+        "curriculumTags": [
+          "intro-element-symbols",
+          "g9-carbon-c60-allotrope"
+        ],
+        "difficulty": "初中",
+        "sourceReviewStatus": "reviewed",
+        "sourceReferences": [
+          {
+            "volumeId": "pep-chemistry-g9-2024",
+            "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+            "lineRange": "3494-3504",
+            "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+            "note": "仅为 stage-3 新增的 C60 / 碳单质进度关系提供已审核教材来源。"
+          }
+        ]
+      },
+      {
+        "id": "relation-carbon-allotropes-comparison",
+        "name": "碳单质比较进度",
+        "description": "通过金刚石、石墨与 C60 的比较，建立碳单质结构与性质的联系。",
+        "requiredCount": 50,
+        "focusElements": [
+          6
+        ],
+        "unlockedGames": [
+          "game-collector"
+        ],
+        "unlockedExperiments": [
+          "exp-salt-formation"
+        ],
+        "unlockedFeatures": [
+          "compare-view"
+        ],
+        "curriculumTags": [
+          "g9-carbon-allotropes-comparison"
+        ],
+        "difficulty": "初中",
+        "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+        "sourceReviewStatus": "reviewed",
+        "sourceReferences": [
+          {
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+            "volumeId": "pep-chemistry-g9-2024",
+            "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+            "sourceHeading": "练习与应用",
+            "lineRange": "3432-3462",
+            "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+            "candidateId": "learning-path-0295-source-section-l3610-l3664-d45787521d",
+            "reviewedBy": "textbook-reviewer",
+            "reviewedAt": "2026-05-08T00:00:00.000Z",
+            "assetReferences": [
+              {
+                "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-01",
+                "sourceLineNumber": 3651
+              },
+              {
+                "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-02",
+                "sourceLineNumber": 3654
+              }
+            ],
+            "note": "Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-learning-path"
+          },
+          {
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+            "volumeId": "pep-chemistry-g9-2024",
+            "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+            "sourceHeading": "练习与应用",
+            "lineRange": "3494-3504",
+            "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+            "candidateId": "learning-path-0295-source-section-l3610-l3664-d45787521d",
+            "reviewedBy": "textbook-reviewer",
+            "reviewedAt": "2026-05-08T00:00:00.000Z",
+            "assetReferences": [
+              {
+                "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-01",
+                "sourceLineNumber": 3651
+              },
+              {
+                "assetId": "0295-source-section-l3610-l3664-d45787521d-asset-02",
+                "sourceLineNumber": 3654
+              }
+            ],
+            "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+            "note": "Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-learning-path supplemental C60 evidence"
+          }
+        ]
       },
       {
         "id": "stage-4",
         "name": "实验室研究员",
         "description": "开始系统观察典型化学反应，理解助燃、氧化、置换等更完整的实验场景。",
         "requiredCount": 80,
-        "focusElements": [1, 8, 11, 16, 17, 26, 30, 35],
-        "unlockedGames": ["game-memory", "game-drag", "game-reaction", "game-collector"],
-        "unlockedExperiments": ["exp-hydrogen-combustion", "exp-sodium-water", "exp-salt-formation"],
-        "unlockedFeatures": ["lab-view", "reaction-library", "safety-guide"]
+        "focusElements": [
+          1,
+          8,
+          11,
+          16,
+          17,
+          26,
+          30,
+          35
+        ],
+        "unlockedGames": [
+          "game-memory",
+          "game-drag",
+          "game-reaction",
+          "game-collector"
+        ],
+        "unlockedExperiments": [
+          "exp-hydrogen-combustion",
+          "exp-sodium-water",
+          "exp-salt-formation"
+        ],
+        "unlockedFeatures": [
+          "lab-view",
+          "reaction-library",
+          "safety-guide"
+        ],
+        "curriculumTags": [
+          "g10-redox-valence-change"
+        ],
+        "difficulty": "高中基础"
       },
       {
         "id": "stage-5",
         "name": "元素大师",
         "description": "走向完整的元素视野，理解稀有材料、放射性元素与现代科技文明之间的连接。",
         "requiredCount": 118,
-        "focusElements": [42, 57, 60, 74, 79, 82, 92, 118],
-        "unlockedGames": ["game-memory", "game-drag", "game-reaction", "game-collector"],
-        "unlockedExperiments": ["exp-hydrogen-combustion", "exp-iron-rusting", "exp-sodium-water", "exp-salt-formation", "exp-oxygen-supports-combustion"],
-        "unlockedFeatures": ["timeline-view", "story-mode", "advanced-quiz", "achievement-center", "progress-dashboard"]
+        "focusElements": [
+          42,
+          57,
+          60,
+          74,
+          79,
+          82,
+          92,
+          118
+        ],
+        "unlockedGames": [
+          "game-memory",
+          "game-drag",
+          "game-reaction",
+          "game-collector"
+        ],
+        "unlockedExperiments": [
+          "exp-hydrogen-combustion",
+          "exp-iron-rusting",
+          "exp-sodium-water",
+          "exp-salt-formation",
+          "exp-oxygen-supports-combustion"
+        ],
+        "unlockedFeatures": [
+          "timeline-view",
+          "story-mode",
+          "advanced-quiz",
+          "achievement-center",
+          "progress-dashboard"
+        ],
+        "curriculumTags": [
+          "intro-element-symbols",
+          "g9-acid-base-salt-neutralization",
+          "g10-redox-valence-change"
+        ],
+        "difficulty": "高中基础"
       }
     ]
   }
