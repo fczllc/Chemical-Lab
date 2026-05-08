@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { formulaHTML } from '../../src/modules/chemNotation.js';
+import { equationHTML, equationToLatex, formulaHTML, formulaToLatex, plainChemText } from '../../src/modules/chemNotation.js';
 
 async function waitForShellReady(page: Page) {
   await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
@@ -181,4 +181,45 @@ test.describe('KaTeX chemistry notation rendering', () => {
       await expectNoHorizontalOverflow(page);
     }
   });
+
+  test('textbook-grade chemistry notation cases render through KaTeX', () => {
+    const cases = [
+      { kind: 'formula', value: 'CuSO4·5H2O', latexIncludes: ['\\cdot', '5H_2O'] },
+      { kind: 'formula', value: 'Fe2(SO4)3', latexIncludes: ['Fe_2', '(SO_4)_3'] },
+      { kind: 'formula', value: 'NH4+', latexIncludes: ['NH_4^{+}'] },
+      { kind: 'formula', value: 'SO4^2-', latexIncludes: ['SO_4^{2-}'] },
+      { kind: 'equation', value: 'NaOH(aq) + HCl(aq) → NaCl(aq) + H2O(l)', latexIncludes: ['\\mathrm{(aq)}', '\\mathrm{(l)}', '\\rightarrow'] },
+      { kind: 'equation', value: 'CaCO3 → CaO + CO2↑', latexIncludes: ['CaCO_3', '\\uparrow'] },
+      { kind: 'equation', value: 'Ag+ + Cl- → AgCl↓', latexIncludes: ['Ag^{+}', 'Cl^{-}', '\\downarrow'] },
+      { kind: 'equation', value: 'N2 + 3H2 ⇌ 2NH3', latexIncludes: ['\\rightleftharpoons'] },
+      { kind: 'equation', value: 'CaCO3 --heat--> CaO + CO2↑', latexIncludes: ['\\xrightarrow{\\mathrm{heat}}'] }
+    ] as const;
+
+    for (const testCase of cases) {
+      const latex = testCase.kind === 'formula' ? formulaToLatex(testCase.value) : equationToLatex(testCase.value);
+      const html = testCase.kind === 'formula' ? formulaHTML(testCase.value) : equationHTML(testCase.value);
+      const plain = plainChemText(testCase.value);
+      const escapedPlain = escapeAttribute(plain);
+      const fallbackMarkup = '<span class="chem-notation chem-notation--' + testCase.kind + '" data-plain-text="' + escapedPlain + '" aria-label="' + escapedPlain + '">' + escapeHTML(plain) + '</span>';
+
+      expect(latex).not.toBe('');
+      for (const expectedLatex of testCase.latexIncludes) {
+        expect(latex).toContain(expectedLatex);
+      }
+      expect(html).toContain('class="katex');
+      expect(html).toContain('data-plain-text="' + escapedPlain + '"');
+      expect(html).not.toBe(fallbackMarkup);
+    }
+  });
 });
+
+function escapeHTML(value: string) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function escapeAttribute(value: string) {
+  return escapeHTML(value).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}

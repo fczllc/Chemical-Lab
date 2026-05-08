@@ -1,0 +1,28 @@
+{
+  "version": "v1",
+  "timestamp": "2026-05-07T00:00:00.000Z",
+  "data": {
+    "currentElement": 6,
+    "compareList": [6, 8],
+    "learnedElements": [6, 7],
+    "collectedElements": [6],
+    "quizScores": [
+      {
+        "score": 80,
+        "total": 100,
+        "completedAt": "2026-05-07T00:00:00.000Z"
+      }
+    ],
+    "completedExperiments": ["redox-valence-demo"],
+    "gameScores": {
+      "game-drag": 510,
+      "game-memory": 620,
+      "game-reaction": 730,
+      "game-collector": 840
+    },
+    "settings": {
+      "performanceMode": "high-performance",
+      "difficulty": "高中基础"
+    }
+  }
+}

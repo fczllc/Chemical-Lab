@@ -11,7 +11,7 @@ const ROUTES = [
     hash: '#/games',
     section: 'games',
     nav: 'nav-games',
-    anchor: '#game-area .games-overview-header'
+    anchor: '#game-area .games-overview-stats'
   },
   {
     hash: '#/lab',

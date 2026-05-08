@@ -1,0 +1,16 @@
+{
+  "currentElement": 1,
+  "compareList": [1, 2],
+  "learnedElements": [1, 8, 8],
+  "completedExperiments": ["reaction-fe-oxygen", "acid-base-neutralization"],
+  "gameScores": {
+    "game-drag": 120,
+    "game-memory": 240,
+    "game-reaction": 360,
+    "game-collector": 480
+  },
+  "settings": {
+    "performanceMode": "normal",
+    "difficulty": "初中"
+  }
+}
