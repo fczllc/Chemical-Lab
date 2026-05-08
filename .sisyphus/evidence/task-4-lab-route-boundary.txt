@@ -1,0 +1,10 @@
+Task 4 evidence: lab route boundary remains visible only through existing runtime reactions.
+
+Verification run:
+- `npm run validate:supporting`
+- `npx playwright test tests/ui/route-shells.spec.ts`
+
+Result:
+- Supporting-data validation passed.
+- Route-shell Playwright tests passed.
+- No C60 lab card or visible lab experiment was added.

@@ -1,0 +1,31 @@
+## missing-allotropes-reviewed-source
+selfCheckInvalid: rejected missing-allotropes-reviewed-source
+- 测验题目 quiz-carbon-allotropes-comparison-1.sourceReferences 必须是非空数组
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences 必须包含已审核 comparison 来源
+exitCode: 1
+
+## reused-carbon-existing-id
+selfCheckInvalid: rejected reused-carbon-existing-id
+- 重复的测验题目 ID：quiz-11
+exitCode: 1
+
+## allotropes-active-carbon-source-contamination
+selfCheckInvalid: rejected allotropes-active-carbon-source-contamination
+- 学习阶段 relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences[0].lineRange 不能使用活性炭污染区间：3463-3489
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+exitCode: 1
+
+## allotropes-draft-runtime-leak
+selfCheckInvalid: rejected allotropes-draft-runtime-leak
+- carbon allotrope comparison draft-only experiment 不应泄漏到 runtime reactions：draft-exp-carbon-allotropes-observation
+exitCode: 1

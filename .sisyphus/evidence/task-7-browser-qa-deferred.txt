@@ -1,0 +1,1 @@
+Browser games route QA deferred for Task 7. Playwright, npm run dev, and npm run preview were not run because the user reported frequent frontend service restarts and this task explicitly forbids starting/restarting Vite or browser route tests. Command/static verification covers validators, negative self-check, LSP diagnostics, and production build.

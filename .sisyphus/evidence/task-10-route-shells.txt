@@ -1,0 +1,9 @@
+
+Running 4 tests using 2 workers
+
+  鉁? 1 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (6.9s)
+  鉁? 2 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (7.1s)
+  鉁? 3 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (8.9s)
+  鉁? 4 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (9.9s)
+
+  4 passed (20.4s)

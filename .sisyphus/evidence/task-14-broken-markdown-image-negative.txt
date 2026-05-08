@@ -1,0 +1,2 @@
+selfCheckInvalid: rejected broken-markdown-image-path
+- self-check-broken-markdown-image-path Markdown image images/missing-textbook-asset.png 不存在或不可读：self-check-invalid\images\missing-textbook-asset.png

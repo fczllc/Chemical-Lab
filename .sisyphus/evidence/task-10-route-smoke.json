@@ -1,0 +1,269 @@
+{
+  "config": {
+    "configFile": "D:\\Chemical-Laboratory\\playwright.config.ts",
+    "rootDir": "D:/Chemical-Laboratory/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "D:\\Chemical-Laboratory\\tests\\setup\\global-setup.ts",
+    "globalTeardown": "D:\\Chemical-Laboratory\\tests\\setup\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Chemical-Laboratory/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Chemical-Laboratory/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui\\route-shells.spec.ts",
+      "file": "ui/route-shells.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Route shell rendering sanity",
+          "file": "ui/route-shells.spec.ts",
+          "line": 42,
+          "column": 6,
+          "specs": [
+            {
+              "title": "hash routes activate and render their shell anchors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6959,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "#/timeline",
+                          "duration": 1314
+                        },
+                        {
+                          "title": "#/games",
+                          "duration": 193
+                        },
+                        {
+                          "title": "#/lab",
+                          "duration": 128
+                        },
+                        {
+                          "title": "#/achievements",
+                          "duration": 97
+                        },
+                        {
+                          "title": "#/progress",
+                          "duration": 71
+                        },
+                        {
+                          "title": "#/story",
+                          "duration": 159
+                        }
+                      ],
+                      "startTime": "2026-05-07T13:43:22.280Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a968cf3e17cb9523b05e-7a5f4b7b53eb82556458",
+              "file": "ui/route-shells.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "direct compare route renders compare shell without top navigation entry",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6280,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-07T13:43:22.343Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a968cf3e17cb9523b05e-a20975ddac6b5277f0e3",
+              "file": "ui/route-shells.spec.ts",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "story route renders media cards for the selected element with fallback disclosure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8699,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-07T13:43:28.832Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a968cf3e17cb9523b05e-f9ba7c3eaa956b341710",
+              "file": "ui/route-shells.spec.ts",
+              "line": 73,
+              "column": 3
+            },
+            {
+              "title": "tablet portrait routes keep primary navigation visible without phone chrome",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9657,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "tablet #/timeline",
+                          "duration": 509
+                        },
+                        {
+                          "title": "tablet #/games",
+                          "duration": 239
+                        },
+                        {
+                          "title": "tablet #/lab",
+                          "duration": 174
+                        },
+                        {
+                          "title": "tablet #/achievements",
+                          "duration": 220
+                        },
+                        {
+                          "title": "tablet #/progress",
+                          "duration": 234
+                        },
+                        {
+                          "title": "tablet #/story",
+                          "duration": 189
+                        }
+                      ],
+                      "startTime": "2026-05-07T13:43:29.394Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a968cf3e17cb9523b05e-d7c0a72255f86a86469d",
+              "file": "ui/route-shells.spec.ts",
+              "line": 86,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-07T13:43:19.417Z",
+    "duration": 19845.681,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

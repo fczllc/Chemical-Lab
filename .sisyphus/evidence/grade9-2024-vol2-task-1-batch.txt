@@ -1,0 +1,7 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-batch
+> node scripts/textbook/validate-batch-contract.mjs --textbook rj-chemistry-grade9-2024-vol2
+
+batchContract: valid (rj-chemistry-grade9-2024-vol2)
+sourcePath: src/data/textbooks/2024版人教版九年级化学下册/book.md
+status: sourceImported

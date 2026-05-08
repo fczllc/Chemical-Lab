@@ -1,0 +1,14 @@
+
+Running 9 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX (7.9s)
+  鉁? 1 [chromium] 鈥?tests\content\chem-notation.spec.ts:59:3 鈥?KaTeX chemistry notation rendering 鈥?detail panel electron config renders KaTeX (8.0s)
+  鉁? 4 [chromium] 鈥?tests\content\chem-notation.spec.ts:98:3 鈥?KaTeX chemistry notation rendering 鈥?quiz formula-token smoke keeps prose and standalone symbols plain (5.4s)
+  鉁? 3 [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching (8.0s)
+  鉁? 6 [chromium] 鈥?tests\content\chem-notation.spec.ts:138:3 鈥?KaTeX chemistry notation rendering 鈥?periodic table cell symbol stays plain (3.2s)
+  鉁? 5 [chromium] 鈥?tests\content\chem-notation.spec.ts:123:3 鈥?KaTeX chemistry notation rendering 鈥?story electron config renders while story symbols stay plain (7.5s)
+  鉁? 7 [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors (10.1s)
+  鉁? 9 [chromium] 鈥?tests\content\chem-notation.spec.ts:185:3 鈥?KaTeX chemistry notation rendering 鈥?textbook-grade chemistry notation cases render through KaTeX (127ms)
+  鉁? 8 [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow (11.4s)
+
+  9 passed (36.0s)

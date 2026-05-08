@@ -1,0 +1,92 @@
+
+Running 4 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (6.8s)
+  鉁? 3 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (9.2s)
+  鉁? 1 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (22.3s)
+  鉁? 4 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (19.2s)
+
+
+  1) [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors 鈥?#/games 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#game-area .games-overview-header')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('#game-area .games-overview-header')[22m
+
+
+      57 |         await expect(page.locator(`#${route.section}`)).toHaveClass(/active/);
+      58 |         await expect(page.getByTestId(route.nav)).toHaveClass(/active/);
+    > 59 |         await expect(page.locator(route.anchor)).toBeVisible({ timeout: 15000 });
+         |                                                  ^
+      60 |       });
+      61 |     }
+      62 |   });
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:59:50
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:51:7
+
+    Error Context: test-results\ui-route-shells-Route-shel-e43b3--render-their-shell-anchors-chromium\error-context.md
+
+  2) [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#story .story-media-card').first().locator('.story-media-attribution')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('#story .story-media-card').first().locator('.story-media-attribution')[22m
+
+
+      141 |     expect(rawSrc).not.toMatch(/^https?:\/\//);
+      142 |
+    > 143 |     await expect(card.locator('.story-media-attribution')).toBeVisible();
+          |                                                            ^
+      144 |     await expect.poll(async () => {
+      145 |       return ((await card.locator('.story-media-attribution').textContent()) || '').trim().length;
+      146 |     }).toBeGreaterThan(0);
+        at expectStoryMediaCards (D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:143:60)
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:83:5
+
+    Error Context: test-results\ui-route-shells-Route-shel-84d88-nt-with-fallback-disclosure-chromium\error-context.md
+
+  3) [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome 鈥?tablet #/games 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#game-area .games-overview-header')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('#game-area .games-overview-header')[22m
+
+
+      101 |         await expect(page.locator(`#${route.section}`)).toHaveClass(/active/);
+      102 |         await expect(page.getByTestId(route.nav)).toHaveClass(/active/);
+    > 103 |         await expect(page.locator(route.anchor)).toBeVisible({ timeout: 15000 });
+          |                                                  ^
+      104 |         await expectPrimaryNavigationVisible(page);
+      105 |       });
+      106 |     }
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:103:50
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:95:7
+
+    Error Context: test-results\ui-route-shells-Route-shel-b492b-isible-without-phone-chrome-chromium\error-context.md
+
+  3 failed
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome 
+  1 passed (40.0s)

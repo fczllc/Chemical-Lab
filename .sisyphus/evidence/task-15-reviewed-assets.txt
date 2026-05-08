@@ -1,0 +1,25 @@
+{
+  "asset": {
+    "id": "pep-g9-2024-up-figure-6-4-c60-formula",
+    "assetType": "formula",
+    "extractionStatus": "reviewed",
+    "extractedFormulaText": "C60"
+  },
+  "quiz": {
+    "id": "quiz-c60-reviewed-formula",
+    "formulaText": "C60",
+    "notationReviewStatus": "reviewed",
+    "reference": {
+      "assetId": "pep-g9-2024-up-figure-6-4-c60-formula",
+      "usage": "formula",
+      "reviewedTextField": "formulaText",
+      "note": "Reviewed C60 formula text from 九年级上册 book.md:3494-3504 and 图6-4."
+    }
+  },
+  "reaction": {
+    "id": "reaction-hydrogen-combustion",
+    "equationText": "2H2 + O2 → 2H2O",
+    "notationReviewStatus": "reviewed"
+  }
+}
+EXIT_CODE=0

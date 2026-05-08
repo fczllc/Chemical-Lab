@@ -1,0 +1,2 @@
+Promotion manifest validation failed:
+- Promotion must target curriculumTagId

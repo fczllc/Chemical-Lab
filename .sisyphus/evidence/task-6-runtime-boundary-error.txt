@@ -1,0 +1,5 @@
+Command: node scripts/textbook/validate-runtime-boundary.mjs --fixture raw-textbook-import
+
+Textbook runtime boundary validation failed:
+- Raw textbook read path forbidden: scripts/textbook/fixtures/raw-textbook-import.mjs -> src/data/textbooks/
+- Raw textbook import forbidden: scripts/textbook/fixtures/raw-textbook-import.mjs -> ../../../src/data/textbooks/2024版人教版九年级化学上册/book.md

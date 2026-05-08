@@ -1,0 +1,4 @@
+## node scripts/validate-supporting-data.mjs --self-check-invalid unreviewed-image-reference
+selfCheckInvalid: rejected unreviewed-image-reference
+- 反应 invalid-unreviewed-image-reference.textbookAssetReferences[0] 引用公式/方程/教材图片内容时必须使用 reviewed 资产：pep-g9-2024-up-figure-1-1-water-boiling 当前为 unreviewed
+EXIT_CODE=0

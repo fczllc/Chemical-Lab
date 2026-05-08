@@ -1,0 +1,6 @@
+> node scripts/validate-curriculum.mjs
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid

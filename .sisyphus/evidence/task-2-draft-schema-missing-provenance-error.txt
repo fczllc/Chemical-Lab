@@ -1,0 +1,3 @@
+Draft schema validation failed:
+- Missing required provenance field: sourceLineStart
+- sourceSections[0].sourceLineStart must be a positive integer

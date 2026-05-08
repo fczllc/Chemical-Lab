@@ -1,0 +1,7 @@
+
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-grade9-2024-vol2
+
+Extracted sections: 283
+Referenced assets: 74
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/source-inventory.json

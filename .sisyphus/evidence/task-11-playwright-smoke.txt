@@ -1,0 +1,17 @@
+# Task 11 Playwright smoke evidence
+
+## npx playwright test tests/shell/content-data-smoke.spec.ts tests/ui/route-shells.spec.ts
+
+Running 9 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:10:3 鈥?Content Data Smoke 鈥?detail panel opens with element content (8.6s)
+  鉁? 1 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:20:3 鈥?Content Data Smoke 鈥?story flow opens the selected element archive (12.1s)
+  鉁? 3 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element (12.0s)
+  鉁? 4 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:44:3 鈥?Content Data Smoke 鈥?quiz flow opens a quick quiz for the selected element (11.0s)
+  鉁? 5 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:57:3 鈥?Content Data Smoke 鈥?renders the selected element spectrum from real spectral data (9.2s)
+  鉁? 6 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (13.5s)
+  鉁? 7 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (7.3s)
+  鉁? 8 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (8.7s)
+  鉁? 9 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (10.2s)
+
+  9 passed (49.5s)

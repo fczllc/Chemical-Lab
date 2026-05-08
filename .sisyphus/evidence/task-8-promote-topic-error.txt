@@ -1,0 +1,6 @@
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol1 --topic unreviewed-generated-topic
+
+Promotion blocked: No reviewed manifest entries target curriculumTagId unreviewed-generated-topic
+exitCode=1

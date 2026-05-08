@@ -1,0 +1,12 @@
+draft-inventory.json: items=1187, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+knowledge-topics.json: items=222, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+quiz-candidates.json: items=109, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+experiment-candidates.json: items=42, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+lab-candidates.json: items=122, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+game-candidates.json: items=100, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+story-candidates.json: items=87, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+achievement-candidates.json: items=222, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+learning-path-candidates.json: items=222, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+experiment-backlog.json: items=42, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+promotion-manifest.json: items=0, runtimeEligibleTrue=0, nonNeedsReview=0, missingProvenance=0
+deferredExperimentIds=42, runtimeReactionCollisions=0

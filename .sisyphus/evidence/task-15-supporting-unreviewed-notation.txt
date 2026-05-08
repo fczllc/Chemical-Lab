@@ -1,0 +1,4 @@
+## node scripts/validate-supporting-data.mjs --self-check-invalid unreviewed-notation-field
+selfCheckInvalid: rejected unreviewed-notation-field
+- 测验题目 invalid-unreviewed-notation-field.notationReviewStatus 必须为 reviewed，才能使用 formulaText/equationText
+EXIT_CODE=0

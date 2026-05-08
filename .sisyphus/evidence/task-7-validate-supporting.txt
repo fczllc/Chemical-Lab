@@ -1,0 +1,7 @@
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+支持数据校验通过：20 道题、5 个反应、11 个成就、5 个学习阶段。
+课程引用校验通过：3 个可用标签、4 个难度档、56 个支持数据引用。
+游戏元数据校验通过：drag, memory, reaction, collector。

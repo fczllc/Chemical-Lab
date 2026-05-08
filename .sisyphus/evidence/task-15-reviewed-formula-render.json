@@ -1,0 +1,13 @@
+{
+  "quizEvidence": {
+    "plain": "C60",
+    "hasKatex": true,
+    "path": "quick quiz for carbon element, second related question"
+  },
+  "labEvidence": {
+    "plain": "2H2 + O2 → 2H2O",
+    "hasKatex": true,
+    "path": "lab route hydrogen combustion equation card"
+  },
+  "consoleErrors": ["favicon.ico 404 only"]
+}

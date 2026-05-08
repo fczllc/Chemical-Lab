@@ -1,0 +1,5 @@
+COMMAND: node --input-type=module -e progress quiz mastery questionIds proof
+EXIT_CODE: 0
+
+questionIds quiz mastery credited
+{"emptyCompletedActivities":0,"completedActivities":1,"quizCount":21,"started":true}

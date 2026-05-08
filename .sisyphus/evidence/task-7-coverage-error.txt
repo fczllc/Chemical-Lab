@@ -1,0 +1,2 @@
+Textbook coverage validation failed:
+- Missing required surface coverage: g9-carbon-allotropes-comparison -> achievement (rows[0].achievement)

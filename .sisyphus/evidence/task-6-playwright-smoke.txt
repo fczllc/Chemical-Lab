@@ -1,0 +1,22 @@
+
+Running 9 tests using 2 workers
+
+(node:18064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [chromium] › tests\shell\content-data-smoke.spec.ts:10:3 › Content Data Smoke › detail panel opens with element content (6.2s)
+  ✓  1 [chromium] › tests\shell\content-data-smoke.spec.ts:20:3 › Content Data Smoke › story flow opens the selected element archive (8.6s)
+  ✓  3 [chromium] › tests\shell\content-data-smoke.spec.ts:33:3 › Content Data Smoke › lab flow opens related experiment content for the selected element (11.2s)
+  ✓  4 [chromium] › tests\shell\content-data-smoke.spec.ts:44:3 › Content Data Smoke › quiz flow opens a quick quiz for the selected element (10.4s)
+  ✓  5 [chromium] › tests\shell\content-data-smoke.spec.ts:57:3 › Content Data Smoke › renders the selected element spectrum from real spectral data (7.6s)
+  ✓  6 [chromium] › tests\ui\route-shells.spec.ts:49:3 › Route shell rendering sanity › hash routes activate and render their shell anchors (9.5s)
+  ✓  7 [chromium] › tests\ui\route-shells.spec.ts:64:3 › Route shell rendering sanity › direct compare route renders compare shell without top navigation entry (6.0s)
+  ✓  8 [chromium] › tests\ui\route-shells.spec.ts:73:3 › Route shell rendering sanity › story route renders media cards for the selected element with fallback disclosure (7.3s)
+  ✓  9 [chromium] › tests\ui\route-shells.spec.ts:86:3 › Route shell rendering sanity › tablet portrait routes keep primary navigation visible without phone chrome (6.3s)
+
+  9 passed (39.1s)

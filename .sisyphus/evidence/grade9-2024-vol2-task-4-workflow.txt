@@ -1,0 +1,63 @@
+COMMAND: npm run validate:textbook-workflow -- --textbook rj-chemistry-grade9-2024-vol2
+
+> element-explorer-kids@1.0.0 validate:textbook-workflow
+> node scripts/textbook/validate-workflow.mjs --textbook rj-chemistry-grade9-2024-vol2
+
+Running textbook:extract
+Extracted sections: 283
+Referenced assets: 74
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/source-inventory.json
+Running textbook:generate-drafts
+Wrote knowledge-topics.json: 222
+Wrote quiz-candidates.json: 109
+Wrote experiment-candidates.json: 42
+Wrote lab-candidates.json: 122
+Wrote game-candidates.json: 100
+Wrote story-candidates.json: 87
+Wrote achievement-candidates.json: 222
+Wrote learning-path-candidates.json: 222
+Wrote draft-inventory.json: 904
+Running validate:textbook-batch
+batchContract: valid (rj-chemistry-grade9-2024-vol2)
+sourcePath: src/data/textbooks/2024鐗堜汉鏁欑増涔濆勾绾у寲瀛︿笅鍐?book.md
+status: sourceImported
+Running validate:textbook-drafts
+Draft schema valid: rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/draft-inventory.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+Running validate:textbook-experiments
+Experiment backlog valid: rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/experiment-candidates.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/experiment-backlog.json
+checked: src/data/reactions.json
+Running validate:textbook-runtime-boundary
+Textbook runtime boundary valid
+checked: src/main.js
+checked: src/data/index.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Running textbook:coverage
+Textbook coverage matrix generated: rj-chemistry-grade9-2024-vol2
+wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/coverage-matrix.json
+rows: 0
+Running validate:textbook-coverage
+Textbook coverage valid: rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/coverage-matrix.json
+Textbook workflow valid: rj-chemistry-grade9-2024-vol2
+EXIT_CODE: 0

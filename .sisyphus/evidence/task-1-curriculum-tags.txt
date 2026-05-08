@@ -1,0 +1,8 @@
+
+## 2026-05-07T19:17:13.9899237+08:00 - seed tag ids
+
+## 2026-05-07T19:17:14.0018478+08:00 - curriculumTags export
+seed tags ok
+exit code: 0
+curriculumTags export ok
+exit code: 0

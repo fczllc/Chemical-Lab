@@ -1,0 +1,6 @@
+COMMAND: node scripts/textbook/validate-regeneration-guard.mjs --textbook rj-chemistry-grade9-2024-vol2
+Reviewed manifest protected from generator overwrite
+checked: 3 generator scripts
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: 6 runtime data file paths
+EXIT_CODE: 0

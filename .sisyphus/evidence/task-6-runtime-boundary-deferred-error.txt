@@ -1,0 +1,4 @@
+Command: node scripts/textbook/validate-runtime-boundary.mjs --fixture deferred-reaction-leak
+
+Textbook runtime boundary validation failed:
+- Deferred draft experiment forbidden in runtime reactions: experiment-0006-1-1-l27-l50-e9eba2d49e (scripts/textbook/fixtures/deferred-reaction-leak.json)

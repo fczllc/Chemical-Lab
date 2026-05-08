@@ -1,0 +1,5 @@
+Textbook coverage validation failed:
+- Missing required surface coverage: g9-carbon-allotropes-comparison -> achievement (rows[0].achievement)
+- Reviewed surface coverage must include manifest-approved candidate: g9-carbon-allotropes-comparison -> learningPath (rows[0].learningPath)
+- Reviewed surface coverage must include manifest-approved candidate: g9-carbon-allotropes-comparison -> labOrReaction (rows[0].labOrReaction)
+- Reviewed surface coverage must include manifest-approved candidate: g9-carbon-allotropes-comparison -> story (rows[0].story)

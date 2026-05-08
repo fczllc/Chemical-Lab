@@ -1,0 +1,2 @@
+selfCheckInvalid: rejected unreviewed-formula-reference
+- quizData[20].textbookAssetReferences[0] 使用 apparatus-diagram 教材图片内容时必须引用 reviewed 资产：pep-g9-2024-up-figure-1-1-water-boiling 当前为 unreviewed

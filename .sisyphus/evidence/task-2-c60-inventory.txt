@@ -1,0 +1,12 @@
+Verified `src/data/textbookPilotContent.js` contains exactly 5 pilot IDs:
+`challenge-c60-carbon-topic`, `draft-exp-c60-model-observation`, `quiz-c60-carbon-allotrope`, `quiz-c60-reviewed-formula-application`, `quiz-c60-structure-source`.
+
+Each item cites:
+- `volumeId: pep-chemistry-g9-2024`
+- `sourcePath: src/data/textbooks/2024版人教版九年级化学上册/book.md`
+- `lineRange: 3494-3504`
+- `assetId: pep-g9-2024-up-figure-6-4-c60-formula`
+
+Draft boundary:
+- `draft-exp-c60-model-observation` has `runtimeStatus: draft-only`.
+- The inventory check passed with `inventory-ok`.

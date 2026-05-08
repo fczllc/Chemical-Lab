@@ -1,0 +1,15 @@
+COMMAND: npx playwright test tests/ui/route-shells.spec.ts
+START: 2026-05-07T22:29:20.9673437+08:00
+
+
+Running 4 tests using 2 workers
+
+  ✓  2 [chromium] › tests\ui\route-shells.spec.ts:64:3 › Route shell rendering sanity › direct compare route renders compare shell without top navigation entry (7.0s)
+  ✓  1 [chromium] › tests\ui\route-shells.spec.ts:49:3 › Route shell rendering sanity › hash routes activate and render their shell anchors (8.0s)
+  ✓  3 [chromium] › tests\ui\route-shells.spec.ts:73:3 › Route shell rendering sanity › story route renders media cards for the selected element with fallback disclosure (10.1s)
+  ✓  4 [chromium] › tests\ui\route-shells.spec.ts:86:3 › Route shell rendering sanity › tablet portrait routes keep primary navigation visible without phone chrome (10.4s)
+
+  4 passed (22.3s)
+
+END: 2026-05-07T22:29:46.3128015+08:00
+EXIT_CODE: 0

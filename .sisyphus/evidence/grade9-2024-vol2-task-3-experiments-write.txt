@@ -1,0 +1,8 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-experiments
+> node scripts/textbook/validate-experiment-backlog.mjs --textbook rj-chemistry-grade9-2024-vol2 --write
+
+Experiment backlog valid: rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/experiment-candidates.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/experiment-backlog.json
+checked: src/data/reactions.json

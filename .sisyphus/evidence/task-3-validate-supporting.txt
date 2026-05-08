@@ -1,0 +1,8 @@
+Command: `npm run validate:supporting`
+
+Output:
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+支持数据校验通过：20 道题、5 个反应、11 个成就、5 个学习阶段。

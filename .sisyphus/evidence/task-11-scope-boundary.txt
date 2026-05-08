@@ -1,0 +1,5 @@
+README seed ID checks:
+  g9-acid-base-salt-neutralization : True
+  g10-redox-valence-change        : True
+  scope boundary (不包含完整教材内容) : True
+

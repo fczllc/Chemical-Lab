@@ -1,0 +1,7 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-drafts
+> node scripts/textbook/validate-draft-schema.mjs --textbook rj-chemistry-grade9-2024-vol2
+
+Draft schema valid: rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/draft-inventory.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/promotion-manifest.json

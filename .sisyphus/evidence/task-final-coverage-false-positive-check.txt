@@ -1,0 +1,47 @@
+No generated-only false positives in final coverage matrix.
+{
+  "quiz": {
+    "requirement": "required",
+    "status": "covered",
+    "manifestCandidateIds": [
+      "quiz-0295-source-section-l3610-l3664-d45787521d"
+    ],
+    "reason": ""
+  },
+  "learningPath": {
+    "requirement": "required",
+    "status": "covered",
+    "manifestCandidateIds": [
+      "learning-path-0295-source-section-l3610-l3664-d45787521d"
+    ],
+    "reason": ""
+  },
+  "labOrReaction": {
+    "requirement": "required",
+    "status": "deferred",
+    "manifestCandidateIds": [],
+    "reason": "The carbon allotropes comparison has generated inquiry/lab candidates, but no reviewed lab-safe runtime reaction or animation scope is approved for src/data/reactions.json in this workflow slice."
+  },
+  "story": {
+    "requirement": "notApplicable",
+    "status": "notApplicable",
+    "manifestCandidateIds": [],
+    "reason": "The current story runtime in src/modules/storyMode.js reads element-level stories from elements/story media, not curriculum-topic story records, so no topic story runtime target exists without rewriting the story engine."
+  },
+  "achievement": {
+    "requirement": "required",
+    "status": "covered",
+    "manifestCandidateIds": [
+      "achievement-0295-source-section-l3610-l3664-d45787521d"
+    ],
+    "reason": ""
+  },
+  "gameChallenge": {
+    "requirement": "required",
+    "status": "covered",
+    "manifestCandidateIds": [
+      "game-0295-source-section-l3610-l3664-d45787521d"
+    ],
+    "reason": ""
+  }
+}

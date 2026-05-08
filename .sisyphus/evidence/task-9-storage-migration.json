@@ -1,0 +1,253 @@
+{
+  "legacy": {
+    "learnedElements": [
+      1,
+      8
+    ],
+    "completedExperiments": [
+      "reaction-fe-oxygen",
+      "acid-base-neutralization"
+    ],
+    "gameScores": {
+      "game-drag": 120,
+      "game-memory": 240,
+      "game-reaction": 360,
+      "game-collector": 480
+    },
+    "settings": {
+      "performanceMode": "normal",
+      "particleDensity": "medium",
+      "soundEnabled": false,
+      "difficulty": "初中"
+    },
+    "storedEnvelope": {
+      "version": "v2",
+      "timestamp": "2026-05-07T13:55:19.148Z",
+      "data": {
+        "currentElement": 1,
+        "compareList": [
+          1,
+          2
+        ],
+        "learnedElements": [
+          1,
+          8
+        ],
+        "collectedElements": [
+          1,
+          8
+        ],
+        "quizScores": [],
+        "completedExperiments": [
+          "reaction-fe-oxygen",
+          "acid-base-neutralization"
+        ],
+        "unlockedAchievements": [
+          "achievement-first-element",
+          "achievement-first-experiment",
+          "achievement-memory-master",
+          "achievement-reaction-expert"
+        ],
+        "achievementDates": {
+          "achievement-first-element": "2026-05-07T13:55:18.585Z",
+          "achievement-first-experiment": "2026-05-07T13:55:18.585Z",
+          "achievement-memory-master": "2026-05-07T13:55:18.585Z",
+          "achievement-reaction-expert": "2026-05-07T13:55:18.585Z"
+        },
+        "gameScores": {
+          "game-drag": 120,
+          "game-memory": 240,
+          "game-reaction": 360,
+          "game-collector": 480
+        },
+        "gamePlays": {},
+        "activityLog": [
+          {
+            "id": "activity-1778162118585-r9ww5i",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-reaction-expert 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:18.585Z",
+            "meta": {
+              "achievementId": "achievement-reaction-expert",
+              "unlockedAt": "2026-05-07T13:55:18.585Z"
+            }
+          },
+          {
+            "id": "activity-1778162118585-8vltkf",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-memory-master 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:18.585Z",
+            "meta": {
+              "achievementId": "achievement-memory-master",
+              "unlockedAt": "2026-05-07T13:55:18.585Z"
+            }
+          },
+          {
+            "id": "activity-1778162118585-oscd5w",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-experiment 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:18.585Z",
+            "meta": {
+              "achievementId": "achievement-first-experiment",
+              "unlockedAt": "2026-05-07T13:55:18.585Z"
+            }
+          },
+          {
+            "id": "activity-1778162118585-db7nq6",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-element 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:18.585Z",
+            "meta": {
+              "achievementId": "achievement-first-element",
+              "unlockedAt": "2026-05-07T13:55:18.585Z"
+            }
+          }
+        ],
+        "settings": {
+          "performanceMode": "normal",
+          "particleDensity": "medium",
+          "soundEnabled": false,
+          "difficulty": "初中"
+        }
+      }
+    }
+  },
+  "versioned": {
+    "learnedElements": [
+      6,
+      7
+    ],
+    "completedExperiments": [
+      "redox-valence-demo"
+    ],
+    "gameScores": {
+      "game-drag": 510,
+      "game-memory": 620,
+      "game-reaction": 730,
+      "game-collector": 840
+    },
+    "settings": {
+      "performanceMode": "high-performance",
+      "particleDensity": "medium",
+      "soundEnabled": false,
+      "difficulty": "高中基础"
+    },
+    "storedEnvelope": {
+      "version": "v2",
+      "timestamp": "2026-05-07T13:55:20.661Z",
+      "data": {
+        "currentElement": 6,
+        "compareList": [
+          6,
+          8
+        ],
+        "learnedElements": [
+          6,
+          7
+        ],
+        "collectedElements": [
+          6,
+          7
+        ],
+        "quizScores": [
+          {
+            "score": 80,
+            "total": 100,
+            "completedAt": "2026-05-07T00:00:00.000Z"
+          }
+        ],
+        "completedExperiments": [
+          "redox-valence-demo"
+        ],
+        "unlockedAchievements": [
+          "achievement-first-element",
+          "achievement-first-experiment",
+          "achievement-first-quiz",
+          "achievement-memory-master",
+          "achievement-reaction-expert"
+        ],
+        "achievementDates": {
+          "achievement-first-element": "2026-05-07T13:55:20.098Z",
+          "achievement-first-experiment": "2026-05-07T13:55:20.098Z",
+          "achievement-first-quiz": "2026-05-07T13:55:20.098Z",
+          "achievement-memory-master": "2026-05-07T13:55:20.098Z",
+          "achievement-reaction-expert": "2026-05-07T13:55:20.098Z"
+        },
+        "gameScores": {
+          "game-drag": 510,
+          "game-memory": 620,
+          "game-reaction": 730,
+          "game-collector": 840
+        },
+        "gamePlays": {},
+        "activityLog": [
+          {
+            "id": "activity-1778162120098-o7zyxj",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-reaction-expert 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:20.098Z",
+            "meta": {
+              "achievementId": "achievement-reaction-expert",
+              "unlockedAt": "2026-05-07T13:55:20.098Z"
+            }
+          },
+          {
+            "id": "activity-1778162120098-8h5hek",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-memory-master 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:20.098Z",
+            "meta": {
+              "achievementId": "achievement-memory-master",
+              "unlockedAt": "2026-05-07T13:55:20.098Z"
+            }
+          },
+          {
+            "id": "activity-1778162120098-z3tzfg",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-quiz 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:20.098Z",
+            "meta": {
+              "achievementId": "achievement-first-quiz",
+              "unlockedAt": "2026-05-07T13:55:20.098Z"
+            }
+          },
+          {
+            "id": "activity-1778162120098-w2kf2q",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-experiment 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:20.098Z",
+            "meta": {
+              "achievementId": "achievement-first-experiment",
+              "unlockedAt": "2026-05-07T13:55:20.098Z"
+            }
+          },
+          {
+            "id": "activity-1778162120098-o4fh8t",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-element 已收入成就中心。",
+            "timestamp": "2026-05-07T13:55:20.098Z",
+            "meta": {
+              "achievementId": "achievement-first-element",
+              "unlockedAt": "2026-05-07T13:55:20.098Z"
+            }
+          }
+        ],
+        "settings": {
+          "performanceMode": "high-performance",
+          "particleDensity": "medium",
+          "soundEnabled": false,
+          "difficulty": "高中基础"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+COMMAND: npm run validate:curriculum
+START: 2026-05-07T22:28:49.1065644+08:00
+
+
+> element-explorer-kids@1.0.0 validate:curriculum
+> node scripts/validate-curriculum.mjs
+
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid
+
+END: 2026-05-07T22:28:50.5254734+08:00
+EXIT_CODE: 0

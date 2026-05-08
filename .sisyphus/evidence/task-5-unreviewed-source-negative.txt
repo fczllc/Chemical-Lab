@@ -1,0 +1,4 @@
+$ node scripts/validate-supporting-data.mjs --self-check-invalid unreviewed-runtime-source-reference
+selfCheckInvalid: rejected unreviewed-runtime-source-reference
+- 测验题目 quiz-c60-structure-source.sourceReferences[0].assetId 必须引用 reviewed 教材资产：pep-g9-2024-up-figure-1-1-water-boiling 当前为 unreviewed
+- C60 runtime quiz quiz-c60-structure-source.sourceReferences 必须引用 C60 已审核教材来源 pep-chemistry-g9-2024 book.md:3494-3504 与图6-4 资产

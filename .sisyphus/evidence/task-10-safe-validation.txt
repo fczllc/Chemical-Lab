@@ -1,0 +1,13 @@
+Command 1: npm run validate:all:safe
+Result: PASS
+- validate:elements passed
+- validate:supporting passed
+- validate:spectral passed
+- validate:curriculum passed
+- validate:textbook-assets passed
+- business data import audit passed
+- vite build passed with existing large-chunk warning
+
+Command 2: npm run validate:chem-notation
+Result: PASS
+- hydrates, states, ions, reactionSymbols, chemicalNotation all passed

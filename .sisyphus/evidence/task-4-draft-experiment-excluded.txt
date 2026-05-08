@@ -1,0 +1,7 @@
+Task 4 evidence: draft-only C60 experiment stays out of runtime reactions.
+
+Verification run:
+- `node -e "import('./src/data/index.js').then(({ reactions }) => { const target = 'draft-exp-c60-model-observation'; const match = reactions.find((reaction) => reaction.id === target || reaction.experimentId === target); if (match) { process.exit(1); } process.exit(0); })"`
+
+Result:
+- Runtime `reactions` export did not contain `draft-exp-c60-model-observation`.

@@ -1,0 +1,1 @@
+curriculum invalid fixture rejected: game-rule-difficulty-change

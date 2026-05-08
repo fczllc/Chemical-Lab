@@ -1,0 +1,11 @@
+## npm run validate:chem-notation
+
+> element-explorer-kids@1.0.0 validate:chem-notation
+> node scripts/validate-chem-notation.mjs
+
+hydrates: valid
+states: valid
+ions: valid
+reactionSymbols: valid
+chemicalNotation: valid
+EXIT_CODE=0

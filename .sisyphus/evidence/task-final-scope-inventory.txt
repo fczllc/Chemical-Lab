@@ -1,0 +1,27 @@
+# Task final scope inventory - textbook ingestion workflow
+
+Generated: 2026-05-08
+
+## Purpose
+This inventory explains dirty worktree provenance for the Final Verification Wave correction. It does not delete or revert unrelated user/prior-session work.
+
+## Intentional files for this corrective pass
+- scripts/textbook/generate-coverage.mjs - fixed coverage generation so generated candidates alone do not mark required runtime surfaces covered; explicit reviewed manifest policies now drive covered/deferred/notApplicable statuses.
+- scripts/textbook/validate-coverage.mjs - added reviewed-surface policy validation so stale/hand-authored coverage cannot claim covered required runtime surfaces without manifest-approved candidates.
+- scripts/textbook/validate-promotion-manifest.mjs - allowed reviewed learning path candidates and explicit deferred/notApplicable surface policy rationales.
+- scripts/textbook/promote-topic.mjs - added the learning path/progress promotion adapter for the pilot topic.
+- src/data/textbookIngestion/schemas/draftSchemas.js - allowed learningPathCandidate in reviewed promotion manifests.
+- src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json - added reviewed/promoted learningPath policy plus labOrReaction deferred and story notApplicable rationales.
+- src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json - regenerated after semantic fix; learningPath is manifest-backed, labOrReaction is deferred with rationale, story is notApplicable with rationale.
+- src/data/learningPath.json - promoted/verified relation-carbon-allotropes-comparison with reviewed source references from the stable volume.
+- src/data/quizData.json, src/data/contentMeta.js, src/data/achievementsData.json - rewritten idempotently by the promotion adapter while preserving existing promoted pilot quiz/game/achievement records.
+- .sisyphus/evidence/task-final-scope-inventory.txt and corrected task evidence/notepad entries - final reviewer evidence for scope fidelity.
+
+## Existing workflow/prior-session files intentionally left untouched
+- package.json and scripts/textbook/** broadly pre-existed in the active workflow slice; only the files listed above were intentionally changed by this corrective pass.
+- scripts/validate-supporting-data.mjs, scripts/validate-curriculum.mjs, scripts/validate-chem-notation.mjs, scripts/validate-textbook-assets.mjs are prior workflow/supporting validators, not new scope in this correction except as validation consumers.
+- src/data/index.js, curriculum/textbook asset/textbook pilot data, generated textbook ingestion data, textbook source files, and numerous .sisyphus evidence/notepad/plan files were present as prior workflow artifacts.
+- src/modules/**, tests/**, dist/index.html, .sisyphus/boulder.json, .sisyphus/run-continuation/**, and C60/carbon-allotrope prior-slice evidence are pre-existing dirty worktree changes from earlier slices/sessions and were not reverted.
+
+## Scope boundary
+This correction did not promote unsafe/deferred experiment candidates into src/data/reactions.json, did not implement experiment animations, did not rewrite game/lab/story engines, and did not remove prior C60 records or unrelated user work.

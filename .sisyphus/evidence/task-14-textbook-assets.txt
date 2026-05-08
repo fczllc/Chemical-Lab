@@ -1,0 +1,7 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-assets
+> node scripts/validate-textbook-assets.mjs
+
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (4 assets checked)
+assetReviewStatus: valid (0 runtime references checked)

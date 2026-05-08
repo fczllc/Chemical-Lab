@@ -1,0 +1,4 @@
+## node scripts/validate-textbook-assets.mjs --self-check-invalid unreviewed-formula-reference
+selfCheckInvalid: rejected unreviewed-formula-reference
+- quizData[21].textbookAssetReferences[0] 使用 apparatus-diagram 教材图片内容时必须引用 reviewed 资产：pep-g9-2024-up-figure-1-1-water-boiling 当前为 unreviewed
+EXIT_CODE=0

@@ -1,0 +1,8 @@
+COMMAND: npm run validate:supporting
+EXIT_CODE: 0
+
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?1 閬撻銆? 涓弽搴斻€?1 涓垚灏便€? 涓涔犻樁娈点€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?7 涓敮鎸佹暟鎹紩鐢ㄣ€?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?

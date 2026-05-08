@@ -1,0 +1,26 @@
+COMMAND: npm run textbook:extract -- --textbook rj-chemistry-grade9-2024-vol1
+EXIT: 0
+
+
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Extracted sections: 419
+Referenced assets: 142
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/source-inventory.json
+
+DETERMINISTIC_BEFORE_SHA256: 0210C2EDDEF226397D65DFC7556A614A49505D3FC746D076C7002BD456771CC6
+DETERMINISTIC_AFTER_SHA256: 0210C2EDDEF226397D65DFC7556A614A49505D3FC746D076C7002BD456771CC6
+DETERMINISTIC_MATCH: True
+
+COMMAND: node -e <source inventory shape validation>
+EXIT: 0
+source inventory valid: 419 sections, 142 assets
+
+COMMAND: runtime file hash before/after npm run textbook:extract
+EXIT: 0
+runtime hashes unchanged by extraction
+
+COMMAND: npm run build
+EXIT: 0
+vite build completed; warning: one chunk larger than 500 kB

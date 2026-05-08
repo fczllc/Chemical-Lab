@@ -1,108 +1,63 @@
 {
-  "active_plan": "I:\\Chemical-Lab\\.sisyphus\\plans\\latex-chemical-notation.md",
-  "started_at": "2026-05-04T09:53:28.807Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\textbook-ingest-grade9-2024-vol2.md",
+  "started_at": "2026-05-08T15:53:39.047Z",
   "session_ids": [
-    "ses_20dc1bb88ffeqak3FSyWFS4eN9",
-    "ses_20d89c146ffe5BTMcb6FMzyUTI",
-    "ses_20d898829ffe44A1ELc7o2lYdD",
-    "ses_20d894c35ffejApogFMCBmuaXD",
-    "ses_20d851769ffep3pFcmXFZsA4bZ",
-    "ses_20d84da84ffehKoCV0eIghl4ny",
-    "ses_20d51a258ffewC9cbNu4KtpneJ",
-    "ses_20d51a1a5ffeR4bF7Bpp4df476",
-    "ses_20ce4699affeKOQn75WO0ad2sR",
-    "ses_20ce46820ffeQT1yOiDzqCF6La",
-    "ses_20ccc4603ffeAvvQisNRa7Q8rC",
-    "ses_20ccc451cffeoKlZg5EfQ9Npim"
+    "ses_1f7b49c4affe4F3iz2vww3yaEx",
+    "ses_1f7b38860ffeVBC5U6Zx6LcnIz",
+    "ses_1f7b38819ffeJtsn2O05Ggx18t"
   ],
   "session_origins": {
-    "ses_20dc1bb88ffeqak3FSyWFS4eN9": "direct",
-    "ses_20d89c146ffe5BTMcb6FMzyUTI": "appended",
-    "ses_20d898829ffe44A1ELc7o2lYdD": "appended",
-    "ses_20d894c35ffejApogFMCBmuaXD": "appended",
-    "ses_20d851769ffep3pFcmXFZsA4bZ": "appended",
-    "ses_20d84da84ffehKoCV0eIghl4ny": "appended",
-    "ses_20d51a258ffewC9cbNu4KtpneJ": "appended",
-    "ses_20d51a1a5ffeR4bF7Bpp4df476": "appended",
-    "ses_20ce4699affeKOQn75WO0ad2sR": "appended",
-    "ses_20ce46820ffeQT1yOiDzqCF6La": "appended",
-    "ses_20ccc4603ffeAvvQisNRa7Q8rC": "appended",
-    "ses_20ccc451cffeoKlZg5EfQ9Npim": "appended"
+    "ses_1f7b49c4affe4F3iz2vww3yaEx": "direct",
+    "ses_1f7b38860ffeVBC5U6Zx6LcnIz": "appended",
+    "ses_1f7b38819ffeJtsn2O05Ggx18t": "appended"
   },
-  "plan_name": "latex-chemical-notation",
+  "plan_name": "textbook-ingest-grade9-2024-vol2",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Add KaTeX dependency and Vite asset baseline",
-      "session_id": "ses_20d96a06affevKgEjHrj54Fmi2",
+      "task_title": "Register textbook batch and script support",
+      "session_id": "ses_1f7b38860ffeVBC5U6Zx6LcnIz",
       "agent": "Sisyphus-Junior",
-      "category": "business-logic",
-      "updated_at": "2026-05-04T09:58:59.330Z"
+      "category": "deep",
+      "updated_at": "2026-05-08T16:06:30.050Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Create centralized chemistry notation renderer",
-      "session_id": "ses_20d9151c6ffexOBKY7UR6XZfoD",
+      "task_title": "Extract source inventory",
+      "session_id": "ses_1f7a71b6effeGK1XfYxYUCDlBS",
       "agent": "Sisyphus-Junior",
-      "category": "business-logic",
-      "updated_at": "2026-05-04T10:07:21.755Z"
+      "category": "quick",
+      "updated_at": "2026-05-08T16:13:01.749Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Migrate lab and reaction displays to the renderer",
-      "session_id": "ses_20d89c146ffe5BTMcb6FMzyUTI",
-      "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-04T10:12:03.045Z"
-    },
-    "todo:6": {
-      "task_key": "todo:6",
-      "task_label": "6",
-      "task_title": "Migrate reaction game formula displays",
-      "session_id": "ses_20d84da84ffehKoCV0eIghl4ny",
-      "agent": "Sisyphus-Junior",
-      "category": "business-logic",
-      "updated_at": "2026-05-04T10:19:19.979Z"
-    },
-    "todo:8": {
-      "task_key": "todo:8",
-      "task_label": "8",
-      "task_title": "Add and update Playwright notation coverage",
-      "session_id": "ses_20d51a258ffewC9cbNu4KtpneJ",
-      "agent": "explore",
-      "category": "",
-      "updated_at": "2026-05-04T11:12:04.713Z"
-    },
-    "todo:9": {
-      "task_key": "todo:9",
-      "task_label": "9",
-      "task_title": "Final build, layout, performance, accessibility, and security hardening",
-      "session_id": "ses_20d0746b7ffeAsjUB5FL9NWXCL",
+      "task_title": "Generate drafts and experiment backlog",
+      "session_id": "ses_1f7a1cb01ffe1UkUdCpvlfhKdX",
       "agent": "Sisyphus-Junior",
       "category": "deep",
-      "updated_at": "2026-05-04T13:01:20.868Z"
+      "updated_at": "2026-05-08T16:18:25.811Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "Create reviewed manifest scaffold and run full workflow gates",
+      "session_id": "ses_1f79c76beffeWO70DU7v03LINn",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-08T16:24:55.335Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
-      "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_20ccad456ffeClVa4PD6ZczBel",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-04T13:43:29.399Z"
-    },
-    "final-wave:f4": {
-      "task_key": "final-wave:f4",
-      "task_label": "F4",
-      "task_title": "Scope Fidelity Check — deep",
-      "session_id": "ses_20cc8280effestTEBhYDal4J7e",
-      "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-04T13:44:30.113Z"
+      "task_title": "Plan compliance audit — oracle — verify every acceptance criterion, evidence file, and dependency above was satisfied.",
+      "session_id": "ses_1f7960a83ffeIh2zFmN9aKcZab",
+      "agent": "oracle",
+      "category": "",
+      "updated_at": "2026-05-08T16:28:57.471Z"
     }
   }
 }

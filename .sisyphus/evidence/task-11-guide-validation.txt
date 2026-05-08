@@ -1,0 +1,10 @@
+guide checks ok
+
+> element-explorer-kids@1.0.0 validate:curriculum
+> node scripts/validate-curriculum.mjs
+
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid

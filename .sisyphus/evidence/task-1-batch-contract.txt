@@ -1,0 +1,3 @@
+batchContract: valid (rj-chemistry-grade9-2024-vol1)
+sourcePath: src/data/textbooks/2024版人教版九年级化学上册/book.md
+status: sourceImported

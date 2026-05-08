@@ -1,0 +1,7 @@
+COMMAND: node scripts/audit-business-data-imports.mjs
+START: 2026-05-07T22:28:49.2447531+08:00
+
+业务模块数据导入审计通过：已检查 16 个入口/模块文件。
+
+END: 2026-05-07T22:28:49.5651083+08:00
+EXIT_CODE: 0

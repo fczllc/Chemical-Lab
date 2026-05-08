@@ -1,0 +1,36 @@
+Command: `npm run validate:all:safe`
+
+Output:
+
+> element-explorer-kids@1.0.0 validate:all:safe
+> npm run validate:elements && npm run validate:supporting && npm run validate:spectral && npm run validate:curriculum && node scripts/audit-business-data-imports.mjs && npm run build
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+元素数据校验通过：共 118 个元素，原子序数与符号均唯一。
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+支持数据校验通过：20 道题、5 个反应、11 个成就、5 个学习阶段。
+
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+光谱线数据校验通过：共 118 个元素，波长范围 380-780 nm。
+
+> element-explorer-kids@1.0.0 validate:curriculum
+> node scripts/validate-curriculum.mjs
+
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid
+业务模块数据导入审计通过：已检查 16 个入口/模块文件。
+
+> element-explorer-kids@1.0.0 build
+> vite build
+
+Build completed successfully with the existing large-chunk warning.

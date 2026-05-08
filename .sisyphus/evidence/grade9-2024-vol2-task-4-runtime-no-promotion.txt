@@ -1,0 +1,9 @@
+CHECK: reviewed manifest boundary and no vol2 runtime promotion
+reviewedPath: src\data\textbookIngestion\reviewed\rj-chemistry-grade9-2024-vol2\promotion-manifest.json
+generatedPath: src\data\textbookIngestion\generated\rj-chemistry-grade9-2024-vol2\promotion-manifest.json
+pathsAreSeparate: True
+reviewedEntries: 0
+generatedEntries: 0
+reviewedSourceHash: sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5
+RESULT: PASS - no vol2 id/hash/topic found in runtime boundary files
+EXIT_CODE: 0

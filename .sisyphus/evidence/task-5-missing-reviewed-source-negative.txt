@@ -1,0 +1,4 @@
+$ node scripts/validate-supporting-data.mjs --self-check-invalid missing-reviewed-source-reference
+selfCheckInvalid: rejected missing-reviewed-source-reference
+- 测验题目 quiz-c60-structure-source.sourceReferences 必须是非空数组
+- C60 runtime quiz quiz-c60-structure-source.sourceReferences 必须包含已审核 C60 来源

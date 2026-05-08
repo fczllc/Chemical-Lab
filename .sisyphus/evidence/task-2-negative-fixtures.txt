@@ -1,0 +1,15 @@
+> node scripts/validate-curriculum.mjs --self-check-invalid unknown-tag
+curriculum invalid fixture rejected: unknown-tag
+
+> node scripts/validate-curriculum.mjs --self-check-invalid invalid-difficulty
+curriculum invalid fixture rejected: invalid-difficulty
+
+> node scripts/validate-curriculum.mjs --self-check-invalid prerequisite-cycle
+curriculum invalid fixture rejected: prerequisite-cycle
+
+> node scripts/validate-curriculum.mjs --self-check-invalid invalid-experiment-unlock
+curriculum invalid fixture rejected: invalid-experiment-unlock
+
+> node scripts/validate-curriculum.mjs --self-check-invalid game-rule-difficulty-change
+curriculum invalid fixture rejected: game-rule-difficulty-change
+

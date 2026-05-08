@@ -1,0 +1,13 @@
+
+> element-explorer-kids@1.0.0 textbook:coverage
+> node scripts/textbook/generate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Textbook coverage matrix generated: rj-chemistry-grade9-2024-vol1
+wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json
+rows: 1
+
+> element-explorer-kids@1.0.0 validate:textbook-coverage
+> node scripts/textbook/validate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1 --status reviewed
+
+Textbook coverage valid: rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json

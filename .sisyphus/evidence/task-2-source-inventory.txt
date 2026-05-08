@@ -1,0 +1,21 @@
+Task 2 Evidence: Reviewed source inventory for diamond/graphite comparison
+============================================================
+
+1. Inventory ID check
+---------------------
+`src/data/textbookPilotContent.js` contains exactly one `pep-g9-2024-up-carbon-diamond-graphite-comparison` record.
+
+2. Validation results
+---------------------
+validator exit code: 0
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (5 assets checked)
+assetReviewStatus: valid (3 runtime references checked)
+
+3. Source contract check
+------------------------
+- `volumeId: pep-chemistry-g9-2024`
+- `sourcePath: src/data/textbooks/2024版人教版九年级化学上册/book.md`
+- `lineRange: 3432-3462`
+- supplemental reviewed C60 reference: `lineRange: 3494-3504`, `assetId: pep-g9-2024-up-figure-6-4-c60-formula`
+- core note wording: carbon allotrope comparison, not isotopes

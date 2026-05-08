@@ -1,0 +1,7 @@
+Command: `node scripts/validate-supporting-data.mjs --self-check-invalid missing-allotropes-reviewed-source`
+Result: rejected as expected.
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-1
+- 测验题目 quiz-carbon-allotropes-comparison-1.sourceReferences 必须是非空数组
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-2
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-3
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences 必须包含已审核 comparison 来源

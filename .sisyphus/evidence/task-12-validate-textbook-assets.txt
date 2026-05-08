@@ -1,0 +1,13 @@
+COMMAND: npm run validate:textbook-assets
+START: 2026-05-07T22:28:49.3932778+08:00
+
+
+> element-explorer-kids@1.0.0 validate:textbook-assets
+> node scripts/validate-textbook-assets.mjs
+
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (5 assets checked)
+assetReviewStatus: valid (1 runtime references checked)
+
+END: 2026-05-07T22:28:51.1922987+08:00
+EXIT_CODE: 0

@@ -1,0 +1,6 @@
+Verified the draft experiment does not appear in runtime reactions exported from `src/data/index.js`.
+
+Command result:
+- `boundary-ok 5`
+
+This confirms `draft-exp-c60-model-observation` is absent from `reactions`.

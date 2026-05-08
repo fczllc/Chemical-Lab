@@ -1,0 +1,13 @@
+
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-grade9-2024-vol2
+
+Wrote knowledge-topics.json: 222
+Wrote quiz-candidates.json: 109
+Wrote experiment-candidates.json: 42
+Wrote lab-candidates.json: 122
+Wrote game-candidates.json: 100
+Wrote story-candidates.json: 87
+Wrote achievement-candidates.json: 222
+Wrote learning-path-candidates.json: 222
+Wrote draft-inventory.json: 904

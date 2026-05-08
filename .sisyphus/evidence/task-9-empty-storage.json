@@ -1,0 +1,34 @@
+{
+  "learnedElements": [],
+  "completedExperiments": [],
+  "gameScores": {},
+  "settings": {
+    "performanceMode": "normal",
+    "particleDensity": "medium",
+    "soundEnabled": false,
+    "difficulty": "normal"
+  },
+  "storedEnvelope": {
+    "version": "v2",
+    "timestamp": "2026-05-07T13:55:21.189Z",
+    "data": {
+      "currentElement": null,
+      "compareList": [],
+      "learnedElements": [],
+      "collectedElements": [],
+      "quizScores": [],
+      "completedExperiments": [],
+      "unlockedAchievements": [],
+      "achievementDates": {},
+      "gameScores": {},
+      "gamePlays": {},
+      "activityLog": [],
+      "settings": {
+        "performanceMode": "normal",
+        "particleDensity": "medium",
+        "soundEnabled": false,
+        "difficulty": "normal"
+      }
+    }
+  }
+}

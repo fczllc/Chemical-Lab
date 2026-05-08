@@ -1,0 +1,123 @@
+# Textbook Ingestion Workflow Summary
+# Task 12 - Repeatable Operator Workflow
+# Generated: 2026-05-08
+
+## Overview
+
+This document lists the exact commands an operator runs to process one textbook through the ingestion pipeline. The workflow is designed to be run one textbook at a time, starting with the pilot volume `rj-chemistry-grade9-2024-vol1`.
+
+## Prerequisites
+
+- The textbook source files exist under `src/data/textbooks/<textbook-directory>/`
+- A batch contract exists under `src/data/textbookIngestion/batches/<volumeId>.json`
+- The operator has reviewed the generated drafts and prepared a promotion manifest under `src/data/textbookIngestion/reviewed/<volumeId>/promotion-manifest.json`
+
+## Workflow Commands (in order)
+
+### 1. Choose one textbook
+
+Identify the stable `volumeId` for the textbook you want to process. The pilot uses:
+
+```
+rj-chemistry-grade9-2024-vol1
+```
+
+### 2. Validate batch contract
+
+```
+npm run validate:textbook-batch -- --textbook rj-chemistry-grade9-2024-vol1
+```
+
+This confirms the batch contract exists, has a valid source hash, and points to the correct source path.
+
+### 3. Extract source inventory
+
+```
+npm run textbook:extract -- --textbook rj-chemistry-grade9-2024-vol1
+```
+
+This reads the source `book.md`, splits it into sections by headings, computes SHA-256 hashes, enumerates assets, and writes `source-inventory.json` under `src/data/textbookIngestion/generated/<volumeId>/`. The output is deterministic and does not modify runtime data.
+
+### 4. Generate draft candidates
+
+```
+npm run textbook:generate-drafts -- --textbook rj-chemistry-grade9-2024-vol1
+```
+
+This produces draft candidates for all target surfaces: knowledge topics, quiz candidates, experiment candidates, lab candidates, game challenge candidates, story candidates, achievement candidates, and learning path candidates. Every candidate defaults to `reviewStatus: needsReview` and `runtimeEligible: false`.
+
+### 5. Review and prepare promotion manifest
+
+This is a human review step. The operator examines the generated drafts and creates or updates the reviewed promotion manifest at:
+
+```
+src/data/textbookIngestion/reviewed/<volumeId>/promotion-manifest.json
+```
+
+Each manifest entry must include:
+- `promoteScope: "topic"` and an explicit `curriculumTagId`
+- `reviewedBy` and `reviewedAt` metadata
+- `targetRuntimeFiles` listing only approved runtime destinations
+- References to existing generated candidate IDs
+
+Promotion cannot proceed without a valid reviewed manifest.
+
+### 6. Promote reviewed topics
+
+```
+npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+```
+
+This promotes one reviewed `curriculumTagId` at a time to approved runtime files. The command is idempotent for entries already marked `reviewStatus: promoted`.
+
+### 7. Generate coverage matrix
+
+```
+npm run textbook:coverage -- --textbook rj-chemistry-grade9-2024-vol1
+```
+
+This writes a coverage matrix showing which surfaces are covered, deferred, or not applicable for each reviewed topic.
+
+### 8. Run validators
+
+```
+npm run validate:textbook-workflow -- --textbook rj-chemistry-grade9-2024-vol1
+npm run validate:all:safe
+npm run validate:chem-notation
+```
+
+The `validate:textbook-workflow` command runs the full gate in order: extraction, draft generation, batch validation, draft schema validation, experiment backlog validation, runtime boundary validation, coverage generation, and coverage validation.
+
+The `validate:all:safe` command runs the stable runtime validation chain (elements, supporting data, spectral lines, curriculum, textbook assets, business import audit, and build).
+
+The `validate:chem-notation` command checks chemical notation correctness.
+
+### 9. Run Playwright smoke tests
+
+```
+npx playwright test tests/shell/content-data-smoke.spec.ts tests/ui/route-shells.spec.ts
+```
+
+This confirms the app shell and routes survive the promoted content.
+
+### 10. Commit
+
+Commit the intentional changes: the reviewed promotion manifest, any updated runtime data files, and the generated coverage matrix. Do not commit temporary or unreviewed draft files unless they are part of the intended ingestion output.
+
+## Key Safety Rules
+
+- Generated drafts are NOT runtime-eligible until reviewed and promoted.
+- Deferred experiments remain in the backlog and OUT of `src/data/reactions.json`.
+- Promotion is blocked without a valid reviewed manifest entry.
+- Only `curriculumTagId`-scoped promotion is allowed; chapter-wide promotion is rejected.
+- Runtime boundary validators prevent raw textbook or draft ingestion paths from leaking into runtime modules.
+
+## Pilot Evidence
+
+- Extracted sections: 419
+- Referenced assets: 142
+- Draft candidates generated: 1276 (340 knowledge, 155 quiz, 55 experiment, 172 lab, 119 game, 95 story, 340 achievement, 340 learning path)
+- Reviewed pilot topic: `g9-carbon-allotropes-comparison`
+- Promoted runtime surfaces: quiz (3 questions), game challenge metadata, achievement (1)
+- Deferred experiment backlog: 55 items, zero leakage into reactions.json
+- Coverage status after promotion: all required surfaces covered, experiment backlog deferred

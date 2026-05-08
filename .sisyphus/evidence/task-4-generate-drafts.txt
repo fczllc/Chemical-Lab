@@ -1,0 +1,46 @@
+
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Extracted sections: 419
+Referenced assets: 142
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/source-inventory.json
+
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Wrote knowledge-topics.json: 340
+Wrote quiz-candidates.json: 155
+Wrote experiment-candidates.json: 147
+Wrote lab-candidates.json: 172
+Wrote game-candidates.json: 119
+Wrote story-candidates.json: 95
+Wrote achievement-candidates.json: 340
+Wrote learning-path-candidates.json: 340
+Wrote draft-inventory.json: 1368
+
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Wrote knowledge-topics.json: 340
+Wrote quiz-candidates.json: 155
+Wrote experiment-candidates.json: 147
+Wrote lab-candidates.json: 172
+Wrote game-candidates.json: 119
+Wrote story-candidates.json: 95
+Wrote achievement-candidates.json: 340
+Wrote learning-path-candidates.json: 340
+Wrote draft-inventory.json: 1368
+
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Wrote knowledge-topics.json: 340
+Wrote quiz-candidates.json: 155
+Wrote experiment-candidates.json: 55
+Wrote lab-candidates.json: 172
+Wrote game-candidates.json: 119
+Wrote story-candidates.json: 95
+Wrote achievement-candidates.json: 340
+Wrote learning-path-candidates.json: 340
+Wrote draft-inventory.json: 1276

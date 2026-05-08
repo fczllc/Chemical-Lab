@@ -1,0 +1,3 @@
+Promotion manifest validation failed:
+- reviewedBy is required when reviewStatus is reviewed at entries[0]
+- entries[0].reviewedBy must be a non-empty string

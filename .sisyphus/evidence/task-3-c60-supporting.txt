@@ -1,0 +1,58 @@
+Task 3 Evidence: C60 Runtime Content Import
+============================================
+Date: 2026-05-08
+
+1. C60 Runtime Quiz Records
+---------------------------
+Count: 3 (exactly as required)
+IDs:
+  - quiz-c60-structure-source
+  - quiz-c60-carbon-allotrope
+  - quiz-c60-reviewed-formula-application
+
+Properties verified:
+  - All are 4-option MCQ
+  - All have difficulty: "初中"
+  - All have curriculumTags: ["g9-carbon-c60-allotrope"]
+  - All have formulaText: "C60" and notationReviewStatus: "reviewed"
+  - All have sourceReviewStatus: "reviewed" with sourceReferences[]
+  - All sourceReferences point to pep-chemistry-g9-2024, book.md:3494-3504, asset pep-g9-2024-up-figure-6-4-c60-formula
+  - Legacy quiz ID "quiz-c60-reviewed-formula" is NOT present
+
+2. C60 Learning/Progress Relation
+---------------------------------
+Count: 1 (exactly as required)
+Location: stage-3 ("化学助手")
+Properties verified:
+  - curriculumTags includes "g9-carbon-c60-allotrope"
+  - sourceReviewStatus: "reviewed"
+  - sourceReferences includes pep-chemistry-g9-2024 book.md:3494-3504
+
+3. C60 Game Challenge Metadata
+------------------------------
+Count: 1 (exactly as required)
+Location: GAME_META.collector.challengeMetadata
+Properties verified:
+  - challengeId: "challenge-c60-carbon-topic"
+  - curriculumTags: ["g9-carbon-c60-allotrope"]
+  - sourceReviewStatus: "reviewed"
+  - sourceReferences includes pep-chemistry-g9-2024 book.md:3494-3504
+  - Under existing game ID "collector" (no new game IDs added)
+
+4. Validation Results
+---------------------
+- npm run validate:supporting  -> PASSED
+- npm run build                -> PASSED (exit 0)
+
+5. Files Modified
+-----------------
+- src/data/quizData.json       (3 C60 quiz records)
+- src/data/quizData.js         (mirror of quizData.json)
+- src/data/learningPath.json   (stage-3 C60 curriculum tag + source refs)
+- src/data/learningPath.js     (mirror of learningPath.json)
+- src/data/contentMeta.js      (collector challengeMetadata C60 entry)
+
+No changes needed to:
+- scripts/validate-supporting-data.mjs (already enforces exact counts)
+- src/data/reactions.json / reactions.js (not modified)
+- Core game mechanics (not modified)

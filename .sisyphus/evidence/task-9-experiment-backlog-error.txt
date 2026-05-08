@@ -1,0 +1,6 @@
+# Task 9 negative fixture evidence
+
+## fixture: node scripts/textbook/validate-experiment-backlog.mjs --fixture deferred-in-reactions
+exitCode=1
+Experiment backlog validation failed:
+- Deferred experiment cannot be runtime reaction: experiment-0006-1-1-l27-l50-e9eba2d49e (scripts/textbook/fixtures/deferred-in-reactions.json)

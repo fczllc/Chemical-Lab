@@ -1,0 +1,4 @@
+All draft files exist
+Checked candidates: 1616
+No generated drafts are reviewed
+All generated candidates are runtimeEligible=false by default

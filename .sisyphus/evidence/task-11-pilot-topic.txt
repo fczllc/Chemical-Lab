@@ -1,0 +1,120 @@
+# Task 11 pilot topic evidence
+
+## npm run textbook:extract -- --textbook rj-chemistry-grade9-2024-vol1
+
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Extracted sections: 419
+Referenced assets: 142
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/source-inventory.json
+
+## npm run textbook:generate-drafts -- --textbook rj-chemistry-grade9-2024-vol1
+
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Wrote knowledge-topics.json: 340
+Wrote quiz-candidates.json: 155
+Wrote experiment-candidates.json: 55
+Wrote lab-candidates.json: 172
+Wrote game-candidates.json: 119
+Wrote story-candidates.json: 95
+Wrote achievement-candidates.json: 340
+Wrote learning-path-candidates.json: 340
+Wrote draft-inventory.json: 1276
+
+## node scripts/textbook/validate-promotion-manifest.mjs --textbook rj-chemistry-grade9-2024-vol1
+Promotion manifest valid: rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+
+## npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+
+Textbook topic promoted: rj-chemistry-grade9-2024-vol1 / g9-carbon-allotropes-comparison
+updated: src/data/achievementsData.json
+updated: src/data/contentMeta.js
+updated: src/data/quizData.json
+
+## npm run textbook:coverage -- --textbook rj-chemistry-grade9-2024-vol1
+
+> element-explorer-kids@1.0.0 textbook:coverage
+> node scripts/textbook/generate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Textbook coverage matrix generated: rj-chemistry-grade9-2024-vol1
+wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json
+rows: 1
+
+## npm run validate:textbook-coverage -- --textbook rj-chemistry-grade9-2024-vol1 --status reviewed
+
+> element-explorer-kids@1.0.0 validate:textbook-coverage
+> node scripts/textbook/validate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1 --status reviewed
+
+Textbook coverage valid: rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json
+
+## Pilot runtime and safety surface inspection
+coverage row statuses: sourceEvidence=covered, quiz=covered, learningPath=covered, labOrReaction=covered, story=covered, achievement=covered, gameChallenge=covered, runtimeStatus=deferred, reviewStatus=covered
+runtime surfaces: curriculum=covered, quiz=3, learningPath=1, gameChallenge=covered, storyCandidate=covered, achievement=1
+lab/reaction safety: 55 deferred backlog items; 0 deferred experiment IDs in reactions.json
+
+## npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison (after promoted-status fix)
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+
+relativeProjectPath is not defined
+
+## node scripts/textbook/validate-promotion-manifest.mjs --textbook rj-chemistry-grade9-2024-vol1 (promoted entries)
+Promotion manifest valid: rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+
+## npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison (idempotent promoted manifest)
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+
+Textbook topic promoted: rj-chemistry-grade9-2024-vol1 / g9-carbon-allotropes-comparison
+updated: src/data/achievementsData.json
+updated: src/data/contentMeta.js
+updated: src/data/quizData.json
+
+## npm run textbook:coverage -- --textbook rj-chemistry-grade9-2024-vol1 (promoted entries)
+
+> element-explorer-kids@1.0.0 textbook:coverage
+> node scripts/textbook/generate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1
+
+Textbook coverage matrix generated: rj-chemistry-grade9-2024-vol1
+wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json
+rows: 1
+
+## npm run validate:textbook-coverage -- --textbook rj-chemistry-grade9-2024-vol1 --status reviewed (promoted entries)
+
+> element-explorer-kids@1.0.0 validate:textbook-coverage
+> node scripts/textbook/validate-coverage.mjs --textbook rj-chemistry-grade9-2024-vol1 --status reviewed
+
+Textbook coverage valid: rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json
+
+## Pilot runtime and safety surface inspection (promoted coverage)
+coverage row statuses: sourceEvidence=covered, quiz=covered, learningPath=covered, labOrReaction=covered, experimentBacklog=deferred, story=covered, achievement=covered, gameChallenge=covered, runtimeStatus=covered, reviewStatus=covered
+runtime surfaces: curriculum=covered, quiz=3, learningPath=1, gameChallenge=covered, storyCandidate=covered, achievement=1
+lab/reaction safety: 55 deferred backlog items; 0 deferred experiment IDs in reactions.json
+
+## Final pilot result
+Final successful rerun: promotion manifest validated with promoted entries, `npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison` exited 0, coverage regenerated and validated, runtimeStatus=covered, experimentBacklog=deferred, and no deferred experiment IDs were present in `src/data/reactions.json`.
+
+
+## Final Verification Wave correction - coverage semantics
+
+Updated after F1/F2/F4 rejection:
+- Coverage generation no longer counts generated-only candidates as required runtime surface coverage.
+- promotion-manifest now includes manifest-backed learningPath promotion for `learning-path-0295-source-section-l3610-l3664-d45787521d`.
+- labOrReaction is `deferred` with a validator-enforced rationale because no reviewed lab-safe runtime reaction is approved.
+- story is `notApplicable` with a validator-enforced rationale because current `src/modules/storyMode.js` consumes element-level stories/media, not curriculum-topic story runtime records.
+- Regenerated coverage row statuses: sourceEvidence=covered, quiz=covered, learningPath=covered, labOrReaction=deferred, experimentBacklog=deferred, story=notApplicable, achievement=covered, gameChallenge=covered, runtimeStatus=covered, reviewStatus=covered.
+- Runtime surfaces now represented honestly: curriculum tag exists, quiz=3 records, learningPath/progress=relation-carbon-allotropes-comparison, gameChallenge=challenge-carbon-allotropes-comparison, achievement=achievement-carbon-allotrope-comparison, reactions=no new unsafe/deferred experiment runtime record, story=no current topic-story runtime target.

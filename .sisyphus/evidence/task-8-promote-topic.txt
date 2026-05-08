@@ -1,0 +1,9 @@
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol1 --topic g9-carbon-allotropes-comparison
+
+Textbook topic promoted: rj-chemistry-grade9-2024-vol1 / g9-carbon-allotropes-comparison
+updated: src/data/achievementsData.json
+updated: src/data/contentMeta.js
+updated: src/data/quizData.json
+exitCode=0

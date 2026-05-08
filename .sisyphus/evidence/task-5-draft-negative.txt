@@ -1,0 +1,10 @@
+# Task 5 draft leak negative evidence
+
+## node scripts/validate-supporting-data.mjs --self-check-invalid allotropes-draft-runtime-leak
+selfCheckInvalid: rejected allotropes-draft-runtime-leak
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-1
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-2
+- 重复的测验题目 ID：quiz-carbon-allotropes-comparison-3
+- 重复的学习阶段 ID：relation-carbon-allotropes-comparison
+- carbon allotrope comparison draft-only experiment 不应泄漏到 runtime reactions：draft-exp-carbon-allotropes-observation
+exit code: 1

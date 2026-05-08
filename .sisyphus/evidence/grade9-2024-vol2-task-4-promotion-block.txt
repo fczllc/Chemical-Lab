@@ -1,0 +1,7 @@
+COMMAND: npm run textbook:promote -- --textbook rj-chemistry-grade9-2024-vol2 --topic unreviewed-generated-topic
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --textbook rj-chemistry-grade9-2024-vol2 --topic unreviewed-generated-topic
+
+Promotion blocked: No reviewed manifest entries target curriculumTagId unreviewed-generated-topic
+EXIT_CODE: 1

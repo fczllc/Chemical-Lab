@@ -1,0 +1,29 @@
+Task 2 Evidence: Active-carbon source remains excluded
+======================================================
+
+1. Negative validation result
+-----------------------------
+selfCheck exit code: 1
+selfCheckInvalid: rejected allotropes-active-carbon-source-contamination
+- 学习阶段 relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison inventory challenge-carbon-allotropes-comparison.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences[0].lineRange 不能使用活性炭污染区间：3463-3489
+- carbon allotrope comparison runtime quiz quiz-carbon-allotropes-comparison-1.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison progress relation relation-carbon-allotropes-comparison.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences[0].lineRange 必须使用 起始行-结束行 格式：3483
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences[0].lineRange 不能使用活性炭污染区间：3483
+- carbon allotrope comparison game challenge metadata collector.challengeMetadata.sourceReferences 必须引用 comparison 核心区间 3432-3462 或已审核 C60 区间 3494-3504
+
+2. Validator rule proof
+-----------------------
+- `scripts/validate-supporting-data.mjs` rejects `3463-3489` and `3483`.
+- The comparison topic requires `3432-3462` or `3494-3504`.
+
+3. Final comparison source check
+--------------------------------
+- The reviewed comparison record keeps `3432-3462` as the core range.
+- The only C60 asset reference is the existing `pep-g9-2024-up-figure-6-4-c60-formula` entry at `3494-3504`.

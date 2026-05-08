@@ -1,0 +1,13 @@
+Command: `node scripts/validate-supporting-data.mjs`
+Result: failed because Tasks 4-5 are not yet present.
+- carbon allotrope comparison progress relation ID 缺少：relation-carbon-allotropes-comparison
+- carbon allotrope comparison game challenge ID 缺少：challenge-carbon-allotropes-comparison
+
+Command: `npx playwright test tests/shell/content-data-smoke.spec.ts`
+Result: passed (5/5 tests).
+
+Command: `node -e "const fs=require('fs'); JSON.parse(fs.readFileSync('src/data/quizData.json','utf8')); console.log('quizData.json OK')"`
+Result: passed.
+
+Command: `node --input-type=module -e "import('./src/data/quizData.js').then((m) => console.log('quizData.js OK', m.quizData.length)).catch((error) => { console.error(error); process.exit(1); })"`
+Result: passed.

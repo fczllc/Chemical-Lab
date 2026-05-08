@@ -1,0 +1,2 @@
+Draft schema validation failed:
+- reviewedAt is required when reviewStatus is reviewed at quizCandidates[0]

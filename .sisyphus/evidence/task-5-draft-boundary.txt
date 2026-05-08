@@ -1,0 +1,20 @@
+# Task 5 draft boundary evidence
+
+## node scripts/audit-business-data-imports.mjs
+业务模块数据导入审计通过：已检查 16 个入口/模块文件。
+exit code: 0
+
+## node scripts/validate-supporting-data.mjs
+支持数据校验通过：26 道题、5 个反应、11 个成就、6 个学习阶段。
+课程引用校验通过：4 个可用标签、4 个难度档、66 个支持数据引用。
+教材来源审核校验通过：11 个 reviewed source references。
+游戏元数据校验通过：drag, memory, reaction, collector。
+exit code: 0
+
+## runtime boundary checks
+src/data/reactions.json: absent
+src/data/reactions.js: absent
+src/data/index.js: absent
+runtime reactions export hits: 0
+src/modules lab/UI hits: 0
+exit code: 0

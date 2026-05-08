@@ -1,0 +1,8 @@
+Command: npm run validate:textbook-workflow -- --textbook rj-chemistry-grade9-2024-vol1
+Result: PASS
+
+Highlights:
+- Extracted sections: 419
+- Generated drafts: knowledge-topics 340, quiz 155, experiment 55, lab 172, game 119, story 95, achievement 340, learning-path 340
+- Batch, draft schema, experiment backlog, runtime boundary, coverage validation all passed
+- Workflow output ended with: Textbook workflow valid: rj-chemistry-grade9-2024-vol1

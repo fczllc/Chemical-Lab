@@ -1,0 +1,4 @@
+COMMAND: node scripts/textbook/extract-textbook.mjs --textbook fixture-missing-book
+EXIT: 1
+
+Source book not found: src/data/textbookIngestion/fixtures/missing-book.md
