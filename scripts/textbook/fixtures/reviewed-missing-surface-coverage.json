@@ -1,0 +1,140 @@
+{
+  "kind": "coverageMatrix",
+  "data": {
+    "schemaVersion": 1,
+    "volumeId": "rj-chemistry-grade9-2024-vol1",
+    "generatedFrom": "scripts/textbook/fixtures/reviewed-missing-surface-coverage.json",
+    "rowKey": "curriculumTagId",
+    "columns": [
+      "sourceEvidence",
+      "assets",
+      "quiz",
+      "learningPath",
+      "labOrReaction",
+      "experimentBacklog",
+      "story",
+      "achievement",
+      "gameChallenge",
+      "runtimeStatus",
+      "reviewStatus",
+      "notes"
+    ],
+    "statusValues": [
+      "required",
+      "optional",
+      "notApplicable",
+      "covered",
+      "deferred",
+      "missing"
+    ],
+    "rows": [
+      {
+        "curriculumTagId": "g9-carbon-allotropes-comparison",
+        "sourceEvidence": {
+          "requirement": "required",
+          "status": "covered",
+          "references": [
+            "src/data/textbooks/2024版人教版九年级化学上册/book.md:3610-3664"
+          ]
+        },
+        "assets": {
+          "requirement": "optional",
+          "status": "covered",
+          "assetCount": 2,
+          "assetIds": [
+            "0295-source-section-l3610-l3664-d45787521d-asset-01",
+            "0295-source-section-l3610-l3664-d45787521d-asset-02"
+          ]
+        },
+        "quiz": {
+          "requirement": "required",
+          "status": "covered",
+          "candidateIds": [
+            "quiz-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "manifestCandidateIds": [
+            "quiz-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "generatedCandidateCount": 1
+        },
+        "learningPath": {
+          "requirement": "required",
+          "status": "covered",
+          "candidateIds": [
+            "learning-path-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "manifestCandidateIds": [],
+          "generatedCandidateCount": 1
+        },
+        "labOrReaction": {
+          "requirement": "required",
+          "status": "covered",
+          "candidateIds": [
+            "lab-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "manifestCandidateIds": [],
+          "generatedCandidateCount": 1
+        },
+        "experimentBacklog": {
+          "requirement": "optional",
+          "status": "deferred",
+          "reason": "No generated experiment candidate is attached; experiment backlog remains deferred until a reviewed safe lab scope is created."
+        },
+        "story": {
+          "requirement": "required",
+          "status": "covered",
+          "candidateIds": [
+            "story-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "manifestCandidateIds": [],
+          "generatedCandidateCount": 1
+        },
+        "achievement": {
+          "requirement": "required",
+          "status": "missing",
+          "candidateIds": [],
+          "manifestCandidateIds": [],
+          "generatedCandidateCount": 0
+        },
+        "gameChallenge": {
+          "requirement": "required",
+          "status": "covered",
+          "candidateIds": [
+            "game-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "manifestCandidateIds": [
+            "game-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "generatedCandidateCount": 1
+        },
+        "runtimeStatus": {
+          "requirement": "required",
+          "status": "deferred",
+          "targetRuntimeFiles": [
+            "src/data/achievementsData.json",
+            "src/data/contentMeta.js",
+            "src/data/quizData.json"
+          ],
+          "reason": "Runtime promotion is intentionally deferred to the promotion adapter task."
+        },
+        "reviewStatus": {
+          "requirement": "required",
+          "status": "covered",
+          "value": "reviewed",
+          "entryIds": [
+            "promote-g9-carbon-allotropes-comparison-achievement",
+            "promote-g9-carbon-allotropes-comparison-game",
+            "promote-g9-carbon-allotropes-comparison-quiz"
+          ]
+        },
+        "notes": {
+          "requirement": "optional",
+          "status": "covered",
+          "values": [
+            "Fixture intentionally removes achievement coverage to exercise reviewed-topic missing-surface validation."
+          ]
+        }
+      }
+    ]
+  }
+}

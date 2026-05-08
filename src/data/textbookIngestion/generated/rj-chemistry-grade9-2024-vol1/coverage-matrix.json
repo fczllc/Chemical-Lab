@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "volumeId": "rj-chemistry-grade9-2024-vol1",
+  "generatedFrom": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json",
+  "rowKey": "curriculumTagId",
+  "columns": [
+    "sourceEvidence",
+    "assets",
+    "quiz",
+    "learningPath",
+    "labOrReaction",
+    "experimentBacklog",
+    "story",
+    "achievement",
+    "gameChallenge",
+    "runtimeStatus",
+    "reviewStatus",
+    "notes"
+  ],
+  "statusValues": [
+    "required",
+    "optional",
+    "notApplicable",
+    "covered",
+    "deferred",
+    "missing"
+  ],
+  "rows": [
+    {
+      "curriculumTagId": "g9-carbon-allotropes-comparison",
+      "sourceEvidence": {
+        "requirement": "required",
+        "status": "covered",
+        "references": [
+          "knowledge-topics.json:knowledge-topic-0295-source-section-l3610-l3664-d45787521d",
+          "src/data/textbooks/2024版人教版九年级化学上册/book.md:3610-3664"
+        ]
+      },
+      "assets": {
+        "requirement": "optional",
+        "status": "covered",
+        "assetCount": 2,
+        "assetIds": [
+          "0295-source-section-l3610-l3664-d45787521d-asset-01",
+          "0295-source-section-l3610-l3664-d45787521d-asset-02"
+        ]
+      },
+      "quiz": {
+        "requirement": "required",
+        "status": "covered",
+        "candidateIds": [
+          "quiz-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [
+          "quiz-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-quiz"
+        ]
+      },
+      "learningPath": {
+        "requirement": "required",
+        "status": "covered",
+        "candidateIds": [
+          "learning-path-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [
+          "learning-path-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-learning-path"
+        ]
+      },
+      "labOrReaction": {
+        "requirement": "required",
+        "status": "deferred",
+        "candidateIds": [
+          "lab-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-learning-path"
+        ],
+        "reason": "The carbon allotropes comparison has generated inquiry/lab candidates, but no reviewed lab-safe runtime reaction or animation scope is approved for src/data/reactions.json in this workflow slice."
+      },
+      "experimentBacklog": {
+        "requirement": "optional",
+        "status": "deferred",
+        "reason": "No generated experiment candidate is attached; experiment backlog remains deferred until a reviewed safe lab scope is created."
+      },
+      "story": {
+        "requirement": "notApplicable",
+        "status": "notApplicable",
+        "candidateIds": [
+          "story-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-learning-path"
+        ],
+        "reason": "The current story runtime in src/modules/storyMode.js reads element-level stories from elements/story media, not curriculum-topic story records, so no topic story runtime target exists without rewriting the story engine."
+      },
+      "achievement": {
+        "requirement": "required",
+        "status": "covered",
+        "candidateIds": [
+          "achievement-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [
+          "achievement-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-achievement"
+        ]
+      },
+      "gameChallenge": {
+        "requirement": "required",
+        "status": "covered",
+        "candidateIds": [
+          "game-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "manifestCandidateIds": [
+          "game-0295-source-section-l3610-l3664-d45787521d"
+        ],
+        "generatedCandidateCount": 1,
+        "coveragePolicyEntryIds": [
+          "promote-g9-carbon-allotropes-comparison-game"
+        ]
+      },
+      "runtimeStatus": {
+        "requirement": "required",
+        "status": "covered",
+        "targetRuntimeFiles": [
+          "src/data/achievementsData.json",
+          "src/data/contentMeta.js",
+          "src/data/learningPath.json",
+          "src/data/quizData.json"
+        ],
+        "reason": "Reviewed entries are marked promoted."
+      },
+      "reviewStatus": {
+        "requirement": "required",
+        "status": "covered",
+        "value": "promoted",
+        "entryIds": [
+          "promote-g9-carbon-allotropes-comparison-achievement",
+          "promote-g9-carbon-allotropes-comparison-game",
+          "promote-g9-carbon-allotropes-comparison-learning-path",
+          "promote-g9-carbon-allotropes-comparison-quiz"
+        ]
+      },
+      "notes": {
+        "requirement": "optional",
+        "status": "covered",
+        "values": [
+          "Reviewed manifest entries: 4",
+          "Matched generated candidates: 7",
+          "Target runtime files: src/data/achievementsData.json, src/data/contentMeta.js, src/data/learningPath.json, src/data/quizData.json"
+        ]
+      }
+    }
+  ]
+}

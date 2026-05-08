@@ -1,0 +1,30 @@
+{
+  "kind": "draftInventory",
+  "data": {
+    "schemaVersion": 1,
+    "volumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "status": "generated",
+    "sourceSections": [
+      {
+        "sectionId": "section-air-composition",
+        "sourceText": "空气的成分",
+        "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+        "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+        "sourceHeading": "空气",
+        "sourceLineStart": 12,
+        "sourceLineEnd": 18,
+        "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+        "reviewStatus": "generated"
+      }
+    ],
+    "curriculumTopics": [],
+    "experimentCandidates": [],
+    "labCandidates": [],
+    "gameChallengeCandidates": [],
+    "storyCandidates": [],
+    "achievementCandidates": [],
+    "quizCandidates": [],
+    "reviewedSourceReferences": []
+  }
+}

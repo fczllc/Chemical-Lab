@@ -1,0 +1,18 @@
+{
+  "volumeId": "rj-chemistry-grade9-2024-vol2",
+  "displayName": "2024版人教版九年级化学下册",
+  "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+  "assetRoot": "src/data/textbooks/2024版人教版九年级化学下册/",
+  "schemaVersion": 1,
+  "status": "sourceImported",
+  "activeBatchId": "rj-chemistry-grade9-2024-vol2-source-imported-2026-05-08",
+  "generatedAt": "2026-05-08T00:00:00.000Z",
+  "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+  "allowedStatuses": [
+    "sourceImported",
+    "drafted",
+    "partiallyReviewed",
+    "reviewed",
+    "promoted"
+  ]
+}

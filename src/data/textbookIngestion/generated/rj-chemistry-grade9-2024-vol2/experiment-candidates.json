@@ -1,0 +1,1294 @@
+[
+  {
+    "candidateId": "experiment-0009-8-1-l80-l98-341571ae87",
+    "title": "【实验8-1】",
+    "summary": "【实验8-1】 比较黄铜片(铜锌合金)和铜片、硬铝片(铝合金)和铝片的光泽与颜色;如图8-3所示将它们互相刻画,比较它们的硬度。 图8-3比较合金和纯金属的硬度 性质比较 现象 结论 黄铜 铜 硬铝 铝 光泽和颜色 硬度",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [
+      "图8-3比较合金和纯金属的硬度 性质比较 现象 结论 黄铜 铜 硬铝 铝 光泽和颜色 硬度"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验8-1】",
+    "sourceLineStart": 80,
+    "sourceLineEnd": 98,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:341571ae8777657e4aaf219ae2eb968e9a1a81dcd95f7a02076813b1d4ca5acc",
+    "sourceSectionId": "0009-8-1-l80-l98-341571ae87",
+    "assets": [
+      {
+        "assetId": "0009-8-1-l80-l98-341571ae87-asset-01",
+        "altText": "",
+        "rawReference": "![](images/00cf5be58aae59fc46901f7cb9cdb4a609f49d7d391d5b1536abae46f99dfd2e.jpg)",
+        "assetPath": "images/00cf5be58aae59fc46901f7cb9cdb4a609f49d7d391d5b1536abae46f99dfd2e.jpg",
+        "sourceLineNumber": 86,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/00cf5be58aae59fc46901f7cb9cdb4a609f49d7d391d5b1536abae46f99dfd2e.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0024-source-section-l266-l286-517ea0fb81",
+    "title": "【实验】",
+    "summary": "【实验】 (1)在试管中放入少量镁,加入 $5 ~ \\mathrm { m L }$ 稀盐酸,将燃着的木条放在试管口,观察现象,并判断反应后生成了什么气体。 参照上述实验步骤,分别向盛有少量锌、铁、铜的试管中加入 $5 \\mathrm {…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验】 (1)在试管中放入少量镁,加入 $5 ~ \\mathrm { m L }$ 稀盐酸,将燃着的木条放在试管口,观察现象,并判断反应后生成了什么气体。",
+      "参照上述实验步骤,分别向盛有少量锌、铁、铜的试管中加入 $5 \\mathrm { m L }$ 稀盐酸,观察现象(如图8-10)。",
+      "图8-10镁、锌、铁、铜分别在稀盐酸中 金属 现象 化学方程式 稀盐酸 稀硫酸 稀盐酸 稀硫酸 镁 锌 铁 铜"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 266,
+    "sourceLineEnd": 286,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:517ea0fb81d195ff8254a90287fbb7abb229be7605cb376ceff8561b6196b13e",
+    "sourceSectionId": "0024-source-section-l266-l286-517ea0fb81",
+    "assets": [
+      {
+        "assetId": "0024-source-section-l266-l286-517ea0fb81-asset-01",
+        "altText": "",
+        "rawReference": "![](images/0f200bf7ec4172c01e2c48f21eb5b1eb461e4181fd40d0e2c61d36ee696e0387.jpg)",
+        "assetPath": "images/0f200bf7ec4172c01e2c48f21eb5b1eb461e4181fd40d0e2c61d36ee696e0387.jpg",
+        "sourceLineNumber": 274,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/0f200bf7ec4172c01e2c48f21eb5b1eb461e4181fd40d0e2c61d36ee696e0387.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0044-source-section-l554-l570-fb8c1fa79b",
+    "title": "【实验】",
+    "summary": "【实验】 现有洁净无锈的铁钉、试管、经煮沸迅速冷却的蒸馏水(思考:为什么要用蒸馏水?)、植物油、棉花和氯化钙(干燥剂)。你还可以选用其他物品。 (1)仔细观察并参考图8-18所示的装置,设计实验并探究铁钉生锈的条件。 图8-18铁钉生锈条…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "(1)仔细观察并参考图8-18所示的装置,设计实验并探究铁钉生锈的条件。",
+      "图8-18铁钉生锈条件的探究实验 (2)每天观察铁钉生锈的现象,连续观察约一周,认真做好记录。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 554,
+    "sourceLineEnd": 570,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:fb8c1fa79babccdb858451bf5df9d92e13ba50c736284835c8823a2393ae1eb5",
+    "sourceSectionId": "0044-source-section-l554-l570-fb8c1fa79b",
+    "assets": [
+      {
+        "assetId": "0044-source-section-l554-l570-fb8c1fa79b-asset-01",
+        "altText": "",
+        "rawReference": "![](images/20621cfba120c5d6f4a89b40f69d1ab7b5139951b53ca87d88828e1ad19b7c12.jpg)",
+        "assetPath": "images/20621cfba120c5d6f4a89b40f69d1ab7b5139951b53ca87d88828e1ad19b7c12.jpg",
+        "sourceLineNumber": 560,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/20621cfba120c5d6f4a89b40f69d1ab7b5139951b53ca87d88828e1ad19b7c12.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0059-5-l788-l789-5576ceb92a",
+    "title": "实验活动5 常见金属的物理性质和化学性质",
+    "summary": "实验活动5 常见金属的物理性质和化学性质",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "实验活动5 常见金属的物理性质和化学性质",
+    "sourceLineStart": 788,
+    "sourceLineEnd": 789,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:5576ceb92aaf962946a5865368fb64af20d2ba50bdfaf8a73f08e062d0e64c00",
+    "sourceSectionId": "0059-5-l788-l789-5576ceb92a",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0060-source-section-l790-l794-54fdf5a73c",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.巩固和加深对金属性质的认识。 2.进一步提高实验设计能力。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 790,
+    "sourceLineEnd": 794,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:54fdf5a73c7d8da66a2c15328332ebea9351a8e7e0d692fe5f3c0fc85f37db1a",
+    "sourceSectionId": "0060-source-section-l790-l794-54fdf5a73c",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0061-source-section-l795-l802-f34be0c04b",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、酒精灯、坩蜗钳、电池、导线、小灯泡、火柴。 镁条、锌粒、铝片、铁片、铜片、黄铜片(或白铜片)、稀盐酸、稀硫酸、硫酸铜溶液、硝酸银溶液。 你还需要的实验用品: 。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "火柴",
+      "硫酸铜",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 795,
+    "sourceLineEnd": 802,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:f34be0c04b6dc246842eab541ac40410195f3d7c534facbf3231edd392d24560",
+    "sourceSectionId": "0061-source-section-l795-l802-f34be0c04b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0062-source-section-l803-l818-903ae0877f",
+    "title": "【实验步骤】",
+    "summary": "【实验步骤】 1.金属的物理性质 (1)观察并描述镁、铝、铁、铜的颜色和光泽。 (2)通过相互刻画,比较铜片和铝片、铜片和黄铜片(或白铜片)的硬度。 (3)请你设计并进行实验,证明金属具有导电性(或导热性、延展性)。 2.金属的化学性质 …",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "2.金属的化学性质 (1)用坩蜗钳夹取一块铜片,放在酒精灯火焰上加热,观察铜片表面的变化。"
+    ],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验步骤】 1.金属的物理性质 (1)观察并描述镁、铝、铁、铜的颜色和光泽。",
+      "2.金属的化学性质 (1)用坩蜗钳夹取一块铜片,放在酒精灯火焰上加热,观察铜片表面的变化。",
+      "(2)向5支试管中分别放入少量镁条、铝片、锌粒、铁片、铜片,然后各加入 $5 \\mathrm { m L }$ 稀盐酸(或稀硫酸),观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 803,
+    "sourceLineEnd": 818,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:903ae0877f6e4d89fc760ded21a486ac247f416b3678acb070b2663b42bcf1ed",
+    "sourceSectionId": "0062-source-section-l803-l818-903ae0877f",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0077-9-1-l906-l919-43c2b33057",
+    "title": "【实验9-1",
+    "summary": "【实验9-1 如图9-2所示,在 $2 0 ~ \\mathrm { m L }$ 水中加入一药匙蔗糖,用玻璃棒搅拌,观察现象。 蔗糖放入水中后,蔗糖表面的分子在水分子的作用下,逐步向水里扩散,最终蔗糖分子均一地分散到水分子中间,形成一种混…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "玻璃棒",
+      "药匙",
+      "水"
+    ],
+    "observations": [
+      "【实验9-1 如图9-2所示,在 $2 0 ~ \\mathrm { m L }$ 水中加入一药匙蔗糖,用玻璃棒搅拌,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-1",
+    "sourceLineStart": 906,
+    "sourceLineEnd": 919,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:43c2b33057d9aaea0a2252cc590217ab338b4fd905a28dc35fefe4d08f022796",
+    "sourceSectionId": "0077-9-1-l906-l919-43c2b33057",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0078-9-2-l920-l940-0dbe01c637",
+    "title": "【实验9-2】",
+    "summary": "【实验9-2】 如图9-3所示,在两支试管中各加入一小粒碘,然后分别加入5mL水和5mL汽油;另取两支试管各加入一小粒高锰酸钾,然后分别加入5mL水和5mL汽油。振荡,观察并记录实验现象。 图9-3碘和高锰酸钾的溶解性比较 溶质 溶剂 现…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "高锰酸钾"
+    ],
+    "observations": [
+      "振荡,观察并记录实验现象。",
+      "图9-3碘和高锰酸钾的溶解性比较 溶质 溶剂 现象 碘 水 碘 汽油 高锰酸钾 水 高锰酸钾 汽油 实验表明,碘几乎不溶于水,却可以溶解在汽油中;高锰酸钾几乎不溶于汽油,却可以溶解在水中。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-2】",
+    "sourceLineStart": 920,
+    "sourceLineEnd": 940,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:0dbe01c637e0605be3f2af2a5aaf8dfeb7ee1fd4029b45cb2644f39426ff0fb9",
+    "sourceSectionId": "0078-9-2-l920-l940-0dbe01c637",
+    "assets": [
+      {
+        "assetId": "0078-9-2-l920-l940-0dbe01c637-asset-01",
+        "altText": "",
+        "rawReference": "![](images/4bf5433b3f9a10d73e77a8485bd15a7c444521d6226f361cee045f4bd765adca.jpg)",
+        "assetPath": "images/4bf5433b3f9a10d73e77a8485bd15a7c444521d6226f361cee045f4bd765adca.jpg",
+        "sourceLineNumber": 924,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/4bf5433b3f9a10d73e77a8485bd15a7c444521d6226f361cee045f4bd765adca.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0079-9-3-l941-l961-2091b13aa3",
+    "title": "【实验9-3】",
+    "summary": "【实验9-3】 如图9-4所示,在盛有2mL水的试管中滴入两滴红墨水(用红墨水是为了显色,便于观察),振荡。然后将试管倾斜,用滴管沿试管内壁(注意:滴管不要接触试管内壁)缓缓加入2mL乙醇,不要振荡,观察液体是否分层。然后振荡,静置几分钟…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [
+      "然后将试管倾斜,用滴管沿试管内壁(注意:滴管不要接触试管内壁)缓缓加入2mL乙醇,不要振荡,观察液体是否分层。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验9-3】 如图9-4所示,在盛有2mL水的试管中滴入两滴红墨水(用红墨水是为了显色,便于观察),振荡。",
+      "然后将试管倾斜,用滴管沿试管内壁(注意:滴管不要接触试管内壁)缓缓加入2mL乙醇,不要振荡,观察液体是否分层。",
+      "然后振荡,静置几分钟,观察现象。",
+      "图9-4乙醇能溶解在水中 实验内容 现象 结论 加入乙醇，不振荡 加入乙醇后振荡 静置 溶质可以是固体,也可以是液体或气体。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-3】",
+    "sourceLineStart": 941,
+    "sourceLineEnd": 961,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:2091b13aa3667ba83848893cf2943a5b931f138593478fa7f71261fa751e5ef6",
+    "sourceSectionId": "0079-9-3-l941-l961-2091b13aa3",
+    "assets": [
+      {
+        "assetId": "0079-9-3-l941-l961-2091b13aa3-asset-01",
+        "altText": "",
+        "rawReference": "![](images/b62c81b8c89089e8ed72f0120f2e89183cb0572197ab1e63e45ef4f119ea542a.jpg)",
+        "assetPath": "images/b62c81b8c89089e8ed72f0120f2e89183cb0572197ab1e63e45ef4f119ea542a.jpg",
+        "sourceLineNumber": 945,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/b62c81b8c89089e8ed72f0120f2e89183cb0572197ab1e63e45ef4f119ea542a.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0090-9-5-l1103-l1128-235a0c5b85",
+    "title": "【实验9-5】",
+    "summary": "【实验9-5】 在室温下,如图9-8所示,向盛有 $1 0 ~ \\mathrm { m L }$ 水的烧杯中加入2g氯化钠,搅拌;待溶解后,再加入2g氯化钠,搅拌,观察现象。然后再加入10mL水,搅拌,观察现象。 图9-8氯化钠在水中的溶…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "【实验9-5】 在室温下,如图9-8所示,向盛有 $1 0 ~ \\mathrm { m L }$ 水的烧杯中加入2g氯化钠,搅拌;待溶解后,再加入2g氯化钠,搅拌,观察现象。",
+      "然后再加入10mL水,搅拌,观察现象。",
+      "图9-8氯化钠在水中的溶解 实验内容 现象 分析 加入2g氯化钠，搅拌 再加入2g氯化钠，搅拌 再加入10mL水，搅拌 在一定温度下,向一定量溶剂里加入某种溶质,当溶质不能继续溶解时,所得到的溶液叫作这种溶质的饱和溶液;还能继续溶解溶质的溶液,叫作这种溶质的不饱和溶液。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-5】",
+    "sourceLineStart": 1103,
+    "sourceLineEnd": 1128,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:235a0c5b8567654c8bfbae8c8da34798bde3a5f540ec71c3b19aa07b1ff3730b",
+    "sourceSectionId": "0090-9-5-l1103-l1128-235a0c5b85",
+    "assets": [
+      {
+        "assetId": "0090-9-5-l1103-l1128-235a0c5b85-asset-01",
+        "altText": "",
+        "rawReference": "![](images/7e025aa26af4fc2c0bcbf2ab38dbabaf4d1844f4a19abe2a1fcb041d7bc2d07e.jpg)",
+        "assetPath": "images/7e025aa26af4fc2c0bcbf2ab38dbabaf4d1844f4a19abe2a1fcb041d7bc2d07e.jpg",
+        "sourceLineNumber": 1107,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/7e025aa26af4fc2c0bcbf2ab38dbabaf4d1844f4a19abe2a1fcb041d7bc2d07e.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0091-9-6-l1129-l1162-3b13448d6e",
+    "title": "【实验9-6】",
+    "summary": "【实验9-6】 在室温下,向盛有 $1 0 ~ \\mathrm { m L }$ 水的烧杯中加入3g硝酸钾,搅拌;待溶解后,再加入3g硝酸钾,搅拌,观察现象。当烧杯中硝酸钾固体有剩余而不再溶解时,加热烧杯一段时间(如图9-9),观察剩余固…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "当烧杯中硝酸钾固体有剩余而不再溶解时,加热烧杯一段时间(如图9-9),观察剩余固体有什么变化。",
+      "图9-9硝酸钾在水中的溶解 实验内容 现象 分析 加入3g硝酸钾，搅拌 再加入3g硝酸钾，搅拌 加热烧杯 再加入3g硝酸钾，搅拌 静置，冷却 结晶crystallization 在实验9-6中,第二次加入的硝酸钾不能全部溶解,但加热后,剩余的硝酸钾固体能够继续溶解,且再次加入的硝酸钾也能全部溶解。"
+    ],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "【实验9-6】 在室温下,向盛有 $1 0 ~ \\mathrm { m L }$ 水的烧杯中加入3g硝酸钾,搅拌;待溶解后,再加入3g硝酸钾,搅拌,观察现象。",
+      "当烧杯中硝酸钾固体有剩余而不再溶解时,加热烧杯一段时间(如图9-9),观察剩余固体有什么变化。",
+      "然后再加入3g硝酸钾,搅拌,观察现象。",
+      "静置,待溶液冷却后,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-6】",
+    "sourceLineStart": 1129,
+    "sourceLineEnd": 1162,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:3b13448d6e2018ddfc887db00cbd93bcbc452f6bb916bd7f7695a38c1c4c72f9",
+    "sourceSectionId": "0091-9-6-l1129-l1162-3b13448d6e",
+    "assets": [
+      {
+        "assetId": "0091-9-6-l1129-l1162-3b13448d6e-asset-01",
+        "altText": "",
+        "rawReference": "![](images/8ee68bb90384cfb1290e0788b4283fd69544608ad6590b032aa1e213a72cede3.jpg)",
+        "assetPath": "images/8ee68bb90384cfb1290e0788b4283fd69544608ad6590b032aa1e213a72cede3.jpg",
+        "sourceLineNumber": 1133,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/8ee68bb90384cfb1290e0788b4283fd69544608ad6590b032aa1e213a72cede3.jpg"
+      },
+      {
+        "assetId": "0091-9-6-l1129-l1162-3b13448d6e-asset-02",
+        "altText": "",
+        "rawReference": "![](images/49036634d005e1cf9acfb897e3282cb3364205676c02f4a7cca6d686b3817604.jpg)",
+        "assetPath": "images/49036634d005e1cf9acfb897e3282cb3364205676c02f4a7cca6d686b3817604.jpg",
+        "sourceLineNumber": 1152,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/49036634d005e1cf9acfb897e3282cb3364205676c02f4a7cca6d686b3817604.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0110-9-7-l1389-l1406-22c4d0c162",
+    "title": "【实验9-7】",
+    "summary": "【实验9-7】 在室温下,向三个小烧杯中各加入 $2 0 ~ \\mathrm { m L ^ { ( 1 ) } }$ 水,然后分别加入0.1g、$0 . 5 \\ \\mathrm { g } \\_ { \\mathrm { 2 } \\mat…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "水",
+      "硫酸铜"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-7】",
+    "sourceLineStart": 1389,
+    "sourceLineEnd": 1406,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:22c4d0c162844dec4ccf1399d683f00adbc6e02551ab23251db6dfc5fe4c98c5",
+    "sourceSectionId": "0110-9-7-l1389-l1406-22c4d0c162",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0111-9-8-l1407-l1418-b464d0cf68",
+    "title": "【实验9-8’",
+    "summary": "【实验9-8’ 在室温下,根据下表给定的质量配制氯化钠溶液(如图9-16),观察固体能否全部溶解,并计算溶液中溶质的质量分数。 溶质质量/g 溶剂（水）质量/g 固体能否全部溶解 溶质的质量分数 10 90 20 80",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [
+      "【实验9-8’ 在室温下,根据下表给定的质量配制氯化钠溶液(如图9-16),观察固体能否全部溶解,并计算溶液中溶质的质量分数。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验9-8’",
+    "sourceLineStart": 1407,
+    "sourceLineEnd": 1418,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:b464d0cf685af950581363d5bd5d23693743f7d697e309fb76775fe37b1dc4eb",
+    "sourceSectionId": "0111-9-8-l1407-l1418-b464d0cf68",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0121-6-l1672-l1673-769dda8a99",
+    "title": "实验活动6 一定溶质质量分数的氯化钠溶液的配制",
+    "summary": "实验活动6 一定溶质质量分数的氯化钠溶液的配制",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "实验活动6 一定溶质质量分数的氯化钠溶液的配制",
+    "sourceLineStart": 1672,
+    "sourceLineEnd": 1673,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:769dda8a994fe9de870c37704ea0a16721a322912236c18ebfc5e52ff27d2e8c",
+    "sourceSectionId": "0121-6-l1672-l1673-769dda8a99",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0122-source-section-l1674-l1678-9d90a96db0",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.练习配制一定溶质质量分数的溶液。 2.加深对溶质质量分数概念的理解。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 1674,
+    "sourceLineEnd": 1678,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:9d90a96db0b6bc4308378fb1120416b976537d02fb250e066c4b99394c34f947",
+    "sourceSectionId": "0122-source-section-l1674-l1678-9d90a96db0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0123-source-section-l1679-l1683-7fe01fe012",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 天平、称量纸、烧杯、玻璃棒、药匙、量筒、胶头滴管、空试剂瓶、空白标签。 氯化钠、蒸馏水。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "量筒",
+      "胶头滴管",
+      "药匙",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 1679,
+    "sourceLineEnd": 1683,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:7fe01fe012a4afd60d11013562ac9e1102d5326d27df2746f8e8470f0d2ec6aa",
+    "sourceSectionId": "0123-source-section-l1679-l1683-7fe01fe012",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0124-source-section-l1684-l1708-127467c3e6",
+    "title": "【实验步骤】",
+    "summary": "【实验步骤】 1.配制质量分数为 $6 \\%$ 的氯化钠溶液。 (1)计算:配制 $5 0 \\ \\mathrm { g }$ 质量分数为 $6 \\%$ 的氯化钠溶液,需要氯化钠 _g,水 g。 (2)称量:用天平称量所需质量的氯化钠,放入…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "量筒",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 1684,
+    "sourceLineEnd": 1708,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:127467c3e6e7d34c766269a492a1e1a4eed2593d7294522135b1aaacb42435f0",
+    "sourceSectionId": "0124-source-section-l1684-l1708-127467c3e6",
+    "assets": [
+      {
+        "assetId": "0124-source-section-l1684-l1708-127467c3e6-asset-01",
+        "altText": "",
+        "rawReference": "![](images/98283764d84dc11108f262c3acd4272f4da37ef798cc0c7959692f7ca90f7cb7.jpg)",
+        "assetPath": "images/98283764d84dc11108f262c3acd4272f4da37ef798cc0c7959692f7ca90f7cb7.jpg",
+        "sourceLineNumber": 1698,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/98283764d84dc11108f262c3acd4272f4da37ef798cc0c7959692f7ca90f7cb7.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0127-7-l1726-l1727-79172ab443",
+    "title": "实验活动7 粗盐中难溶性杂质的去除",
+    "summary": "实验活动7 粗盐中难溶性杂质的去除",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "实验活动7 粗盐中难溶性杂质的去除",
+    "sourceLineStart": 1726,
+    "sourceLineEnd": 1727,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:79172ab4434dd27e4dcfeaa5a57bdbaf9deecc751ef6e7ea6dd41a0833abe8ee",
+    "sourceSectionId": "0127-7-l1726-l1727-79172ab443",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0128-source-section-l1728-l1732-a931b5d103",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.体验初步提纯固体混合物的实验过程。 2.学习蒸发操作技能,巩固溶解、过滤操作技能。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 1728,
+    "sourceLineEnd": 1732,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:a931b5d10365ee078ed65d7b512662018ee266d060d88f82fb0aeb6d26f6082c",
+    "sourceSectionId": "0128-source-section-l1728-l1732-a931b5d103",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0129-source-section-l1733-l1738-5bc9484735",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 烧杯、玻璃棒、蒸发皿、坩蜗钳、酒精灯、漏斗、药匙、量筒、铁架台(带铁圈)、天平、称量纸、滤纸、火柴。 粗盐、蒸馏水。",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "酒精灯",
+      "铁架台",
+      "玻璃棒",
+      "量筒",
+      "药匙",
+      "蒸发皿",
+      "火柴",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 1733,
+    "sourceLineEnd": 1738,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:5bc94847357e0302077cfb58f435f5d35f5c1d307d89fc8e8ba038d44f8db526",
+    "sourceSectionId": "0129-source-section-l1733-l1738-5bc9484735",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0130-source-section-l1739-l1756-facdd41846",
+    "title": "【实验步骤】",
+    "summary": "【实验步骤】 1.溶解 用天平称取 $5 . 0 ~ \\mathrm { g }$ 粗盐,用药匙将该粗盐逐渐加入盛有 $1 0 ~ \\mathrm { m L }$ 水的烧杯中,边加边用玻璃棒搅拌(思考:起什么作用?),一直加到粗盐不再溶…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "药匙",
+      "水"
+    ],
+    "observations": [
+      "观察所得液体是否浑浊。",
+      "仔细观察滤纸上剩余物及滤液的颜色。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 1739,
+    "sourceLineEnd": 1756,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:facdd41846251a8193b7cfd0233457e956d17d8b8ba72ad52a7079bcdf0eb550",
+    "sourceSectionId": "0130-source-section-l1739-l1756-facdd41846",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0148-10-1-l1869-l1887-4d1c4efe24",
+    "title": "【实验10-1】",
+    "summary": "【实验10-1】 将4支试管分成两组,向每组的两支试管中分别加入少量白醋和肥皂水。然后向其中一组试管中滴加紫色石蕊溶液,向另一组试管中滴加无色酚酞溶液(如图10-1)。观察并记录实验现象。 溶液 滴加紫色石蕊溶液后的颜色变化 滴加无色酚酞…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察并记录实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-1】",
+    "sourceLineStart": 1869,
+    "sourceLineEnd": 1887,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:4d1c4efe2462abd0001adbde1da9b8655f7e4181ce545bbad3a99d885e366513",
+    "sourceSectionId": "0148-10-1-l1869-l1887-4d1c4efe24",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0150-10-2-l1906-l1910-f047770a16",
+    "title": "【实验10-2】",
+    "summary": "【实验10-2】 在白瓷板或玻璃片上放一小片pH试纸,用干燥、洁净的玻璃棒分别蘸取下列溶液点到pH试纸上,把试纸显示的颜色与标准比色卡比较,读出pH。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "玻璃片",
+      "玻璃棒"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-2】",
+    "sourceLineStart": 1906,
+    "sourceLineEnd": 1910,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:f047770a16ed10f58d7deb007f77a292d5f055896d27a825bf312a13ac61311d",
+    "sourceSectionId": "0150-10-2-l1906-l1910-f047770a16",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0155-10-3-l1953-l1977-7d2fc95002",
+    "title": "【实验10-3】",
+    "summary": "【实验10-3】 选择生活中的一些物质,测定它们的pH,并记录在下表中。图10-5所示的物质供选择时参考。 生活中的物质 pH 酸碱性 生活中的物质 pH 酸碱性 图10-5身边一些物质的pH 了解溶液的酸碱度,对生产、生活及人类的生命活…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [
+      "【实验10-3】 选择生活中的一些物质,测定它们的pH,并记录在下表中。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-3】",
+    "sourceLineStart": 1953,
+    "sourceLineEnd": 1977,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:7d2fc95002829f014e2364f986e94f5a6e7dbf070b8cdc39d182bde874f33d3e",
+    "sourceSectionId": "0155-10-3-l1953-l1977-7d2fc95002",
+    "assets": [
+      {
+        "assetId": "0155-10-3-l1953-l1977-7d2fc95002-asset-01",
+        "altText": "",
+        "rawReference": "![](images/2cc53faf7d0e3e9d0c193c5bf0749e7819503c4616518e8ada0cd82c174a8dfe.jpg)",
+        "assetPath": "images/2cc53faf7d0e3e9d0c193c5bf0749e7819503c4616518e8ada0cd82c174a8dfe.jpg",
+        "sourceLineNumber": 1965,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/2cc53faf7d0e3e9d0c193c5bf0749e7819503c4616518e8ada0cd82c174a8dfe.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0165-10-4-l2086-l2099-72d4a29115",
+    "title": "【实验10-4】",
+    "summary": "【实验10-4】 (1)观察盐酸、硫酸的颜色和状态。 (2)分别打开盛有盐酸、硫酸的试剂瓶的瓶盖,观察并小心闻其气味。 酸 盐酸（HC1） 硫酸（HSO4） 颜色、状态 打开试剂瓶瓶盖后的现象 气味 密度 常用浓盐酸（质量分数为37%~3…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "盐酸"
+    ],
+    "observations": [
+      "【实验10-4】 (1)观察盐酸、硫酸的颜色和状态。",
+      "(2)分别打开盛有盐酸、硫酸的试剂瓶的瓶盖,观察并小心闻其气味。",
+      "酸 盐酸（HC1） 硫酸（HSO4） 颜色、状态 打开试剂瓶瓶盖后的现象 气味 密度 常用浓盐酸（质量分数为37%~38%）1.19 g/cm³ 常用浓硫酸（质量分数为98%）1.84 g/cm³"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-4】",
+    "sourceLineStart": 2086,
+    "sourceLineEnd": 2099,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:72d4a291155de3d78fa9f8f1af3c00424c8486c5227d8525bb1c7c85bb3189e8",
+    "sourceSectionId": "0165-10-4-l2086-l2099-72d4a29115",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0166-10-5-l2100-l2113-3d8a3f83cb",
+    "title": "【实验10-5】",
+    "summary": "【实验10-5】 将纸、小木棍、布放在玻璃片上,完成下列实验。 实验内容 放置一会儿后的现象 用玻璃棒蘸浓硫酸在纸上写字 用小木棍蘸少量浓硫酸 将浓硫酸滴到一小块布上 浓硫酸有强烈的腐蚀性(如图10-6)。它能夺取纸张、木材、布料、皮肤(…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "实验内容 放置一会儿后的现象 用玻璃棒蘸浓硫酸在纸上写字 用小木棍蘸少量浓硫酸 将浓硫酸滴到一小块布上 浓硫酸有强烈的腐蚀性(如图10-6)。"
+    ],
+    "materials": [
+      "玻璃片",
+      "玻璃棒",
+      "水"
+    ],
+    "observations": [
+      "实验内容 放置一会儿后的现象 用玻璃棒蘸浓硫酸在纸上写字 用小木棍蘸少量浓硫酸 将浓硫酸滴到一小块布上 浓硫酸有强烈的腐蚀性(如图10-6)。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-5】",
+    "sourceLineStart": 2100,
+    "sourceLineEnd": 2113,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:3d8a3f83cb528449d6ce64cd3497ee0beec9ed072c12aed4f509fb5104c34134",
+    "sourceSectionId": "0166-10-5-l2100-l2113-3d8a3f83cb",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0167-10-6-l2114-l2132-54826a96c8",
+    "title": "【实验10-6】",
+    "summary": "【实验10-6】 如图10-7所示,将浓硫酸沿烧杯内壁缓慢地注入盛有水的烧杯,用玻璃棒不断搅拌,用温度计测量温度变化。 图10-7稀释浓硫酸的正确操作图10-8稀释浓硫酸的错误操作 通过上面的实验可以将浓硫酸稀释,实验时是将浓硫酸缓慢注入…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "图10-6浓硫酸有腐蚀性"
+    ],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-6】",
+    "sourceLineStart": 2114,
+    "sourceLineEnd": 2132,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:54826a96c8b281572c045846c1e4c6087b8ad4bc37b6c8a233038c25db7c3f38",
+    "sourceSectionId": "0167-10-6-l2114-l2132-54826a96c8",
+    "assets": [
+      {
+        "assetId": "0167-10-6-l2114-l2132-54826a96c8-asset-01",
+        "altText": "",
+        "rawReference": "![](images/990836e215e240ddb2e2ebe826d6209e934a539e07fe61de554639ed97014451.jpg)",
+        "assetPath": "images/990836e215e240ddb2e2ebe826d6209e934a539e07fe61de554639ed97014451.jpg",
+        "sourceLineNumber": 2120,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/990836e215e240ddb2e2ebe826d6209e934a539e07fe61de554639ed97014451.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0172-source-section-l2176-l2218-ccfe90595c",
+    "title": "【实验与分析】",
+    "summary": "【实验与分析】 (1)如图10-10所示,在白色点滴板上进行实验,观察并记录实验现象。 酸 滴加紫色石蕊溶液后的颜色变化 滴加无色酚酞溶液后的颜色变化 稀盐酸 稀硫酸 图10-10酸与指示剂作用 (2)回忆第八单元所学的几种金属分别与稀盐…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验与分析】 (1)如图10-10所示,在白色点滴板上进行实验,观察并记录实验现象。",
+      "反应物 现象 化学方程式 铁锈+稀盐酸 Fe2O +6HCl 2FeCl +3HO 铁锈+稀硫酸 Fe2O3 + 3HSO4 = Fe2(SO4)3 + 3HO 分析: $\\textcircled{1}$ 以上反应的生成物有什么共同之处?"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验与分析】",
+    "sourceLineStart": 2176,
+    "sourceLineEnd": 2218,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:ccfe90595ca7da221c95d138c9a0a1ff3d2a70e26def2314f530635e40353c44",
+    "sourceSectionId": "0172-source-section-l2176-l2218-ccfe90595c",
+    "assets": [
+      {
+        "assetId": "0172-source-section-l2176-l2218-ccfe90595c-asset-01",
+        "altText": "",
+        "rawReference": "![](images/6f6d65e951381717688e44991991bfd77bd16777e0ece9e5856fad287391f584.jpg)",
+        "assetPath": "images/6f6d65e951381717688e44991991bfd77bd16777e0ece9e5856fad287391f584.jpg",
+        "sourceLineNumber": 2186,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/6f6d65e951381717688e44991991bfd77bd16777e0ece9e5856fad287391f584.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0174-10-7-l2232-l2246-29cbd93383",
+    "title": "【实验10-7】",
+    "summary": "【实验10-7】 如图10-11所示,分别试验稀盐酸、稀硫酸、蒸馏水和乙醇的导电性(可以将小灯泡换成发光二极管)。 图10-11试验物质的导电性 可以看到,蒸馏水和乙醇不导电,而稀盐酸、稀硫酸却能导电。这说明,在稀盐酸、稀硫酸中存在带电荷…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "水",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-7】",
+    "sourceLineStart": 2232,
+    "sourceLineEnd": 2246,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:29cbd93383746cc75251462a01e330d4a10757fdf2ff3a2e4d9a7dd7460393af",
+    "sourceSectionId": "0174-10-7-l2232-l2246-29cbd93383",
+    "assets": [
+      {
+        "assetId": "0174-10-7-l2232-l2246-29cbd93383-asset-01",
+        "altText": "",
+        "rawReference": "![](images/5ddd9d4716f84ac9c837916c5816303d3ed9b42093c4128889bf8e3a268b2f80.jpg)",
+        "assetPath": "images/5ddd9d4716f84ac9c837916c5816303d3ed9b42093c4128889bf8e3a268b2f80.jpg",
+        "sourceLineNumber": 2236,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/5ddd9d4716f84ac9c837916c5816303d3ed9b42093c4128889bf8e3a268b2f80.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0177-10-8-l2253-l2261-c6f5adfc38",
+    "title": "【实验10-8】",
+    "summary": "【实验10-8】 用镊子夹取3小片氢氧化钠,如下表所示,分别进行实验(切勿用手拿)。 碱base 氢氧化钠sodium hydroxide",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "镊子",
+      "氢氧化钠"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-8】",
+    "sourceLineStart": 2253,
+    "sourceLineEnd": 2261,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:c6f5adfc384eca79cdc64c1b4662704ba4363389f658bd6889234b99510b82b6",
+    "sourceSectionId": "0177-10-8-l2253-l2261-c6f5adfc38",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0180-10-9-l2284-l2307-408f91fe77",
+    "title": "【实验10-9】",
+    "summary": "【实验10-9】 取一小药匙氢氧化钙,观察它的颜色和状态,然后放入小烧杯中,加入30mL水,用玻璃棒搅拌,观察氢氧化钙在水中的溶解情况。 实验内容 现象 观察氢氧化钙的颜色和状态 观察氢氧化钙在水中的溶解情况 氢氧化钙也是一种常见的碱,俗…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "药匙",
+      "水",
+      "硫酸铜",
+      "氢氧化钠"
+    ],
+    "observations": [
+      "【实验10-9】 取一小药匙氢氧化钙,观察它的颜色和状态,然后放入小烧杯中,加入30mL水,用玻璃棒搅拌,观察氢氧化钙在水中的溶解情况。",
+      "实验内容 现象 观察氢氧化钙的颜色和状态 观察氢氧化钙在水中的溶解情况 氢氧化钙也是一种常见的碱,俗称熟石灰或消石灰。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-9】",
+    "sourceLineStart": 2284,
+    "sourceLineEnd": 2307,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:408f91fe77273045fe56bccf07e1b36fdfb82d051384de4ea3bdcd5a959cd97b",
+    "sourceSectionId": "0180-10-9-l2284-l2307-408f91fe77",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0185-source-section-l2326-l2337-50d44d0340",
+    "title": "【实验与分析】",
+    "summary": "【实验与分析】 (1)设计实验并实施,验证你对上述问题(1)的预测。 (2)讨论分析。 $\\textcircled{1}$ 回忆检验二氧化碳的反应,写出化学方程式:○ $\\textcircled{2}$ 从物质的组成和类别的角度,与上述反…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "氢氧化钠"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验与分析】",
+    "sourceLineStart": 2326,
+    "sourceLineEnd": 2337,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:50d44d0340175ede531026ac6aa0337932a18a0c0d2e3e5104cd6c85553a2d38",
+    "sourceSectionId": "0185-source-section-l2326-l2337-50d44d0340",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0190-10-10-l2385-l2428-d130daaa63",
+    "title": "【实验10-10】",
+    "summary": "【实验10-10】 S 8 如图10-15所示,在烧杯中加入5 mL稀氢氧化钠溶液,滴入几滴酚酞溶液。然后用滴管慢慢滴入稀盐酸,并不断搅拌溶液,至溶液颜色恰好变成无色为止。 在上面的实验中,氢氧化钠与盐酸反应,生成了氯化钠和水(如图10-…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水",
+      "氢氧化钠",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-10】",
+    "sourceLineStart": 2385,
+    "sourceLineEnd": 2428,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:d130daaa63bf6c763ce63c66f6bcea6aec6bbbfdffd888e217454e7a7ff9035f",
+    "sourceSectionId": "0190-10-10-l2385-l2428-d130daaa63",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0198-10-11-l2558-l2579-43ece4f2b8",
+    "title": "【实验10-11】",
+    "summary": "【实验10-11】 向盛有0.5g碳酸钠的试管中加入2mL稀盐酸,迅速用带导管的橡胶塞塞紧试管口,并将导管另一端插入盛有澄清石灰水的试管中(如图10-19),观察、记录并分析现象。 用碳酸氢钠代替碳酸钠进行上述实验,观察、记录并分析现象。…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "导管",
+      "水",
+      "盐酸",
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验10-11】 向盛有0.5g碳酸钠的试管中加入2mL稀盐酸,迅速用带导管的橡胶塞塞紧试管口,并将导管另一端插入盛有澄清石灰水的试管中(如图10-19),观察、记录并分析现象。",
+      "用碳酸氢钠代替碳酸钠进行上述实验,观察、记录并分析现象。",
+      "实验内容 现象 分析 碳酸钠+稀盐酸 碳酸氢钠+稀盐酸 上述反应可以用化学方程式表示如下: $$ N a _ { 2 } C O _ { 3 } + 2 H C l = 2 N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O $$ $$ N a H C O _ { 3 } + H C l = N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O $$"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-11】",
+    "sourceLineStart": 2558,
+    "sourceLineEnd": 2579,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:43ece4f2b80a60b5108fa061a5ae2fdab34ae3ce280f7b035b59c9ff571b02e6",
+    "sourceSectionId": "0198-10-11-l2558-l2579-43ece4f2b8",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0200-10-12-l2585-l2607-d8f030bff5",
+    "title": "【实验10-12】",
+    "summary": "【实验10-12】 向盛有澄清石灰水的试管中滴加碳酸钠溶液,观察、记录并分析现象。 现象 分析 上述反应的化学方程式可以表示如下: $$ N a _ { 2 } C O _ { 3 } + C a ( O H ) _ { 2 } = C …",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验10-12】 向盛有澄清石灰水的试管中滴加碳酸钠溶液,观察、记录并分析现象。",
+      "现象 分析 上述反应的化学方程式可以表示如下: $$ N a _ { 2 } C O _ { 3 } + C a ( O H ) _ { 2 } = C a C O _ { 3 } \\downarrow + 2 N a O H $$ 分析以上几个反应,它们都发生在溶液中,都是由两种化合物互相交换成分,生成另外两种化合物的反应,这样的反应叫作复分解反应。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-12】",
+    "sourceLineStart": 2585,
+    "sourceLineEnd": 2607,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:d8f030bff54cb494838b13ec331c4bdae98b731803841304978bc8a0100883d9",
+    "sourceSectionId": "0200-10-12-l2585-l2607-d8f030bff5",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0201-10-13-l2608-l2618-ae9681012b",
+    "title": "【实验10-13】",
+    "summary": "【实验10-13】 向两支分别盛有少量氢氧化钠溶液和氯化钡溶液的试管中滴加硫酸铜溶液,观察并记录实验现象。 实验内容 现象 化学方程式 NaOH溶液+CuSO4溶液 2NaOH + CuSO4 = Cu(OH) ↓ + Na2SO4 Ba…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "硫酸铜",
+      "氢氧化钠"
+    ],
+    "observations": [
+      "【实验10-13】 向两支分别盛有少量氢氧化钠溶液和氯化钡溶液的试管中滴加硫酸铜溶液,观察并记录实验现象。",
+      "实验内容 现象 化学方程式 NaOH溶液+CuSO4溶液 2NaOH + CuSO4 = Cu(OH) ↓ + Na2SO4 BaCl溶液+CuSO4溶液 BaCl2 + CuSO4 = BaSO4 ↓ + CuCl"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验10-13】",
+    "sourceLineStart": 2608,
+    "sourceLineEnd": 2618,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:ae9681012bd6723717f09c23b16b91fc2510bc9d8e3ccf6f8769045cd37be483",
+    "sourceSectionId": "0201-10-13-l2608-l2618-ae9681012b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0216-8-l2831-l2832-c40b649c01",
+    "title": "实验活动8 常见酸、碱的化学性质",
+    "summary": "实验活动8 常见酸、碱的化学性质",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "实验活动8 常见酸、碱的化学性质",
+    "sourceLineStart": 2831,
+    "sourceLineEnd": 2832,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:c40b649c0116344c816646ffb8f66eebb5e04158dedf01b1a39d33beb18d2b22",
+    "sourceSectionId": "0216-8-l2831-l2832-c40b649c01",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0217-source-section-l2833-l2837-c4e7458fd0",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.加深对酸和碱的主要性质的认识。 2.通过实验解释生活中的一些现象。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [
+      "2.通过实验解释生活中的一些现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 2833,
+    "sourceLineEnd": 2837,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:c4e7458fd089c8abcff33846cd478ab262e0978e785512c5ff1825afc0c367ce",
+    "sourceSectionId": "0217-source-section-l2833-l2837-c4e7458fd0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0218-source-section-l2838-l2845-035e005b68",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 白色点滴板、试管、镊子、蒸发皿、坩蜗钳、玻璃棒、药匙、酒精灯、铁架台(带铁圈)、胶头滴管、火柴。 稀盐酸、稀硫酸、氢氧化钠溶液、氢氧化钙溶液、硫酸铜溶液、氢氧化钙粉末、石蕊溶液、酚酞溶液、pH试纸、生锈的铁钉。 你还需要的实…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "铁架台",
+      "玻璃棒",
+      "胶头滴管",
+      "药匙",
+      "镊子",
+      "蒸发皿",
+      "火柴",
+      "硫酸铜",
+      "氢氧化钠",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 2838,
+    "sourceLineEnd": 2845,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:035e005b68d68ecaaa8c234ad19983985e3fda42c0383a5d839708ff94da799e",
+    "sourceSectionId": "0218-source-section-l2838-l2845-035e005b68",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0220-textcircled-6-l2850-l2877-58b7696b63",
+    "title": "【实验步骤】 $\\textcircled{6}$",
+    "summary": "【实验步骤】 $\\textcircled{6}$ 1.参考图10-22进行实验,比较酸、碱与指示剂的作用。 图10-22酸、碱与指示剂作用 2.选择实验室或生活中的几种溶液,进行下列实验: (1)分别用石蕊溶液和酚酞溶液检验溶液的酸碱性;…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "(2)取上述反应后的无色溶液 $1 \\mathrm { m L }$ ,置于蒸发皿中加热,使液体蒸干,观察现象。"
+    ],
+    "materials": [
+      "试管",
+      "药匙",
+      "蒸发皿",
+      "水",
+      "硫酸铜",
+      "氢氧化钠",
+      "盐酸"
+    ],
+    "observations": [
+      "选择的溶液 滴加石蕊溶液后的颜色变化 滴加酚酞溶液后的颜色变化 溶液的酸碱性 pH 3.(1)取两个生锈的铁钉分别放入两支试管中,然后各加入2mL稀盐酸,观察现象。",
+      "(2)当观察到铁钉表面没有铁锈,铁钉变得光亮时,将其中一支试管中的铁钉取出,洗净。",
+      "继续观察另一支试管中的现象,过一段时间将铁钉取出,洗净。",
+      "4.在试管中加入 $2 \\mathrm { m L }$ 硫酸铜溶液,然后滴入几滴氢氧化钠溶液,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验步骤】 $\\textcircled{6}$",
+    "sourceLineStart": 2850,
+    "sourceLineEnd": 2877,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:58b7696b63d906520495ba3f7aaf08aa951e3050e3100daa9a64ec1e7bd291a5",
+    "sourceSectionId": "0220-textcircled-6-l2850-l2877-58b7696b63",
+    "assets": [
+      {
+        "assetId": "0220-textcircled-6-l2850-l2877-58b7696b63-asset-01",
+        "altText": "",
+        "rawReference": "![](images/361f7a604a00503c0ff9b35a62aaab5b10079448eaa5fd72dbc526bf5769fd14.jpg)",
+        "assetPath": "images/361f7a604a00503c0ff9b35a62aaab5b10079448eaa5fd72dbc526bf5769fd14.jpg",
+        "sourceLineNumber": 2854,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学下册/images/361f7a604a00503c0ff9b35a62aaab5b10079448eaa5fd72dbc526bf5769fd14.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0260-source-section-l3265-l3268-f7cea8621c",
+    "title": "【实验】",
+    "summary": "【实验】 收集三种纤维,依次用坩埚钳夹持,将其点燃,观察、记录燃烧时的现象和产物的状态。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "坩埚钳"
+    ],
+    "observations": [
+      "【实验】 收集三种纤维,依次用坩埚钳夹持,将其点燃,观察、记录燃烧时的现象和产物的状态。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 3265,
+    "sourceLineEnd": 3268,
+    "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+    "sectionHash": "sha256:f7cea8621ce5c9d6f8707c01ee7c22390f1fe936a3a3fdd63e3d912bfc550d6f",
+    "sourceSectionId": "0260-source-section-l3265-l3268-f7cea8621c",
+    "assets": []
+  }
+]

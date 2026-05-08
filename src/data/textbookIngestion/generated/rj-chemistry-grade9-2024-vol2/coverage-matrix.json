@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "volumeId": "rj-chemistry-grade9-2024-vol2",
+  "generatedFrom": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json",
+  "rowKey": "curriculumTagId",
+  "columns": [
+    "sourceEvidence",
+    "assets",
+    "quiz",
+    "learningPath",
+    "labOrReaction",
+    "experimentBacklog",
+    "story",
+    "achievement",
+    "gameChallenge",
+    "runtimeStatus",
+    "reviewStatus",
+    "notes"
+  ],
+  "statusValues": [
+    "required",
+    "optional",
+    "notApplicable",
+    "covered",
+    "deferred",
+    "missing"
+  ],
+  "rows": []
+}

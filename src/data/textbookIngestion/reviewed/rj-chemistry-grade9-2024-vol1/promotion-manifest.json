@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "volumeId": "rj-chemistry-grade9-2024-vol1",
+  "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+  "generatedAt": "2026-05-08T00:00:00.000Z",
+  "entries": [
+    {
+      "entryId": "promote-g9-carbon-allotropes-comparison-achievement",
+      "promoteScope": "topic",
+      "topicId": "g9-carbon-allotropes-comparison",
+      "curriculumTagId": "g9-carbon-allotropes-comparison",
+      "surface": "achievement",
+      "candidateType": "achievementCandidate",
+      "candidateId": "achievement-0295-source-section-l3610-l3664-d45787521d",
+      "surfaceRequirements": [
+        {
+          "surface": "achievement",
+          "requirement": "pilot-reviewed-topic-achievement",
+          "candidateIds": [
+            "achievement-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "targetRuntimeFiles": [
+            "src/data/achievementsData.json"
+          ]
+        }
+      ],
+      "targetRuntimeFile": "src/data/achievementsData.json",
+      "targetRuntimeFiles": [
+        "src/data/achievementsData.json"
+      ],
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "sourceHeading": "练习与应用",
+      "sourceLineStart": 3610,
+      "sourceLineEnd": 3664,
+      "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+      "reviewStatus": "promoted",
+      "reviewedBy": "textbook-reviewer",
+      "reviewedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "entryId": "promote-g9-carbon-allotropes-comparison-game",
+      "promoteScope": "topic",
+      "topicId": "g9-carbon-allotropes-comparison",
+      "curriculumTagId": "g9-carbon-allotropes-comparison",
+      "surface": "gameChallenge",
+      "candidateType": "gameChallengeCandidate",
+      "candidateId": "game-0295-source-section-l3610-l3664-d45787521d",
+      "surfaceRequirements": [
+        {
+          "surface": "gameChallenge",
+          "requirement": "pilot-reviewed-topic-challenge",
+          "candidateIds": [
+            "game-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "targetRuntimeFiles": [
+            "src/data/contentMeta.js"
+          ]
+        }
+      ],
+      "targetRuntimeFile": "src/data/contentMeta.js",
+      "targetRuntimeFiles": [
+        "src/data/contentMeta.js"
+      ],
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "sourceHeading": "练习与应用",
+      "sourceLineStart": 3610,
+      "sourceLineEnd": 3664,
+      "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+      "reviewStatus": "promoted",
+      "reviewedBy": "textbook-reviewer",
+      "reviewedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "entryId": "promote-g9-carbon-allotropes-comparison-learning-path",
+      "promoteScope": "topic",
+      "topicId": "g9-carbon-allotropes-comparison",
+      "curriculumTagId": "g9-carbon-allotropes-comparison",
+      "surface": "learningPath",
+      "candidateType": "learningPathCandidate",
+      "candidateId": "learning-path-0295-source-section-l3610-l3664-d45787521d",
+      "surfaceRequirements": [
+        {
+          "surface": "learningPath",
+          "requirement": "pilot-reviewed-topic-progress",
+          "status": "covered",
+          "candidateIds": [
+            "learning-path-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "targetRuntimeFiles": [
+            "src/data/learningPath.json"
+          ]
+        },
+        {
+          "surface": "labOrReaction",
+          "requirement": "pilot-reviewed-topic-lab-safety",
+          "status": "deferred",
+          "reason": "The carbon allotropes comparison has generated inquiry/lab candidates, but no reviewed lab-safe runtime reaction or animation scope is approved for src/data/reactions.json in this workflow slice."
+        },
+        {
+          "surface": "story",
+          "requirement": "pilot-reviewed-topic-story-runtime",
+          "status": "notApplicable",
+          "reason": "The current story runtime in src/modules/storyMode.js reads element-level stories from elements/story media, not curriculum-topic story records, so no topic story runtime target exists without rewriting the story engine."
+        }
+      ],
+      "targetRuntimeFile": "src/data/learningPath.json",
+      "targetRuntimeFiles": [
+        "src/data/learningPath.json"
+      ],
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "sourceHeading": "练习与应用",
+      "sourceLineStart": 3610,
+      "sourceLineEnd": 3664,
+      "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+      "reviewStatus": "promoted",
+      "reviewedBy": "textbook-reviewer",
+      "reviewedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "entryId": "promote-g9-carbon-allotropes-comparison-quiz",
+      "promoteScope": "topic",
+      "topicId": "g9-carbon-allotropes-comparison",
+      "curriculumTagId": "g9-carbon-allotropes-comparison",
+      "surface": "quiz",
+      "candidateType": "quizCandidate",
+      "candidateId": "quiz-0295-source-section-l3610-l3664-d45787521d",
+      "surfaceRequirements": [
+        {
+          "surface": "quiz",
+          "requirement": "pilot-reviewed-topic-quiz",
+          "candidateIds": [
+            "quiz-0295-source-section-l3610-l3664-d45787521d"
+          ],
+          "targetRuntimeFiles": [
+            "src/data/quizData.json"
+          ]
+        }
+      ],
+      "targetRuntimeFile": "src/data/quizData.json",
+      "targetRuntimeFiles": [
+        "src/data/quizData.json"
+      ],
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "sourceHeading": "练习与应用",
+      "sourceLineStart": 3610,
+      "sourceLineEnd": 3664,
+      "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+      "reviewStatus": "promoted",
+      "reviewedBy": "textbook-reviewer",
+      "reviewedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "experimentBacklog": [
+    {
+      "candidateId": "experiment-0006-1-1-l27-l50-e9eba2d49e",
+      "animationStatus": "deferred",
+      "runtimeEligible": false,
+      "currentRuntimeEligibility": {
+        "runtimeEligible": false,
+        "reviewedSafeByManifest": false,
+        "reason": "Fixture backlog item remains deferred."
+      }
+    }
+  ],
+  "reactions": [
+    {
+      "id": "reaction-deferred-experiment-leak",
+      "name": "Deferred experiment leak fixture",
+      "description": "This fixture intentionally places a deferred textbook experiment in runtime reactions.",
+      "experimentId": "experiment-0006-1-1-l27-l50-e9eba2d49e",
+      "safetyLevel": "caution",
+      "visualDescription": "Fixture-only runtime leak marker."
+    }
+  ]
+}

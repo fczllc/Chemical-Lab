@@ -1,0 +1,18 @@
+{
+  "reactions": [
+    {
+      "id": "reaction-draft-leak",
+      "name": "草稿泄漏",
+      "description": "This fixture intentionally leaks a draft experiment into runtime reactions.",
+      "experimentId": "experiment-0006-1-1-l27-l50-e9eba2d49e",
+      "safetyLevel": "caution",
+      "visualDescription": "Fixture-only runtime leak marker."
+    }
+  ],
+  "experimentCandidates": [
+    {
+      "candidateId": "experiment-0006-1-1-l27-l50-e9eba2d49e"
+    }
+  ],
+  "promotionManifests": []
+}

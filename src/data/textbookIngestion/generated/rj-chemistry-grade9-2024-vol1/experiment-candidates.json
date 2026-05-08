@@ -1,0 +1,1836 @@
+[
+  {
+    "candidateId": "experiment-0006-1-1-l27-l50-e9eba2d49e",
+    "title": "【实验1-1】",
+    "summary": "【实验1-1】 (1)把盛有少量水的试管斜夹在铁架台上。在试管底部小心加热,直到水沸腾。 把一块洁净的玻璃片(或盛有冷水的小烧杯)移近试管口(如图1-1),观察并记录实验现象。 图1-1 水的沸腾 (2)将盛有一小块石蜡的试管置于盛有沸水…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "在试管底部小心加热,直到水沸腾。"
+    ],
+    "materials": [
+      "试管",
+      "烧杯",
+      "铁架台",
+      "玻璃片",
+      "水",
+      "石蜡"
+    ],
+    "observations": [
+      "把一块洁净的玻璃片(或盛有冷水的小烧杯)移近试管口(如图1-1),观察并记录实验现象。",
+      "图1-1 水的沸腾 (2)将盛有一小块石蜡的试管置于盛有沸水的烧杯中(如图1-2),观察并记录实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-1】",
+    "sourceLineStart": 27,
+    "sourceLineEnd": 50,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:e9eba2d49e8717c9a3d42fcee3db68f11e97d832b8d6640748fdee6b14e1aa50",
+    "sourceSectionId": "0006-1-1-l27-l50-e9eba2d49e",
+    "assets": [
+      {
+        "assetId": "0006-1-1-l27-l50-e9eba2d49e-asset-01",
+        "altText": "",
+        "rawReference": "![](images/9d6320cb6adc3289635beecd38799400643aad431bd049a223527216aceb9ad9.jpg)",
+        "assetPath": "images/9d6320cb6adc3289635beecd38799400643aad431bd049a223527216aceb9ad9.jpg",
+        "sourceLineNumber": 35,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9d6320cb6adc3289635beecd38799400643aad431bd049a223527216aceb9ad9.jpg"
+      },
+      {
+        "assetId": "0006-1-1-l27-l50-e9eba2d49e-asset-02",
+        "altText": "",
+        "rawReference": "![](images/668460e83fbcb75b068259b95b9cb16f90f876c1ce7a78ead68d432d038b35df.jpg)",
+        "assetPath": "images/668460e83fbcb75b068259b95b9cb16f90f876c1ce7a78ead68d432d038b35df.jpg",
+        "sourceLineNumber": 44,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/668460e83fbcb75b068259b95b9cb16f90f876c1ce7a78ead68d432d038b35df.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0010-source-section-l89-l113-9197900129",
+    "title": "实验现象的观察与描述",
+    "summary": "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。实验是认识物质的变化和性质的一种基本方法。实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "蜡烛",
+      "水",
+      "石蜡",
+      "硫酸铜"
+    ],
+    "observations": [
+      "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。",
+      "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现象进行描述,为进一步研究物质及其变化提供证据。",
+      "在实验中观察到的现象(如图1-5),常常可以帮助我们判断物质是否发生了化学变化。",
+      "图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验现象的观察与描述",
+    "sourceLineStart": 89,
+    "sourceLineEnd": 113,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
+    "sourceSectionId": "0010-source-section-l89-l113-9197900129",
+    "assets": [
+      {
+        "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
+        "altText": "",
+        "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
+        "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
+        "sourceLineNumber": 105,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0013-1-2-l136-l141-904d58ccca",
+    "title": "【实验1-2】",
+    "summary": "【实验1-2】 分别取一集气瓶氧气和一集气瓶二氧化碳,观察它们的颜色,闻一闻气味。点燃一根小木条,将其分别慢慢地放入盛有氧气和二氧化碳的集气瓶中,观察木条燃烧的现象并记录发生的变化。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "集气瓶",
+      "氧气"
+    ],
+    "observations": [
+      "【实验1-2】 分别取一集气瓶氧气和一集气瓶二氧化碳,观察它们的颜色,闻一闻气味。",
+      "点燃一根小木条,将其分别慢慢地放入盛有氧气和二氧化碳的集气瓶中,观察木条燃烧的现象并记录发生的变化。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-2】",
+    "sourceLineStart": 136,
+    "sourceLineEnd": 141,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:904d58ccca28f76913a683e21980be557a0a8261fb21c9b50e0ec35e33f476ae",
+    "sourceSectionId": "0013-1-2-l136-l141-904d58ccca",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0018-source-section-l179-l202-a04616b02e",
+    "title": "化学实验与科学探究",
+    "summary": "化学实验与科学探究 化学是一门以实验为基础的科学,实验是科学探究的重要手段,许多重大的化学发现都是通过实验得到的。 图1-6中国古代炼丹设备示意图 说来你也许会惊讶,化学实验室的前身是古代炼丹术士和炼金术士的作坊。在那里诞生了许多实验器具…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "化学实验与科学探究",
+    "sourceLineStart": 179,
+    "sourceLineEnd": 202,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:a04616b02e7304af08b3767106204b19365513e16a1fa4463c9bcd281e682f8c",
+    "sourceSectionId": "0018-source-section-l179-l202-a04616b02e",
+    "assets": [
+      {
+        "assetId": "0018-source-section-l179-l202-a04616b02e-asset-01",
+        "altText": "",
+        "rawReference": "![](images/10e0178e061548cb88f34752d1ded09fae6bd5299fe3d2be2d56549d88d94401.jpg)",
+        "assetPath": "images/10e0178e061548cb88f34752d1ded09fae6bd5299fe3d2be2d56549d88d94401.jpg",
+        "sourceLineNumber": 183,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/10e0178e061548cb88f34752d1ded09fae6bd5299fe3d2be2d56549d88d94401.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0019-source-section-l203-l211-d7684d75c4",
+    "title": "一、走进化学实验室",
+    "summary": "一、走进化学实验室 当我们走进化学实验室时,要仔细阅读实验室规则,了解实验室的基本布局,知道疏散通道、灭火器材等的位置。 图1-9常用的化学实验仪器",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "一、走进化学实验室",
+    "sourceLineStart": 203,
+    "sourceLineEnd": 211,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:d7684d75c475e1bce7305aa9a5958742660f4f4d4f34cbcb567bcf0ec21feadb",
+    "sourceSectionId": "0019-source-section-l203-l211-d7684d75c4",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0022-source-section-l232-l261-5e8ce3d1a0",
+    "title": "实验室化学试剂取用规则",
+    "summary": "实验室化学试剂取用规则 (1)不能用手接触试剂,不要把鼻孔凑到容器口闻试剂(特别是气体)的气味,不得尝任何试剂的味道。 (2)注意节约试剂。应该严格按照实验规定的用量取用试剂。如果没有说明用量,液体一般按最少量( $1 { \\sim } …",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [
+      "(2)注意节约试剂。"
+    ],
+    "materials": [
+      "试管",
+      "药匙",
+      "镊子"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验室化学试剂取用规则",
+    "sourceLineStart": 232,
+    "sourceLineEnd": 261,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:5e8ce3d1a0db9dbe0667c7bf29dfe8e83f711b11a77470892a7040e0182108ea",
+    "sourceSectionId": "0022-source-section-l232-l261-5e8ce3d1a0",
+    "assets": [
+      {
+        "assetId": "0022-source-section-l232-l261-5e8ce3d1a0-asset-01",
+        "altText": "",
+        "rawReference": "![](images/aa427f4c24a8e43bff8b637d5360c1a281c3f8049e26c73d9827bf5c65358091.jpg)",
+        "assetPath": "images/aa427f4c24a8e43bff8b637d5360c1a281c3f8049e26c73d9827bf5c65358091.jpg",
+        "sourceLineNumber": 244,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/aa427f4c24a8e43bff8b637d5360c1a281c3f8049e26c73d9827bf5c65358091.jpg"
+      },
+      {
+        "assetId": "0022-source-section-l232-l261-5e8ce3d1a0-asset-02",
+        "altText": "",
+        "rawReference": "![](images/552ff6dbb864a636ea8eac2af75b9fa00c6f4de776031cbdd9e97af4bd3bcf1d.jpg)",
+        "assetPath": "images/552ff6dbb864a636ea8eac2af75b9fa00c6f4de776031cbdd9e97af4bd3bcf1d.jpg",
+        "sourceLineNumber": 253,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/552ff6dbb864a636ea8eac2af75b9fa00c6f4de776031cbdd9e97af4bd3bcf1d.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0023-1-3-l262-l273-d97400243e",
+    "title": "【实验1-3】",
+    "summary": "【实验1-3】 (1)取少量块状大理石放入试管中,并将试管放在试管架上备用。 (2)取少量碳酸钠粉末放入另一支试管中,并将试管放在试管架上备用。 (2)液体试剂的取用 液体试剂通常盛放在细口瓶里,常用倾倒法取用(如图1-14)。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "碳酸钠"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-3】",
+    "sourceLineStart": 262,
+    "sourceLineEnd": 273,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:d97400243e1e855d96495acbba2112f6b0a837abc9f5bfaae7067edfe2c647aa",
+    "sourceSectionId": "0023-1-3-l262-l273-d97400243e",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0027-1-4-l317-l330-574dd73b06",
+    "title": "【实验1-4】",
+    "summary": "【实验1-4】 (1)在试管中加入适量澄清石灰水,滴加两滴酚酞溶液,观察溶液颜色的变化。 (2)用 $1 0 ~ \\mathrm { m L }$ 量筒量取2mL稀盐酸,倒入实验1-3中盛有碳酸钠粉末(或大理石)的试管中,观察现象。 实验…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "量筒",
+      "水",
+      "盐酸",
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验1-4】 (1)在试管中加入适量澄清石灰水,滴加两滴酚酞溶液,观察溶液颜色的变化。",
+      "(2)用 $1 0 ~ \\mathrm { m L }$ 量筒量取2mL稀盐酸,倒入实验1-3中盛有碳酸钠粉末(或大理石)的试管中,观察现象。",
+      "实验内容 现象 （1）向澄清石灰水中滴加酚酞溶液 （2）碳酸钠粉末（或大理石）与稀盐酸反应"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-4】",
+    "sourceLineStart": 317,
+    "sourceLineEnd": 330,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:574dd73b06cfc9eb8a7043090f8f2067690fb19994b609bfb07187ae27e9e31b",
+    "sourceSectionId": "0027-1-4-l317-l330-574dd73b06",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0030-1-5-l389-l430-4e476ef4dc",
+    "title": "【实验1-5】",
+    "summary": "【实验1-5】 用 $1 0 ~ \\mathrm { m L }$ 量筒量取 $2 ~ \\mathrm { m L }$ 氢氧化钠溶液,倒入试管中,然后用滴管向该试管中滴加硫酸铜溶液,观察现象。用试管夹夹住该试管(夹在距试管 $\\bigs…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "用试管夹夹住该试管(夹在距试管 $\\bigstar \\frac { 1 } { 4 } { \\sim } \\frac { 1 } { 3 }$ 处),按图1-20所示的方法加热,观察现象。",
+      "实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22把玻璃导管插入橡胶塞的孔里 图1-23在玻璃导管上套上乳胶管 图1-24用橡胶塞塞住试管 图1-25检查装置的气密性"
+    ],
+    "materials": [
+      "试管",
+      "导管",
+      "量筒",
+      "硫酸铜",
+      "氢氧化钠"
+    ],
+    "observations": [
+      "【实验1-5】 用 $1 0 ~ \\mathrm { m L }$ 量筒量取 $2 ~ \\mathrm { m L }$ 氢氧化钠溶液,倒入试管中,然后用滴管向该试管中滴加硫酸铜溶液,观察现象。",
+      "用试管夹夹住该试管(夹在距试管 $\\bigstar \\frac { 1 } { 4 } { \\sim } \\frac { 1 } { 3 }$ 处),按图1-20所示的方法加热,观察现象。",
+      "实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22把玻璃导管插入橡胶塞的孔里 图1-23在玻璃导管上套上乳胶管 图1-24用橡胶塞塞住试管 图1-25检查装置的气密性"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-5】",
+    "sourceLineStart": 389,
+    "sourceLineEnd": 430,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:4e476ef4dc66e820e9ebce29dfcd9c0cee768dd09b09157ed22baa6abb7026fa",
+    "sourceSectionId": "0030-1-5-l389-l430-4e476ef4dc",
+    "assets": [
+      {
+        "assetId": "0030-1-5-l389-l430-4e476ef4dc-asset-01",
+        "altText": "",
+        "rawReference": "![](images/87f3ba435a0ceccc7c38938c81482de2b9f9aad0edd0c45f31860b4d748198d5.jpg)",
+        "assetPath": "images/87f3ba435a0ceccc7c38938c81482de2b9f9aad0edd0c45f31860b4d748198d5.jpg",
+        "sourceLineNumber": 403,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/87f3ba435a0ceccc7c38938c81482de2b9f9aad0edd0c45f31860b4d748198d5.jpg"
+      },
+      {
+        "assetId": "0030-1-5-l389-l430-4e476ef4dc-asset-02",
+        "altText": "",
+        "rawReference": "![](images/7f85c658d6e4bf0f02f037670a873f94893017c92fce69468b6ac579dfeb1c32.jpg)",
+        "assetPath": "images/7f85c658d6e4bf0f02f037670a873f94893017c92fce69468b6ac579dfeb1c32.jpg",
+        "sourceLineNumber": 410,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/7f85c658d6e4bf0f02f037670a873f94893017c92fce69468b6ac579dfeb1c32.jpg"
+      },
+      {
+        "assetId": "0030-1-5-l389-l430-4e476ef4dc-asset-03",
+        "altText": "",
+        "rawReference": "![](images/a209c34905b9a20a938c08f4be677891ff7c2336a2dc2c4ce8c6ddaed9da1323.jpg)",
+        "assetPath": "images/a209c34905b9a20a938c08f4be677891ff7c2336a2dc2c4ce8c6ddaed9da1323.jpg",
+        "sourceLineNumber": 417,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/a209c34905b9a20a938c08f4be677891ff7c2336a2dc2c4ce8c6ddaed9da1323.jpg"
+      },
+      {
+        "assetId": "0030-1-5-l389-l430-4e476ef4dc-asset-04",
+        "altText": "",
+        "rawReference": "![](images/6e3911b9c9f4307c6ce9dd3ff9d3e9f3d5825b65885bd4cd4a2e5f0706f779e3.jpg)",
+        "assetPath": "images/6e3911b9c9f4307c6ce9dd3ff9d3e9f3d5825b65885bd4cd4a2e5f0706f779e3.jpg",
+        "sourceLineNumber": 424,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/6e3911b9c9f4307c6ce9dd3ff9d3e9f3d5825b65885bd4cd4a2e5f0706f779e3.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0034-1-6-l464-l470-2ddeae0786",
+    "title": "【实验1-6】",
+    "summary": "【实验1-6】 将实验中所用的试管等玻璃仪器刷洗干净,并整理实验台和实验室。 实验完毕,应及时整理实验台和实验室,彻底清洗双手,确认水、电等关闭后离开实验室。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验1-6】",
+    "sourceLineStart": 464,
+    "sourceLineEnd": 470,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:2ddeae07866e15e66178168fcb63b80a5028f39521bc8c71bdf05e180fb55d80",
+    "sourceSectionId": "0034-1-6-l464-l470-2ddeae0786",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0039-source-section-l485-l514-52f9674a15",
+    "title": "【实验】",
+    "summary": "【实验】 (1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。(2)点燃蜡烛,仔细观察燃着的部分,描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。 分…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "火柴",
+      "蜡烛",
+      "水",
+      "石蜡"
+    ],
+    "observations": [
+      "【实验】 (1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。",
+      "用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。",
+      "(2)点燃蜡烛,仔细观察燃着的部分,描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。",
+      "分别取一个干燥的烧杯和一个用澄清石灰水润湿内壁的烧杯,先后罩在火焰上方(如图1-27),观察并描述烧杯中的现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 485,
+    "sourceLineEnd": 514,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
+    "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
+    "assets": [
+      {
+        "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
+        "altText": "",
+        "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
+        "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
+        "sourceLineNumber": 493,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
+      },
+      {
+        "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
+        "altText": "",
+        "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
+        "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
+        "sourceLineNumber": 500,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0054-source-section-l744-l760-e7662b5d75",
+    "title": "测定空气中氧气含量的数字化实验",
+    "summary": "测定空气中氧气含量的数字化实验 数字化实验利用传感器和信息处理终端进行实验数据的采集与分析。实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。 我们…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [
+      "实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "测定空气中氧气含量的数字化实验",
+    "sourceLineStart": 744,
+    "sourceLineEnd": 760,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
+    "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
+    "assets": [
+      {
+        "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
+        "altText": "",
+        "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
+        "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
+        "sourceLineNumber": 750,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0071-2-1-l938-l957-6951bf5bee",
+    "title": "【实验2-1】",
+    "summary": "【实验2-1】 把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。 带有火星的木条在氧气中能够复燃,说明氧气能支持燃烧(如图2-10)。 图2-11木炭分别在空气和氧气中燃烧 图2-10氧气可以使带有火星的木条复燃",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "集气瓶",
+      "氧气",
+      "木炭"
+    ],
+    "observations": [
+      "【实验2-1】 把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验2-1】",
+    "sourceLineStart": 938,
+    "sourceLineEnd": 957,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
+    "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
+    "assets": [
+      {
+        "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
+        "altText": "",
+        "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
+        "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
+        "sourceLineNumber": 951,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0072-2-2-l958-l975-b022b89709",
+    "title": "【实验2-2】",
+    "summary": "【实验2-2】 用坩埚钳夹取一小块木炭放在酒精灯火焰上加热,观察木炭在空气中燃烧的现象。然后把燃着的木炭插入充满氧气的集气瓶中(如图2-11),再观察木炭在氧气中燃烧的现象。比较木炭在空气和氧气中燃烧有什么不同。 实验内容 现象 木炭在空…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "【实验2-2】 用坩埚钳夹取一小块木炭放在酒精灯火焰上加热,观察木炭在空气中燃烧的现象。"
+    ],
+    "materials": [
+      "酒精灯",
+      "集气瓶",
+      "坩埚钳",
+      "氧气",
+      "木炭"
+    ],
+    "observations": [
+      "【实验2-2】 用坩埚钳夹取一小块木炭放在酒精灯火焰上加热,观察木炭在空气中燃烧的现象。",
+      "然后把燃着的木炭插入充满氧气的集气瓶中(如图2-11),再观察木炭在氧气中燃烧的现象。",
+      "实验内容 现象 木炭在空气中燃烧 木炭在氧气中燃烧 木炭与氧气发生化学反应,生成了二氧化碳( $\\mathrm { C O } _ { 2 }$ )气体,并放出热量。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验2-2】",
+    "sourceLineStart": 958,
+    "sourceLineEnd": 975,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:b022b8970951228b039d4e943ea2e0146940b1d192f2f4054cd45fa9130e9cf9",
+    "sourceSectionId": "0072-2-2-l958-l975-b022b89709",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0073-2-3-l976-l998-bf8355df56",
+    "title": "【实验2-3】",
+    "summary": "【实验2-3】 在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。比较硫在空气和氧气中燃烧有什么不同。 图2-12硫分别在空气…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "【实验2-3】 在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。"
+    ],
+    "materials": [
+      "集气瓶",
+      "氧气"
+    ],
+    "observations": [
+      "【实验2-3】 在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。",
+      "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。",
+      "图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫( $\\mathrm { S O } _ { 2 }$ )气体,并放出热量。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验2-3】",
+    "sourceLineStart": 976,
+    "sourceLineEnd": 998,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
+    "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
+    "assets": [
+      {
+        "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
+        "altText": "",
+        "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
+        "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
+        "sourceLineNumber": 982,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0075-2-4-l1012-l1025-49058e2e88",
+    "title": "【实验2-4】",
+    "summary": "【实验2-4】 把两根光亮的细铁丝分别盘成螺旋状。取一根在酒精灯火焰上烧至红热,观察现象。另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。 在空气中加热细铁丝时,铁…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "在空气中加热细铁丝时,铁丝红热,不能燃烧;但在氧气中点燃细铁丝可发生剧烈燃烧,火星四射。"
+    ],
+    "materials": [
+      "酒精灯",
+      "集气瓶",
+      "火柴",
+      "水",
+      "氧气",
+      "铁丝"
+    ],
+    "observations": [
+      "取一根在酒精灯火焰上烧至红热,观察现象。",
+      "另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验2-4】",
+    "sourceLineStart": 1012,
+    "sourceLineEnd": 1025,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
+    "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0081-2-5-l1104-l1130-a424db08b7",
+    "title": "【实验2-5】",
+    "summary": "【实验2-5】 如图2-14所示连接好装置。检查装置的气密性后,把少量高锰酸钾装入试管中,在试管口放一团棉花①,用带有导管的橡胶塞塞紧试管,并把试管固定在铁架台上。将一个集气瓶盛满水,用玻璃片盖住瓶口,再将其与玻璃片一起倒立在盛水的水槽内…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "(1)加热试管,当导管口连续并比较均匀地放出气泡时,把导管口伸入盛满水的集气瓶,用排水法收集一瓶氧气。"
+    ],
+    "materials": [
+      "试管",
+      "铁架台",
+      "玻璃片",
+      "集气瓶",
+      "水槽",
+      "导管",
+      "水",
+      "高锰酸钾",
+      "二氧化锰",
+      "氧气"
+    ],
+    "observations": [
+      "(2)把带有火星的木条插入集气瓶中,观察现象。",
+      "图2-14高锰酸钾分解制取氧气 实验编号 现象 (1） (2) 高锰酸钾是一种暗紫色的固体,它受热时分解出氧气,同时还生成锰酸钾和二氧化锰。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验2-5】",
+    "sourceLineStart": 1104,
+    "sourceLineEnd": 1130,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
+    "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
+    "assets": [
+      {
+        "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
+        "altText": "",
+        "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
+        "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
+        "sourceLineNumber": 1114,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0087-source-section-l1160-l1165-f6975d660d",
+    "title": "【实验】",
+    "summary": "【实验】 (1)在试管中加入5mL $5 \\%$ 过氧化氢溶液,把带有火星的木条插入试管,观察现象。 (2)向上述试管中加入少量二氧化锰,把带有火星的木条插入试管,观察现象(如图2-16)。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "二氧化锰",
+      "过氧化氢"
+    ],
+    "observations": [
+      "【实验】 (1)在试管中加入5mL $5 \\%$ 过氧化氢溶液,把带有火星的木条插入试管,观察现象。",
+      "(2)向上述试管中加入少量二氧化锰,把带有火星的木条插入试管,观察现象(如图2-16)。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 1160,
+    "sourceLineEnd": 1165,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:f6975d660d310ce43e60004c91766205b5827d318c37911fe45c97393f3dd666",
+    "sourceSectionId": "0087-source-section-l1160-l1165-f6975d660d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0092-source-section-l1213-l1218-4a0a8014a0",
+    "title": "实验探究的一般思路",
+    "summary": "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。 化学实验…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "二氧化锰",
+      "过氧化氢",
+      "氧气"
+    ],
+    "observations": [
+      "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验探究的一般思路",
+    "sourceLineStart": 1213,
+    "sourceLineEnd": 1218,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
+    "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0103-1-l1356-l1357-fc3abb7cb4",
+    "title": "实验活动1 氧气的实验室制取与性质",
+    "summary": "实验活动1 氧气的实验室制取与性质",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验活动1 氧气的实验室制取与性质",
+    "sourceLineStart": 1356,
+    "sourceLineEnd": 1357,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:fc3abb7cb4aba80d054e59ee340df60b9747904c5c869465e3836b856e479b1e",
+    "sourceSectionId": "0103-1-l1356-l1357-fc3abb7cb4",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0104-source-section-l1358-l1362-9414c2465e",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.学习实验室制取氧气的方法。 2.加深对氧气性质的认识。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 1358,
+    "sourceLineEnd": 1362,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:9414c2465e08407078f4674e526f57d9277df459dc8ed820e28905fd06096a22",
+    "sourceSectionId": "0104-source-section-l1358-l1362-9414c2465e",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0105-source-section-l1363-l1368-7409ce8169",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、集气瓶、水槽、单孔橡胶塞、乳胶管、玻璃导管、铁架台(带铁夹)、升降台、酒精灯、玻璃片、坩蜗钳、棉花、火柴。 高锰酸钾、木炭、澄清石灰水、细铁丝。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "铁架台",
+      "玻璃片",
+      "集气瓶",
+      "水槽",
+      "导管",
+      "火柴",
+      "水",
+      "高锰酸钾",
+      "木炭",
+      "铁丝"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 1363,
+    "sourceLineEnd": 1368,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:7409ce8169f8a94d56ff577ad42a54af45e58c9b26806f5dd19f40a400409f36",
+    "sourceSectionId": "0105-source-section-l1363-l1368-7409ce8169",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0124-3-1-l1485-l1511-4fe60bf68d",
+    "title": "【实验3-1】",
+    "summary": "【实验3-1】 图3-1品红在水中扩散 向盛有水的烧杯中加入少量品红,静置,观察现象。 实验表明,品红在静置的水中会扩散(如图3-1)。 上述生活和实验中的现象,在很久以前就引起了一些学者的探究兴趣。为了解释这类现象,他们提出物质由看不见…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "【实验3-1】 图3-1品红在水中扩散 向盛有水的烧杯中加入少量品红,静置,观察现象。",
+      "上述生活和实验中的现象,在很久以前就引起了一些学者的探究兴趣。",
+      "为了解释这类现象,他们提出物质由看不见的微小粒子构成的设想。",
+      "现在我们通过先进的科学仪器不仅能够观察到一些分子和原子(如图3-2),还能移动原子(如图3-3)。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验3-1】",
+    "sourceLineStart": 1485,
+    "sourceLineEnd": 1511,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:4fe60bf68d6a1c3e4913f5eb604173fc68746fb679ed48de8f9c0db18ddaff17",
+    "sourceSectionId": "0124-3-1-l1485-l1511-4fe60bf68d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0187-4-2-l2310-l2326-a285ff5a91",
+    "title": "【实验4-2】",
+    "summary": "【实验4-2】 取一张圆形滤纸,如图4-10所示折好并放入漏斗,使之紧贴漏斗内壁,并使滤纸边缘略低于漏斗口。用少量水润湿滤纸,并使滤纸与漏斗内壁之间不要有气泡。 图4-10过滤器的准备 如图4-11所示,放置好漏斗,使漏斗下端管口紧靠烧杯…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [
+      "取实验4-1中处理过的一杯液体,沿玻璃棒慢慢向漏斗中倾倒,注意液面始终要低于滤纸的边缘。"
+    ],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "水"
+    ],
+    "observations": [
+      "观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验4-2】",
+    "sourceLineStart": 2310,
+    "sourceLineEnd": 2326,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
+    "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
+    "assets": [
+      {
+        "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
+        "altText": "",
+        "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
+        "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
+        "sourceLineNumber": 2316,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0190-4-3-l2371-l2382-b1a2768cd6",
+    "title": "【实验4-3】",
+    "summary": "【实验4-3】 在烧瓶中加入自来水,再加入几粒沸石(或碎瓷片),以防加热时出现暴沸。如图4-14所示连接好装置,使各连接部位严密不漏气。加热烧瓶,注意不要使液体沸腾得太剧烈,以防液体通过导管直接流到试管里。弃去开始馏出的部分液体,收集约 …",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验4-3】 在烧瓶中加入自来水,再加入几粒沸石(或碎瓷片),以防加热时出现暴沸。",
+      "加热烧瓶,注意不要使液体沸腾得太剧烈,以防液体通过导管直接流到试管里。",
+      "弃去开始馏出的部分液体,收集约 $1 0 ~ \\mathrm { m L }$ 蒸馏水后,停止加热。"
+    ],
+    "materials": [
+      "试管",
+      "导管",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验4-3】",
+    "sourceLineStart": 2371,
+    "sourceLineEnd": 2382,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:b1a2768cd6ee8628c57e9cb9fbfcebc38ba90fcbed36882cb60feb4446267eff",
+    "sourceSectionId": "0190-4-3-l2371-l2382-b1a2768cd6",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0195-4-4-l2439-l2453-791ebb8e61",
+    "title": "【实验4-4】",
+    "summary": "【实验4-4】 在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。 研究表明,氢气在空气或氧气里燃烧生成水。之后,人们又研究了水的分解实验。 图4-16氢气在空气里燃烧",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "导管",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "【实验4-4】 在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验4-4】",
+    "sourceLineStart": 2439,
+    "sourceLineEnd": 2453,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
+    "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
+    "assets": [
+      {
+        "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
+        "altText": "",
+        "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
+        "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
+        "sourceLineNumber": 2447,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0198-source-section-l2462-l2482-f59b59289a",
+    "title": "【实验】",
+    "summary": "【实验】 (1)如图4-17所示,在电解器玻璃管中加满水①,接通直流电源,观察并记录玻璃管内的现象。 图4-17电解水实验 现象 与电源正极相连的玻璃管内 与电源负极相连的玻璃管内 比较两个玻璃管内现象的差异 (2)切断上述装置中的电源,…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [
+      "【实验】 (1)如图4-17所示,在电解器玻璃管中加满水①,接通直流电源,观察并记录玻璃管内的现象。",
+      "图4-17电解水实验 现象 与电源正极相连的玻璃管内 与电源负极相连的玻璃管内 比较两个玻璃管内现象的差异 (2)切断上述装置中的电源,用燃着的木条分别在两个玻璃管尖嘴口检验电解反应中产生的气体,观察并记录实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 2462,
+    "sourceLineEnd": 2482,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:f59b59289a966cecb5761c7de03610999bb3718e48312481cf50ae8aa168bf0c",
+    "sourceSectionId": "0198-source-section-l2462-l2482-f59b59289a",
+    "assets": [
+      {
+        "assetId": "0198-source-section-l2462-l2482-f59b59289a-asset-01",
+        "altText": "",
+        "rawReference": "![](images/05e045be9175bd1ce9aeb3207227c327a540139f4e4cc58ed8c43a8dd2f45e2e.jpg)",
+        "assetPath": "images/05e045be9175bd1ce9aeb3207227c327a540139f4e4cc58ed8c43a8dd2f45e2e.jpg",
+        "sourceLineNumber": 2466,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/05e045be9175bd1ce9aeb3207227c327a540139f4e4cc58ed8c43a8dd2f45e2e.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0226-2-l2876-l2877-a309e1bc96",
+    "title": "实验活动2水的组成及变化的探究",
+    "summary": "实验活动2水的组成及变化的探究",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验活动2水的组成及变化的探究",
+    "sourceLineStart": 2876,
+    "sourceLineEnd": 2877,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:a309e1bc96082896a0ffe582433ce04b76bac5bbfb2c94157d718537dc2a0d9a",
+    "sourceSectionId": "0226-2-l2876-l2877-a309e1bc96",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0227-source-section-l2878-l2883-07960d633d",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.认识水的组成。 2.了解水在通电条件下发生的变化,进一步认识分解反应。 3.进一步体会科学探究的过程和方法。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 2878,
+    "sourceLineEnd": 2883,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:07960d633d1f1b3240f7b3bb002e695def780a260dde2ffcee36d1c37fad6c89",
+    "sourceSectionId": "0227-source-section-l2878-l2883-07960d633d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0228-source-section-l2884-l2894-87f857afb9",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 水电解器、烧杯、直流电源、铁架台(带铁圈和滴定夹)、酒精灯、导线、火柴。 硫酸钠溶液(或氢氧化钠溶液)、木条、蒸馏水。 【实验步骤】 1.水的生成 回忆氢气在空气里燃烧的实验(实验4-4):纯净的氢气在空气里安静地燃烧,在火…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "酒精灯",
+      "铁架台",
+      "火柴",
+      "水",
+      "氢氧化钠"
+    ],
+    "observations": [
+      "【实验步骤】 1.水的生成 回忆氢气在空气里燃烧的实验(实验4-4):纯净的氢气在空气里安静地燃烧,在火焰上方罩一个干燥的小烧杯,可观察到烧杯壁上的现象是,说明 。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 2884,
+    "sourceLineEnd": 2894,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:87f857afb998e419dd0ffacf3934a4c4e2bdd987243da82ba10844aea335093b",
+    "sourceSectionId": "0228-source-section-l2884-l2894-87f857afb9",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0248-5-1-l3024-l3035-c51c863b33",
+    "title": "【实验5-1】",
+    "summary": "【实验5-1】 在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。反应一段时间后再次称量。比较反应前后的称量结果。 图5-3盐酸与碳酸…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "烧杯",
+      "盐酸",
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验5-1】 在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。",
+      "取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验5-1】",
+    "sourceLineStart": 3024,
+    "sourceLineEnd": 3035,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
+    "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0249-5-2-1-l3036-l3041-e1140cffc0",
+    "title": "【实验5-2】①",
+    "summary": "【实验5-2】① 取一根用砂纸打磨干净的长镁条和一个陶土网,将它们一起放在天平上称量,记录所称的质量。在陶土网上方将镁条点燃(如图5-4),观察现象。将镁条燃烧后所得固体与陶土网一起放在天平上称量,比较反应前后的称量结果。 镁 + 氧气 …",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [
+      "【实验5-2】① 取一根用砂纸打磨干净的长镁条和一个陶土网,将它们一起放在天平上称量,记录所称的质量。",
+      "在陶土网上方将镁条点燃(如图5-4),观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验5-2】①",
+    "sourceLineStart": 3036,
+    "sourceLineEnd": 3041,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:e1140cffc0aa7cb44ceb776502b934b37063da84e5f2df9095cefb532304ad2f",
+    "sourceSectionId": "0249-5-2-1-l3036-l3041-e1140cffc0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0285-6-1-l3466-l3489-c98bdaf6ec",
+    "title": "【实验6-1】",
+    "summary": "【实验6-1】 在盛有半瓶水的小锥形瓶里,滴入一滴红墨水,使水略显红色。投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。 现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。可以利用木炭的这个性质来吸附一些食品和工业产品里…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水",
+      "木炭"
+    ],
+    "observations": [
+      "投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。",
+      "现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验6-1】",
+    "sourceLineStart": 3466,
+    "sourceLineEnd": 3489,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
+    "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
+    "assets": [
+      {
+        "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
+        "altText": "",
+        "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
+        "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
+        "sourceLineNumber": 3480,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
+      },
+      {
+        "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
+        "altText": "",
+        "rawReference": "![](images/![image]()",
+        "assetPath": "images/![image](",
+        "sourceLineNumber": 3483,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0293-6-2-l3567-l3599-fc7d28dcdc",
+    "title": "【实验6-2】",
+    "summary": "【实验6-2】 如图6-9所示,把刚烘干的木炭粉末和氧化铜粉末混合均匀,小心地铺放进试管,并将试管固定在铁架台上,将导管插入澄清石灰水中。打开弹簧夹,用酒精灯(可加网罩使火焰集中并提高温度,最好使用酒精喷灯)加热混合物几分钟。然后先撤出导…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "打开弹簧夹,用酒精灯(可加网罩使火焰集中并提高温度,最好使用酒精喷灯)加热混合物几分钟。",
+      "然后先撤出导管,停止加热,用弹簧夹夹紧乳胶管,待试管冷却后再把试管里的粉末倒在纸上。"
+    ],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "铁架台",
+      "导管",
+      "水",
+      "木炭"
+    ],
+    "observations": [
+      "观察现象并分析。",
+      "现象 分析 图6-9用木炭还原氧化铜 木炭与氧化铜反应,生成铜和二氧化碳。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验6-2】",
+    "sourceLineStart": 3567,
+    "sourceLineEnd": 3599,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:fc7d28dcdc71da5de8489d3e8399bc469130e88d318dc70508fb8bc5fe15aa37",
+    "sourceSectionId": "0293-6-2-l3567-l3599-fc7d28dcdc",
+    "assets": [
+      {
+        "assetId": "0293-6-2-l3567-l3599-fc7d28dcdc-asset-01",
+        "altText": "",
+        "rawReference": "![](images/eadb8b92cd03e9fd43b73df47f65f4bd60287c9449008cb605677bd372b1bcac.jpg)",
+        "assetPath": "images/eadb8b92cd03e9fd43b73df47f65f4bd60287c9449008cb605677bd372b1bcac.jpg",
+        "sourceLineNumber": 3579,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/eadb8b92cd03e9fd43b73df47f65f4bd60287c9449008cb605677bd372b1bcac.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0299-6-3-l3686-l3695-4fb09a6ca8",
+    "title": "【实验6-3】",
+    "summary": "【实验6-3】 如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。 现象 分析",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯"
+    ],
+    "observations": [
+      "【实验6-3】 如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。",
+      "现象 分析"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验6-3】",
+    "sourceLineStart": 3686,
+    "sourceLineEnd": 3695,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
+    "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0300-6-4-l3696-l3724-75bc9d394b",
+    "title": "【实验6-4】",
+    "summary": "【实验6-4】 如图6-11所示,向一个收集满二氧化碳气体的质地较软的塑料瓶中加入约 $\\frac 1 3$ 容积的水,立即旋紧瓶盖,振荡。观察现象并分析。 图6-11 二氧化碳的溶解性实验 现象 分析 根据实验6-3和实验6-4完成下表…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [
+      "观察现象并分析。",
+      "图6-11 二氧化碳的溶解性实验 现象 分析 根据实验6-3和实验6-4完成下表。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验6-4】",
+    "sourceLineStart": 3696,
+    "sourceLineEnd": 3724,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:75bc9d394b14ee28335d59f75b9ebcf3f1e47c590c00f7da6bd074cd21009c1d",
+    "sourceSectionId": "0300-6-4-l3696-l3724-75bc9d394b",
+    "assets": [
+      {
+        "assetId": "0300-6-4-l3696-l3724-75bc9d394b-asset-01",
+        "altText": "",
+        "rawReference": "![](images/cfe6274f4bf347bd7cb65a7a487d57539dfabb096ef7d9c4c68a25ff95a9ad11.jpg)",
+        "assetPath": "images/cfe6274f4bf347bd7cb65a7a487d57539dfabb096ef7d9c4c68a25ff95a9ad11.jpg",
+        "sourceLineNumber": 3702,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/cfe6274f4bf347bd7cb65a7a487d57539dfabb096ef7d9c4c68a25ff95a9ad11.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0301-6-5-l3725-l3782-9b4bad179a",
+    "title": "【实验6-5】",
+    "summary": "【实验6-5】 取三朵用石蕊②溶液染成紫色的干燥的纸花。如图6-12所示,向第一朵纸花喷水;将第二朵纸花放入盛满二氧化碳的集气瓶中;将第三朵纸花喷上水后,再放入盛满二氧化碳的集气瓶中。观察三朵纸花的颜色变化。将第三朵纸花取出,小心地用吹风…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "集气瓶",
+      "水"
+    ],
+    "observations": [
+      "观察三朵纸花的颜色变化。",
+      "将第三朵纸花取出,小心地用吹风机吹干,观察现象。",
+      "图6-12二氧化碳与水反应的实验示意图 实验内容 I Ⅱ Ⅲ 吹干第三朵纸花 现象 二氧化碳与水反应生成碳酸,碳酸能使紫色石蕊溶液变成红色。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验6-5】",
+    "sourceLineStart": 3725,
+    "sourceLineEnd": 3782,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:9b4bad179af20a928026b5455c76059cb1af0fddfb42b14149c761de061fa257",
+    "sourceSectionId": "0301-6-5-l3725-l3782-9b4bad179a",
+    "assets": [
+      {
+        "assetId": "0301-6-5-l3725-l3782-9b4bad179a-asset-01",
+        "altText": "",
+        "rawReference": "![](images/9bb6c32171e8cd6ef89b434773d3f791cce68c1736b6dde0f1c5d34a8a612c79.jpg)",
+        "assetPath": "images/9bb6c32171e8cd6ef89b434773d3f791cce68c1736b6dde0f1c5d34a8a612c79.jpg",
+        "sourceLineNumber": 3731,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9bb6c32171e8cd6ef89b434773d3f791cce68c1736b6dde0f1c5d34a8a612c79.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0312-source-section-l3937-l3940-3894e4fb7d",
+    "title": "二氧化碳的实验室制取",
+    "summary": "二氧化碳的实验室制取 我们已经学习过氧气的实验室制法。请回忆一下,在实验室里制取氧气的方法有哪几种?二氧化碳在生产和生活中的用途非常广泛。那么,在实验室里如何制取二氧化碳呢?",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "二氧化碳的实验室制取",
+    "sourceLineStart": 3937,
+    "sourceLineEnd": 3940,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:3894e4fb7d7a5ea7682dd17c4ea684b0be0c1a6b7c705a4b751fdbe87ac18495",
+    "sourceSectionId": "0312-source-section-l3937-l3940-3894e4fb7d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0313-source-section-l3941-l3958-4fa0f8a4ac",
+    "title": "一、实验室里制取二氧化碳的化学反应原理",
+    "summary": "一、实验室里制取二氧化碳的化学反应原理 在实验室里,常用稀盐酸与石灰石(或大理石,主要成分都是碳酸钙)反应来制取二氧化碳。反应的化学方程式可以表示如下: $C a C O _ { 3 } + 2 H C l = C a C l _ { 2…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "水",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "一、实验室里制取二氧化碳的化学反应原理",
+    "sourceLineStart": 3941,
+    "sourceLineEnd": 3958,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:4fa0f8a4aca456c23f7188815fdfae170d8d389e9f3cda4a65731655b622d518",
+    "sourceSectionId": "0313-source-section-l3941-l3958-4fa0f8a4ac",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0315-source-section-l3963-l3964-54fb2667c0",
+    "title": "二、实验室里制取二氧化碳的装置",
+    "summary": "二、实验室里制取二氧化碳的装置",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "二、实验室里制取二氧化碳的装置",
+    "sourceLineStart": 3963,
+    "sourceLineEnd": 3964,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:54fb2667c0878f7da0479c9ed72bc3e10cb903ca3598cf9786ecfffc8440764f",
+    "sourceSectionId": "0315-source-section-l3963-l3964-54fb2667c0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0317-source-section-l3967-l3972-224fe2b490",
+    "title": "实验室里制取二氧化碳的装置",
+    "summary": "实验室里制取二氧化碳的装置 【问题】 如何设计实验室里制取二氧化碳的装置?",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验室里制取二氧化碳的装置",
+    "sourceLineStart": 3967,
+    "sourceLineEnd": 3972,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:224fe2b490fdeadf5aed4c72fef4ae9dd50179fc6ea267face2e8871101087d2",
+    "sourceSectionId": "0317-source-section-l3967-l3972-224fe2b490",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0322-source-section-l4046-l4057-78a012bf92",
+    "title": "实验室里制取气体的一般思路和方法",
+    "summary": "实验室里制取气体的一般思路和方法 通过研究二氧化碳和氧气的实验室制取,我们可以总结出实验室里制取气体的一般思路和方法。 (1)确定制取气体的化学反应原理:在实验室条件下(如常温、加热、使用催化剂等),选择什么试剂、通过什么反应来制取这种气…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "(1)确定制取气体的化学反应原理:在实验室条件下(如常温、加热、使用催化剂等),选择什么试剂、通过什么反应来制取这种气体。",
+      "确定原理时,需要综合考虑反应的速率大小,产生的气体是否易于收集、是否纯净,实验操作是否安全、简单,实验过程是否会产生污染,以及试剂的价格等因素。"
+    ],
+    "materials": [
+      "水",
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验室里制取气体的一般思路和方法",
+    "sourceLineStart": 4046,
+    "sourceLineEnd": 4057,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:78a012bf9291fb5bca805e57c47d6185ad922b251dd4e63d1f7391997fabda5a",
+    "sourceSectionId": "0322-source-section-l4046-l4057-78a012bf92",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0328-source-section-l4134-l4147-18b7867b10",
+    "title": "三、认识实验室里制取气体的一般思路和方法",
+    "summary": "三、认识实验室里制取气体的一般思路和方法 1.比较实验室里制取氧气和二氧化碳的方法。 气体 化学反应原理 实验装置图 检验方法 氧气 二氧化碳 2.归纳实验室里制取气体的一般思路和方法。 确定制取气体的 设计制取气体的 验证得到的气体就是…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "三、认识实验室里制取气体的一般思路和方法",
+    "sourceLineStart": 4134,
+    "sourceLineEnd": 4147,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:18b7867b10cacb68c4b7958e3f4bc9ce983ee94156626f67ebde6ed9fdd2eb43",
+    "sourceSectionId": "0328-source-section-l4134-l4147-18b7867b10",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0330-3-l4211-l4212-80c48411d5",
+    "title": "实验活动3二氧化碳的实验室制取与性质",
+    "summary": "实验活动3二氧化碳的实验室制取与性质",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "实验活动3二氧化碳的实验室制取与性质",
+    "sourceLineStart": 4211,
+    "sourceLineEnd": 4212,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:80c48411d5b3079cbbe230f3a85c42f59cdb24a9f61e42ef9d7b94bca881c9fc",
+    "sourceSectionId": "0330-3-l4211-l4212-80c48411d5",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0331-source-section-l4213-l4217-556ec61e8a",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.练习实验室里制取二氧化碳和用向上排空气法收集气体。 2.加深对二氧化碳性质的认识。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 4213,
+    "sourceLineEnd": 4217,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:556ec61e8a498937125a42c9c7a4a4af8bbaf5a4f040659f09cd34fa241e7af3",
+    "sourceSectionId": "0331-source-section-l4213-l4217-556ec61e8a",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0332-source-section-l4218-l4223-6318c329ce",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 烧杯、试管、集气瓶、量筒、玻璃导管、乳胶管、带导管的单孔橡胶塞、铁架台(带铁夹)、试管夹、玻璃片、酒精灯、镊子、火柴。 石灰石(或大理石)、稀盐酸、澄清石灰水、石蕊溶液、蜡烛、木条、蒸馏水。你还需要的实验用品: 0",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "烧杯",
+      "酒精灯",
+      "铁架台",
+      "玻璃片",
+      "集气瓶",
+      "导管",
+      "量筒",
+      "镊子",
+      "火柴",
+      "蜡烛",
+      "水",
+      "盐酸"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 4218,
+    "sourceLineEnd": 4223,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:6318c329ce4229178e07964c105b07b697d2c85d64273f54183cc44fb6775b18",
+    "sourceSectionId": "0332-source-section-l4218-l4223-6318c329ce",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0333-textcircled-6-l4224-l4238-44edf253c7",
+    "title": "【实验步骤】 $\\textcircled{6}$",
+    "summary": "【实验步骤】 $\\textcircled{6}$ 1.制取二氧化碳 (1)按照图6-21所示连接装置(你也可以选择自己在课题3中设计的装置,但须经教师同意),并检查装置的气密性。 (2)在试管里放入几小块石灰石(或大理石),然后小心地注入…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "玻璃片",
+      "集气瓶",
+      "导管",
+      "盐酸"
+    ],
+    "observations": [
+      "立即用带有导管的橡胶塞塞住管口,观察试管里发生的现象,以及反应中产生气体的颜色。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验步骤】 $\\textcircled{6}$",
+    "sourceLineStart": 4224,
+    "sourceLineEnd": 4238,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:44edf253c7e60c37f3fdcd773ab1fd603d47363ebfacc8796b27207833580d9b",
+    "sourceSectionId": "0333-textcircled-6-l4224-l4238-44edf253c7",
+    "assets": [
+      {
+        "assetId": "0333-textcircled-6-l4224-l4238-44edf253c7-asset-01",
+        "altText": "",
+        "rawReference": "![](images/5f7f1b884af1e716f83512ffe136a3eebe6eb5f5ad5cd18929e55460c02651df.jpg)",
+        "assetPath": "images/5f7f1b884af1e716f83512ffe136a3eebe6eb5f5ad5cd18929e55460c02651df.jpg",
+        "sourceLineNumber": 4232,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/5f7f1b884af1e716f83512ffe136a3eebe6eb5f5ad5cd18929e55460c02651df.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0353-1-l4367-l4381-876056c1f9",
+    "title": "【实验事实】①",
+    "summary": "【实验事实】① 实验步骤 现象 （1）在500mL烧杯中加入300mL热水，并放入用硬纸圈圈住的一小块白磷，在烧杯上盖一片薄铜片在铜片的一端放一小堆干燥的红磷，另一端放一小块已用滤纸吸去表面上水的白磷（如图7-3Ⅰ） 铜片上的白磷燃烧，红…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "导管",
+      "水",
+      "氧气",
+      "红磷"
+    ],
+    "observations": [
+      "【实验事实】① 实验步骤 现象 （1）在500mL烧杯中加入300mL热水，并放入用硬纸圈圈住的一小块白磷，在烧杯上盖一片薄铜片在铜片的一端放一小堆干燥的红磷，另一端放一小块已用滤纸吸去表面上水的白磷（如图7-3Ⅰ） 铜片上的白磷燃烧，红磷不燃烧；热水中的白磷不燃烧 （2）用导管对准上述烧杯热水中的白磷，通入少量氧气（或空气，如图7-3Ⅱ） 热水中的白磷燃烧 图7-3探究燃烧的条件实验示意图"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验事实】①",
+    "sourceLineStart": 4367,
+    "sourceLineEnd": 4381,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:876056c1f9b7eaf2daf325e2e7fe93e5fa0a225995fa8f55c7c1f48dee71f8f6",
+    "sourceSectionId": "0353-1-l4367-l4381-876056c1f9",
+    "assets": [
+      {
+        "assetId": "0353-1-l4367-l4381-876056c1f9-asset-01",
+        "altText": "",
+        "rawReference": "![](images/9b094a462dcfc86123fe09cb0d9db6eaf65260673750aa7c8052ca5021b4379b.jpg)",
+        "assetPath": "images/9b094a462dcfc86123fe09cb0d9db6eaf65260673750aa7c8052ca5021b4379b.jpg",
+        "sourceLineNumber": 4375,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9b094a462dcfc86123fe09cb0d9db6eaf65260673750aa7c8052ca5021b4379b.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0362-source-section-l4467-l4483-b861e3c47e",
+    "title": "【实验与分析】",
+    "summary": "【实验与分析】 如图7-6所示,点燃三支蜡烛,在其中一支蜡烛上扣一个烧杯;将另两支蜡烛分别放在两个烧杯中;然后向一个烧杯中加适量碳酸钠溶液和盐酸。蜡烛燃烧的现象有什么不同?请用灭火的原理分析和解释。 图7-6蜡烛燃烧实验示意图 实验编号 …",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "蜡烛",
+      "盐酸",
+      "碳酸钠"
+    ],
+    "observations": [
+      "蜡烛燃烧的现象有什么不同?",
+      "图7-6蜡烛燃烧实验示意图 实验编号 现象 分析 i Ⅱ Ⅱ"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验与分析】",
+    "sourceLineStart": 4467,
+    "sourceLineEnd": 4483,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:b861e3c47ee4eefc9ce5a7558b8d3586a93984cca081f9b7870d3dae46b7195b",
+    "sourceSectionId": "0362-source-section-l4467-l4483-b861e3c47e",
+    "assets": [
+      {
+        "assetId": "0362-source-section-l4467-l4483-b861e3c47e-asset-01",
+        "altText": "",
+        "rawReference": "![](images/81d810cd642351aa47db1cd68ab80d05fc3aaf71fa1d6811f91ca6b3ee3f7fa0.jpg)",
+        "assetPath": "images/81d810cd642351aa47db1cd68ab80d05fc3aaf71fa1d6811f91ca6b3ee3f7fa0.jpg",
+        "sourceLineNumber": 4471,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/81d810cd642351aa47db1cd68ab80d05fc3aaf71fa1d6811f91ca6b3ee3f7fa0.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0375-7-1-l4601-l4616-5a26643872",
+    "title": "【实验7-1】",
+    "summary": "【实验7-1】 在一支试管中加入少量生石灰(CaO)或一小块生活中使用的生石灰干燥剂,再加入2mL水,插入温度计。观察现象,并记录温度变化。 上述实验中,氧化钙与水反应生成氢氧化钙,并放出热量。 $$ \\mathsf { C a O } …",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察现象,并记录温度变化。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验7-1】",
+    "sourceLineStart": 4601,
+    "sourceLineEnd": 4616,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
+    "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0386-7-2-l4786-l4800-6da81e61cc",
+    "title": "【实验7-2】",
+    "summary": "【实验7-2】 (1)点燃从导管放出的甲烷,在火焰的上方罩一个干燥的烧杯(如图7-20)。过一会儿,观察烧杯壁上的现象。 (2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。 图7-20甲烷在空气里燃烧",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "导管",
+      "水"
+    ],
+    "observations": [
+      "过一会儿,观察烧杯壁上的现象。",
+      "(2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验7-2】",
+    "sourceLineStart": 4786,
+    "sourceLineEnd": 4800,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
+    "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
+    "assets": [
+      {
+        "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
+        "altText": "",
+        "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
+        "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
+        "sourceLineNumber": 4794,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0401-source-section-l5078-l5083-39be7ca33c",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1.加深对燃烧条件的认识,进一步了解灭火的原理。 2.体验实验探究的过程。 3.体会控制变量方法在科学探究中的运用。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 5078,
+    "sourceLineEnd": 5083,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:39be7ca33cbffd790192065ee59c2342b6f03a58c375fbf87136dff799d559dd",
+    "sourceSectionId": "0401-source-section-l5078-l5083-39be7ca33c",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0402-source-section-l5084-l5089-9ba72db540",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 烧杯、镊子、坩埚钳、酒精灯、火柴。 小木块、小煤块、蜡烛。 你还需要的实验用品: 。",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "酒精灯",
+      "镊子",
+      "坩埚钳",
+      "火柴",
+      "蜡烛"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 5084,
+    "sourceLineEnd": 5089,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:9ba72db54003682d2c903492c930f6a635d569769116102d87289e157449dd74",
+    "sourceSectionId": "0402-source-section-l5084-l5089-9ba72db540",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0403-textcircled-6-l5090-l5099-5b0ae2a09b",
+    "title": "【实验步骤】 $\\textcircled{6}$",
+    "summary": "【实验步骤】 $\\textcircled{6}$ 1.取大小和形状相似的干燥的小木块和小煤块,分别用址埚钳夹住,同时放到酒精灯火焰上加热,观察现象。 此实验可以说明燃烧的条件之一是。 2.利用蜡烛和烧杯(或选择其他用品),设计一个简单的实…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "【实验步骤】 $\\textcircled{6}$ 1.取大小和形状相似的干燥的小木块和小煤块,分别用址埚钳夹住,同时放到酒精灯火焰上加热,观察现象。"
+    ],
+    "materials": [
+      "烧杯",
+      "酒精灯",
+      "蜡烛",
+      "氧气"
+    ],
+    "observations": [
+      "【实验步骤】 $\\textcircled{6}$ 1.取大小和形状相似的干燥的小木块和小煤块,分别用址埚钳夹住,同时放到酒精灯火焰上加热,观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "【实验步骤】 $\\textcircled{6}$",
+    "sourceLineStart": 5090,
+    "sourceLineEnd": 5099,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:5b0ae2a09be0753be21c67bbb65923f47409f4ed249fa49eea1bdf83f06018cd",
+    "sourceSectionId": "0403-textcircled-6-l5090-l5099-5b0ae2a09b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0415-source-section-l5146-l5153-5af3b903ba",
+    "title": "初中化学实验室常用仪器",
+    "summary": "初中化学实验室常用仪器 仪器试管烧杯量筒 用途 注意事项 用作少量试剂的反应容器，在常温或加热时使用 加热后不能骤冷，防止炸裂 用作配制溶液和较大量试剂的反应容器，在常温或加热时使用 加热时应放置在陶土网上，使受热均匀 量度液体体积 不能…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "初中化学实验室常用仪器 仪器试管烧杯量筒 用途 注意事项 用作少量试剂的反应容器，在常温或加热时使用 加热后不能骤冷，防止炸裂 用作配制溶液和较大量试剂的反应容器，在常温或加热时使用 加热时应放置在陶土网上，使受热均匀 量度液体体积 不能加热，不能作反应容器 集气瓶 用于收集或储存少量气体 不能加热 酒精灯 用于加热 见第一单元课题2中“物质的加热”部分 仪器 用途 注意事项 胶头滴管滴瓶 胶头滴管用于吸取和滴加少量液体滴瓶用于储存和取用液体试剂 胶头滴管用后应立即洗净，再去吸取其他试剂滴瓶上的滴管与滴瓶配套使用 铁架台铁夹中 铁圈 用于固定和支持各种仪器，一般常用于过滤、加热等实验操作 漏斗 用作加液器，将液体注入小口径容器；在装上滤纸后也可用作过滤器，用于分离液体与固体 用作过滤器时，滤纸边缘应低于漏斗边缘，过滤物的液面要低于滤纸边缘，漏斗应置于铁圈或漏斗架上，漏斗下端管口要紧靠接收容器的内壁 试管夹 用于夹持试管 防止烧损和腐蚀 玻璃棒 用于搅拌、过滤或转移液体"
+    ],
+    "materials": [
+      "试管",
+      "烧杯",
+      "酒精灯",
+      "铁架台",
+      "玻璃棒",
+      "集气瓶",
+      "量筒",
+      "胶头滴管"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+    "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+    "sourceHeading": "初中化学实验室常用仪器",
+    "sourceLineStart": 5146,
+    "sourceLineEnd": 5153,
+    "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+    "sectionHash": "sha256:5af3b903ba3ad602724f7f71179e2f5bcc8b4213ec510cccc482cbf1658a69b0",
+    "sourceSectionId": "0415-source-section-l5146-l5153-5af3b903ba",
+    "assets": []
+  }
+]
