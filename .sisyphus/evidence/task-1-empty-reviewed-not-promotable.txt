@@ -1,0 +1,8 @@
+Empty reviewed manifest classification proof
+
+rj-chemistry-g12-selective-3-organic-2019: entries=0, classification=review-scaffold-only, promotableEntries=0
+rj-chemistry-grade8-54-2024-full: entries=0, classification=review-scaffold-only, promotableEntries=0
+rj-chemistry-grade9-2024-vol2: entries=0, classification=review-scaffold-only, promotableEntries=0
+
+emptyReviewedCount=3
+promotableEmptyReviewedCount=0

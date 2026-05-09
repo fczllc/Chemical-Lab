@@ -1,0 +1,34 @@
+# Task 8 runtime discoverability evidence - 2026-05-09T09:16:45.411Z
+Runtime bootstrap path checked: index.html -> src/main.js; src/main.js imports src/data/index.js and initializes app modules.
+
+## rj-chemistry-g12-selective-3-organic-2019
+src/data/index.js::quizData: count=182 sample=textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0002-source-section-l6-l38-d782b15af6-promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6
+src/data/index.js::learningPath.stages: count=560 sample=textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-learning-path-learning-path-0001-source-section-l1-l5-bd27b23b45
+src/data/index.js::achievementsData: count=560 sample=textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45
+src/data/index.js::reactions: count=62 sample=textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0015-1-1-l155-l173-c71806e98a-promote-knowledge-topic-0015-1-1-l155-l173-c71806e98a-experiment-experiment-0015-1-1-l155-l173-c71806e98a
+src/data/contentMeta.js::TEXTBOOK_CHALLENGE_METADATA: count=255 sample=textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-game-challenge-game-0001-source-section-l1-l5-bd27b23b45
+DISCOVERABLE: total runtime records reachable=1619
+
+## rj-chemistry-grade8-54-2024-full
+src/data/index.js::quizData: count=314 sample=textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0005-source-section-l10-l110-44968e51dd-promote-knowledge-topic-0005-source-section-l10-l110-44968e51dd-quiz-quiz-0005-source-section-l10-l110-44968e51dd
+src/data/index.js::learningPath.stages: count=694 sample=textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0005-source-section-l10-l110-44968e51dd-promote-knowledge-topic-0005-source-section-l10-l110-44968e51dd-learning-path-learning-path-0005-source-section-l10-l110-44968e51dd
+src/data/index.js::achievementsData: count=694 sample=textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0005-source-section-l10-l110-44968e51dd-promote-knowledge-topic-0005-source-section-l10-l110-44968e51dd-achievement-achievement-0005-source-section-l10-l110-44968e51dd
+src/data/index.js::reactions: count=112 sample=textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0012-1-1-l148-l188-5b603a8455-promote-knowledge-topic-0012-1-1-l148-l188-5b603a8455-experiment-experiment-0012-1-1-l148-l188-5b603a8455
+src/data/contentMeta.js::TEXTBOOK_CHALLENGE_METADATA: count=360 sample=textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0005-source-section-l10-l110-44968e51dd-promote-knowledge-topic-0005-source-section-l10-l110-44968e51dd-game-challenge-game-0005-source-section-l10-l110-44968e51dd
+DISCOVERABLE: total runtime records reachable=2174
+
+## rj-chemistry-grade9-2024-vol1
+src/data/index.js::quizData: count=319 sample=quiz-carbon-allotropes-comparison-1
+src/data/index.js::learningPath.stages: count=683 sample=relation-carbon-allotropes-comparison
+src/data/index.js::achievementsData: count=683 sample=achievement-carbon-allotrope-comparison
+src/data/index.js::reactions: count=110 sample=textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0006-1-1-l27-l50-e9eba2d49e-promote-knowledge-topic-0006-1-1-l27-l50-e9eba2d49e-experiment-experiment-0006-1-1-l27-l50-e9eba2d49e
+src/data/contentMeta.js::TEXTBOOK_CHALLENGE_METADATA: count=357 sample=textbook-rj-chemistry-grade9-2024-vol1-g9-carbon-allotropes-comparison-promote-g9-carbon-allotropes-comparison-game
+DISCOVERABLE: total runtime records reachable=2152
+
+## rj-chemistry-grade9-2024-vol2
+src/data/index.js::quizData: count=218 sample=textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed
+src/data/index.js::learningPath.stages: count=444 sample=textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-learning-path-learning-path-0003-source-section-l7-l23-f3f92114ed
+src/data/index.js::achievementsData: count=444 sample=textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-achievement-achievement-0003-source-section-l7-l23-f3f92114ed
+src/data/index.js::reactions: count=84 sample=textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0009-8-1-l80-l98-341571ae87-promote-knowledge-topic-0009-8-1-l80-l98-341571ae87-experiment-experiment-0009-8-1-l80-l98-341571ae87
+src/data/contentMeta.js::TEXTBOOK_CHALLENGE_METADATA: count=300 sample=textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-game-challenge-game-0007-source-section-l66-l75-002391f54e
+DISCOVERABLE: total runtime records reachable=1490

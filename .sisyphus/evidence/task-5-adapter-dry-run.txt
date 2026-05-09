@@ -1,0 +1,35 @@
+Command: npm run textbook:promote -- --all-reviewed --dry-run
+ExitCode: 0
+
+Dry-run output:
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --all-reviewed --dry-run
+
+Textbook promotion: dry-run
+selected reviewed entries: 3498
+planned promoted records: 3498
+skipped reviewed entries: 0
+planned write: src/data/achievementsData.json records=1189 existing=12 preserved=12 textbookBefore=0 textbookAfter=1189 changed=true
+planned write: src/data/contentMeta.js records=424 existing=0 preserved=0 textbookBefore=0 textbookAfter=424 changed=true
+planned write: src/data/learningPath.json records=1189 existing=6 preserved=6 textbookBefore=0 textbookAfter=1189 changed=true
+planned write: src/data/quizData.json records=512 existing=26 preserved=26 textbookBefore=0 textbookAfter=512 changed=true
+planned write: src/data/reactions.json records=184 existing=5 preserved=5 textbookBefore=0 textbookAfter=184 changed=true
+destination src/data/achievementsData.json: 1189 reviewed records
+destination src/data/contentMeta.js: 424 reviewed records
+destination src/data/learningPath.json: 1189 reviewed records
+destination src/data/quizData.json: 512 reviewed records
+destination src/data/reactions.json: 184 reviewed records
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/curriculumTopic count=280 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/labCandidate count=79 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/storyCandidate count=58 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/curriculumTopic count=347 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/labCandidate count=178 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/curriculumTopic count=340 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/labCandidate count=172 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/curriculumTopic count=222 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/labCandidate count=122 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/storyCandidate count=87 reason=not-promotable: unsupported target
+dry-run: no runtime or reviewed manifest files written

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "volumeId": "rj-chemistry-grade8-54-2024-full",
+  "generatedFrom": "src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json",
+  "rowKey": "curriculumTagId",
+  "columns": [
+    "sourceEvidence",
+    "assets",
+    "quiz",
+    "learningPath",
+    "labOrReaction",
+    "experimentBacklog",
+    "story",
+    "achievement",
+    "gameChallenge",
+    "runtimeStatus",
+    "reviewStatus",
+    "notes"
+  ],
+  "statusValues": [
+    "required",
+    "optional",
+    "notApplicable",
+    "covered",
+    "deferred",
+    "missing"
+  ],
+  "rows": []
+}

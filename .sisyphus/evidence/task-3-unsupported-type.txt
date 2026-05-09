@@ -1,0 +1,3 @@
+candidateType: storyCandidate
+classification: not-promotable: unsupported target
+targetRuntimeFile: none

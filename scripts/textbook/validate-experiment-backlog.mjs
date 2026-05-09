@@ -14,6 +14,14 @@ const knownTextbookBatches = new Map([
   [
     'rj-chemistry-grade9-2024-vol2',
     buildTextbookPaths('rj-chemistry-grade9-2024-vol2')
+  ],
+  [
+    'rj-chemistry-g12-selective-3-organic-2019',
+    buildTextbookPaths('rj-chemistry-g12-selective-3-organic-2019')
+  ],
+  [
+    'rj-chemistry-grade8-54-2024-full',
+    buildTextbookPaths('rj-chemistry-grade8-54-2024-full')
   ]
 ]);
 
@@ -545,3 +553,4 @@ function finishValidation(result) {
 function relativeProjectPath(filePath) {
   return path.relative(projectRoot, filePath).replaceAll(path.sep, '/');
 }
+

@@ -38,6 +38,18 @@ const knownTextbookBatches = new Map([
     {
       coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade9-2024-vol2', 'coverage-matrix.json')
     }
+  ],
+  [
+    'rj-chemistry-g12-selective-3-organic-2019',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-g12-selective-3-organic-2019', 'coverage-matrix.json')
+    }
+  ],
+  [
+    'rj-chemistry-grade8-54-2024-full',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade8-54-2024-full', 'coverage-matrix.json')
+    }
   ]
 ]);
 
@@ -335,3 +347,4 @@ function normalizeArray(value) {
 function relativeProjectPath(filePath) {
   return path.relative(projectRoot, filePath).replaceAll(path.sep, '/');
 }
+

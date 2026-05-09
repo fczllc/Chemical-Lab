@@ -1,0 +1,31 @@
+Reviewed candidate generation: write
+volumes: 4
+generated candidate entries: 3494
+reviewed entries after write: 3498
+blocked artifacts: 2075
+- rj-chemistry-g12-selective-3-organic-2019: existing=0 generated=767 reviewedAfterWrite=767 blocked=417
+- rj-chemistry-grade8-54-2024-full: existing=0 generated=1027 reviewedAfterWrite=1027 blocked=620
+- rj-chemistry-grade9-2024-vol1: existing=4 generated=1005 reviewedAfterWrite=1009 blocked=607
+- rj-chemistry-grade9-2024-vol2: existing=0 generated=695 reviewedAfterWrite=695 blocked=431
+Reviewed candidate generation: dry-run
+volumes: 4
+generated candidate entries: 0
+reviewed entries after write: 3498
+blocked artifacts: 2075
+- rj-chemistry-g12-selective-3-organic-2019: existing=767 generated=0 reviewedAfterWrite=767 blocked=417
+- rj-chemistry-grade8-54-2024-full: existing=1027 generated=0 reviewedAfterWrite=1027 blocked=620
+- rj-chemistry-grade9-2024-vol1: existing=1009 generated=0 reviewedAfterWrite=1009 blocked=607
+- rj-chemistry-grade9-2024-vol2: existing=695 generated=0 reviewedAfterWrite=695 blocked=431
+Promotion manifest valid: all-reviewed
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json entries=1009
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json entries=695
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json entries=767
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json entries=1027
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full

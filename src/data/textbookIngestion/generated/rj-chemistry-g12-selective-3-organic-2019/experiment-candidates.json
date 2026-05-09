@@ -1,0 +1,1135 @@
+[
+  {
+    "candidateId": "experiment-0015-1-1-l155-l173-c71806e98a",
+    "title": "【实验1-1】",
+    "summary": "【实验1-1】 向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。 乙醇与钠能发生反应放出氢气，原因在于乙醇分子中的氢氧键极性较强，能够发生断裂。同样条件下，乙醇与钠的反应没有水与钠的反应剧烈，这是由于乙醇分…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "【实验1-1】 向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验1-1】",
+    "sourceLineStart": 155,
+    "sourceLineEnd": 173,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:c71806e98ad19dea5fa5db07ef7745d21df8621b5732184cc41e24ffcc076cee",
+    "sourceSectionId": "0015-1-1-l155-l173-c71806e98a",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0034-source-section-l434-l454-8e85f65ea0",
+    "title": "【实验】",
+    "summary": "【实验】 (1) 观察粗苯甲酸样品的状态。 (2) 将 $1.0 \\mathrm{~g}$ 粗苯甲酸放入 $100 \\mathrm{~mL}$ 烧杯, 加入 $50 \\mathrm{~mL}$ 蒸馏水。加热, 搅拌, 使粗苯甲酸充分溶解。…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "加热, 搅拌, 使粗苯甲酸充分溶解。"
+    ],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "【实验】 (1) 观察粗苯甲酸样品的状态。",
+      "图1-9 重结晶法提纯苯甲酸 实验记录和数据处理： 项目 现象和数据 (1)对比提纯前后苯甲酸的状态 苯甲酸粗品 苯甲酸晶体 (2)对比过滤前后液体的状态 溶解苯甲酸粗品后的液体 趁热过滤后的滤液 (3)计算重结晶收率 苯甲酸粗品的质量/g 苯甲酸晶体的质量/g 重结晶收率=晶体质量/粗品质量×100%"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 434,
+    "sourceLineEnd": 454,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:8e85f65ea0d51a5572f9b022d696691c3c7b666e7289060ccd139f4048b984ef",
+    "sourceSectionId": "0034-source-section-l434-l454-8e85f65ea0",
+    "assets": [
+      {
+        "assetId": "0034-source-section-l434-l454-8e85f65ea0-asset-01",
+        "altText": "",
+        "rawReference": "![](images/396c31854fd475839cc69733cf761e249c3ff9e1934a8522433fce215231ba40.jpg)",
+        "assetPath": "images/396c31854fd475839cc69733cf761e249c3ff9e1934a8522433fce215231ba40.jpg",
+        "sourceLineNumber": 444,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/396c31854fd475839cc69733cf761e249c3ff9e1934a8522433fce215231ba40.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0037-source-section-l480-l513-6f069c501d",
+    "title": "二、确定实验式",
+    "summary": "二、确定实验式 元素分析 elemental analysis 图1-11 李比希 元素的定性、定量分析是用化学方法测定有机化合物的元素组成，以及各元素的质量分数。元素定量分析的原理一般是将一定量的有机化合物燃烧，转化为简单的无机物，并通…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "二、确定实验式",
+    "sourceLineStart": 480,
+    "sourceLineEnd": 513,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:6f069c501dccf3552c12afc7de99b276a346e2767abc59c5a3ea722ff51b56d9",
+    "sourceSectionId": "0037-source-section-l480-l513-6f069c501d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0073-source-section-l1327-l1341-82bd89e7d4",
+    "title": "【实验】",
+    "summary": "【实验】 如图2-6所示，在圆底烧瓶中放入几小块电石。打开分液漏斗的活塞，逐滴加入适量饱和氯化钠溶液，将产生的气体通入硫酸铜溶液后，再分别通入酸性高锰酸钾溶液和溴的四氯化碳溶液。最后换上尖嘴导管，先检验气体纯度，再点燃乙炔，观察现象。 图…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "导管",
+      "硫酸铜",
+      "高锰酸钾"
+    ],
+    "observations": [
+      "最后换上尖嘴导管，先检验气体纯度，再点燃乙炔，观察现象。",
+      "图2-6 乙炔的实验室制取及性质检验 记录： 实验内容 实验现象 (1)将饱和氯化钠溶液滴入盛有电石的烧瓶中 (2)将纯净的乙炔通入盛有酸性高锰酸钾溶液的试管中 (3)将纯净的乙炔通入盛有溴的四氯化碳溶液的试管中 (4)点燃纯净的乙炔"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 1327,
+    "sourceLineEnd": 1341,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:82bd89e7d4de38ff96467839428a36c68cbee0c72daad834e026aa739bfabc41",
+    "sourceSectionId": "0073-source-section-l1327-l1341-82bd89e7d4",
+    "assets": [
+      {
+        "assetId": "0073-source-section-l1327-l1341-82bd89e7d4-asset-01",
+        "altText": "",
+        "rawReference": "![](images/ae876aeba15556e8127817b812b0866f74762cade329cce43ce0ec049d376705.jpg)",
+        "assetPath": "images/ae876aeba15556e8127817b812b0866f74762cade329cce43ce0ec049d376705.jpg",
+        "sourceLineNumber": 1331,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/ae876aeba15556e8127817b812b0866f74762cade329cce43ce0ec049d376705.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0087-2-1-l1511-l1551-76242a446b",
+    "title": "【实验2-1】",
+    "summary": "【实验2-1】 向两支各盛有 $2 \\mathrm{~mL}$ 苯的试管中分别加入酸性高锰酸钾溶液和溴水, 用力振荡, 观察现象。 实验表明，苯不能被酸性高锰酸钾溶液氧化，也不与溴水反应。溴在苯中的溶解度比在水中的大，因此苯能将溴从水中萃…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "高锰酸钾"
+    ],
+    "observations": [
+      "【实验2-1】 向两支各盛有 $2 \\mathrm{~mL}$ 苯的试管中分别加入酸性高锰酸钾溶液和溴水, 用力振荡, 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验2-1】",
+    "sourceLineStart": 1511,
+    "sourceLineEnd": 1551,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:76242a446b70677e88e0c091681976438ccb98f3b261b137c59f9fa943e80b06",
+    "sourceSectionId": "0087-2-1-l1511-l1551-76242a446b",
+    "assets": [
+      {
+        "assetId": "0087-2-1-l1511-l1551-76242a446b-asset-01",
+        "altText": "",
+        "rawReference": "![](images/87671e9e40219128ed667d0ea993955aafcc9dd0d2ceaca8bb00fd3eb48938ed.jpg)",
+        "assetPath": "images/87671e9e40219128ed667d0ea993955aafcc9dd0d2ceaca8bb00fd3eb48938ed.jpg",
+        "sourceLineNumber": 1525,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/87671e9e40219128ed667d0ea993955aafcc9dd0d2ceaca8bb00fd3eb48938ed.jpg"
+      },
+      {
+        "assetId": "0087-2-1-l1511-l1551-76242a446b-asset-02",
+        "altText": "",
+        "rawReference": "![](images/b14c775717788c81a27df73725e419a75fcc0354c0b54df5ee551ea0141e0a72.jpg)",
+        "assetPath": "images/b14c775717788c81a27df73725e419a75fcc0354c0b54df5ee551ea0141e0a72.jpg",
+        "sourceLineNumber": 1534,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/b14c775717788c81a27df73725e419a75fcc0354c0b54df5ee551ea0141e0a72.jpg"
+      },
+      {
+        "assetId": "0087-2-1-l1511-l1551-76242a446b-asset-03",
+        "altText": "",
+        "rawReference": "![](images/d65d3709bf7987457cf7180f4d50566ae157c7baef4f9361bba51dc93b2b91a9.jpg)",
+        "assetPath": "images/d65d3709bf7987457cf7180f4d50566ae157c7baef4f9361bba51dc93b2b91a9.jpg",
+        "sourceLineNumber": 1541,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/d65d3709bf7987457cf7180f4d50566ae157c7baef4f9361bba51dc93b2b91a9.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0110-3-1-l2033-l2047-d111c8b7d7",
+    "title": "【实验3-1】",
+    "summary": "【实验3-1】 取一支试管, 滴入 $10 \\sim 15$ 滴溴乙烷, 再加入 $1 \\mathrm{~mL} 5 \\% \\mathrm{NaOH}$ 溶液, 振荡后加热, 静置。待溶液分层后, 用胶头滴管小心吸取少量上层水溶液, 移入…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验3-1】 取一支试管, 滴入 $10 \\sim 15$ 滴溴乙烷, 再加入 $1 \\mathrm{~mL} 5 \\% \\mathrm{NaOH}$ 溶液, 振荡后加热, 静置。"
+    ],
+    "materials": [
+      "试管",
+      "胶头滴管",
+      "水"
+    ],
+    "observations": [
+      "待溶液分层后, 用胶头滴管小心吸取少量上层水溶液, 移入另一支盛有 $1 \\mathrm{~mL}$ 稀硝酸的试管中, 然后加入2滴 $\\mathrm{AgNO}_{3}$ 溶液, 观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-1】",
+    "sourceLineStart": 2033,
+    "sourceLineEnd": 2047,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:d111c8b7d757c2ceddce52c254caf2083c337f5cbc8f2cf15a5e9a6094d12b39",
+    "sourceSectionId": "0110-3-1-l2033-l2047-d111c8b7d7",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0116-source-section-l2076-l2088-7f5b50b08d",
+    "title": "【讨论与实验】",
+    "summary": "【讨论与实验】 （1）用哪种分析手段可以检验出1-溴丁烷取代反应生成物中的丁醇？ (2) 如图 3-3 所示, 向圆底烧瓶中加入 $2.0 \\mathrm{~g} \\mathrm{NaOH}$ 和 $15 \\mathrm{~mL}$ 无水…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "高锰酸钾"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【讨论与实验】",
+    "sourceLineStart": 2076,
+    "sourceLineEnd": 2088,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:7f5b50b08d0cdcfc071e7cd4695c0748fbdcd0e325e3226f05273403d5e27e30",
+    "sourceSectionId": "0116-source-section-l2076-l2088-7f5b50b08d",
+    "assets": [
+      {
+        "assetId": "0116-source-section-l2076-l2088-7f5b50b08d-asset-01",
+        "altText": "",
+        "rawReference": "![](images/a947a07bcd9a00cb65ebaadc1365381b8698003c8285f2ebed8f49547a926c47.jpg)",
+        "assetPath": "images/a947a07bcd9a00cb65ebaadc1365381b8698003c8285f2ebed8f49547a926c47.jpg",
+        "sourceLineNumber": 2082,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/a947a07bcd9a00cb65ebaadc1365381b8698003c8285f2ebed8f49547a926c47.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0127-3-2-l2318-l2355-58ddb1e7b7",
+    "title": "【实验3-2】",
+    "summary": "【实验3-2】 如图3-9所示，在圆底烧瓶中加入乙醇和浓硫酸（体积比约为 $1: 3$ ）的混合液 $20 \\mathrm{~mL}$ ，放入几片碎瓷片，以避免混合液在受热时暴沸。加热混合液，使液体温度迅速升到 $170^{\\circ} …",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "加热混合液，使液体温度迅速升到 $170^{\\circ} \\mathrm{C}$ ，将生成的气体先通入氢氧化钠溶液除去杂质， 图3-7 乙醇的分子结构模型 图3-8 乙醇的核磁共振氢谱 图3-9 乙醇的消去反应 醚 ether 乙醇在浓硫酸的作用下，加热到 $170^{\\circ} \\mathrm{C}$ 时生成乙烯。"
+    ],
+    "materials": [
+      "水",
+      "氢氧化钠"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-2】",
+    "sourceLineStart": 2318,
+    "sourceLineEnd": 2355,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:58ddb1e7b7b1c8614cc6217bbb61f39e42343b28a08684622794d20da7643953",
+    "sourceSectionId": "0127-3-2-l2318-l2355-58ddb1e7b7",
+    "assets": [
+      {
+        "assetId": "0127-3-2-l2318-l2355-58ddb1e7b7-asset-01",
+        "altText": "",
+        "rawReference": "![](images/f44bfa5435c466daff55f4935738f17c631fcf7ce9dbfe9d739d57f1bb80048c.jpg)",
+        "assetPath": "images/f44bfa5435c466daff55f4935738f17c631fcf7ce9dbfe9d739d57f1bb80048c.jpg",
+        "sourceLineNumber": 2322,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/f44bfa5435c466daff55f4935738f17c631fcf7ce9dbfe9d739d57f1bb80048c.jpg"
+      },
+      {
+        "assetId": "0127-3-2-l2318-l2355-58ddb1e7b7-asset-02",
+        "altText": "",
+        "rawReference": "![](images/6c5aaa915c94c81322a307762525dfa558e5bc57947a0d88cd485e78b695ca1e.jpg)",
+        "assetPath": "images/6c5aaa915c94c81322a307762525dfa558e5bc57947a0d88cd485e78b695ca1e.jpg",
+        "sourceLineNumber": 2329,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/6c5aaa915c94c81322a307762525dfa558e5bc57947a0d88cd485e78b695ca1e.jpg"
+      },
+      {
+        "assetId": "0127-3-2-l2318-l2355-58ddb1e7b7-asset-03",
+        "altText": "",
+        "rawReference": "![](images/4194c25ce5ff0f0bc918e668df5dd96dc2a77f2ee363e045f8a8ea0b393ac030.jpg)",
+        "assetPath": "images/4194c25ce5ff0f0bc918e668df5dd96dc2a77f2ee363e045f8a8ea0b393ac030.jpg",
+        "sourceLineNumber": 2336,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/4194c25ce5ff0f0bc918e668df5dd96dc2a77f2ee363e045f8a8ea0b393ac030.jpg"
+      },
+      {
+        "assetId": "0127-3-2-l2318-l2355-58ddb1e7b7-asset-04",
+        "altText": "",
+        "rawReference": "![](images/275fe10259512f0f9ee314e11dd4ffe9ec8da0cefe95ca35cf2061d6791e73b6.jpg)",
+        "assetPath": "images/275fe10259512f0f9ee314e11dd4ffe9ec8da0cefe95ca35cf2061d6791e73b6.jpg",
+        "sourceLineNumber": 2347,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/275fe10259512f0f9ee314e11dd4ffe9ec8da0cefe95ca35cf2061d6791e73b6.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0130-3-3-l2383-l2396-1f63cc03b4",
+    "title": "【实验3-3】",
+    "summary": "【实验3-3】 如图3-10所示，在试管中加入酸性重铬酸钾溶液，然后滴加乙醇，充分振荡，观察实验现象。 在上述实验中所用到的酸性重铬酸钾 $\\left(\\mathrm{K}_{2} \\mathrm{Cr}_{2} \\mathrm{O}_{…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管"
+    ],
+    "observations": [
+      "【实验3-3】 如图3-10所示，在试管中加入酸性重铬酸钾溶液，然后滴加乙醇，充分振荡，观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-3】",
+    "sourceLineStart": 2383,
+    "sourceLineEnd": 2396,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:1f63cc03b452e73dcae23e08622566f3087473fe85b3aa634ca387d4b58a12d6",
+    "sourceSectionId": "0130-3-3-l2383-l2396-1f63cc03b4",
+    "assets": [
+      {
+        "assetId": "0130-3-3-l2383-l2396-1f63cc03b4-asset-01",
+        "altText": "",
+        "rawReference": "![](images/d85dab6d6822ddd9599e49ea79d836ce22c081127ea61d047454298f957c0b15.jpg)",
+        "assetPath": "images/d85dab6d6822ddd9599e49ea79d836ce22c081127ea61d047454298f957c0b15.jpg",
+        "sourceLineNumber": 2389,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/d85dab6d6822ddd9599e49ea79d836ce22c081127ea61d047454298f957c0b15.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0135-3-4-l2430-l2461-1ab5276a0b",
+    "title": "【实验3-4】",
+    "summary": "【实验3-4】 实验内容 实验现象 (1)向盛有0.3g苯酚晶体的试管 中加入2mL蒸馏水，振荡试管 (2)向试管中逐滴加入5%NaOH 溶液并振荡试管 (3)再向试管中加入稀盐酸 酚、苯酚 phenol 图3-12 苯酚的酸性 由于苯酚…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验3-4】 实验内容 实验现象 (1)向盛有0.3g苯酚晶体的试管 中加入2mL蒸馏水，振荡试管 (2)向试管中逐滴加入5%NaOH 溶液并振荡试管 (3)再向试管中加入稀盐酸 酚、苯酚 phenol 图3-12 苯酚的酸性 由于苯酚中的羟基和苯环直接相连，苯环与羟基之间的相互作用使酚羟基在性质上与醇羟基有显著差异。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-4】",
+    "sourceLineStart": 2430,
+    "sourceLineEnd": 2461,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:1ab5276a0b3a6fb4a6c54f235f5cb0ade66de9b51529988dba138a94d2a76b06",
+    "sourceSectionId": "0135-3-4-l2430-l2461-1ab5276a0b",
+    "assets": [
+      {
+        "assetId": "0135-3-4-l2430-l2461-1ab5276a0b-asset-01",
+        "altText": "",
+        "rawReference": "![](images/5e5d825b8ad009bb61732ef87321d8c721264b739d2526548e744303ce2e7a89.jpg)",
+        "assetPath": "images/5e5d825b8ad009bb61732ef87321d8c721264b739d2526548e744303ce2e7a89.jpg",
+        "sourceLineNumber": 2438,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/5e5d825b8ad009bb61732ef87321d8c721264b739d2526548e744303ce2e7a89.jpg"
+      },
+      {
+        "assetId": "0135-3-4-l2430-l2461-1ab5276a0b-asset-02",
+        "altText": "",
+        "rawReference": "![](images/1188dfe4aef87e8e4a2ca2f4b9d49ba40babe30bf308f9dfa88cda96caa64334.jpg)",
+        "assetPath": "images/1188dfe4aef87e8e4a2ca2f4b9d49ba40babe30bf308f9dfa88cda96caa64334.jpg",
+        "sourceLineNumber": 2447,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/1188dfe4aef87e8e4a2ca2f4b9d49ba40babe30bf308f9dfa88cda96caa64334.jpg"
+      },
+      {
+        "assetId": "0135-3-4-l2430-l2461-1ab5276a0b-asset-03",
+        "altText": "",
+        "rawReference": "![](images/5fa92f86391ed74a4ddbed94f801a50183ce421875f270aa8ee23bd47f598e19.jpg)",
+        "assetPath": "images/5fa92f86391ed74a4ddbed94f801a50183ce421875f270aa8ee23bd47f598e19.jpg",
+        "sourceLineNumber": 2452,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/5fa92f86391ed74a4ddbed94f801a50183ce421875f270aa8ee23bd47f598e19.jpg"
+      },
+      {
+        "assetId": "0135-3-4-l2430-l2461-1ab5276a0b-asset-04",
+        "altText": "",
+        "rawReference": "![](images/c2f772ea305702d384ed62258e570e198e792559e803b4b952187732b08e91cd.jpg)",
+        "assetPath": "images/c2f772ea305702d384ed62258e570e198e792559e803b4b952187732b08e91cd.jpg",
+        "sourceLineNumber": 2457,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/c2f772ea305702d384ed62258e570e198e792559e803b4b952187732b08e91cd.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0137-3-5-l2467-l2484-935762e073",
+    "title": "【实验3-5】",
+    "summary": "【实验3-5】 向试管中加入 $0.1 \\mathrm{~g}$ 苯酚和 $3 \\mathrm{~mL}$ 水, 振荡, 得到苯酚溶液。再向其中逐滴加入饱和溴水, 边加边振荡, 观察实验现象。 在苯酚分子中，羟基和苯环相互影响，使苯环在羟…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "再向其中逐滴加入饱和溴水, 边加边振荡, 观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-5】",
+    "sourceLineStart": 2467,
+    "sourceLineEnd": 2484,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:935762e073434ad536b4cc71ad439b4fd6d3efd7ef747f71362c2db1cc71fb3f",
+    "sourceSectionId": "0137-3-5-l2467-l2484-935762e073",
+    "assets": [
+      {
+        "assetId": "0137-3-5-l2467-l2484-935762e073-asset-01",
+        "altText": "",
+        "rawReference": "![](images/3782a5f81d6c7bef5d88c5bb9924ba79dffdcac32df3702e468e99b90b895cb4.jpg)",
+        "assetPath": "images/3782a5f81d6c7bef5d88c5bb9924ba79dffdcac32df3702e468e99b90b895cb4.jpg",
+        "sourceLineNumber": 2473,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/3782a5f81d6c7bef5d88c5bb9924ba79dffdcac32df3702e468e99b90b895cb4.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0140-3-6-l2512-l2528-4cba3c125e",
+    "title": "【实验3-6】",
+    "summary": "【实验3-6】 向盛有少量苯酚稀溶液的试管中，滴入几滴 $\\mathrm{FeCl}_3$ 溶液，振荡，观察实验现象。 苯酚与 $\\mathrm{FeCl}_3$ 溶液作用显紫色，利用这一反应也可以检验苯酚的存在。酚类物质一般都可以与 $…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "含酚类物质的废水对生物具有毒害作用，会对水体造成严重污染。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验3-6】 向盛有少量苯酚稀溶液的试管中，滴入几滴 $\\mathrm{FeCl}_3$ 溶液，振荡，观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-6】",
+    "sourceLineStart": 2512,
+    "sourceLineEnd": 2528,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:4cba3c125e65a2006553a2929114966ad1a795af4ad7d29df53cdb6ebf281581",
+    "sourceSectionId": "0140-3-6-l2512-l2528-4cba3c125e",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0152-3-7-l2681-l2694-9e8d721754",
+    "title": "【实验3-7】",
+    "summary": "【实验3-7】 在洁净的试管中加入 $1 \\mathrm{~mL} 2 \\% \\mathrm{AgNO}_{3}$ 溶液, 然后边振荡试管边逐滴滴入 $2 \\%$ 氨水, 使最初产生的沉淀溶解, 制得银氨溶液。再滴入 3 滴乙醛, 振荡后…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-7】",
+    "sourceLineStart": 2681,
+    "sourceLineEnd": 2694,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:9e8d72175478dd6be69503866befc4e67092096902f025c4364dca1ad794158a",
+    "sourceSectionId": "0152-3-7-l2681-l2694-9e8d721754",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0153-3-8-l2695-l2726-22098ef546",
+    "title": "【实验3-8】",
+    "summary": "【实验3-8】 在试管里加入 $2 \\mathrm{~mL} 10 \\% \\mathrm{NaOH}$ 溶液, 加入 5 滴 $5 \\%$ $\\mathrm{CuSO}_{4}$ 溶液, 得到新制的 $\\mathrm{Cu(OH)}_{2…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验3-8】 在试管里加入 $2 \\mathrm{~mL} 10 \\% \\mathrm{NaOH}$ 溶液, 加入 5 滴 $5 \\%$ $\\mathrm{CuSO}_{4}$ 溶液, 得到新制的 $\\mathrm{Cu(OH)}_{2}$ , 振荡后加入 $0.5 \\mathrm{~mL}$ 乙醛溶液, 加热。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验3-8】",
+    "sourceLineStart": 2695,
+    "sourceLineEnd": 2726,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:22098ef546fb29f5592a26e38b4c2e046a728cedae7c61aabe54981696070251",
+    "sourceSectionId": "0153-3-8-l2695-l2726-22098ef546",
+    "assets": [
+      {
+        "assetId": "0153-3-8-l2695-l2726-22098ef546-asset-01",
+        "altText": "",
+        "rawReference": "![](images/683bc303b02f483abe63ce06188af7c81a7a32d0c047b5a8c1dd84338c7f01f5.jpg)",
+        "assetPath": "images/683bc303b02f483abe63ce06188af7c81a7a32d0c047b5a8c1dd84338c7f01f5.jpg",
+        "sourceLineNumber": 2701,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/683bc303b02f483abe63ce06188af7c81a7a32d0c047b5a8c1dd84338c7f01f5.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0168-source-section-l2972-l2998-1103c474f6",
+    "title": "【设计与实验】",
+    "summary": "【设计与实验】 (1) 设计实验证明羧酸具有酸性（提供的羧酸有甲酸、苯甲酸和乙二酸）。 实验内容 实验现象 结论 (2) 利用下图所示仪器和药品, 设计一个简单的一次性完成的实验装置, 比较乙酸、碳酸和苯酚的酸性强弱。 注：D、E、F、G…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [
+      "实验内容 实验现象 结论 (2) 利用下图所示仪器和药品, 设计一个简单的一次性完成的实验装置, 比较乙酸、碳酸和苯酚的酸性强弱。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【设计与实验】",
+    "sourceLineStart": 2972,
+    "sourceLineEnd": 2998,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:1103c474f6cc58123fbddd5004de6e48ba0fbc8156e29c667c86aff03e864f50",
+    "sourceSectionId": "0168-source-section-l2972-l2998-1103c474f6",
+    "assets": [
+      {
+        "assetId": "0168-source-section-l2972-l2998-1103c474f6-asset-01",
+        "altText": "",
+        "rawReference": "![](images/e282eca99dff0d1d87431960e25aa97ee58c069755b0657d7416e4b58657541c.jpg)",
+        "assetPath": "images/e282eca99dff0d1d87431960e25aa97ee58c069755b0657d7416e4b58657541c.jpg",
+        "sourceLineNumber": 2980,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/e282eca99dff0d1d87431960e25aa97ee58c069755b0657d7416e4b58657541c.jpg"
+      },
+      {
+        "assetId": "0168-source-section-l2972-l2998-1103c474f6-asset-02",
+        "altText": "",
+        "rawReference": "![](images/0d754aa276aea31e74ebe17c47fd82474178a39045fe82593a0d97a1817949de.jpg)",
+        "assetPath": "images/0d754aa276aea31e74ebe17c47fd82474178a39045fe82593a0d97a1817949de.jpg",
+        "sourceLineNumber": 2983,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/0d754aa276aea31e74ebe17c47fd82474178a39045fe82593a0d97a1817949de.jpg"
+      },
+      {
+        "assetId": "0168-source-section-l2972-l2998-1103c474f6-asset-03",
+        "altText": "",
+        "rawReference": "![](images/ac80258301eb5bfc00baab547b395ce795f47bd8e2dd59a134fbb0bcad0b1497.jpg)",
+        "assetPath": "images/ac80258301eb5bfc00baab547b395ce795f47bd8e2dd59a134fbb0bcad0b1497.jpg",
+        "sourceLineNumber": 2986,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/ac80258301eb5bfc00baab547b395ce795f47bd8e2dd59a134fbb0bcad0b1497.jpg"
+      },
+      {
+        "assetId": "0168-source-section-l2972-l2998-1103c474f6-asset-04",
+        "altText": "",
+        "rawReference": "![](images/12fed8c4f214217dd41f988331c504adfa1577beb2989dff5dde24396a54fa80.jpg)",
+        "assetPath": "images/12fed8c4f214217dd41f988331c504adfa1577beb2989dff5dde24396a54fa80.jpg",
+        "sourceLineNumber": 2989,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/12fed8c4f214217dd41f988331c504adfa1577beb2989dff5dde24396a54fa80.jpg"
+      },
+      {
+        "assetId": "0168-source-section-l2972-l2998-1103c474f6-asset-05",
+        "altText": "",
+        "rawReference": "![](images/c0ed5ad3c0a7d912ebd6996b06eed5fce3270ffed30c7e82fba4f80700ba93fc.jpg)",
+        "assetPath": "images/c0ed5ad3c0a7d912ebd6996b06eed5fce3270ffed30c7e82fba4f80700ba93fc.jpg",
+        "sourceLineNumber": 2992,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/c0ed5ad3c0a7d912ebd6996b06eed5fce3270ffed30c7e82fba4f80700ba93fc.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0179-source-section-l3072-l3079-5cb73674da",
+    "title": "【设计与实验】",
+    "summary": "【设计与实验】 请你设计实验，探究乙酸乙酯在中性、酸性和碱性溶液中，以及不同温度下的水解速率。（提示：可以通过酯层消失的时间差异来判断乙酸乙酯在不同条件下水解速率的差别。） 实验方案与步骤： 实验内容 实验现象 结论 (1)中性、酸性和碱…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [
+      "） 实验方案与步骤： 实验内容 实验现象 结论 (1)中性、酸性和碱性溶液中水解速率的比较 (2)不同温度下水解速率的比较"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【设计与实验】",
+    "sourceLineStart": 3072,
+    "sourceLineEnd": 3079,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:5cb73674da59a6b87a9b97649adfc8d07e5d0602b36784c65ced72a494f748ca",
+    "sourceSectionId": "0179-source-section-l3072-l3079-5cb73674da",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0217-source-section-l3782-l3787-144b8eed32",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1. 学习制备乙酸乙酯的方法。 2. 加深对酯化反应和酯的水解的认识。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 3782,
+    "sourceLineEnd": 3787,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:144b8eed3230ab71d4283e5de41af9280602c1a9656825a0ba1e0a23b3af5c12",
+    "sourceSectionId": "0217-source-section-l3782-l3787-144b8eed32",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0218-source-section-l3788-l3793-17f10affb9",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、试管夹、烧杯、量筒、胶头滴管、玻璃导管、乳胶管、橡胶塞、铁架台、酒精灯、火柴、秒表、碎瓷片。 乙醇、乙酸、浓硫酸、饱和 $\\mathrm{Na_2CO_3}$ 溶液、乙酸乙酯、蒸馏水、 $3\\mathrm{mol} /…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "烧杯",
+      "酒精灯",
+      "铁架台",
+      "导管",
+      "量筒",
+      "胶头滴管",
+      "火柴",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 3788,
+    "sourceLineEnd": 3793,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:17f10affb95977a71d0823c7702403c4de7acef807a45cc8c4190de3c342429e",
+    "sourceSectionId": "0218-source-section-l3788-l3793-17f10affb9",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0224-source-section-l3819-l3824-073e2dacf0",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1. 加深对有机化合物中常见官能团性质的认识。 2. 学习有机化合物中常见官能团的检验。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 3819,
+    "sourceLineEnd": 3824,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:073e2dacf0cbbd0ef43fa57e1c732189c18f09d811e2a5cc45c9c6271a7ace82",
+    "sourceSectionId": "0224-source-section-l3819-l3824-073e2dacf0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0225-source-section-l3825-l3830-a23a93e033",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、试管夹、胶头滴管、烧杯、研钵、酒精灯、三脚架、陶土网、火柴。 1-己烯、1-溴丁烷、无水乙醇、苯酚溶液、乙醛溶液、苯、1-丙醇、2-氯丙烷、丙醛、四氯化碳、阿司匹林片、饱和溴水、酸性 $\\mathrm{KMnO}_4$…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "烧杯",
+      "酒精灯",
+      "胶头滴管",
+      "火柴",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 3825,
+    "sourceLineEnd": 3830,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:a23a93e0338cfb3f8de6ca2be7fe1af59a50ebe12f5235ae70b04661ecf51404",
+    "sourceSectionId": "0225-source-section-l3825-l3830-a23a93e033",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0226-source-section-l3831-l3857-f8a90ca7b1",
+    "title": "【实验步骤】",
+    "summary": "【实验步骤】 1. 几种常见官能团的检验 有机化合物类别 官能团 实验内容 实验现象 解释及化学方程式 烯烃 C=C碳碳双键 (1)向盛有少量1-己烯的试管里滴加溴水,观察现象(2)向盛有少量1-己烯的试管里滴加酸性KMnO4溶液,观察现…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验步骤】 1. 几种常见官能团的检验 有机化合物类别 官能团 实验内容 实验现象 解释及化学方程式 烯烃 C=C碳碳双键 (1)向盛有少量1-己烯的试管里滴加溴水,观察现象(2)向盛有少量1-己烯的试管里滴加酸性KMnO4溶液,观察现象 卤代烃 C-X碳卤键 向试管里加入几滴1-溴丁烷,再加入2mL5%NaOH溶液,振荡后加热。",
+      "反应一段时间后停止加热,静置。",
+      "然后加入0.5mL乙醛溶液,加热,观察现象 2. 请用实验方法区分下列两组物质： (1) 乙醇、1-己烯、苯和四氯化碳； (2) 1-丙醇、2-氯丙烷、丙醛和苯酚溶液。",
+      "(3)向另一支试管中滴入2滴稀硫酸, 加热后滴入几滴 $\\mathrm{NaHCO}_{3}$ 溶液①, 振荡。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验步骤】 1. 几种常见官能团的检验 有机化合物类别 官能团 实验内容 实验现象 解释及化学方程式 烯烃 C=C碳碳双键 (1)向盛有少量1-己烯的试管里滴加溴水,观察现象(2)向盛有少量1-己烯的试管里滴加酸性KMnO4溶液,观察现象 卤代烃 C-X碳卤键 向试管里加入几滴1-溴丁烷,再加入2mL5%NaOH溶液,振荡后加热。",
+      "小心地取数滴水层液体置于另一支试管中,加入稀硝酸酸化,加入几滴2%AgNO3溶液,观察现象 酚 -OH羟基 (1)向盛有少量苯酚稀溶液的试管里滴加饱和溴水,观察现象(2)向盛有少量苯酚稀溶液的试管里滴加FeCl3溶液,观察现象 醛 O||—C—H醛基 在试管里加入2mL10%NaOH溶液,滴入几滴5%CuSO4溶液,振荡。",
+      "然后加入0.5mL乙醛溶液,加热,观察现象 2. 请用实验方法区分下列两组物质： (1) 乙醇、1-己烯、苯和四氯化碳； (2) 1-丙醇、2-氯丙烷、丙醛和苯酚溶液。",
+      "(2)向其中一支试管中滴入2滴石蕊溶液，观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 3831,
+    "sourceLineEnd": 3857,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:f8a90ca7b1c8fb491cfba8aa1e3b94aefdfd0df6861b32c83e7c56ff62f5e3cf",
+    "sourceSectionId": "0226-source-section-l3831-l3857-f8a90ca7b1",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0233-4-1-l3908-l3926-df571e9e77",
+    "title": "【实验4-1】",
+    "summary": "【实验4-1】 (1) 在一支洁净的试管中配制约 $2 \\mathrm{~mL}$ 银氨溶液, 加入 $1 \\mathrm{~mL} 10 \\%$ 葡萄糖溶液, 振荡, 然后在水浴中加热。观察实验现象。 (2) 在另一支试管中加入 $2 …",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验4-1】 (1) 在一支洁净的试管中配制约 $2 \\mathrm{~mL}$ 银氨溶液, 加入 $1 \\mathrm{~mL} 10 \\%$ 葡萄糖溶液, 振荡, 然后在水浴中加热。",
+      "(2) 在另一支试管中加入 $2 \\mathrm{~mL} 10 \\% \\mathrm{NaOH}$ 溶液, 加入 5 滴 $5 \\% \\mathrm{CuSO}_{4}$ 溶液, 再加入 $2 \\mathrm{~mL} 10 \\%$ 葡萄糖溶液, 加热。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察实验现象。",
+      "(3) 将上述两个实验的现象与实验 3-7 和实验 3-8 的现象进行比较, 你能得出什么结论?",
+      "以上两个实验中，试管中分别出现了银镜和砖红色沉淀，与乙醛进行类似实验的现象相似。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验4-1】",
+    "sourceLineStart": 3908,
+    "sourceLineEnd": 3926,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:df571e9e7748216299f63c457977476f5eea78e2dc8fa6e7d19dca64b2f92686",
+    "sourceSectionId": "0233-4-1-l3908-l3926-df571e9e77",
+    "assets": [
+      {
+        "assetId": "0233-4-1-l3908-l3926-df571e9e77-asset-01",
+        "altText": "",
+        "rawReference": "![](images/b1e41d92a302e597b0baafd0be85d8109a1e95caa205cd400b8a63369e720f4e.jpg)",
+        "assetPath": "images/b1e41d92a302e597b0baafd0be85d8109a1e95caa205cd400b8a63369e720f4e.jpg",
+        "sourceLineNumber": 3924,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/b1e41d92a302e597b0baafd0be85d8109a1e95caa205cd400b8a63369e720f4e.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0247-source-section-l4060-l4065-9830ab1f63",
+    "title": "【实验与记录】",
+    "summary": "【实验与记录】 根据实验4-1中检验葡萄糖还原性的方法，自行设计实验方案进行探究。 实验内容 实验现象 结论",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [
+      "【实验与记录】 根据实验4-1中检验葡萄糖还原性的方法，自行设计实验方案进行探究。",
+      "实验内容 实验现象 结论"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验与记录】",
+    "sourceLineStart": 4060,
+    "sourceLineEnd": 4065,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:9830ab1f63c73136d5540e49dc00d5e7e5d612666d270036a23e46e7066a425c",
+    "sourceSectionId": "0247-source-section-l4060-l4065-9830ab1f63",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0254-4-2-l4150-l4167-fde2bd5e72",
+    "title": "【实验4-2】",
+    "summary": "【实验4-2】 在试管中放入少量脱脂棉, 加入几滴蒸馏水和几滴浓硫酸, 用玻璃棒将混合物搅拌成糊状。加入过量 $\\mathrm{NaOH}$ 溶液中和至碱性, 再滴入 3 滴 $5 \\% \\mathrm{CuSO}_{4}$ 溶液, 加热…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "加入过量 $\\mathrm{NaOH}$ 溶液中和至碱性, 再滴入 3 滴 $5 \\% \\mathrm{CuSO}_{4}$ 溶液, 加热, 观察并解释实验现象。"
+    ],
+    "materials": [
+      "试管",
+      "玻璃棒",
+      "水"
+    ],
+    "observations": [
+      "加入过量 $\\mathrm{NaOH}$ 溶液中和至碱性, 再滴入 3 滴 $5 \\% \\mathrm{CuSO}_{4}$ 溶液, 加热, 观察并解释实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验4-2】",
+    "sourceLineStart": 4150,
+    "sourceLineEnd": 4167,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:fde2bd5e7250118d34e2491d91ba787526ca5a4bb4ae54ac79aa090e7963d38c",
+    "sourceSectionId": "0254-4-2-l4150-l4167-fde2bd5e72",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0270-4-3-l4406-l4415-9aa84cc9a7",
+    "title": "【实验4-3】",
+    "summary": "【实验4-3】 在试管中加入 $2 \\mathrm{~mL}$ 饱和 $\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}$ 溶液, 向其中加入几滴鸡蛋清溶液, 振荡, 观察现象。再继续加入蒸…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验4-3】 在试管中加入 $2 \\mathrm{~mL}$ 饱和 $\\left(\\mathrm{NH}_{4}\\right)_{2} \\mathrm{SO}_{4}$ 溶液, 向其中加入几滴鸡蛋清溶液, 振荡, 观察现象。",
+      "再继续加入蒸馏水,振荡, 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验4-3】",
+    "sourceLineStart": 4406,
+    "sourceLineEnd": 4415,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:9aa84cc9a76d33b029c65f4dfe8e1b1acf8911ac56d2250794c4b4bdb641fa1f",
+    "sourceSectionId": "0270-4-3-l4406-l4415-9aa84cc9a7",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0273-4-4-l4431-l4443-5dd578ca9b",
+    "title": "【实验4-4】",
+    "summary": "【实验4-4】 在三支试管中各加入 $2 \\mathrm{~mL}$ 鸡蛋清溶液, 将一支试管加热, 向另两支试管中分别加入硝酸银溶液和乙醇, 观察现象。再向试管中加入蒸馏水, 观察产生的沉淀能否溶解。 以上实验中，变性后的蛋白质在水中不…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验4-4】 在三支试管中各加入 $2 \\mathrm{~mL}$ 鸡蛋清溶液, 将一支试管加热, 向另两支试管中分别加入硝酸银溶液和乙醇, 观察现象。",
+      "例如，食物加热后，其中的蛋白质发生了变性，有利于人体消化吸收；乙醇、苯酚和碘等作为消毒防腐药可以使微生物的蛋白质变性，导致其死亡，达到消毒的目的；紫外线可用于杀菌消毒。",
+      "有时也要注意防止蛋白质变性。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验4-4】 在三支试管中各加入 $2 \\mathrm{~mL}$ 鸡蛋清溶液, 将一支试管加热, 向另两支试管中分别加入硝酸银溶液和乙醇, 观察现象。",
+      "再向试管中加入蒸馏水, 观察产生的沉淀能否溶解。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验4-4】",
+    "sourceLineStart": 4431,
+    "sourceLineEnd": 4443,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:5dd578ca9b5557fd984cd19c076c8b17a3ce0b37a390764aa3e0cb3906884dea",
+    "sourceSectionId": "0273-4-4-l4431-l4443-5dd578ca9b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0276-4-5-l4455-l4471-366beb0b79",
+    "title": "【实验4-5】",
+    "summary": "【实验4-5】 向盛有 $2 \\mathrm{~mL}$ 鸡蛋清溶液的试管中加入 5 滴浓硝酸, 加热。观察实验现象。 上述实验中，向蛋白质溶液加入浓硝酸会有白色沉淀产生，加热后沉淀变黄色。含有苯环的蛋白质均能发生这个反应。皮肤、指甲不慎…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验4-5】 向盛有 $2 \\mathrm{~mL}$ 鸡蛋清溶液的试管中加入 5 滴浓硝酸, 加热。",
+      "上述实验中，向蛋白质溶液加入浓硝酸会有白色沉淀产生，加热后沉淀变黄色。"
+    ],
+    "materials": [
+      "试管"
+    ],
+    "observations": [
+      "观察实验现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验4-5】",
+    "sourceLineStart": 4455,
+    "sourceLineEnd": 4471,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:366beb0b79b81e3a1923fc3c53bd73d418fce3bdc8a4b05a7cf0bc7d05665f89",
+    "sourceSectionId": "0276-4-5-l4455-l4471-366beb0b79",
+    "assets": [
+      {
+        "assetId": "0276-4-5-l4455-l4471-366beb0b79-asset-01",
+        "altText": "",
+        "rawReference": "![](images/99c49a3795d488f3249a5630fc2b60daf69ac40a4ac40446b08cb5bd9d7761c5.jpg)",
+        "assetPath": "images/99c49a3795d488f3249a5630fc2b60daf69ac40a4ac40446b08cb5bd9d7761c5.jpg",
+        "sourceLineNumber": 4463,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/99c49a3795d488f3249a5630fc2b60daf69ac40a4ac40446b08cb5bd9d7761c5.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0305-source-section-l4899-l4904-dddf015ebc",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1. 加深对葡萄糖、蔗糖和淀粉等代表性糖类物质性质的认识。 2. 通过实验认识糖类还原性的检验方法。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 4899,
+    "sourceLineEnd": 4904,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:dddf015ebc34fa3c151d87bfebf429dc0fcec951b7fada9467f67bbfd3a06308",
+    "sourceSectionId": "0305-source-section-l4899-l4904-dddf015ebc",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0306-source-section-l4905-l4910-1606137f78",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、烧杯、胶头滴管、酒精灯、陶土网、三脚架、试管夹、火柴。 葡萄糖、蔗糖、淀粉、 $10\\%$ 葡萄糖溶液、 $10\\%$ 蔗糖溶液、 $10\\%$ NaOH溶液、淀粉溶液、 $2\\%$ $\\mathrm{AgNO}_3$…",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "烧杯",
+      "酒精灯",
+      "胶头滴管",
+      "火柴",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 4905,
+    "sourceLineEnd": 4910,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:1606137f78212604128565d2118e88d146885c66e028f5746fb9212439356882",
+    "sourceSectionId": "0306-source-section-l4905-l4910-1606137f78",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0331-5-1-l5196-l5238-fe6ab535af",
+    "title": "【实验5-1】",
+    "summary": "【实验5-1】 (1) 在大试管中加入 $2 \\mathrm{~g}$ 苯酚、 $3 \\mathrm{~mL}$ 质量分数为 $40 \\%$ 的甲醛溶液和 3 滴浓盐酸, 在水浴中加热。当试管中反应物接近沸腾时, 从水浴中取出试管, 并用…",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "【实验5-1】 (1) 在大试管中加入 $2 \\mathrm{~g}$ 苯酚、 $3 \\mathrm{~mL}$ 质量分数为 $40 \\%$ 的甲醛溶液和 3 滴浓盐酸, 在水浴中加热。",
+      "(2) 在另一大试管中加入 $2 \\mathrm{~g}$ 苯酚和 $3 \\mathrm{~mL}$ 质量分数为 $40 \\%$ 的甲醛溶液, 置于水浴中加热片刻, 稍加振荡后, 加入 $0.5 \\mathrm{~mL}$ 浓氨水, 在水浴中加热, 注意与 (1) 中酸催化的聚合反应进行比较。"
+    ],
+    "materials": [
+      "试管",
+      "玻璃棒",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "当试管中反应物接近沸腾时, 从水浴中取出试管, 并用玻璃棒搅拌, 观察产物的颜色和状态。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验5-1】",
+    "sourceLineStart": 5196,
+    "sourceLineEnd": 5238,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:fe6ab535af22e0d36a04fca9d5b1d7e9975b8fcf086c1e780e6b639b200dea24",
+    "sourceSectionId": "0331-5-1-l5196-l5238-fe6ab535af",
+    "assets": [
+      {
+        "assetId": "0331-5-1-l5196-l5238-fe6ab535af-asset-01",
+        "altText": "",
+        "rawReference": "![](images/b7b37e906f22de4016c169436c5532078ca3950fef05a76fed15cb9ad76daf59.jpg)",
+        "assetPath": "images/b7b37e906f22de4016c169436c5532078ca3950fef05a76fed15cb9ad76daf59.jpg",
+        "sourceLineNumber": 5204,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/b7b37e906f22de4016c169436c5532078ca3950fef05a76fed15cb9ad76daf59.jpg"
+      },
+      {
+        "assetId": "0331-5-1-l5196-l5238-fe6ab535af-asset-02",
+        "altText": "",
+        "rawReference": "![](images/ad4486d7f4bec8db6d7e2abc34ad83e62077a1187f63b51f58a8e0250aa1e9e2.jpg)",
+        "assetPath": "images/ad4486d7f4bec8db6d7e2abc34ad83e62077a1187f63b51f58a8e0250aa1e9e2.jpg",
+        "sourceLineNumber": 5207,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/ad4486d7f4bec8db6d7e2abc34ad83e62077a1187f63b51f58a8e0250aa1e9e2.jpg"
+      },
+      {
+        "assetId": "0331-5-1-l5196-l5238-fe6ab535af-asset-03",
+        "altText": "",
+        "rawReference": "![](images/5f77a67254468ff8201adb8680275605cac104ff97fd7492b77bf2f8e5922fd9.jpg)",
+        "assetPath": "images/5f77a67254468ff8201adb8680275605cac104ff97fd7492b77bf2f8e5922fd9.jpg",
+        "sourceLineNumber": 5212,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/5f77a67254468ff8201adb8680275605cac104ff97fd7492b77bf2f8e5922fd9.jpg"
+      },
+      {
+        "assetId": "0331-5-1-l5196-l5238-fe6ab535af-asset-04",
+        "altText": "",
+        "rawReference": "![](images/4ca66487221377fee17959f167da75b4180803854149e4ed7a9655b49106118b.jpg)",
+        "assetPath": "images/4ca66487221377fee17959f167da75b4180803854149e4ed7a9655b49106118b.jpg",
+        "sourceLineNumber": 5219,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/images/4ca66487221377fee17959f167da75b4180803854149e4ed7a9655b49106118b.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0347-source-section-l5460-l5473-e61bd0ed40",
+    "title": "【实验】",
+    "summary": "【实验】 (1) 选择吸水材料进行实验。可以取一条纸尿裤，用剪刀剪开，取出其中的高吸水性树脂颗粒（也可使用你选择的其他高吸水性材料）。一般吸水材料可以选择医用脱脂棉、餐巾纸或海绵等。 (2) 在已知质量的 $100 \\mathrm{~mL…",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "水"
+    ],
+    "observations": [
+      "(2) 在已知质量的 $100 \\mathrm{~mL}$ 烧杯中放入 $70 \\mathrm{~mL}$ 水, 再放入 $1.0 \\mathrm{~g}\\left(m_{1}\\right)$ 高吸水性树脂, 用玻璃棒充分搅匀后静置 $5 \\mathrm{~min}$ , 观察和记录现象。",
+      "现象和数据记录： 吸水材料 高吸水性树脂 一般吸水材料 吸水前质量m1/g 吸水现象 吸水后质量m2/g 吸水率(m2-m1)/m1 结论："
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 5460,
+    "sourceLineEnd": 5473,
+    "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+    "sectionHash": "sha256:e61bd0ed40355398bcc468faa8a02accac1072887a0b737dfa848399e68aeef4",
+    "sourceSectionId": "0347-source-section-l5460-l5473-e61bd0ed40",
+    "assets": []
+  }
+]

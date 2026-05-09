@@ -1,0 +1,14 @@
+Promotion manifest valid: all-reviewed
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json entries=4
+empty scaffold: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json entries=0
+empty scaffold: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json entries=0
+empty scaffold: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json entries=0
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full
+exit=0

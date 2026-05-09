@@ -1,0 +1,4 @@
+Textbook runtime integrity validation failed:
+- src/data/quizData.json quizData[26] quiz-broken-reference references missing relatedElement: 9999
+- src/data/learningPath.json learningPath.stages[6] stage-broken-reference references missing unlockedExperiment: exp-missing-fixture
+expected failure exit code: 1

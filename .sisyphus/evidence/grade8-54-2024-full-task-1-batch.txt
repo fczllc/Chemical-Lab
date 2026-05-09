@@ -1,0 +1,39 @@
+## positive batch contract
+Command: npm run validate:textbook-batch -- --textbook rj-chemistry-grade8-54-2024-full
+Exit status: 0
+Output:
+
+> element-explorer-kids@1.0.0 validate:textbook-batch
+> node scripts/textbook/validate-batch-contract.mjs --textbook rj-chemistry-grade8-54-2024-full
+
+batchContract: valid (rj-chemistry-grade8-54-2024-full)
+sourcePath: src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md
+status: sourceImported
+
+## negative missing volume
+Command: node scripts/textbook/validate-batch-contract.mjs --textbook missing-volume
+Exit status: 1
+Output:
+Unknown textbook batch: missing-volume
+
+
+## retry promotion-script registration verification
+Note: added rj-chemistry-grade8-54-2024-full to scripts/textbook/promote-topic.mjs knownTextbookBatches via buildTextbookPaths; no runtime adapter was added.
+
+### positive batch contract rerun
+Command: npm run validate:textbook-batch -- --textbook rj-chemistry-grade8-54-2024-full
+Exit status: 0
+Output:
+
+> element-explorer-kids@1.0.0 validate:textbook-batch
+> node scripts/textbook/validate-batch-contract.mjs --textbook rj-chemistry-grade8-54-2024-full
+
+batchContract: valid (rj-chemistry-grade8-54-2024-full)
+sourcePath: src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md
+status: sourceImported
+
+### negative missing-volume rerun
+Command: node scripts/textbook/validate-batch-contract.mjs --textbook missing-volume
+Exit status: 1
+Output:
+Unknown textbook batch: missing-volume

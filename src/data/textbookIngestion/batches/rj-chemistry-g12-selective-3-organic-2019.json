@@ -1,0 +1,19 @@
+{
+  "volumeId": "rj-chemistry-g12-selective-3-organic-2019",
+  "displayName": "2019版人教版高中化学选择性必修3 有机化学基础",
+  "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+  "assetRoot": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/",
+  "schemaVersion": 1,
+  "status": "sourceImported",
+  "activeBatchId": "rj-chemistry-g12-selective-3-organic-2019-source-imported-2026-05-09",
+  "generatedAt": "2026-05-09T00:00:00.000Z",
+  "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+  "allowedStatuses": [
+    "sourceImported",
+    "drafted",
+    "partiallyReviewed",
+    "reviewed",
+    "promoted"
+  ]
+}
+

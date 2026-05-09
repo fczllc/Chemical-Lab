@@ -19,27 +19,32 @@ async function main() {
     return;
   }
 
-  if (!options.textbook) {
-    throw new Error('--textbook is required');
-  }
-
-  const steps = [
+  const steps = options.allReviewed ? [
+    ['validate:textbook-promotion-manifest', ['--all-reviewed']],
+    ['validate:textbook-runtime-boundary', []],
+    ['validate:textbook-runtime-integrity', []]
+  ] : [
     ['textbook:extract', ['--textbook', options.textbook]],
     ['textbook:generate-drafts', ['--textbook', options.textbook]],
     ['validate:textbook-batch', ['--textbook', options.textbook]],
     ['validate:textbook-drafts', ['--textbook', options.textbook]],
     ['validate:textbook-experiments', ['--textbook', options.textbook]],
     ['validate:textbook-runtime-boundary', []],
+    ['validate:textbook-runtime-integrity', []],
     ['textbook:coverage', ['--textbook', options.textbook]],
     ['validate:textbook-coverage', ['--textbook', options.textbook]]
   ];
+
+  if (!options.allReviewed && !options.textbook) {
+    throw new Error('--textbook is required unless --all-reviewed is provided');
+  }
 
   for (const [scriptName, scriptArgs] of steps) {
     console.log(`Running ${scriptName}`);
     runWorkflowStep(scriptName, scriptArgs);
   }
 
-  console.log(`Textbook workflow valid: ${options.textbook}`);
+  console.log(`Textbook workflow valid: ${options.allReviewed ? 'all-reviewed' : options.textbook}`);
 }
 
 function parseCli(args) {
@@ -47,14 +52,16 @@ function parseCli(args) {
     args,
     options: {
       help: { type: 'boolean', short: 'h' },
-      textbook: { type: 'string' }
+      textbook: { type: 'string' },
+      'all-reviewed': { type: 'boolean' }
     },
     strict: true
   });
 
   return {
     help: values.help === true,
-    textbook: values.textbook ?? null
+    textbook: values.textbook ?? null,
+    allReviewed: values['all-reviewed'] === true
   };
 }
 
@@ -63,9 +70,11 @@ function printHelp() {
 
 Usage:
   node scripts/textbook/validate-workflow.mjs --textbook <volumeId>
+  node scripts/textbook/validate-workflow.mjs --all-reviewed
 
 Options:
   --textbook <volumeId>                Run the textbook ingestion workflow gate.
+  --all-reviewed                       Run non-mutating gates for all reviewed manifests and runtime targets.
   --help                               Show this help.`);
 }
 
@@ -92,7 +101,9 @@ function workflowScriptPath(scriptName) {
     'validate:textbook-batch': path.join(projectRoot, 'scripts', 'textbook', 'validate-batch-contract.mjs'),
     'validate:textbook-drafts': path.join(projectRoot, 'scripts', 'textbook', 'validate-draft-schema.mjs'),
     'validate:textbook-experiments': path.join(projectRoot, 'scripts', 'textbook', 'validate-experiment-backlog.mjs'),
+    'validate:textbook-promotion-manifest': path.join(projectRoot, 'scripts', 'textbook', 'validate-promotion-manifest.mjs'),
     'validate:textbook-runtime-boundary': path.join(projectRoot, 'scripts', 'textbook', 'validate-runtime-boundary.mjs'),
+    'validate:textbook-runtime-integrity': path.join(projectRoot, 'scripts', 'textbook', 'validate-runtime-integrity.mjs'),
     'textbook:coverage': path.join(projectRoot, 'scripts', 'textbook', 'generate-coverage.mjs'),
     'validate:textbook-coverage': path.join(projectRoot, 'scripts', 'textbook', 'validate-coverage.mjs')
   };

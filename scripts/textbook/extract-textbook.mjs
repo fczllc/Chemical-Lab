@@ -22,6 +22,18 @@ const knownTextbookBatches = new Map([
     }
   ],
   [
+    'rj-chemistry-g12-selective-3-organic-2019',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-g12-selective-3-organic-2019.json')
+    }
+  ],
+  [
+    'rj-chemistry-grade8-54-2024-full',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-grade8-54-2024-full.json')
+    }
+  ],
+  [
     'fixture-missing-book',
     {
       batch: {
@@ -289,3 +301,4 @@ function relativeProjectPath(filePath) {
 function isRecord(value) {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
+

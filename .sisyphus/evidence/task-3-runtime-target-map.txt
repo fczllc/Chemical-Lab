@@ -1,0 +1,23 @@
+Runtime target map
+schemaVersion: 1
+supportedDestinations:
+- quizCandidate -> src/data/quizData.json (quiz, quizData)
+- gameChallengeCandidate -> src/data/contentMeta.js (gameChallenge, comparisonChallengeMetadata)
+- achievementCandidate -> src/data/achievementsData.json (achievement, achievementsData)
+- learningPathCandidate -> src/data/learningPath.json (learningPath, learningPath.stages)
+- experimentCandidate -> src/data/reactions.json (reaction, reactions)
+preservationRules:
+- Preserve hand-authored runtime records by default.
+- Only upsert textbook-derived records within the textbook namespace.
+- Never overwrite runtime records whose ids do not start with the textbook namespace.
+- Apply deterministic ordering by targetRuntimeFile, textbookId, topicId, entryId, then candidateId.
+namespaceRule:
+- prefix: textbook
+- format: textbook-{textbookId}-{topicId}-{entryId}
+- requiredParts: textbookId, topicId, entryId
+unsupportedArtifactTypes:
+- curriculumTopic -> not-promotable: unsupported target
+- sourceSection -> not-promotable: unsupported target
+- storyCandidate -> not-promotable: unsupported target
+- labCandidate -> not-promotable: unsupported target
+- reviewedSourceReference -> not-promotable: provenance-only

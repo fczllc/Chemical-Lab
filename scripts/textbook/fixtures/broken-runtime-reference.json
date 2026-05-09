@@ -1,0 +1,30 @@
+{
+  "quizData": [
+    {
+      "id": "quiz-broken-reference",
+      "question": "Which fixture intentionally references a missing element?",
+      "options": ["oxygen"],
+      "correctIndex": 0,
+      "relatedElement": 9999,
+      "category": "fixture",
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    }
+  ],
+  "learningPath": {
+    "stages": [
+      {
+        "id": "stage-broken-reference",
+        "name": "Broken Reference Fixture",
+        "description": "References an experiment that is not present in runtime reactions.",
+        "requiredCount": 1,
+        "focusElements": [1],
+        "unlockedGames": ["game-memory"],
+        "unlockedExperiments": ["exp-missing-fixture"],
+        "unlockedFeatures": [],
+        "curriculumTags": ["intro-element-symbols"],
+        "difficulty": "入门"
+      }
+    ]
+  }
+}

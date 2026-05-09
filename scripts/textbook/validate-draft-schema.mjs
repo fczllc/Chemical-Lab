@@ -23,6 +23,22 @@ const knownTextbookBatches = new Map([
       draftInventoryPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade9-2024-vol2', 'draft-inventory.json'),
       promotionManifestPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade9-2024-vol2', 'promotion-manifest.json')
     }
+  ],
+  [
+    'rj-chemistry-g12-selective-3-organic-2019',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-g12-selective-3-organic-2019.json'),
+      draftInventoryPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-g12-selective-3-organic-2019', 'draft-inventory.json'),
+      promotionManifestPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-g12-selective-3-organic-2019', 'promotion-manifest.json')
+    }
+  ],
+  [
+    'rj-chemistry-grade8-54-2024-full',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-grade8-54-2024-full.json'),
+      draftInventoryPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade8-54-2024-full', 'draft-inventory.json'),
+      promotionManifestPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade8-54-2024-full', 'promotion-manifest.json')
+    }
   ]
 ]);
 
@@ -179,5 +195,4 @@ function finishValidation(result) {
 function relativeProjectPath(filePath) {
   return path.relative(projectRoot, filePath).replaceAll(path.sep, '/');
 }
-
 

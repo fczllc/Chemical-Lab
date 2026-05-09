@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-09T06:38:02.234Z",
+  "readinessStatuses": [
+    "generated-only",
+    "review-scaffold-only",
+    "reviewed-non-empty",
+    "promotable",
+    "not-ready"
+  ],
+  "roots": {
+    "generated": "src/data/textbookIngestion/generated",
+    "reviewed": "src/data/textbookIngestion/reviewed",
+    "batches": "src/data/textbookIngestion/batches"
+  },
+  "knownVolumeIds": [
+    "rj-chemistry-g12-selective-3-organic-2019",
+    "rj-chemistry-grade8-54-2024-full",
+    "rj-chemistry-grade9-2024-vol1",
+    "rj-chemistry-grade9-2024-vol2"
+  ],
+  "totals": {
+    "volumes": 4,
+    "byClassification": {
+      "generated-only": 0,
+      "review-scaffold-only": 3,
+      "reviewed-non-empty": 0,
+      "promotable": 1,
+      "not-ready": 0
+    },
+    "readinessErrorCount": 0
+  },
+  "volumes": [
+    {
+      "volumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "isKnownVolume": true,
+      "classification": "review-scaffold-only",
+      "displayName": "2019版人教版高中化学选择性必修3 有机化学基础",
+      "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+      "paths": {
+        "generatedRoot": "src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019",
+        "reviewedManifest": "src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json",
+        "batch": "src/data/textbookIngestion/batches/rj-chemistry-g12-selective-3-organic-2019.json"
+      },
+      "counterparts": {
+        "generatedDirectory": true,
+        "generatedDraftInventory": true,
+        "generatedPromotionManifest": true,
+        "reviewedDirectory": true,
+        "reviewedPromotionManifest": true,
+        "batchMetadata": true
+      },
+      "artifactCounts": {
+        "generated": {
+          "sourceSections": 358,
+          "curriculumTopics": 280,
+          "experimentCandidates": 31,
+          "labCandidates": 79,
+          "gameChallengeCandidates": 85,
+          "storyCandidates": 58,
+          "achievementCandidates": 280,
+          "quizCandidates": 91,
+          "reviewedSourceReferences": 0,
+          "learningPathCandidates": 280,
+          "experimentBacklog": 0,
+          "coverageRows": 0
+        },
+        "reviewed": {
+          "totalEntries": 0,
+          "reviewedEntries": 0,
+          "promotedEntries": 0,
+          "promotableEntries": 0,
+          "byCandidateType": {},
+          "byTargetRuntimeFile": {}
+        }
+      },
+      "readinessErrors": [],
+      "warnings": []
+    },
+    {
+      "volumeId": "rj-chemistry-grade8-54-2024-full",
+      "isKnownVolume": true,
+      "classification": "review-scaffold-only",
+      "displayName": "2024版人教版（五·四学制）八年级化学全一册",
+      "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
+      "paths": {
+        "generatedRoot": "src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full",
+        "reviewedManifest": "src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json",
+        "batch": "src/data/textbookIngestion/batches/rj-chemistry-grade8-54-2024-full.json"
+      },
+      "counterparts": {
+        "generatedDirectory": true,
+        "generatedDraftInventory": true,
+        "generatedPromotionManifest": true,
+        "reviewedDirectory": true,
+        "reviewedPromotionManifest": true,
+        "batchMetadata": true
+      },
+      "artifactCounts": {
+        "generated": {
+          "sourceSections": 437,
+          "curriculumTopics": 347,
+          "experimentCandidates": 56,
+          "labCandidates": 178,
+          "gameChallengeCandidates": 120,
+          "storyCandidates": 95,
+          "achievementCandidates": 347,
+          "quizCandidates": 157,
+          "reviewedSourceReferences": 0,
+          "learningPathCandidates": 347,
+          "experimentBacklog": 0,
+          "coverageRows": 0
+        },
+        "reviewed": {
+          "totalEntries": 0,
+          "reviewedEntries": 0,
+          "promotedEntries": 0,
+          "promotableEntries": 0,
+          "byCandidateType": {},
+          "byTargetRuntimeFile": {}
+        }
+      },
+      "readinessErrors": [],
+      "warnings": []
+    },
+    {
+      "volumeId": "rj-chemistry-grade9-2024-vol1",
+      "isKnownVolume": true,
+      "classification": "promotable",
+      "displayName": "2024版人教版九年级化学上册",
+      "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+      "paths": {
+        "generatedRoot": "src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1",
+        "reviewedManifest": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json",
+        "batch": "src/data/textbookIngestion/batches/rj-chemistry-grade9-2024-vol1.json"
+      },
+      "counterparts": {
+        "generatedDirectory": true,
+        "generatedDraftInventory": true,
+        "generatedPromotionManifest": true,
+        "reviewedDirectory": true,
+        "reviewedPromotionManifest": true,
+        "batchMetadata": true
+      },
+      "artifactCounts": {
+        "generated": {
+          "sourceSections": 419,
+          "curriculumTopics": 340,
+          "experimentCandidates": 55,
+          "labCandidates": 172,
+          "gameChallengeCandidates": 119,
+          "storyCandidates": 95,
+          "achievementCandidates": 340,
+          "quizCandidates": 155,
+          "reviewedSourceReferences": 0,
+          "learningPathCandidates": 340,
+          "experimentBacklog": 0,
+          "coverageRows": 1
+        },
+        "reviewed": {
+          "totalEntries": 4,
+          "reviewedEntries": 0,
+          "promotedEntries": 4,
+          "promotableEntries": 4,
+          "byCandidateType": {
+            "achievementCandidate": 1,
+            "gameChallengeCandidate": 1,
+            "learningPathCandidate": 1,
+            "quizCandidate": 1
+          },
+          "byTargetRuntimeFile": {
+            "src/data/achievementsData.json": 1,
+            "src/data/contentMeta.js": 1,
+            "src/data/learningPath.json": 1,
+            "src/data/quizData.json": 1
+          }
+        }
+      },
+      "readinessErrors": [],
+      "warnings": []
+    },
+    {
+      "volumeId": "rj-chemistry-grade9-2024-vol2",
+      "isKnownVolume": true,
+      "classification": "review-scaffold-only",
+      "displayName": "2024版人教版九年级化学下册",
+      "sourceHash": "sha256:9541f13a4ecc3d1de8af9e8360777badc9519f8abe7f61a401aa2e32561ee2d5",
+      "paths": {
+        "generatedRoot": "src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2",
+        "reviewedManifest": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json",
+        "batch": "src/data/textbookIngestion/batches/rj-chemistry-grade9-2024-vol2.json"
+      },
+      "counterparts": {
+        "generatedDirectory": true,
+        "generatedDraftInventory": true,
+        "generatedPromotionManifest": true,
+        "reviewedDirectory": true,
+        "reviewedPromotionManifest": true,
+        "batchMetadata": true
+      },
+      "artifactCounts": {
+        "generated": {
+          "sourceSections": 283,
+          "curriculumTopics": 222,
+          "experimentCandidates": 42,
+          "labCandidates": 122,
+          "gameChallengeCandidates": 100,
+          "storyCandidates": 87,
+          "achievementCandidates": 222,
+          "quizCandidates": 109,
+          "reviewedSourceReferences": 0,
+          "learningPathCandidates": 222,
+          "experimentBacklog": 0,
+          "coverageRows": 0
+        },
+        "reviewed": {
+          "totalEntries": 0,
+          "reviewedEntries": 0,
+          "promotedEntries": 0,
+          "promotableEntries": 0,
+          "byCandidateType": {},
+          "byTargetRuntimeFile": {}
+        }
+      },
+      "readinessErrors": [],
+      "warnings": []
+    }
+  ]
+}

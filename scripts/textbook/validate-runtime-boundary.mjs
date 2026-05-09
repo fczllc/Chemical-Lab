@@ -5,16 +5,17 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '../..');
-const runtimeFiles = [
-  path.join(projectRoot, 'src', 'main.js'),
-  path.join(projectRoot, 'src', 'data', 'index.js'),
-  ...(await collectJavaScriptFiles(path.join(projectRoot, 'src', 'modules')))
-];
+const srcRoot = path.join(projectRoot, 'src');
+const runtimeFiles = (await collectJavaScriptFiles(srcRoot))
+  .filter((filePath) => !isInDirectory(filePath, path.join(projectRoot, 'src', 'data', 'textbookIngestion')))
+  .filter((filePath) => !isInDirectory(filePath, path.join(projectRoot, 'src', 'data', 'textbooks')))
+  .sort(compareText);
 const reactionsPath = path.join(projectRoot, 'src', 'data', 'reactions.json');
 const generatedRoot = path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated');
 const reviewedRoot = path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'reviewed');
 const textbookSourceRoot = path.join(projectRoot, 'src', 'data', 'textbooks');
 const generatedIngestionRoot = path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated');
+const reviewedIngestionRoot = path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'reviewed');
 
 const knownFixtures = new Map([
   ['raw-textbook-import', { type: 'source', path: path.join(projectRoot, 'scripts', 'textbook', 'fixtures', 'raw-textbook-import.mjs') }],
@@ -160,8 +161,8 @@ function findForbiddenImportSpecifiers(source, filePath) {
 function findForbiddenPathMentions(source, filePath) {
   const errors = [];
   const forbiddenMentions = [
-    'src/data/textbooks/',
-    'src/data/textbookIngestion/generated/'
+    'src/data/textbookIngestion/generated/',
+    'src/data/textbookIngestion/reviewed/'
   ];
 
   for (const forbiddenMention of forbiddenMentions) {
@@ -176,8 +177,8 @@ function findForbiddenPathMentions(source, filePath) {
 function findForbiddenPathConstructs(source, filePath) {
   const errors = [];
   const patterns = [
-    /path\.(?:join|resolve)\([\s\S]*?(?:src['"`][\s\S]*?data['"`][\s\S]*?textbooks|textbookIngestion[\s\S]*?generated)[\s\S]*?\)/g,
-    /new\s+URL\([\s\S]*?(?:\.\.[/\\]data[/\\]textbooks|\.\.[/\\]data[/\\]textbookIngestion[/\\]generated|src[/\\]data[/\\]textbooks|src[/\\]data[/\\]textbookIngestion[/\\]generated)[\s\S]*?\)/g
+    /path\.(?:join|resolve)\([\s\S]*?textbookIngestion[\s\S]*?(?:generated|reviewed)[\s\S]*?\)/g,
+    /new\s+URL\([\s\S]*?(?:\.\.[/\\]data[/\\]textbookIngestion[/\\](?:generated|reviewed)|src[/\\]data[/\\]textbookIngestion[/\\](?:generated|reviewed))[\s\S]*?\)/g
   ];
 
   for (const pattern of patterns) {
@@ -393,7 +394,16 @@ function extractImportSpecifiers(source) {
 
 function isForbiddenPath(filePath) {
   const normalizedPath = path.normalize(filePath);
-  return normalizedPath.startsWith(textbookSourceRoot) || normalizedPath.startsWith(generatedIngestionRoot);
+  return normalizedPath.startsWith(textbookSourceRoot) || normalizedPath.startsWith(generatedIngestionRoot) || normalizedPath.startsWith(reviewedIngestionRoot);
+}
+
+function isInDirectory(filePath, directoryPath) {
+  const relativePath = path.relative(directoryPath, filePath);
+  return relativePath && !relativePath.startsWith('..') && !path.isAbsolute(relativePath);
+}
+
+function compareText(left, right) {
+  return left.localeCompare(right, 'en');
 }
 
 async function readTextFile(filePath, label, errors) {

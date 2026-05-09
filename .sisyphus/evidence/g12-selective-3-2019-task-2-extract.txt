@@ -1,0 +1,36 @@
+## Task 2 Extraction Evidence
+
+### Positive extraction
+Command:
+`npm run textbook:extract -- --textbook rj-chemistry-g12-selective-3-organic-2019`
+
+Output:
+```text
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-g12-selective-3-organic-2019
+
+Extracted sections: 358
+Referenced assets: 242
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/source-inventory.json
+EXIT:0
+```
+
+### Deterministic rerun
+First hash:
+`15886BA38DF25DB447B13947A714CA633068D1E548905D6311AAF8AC00634F2F`
+
+Second hash:
+`15886BA38DF25DB447B13947A714CA633068D1E548905D6311AAF8AC00634F2F`
+
+### Negative extraction
+Command:
+`npm run textbook:extract -- --textbook fixture-missing-book`
+
+Output:
+```text
+> element-explorer-kids@1.0.0 textbook:extract
+> node scripts/textbook/extract-textbook.mjs --textbook fixture-missing-book
+
+Source book not found: src/data/textbookIngestion/fixtures/missing-book.md
+EXIT:1
+```

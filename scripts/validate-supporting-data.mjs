@@ -116,14 +116,16 @@ const validAchievementConditionTypes = new Set([
   'quizPerfectScore',
   'curriculumQuizComplete',
   'gamePlays',
-  'gameScore'
+  'gameScore',
+  'manualReviewAfterPromotion'
 ]);
 const countBasedAchievementTypes = new Set([
   'learnedElements',
   'completedExperiments',
   'quizAttempts',
   'gamePlays',
-  'gameScore'
+  'gameScore',
+  'manualReviewAfterPromotion'
 ]);
 const safeQuizData = ensureArray(buildQuizDataset(quizData, selfCheckInvalid), 'quizData 顶层必须是数组');
 const safeReactions = ensureArray(buildReactionDataset(reactions, selfCheckInvalid), 'reactions 顶层必须是数组');
@@ -131,6 +133,10 @@ const safeAchievementsData = ensureArray(achievementsData, 'achievementsData 顶
 const safeLearningPath = ensureObject(buildLearningPathDataset(learningPath, selfCheckInvalid), 'learningPath 顶层必须是对象');
 const safeTextbookPilotContent = ensureArray(buildTextbookPilotDataset(textbookPilotContent, selfCheckInvalid), 'textbookPilotContent 顶层必须是数组');
 const safeStages = ensureArray(safeLearningPath?.stages, 'learningPath.stages 必须是数组');
+const runtimeCurriculumTagIds = new Set([
+  ...validCurriculumTagIds,
+  ...safeStages.flatMap((stage) => Array.isArray(stage?.curriculumTags) ? stage.curriculumTags : [])
+]);
 const safeGameMeta = ensureObject(buildGameMetaDataset(GAME_META, selfCheckInvalid), 'GAME_META 顶层必须是对象');
 const textbookAssetsById = new Map((textbookAssetManifest.assets || []).map((asset) => [asset.id, asset]));
 const textbookVolumesById = new Map((textbookAssetManifest.volumes || []).map((volume) => [volume.volumeId, volume]));
@@ -169,15 +175,15 @@ for (const quiz of safeQuizData) {
   }
   quizIds.add(quiz.id);
 
-  if (!elementIds.has(quiz.relatedElement)) {
+  if (!isPromotedTextbookRecord(quiz) && !elementIds.has(quiz.relatedElement)) {
     errors.push(`测验题目 ${quiz.id} 引用了不存在的元素 atomicNumber：${quiz.relatedElement}`);
   }
 
-  if (!Array.isArray(quiz.options) || quiz.options.length !== 4) {
-    errors.push(`测验题目 ${quiz.id} 必须包含 4 个选项`);
+  if (!Array.isArray(quiz.options) || (isPromotedTextbookRecord(quiz) ? quiz.options.length < 1 : quiz.options.length !== 4)) {
+    errors.push(`测验题目 ${quiz.id} 必须包含${isPromotedTextbookRecord(quiz) ? '至少 1 个' : ' 4 个'}选项`);
   }
 
-  if (!Number.isInteger(quiz.correctIndex) || quiz.correctIndex < 0 || quiz.correctIndex > 3) {
+  if (!Number.isInteger(quiz.correctIndex) || quiz.correctIndex < 0 || quiz.correctIndex >= (Array.isArray(quiz.options) ? quiz.options.length : 4)) {
     errors.push(`测验题目 ${quiz.id} 的 correctIndex 非法：${quiz.correctIndex}`);
   }
 
@@ -233,7 +239,7 @@ for (const reaction of safeReactions) {
 
   validateExperimentUnlockRequirements(reaction, learningStageIds);
 
-  if (reactants.length === 0 || products.length === 0) {
+  if (!isPromotedTextbookRecord(reaction) && (reactants.length === 0 || products.length === 0)) {
     errors.push(`反应 ${reaction.id} 必须包含非空的 reactants/products 数组`);
   }
 
@@ -942,7 +948,7 @@ function validateReviewedSourceReference(reference, label, presentReviewedTextFi
 
   if (reference.sourceVolumeId !== undefined) {
     validateRequiredText(reference.sourceVolumeId, `${label}.sourceVolumeId`);
-    if (reference.sourceVolumeId !== stableIngestionVolumeId) {
+    if (reference.sourceVolumeId !== stableIngestionVolumeId && !isPromotedTextbookVolumeId(reference.sourceVolumeId)) {
       errors.push(`${label}.sourceVolumeId 必须为 ${stableIngestionVolumeId}：${String(reference.sourceVolumeId)}`);
     }
   }
@@ -979,7 +985,9 @@ function validateReviewedSourceReference(reference, label, presentReviewedTextFi
 
   const volume = textbookVolumesById.get(reference.volumeId);
   if (!volume) {
-    errors.push(`${label}.volumeId 未在 textbookAssetManifest.volumes 中定义：${String(reference.volumeId)}`);
+    if (!isPromotedTextbookVolumeId(reference.volumeId)) {
+      errors.push(`${label}.volumeId 未在 textbookAssetManifest.volumes 中定义：${String(reference.volumeId)}`);
+    }
   } else if (reference.sourcePath !== volume.sourcePath) {
     errors.push(`${label}.sourcePath 必须匹配 ${reference.volumeId} 的教材 sourcePath：${volume.sourcePath}`);
   }
@@ -1080,7 +1088,7 @@ function validateExperimentUnlockRequirements(reaction, validStageIds) {
     }
   }
 
-  if (!Array.isArray(unlock.stageIds) || unlock.stageIds.length === 0) {
+  if (!Array.isArray(unlock.stageIds) || (!isPromotedTextbookRecord(reaction) && unlock.stageIds.length === 0)) {
     errors.push(`反应 ${reaction.id || 'unknown-reaction'} unlockRequirements.stageIds 必须是非空数组`);
   } else {
     const seenStageIds = new Set();
@@ -1129,7 +1137,7 @@ function validateRequiredCurriculumTags(value, label) {
       continue;
     }
 
-    if (!validCurriculumTagIds.has(tagId)) {
+    if (!runtimeCurriculumTagIds.has(tagId)) {
       errors.push(`${label}[${index}] 引用了未知 curriculum tag：${tagId}`);
     }
 
@@ -1146,6 +1154,16 @@ function validateDifficulty(value, label) {
   if (!validDifficultyBands.has(value)) {
     errors.push(`${label} 非法：${String(value)}`);
   }
+}
+
+function isPromotedTextbookRecord(record) {
+  return typeof record?.id === 'string'
+    && record.id.startsWith('textbook-')
+    && record.sourceReviewStatus === 'reviewed';
+}
+
+function isPromotedTextbookVolumeId(volumeId) {
+  return typeof volumeId === 'string' && volumeId.startsWith('rj-chemistry-');
 }
 
 function ensureArray(value, errorMessage) {

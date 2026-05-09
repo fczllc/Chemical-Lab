@@ -1,0 +1,31 @@
+Runtime file checksum proof around dry-run
+Command: npm run textbook:promote -- --all-reviewed --dry-run
+
+Before:
+
+Path                           Hash
+----                           ----
+src/data/quizData.json         4828B62EEA31971894E7426B188785C16693A318FFA6745CEF1075036AF65317
+src/data/contentMeta.js        32653335B5CD23B43D5FFD638952C2A65508CDA13B3B36114F5FA60E46095C1C
+src/data/achievementsData.json 18015C2EE54FCC400DE5B2C2BE50CBBAA345E3869C02374F018D7087C37D4D55
+src/data/learningPath.json     774D28F711215B827BAFB6A59AE27D29F0622A9F7485B6EE12C731CB302A2212
+src/data/reactions.json        F3CAA8F9C49886E52BCD35BD0BFE51443D9985D462743A719DF9702446C11402
+
+
+After:
+
+Path                           Hash
+----                           ----
+src/data/quizData.json         4828B62EEA31971894E7426B188785C16693A318FFA6745CEF1075036AF65317
+src/data/contentMeta.js        32653335B5CD23B43D5FFD638952C2A65508CDA13B3B36114F5FA60E46095C1C
+src/data/achievementsData.json 18015C2EE54FCC400DE5B2C2BE50CBBAA345E3869C02374F018D7087C37D4D55
+src/data/learningPath.json     774D28F711215B827BAFB6A59AE27D29F0622A9F7485B6EE12C731CB302A2212
+src/data/reactions.json        F3CAA8F9C49886E52BCD35BD0BFE51443D9985D462743A719DF9702446C11402
+
+
+Result:
+src/data/quizData.json: True
+src/data/contentMeta.js: True
+src/data/achievementsData.json: True
+src/data/learningPath.json: True
+src/data/reactions.json: True

@@ -159,6 +159,11 @@ function validateCurriculum(tags, supportingData = {}) {
   validateDifficultyBands(errors);
   const safeTags = ensureObject(tags, 'curriculumTags 顶层必须是对象', errors) ?? {};
   const tagIds = new Set(Object.keys(safeTags));
+  const safeLearningStages = Array.isArray(supportingData.learningPath?.stages) ? supportingData.learningPath.stages : [];
+  const runtimeTagIds = new Set([
+    ...tagIds,
+    ...safeLearningStages.flatMap((stage) => Array.isArray(stage?.curriculumTags) ? stage.curriculumTags : [])
+  ]);
 
   for (const [key, tag] of Object.entries(safeTags)) {
     const label = `curriculumTags.${key}`;
@@ -176,8 +181,8 @@ function validateCurriculum(tags, supportingData = {}) {
   }
 
   validateAcyclicPrerequisites(safeTags, errors);
-  validateReactionExperimentUnlocks(supportingData, tagIds, errors);
-  validateGameMetadataChallenges(supportingData, tagIds, errors);
+  validateReactionExperimentUnlocks(supportingData, runtimeTagIds, errors);
+  validateGameMetadataChallenges(supportingData, runtimeTagIds, errors);
   return errors;
 }
 
@@ -339,7 +344,7 @@ function validateReactionExperimentUnlocks(supportingData, tagIds, errors) {
     validateAllowedKeys(unlock, unlockLabel, allowedReactionUnlockKeys, errors);
     validateOptionalTagReferences(unlock.curriculumTags, `${unlockLabel}.curriculumTags`, tagIds, errors);
     validateSafetyLevelReferences(unlock.safetyLevels, `${unlockLabel}.safetyLevels`, validSafetyLevels, errors);
-    validateStageReferences(unlock.stageIds, `${unlockLabel}.stageIds`, validStageIds, errors);
+    validateStageReferences(unlock.stageIds, `${unlockLabel}.stageIds`, validStageIds, errors, { allowEmpty: isPromotedTextbookRecord(reaction) });
     validateMinimumLearnedElements(unlock.minimumLearnedElements, `${unlockLabel}.minimumLearnedElements`, errors);
     validateOptionalGrade(unlock.grade, `${unlockLabel}.grade`, errors);
     validateOptionalText(unlock.chapter, `${unlockLabel}.chapter`, errors);
@@ -380,12 +385,12 @@ function validateSafetyLevelReferences(value, label, validSafetyLevels, errors) 
   }
 }
 
-function validateStageReferences(value, label, validStageIds, errors) {
+function validateStageReferences(value, label, validStageIds, errors, options = {}) {
   if (value === undefined) {
     return;
   }
 
-  if (!Array.isArray(value) || value.length === 0) {
+  if (!Array.isArray(value) || (!options.allowEmpty && value.length === 0)) {
     errors.push(`${label} 必须是非空数组`);
     return;
   }
@@ -818,4 +823,10 @@ function finishValidation(errors) {
 
 function isRecord(value) {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function isPromotedTextbookRecord(record) {
+  return typeof record?.id === 'string'
+    && record.id.startsWith('textbook-')
+    && record.sourceReviewStatus === 'reviewed';
 }

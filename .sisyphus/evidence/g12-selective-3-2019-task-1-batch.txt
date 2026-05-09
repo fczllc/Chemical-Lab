@@ -1,0 +1,20 @@
+# Task 1 batch validation evidence
+GeneratedAt: 2026-05-09T04:51:54.048Z
+
+## Positive QA
+Command: npm run validate:textbook-batch -- --textbook rj-chemistry-g12-selective-3-organic-2019
+
+> element-explorer-kids@1.0.0 validate:textbook-batch
+> node scripts/textbook/validate-batch-contract.mjs --textbook rj-chemistry-g12-selective-3-organic-2019
+
+batchContract: valid (rj-chemistry-g12-selective-3-organic-2019)
+sourcePath: src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md
+status: sourceImported
+
+ExitCode: 0
+
+## Negative QA
+Command: node scripts/textbook/validate-batch-contract.mjs --textbook missing-volume
+
+Unknown textbook batch: missing-volume
+ExitCode: 1

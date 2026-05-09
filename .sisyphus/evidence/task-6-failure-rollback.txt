@@ -1,0 +1,74 @@
+Command: npm run textbook:promote -- --all-reviewed --simulate-write-failure --json
+ExitCode: 1
+
+Before hashes:
+
+Path                           Hash
+----                           ----
+src/data/quizData.json         4828B62EEA31971894E7426B188785C16693A318FFA6745CEF1075036AF65317
+src/data/contentMeta.js        32653335B5CD23B43D5FFD638952C2A65508CDA13B3B36114F5FA60E46095C1C
+src/data/achievementsData.json 18015C2EE54FCC400DE5B2C2BE50CBBAA345E3869C02374F018D7087C37D4D55
+src/data/learningPath.json     774D28F711215B827BAFB6A59AE27D29F0622A9F7485B6EE12C731CB302A2212
+src/data/reactions.json        F3CAA8F9C49886E52BCD35BD0BFE51443D9985D462743A719DF9702446C11402
+
+
+Failure output:
+
+> element-explorer-kids@1.0.0 textbook:promote
+> node scripts/textbook/promote-topic.mjs --all-reviewed --simulate-write-failure --json
+
+Textbook promotion: write
+selected reviewed entries: 3498
+planned promoted records: 3498
+skipped reviewed entries: 0
+planned write: src/data/achievementsData.json records=1189 existing=12 preserved=12 textbookBefore=0 textbookAfter=1189 changed=true
+planned write: src/data/contentMeta.js records=424 existing=0 preserved=0 textbookBefore=0 textbookAfter=424 changed=true
+planned write: src/data/learningPath.json records=1189 existing=6 preserved=6 textbookBefore=0 textbookAfter=1189 changed=true
+planned write: src/data/quizData.json records=512 existing=26 preserved=26 textbookBefore=0 textbookAfter=512 changed=true
+planned write: src/data/reactions.json records=184 existing=5 preserved=5 textbookBefore=0 textbookAfter=184 changed=true
+planned write: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json records=1 existing=767 preserved=767 textbookBefore=0 textbookAfter=0 changed=true
+planned write: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json records=1 existing=1027 preserved=1027 textbookBefore=0 textbookAfter=0 changed=true
+planned write: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json records=1 existing=1009 preserved=1009 textbookBefore=0 textbookAfter=0 changed=true
+planned write: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json records=1 existing=695 preserved=695 textbookBefore=0 textbookAfter=0 changed=true
+destination src/data/achievementsData.json: 1189 reviewed records
+destination src/data/contentMeta.js: 424 reviewed records
+destination src/data/learningPath.json: 1189 reviewed records
+destination src/data/quizData.json: 512 reviewed records
+destination src/data/reactions.json: 184 reviewed records
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/curriculumTopic count=280 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/labCandidate count=79 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/storyCandidate count=58 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/curriculumTopic count=347 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/labCandidate count=178 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/curriculumTopic count=340 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/labCandidate count=172 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/curriculumTopic count=222 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/labCandidate count=122 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/storyCandidate count=87 reason=not-promotable: unsupported target
+PROMOTION_REPORT_JSON {"schemaVersion":1,"mode":"write","selectedReviewedEntries":3498,"totals":{"promoted":3498,"skipped":0,"blocked":2075,"changedFiles":9},"changedFiles":["src/data/achievementsData.json","src/data/contentMeta.js","src/data/learningPath.json","src/data/quizData.json","src/data/reactions.json","src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json","src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json","src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json","src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json"],"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":417,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":85,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":91,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":417,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":767,"selected":767,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":620,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":120,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":157,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":56,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":620,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":1027,"selected":1027,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":607,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":119,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":155,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":55,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":607,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":1009,"selected":1009,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":431,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":100,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":109,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":42,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":431,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":695,"selected":695,"skipped":0,"textbooks":{}}},"destinations":{"src/data/achievementsData.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":12,"plannedWrites":1189,"promoted":1189,"selected":0,"skipped":0,"textbookRecordsAfter":1189,"textbookRecordsBefore":0,"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/contentMeta.js":{"blocked":0,"changed":true,"destinations":{},"existingRecords":0,"plannedWrites":424,"promoted":424,"selected":0,"skipped":0,"textbookRecordsAfter":424,"textbookRecordsBefore":0,"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":85,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":120,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":119,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":100,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/learningPath.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":6,"plannedWrites":1189,"promoted":1189,"selected":0,"skipped":0,"textbookRecordsAfter":1189,"textbookRecordsBefore":0,"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/quizData.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":26,"plannedWrites":512,"promoted":512,"selected":0,"skipped":0,"textbookRecordsAfter":512,"textbookRecordsBefore":0,"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":91,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":157,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":155,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":109,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/reactions.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":5,"plannedWrites":184,"promoted":184,"selected":0,"skipped":0,"textbookRecordsAfter":184,"textbookRecordsBefore":0,"textbooks":{"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":56,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":55,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":42,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":767,"plannedWrites":1,"promoted":0,"selected":0,"skipped":0,"textbookRecordsAfter":0,"textbookRecordsBefore":0,"textbooks":{}},"src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":1027,"plannedWrites":1,"promoted":0,"selected":0,"skipped":0,"textbookRecordsAfter":0,"textbookRecordsBefore":0,"textbooks":{}},"src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":1009,"plannedWrites":1,"promoted":0,"selected":0,"skipped":0,"textbookRecordsAfter":0,"textbookRecordsBefore":0,"textbooks":{}},"src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":695,"plannedWrites":1,"promoted":0,"selected":0,"skipped":0,"textbookRecordsAfter":0,"textbookRecordsBefore":0,"textbooks":{}}}}
+--simulate-write-failure requested after staged-output validation; no runtime files were written
+
+After hashes:
+
+Path                           Hash
+----                           ----
+src/data/quizData.json         4828B62EEA31971894E7426B188785C16693A318FFA6745CEF1075036AF65317
+src/data/contentMeta.js        32653335B5CD23B43D5FFD638952C2A65508CDA13B3B36114F5FA60E46095C1C
+src/data/achievementsData.json 18015C2EE54FCC400DE5B2C2BE50CBBAA345E3869C02374F018D7087C37D4D55
+src/data/learningPath.json     774D28F711215B827BAFB6A59AE27D29F0622A9F7485B6EE12C731CB302A2212
+src/data/reactions.json        F3CAA8F9C49886E52BCD35BD0BFE51443D9985D462743A719DF9702446C11402
+
+
+Hash comparison:
+
+Path                           Same
+----                           ----
+src/data/quizData.json         True
+src/data/contentMeta.js        True
+src/data/achievementsData.json True
+src/data/learningPath.json     True
+src/data/reactions.json        True
+
+

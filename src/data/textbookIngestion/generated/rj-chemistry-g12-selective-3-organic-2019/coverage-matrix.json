@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "volumeId": "rj-chemistry-g12-selective-3-organic-2019",
+  "generatedFrom": "src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json",
+  "rowKey": "curriculumTagId",
+  "columns": [
+    "sourceEvidence",
+    "assets",
+    "quiz",
+    "learningPath",
+    "labOrReaction",
+    "experimentBacklog",
+    "story",
+    "achievement",
+    "gameChallenge",
+    "runtimeStatus",
+    "reviewStatus",
+    "notes"
+  ],
+  "statusValues": [
+    "required",
+    "optional",
+    "notApplicable",
+    "covered",
+    "deferred",
+    "missing"
+  ],
+  "rows": []
+}

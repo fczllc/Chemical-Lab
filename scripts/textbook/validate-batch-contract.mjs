@@ -25,6 +25,22 @@ const knownTextbookBatches = new Map([
       expectedSourcePath: 'src/data/textbooks/2024版人教版九年级化学下册/book.md',
       expectedAssetRoot: 'src/data/textbooks/2024版人教版九年级化学下册/'
     }
+  ],
+  [
+    'rj-chemistry-g12-selective-3-organic-2019',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-g12-selective-3-organic-2019.json'),
+      expectedSourcePath: 'src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/'
+    }
+  ],
+  [
+    'rj-chemistry-grade8-54-2024-full',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'rj-chemistry-grade8-54-2024-full.json'),
+      expectedSourcePath: 'src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/'
+    }
   ]
 ]);
 

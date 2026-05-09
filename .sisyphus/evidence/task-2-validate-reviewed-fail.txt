@@ -1,0 +1,8 @@
+Promotion manifest validation failed: invalid-reviewed-semantics
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json: Missing required provenance field: sourcePath
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json: entries[0].sourcePath must be a non-empty string
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json#entries[0] (promote-g9-invalid-reviewed-entry): candidateType must match generated candidate type quizCandidate for quiz-0295-source-section-l3610-l3664-d45787521d
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json#entries[0] (promote-g9-invalid-reviewed-entry): missing sourceTrace.sourcePath
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json#entries[0] (promote-g9-invalid-reviewed-entry): unsupported destination adapter/content type story; supported content types: achievement, contentMetadata, gameChallenge, labOrReaction, learningPath, quiz, reaction
+- scripts/textbook/fixtures/invalid-reviewed-semantics.json#entries[1] (promote-g9-invalid-reviewed-entry): duplicate runtimeId promote-g9-invalid-reviewed-entry also used by scripts/textbook/fixtures/invalid-reviewed-semantics.json#entries[0] (promote-g9-invalid-reviewed-entry)
+exit=1

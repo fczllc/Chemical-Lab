@@ -1,0 +1,18 @@
+{
+  "volumeId": "rj-chemistry-grade8-54-2024-full",
+  "displayName": "2024版人教版（五·四学制）八年级化学全一册",
+  "sourcePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+  "assetRoot": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/",
+  "schemaVersion": 1,
+  "status": "sourceImported",
+  "activeBatchId": "rj-chemistry-grade8-54-2024-full-source-imported-2026-05-09",
+  "generatedAt": "2026-05-09T00:00:00.000Z",
+  "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
+  "allowedStatuses": [
+    "sourceImported",
+    "drafted",
+    "partiallyReviewed",
+    "reviewed",
+    "promoted"
+  ]
+}

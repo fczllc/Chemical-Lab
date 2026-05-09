@@ -1,0 +1,47 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-runtime-boundary
+> node scripts/textbook/validate-runtime-boundary.mjs && node scripts/textbook/validate-runtime-integrity.mjs
+
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Textbook runtime integrity valid
+checked: src/data/elements.json
+checked: src/data/quizData.json
+checked: src/data/learningPath.json
+checked: src/data/reactions.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+warning: Bundle size warning: dist/assets/index-BEuBfkSg.js is 2836 KiB; run npm run build for the current Vite report.

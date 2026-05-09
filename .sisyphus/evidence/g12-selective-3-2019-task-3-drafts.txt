@@ -1,0 +1,111 @@
+Task 3 evidence: Generate drafts and backlog
+Volume: rj-chemistry-g12-selective-3-organic-2019
+Expected sourceHash: sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2
+Generated directory: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+Generated files: achievement-candidates.json, draft-inventory.json, experiment-backlog.json, experiment-candidates.json, game-candidates.json, knowledge-topics.json, lab-candidates.json, learning-path-candidates.json, promotion-manifest.json, quiz-candidates.json, source-inventory.json, story-candidates.json
+
+## Initial/final git status snapshot before evidence write
+Command: git status --short
+Exit: 0
+M .sisyphus/boulder.json
+ M .sisyphus/plans/textbook-ingest-g12-selective-3-organic-2019.md
+ M scripts/textbook/extract-textbook.mjs
+ M scripts/textbook/generate-coverage.mjs
+ M scripts/textbook/generate-drafts.mjs
+ M scripts/textbook/promote-topic.mjs
+ M scripts/textbook/validate-batch-contract.mjs
+ M scripts/textbook/validate-coverage.mjs
+ M scripts/textbook/validate-draft-schema.mjs
+ M scripts/textbook/validate-experiment-backlog.mjs
+ M scripts/textbook/validate-promotion-manifest.mjs
+ M scripts/textbook/validate-regeneration-guard.mjs
+?? .sisyphus/evidence/g12-selective-3-2019-task-1-batch.txt
+?? .sisyphus/evidence/g12-selective-3-2019-task-2-extract.txt
+?? .sisyphus/notepads/textbook-ingest-g12-selective-3-organic-2019/
+?? .sisyphus/run-continuation/ses_1f4e5d183ffebhcktMUpuUhy1l.json
+?? src/data/textbookIngestion/batches/rj-chemistry-g12-selective-3-organic-2019.json
+?? src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/
+
+## Generate drafts
+Command: npm run textbook:generate-drafts -- --textbook rj-chemistry-g12-selective-3-organic-2019
+Exit: 0
+> element-explorer-kids@1.0.0 textbook:generate-drafts
+> node scripts/textbook/generate-drafts.mjs --textbook rj-chemistry-g12-selective-3-organic-2019
+
+Wrote knowledge-topics.json: 280
+Wrote quiz-candidates.json: 91
+Wrote experiment-candidates.json: 31
+Wrote lab-candidates.json: 79
+Wrote game-candidates.json: 85
+Wrote story-candidates.json: 58
+Wrote achievement-candidates.json: 280
+Wrote learning-path-candidates.json: 280
+Wrote draft-inventory.json: 904
+
+## Validate drafts
+Command: npm run validate:textbook-drafts -- --textbook rj-chemistry-g12-selective-3-organic-2019
+Exit: 0
+> element-explorer-kids@1.0.0 validate:textbook-drafts
+> node scripts/textbook/validate-draft-schema.mjs --textbook rj-chemistry-g12-selective-3-organic-2019
+
+Draft schema valid: rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/draft-inventory.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+
+## Write and validate experiment backlog
+Command: npm run validate:textbook-experiments -- --textbook rj-chemistry-g12-selective-3-organic-2019 --write
+Exit: 0
+> element-explorer-kids@1.0.0 validate:textbook-experiments
+> node scripts/textbook/validate-experiment-backlog.mjs --textbook rj-chemistry-g12-selective-3-organic-2019 --write
+
+Experiment backlog valid: rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/experiment-candidates.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/experiment-backlog.json
+checked: src/data/reactions.json
+
+## Validate experiment backlog without write
+Command: npm run validate:textbook-experiments -- --textbook rj-chemistry-g12-selective-3-organic-2019
+Exit: 0
+> element-explorer-kids@1.0.0 validate:textbook-experiments
+> node scripts/textbook/validate-experiment-backlog.mjs --textbook rj-chemistry-g12-selective-3-organic-2019
+
+Experiment backlog valid: rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/experiment-candidates.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/experiment-backlog.json
+checked: src/data/reactions.json
+
+## Invariant checks
+Exit: 0
+{
+  "status": 0,
+  "errors": [],
+  "counts": {
+    "knowledge-topics.json": 280,
+    "quiz-candidates.json": 91,
+    "experiment-candidates.json": 31,
+    "lab-candidates.json": 79,
+    "game-candidates.json": 85,
+    "story-candidates.json": 58,
+    "achievement-candidates.json": 280,
+    "learning-path-candidates.json": 280,
+    "draft-inventory.sourceSections": 358,
+    "draft-inventory.curriculumTopics": 280,
+    "draft-inventory.experimentCandidates": 31,
+    "draft-inventory.labCandidates": 79,
+    "draft-inventory.gameChallengeCandidates": 85,
+    "draft-inventory.storyCandidates": 58,
+    "draft-inventory.achievementCandidates": 280,
+    "draft-inventory.quizCandidates": 91,
+    "experiment-backlog.experimentBacklog": 31
+  },
+  "manifestEntries": 0
+}
+
+## Runtime leakage check
+Exit: 0
+{
+  "status": 0,
+  "checkedBacklogIds": 31,
+  "checkedReactions": 5,
+  "leaks": []
+}
