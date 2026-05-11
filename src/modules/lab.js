@@ -1,15 +1,17 @@
 /** ===== 实验室模块 ===== */
 import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
-import { curriculumTags, learningPath, reactions } from '../data/index.js';
+import { curriculumTags, learningPath, reactions as importedReactions } from '../data/index.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
+  getExperimentTitleOverride,
   getLearnedElements,
   getSelectedElement,
   getSettings,
-  markExperimentCompleted
+  markExperimentCompleted,
+  setExperimentTitleOverride
 } from './storage.js';
-import { formulaHTML, equationHTML } from './chemNotation.js';
+import { formulaHTML, equationHTML, mixedProseFormulaHTML, plainChemText } from './chemNotation.js';
 
 const EQUATION_MAP = {
   'reaction-hydrogen-combustion': '2H2 + O2 → 2H2O',
@@ -22,8 +24,59 @@ const EQUATION_MAP = {
 const SAFETY_THEME = LAB_SAFETY_THEME;
 
 const DANGEROUS_LEVELS = new Set(['dangerous', 'radioactive', 'extremely dangerous']);
+
+const MAX_TITLE_LENGTH_UNITS = 80;
+
+function escapeAttr(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function stripBrackets(value) {
+  return String(value ?? '').replace(/^【(.+?)】/, '$1');
+}
+
+function stripLeadingBracketHeading(value) {
+  return String(value ?? '').replace(/^【[^】]+】\s*/, '');
+}
+
+function getTitleLengthUnits(value) {
+  let units = 0;
+  for (const ch of String(value)) {
+    units += ch.charCodeAt(0) > 255 ? 2 : 1;
+  }
+  return units;
+}
+
+function truncateTitleToLengthUnits(value, maxUnits) {
+  let units = 0;
+  let result = '';
+  for (const ch of String(value)) {
+    const cost = ch.charCodeAt(0) > 255 ? 2 : 1;
+    if (units + cost > maxUnits) break;
+    units += cost;
+    result += ch;
+  }
+  return result;
+}
+
+function renderProseContent(value) {
+  return mixedProseFormulaHTML(stripLeadingBracketHeading(value));
+}
+
+function renderCardDescription(value) {
+  return mixedProseFormulaHTML(value);
+}
+
 const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
 const LAB_STAGE_UNLOCKS = learningPath?.stages || [];
+
+// Module-level mutable reactions array; tests and dynamic enrichment can push into it.
+let reactions = Array.isArray(importedReactions) ? importedReactions : [];
 
 let focusedAtomicNumber = null;
 let activeReactionId = reactions[0]?.id ?? null;
@@ -32,6 +85,18 @@ let safetyConfirmed = false;
 let simulationRunId = 0;
 let completionTimer = null;
 let activeModal = null;
+let activeDetailModal = null;
+let detailModalRequested = false;
+let editingTitleReactionId = null;
+let editingTitleDraft = '';
+let editingTitleError = '';
+
+// Lab card filter state (module-level, not persisted)
+let filterText = '';
+let filterSafety = 'all';
+let filterCompletion = 'all';
+let filterLock = 'all';
+let filterGrade = 'all';
 
 export function initLab() {
   renderLabShell();
@@ -54,6 +119,7 @@ export function initLab() {
 
     closeSimulationModal();
     clearSimulationTimer();
+    closeDetailModal();
   });
 
   window.addEventListener('performancemodechange', () => {
@@ -72,7 +138,14 @@ export function initLab() {
     safetyConfirmed = false;
     closeSimulationModal();
     clearSimulationTimer();
+    closeDetailModal();
     renderLabShell();
+  });
+
+  window.addEventListener('experimenttitlechange', () => {
+    if (getCurrentSection() === 'lab') {
+      renderLabShell();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -83,6 +156,11 @@ export function initLab() {
         currentView = 'detail';
         safetyConfirmed = false;
         renderLabShell();
+        return;
+      }
+
+      if (activeDetailModal) {
+        closeDetailModal();
         return;
       }
 
@@ -117,98 +195,273 @@ function renderLabShell() {
 
   ensureLabToolbar(section, selectedElement);
 
-  list.innerHTML = reactions.map((reaction) => {
+  const filteredReactions = reactions.filter((reaction) => {
     const isRelated = focusSymbol ? reaction.reactants.some((item) => item.includes(focusSymbol)) : false;
     const isCompleted = completed.has(reaction.experimentId);
     const unlockState = getReactionUnlockState(reaction, { completed, learned });
-    const safetyTheme = getSafetyTheme(reaction.safetyLevel);
 
-    return `
-      <article class="lab-item-card ${reaction.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
-        <div class="lab-item-card-header">
-          <div>
-            <h3>${reaction.name}</h3>
-            <p class="lab-elements" data-chem-notation="reactants">${reaction.reactants.map((r) => formulaHTML(r)).join(' + ')}</p>
-          </div>
-          <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}">${isCompleted ? '✓ 已完成' : '未完成'}</span>
-        </div>
-        <div class="lab-card-meta-row">
-          <span class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}">${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</span>
-          <span class="lab-card-status">${unlockState.unlocked ? (isRelated ? '与当前元素相关' : '通用演示实验') : '课程进度锁定'}</span>
-        </div>
-        <p class="lab-card-description">${reaction.description}</p>
-        <p class="lab-card-description">${renderUnlockSummary(unlockState)}</p>
-        <button class="hud-action-btn" data-reaction-open="${reaction.id}">查看实验</button>
-      </article>
-    `;
-  }).join('');
+    if (filterSafety !== 'all' && reaction.safetyLevel !== filterSafety) return false;
+    if (filterCompletion === 'completed' && !isCompleted) return false;
+    if (filterCompletion === 'uncompleted' && isCompleted) return false;
+    if (filterLock === 'unlocked' && !unlockState.unlocked) return false;
+    if (filterLock === 'locked' && unlockState.unlocked) return false;
+    if (filterLock === 'related' && (!unlockState.unlocked || !isRelated)) return false;
+    if (filterLock === 'general' && (!unlockState.unlocked || isRelated)) return false;
 
-  stage.innerHTML = activeReaction ? renderStageContent(activeReaction, completed.has(activeReaction.experimentId)) : '';
+    const grade = reaction.unlockRequirements?.grade || '';
+    if (filterGrade !== 'all' && grade !== filterGrade) return false;
 
-  list.querySelectorAll('[data-reaction-open]').forEach((button) => {
-    button.addEventListener('click', () => {
-      activeReactionId = button.dataset.reactionOpen;
-      currentView = 'detail';
-      safetyConfirmed = false;
-      clearSimulationTimer();
-      renderLabShell();
-    });
+    if (filterText.trim()) {
+      const query = filterText.trim().toLowerCase();
+      const haystack = [
+        reaction.name,
+        reaction.description,
+        renderUnlockSummary(unlockState),
+        reaction.reactants.join(' '),
+        reaction.products.join(' ')
+      ].join(' ').toLowerCase();
+      if (!haystack.includes(query)) return false;
+    }
+
+    return true;
   });
 
-  if (activeReaction) {
-    bindStageEvents(stage, activeReaction, completed.has(activeReaction.experimentId));
+  const total = reactions.length;
+  const visible = filteredReactions.length;
+
+  if (visible === 0) {
+    list.innerHTML = `
+      <div class="lab-empty-state">
+        <p>没有符合条件的实验。</p>
+        <p>尝试调整上方筛选条件，或清除搜索关键词。</p>
+      </div>
+    `;
+  } else {
+    list.innerHTML = filteredReactions.map((reaction) => {
+      const isRelated = focusSymbol ? reaction.reactants.some((item) => item.includes(focusSymbol)) : false;
+      const isCompleted = completed.has(reaction.experimentId);
+      const unlockState = getReactionUnlockState(reaction, { completed, learned });
+      const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+
+      const titleSource = getEffectiveExperimentTitleSource(reaction);
+      const titlePlain = plainChemText(titleSource.text);
+      const titleHtml = mixedProseFormulaHTML(titleSource.text);
+
+      return `
+        <article class="lab-item-card ${reaction.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
+          <div class="lab-item-card-header">
+            <div class="lab-item-card-title-wrap">
+              <h3 title="${escapeAttr(titlePlain)}">${titleHtml}</h3>
+              <p class="lab-elements" data-chem-notation="reactants">${reaction.reactants.map((r) => formulaHTML(r)).join(' + ')}</p>
+            </div>
+            <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}" title="${isCompleted ? '已完成' : '未完成'}">${isCompleted ? '✓' : '○'}</span>
+          </div>
+          <div class="lab-card-meta-row">
+            <span class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}">${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</span>
+            <span class="lab-card-status">${unlockState.unlocked ? (isRelated ? '与当前元素相关' : '通用演示实验') : '课程进度锁定'}</span>
+          </div>
+          <p class="lab-card-description">${renderCardDescription(reaction.description)}</p>
+          <p class="lab-card-clue">${renderUnlockSummary(unlockState)}</p>
+          <button class="hud-action-btn lab-card-action" data-reaction-open="${reaction.id}">查看实验</button>
+        </article>
+      `;
+    }).join('');
+
+    list.querySelectorAll('[data-reaction-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        activeReactionId = button.dataset.reactionOpen;
+        currentView = 'detail';
+        safetyConfirmed = false;
+        clearSimulationTimer();
+        detailModalRequested = true;
+        renderLabShell();
+      });
+    });
+  }
+
+  // Update result count in toolbar
+  const resultCountEl = section.querySelector('.lab-result-count');
+  if (resultCountEl) {
+    resultCountEl.textContent = `显示 ${visible}/${total} 个实验`;
+  }
+
+  stage.innerHTML = '';
+
+  if (activeReaction && detailModalRequested && !activeDetailModal) {
+    openDetailModal(activeReaction, completed.has(activeReaction.experimentId));
   }
 }
 
-function bindStageEvents(stage, activeReaction, isCompleted) {
+function bindStageEvents(modalContent, activeReaction, isCompleted) {
   const unlockState = getReactionUnlockState(activeReaction);
-  stage.querySelector('[data-lab-back]')?.addEventListener('click', () => {
-    currentView = 'detail';
-    safetyConfirmed = false;
-    clearSimulationTimer();
-    renderLabShell();
-  });
-
-  stage.querySelector('[data-lab-return-list]')?.addEventListener('click', () => {
-    currentView = 'detail';
-    safetyConfirmed = false;
-    clearSimulationTimer();
-    renderLabShell();
-  });
-
-  stage.querySelector('[data-lab-open-safety]')?.addEventListener('click', () => {
-    currentView = 'safety';
-    renderLabShell();
-  });
-
-  stage.querySelector('[data-lab-start]')?.addEventListener('click', () => {
-    if (!unlockState.unlocked) {
-      return;
+  modalContent.querySelector('[data-lab-back]')?.addEventListener('click', () => {
+    if (currentView === 'detail') {
+      closeDetailModal();
+    } else {
+      currentView = 'detail';
+      updateDetailModalContent(activeReaction, isCompleted);
     }
-
-    currentView = 'safety';
-    safetyConfirmed = false;
-    renderLabShell();
   });
 
-  const confirmationToggle = stage.querySelector('[data-safety-confirm]');
-  const launchButton = stage.querySelector('[data-launch-simulation]');
+  modalContent.querySelector('[data-lab-return-list]')?.addEventListener('click', () => {
+    closeDetailModal();
+  });
+
+  modalContent.querySelector('[data-lab-open-safety]')?.addEventListener('click', () => {
+    currentView = 'safety';
+    updateDetailModalContent(activeReaction, isCompleted);
+  });
+
+  const confirmationToggle = modalContent.querySelector('[data-safety-confirm]');
+  const startButton = modalContent.querySelector('[data-lab-start]');
 
   confirmationToggle?.addEventListener('change', () => {
     safetyConfirmed = confirmationToggle.checked;
-    if (launchButton) {
-      launchButton.disabled = !unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed);
+    if (startButton) {
+      startButton.disabled = !unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed);
     }
   });
 
-  launchButton?.addEventListener('click', () => {
+  modalContent.querySelector('[data-lab-start]')?.addEventListener('click', () => {
     if (!unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed)) {
       return;
     }
 
+    currentView = 'safety';
+    updateDetailModalContent(activeReaction, isCompleted);
+  });
+
+  modalContent.querySelector('[data-launch-simulation]')?.addEventListener('click', () => {
+    if (!unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed)) {
+      return;
+    }
+
+    closeDetailModal();
     currentView = 'simulation';
-    renderLabShell();
     openSimulationModal(activeReaction);
+  });
+
+  // Title editing events
+  const titleEl = modalContent.querySelector('[data-testid="experiment-title"]');
+  titleEl?.addEventListener('dblclick', () => {
+    enterTitleEditMode(activeReaction);
+    updateDetailModalContent(activeReaction, isCompleted);
+    // Focus and select the input after rerender
+    window.requestAnimationFrame(() => {
+      const modal = activeDetailModal?.querySelector('.lab-detail-modal');
+      const input = modal?.querySelector('[data-testid="experiment-title-input"]');
+      if (input) {
+        input.focus();
+        input.select();
+      }
+    });
+  });
+
+  const saveBtn = modalContent.querySelector('[data-testid="experiment-title-save"]');
+  saveBtn?.addEventListener('click', () => {
+    const input = modalContent.querySelector('[data-testid="experiment-title-input"]');
+    if (!input) return;
+
+    const raw = truncateTitleToLengthUnits(input.value, MAX_TITLE_LENGTH_UNITS);
+    const value = raw.trim();
+    if (!value) {
+      editingTitleError = '标题不能为空';
+      editingTitleDraft = raw;
+      updateDetailModalContent(activeReaction, isCompleted);
+      window.requestAnimationFrame(() => {
+        const modal = activeDetailModal?.querySelector('.lab-detail-modal');
+        const newInput = modal?.querySelector('[data-testid="experiment-title-input"]');
+        if (newInput) {
+          newInput.focus();
+          newInput.value = editingTitleDraft;
+        }
+      });
+      return;
+    }
+
+    const canonicalTitle = stripLeadingBracketHeading(activeReaction.name);
+    setExperimentTitleOverride(activeReaction.id, value, { canonicalTitle });
+    exitTitleEditMode();
+    updateDetailModalContent(activeReaction, isCompleted);
+  });
+
+  const cancelBtn = modalContent.querySelector('[data-testid="experiment-title-cancel"]');
+  cancelBtn?.addEventListener('click', () => {
+    exitTitleEditMode();
+    updateDetailModalContent(activeReaction, isCompleted);
+  });
+
+  const titleInput = modalContent.querySelector('[data-testid="experiment-title-input"]');
+  titleInput?.addEventListener('input', () => {
+    const oldValue = titleInput.value;
+    const trimmed = truncateTitleToLengthUnits(oldValue, MAX_TITLE_LENGTH_UNITS);
+    if (trimmed === oldValue) return;
+
+    const start = titleInput.selectionStart ?? oldValue.length;
+    const end = titleInput.selectionEnd ?? oldValue.length;
+    const direction = titleInput.selectionDirection || 'none';
+
+    // Determine how many units the prefix before the old cursor consumed.
+    let prefixUnits = 0;
+    for (let i = 0; i < start && i < oldValue.length; i++) {
+      prefixUnits += oldValue.charCodeAt(i) > 255 ? 2 : 1;
+    }
+
+    titleInput.value = trimmed;
+
+    // Restore selection as close as possible to the logical edit position.
+    let newStart = trimmed.length;
+    let newEnd = trimmed.length;
+    if (typeof titleInput.setSelectionRange === 'function') {
+      let units = 0;
+      for (let i = 0; i < trimmed.length; i++) {
+        const cost = trimmed.charCodeAt(i) > 255 ? 2 : 1;
+        if (units + cost > prefixUnits) {
+          newStart = i;
+          break;
+        }
+        units += cost;
+        newStart = i + 1;
+      }
+
+      // Preserve selection length when possible, clamped to new value length.
+      const selectionLength = end - start;
+      newEnd = Math.min(newStart + selectionLength, trimmed.length);
+      titleInput.setSelectionRange(newStart, newEnd, direction);
+    }
+  });
+
+  titleInput?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      const raw = truncateTitleToLengthUnits(titleInput.value, MAX_TITLE_LENGTH_UNITS);
+      const value = raw.trim();
+      if (!value) {
+        editingTitleError = '标题不能为空';
+        editingTitleDraft = raw;
+        updateDetailModalContent(activeReaction, isCompleted);
+        window.requestAnimationFrame(() => {
+          const modal = activeDetailModal?.querySelector('.lab-detail-modal');
+          const newInput = modal?.querySelector('[data-testid="experiment-title-input"]');
+          if (newInput) {
+            newInput.focus();
+            newInput.value = editingTitleDraft;
+          }
+        });
+        return;
+      }
+
+      const canonicalTitle = stripLeadingBracketHeading(activeReaction.name);
+      setExperimentTitleOverride(activeReaction.id, value, { canonicalTitle });
+      exitTitleEditMode();
+      updateDetailModalContent(activeReaction, isCompleted);
+    } else if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      exitTitleEditMode();
+      updateDetailModalContent(activeReaction, isCompleted);
+    }
   });
 }
 
@@ -220,18 +473,90 @@ function ensureLabToolbar(section, selectedElement) {
     section.querySelector('h2')?.after(toolbar);
   }
 
-  toolbar.innerHTML = `
-    <div>
-      <p class="hud-kicker">LAB ACCESS PANEL</p>
-      <strong>${selectedElement ? `当前聚焦：${selectedElement.chineseName}（${selectedElement.symbol}）` : '当前未锁定元素'}</strong>
-      <p class="lab-toolbar-meta">已完成实验 ${getCompletedExperiments().size}/${reactions.length} · 点击实验卡进入模拟流程</p>
-    </div>
-    <button class="hud-action-btn" data-lab-return>返回周期表</button>
-  `;
+  // Only rebuild toolbar HTML on first creation to avoid wiping focus/selection.
+  if (!toolbar.dataset.labToolbarReady) {
+    const grades = [...new Set(reactions.map((r) => r.unlockRequirements?.grade).filter(Boolean))];
 
-  toolbar.querySelector('[data-lab-return]')?.addEventListener('click', () => {
-    navigateTo('periodic-table');
-  });
+    toolbar.innerHTML = `
+      <div class="lab-toolbar-top">
+        <p class="hud-kicker">LAB ACCESS PANEL</p>
+        <p class="lab-toolbar-meta lab-result-count">显示 ${reactions.length}/${reactions.length} 个实验</p>
+      </div>
+      <div class="lab-toolbar-main">
+        <div class="lab-toolbar-info">
+          <strong>${selectedElement ? `当前聚焦：${selectedElement.chineseName}（${selectedElement.symbol}）` : '当前未锁定元素'}</strong>
+        </div>
+        <div class="lab-toolbar-filters">
+          <input type="text" class="lab-filter-input" data-lab-filter="text" placeholder="搜索实验名称、描述、方程式…" value="${escapeAttr(filterText)}">
+          <select class="lab-filter-select" data-lab-filter="safety" title="安全级别">
+            <option value="all">全部安全级别</option>
+            <option value="safe">安全</option>
+            <option value="caution">注意</option>
+            <option value="dangerous">危险</option>
+            <option value="radioactive">放射性</option>
+            <option value="extremely dangerous">极度危险</option>
+          </select>
+          <select class="lab-filter-select" data-lab-filter="completion" title="完成状态">
+            <option value="all">全部状态</option>
+            <option value="completed">已完成</option>
+            <option value="uncompleted">未完成</option>
+          </select>
+          <select class="lab-filter-select" data-lab-filter="lock" title="锁定状态">
+            <option value="all">全部</option>
+            <option value="unlocked">已开放</option>
+            <option value="locked">已锁定</option>
+            <option value="related">当前元素相关</option>
+            <option value="general">通用演示</option>
+          </select>
+          ${grades.length ? `
+          <select class="lab-filter-select" data-lab-filter="grade" title="年级">
+            <option value="all">全部年级</option>
+            ${grades.map((g) => `<option value="${escapeAttr(g)}">${escapeAttr(g)}</option>`).join('')}
+          </select>
+          ` : ''}
+        </div>
+      </div>
+    `;
+
+    toolbar.querySelectorAll('[data-lab-filter]').forEach((control) => {
+      const key = control.dataset.labFilter;
+      const handler = () => {
+        if (key === 'text') filterText = control.value;
+        if (key === 'safety') filterSafety = control.value;
+        if (key === 'completion') filterCompletion = control.value;
+        if (key === 'lock') filterLock = control.value;
+        if (key === 'grade') filterGrade = control.value;
+
+        renderLabShell();
+      };
+      if (control.tagName === 'INPUT' && control.type === 'text') {
+        control.addEventListener('input', handler);
+      } else {
+        control.addEventListener('change', handler);
+      }
+    });
+
+    toolbar.dataset.labToolbarReady = 'true';
+  }
+
+  // Sync control values without rebuilding DOM so focus/selection stay intact.
+  const textInput = toolbar.querySelector('[data-lab-filter="text"]');
+  if (textInput && textInput.value !== filterText) {
+    textInput.value = filterText;
+  }
+  const safetySelect = toolbar.querySelector('[data-lab-filter="safety"]');
+  if (safetySelect) safetySelect.value = filterSafety;
+  const completionSelect = toolbar.querySelector('[data-lab-filter="completion"]');
+  if (completionSelect) completionSelect.value = filterCompletion;
+  const lockSelect = toolbar.querySelector('[data-lab-filter="lock"]');
+  if (lockSelect) lockSelect.value = filterLock;
+  const gradeSelect = toolbar.querySelector('[data-lab-filter="grade"]');
+  if (gradeSelect) gradeSelect.value = filterGrade;
+  // Sync info text that may change when selectedElement changes.
+  const infoStrong = toolbar.querySelector('.lab-toolbar-info strong');
+  if (infoStrong) {
+    infoStrong.textContent = selectedElement ? `当前聚焦：${selectedElement.chineseName}（${selectedElement.symbol}）` : '当前未锁定元素';
+  }
 }
 
 function renderStageContent(reaction, isCompleted) {
@@ -246,116 +571,225 @@ function renderStageContent(reaction, isCompleted) {
   return renderReactionDetail(reaction, isCompleted);
 }
 
+function getReactionStableKey(reaction) {
+  return reaction?.id ?? '';
+}
+
+function getEffectiveExperimentTitle(reaction) {
+  const key = getReactionStableKey(reaction);
+  const override = key ? getExperimentTitleOverride(key) : null;
+  if (override) {
+    return override;
+  }
+  const canonical = stripLeadingBracketHeading(reaction?.name ?? '');
+  return canonical.trim() || '无';
+}
+
+function getEffectiveExperimentTitleSource(reaction) {
+  const key = getReactionStableKey(reaction);
+  const override = key ? getExperimentTitleOverride(key) : null;
+  if (override) {
+    return { text: override, source: 'override' };
+  }
+  const canonical = stripLeadingBracketHeading(reaction?.name ?? '');
+  return { text: canonical.trim() || '无', source: 'canonical' };
+}
+
+function renderTitleReadonly(title, source) {
+  const html = mixedProseFormulaHTML(title);
+  return `<h3 class="lab-detail-title lab-detail-title-text" data-testid="experiment-title" title="双击编辑标题">${html}</h3>`;
+}
+
+function renderTitleEditMode(reaction, canonicalTitle) {
+  const draft = editingTitleDraft;
+  const error = editingTitleError;
+
+  return `
+    <div class="lab-detail-title lab-detail-title-edit">
+      <input
+        type="text"
+        class="lab-detail-title-input"
+        data-testid="experiment-title-input"
+        value="${escapeAttr(draft)}"
+        placeholder="${escapeAttr(canonicalTitle)}"
+        aria-label="实验标题"
+      />
+      ${error ? `<span data-testid="experiment-title-error" class="lab-detail-title-error">${escapeAttr(error)}</span>` : ''}
+      <div class="lab-detail-title-actions">
+        <button data-testid="experiment-title-save" class="hud-action-btn hud-action-btn-primary lab-detail-title-action lab-detail-title-save" aria-label="保存标题">√</button>
+        <button data-testid="experiment-title-cancel" class="hud-action-btn lab-detail-title-action lab-detail-title-cancel" aria-label="放弃修改">×</button>
+      </div>
+    </div>
+  `;
+}
+
+function enterTitleEditMode(reaction) {
+  editingTitleReactionId = reaction.id;
+  const effective = getEffectiveExperimentTitle(reaction);
+  editingTitleDraft = effective === '无' ? '' : effective;
+  editingTitleError = '';
+}
+
+function exitTitleEditMode() {
+  editingTitleReactionId = null;
+  editingTitleDraft = '';
+  editingTitleError = '';
+}
+
 function renderReactionDetail(reaction, isCompleted) {
   const safetyTheme = getSafetyTheme(reaction.safetyLevel);
   const unlockState = getReactionUnlockState(reaction);
-  const equationText = getReactionEquationText(reaction);
+  const chemRows = renderChemistrySummaryRows(reaction);
+  const isEditingTitle = editingTitleReactionId === reaction.id;
+  const titleSource = getEffectiveExperimentTitleSource(reaction);
+  const canonicalTitle = stripLeadingBracketHeading(reaction.name);
+  const placeholderTitle = canonicalTitle.trim() || '无';
+
+  const titleHtml = isEditingTitle
+    ? renderTitleEditMode(reaction, placeholderTitle)
+    : renderTitleReadonly(titleSource.text, titleSource.source);
+
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">SIMULATION STANDBY</p>
-          <h3>${reaction.name}</h3>
+          ${titleHtml}
         </div>
         <div class="lab-detail-actions">
           <button class="hud-action-btn" data-lab-open-safety>安全守则</button>
-          <button class="hud-action-btn" data-lab-back>返回列表</button>
+          <button class="hud-action-btn" data-lab-back>关闭</button>
         </div>
       </div>
-      <div class="lab-equation-card" data-chem-notation="equation">
-        <span>反应方程式</span>
-        <strong>${equationHTML(equationText)}</strong>
-      </div>
-      <div class="lab-stage-grid">
-        <div class="lab-stage-card" data-chem-notation="reactants">
-          <span>反应物</span>
-          <strong>${equationHTML(reaction.reactants.join(' + '))}</strong>
-        </div>
-        <div class="lab-stage-card" data-chem-notation="products">
-          <span>生成物</span>
-          <strong>${equationHTML(reaction.products.join(' + '))}</strong>
-        </div>
-        <div class="lab-stage-card">
+      <div class="lab-summary-grid">
+        ${chemRows.equation}
+        ${chemRows.reactants}
+        ${chemRows.products}
+        <div class="lab-summary-row">
           <span>安全级别</span>
           <strong class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}">${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
         </div>
-        <div class="lab-stage-card">
+        <div class="lab-summary-row">
           <span>完成状态</span>
           <strong>${isCompleted ? '已完成记录' : '等待完成'}</strong>
         </div>
-        <div class="lab-stage-card">
+        <div class="lab-summary-row">
           <span>课程解锁</span>
           <strong>${unlockState.unlocked ? '已开放' : '需继续学习'}</strong>
+        </div>
+        <div class="lab-summary-row">
+          <span>解锁要求</span>
+          <strong>${renderUnlockSummary(unlockState)}</strong>
         </div>
       </div>
       <div class="lab-stage-layout">
         <div class="lab-stage-main">
-          <p class="lab-stage-description">${reaction.description}</p>
+          <p class="lab-stage-description">${renderProseContent(reaction.textbookContent || reaction.description)}</p>
           <div class="lab-notebook-card">
             <span class="lab-notebook-title">实验步骤</span>
             <ol class="lab-steps-list">
-              ${(reaction.steps || []).map((step) => `<li>${step}</li>`).join('')}
+              ${(reaction.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
             </ol>
           </div>
         </div>
-        <aside class="lab-stage-sidebar">
-          <div class="lab-stage-card lab-safety-notes-card">
-            <span>安全注意事项</span>
-            <ul class="lab-safety-list">
-              ${(reaction.safetyNotes || []).map((note) => `<li>${note}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="lab-stage-card lab-visual-card">
-            <span>视觉描述</span>
-            <strong>${reaction.visualDescription}</strong>
-          </div>
-          <div class="lab-stage-card">
-            <span>解锁要求</span>
-            <strong>${renderUnlockSummary(unlockState)}</strong>
-          </div>
-        </aside>
       </div>
+      <div class="lab-stage-extras">
+        <div class="lab-stage-card lab-safety-notes-card">
+          <span>安全注意事项</span>
+          <ul class="lab-safety-list">
+            ${(reaction.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="lab-stage-card lab-visual-card">
+          <span>视觉描述</span>
+          <strong>${renderProseContent(reaction.visualDescription)}</strong>
+        </div>
+      </div>
+      ${DANGEROUS_LEVELS.has(reaction.safetyLevel) ? `
+      <label class="lab-confirm-row">
+        <input type="checkbox" data-safety-confirm ${safetyConfirmed ? 'checked' : ''}>
+        <span>我已了解安全事项，并知道这是虚拟演示。</span>
+      </label>
+      ` : ''}
       <div class="lab-nav-row">
-        <button class="hud-action-btn hud-action-btn-primary" data-lab-start ${unlockState.unlocked ? '' : 'disabled'}>${unlockState.unlocked ? (isCompleted ? '再次开始实验' : '开始实验') : '继续学习后解锁'}</button>
+        <button class="hud-action-btn hud-action-btn-primary" data-lab-start ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(reaction.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? (isCompleted ? '再次开始实验' : '开始实验') : '继续学习后解锁'}</button>
       </div>
     </div>
   `;
 }
 
 function getReactionEquationText(reaction) {
-  return reaction.equationText || EQUATION_MAP[reaction.id] || `${reaction.reactants.join(' + ')} → ${reaction.products.join(' + ')}`;
+  if (reaction.equationText) {
+    return reaction.equationText;
+  }
+
+  if (EQUATION_MAP[reaction.id]) {
+    return EQUATION_MAP[reaction.id];
+  }
+
+  return hasFormulaList(reaction.reactants) && hasFormulaList(reaction.products)
+    ? `${reaction.reactants.join(' + ')} → ${reaction.products.join(' + ')}`
+    : '';
+}
+
+function renderChemistrySummaryRows(reaction) {
+  const equationText = getReactionEquationText(reaction);
+  const reactants = hasFormulaList(reaction.reactants) ? reaction.reactants.join(' + ') : '';
+  const products = hasFormulaList(reaction.products) ? reaction.products.join(' + ') : '';
+
+  return {
+    equation: equationText ? `
+        <div class="lab-summary-row is-equation" data-chem-notation="equation">
+          <span>反应方程式</span>
+          <strong>${equationHTML(equationText)}</strong>
+        </div>` : '',
+    reactants: reactants ? `
+        <div class="lab-summary-row" data-chem-notation="reactants">
+          <span>反应物</span>
+          <strong>${equationHTML(reactants)}</strong>
+        </div>` : '',
+    products: products ? `
+        <div class="lab-summary-row" data-chem-notation="products">
+          <span>生成物</span>
+          <strong>${equationHTML(products)}</strong>
+        </div>` : ''
+  };
+}
+
+function hasFormulaList(value) {
+  return Array.isArray(value) && value.some((item) => typeof item === 'string' && item.trim().length > 0);
 }
 
 function renderSafetyView(reaction, isCompleted) {
   const safetyTheme = getSafetyTheme(reaction.safetyLevel);
-  const requiresConfirmation = DANGEROUS_LEVELS.has(reaction.safetyLevel);
   const unlockState = getReactionUnlockState(reaction);
+
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">SAFETY PROTOCOL</p>
-          <h3>${reaction.name} · 安全提示</h3>
+          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))} · 安全提示</h3>
         </div>
-        <button class="hud-action-btn" data-lab-back>返回详情</button>
+        <button class="hud-action-btn" data-lab-back>返回</button>
       </div>
       <div class="lab-safety-modal">
         <div class="lab-safety-alert level-${reaction.safetyLevel.replace(/\s+/g, '-')}">
           <strong>${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
-          <p>${unlockState.unlocked ? (requiresConfirmation ? '该实验在真实世界中风险较高，必须确认安全事项后才能继续虚拟模拟。' : '开始前请先阅读本次实验的操作提示与实验守则。') : '该实验需要先完成对应课程进度，暂时只能查看说明。'}</p>
+          <p>${unlockState.unlocked ? '开始前请先阅读本次实验的操作提示与实验守则。' : '该实验需要先完成对应课程进度，暂时只能查看说明。'}</p>
         </div>
         <div class="lab-stage-layout">
           <div class="lab-notebook-card">
             <span class="lab-notebook-title">实验前检查表</span>
             <ol class="lab-steps-list">
-              ${(reaction.steps || []).map((step) => `<li>${step}</li>`).join('')}
+              ${(reaction.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
             </ol>
           </div>
           <aside class="lab-stage-sidebar">
             <div class="lab-stage-card">
               <span>安全守则</span>
               <ul class="lab-safety-list">
-                ${(reaction.safetyNotes || []).map((note) => `<li>${note}</li>`).join('')}
+                ${(reaction.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
               </ul>
             </div>
             <div class="lab-stage-card">
@@ -364,12 +798,8 @@ function renderSafetyView(reaction, isCompleted) {
             </div>
           </aside>
         </div>
-        <label class="lab-confirm-row ${requiresConfirmation ? '' : 'is-optional'}">
-          <input type="checkbox" data-safety-confirm ${!requiresConfirmation ? 'checked' : ''}>
-          <span>${requiresConfirmation ? '我已了解安全事项，并知道这是虚拟演示。' : '我已阅读安全说明。'}</span>
-        </label>
         <div class="lab-nav-row">
-          <button class="hud-action-btn hud-action-btn-primary" data-launch-simulation ${requiresConfirmation || !unlockState.unlocked ? 'disabled' : ''}>${unlockState.unlocked ? '进入模拟视图' : '继续学习后解锁'}</button>
+          <button class="hud-action-btn hud-action-btn-primary" data-launch-simulation ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(reaction.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? '进入模拟视图' : '继续学习后解锁'}</button>
         </div>
       </div>
     </div>
@@ -417,14 +847,54 @@ function isLearningStageUnlocked(stageId, learnedCount) {
   return learnedCount >= Number(previousStage?.requiredCount || 0);
 }
 
-function renderUnlockSummary(unlockState) {
-  if (unlockState.unlocked) {
-    return unlockState.summary;
+function normalizeGrade(text) {
+  if (!text) return text;
+  // Safe heuristic: standalone 二 before an experiment bracket with 2-x suggests 八年级
+  if (/^二\s*[\/／]\s*/.test(text) && /【实验2-/.test(text)) {
+    return text.replace(/^二\s*[\/／]\s*/, '八年级 / ');
+  }
+  return text;
+}
+
+function cleanUnlockClue(raw) {
+  if (!raw || typeof raw !== 'string') return '';
+
+  // 1. Strip a leading source-id token (alphanumeric + dash + underscore) with optional trailing colon.
+  let text = raw.replace(/^[a-zA-Z0-9_]+(?:-[a-zA-Z0-9_]+)*\s*[:：]?\s*/, '').trim();
+
+  // 2. If the first slash-separated piece is still an id-like token, drop that segment.
+  const parts = text.split(/\s*[\/／]\s*/);
+  if (parts.length > 1 && /^[a-zA-Z0-9_]+(?:-[a-zA-Z0-9_]+)*$/.test(parts[0])) {
+    text = parts.slice(1).join(' / ');
   }
 
-  return unlockState.requirements.length
-    ? `解锁线索：${unlockState.requirements.join(' · ')}`
-    : unlockState.summary;
+  // 3. Normalize safe grade shorthand.
+  text = normalizeGrade(text);
+
+  // 4. If a bracketed Chinese segment exists, return the whole cleaned text (preserves grade prefix).
+  if (/【[^】]+】/.test(text)) {
+    return text;
+  }
+
+  // 5. Otherwise fall back to the last meaningful segment.
+  const segments = text.split(/\s*[\/／:：]\s*/).filter(Boolean);
+  const last = segments[segments.length - 1] || '';
+  const cleaned = last.replace(/^[\w-]+\s+/g, '').replace(/\b[0-9a-f]{6,}\b/gi, '').trim();
+
+  return cleaned || text || '';
+}
+
+function renderUnlockSummary(unlockState) {
+  if (unlockState.unlocked) {
+    return mixedProseFormulaHTML(unlockState.summary);
+  }
+
+  if (!unlockState.requirements.length) {
+    return mixedProseFormulaHTML(unlockState.summary);
+  }
+
+  const cleaned = unlockState.requirements.map(cleanUnlockClue).join(' · ');
+  return mixedProseFormulaHTML(cleaned || unlockState.summary);
 }
 
 function openSimulationModal(reaction) {
@@ -447,7 +917,7 @@ function openSimulationModal(reaction) {
     <div class="lab-modal-header">
       <div>
         <p class="hud-kicker">REACTION IN PROGRESS</p>
-        <h3>${reaction.name}</h3>
+        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))}</h3>
       </div>
       <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
     </div>
@@ -458,7 +928,7 @@ function openSimulationModal(reaction) {
     <div class="lab-canvas-frame">
       <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
       <div class="lab-canvas-overlay">
-        <span>反应视觉描述：${reaction.visualDescription}</span>
+        <span>反应视觉描述：${renderProseContent(reaction.visualDescription)}</span>
         <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
       </div>
     </div>
@@ -498,25 +968,77 @@ function closeSimulationModal() {
   }
 }
 
+function openDetailModal(reaction, isCompleted) {
+  const viewToPreserve = currentView;
+  closeDetailModal();
+  currentView = viewToPreserve;
+
+  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'lab-detail-modal-backdrop';
+
+  const modal = document.createElement('div');
+  modal.className = 'lab-detail-modal';
+  modal.setAttribute('style', `--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}`);
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', `${plainChemText(stripLeadingBracketHeading(reaction.name))} 实验详情`);
+
+  modal.innerHTML = renderStageContent(reaction, isCompleted);
+
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
+  activeDetailModal = backdrop;
+
+  bindStageEvents(modal, reaction, isCompleted);
+
+  backdrop.addEventListener('click', (event) => {
+    if (event.target === backdrop) {
+      closeDetailModal();
+    }
+  });
+}
+
+function updateDetailModalContent(reaction, isCompleted) {
+  if (!activeDetailModal) return;
+  const modal = activeDetailModal.querySelector('.lab-detail-modal');
+  if (!modal) return;
+  modal.innerHTML = renderStageContent(reaction, isCompleted);
+  bindStageEvents(modal, reaction, isCompleted);
+}
+
+function closeDetailModal() {
+  if (activeDetailModal) {
+    activeDetailModal.remove();
+    activeDetailModal = null;
+  }
+  detailModalRequested = false;
+  currentView = 'detail';
+  safetyConfirmed = false;
+  clearSimulationTimer();
+}
+
 function renderResultView(reaction, isCompleted) {
   const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">EXPERIMENT LOGGED</p>
-          <h3>${reaction.name} · 实验总结</h3>
+          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))} · 实验总结</h3>
         </div>
         <button class="hud-action-btn" data-lab-back>返回详情</button>
       </div>
       <div class="lab-result-grid">
         <div class="lab-stage-card">
           <span>结果总结</span>
-          <strong>${reaction.description}</strong>
+          <strong>${renderProseContent(reaction.description)}</strong>
         </div>
         <div class="lab-stage-card">
           <span>观察到的现象</span>
-          <strong>${reaction.visualDescription}</strong>
+          <strong>${renderProseContent(reaction.visualDescription)}</strong>
         </div>
         <div class="lab-stage-card">
           <span>实验记录</span>
@@ -557,6 +1079,7 @@ function startSimulation(reaction) {
     closeSimulationModal();
     markExperimentCompleted(reaction.experimentId);
     currentView = 'result';
+    detailModalRequested = true;
     renderLabShell();
   }, getSimulationDuration(reaction.id, getSettings().performanceMode || 'normal'));
 }
@@ -813,5 +1336,3 @@ function getSimulationDuration(reactionId, performanceMode) {
 function getSafetyTheme(level) {
   return SAFETY_THEME[level] || SAFETY_THEME.caution;
 }
-
-

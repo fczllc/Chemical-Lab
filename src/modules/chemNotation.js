@@ -71,6 +71,54 @@ const BASE_KATEX_OPTIONS = Object.freeze({
   strict: 'ignore'
 });
 
+export const EXPERIMENT_FORMULA_RENDER_SURFACES = Object.freeze([
+  {
+    surface: 'cards',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['name', 'description', 'unlockSummary']
+  },
+  {
+    surface: 'cards structured chemistry',
+    renderer: 'formulaHTML/equationHTML',
+    fields: ['reactants[]']
+  },
+  {
+    surface: 'detail prose',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['name', 'textbookContent || description', 'visualDescription', 'steps[]', 'safetyNotes[]']
+  },
+  {
+    surface: 'detail structured chemistry',
+    renderer: 'formulaHTML/equationHTML',
+    fields: ['equationText', 'reactants[]', 'products[]']
+  },
+  {
+    surface: 'safety',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['steps[]', 'safetyNotes[]']
+  },
+  {
+    surface: 'simulation prose',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['name', 'visualDescription']
+  },
+  {
+    surface: 'simulation structured chemistry',
+    renderer: 'equationHTML',
+    fields: ['equationText']
+  },
+  {
+    surface: 'result',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['description', 'visualDescription']
+  },
+  {
+    surface: 'unlock text',
+    renderer: 'mixedProseFormulaHTML',
+    fields: ['unlockRequirements.summary', 'unlockRequirements.requirements[]']
+  }
+]);
+
 export function plainChemText(value) {
   if (value === null || value === undefined) {
     return '';
@@ -221,6 +269,55 @@ export function chemicalNotationFieldKind(fieldName) {
 
   return '';
 }
+
+const MIXED_PROSE_MATH_PATTERN = /\$\$[\s\S]+?\$\$|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\]|\\mathrm\{[^{}]*\}|\\frac\{[^{}]*\}\{[^{}]*\}|\$[^$]+\$/g;
+
+export function mixedProseFormulaHTML(value, options = {}) {
+  const input = normalizeInput(value);
+  if (!input) {
+    return '';
+  }
+
+  let html = '';
+  let lastIndex = 0;
+
+  for (const match of input.matchAll(MIXED_PROSE_MATH_PATTERN)) {
+    const start = match.index ?? 0;
+    const token = match[0];
+    if (start > lastIndex) {
+      html += escapeHTML(input.slice(lastIndex, start));
+    }
+    html += renderMixedMathToken(token, options);
+    lastIndex = start + token.length;
+  }
+
+  if (lastIndex < input.length) {
+    html += escapeHTML(input.slice(lastIndex));
+  }
+
+  return html;
+}
+
+function renderMixedMathToken(token, options) {
+  const displayMode = token.startsWith('$$') || token.startsWith('\\[');
+  let body = token;
+
+  if (token.startsWith('$$')) {
+    body = token.slice(2, -2);
+  } else if (token.startsWith('\\[') || token.startsWith('\\(')) {
+    body = token.slice(2, -2);
+  } else if (token.startsWith('$')) {
+    body = token.slice(1, -1);
+  }
+
+  const latex = equationToLatex(body) || formulaToLatex(body) || body.replace(/\\\\/g, '\\');
+  try {
+    return katex.renderToString(latex, safeKatexOptions({ ...options, displayMode }));
+  } catch {
+    return escapeHTML(token);
+  }
+}
+
 function renderToElement(category, value, element, converter, options) {
   if (!element) {
     return null;

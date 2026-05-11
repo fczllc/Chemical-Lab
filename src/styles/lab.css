@@ -8,18 +8,87 @@ body:has(#lab.active) .detail-panel.docked {
 }
 
 .lab-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  display: grid;
+  gap: 12px;
   padding: 16px 20px;
   margin-bottom: 18px;
 }
 
+.lab-toolbar-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lab-toolbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lab-toolbar-info {
+  display: grid;
+  gap: 4px;
+}
+
+.lab-toolbar-meta {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.lab-toolbar-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lab-filter-input,
+.lab-filter-select {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 5px;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  padding: 7px 10px;
+  min-width: 140px;
+}
+
+.lab-filter-input::placeholder {
+  color: rgba(148, 163, 184, 0.6);
+}
+
+.lab-filter-input:focus,
+.lab-filter-select:focus {
+  outline: none;
+  border-color: rgba(34, 211, 238, 0.55);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.12);
+}
+
+.lab-empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.lab-empty-state p:first-child {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
 .lab-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
 
 .lab-item-card,
@@ -43,8 +112,11 @@ body:has(#lab.active) .detail-panel.docked {
 
 .lab-item-card {
   padding: 18px;
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .lab-item-card.is-active {
@@ -59,7 +131,18 @@ body:has(#lab.active) .detail-panel.docked {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+}
+
+.lab-item-card-title-wrap {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.lab-item-card-title-wrap h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .lab-item-card h3,
@@ -82,12 +165,57 @@ body:has(#lab.active) .detail-panel.docked {
   font-size: 0.8rem;
 }
 
+.lab-card-description {
+  display: block;
+  overflow: hidden;
+  height: calc(0.8rem * 1.6 * 6);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lab-card-clue {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(0.8rem * 1.5 * 2);
+  line-height: 1.5;
+  margin: 0;
+  margin-top: auto;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.lab-card-action {
+  margin-top: 10px;
+  width: 100%;
+}
+
 .lab-elements {
   color: var(--text-secondary);
   font-size: 0.92rem;
+  min-height: 1.4em;
+  line-height: 1.4;
 }
 
-.lab-card-meta-row,
+.lab-card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2px;
+  min-height: 28px;
+}
+
+.lab-card-meta-row .lab-safety-pill {
+  flex-shrink: 0;
+}
+
+.lab-card-meta-row .lab-card-status {
+  flex-shrink: 0;
+}
+
 .lab-detail-actions,
 .lab-simulation-meta,
 .lab-canvas-overlay,
@@ -103,12 +231,12 @@ body:has(#lab.active) .detail-panel.docked {
 .lab-safety-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
+  gap: 6px;
+  padding: 4px 0px;
   border-radius: 5px;
-  border: 1px solid currentColor;
   font-size: 0.82rem;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 .level-safe { color: #4ade80; }
@@ -118,11 +246,17 @@ body:has(#lab.active) .detail-panel.docked {
 .level-extremely-dangerous { color: #ef4444; }
 
 .lab-complete-badge {
-  padding: 6px 10px;
-  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 4px;
   background: rgba(148, 163, 184, 0.12);
   color: var(--text-muted);
   font-size: 0.8rem;
+  line-height: 1;
 }
 
 .lab-complete-badge.is-complete {
@@ -147,16 +281,88 @@ body:has(#lab.active) .detail-panel.docked {
   gap: 14px;
 }
 
+.lab-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.lab-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  min-height: 0;
+}
+
+.lab-summary-row.is-equation {
+  grid-column: 1 / -1;
+}
+
+.lab-summary-row > span {
+  flex-shrink: 0;
+  width: 5em;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.lab-summary-row > strong {
+  flex: 1 1 auto;
+  font-size: 0.88rem;
+  color: #ffffff;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.lab-summary-row.is-equation > strong {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+}
+
+.lab-summary-row .lab-safety-pill {
+  font-size: 0.82rem;
+  border: 0;
+}
+
+.lab-summary-row[data-chem-notation] > strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lab-summary-row .chem-notation,
+.lab-summary-row .chem-notation .katex,
+.lab-summary-row .chem-notation .katex-html {
+  color: #ffffff !important;
+}
+
+.lab-summary-row .chem-notation .katex * {
+  color: #ffffff !important;
+}
+
 .lab-stage-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.95fr);
+  grid-template-columns: 1fr;
   gap: 18px;
+}
+
+.lab-stage-extras {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .lab-stage-main,
 .lab-stage-sidebar {
   display: grid;
   gap: 16px;
+  align-content: start;
 }
 
 .lab-stage-card {
@@ -164,6 +370,7 @@ body:has(#lab.active) .detail-panel.docked {
   border-radius: 5px;
   background: rgba(15, 23, 42, 0.78);
   border: 1px solid rgba(148, 163, 184, 0.14);
+  align-content: start;
 }
 
 .lab-stage-card > span,
@@ -182,6 +389,9 @@ body:has(#lab.active) .detail-panel.docked {
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: linear-gradient(180deg, rgba(8, 15, 31, 0.9), rgba(15, 23, 42, 0.85));
   padding: 18px 20px;
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
 .lab-equation-card strong,
@@ -236,6 +446,7 @@ body:has(#lab.active) .detail-panel.docked {
   gap: 10px;
   color: #d9ebff;
   font-size: 0.8rem;
+  align-content: start;
 }
 
 .lab-safety-alert {
@@ -290,6 +501,7 @@ body:has(#lab.active) .detail-panel.docked {
 .lab-nav-row {
   display: flex;
   justify-content: flex-end;
+  margin-top: 18px;
 }
 
 .lab-games-stat {
@@ -327,6 +539,39 @@ body:has(#lab.active) .detail-panel.docked {
   overflow: auto;
 }
 
+.lab-detail-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 190;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 4vw, 40px);
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.lab-detail-modal {
+  width: min(1280px, 96vw);
+  max-height: min(760px, 88vh);
+  overflow: auto;
+}
+
+.lab-detail-modal .lab-stage-shell {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lab-detail-modal .lab-stage-shell > .lab-safety-modal,
+.lab-detail-modal .lab-stage-shell > .lab-stage-layout,
+.lab-detail-modal .lab-stage-shell > .lab-summary-grid,
+.lab-detail-modal .lab-stage-shell > .lab-result-grid {
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
 .lab-modal-header {
   display: flex;
   align-items: flex-start;
@@ -339,8 +584,136 @@ body:has(#lab.active) .detail-panel.docked {
   margin-bottom: 6px;
 }
 
+/* ===== Editable experiment title ===== */
+.lab-detail-title {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.lab-detail-title-text {
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  color: #f8fbff;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.lab-detail-title-text:hover {
+  opacity: 0.82;
+}
+
+.lab-detail-title-edit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.lab-detail-title-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 80ch;
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(34, 211, 238, 0.45);
+  background: rgba(15, 23, 42, 0.78);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.3;
+  box-shadow: inset 0 0 12px rgba(34, 211, 238, 0.06);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.lab-detail-title-input::placeholder {
+  color: rgba(148, 163, 184, 0.55);
+}
+
+.lab-detail-title-input:focus {
+  outline: none;
+  border-color: rgba(34, 211, 238, 0.72);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.14), inset 0 0 14px rgba(34, 211, 238, 0.08);
+}
+
+.lab-detail-title-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.lab-detail-title-action {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.lab-detail-title-action:hover:not([disabled]) {
+  border-color: rgba(148, 163, 184, 0.55);
+  box-shadow: 0 4px 12px rgba(2, 6, 23, 0.2);
+}
+
+.lab-detail-title-action:focus-visible {
+  outline: none;
+  border-color: rgba(34, 211, 238, 0.65);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.14);
+}
+
+.lab-detail-title-save {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(34, 197, 94, 0.1));
+  border-color: rgba(34, 197, 94, 0.42);
+  color: #d2ffe7;
+}
+
+.lab-detail-title-save:hover:not([disabled]) {
+  border-color: rgba(34, 197, 94, 0.68);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.18);
+}
+
+.lab-detail-title-cancel {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.06));
+  border-color: rgba(239, 68, 68, 0.32);
+  color: #ffd9d9;
+}
+
+.lab-detail-title-cancel:hover:not([disabled]) {
+  border-color: rgba(239, 68, 68, 0.58);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.14);
+}
+
+.lab-detail-title-error {
+  display: block;
+  margin-top: 6px;
+  color: #fca5a5;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 680px) {
+  .lab-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-summary-row.is-equation {
+    grid-column: auto;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 900px) {
-  .lab-toolbar,
+  .lab-toolbar-top,
+  .lab-toolbar-main,
   .lab-item-card-header,
   .lab-card-meta-row,
   .lab-detail-actions,
@@ -350,6 +723,10 @@ body:has(#lab.active) .detail-panel.docked {
   .lab-nav-row-split {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .lab-toolbar-meta {
+    text-align: left;
   }
 
   .lab-stage-grid,
