@@ -12,7 +12,7 @@ import {
   setPerformanceMode as setRendererPerformanceMode
 } from './three/scene.js';
 import { disposeParticles, initParticles, setParticleDensity } from './three/particles.js';
-import { initRouter } from './modules/router.js';
+import { initRouter, normalizeCurrentHash } from './modules/router.js';
 import { initPeriodicTable } from './modules/renderTable.js';
 import { initDetailPanel } from './modules/detailPanel.js';
 import { initFilters } from './modules/filters.js';
@@ -63,6 +63,8 @@ async function init() {
   const loader = document.getElementById('global-loader');
   const canvas = document.getElementById('bg-canvas');
   const settings = getSettings();
+
+  normalizeCurrentHash();
 
   await initScene(canvas, {
     performanceMode: settings.performanceMode,

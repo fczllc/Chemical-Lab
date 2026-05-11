@@ -26,6 +26,7 @@ function createDefaultState(elements = []) {
     collectedElements: new Set(),
     quizScores: [],
     completedExperiments: new Set(),
+    experimentTitleOverrides: {},
     unlockedAchievements: new Set(),
     achievementDates: {},
     gameScores: {},
@@ -205,6 +206,45 @@ function normalizeSettings(settings) {
   };
 }
 
+function isPlainObject(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return false;
+  }
+
+  const prototype = Object.getPrototypeOf(value);
+  return prototype === Object.prototype || prototype === null;
+}
+
+function normalizeExperimentTitleOverrides(value) {
+  if (!isPlainObject(value)) {
+    return {};
+  }
+
+  return Object.entries(value).reduce((accumulator, [key, title]) => {
+    if (typeof key !== 'string' || typeof title !== 'string') {
+      return accumulator;
+    }
+
+    const normalizedKey = key.trim();
+    const normalizedTitle = title.trim();
+
+    if (normalizedKey && normalizedTitle) {
+      accumulator[normalizedKey] = normalizedTitle;
+    }
+
+    return accumulator;
+  }, {});
+}
+
+function normalizeExperimentTitleKey(reactionKey) {
+  if (typeof reactionKey !== 'string') {
+    return null;
+  }
+
+  const normalizedKey = reactionKey.trim();
+  return normalizedKey ? normalizedKey : null;
+}
+
 function sanitizeSettingsPatch(settings) {
   if (!settings || typeof settings !== 'object' || Array.isArray(settings)) {
     return {};
@@ -302,6 +342,7 @@ function serializeState() {
     collectedElements: [...appState.collectedElements],
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: [...appState.completedExperiments],
+    experimentTitleOverrides: { ...appState.experimentTitleOverrides },
     unlockedAchievements: [...appState.unlockedAchievements],
     achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
@@ -328,6 +369,7 @@ function migrateV0ToV1(data) {
       ? data.quizScores.map((score) => normalizeQuizScore(score)).filter(Boolean)
       : [],
     completedExperiments: data.completedExperiments || [],
+    experimentTitleOverrides: data.experimentTitleOverrides || {},
     unlockedAchievements: data.unlockedAchievements || [],
     achievementDates: data.achievementDates || {},
     gameScores: data.gameScores || {},
@@ -401,6 +443,7 @@ function normalizePersistedData(data) {
         ? data.completedExperiments.filter((item) => typeof item === 'string' && item.trim())
         : []
     ),
+    experimentTitleOverrides: normalizeExperimentTitleOverrides(data.experimentTitleOverrides),
     unlockedAchievements: new Set(
       Array.isArray(data.unlockedAchievements)
         ? data.unlockedAchievements.filter((item) => typeof item === 'string' && item.trim())
@@ -505,6 +548,7 @@ export function getStateSnapshot() {
     collectedElements: new Set(appState.collectedElements),
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: new Set(appState.completedExperiments),
+    experimentTitleOverrides: { ...appState.experimentTitleOverrides },
     unlockedAchievements: new Set(appState.unlockedAchievements),
     achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
@@ -740,6 +784,71 @@ export function addQuizScore(scoreObj) {
 
 export function getCompletedExperiments() {
   return new Set(appState.completedExperiments);
+}
+
+export function getExperimentTitleOverride(reactionKey) {
+  const normalizedKey = normalizeExperimentTitleKey(reactionKey);
+  if (!normalizedKey) {
+    return null;
+  }
+
+  return appState.experimentTitleOverrides[normalizedKey] ?? null;
+}
+
+export function setExperimentTitleOverride(reactionKey, title, options = {}) {
+  const normalizedKey = normalizeExperimentTitleKey(reactionKey);
+  if (!normalizedKey) {
+    return null;
+  }
+
+  const trimmedTitle = typeof title === 'string' ? title.trim() : '';
+  const canonicalTitle = typeof options.canonicalTitle === 'string' ? options.canonicalTitle.trim() : '';
+  const nextTitle = trimmedTitle && trimmedTitle !== canonicalTitle ? trimmedTitle : null;
+  const currentTitle = appState.experimentTitleOverrides[normalizedKey] ?? null;
+
+  if (currentTitle === nextTitle) {
+    return currentTitle;
+  }
+
+  const oldValue = { ...appState.experimentTitleOverrides };
+  const nextValue = { ...appState.experimentTitleOverrides };
+
+  if (nextTitle === null) {
+    delete nextValue[normalizedKey];
+  } else {
+    nextValue[normalizedKey] = nextTitle;
+  }
+
+  appState.experimentTitleOverrides = nextValue;
+  emitStateChange('experimentTitleOverrides', oldValue, appState.experimentTitleOverrides, 'experimenttitlechange', {
+    reactionKey: normalizedKey,
+    previousTitle: currentTitle,
+    title: nextTitle,
+    canonicalTitle: canonicalTitle || null
+  });
+
+  return nextTitle;
+}
+
+export function clearExperimentTitleOverride(reactionKey) {
+  const normalizedKey = normalizeExperimentTitleKey(reactionKey);
+  if (!normalizedKey || !Object.prototype.hasOwnProperty.call(appState.experimentTitleOverrides, normalizedKey)) {
+    return null;
+  }
+
+  const oldValue = { ...appState.experimentTitleOverrides };
+  const nextValue = { ...appState.experimentTitleOverrides };
+  delete nextValue[normalizedKey];
+
+  appState.experimentTitleOverrides = nextValue;
+  emitStateChange('experimentTitleOverrides', oldValue, appState.experimentTitleOverrides, 'experimenttitlechange', {
+    reactionKey: normalizedKey,
+    previousTitle: oldValue[normalizedKey] ?? null,
+    title: null,
+    canonicalTitle: null
+  });
+
+  return null;
 }
 
 export function markExperimentCompleted(experimentId) {

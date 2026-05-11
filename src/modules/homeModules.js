@@ -26,6 +26,7 @@ const ELEMENT_ATOMIC_NUMBER_MIME = 'application/x-element-atomic-number';
 const BOTTOM_PANEL_COLLAPSED_LABEL = '点击展开';
 const BOTTOM_PANEL_EXPANDED_LABEL = '点击收起';
 const BOTTOM_PANEL_TITLE_ROW_CLASS = 'bottom-modules-title-row';
+const BOTTOM_PANEL_DESKTOP_QUERY = '(min-width: 1200px)';
 
 let allElements = [];
 let cardRefs = null;
@@ -35,6 +36,7 @@ let recentAchievementIds = [];
 export function initHomeModules(elements = []) {
   allElements = Array.isArray(elements) ? [...elements] : [];
   ensureBottomPanelTitleRow();
+  ensureBottomModuleOrder();
   cardRefs = getCardRefs();
 
   if (!hasRequiredContainers(cardRefs)) {
@@ -64,6 +66,25 @@ function ensureBottomPanelTitleRow() {
   `;
 
   root.prepend(titleRow);
+}
+
+function ensureBottomModuleOrder() {
+  const root = document.getElementById('bottom-modules');
+  if (!root) {
+    return;
+  }
+
+  [
+    '[data-testid="bottom-compare"]',
+    '[data-testid="bottom-categories"]',
+    '[data-testid="bottom-element-stats"]',
+    '[data-testid="bottom-stats"]'
+  ].forEach((selector) => {
+    const card = root.querySelector(selector);
+    if (card) {
+      root.append(card);
+    }
+  });
 }
 
 function getCardRefs() {
@@ -116,7 +137,7 @@ function enhanceCards() {
     card.setAttribute('role', 'button');
   });
 
-  setBottomPanelCollapsed(true);
+  setBottomPanelCollapsed(!isDesktopBottomPanelLayout());
 }
 
 function bindCardEvents() {
@@ -276,7 +297,7 @@ function renderComparePreview() {
     <div class="preview-card-shell preview-compare-shell">
       <div class="preview-card-topline">
         <h4>元素对比</h4>
-        <span class="preview-metric compare-preview-status" aria-label="对比槽位 ${compareSlotStatus}">${compareSlotStatus}</span>
+        <span class="preview-metric compare-preview-status" aria-label="对比槽位 ${compareSlotStatus}">对比</span>
       </div>
       <div class="compare-preview-grid">
         ${compareList.map((element, index) => renderComparePreviewElement(element, index)).join('')}
@@ -304,6 +325,12 @@ function renderComparePreview() {
   });
 
   bindCompareEmptySlots();
+}
+
+function isDesktopBottomPanelLayout() {
+  return typeof window !== 'undefined'
+    && typeof window.matchMedia === 'function'
+    && window.matchMedia(BOTTOM_PANEL_DESKTOP_QUERY).matches;
 }
 
 function renderComparePreviewElement(element, index) {
@@ -511,7 +538,7 @@ function renderStatsPreview() {
   cardRefs.statsContent.innerHTML = `
     <div class="preview-card-shell preview-stats-shell">
       <div class="preview-card-topline">
-        <h4>学习进度</h4>
+        <h4>统计概览</h4>
         <div class="stats-progress-badge">${progressPercent}%</div>
       </div>
       <div class="stats-inline-progress">

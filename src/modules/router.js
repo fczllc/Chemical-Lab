@@ -44,6 +44,15 @@ export function initRouter() {
   handleHashChange();
 }
 
+export function normalizeCurrentHash() {
+  const hash = window.location.hash || '#/';
+  const path = hash.replace('#', '');
+
+  if (!routeMap[path]) {
+    window.location.hash = '#/';
+  }
+}
+
 function handleHashChange() {
   const hash = window.location.hash || '#/';
   const path = hash.replace('#', '');
