@@ -136,7 +136,7 @@ function renderAchievements() {
 }
 
 function renderCategorySection(category, achievements, unlockedIds, unlockDates) {
-  const meta = ACHIEVEMENT_CATEGORY_META[category] || { label: category, icon: '🏅' };
+  const meta = ACHIEVEMENT_CATEGORY_META[category] || { label: category, icon: 'award' };
   const unlockedCount = achievements.filter((achievement) => unlockedIds.has(achievement.id)).length;
 
   return `
@@ -162,7 +162,7 @@ function renderAchievementCard(achievement, unlockedIds, unlockDates) {
   return `
     <article class="achievement-card ${unlocked ? 'is-unlocked' : 'is-locked'}" data-rarity="${achievement.rarity}">
       <div class="achievement-card-top">
-        <span class="achievement-icon">${achievement.icon || '🏅'}</span>
+        <span class="achievement-icon"><i data-lucide="${achievement.icon || 'award'}"></i></span>
         <span class="achievement-rarity">${formatRarity(achievement.rarity)}</span>
       </div>
       <div class="achievement-card-body">
@@ -217,7 +217,10 @@ function showAchievementPopup(achievement) {
     return;
   }
 
-  popup.querySelector('.popup-icon').textContent = achievement.icon || '🏅';
+  const popupIcon = popup.querySelector('.popup-icon');
+  if (popupIcon) {
+    popupIcon.innerHTML = `<i data-lucide="${achievement.icon || 'award'}"></i>`;
+  }
   popup.querySelector('.popup-title').textContent = achievement.title;
   popup.querySelector('.popup-desc').textContent = `${achievement.description} · ${achievement.unlockText}`;
   popup.classList.remove('show');

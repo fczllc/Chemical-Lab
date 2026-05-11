@@ -5,7 +5,7 @@ export const achievementsData = [
     "title": "初识元素",
     "description": "第一次学习一个元素，正式踏入元素探索之旅。",
     "unlockText": "学习第 1 个元素",
-    "icon": "✨",
+    "icon": "sparkles",
     "rarity": "common",
     "condition": {
       "type": "learnedElements",
@@ -22,7 +22,7 @@ export const achievementsData = [
     "title": "初级探索者",
     "description": "累计学习 10 个元素，已经能认出许多常见元素。",
     "unlockText": "学习 10 个元素",
-    "icon": "🧭",
+    "icon": "compass",
     "rarity": "common",
     "condition": {
       "type": "learnedElements",
@@ -39,7 +39,7 @@ export const achievementsData = [
     "title": "元素收集家",
     "description": "累计学习 50 个元素，收藏墙开始变得丰富起来。",
     "unlockText": "学习 50 个元素",
-    "icon": "🗂️",
+    "icon": "folder-open",
     "rarity": "rare",
     "condition": {
       "type": "learnedElements",
@@ -56,7 +56,7 @@ export const achievementsData = [
     "title": "元素大师",
     "description": "学习全部 118 个元素，完成完整的周期表探索。",
     "unlockText": "学习全部 118 个元素",
-    "icon": "👑",
+    "icon": "crown",
     "rarity": "legendary",
     "condition": {
       "type": "learnedElements",
@@ -73,7 +73,7 @@ export const achievementsData = [
     "title": "实验室新手",
     "description": "完成第一个虚拟实验，开始理解元素反应。",
     "unlockText": "完成 1 个实验",
-    "icon": "🧪",
+    "icon": "flask-conical",
     "rarity": "common",
     "condition": {
       "type": "completedExperiments",
@@ -90,7 +90,7 @@ export const achievementsData = [
     "title": "实验室安全员",
     "description": "完成全部 5 个实验，已经是一名可靠的小研究员。",
     "unlockText": "完成全部 5 个实验",
-    "icon": "🛡️",
+    "icon": "shield",
     "rarity": "rare",
     "condition": {
       "type": "completedExperiments",
@@ -107,7 +107,7 @@ export const achievementsData = [
     "title": "求知者",
     "description": "完成第一次测验，开始用答题巩固自己的知识。",
     "unlockText": "完成 1 次测验",
-    "icon": "📘",
+    "icon": "book-open",
     "rarity": "common",
     "condition": {
       "type": "quizAttempts",
@@ -124,7 +124,7 @@ export const achievementsData = [
     "title": "满分学霸",
     "description": "任意一次测验获得满分，知识掌握非常扎实。",
     "unlockText": "任意一次测验获得满分",
-    "icon": "🏆",
+    "icon": "trophy",
     "rarity": "rare",
     "condition": {
       "type": "quizPerfectScore"
@@ -140,7 +140,7 @@ export const achievementsData = [
     "title": "游戏新手",
     "description": "完成第一次学习游戏，用游戏巩固化学知识。",
     "unlockText": "完成 1 次任意游戏",
-    "icon": "🎮",
+    "icon": "gamepad-2",
     "rarity": "common",
     "condition": {
       "type": "gamePlays",
@@ -157,7 +157,7 @@ export const achievementsData = [
     "title": "记忆大师",
     "description": "在元素记忆翻牌中拿到高分，说明你已经建立了牢固的元素记忆。",
     "unlockText": "元素记忆翻牌最高分达到 120",
-    "icon": "🧠",
+    "icon": "brain",
     "rarity": "rare",
     "condition": {
       "type": "gameScore",
@@ -175,7 +175,7 @@ export const achievementsData = [
     "title": "反应专家",
     "description": "在反应配对中稳定高分，已经能快速识别典型反应结果。",
     "unlockText": "反应配对最高分达到 50",
-    "icon": "⚡",
+    "icon": "zap",
     "rarity": "legendary",
     "condition": {
       "type": "gameScore",

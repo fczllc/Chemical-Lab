@@ -239,6 +239,11 @@ body:has(#lab.active) .detail-panel.docked {
   line-height: 1.4;
 }
 
+.lab-safety-pill svg {
+  width: 14px;
+  height: 14px;
+}
+
 .level-safe { color: #4ade80; }
 .level-caution { color: #facc15; }
 .level-dangerous { color: #fb923c; }
@@ -262,6 +267,11 @@ body:has(#lab.active) .detail-panel.docked {
 .lab-complete-badge.is-complete {
   background: rgba(0, 255, 136, 0.12);
   color: var(--neon-green);
+}
+
+.lab-complete-badge svg {
+  width: 14px;
+  height: 14px;
 }
 
 .lab-stage {
@@ -658,6 +668,11 @@ body:has(#lab.active) .detail-panel.docked {
   line-height: 1;
   transition: var(--transition-fast);
   cursor: pointer;
+}
+
+.lab-detail-title-action svg {
+  width: 16px;
+  height: 16px;
 }
 
 .lab-detail-title-action:hover:not([disabled]) {

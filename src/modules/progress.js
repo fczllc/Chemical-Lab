@@ -230,7 +230,7 @@ function renderProgress() {
         </div>
       </div>
 
-      ${celebrationMessage ? `<div class="stage-celebration-banner">🎉 ${celebrationMessage}</div>` : ''}
+      ${celebrationMessage ? `<div class="stage-celebration-banner"><i data-lucide="party-popper"></i> ${celebrationMessage}</div>` : ''}
 
       <div class="progress-stat-grid">
         <article class="progress-stat-card"><span>总体进度</span><strong>${learned.size}/${TOTAL_ELEMENTS}</strong><small>已学习元素总数</small></article>
@@ -352,7 +352,7 @@ function getStageStates(stages, learned, completedExperiments, quizScores) {
 }
 
 function renderStageCard(stage, learnedCount) {
-  const icon = stage.status === 'complete' ? '✅' : stage.status === 'current' ? '🌟' : '🔒';
+  const icon = stage.status === 'complete' ? 'check-circle-2' : stage.status === 'current' ? 'star' : 'lock';
   const curriculumLabels = (stage.curriculum?.topics || [])
     .map((topic) => topic.displayPath)
     .filter(Boolean);
@@ -364,7 +364,7 @@ function renderStageCard(stage, learnedCount) {
       <button class="progress-stage-button" type="button" data-stage-select="${stage.id}">
         <div class="progress-stage-top">
           <div>
-            <p class="hud-kicker">${icon} PATH STAGE</p>
+            <p class="hud-kicker"><i data-lucide="${icon}"></i> PATH STAGE</p>
             <h3>${stage.name}</h3>
           </div>
           <strong>${stage.completedCount}/${stage.requiredCount}</strong>
@@ -401,7 +401,7 @@ function renderStageDetail(stage, snapshot) {
           ${curriculum.topics.map((t) => `
             <div class="curriculum-topic-row">
               <span class="curriculum-topic-path">${t.displayPath}</span>
-              <span class="curriculum-topic-status">${t.completed ? '✅' : t.started ? '🌟' : '○'} ${t.completed ? '已完成' : t.started ? '进行中' : '未开始'} · ${t.completedActivities}/${t.totalActivities || 0}</span>
+              <span class="curriculum-topic-status"><i data-lucide="${t.completed ? 'check-circle-2' : t.started ? 'star' : 'circle'}"></i> ${t.completed ? '已完成' : t.started ? '进行中' : '未开始'} · ${t.completedActivities}/${t.totalActivities || 0}</span>
             </div>
           `).join('')}
         </div>
@@ -415,7 +415,7 @@ function renderStageDetail(stage, snapshot) {
           <p class="hud-kicker">STAGE DETAIL</p>
           <h4>${stage.name}</h4>
         </div>
-        <span>${stage.status === 'locked' ? '🔒 未解锁' : stage.status === 'complete' ? '✅ 已完成' : '🌟 当前阶段'}</span>
+        <span><i data-lucide="${stage.status === 'locked' ? 'lock' : stage.status === 'complete' ? 'check-circle-2' : 'star'}"></i> ${stage.status === 'locked' ? '未解锁' : stage.status === 'complete' ? '已完成' : '当前阶段'}</span>
       </div>
       <p class="progress-stage-detail-copy">${stage.description} 当前进度 ${stage.completedCount}/${stage.requiredCount}，${stage.remainingCount > 0 ? `再学习 ${stage.remainingCount} 个元素即可完成。` : '该阶段已经达成。'}</p>
       <div class="progress-stage-detail-grid">
@@ -428,9 +428,9 @@ function renderStageDetail(stage, snapshot) {
         <div class="progress-detail-card">
           <span>解锁内容预览</span>
           <ul class="progress-unlock-list">
-            ${stage.unlockedGames.map((gameKey) => `<li>🎮 ${GAME_LABELS[gameKey] || gameKey}</li>`).join('')}
-            ${stage.unlockedExperiments.map((experimentId) => `<li>🧪 ${EXPERIMENT_LABELS[experimentId] || experimentId}</li>`).join('')}
-            ${stage.unlockedFeatures.map((featureKey) => `<li>✨ ${FEATURE_LABELS[featureKey] || featureKey}</li>`).join('')}
+            ${stage.unlockedGames.map((gameKey) => `<li><i data-lucide="gamepad-2"></i> ${GAME_LABELS[gameKey] || gameKey}</li>`).join('')}
+            ${stage.unlockedExperiments.map((experimentId) => `<li><i data-lucide="flask-conical"></i> ${EXPERIMENT_LABELS[experimentId] || experimentId}</li>`).join('')}
+            ${stage.unlockedFeatures.map((featureKey) => `<li><i data-lucide="sparkles"></i> ${FEATURE_LABELS[featureKey] || featureKey}</li>`).join('')}
           </ul>
         </div>
         ${curriculumHtml}
@@ -441,7 +441,7 @@ function renderStageDetail(stage, snapshot) {
 
 function renderElementChip(atomicNumber, element, learned) {
   const label = element ? `${element.chineseName} (${element.symbol})` : `元素 ${atomicNumber}`;
-  return `<span class="stage-element-chip ${learned ? 'is-learned' : ''}">${learned ? '✓' : '•'} ${label}</span>`;
+  return `<span class="stage-element-chip ${learned ? 'is-learned' : ''}"><i data-lucide="${learned ? 'check' : 'circle'}"></i> ${label}</span>`;
 }
 
 function renderActivityList(activityLog, snapshot) {

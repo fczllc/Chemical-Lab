@@ -104,11 +104,11 @@ export const COMPARE_SAFETY_COLORS = {
 };
 
 export const LAB_SAFETY_THEME = {
-  safe: { label: SAFETY_LABELS.safe, color: '#4ade80', glow: 'rgba(74, 222, 128, 0.35)', icon: '🟢' },
-  caution: { label: SAFETY_LABELS.caution, color: '#facc15', glow: 'rgba(250, 204, 21, 0.35)', icon: '🟡' },
-  dangerous: { label: SAFETY_LABELS.dangerous, color: '#fb923c', glow: 'rgba(251, 146, 60, 0.4)', icon: '🟠' },
-  radioactive: { label: SAFETY_LABELS.radioactive, color: '#c084fc', glow: 'rgba(192, 132, 252, 0.4)', icon: '🟣' },
-  'extremely dangerous': { label: SAFETY_LABELS['extremely dangerous'], color: '#ef4444', glow: 'rgba(239, 68, 68, 0.45)', icon: '🔴' }
+  safe: { label: SAFETY_LABELS.safe, color: '#4ade80', glow: 'rgba(74, 222, 128, 0.35)', icon: 'check-circle' },
+  caution: { label: SAFETY_LABELS.caution, color: '#facc15', glow: 'rgba(250, 204, 21, 0.35)', icon: 'alert-triangle' },
+  dangerous: { label: SAFETY_LABELS.dangerous, color: '#fb923c', glow: 'rgba(251, 146, 60, 0.4)', icon: 'alert-octagon' },
+  radioactive: { label: SAFETY_LABELS.radioactive, color: '#c084fc', glow: 'rgba(192, 132, 252, 0.4)', icon: 'radiation' },
+  'extremely dangerous': { label: SAFETY_LABELS['extremely dangerous'], color: '#ef4444', glow: 'rgba(239, 68, 68, 0.45)', icon: 'skull' }
 };
 
 export const GAME_KEYS = {

@@ -37,6 +37,7 @@ import {
   saveProgress,
   updateSettings
 } from './modules/storage.js';
+import { createIcons } from 'lucide';
 
 let animationFrameId = null;
 let hasDisposed = false;
@@ -90,6 +91,17 @@ async function init() {
   bindLifecycleEvents();
   updateStats();
   animate();
+
+  // Initialize Lucide icons
+  createIcons();
+
+  // Re-initialize icons after dynamic content updates
+  window.addEventListener('statechange', () => {
+    requestAnimationFrame(() => createIcons());
+  });
+  window.addEventListener('pagechange', () => {
+    requestAnimationFrame(() => createIcons());
+  });
 
   // 隐藏加载指示器
   if (loader) {

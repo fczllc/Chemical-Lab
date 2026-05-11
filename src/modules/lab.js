@@ -254,10 +254,10 @@ function renderLabShell() {
               <h3 title="${escapeAttr(titlePlain)}">${titleHtml}</h3>
               <p class="lab-elements" data-chem-notation="reactants">${reaction.reactants.map((r) => formulaHTML(r)).join(' + ')}</p>
             </div>
-            <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}" title="${isCompleted ? '已完成' : '未完成'}">${isCompleted ? '✓' : '○'}</span>
+            <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}" title="${isCompleted ? '已完成' : '未完成'}"><i data-lucide="${isCompleted ? 'check' : 'circle'}"></i></span>
           </div>
           <div class="lab-card-meta-row">
-            <span class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}">${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</span>
+            <span class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</span>
             <span class="lab-card-status">${unlockState.unlocked ? (isRelated ? '与当前元素相关' : '通用演示实验') : '课程进度锁定'}</span>
           </div>
           <p class="lab-card-description">${renderCardDescription(reaction.description)}</p>
@@ -616,8 +616,8 @@ function renderTitleEditMode(reaction, canonicalTitle) {
       />
       ${error ? `<span data-testid="experiment-title-error" class="lab-detail-title-error">${escapeAttr(error)}</span>` : ''}
       <div class="lab-detail-title-actions">
-        <button data-testid="experiment-title-save" class="hud-action-btn hud-action-btn-primary lab-detail-title-action lab-detail-title-save" aria-label="保存标题">√</button>
-        <button data-testid="experiment-title-cancel" class="hud-action-btn lab-detail-title-action lab-detail-title-cancel" aria-label="放弃修改">×</button>
+        <button data-testid="experiment-title-save" class="hud-action-btn hud-action-btn-primary lab-detail-title-action lab-detail-title-save" aria-label="保存标题"><i data-lucide="check"></i></button>
+        <button data-testid="experiment-title-cancel" class="hud-action-btn lab-detail-title-action lab-detail-title-cancel" aria-label="放弃修改"><i data-lucide="x"></i></button>
       </div>
     </div>
   `;
@@ -667,7 +667,7 @@ function renderReactionDetail(reaction, isCompleted) {
         ${chemRows.products}
         <div class="lab-summary-row">
           <span>安全级别</span>
-          <strong class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}">${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
+          <strong class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
         </div>
         <div class="lab-summary-row">
           <span>完成状态</span>
@@ -775,7 +775,7 @@ function renderSafetyView(reaction, isCompleted) {
       </div>
       <div class="lab-safety-modal">
         <div class="lab-safety-alert level-${reaction.safetyLevel.replace(/\s+/g, '-')}">
-          <strong>${safetyTheme.icon} ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
+          <strong><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
           <p>${unlockState.unlocked ? '开始前请先阅读本次实验的操作提示与实验守则。' : '该实验需要先完成对应课程进度，暂时只能查看说明。'}</p>
         </div>
         <div class="lab-stage-layout">

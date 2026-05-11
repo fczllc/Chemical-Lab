@@ -168,6 +168,14 @@
 
 .achievement-icon {
   font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.achievement-icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .achievement-rarity {
@@ -239,6 +247,15 @@
   background: linear-gradient(90deg, rgba(148, 163, 184, 0.16), rgba(148, 163, 184, 0.08));
   border: 1px solid rgba(148, 163, 184, 0.32);
   color: #f8fbff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-celebration-banner svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
 }
 
 .progress-metric-panel,
@@ -352,6 +369,15 @@
   border: 1px solid rgba(148, 163, 184, 0.12);
   color: var(--text-secondary);
   font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stage-element-chip svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .stage-element-chip.is-learned {
@@ -366,6 +392,15 @@
 
 .progress-unlock-list li {
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress-unlock-list li svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .achievement-popup {
@@ -403,6 +438,11 @@
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.08);
   font-size: 1.4rem;
+}
+
+.achievement-popup .popup-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .achievement-popup .popup-title {

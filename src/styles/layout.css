@@ -85,6 +85,16 @@
 
 .nav-icon {
   font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg,
+.settings-icon svg,
+.lock-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .header-right {
@@ -127,6 +137,12 @@
   justify-content: center;
   transition: var(--transition-fast);
   font-size: 1.1rem;
+}
+
+.settings-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .settings-btn:hover {
@@ -971,6 +987,14 @@
 .lock-icon {
   font-size: 1.5rem;
   opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* 底部模块预览内容 */
@@ -1759,6 +1783,14 @@
   font-size: 2rem;
   color: var(--neon-yellow);
   text-shadow: 0 0 12px rgba(255, 221, 0, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-icon svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .popup-title {
@@ -2073,6 +2105,11 @@
   gap: 6px;
 }
 
+.compare-card-remove svg {
+  width: 14px;
+  height: 14px;
+}
+
 .compare-card-remove:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.08);
@@ -2087,6 +2124,14 @@
   color: var(--text-muted);
   text-shadow: none;
   margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-empty-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /* Toast 提示 */

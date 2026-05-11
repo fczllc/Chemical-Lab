@@ -216,6 +216,21 @@ input:focus, select:focus {
   cursor: not-allowed;
 }
 
+/* Lucide Icons 全局样式 */
+[data-lucide] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+[data-lucide] svg {
+  width: 100%;
+  height: 100%;
+}
+
 /* 隐藏类 */
 .hidden {
   display: none !important;

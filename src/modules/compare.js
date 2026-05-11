@@ -242,7 +242,7 @@ function renderEmptyState(mode = 'route') {
   if (mode === 'modal') {
     return `
       <div class="compare-page-empty compare-page-empty-modal">
-        <div class="compare-empty-icon">&#8644;</div>
+      <div class="compare-empty-icon"><i data-lucide="arrow-left-right"></i></div>
         <strong>对比列表还是空的</strong>
         <p>把元素拖入底部对比预览，或选中元素后点击空槽，这里会同步刷新。</p>
       </div>
@@ -251,7 +251,7 @@ function renderEmptyState(mode = 'route') {
 
   return `
     <div class="compare-page-empty">
-      <div class="compare-empty-icon">&#8644;</div>
+      <div class="compare-empty-icon"><i data-lucide="arrow-left-right"></i></div>
       <strong>对比列表还是空的</strong>
       <p>把元素拖入底部对比预览，或选中元素后点击空槽，最多可放入 3 个元素，这里和首页预览会同步刷新。</p>
       <button class="compare-btn compare-btn-home" type="button">去添加元素</button>
@@ -293,7 +293,7 @@ function renderElementCard(element) {
       </div>
       <div class="compare-card-footer">
         <button class="compare-card-remove" type="button" data-atomic-number="${element.atomicNumber}" title="从对比中移除">
-          <span>&#10005;</span> 移除
+          <span><i data-lucide="x"></i></span> 移除
         </button>
       </div>
     </article>
