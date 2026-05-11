@@ -1104,6 +1104,7 @@
   grid-auto-rows: var(--bottom-preview-row-height);
   gap: var(--bottom-preview-list-gap);
   height: var(--bottom-preview-list-height);
+  max-height: 100px;
   overflow: hidden;
 }
 
