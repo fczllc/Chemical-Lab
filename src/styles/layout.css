@@ -2163,6 +2163,10 @@
 /* Settings toggle hit area */
 .toggle-switch {
   position: relative;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .toggle-switch input {
@@ -2177,8 +2181,35 @@
 }
 
 .toggle-switch .toggle-slider {
-  position: relative;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 1;
+}
+
+.toggle-switch .toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background: var(--text-secondary);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.3);
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+  background: var(--neon-cyan);
 }
 
 .toggle-switch input:focus-visible + .toggle-slider {
