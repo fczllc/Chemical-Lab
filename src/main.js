@@ -37,7 +37,7 @@ import {
   saveProgress,
   updateSettings
 } from './modules/storage.js';
-import { createIcons } from 'lucide';
+import { createIcons, icons } from 'lucide';
 
 let animationFrameId = null;
 let hasDisposed = false;
@@ -93,14 +93,14 @@ async function init() {
   animate();
 
   // Initialize Lucide icons
-  createIcons();
+  createIcons({ icons });
 
   // Re-initialize icons after dynamic content updates
   window.addEventListener('statechange', () => {
-    requestAnimationFrame(() => createIcons());
+    requestAnimationFrame(() => createIcons({ icons }));
   });
   window.addEventListener('pagechange', () => {
-    requestAnimationFrame(() => createIcons());
+    requestAnimationFrame(() => createIcons({ icons }));
   });
 
   // 隐藏加载指示器
