@@ -20592,10 +20592,10 @@ export const FEATURE_LABELS = {
 };
 
 export const ACHIEVEMENT_CATEGORY_META = {
-  learning: { label: '学习类', icon: '📚' },
-  experiment: { label: '实验类', icon: '🧪' },
-  game: { label: '游戏类', icon: '🎮' },
-  quiz: { label: '测验类', icon: '📝' }
+  learning: { label: '学习类', icon: 'book-open' },
+  experiment: { label: '实验类', icon: 'flask-conical' },
+  game: { label: '游戏类', icon: 'gamepad-2' },
+  quiz: { label: '测验类', icon: 'clipboard-list' }
 };
 
 export const ACHIEVEMENT_RARITY_LABELS = {

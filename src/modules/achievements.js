@@ -143,7 +143,7 @@ function renderCategorySection(category, achievements, unlockedIds, unlockDates)
     <section class="achievement-category-block hud-shell">
       <div class="achievement-category-header">
         <div>
-          <p class="hud-kicker">${meta.icon} ${meta.label}</p>
+          <p class="hud-kicker"><i data-lucide="${meta.icon}"></i> ${meta.label}</p>
           <h3>${meta.label}</h3>
         </div>
         <strong>${unlockedCount}/${achievements.length}</strong>
