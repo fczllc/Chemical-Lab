@@ -2,6 +2,11 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { fileURLToPath } from 'node:url';
+import {
+  createExperimentExcerpt,
+  generateExperimentTitle,
+  normalizeExperimentText
+} from './experiment-enrichment.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '../..');
@@ -59,10 +64,12 @@ const materialKeywords = [
   '红磷'
 ];
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+if (isCliInvocation()) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}
 
 async function main() {
   const options = parseCli(process.argv.slice(2));
@@ -126,6 +133,10 @@ Options:
   --help                              Show this help.`);
 }
 
+function isCliInvocation() {
+  return Boolean(process.argv[1]) && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+}
+
 async function readSourceInventory(inventoryPath, expectedVolumeId) {
   let inventory;
 
@@ -178,6 +189,10 @@ function buildDrafts(inventory) {
   };
 }
 
+export function buildExperimentCandidateForValidation(section) {
+  return buildExperimentCandidate(section);
+}
+
 function buildKnowledgeTopic(section) {
   return {
     topicId: buildCandidateId('knowledge-topic', section),
@@ -205,10 +220,15 @@ function buildQuizCandidate(section) {
 }
 
 function buildExperimentCandidate(section) {
+  const textbookContent = normalizeExperimentText(section.sourceText);
+  const excerpt = createExperimentExcerpt(textbookContent, { maxCjkChars: 100 });
+
   return {
     candidateId: buildCandidateId('experiment', section),
-    title: cleanHeading(section.sourceHeading),
-    summary: summarizeSection(section),
+    title: generateExperimentTitle({ sourceHeading: section.sourceHeading, text: section.sourceText }),
+    summary: excerpt,
+    description: excerpt,
+    textbookContent,
     animationStatus: 'deferred',
     hazardLevel: inferHazardLevel(section.sourceText),
     safetyNotes: extractSafetyNotes(section.sourceText),

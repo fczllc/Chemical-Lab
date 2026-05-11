@@ -15,6 +15,7 @@
     "validate:textbook-batch": "node scripts/textbook/validate-batch-contract.mjs",
     "validate:textbook-drafts": "node scripts/textbook/validate-draft-schema.mjs",
     "validate:textbook-experiments": "node scripts/textbook/validate-experiment-backlog.mjs",
+    "validate:textbook-enrichment": "node scripts/textbook/validate-enrichment-fixtures.mjs",
     "textbook:extract": "node scripts/textbook/extract-textbook.mjs",
     "textbook:generate-drafts": "node scripts/textbook/generate-drafts.mjs",
     "textbook:coverage": "node scripts/textbook/generate-coverage.mjs",

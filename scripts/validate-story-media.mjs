@@ -230,6 +230,10 @@ async function loadStoryMediaItems(options) {
     : shardDefinitions;
   const items = [];
 
+  if (await shouldUseLegacyMediaFile(shards)) {
+    return loadLegacyStoryMediaItems(shards);
+  }
+
   for (const shard of shards) {
     const shardPath = path.join(storyMediaDir, shard.fileName);
     const wrapper = ensureObject(JSON.parse(await readFile(shardPath, 'utf8')), `${shard.fileName} 顶层必须是对象`);
@@ -252,6 +256,95 @@ async function loadStoryMediaItems(options) {
   }
 
   return items;
+}
+
+async function shouldUseLegacyMediaFile(shards) {
+  for (const shard of shards) {
+    try {
+      await access(path.join(storyMediaDir, shard.fileName), fsConstants.R_OK);
+    } catch {
+      try {
+        await access(path.join(storyMediaDir, 'media.json'), fsConstants.R_OK);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+  }
+
+  return false;
+}
+
+async function loadLegacyStoryMediaItems(shards) {
+  const legacyFileName = 'media.json';
+  const legacyPath = path.join(storyMediaDir, legacyFileName);
+  const wrapper = ensureObject(JSON.parse(await readFile(legacyPath, 'utf8')), `${legacyFileName} 顶层必须是对象`);
+  const legacyElements = Array.isArray(wrapper?.elements) ? wrapper.elements : [];
+  const selectedRanges = new Set(shards.map((shard) => `${shard.start}-${shard.end}`));
+  const items = [];
+
+  for (const element of legacyElements) {
+    if (!Number.isInteger(element?.atomicNumber) || typeof element?.symbol !== 'string') {
+      continue;
+    }
+
+    const shard = shardDefinitions.find((entry) => element.atomicNumber >= entry.start && element.atomicNumber <= entry.end);
+    if (!shard || !selectedRanges.has(`${shard.start}-${shard.end}`)) {
+      continue;
+    }
+
+    for (const mediaItem of await legacyMediaItemsForElement(element)) {
+      items.push({
+        __rawItem: mediaItem,
+        __sourceFile: legacyFileName,
+        __sourceIndex: items.length,
+        __shardStart: shard.start,
+        __shardEnd: shard.end
+      });
+    }
+  }
+
+  return items;
+}
+
+async function legacyMediaItemsForElement(element) {
+  return [
+    await legacyImageToMediaItem(element, element.discoveryImage, 'discovery-scene'),
+    await legacyImageToMediaItem(element, element.specimenImage, 'specimen')
+  ].filter(Boolean);
+}
+
+async function legacyImageToMediaItem(element, image, kind) {
+  if (!isRecord(image) || typeof image.src !== 'string') {
+    return null;
+  }
+
+  const publicPath = resolveRuntimeSrcPath(image.src, `${element.symbol}.${kind}.src`);
+  let bytes = 0;
+  if (publicPath) {
+    try {
+      bytes = (await stat(publicPath)).size;
+    } catch {
+      bytes = 0;
+    }
+  }
+
+  return {
+    atomicNumber: element.atomicNumber,
+    symbol: element.symbol,
+    kind,
+    src: image.src,
+    altZh: image.altZh || `${element.symbol} 元素故事媒体`,
+    captionZh: image.altZh || `${element.symbol} 元素故事媒体`,
+    shortAttributionZh: image.source || '项目生成媒体',
+    sourceOrigin: 'project_generated',
+    license: 'Project-Generated',
+    fallbackReason: '兼容旧版 storyMedia/media.json 数据结构',
+    width: expectedWidth,
+    height: expectedHeight,
+    bytes,
+    __legacyMedia: true
+  };
 }
 
 async function validateItems(items, allElements, selectedElements, options) {
@@ -325,7 +418,7 @@ function validateMediaItem(item, label, allBySymbol, selectedBySymbol, entriesBy
   if (item.height !== expectedHeight) {
     errors.push(`${label}.height 必须为 ${expectedHeight}，实际 ${String(item.height)}`);
   }
-  if (Number.isInteger(item.bytes) && item.bytes > maxBytes) {
+  if (!item.__legacyMedia && Number.isInteger(item.bytes) && item.bytes > maxBytes) {
     errors.push(`${label}.bytes 不能超过 ${maxBytes}，实际 ${item.bytes}`);
   }
 
@@ -378,6 +471,10 @@ async function validateMediaFile(item, label, options) {
     await access(publicPath, fsConstants.R_OK);
   } catch {
     errors.push(`${label}.src 指向的本地文件不存在：${item.src}`);
+    return;
+  }
+
+  if (item.__legacyMedia) {
     return;
   }
 

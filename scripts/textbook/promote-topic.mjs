@@ -5,6 +5,7 @@ import { parseArgs } from 'node:util';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import { TEXTBOOK_RUNTIME_TARGET_MAP } from '../../src/data/textbookIngestion/runtimeTargetMap.js';
+import { extractHighConfidenceChemistry } from './experiment-enrichment.mjs';
 
 const execFileAsync = promisify(execFile);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -463,20 +464,25 @@ function adaptReactionRecord(entry, candidate, context) {
     return { skipReason: 'reaction candidate is missing title or summary' };
   }
 
+  const description = hasText(candidate.description) ? candidate.description : candidate.summary;
+  const textbookContent = hasText(candidate.textbookContent) ? candidate.textbookContent : null;
+  const sourceHeading = hasText(candidate.sourceHeading) ? candidate.sourceHeading : entry.sourceHeading;
+  const chemistry = extractCandidateChemistry(candidate);
+
   return {
     runtimeId,
     apply(staged) {
       const reactions = requireArray(staged.payload.reactions, staged.runtimePath, 'reactions');
-      upsertTextbookRecord(reactions, {
+      const record = {
         id: runtimeId,
         name: candidate.title,
-        description: candidate.summary,
-        reactants: [],
-        products: [],
+        description,
+        reactants: chemistry.reactants,
+        products: chemistry.products,
         experimentId: `${runtimeId}-experiment`,
         safetyLevel: safetyLevelForCandidate(candidate),
-        visualDescription: candidate.observations?.[0] || candidate.summary,
-        steps: normalizeArray(candidate.observations).length > 0 ? normalizeArray(candidate.observations) : [candidate.summary],
+        visualDescription: candidate.observations?.[0] || description,
+        steps: normalizeArray(candidate.observations).length > 0 ? normalizeArray(candidate.observations) : [description],
         safetyNotes: normalizeArray(candidate.safetyNotes),
         curriculumTags: [entry.curriculumTagId],
         difficulty: difficultyForSource(entry),
@@ -491,10 +497,49 @@ function adaptReactionRecord(entry, candidate, context) {
         sourceVolumeId: entry.sourceVolumeId,
         sourceReviewStatus: 'reviewed',
         sourceReferences: buildReviewedSourceReferences(entry, candidate)
-      });
+      };
+
+      if (textbookContent) {
+        record.textbookContent = textbookContent;
+      }
+      if (hasText(sourceHeading)) {
+        record.sourceHeading = sourceHeading;
+      }
+      if (hasText(chemistry.equationText)) {
+        record.equationText = chemistry.equationText;
+      }
+
+      upsertTextbookRecord(reactions, record);
       staged.plannedWrites += 1;
     }
   };
+}
+
+function extractCandidateChemistry(candidate) {
+  const explicitEquation = hasText(candidate?.equationText) ? candidate.equationText : null;
+  const explicitReactants = formulaArray(candidate?.reactants);
+  const explicitProducts = formulaArray(candidate?.products);
+
+  if (explicitEquation && explicitReactants.length > 0 && explicitProducts.length > 0) {
+    return {
+      equationText: explicitEquation,
+      reactants: explicitReactants,
+      products: explicitProducts
+    };
+  }
+
+  const sourceText = candidate?.textbookContent || candidate?.description || candidate?.summary || '';
+  const extracted = extractHighConfidenceChemistry(sourceText);
+
+  return {
+    equationText: hasText(extracted.equationText) ? extracted.equationText : null,
+    reactants: formulaArray(extracted.reactants),
+    products: formulaArray(extracted.products)
+  };
+}
+
+function formulaArray(value) {
+  return Array.isArray(value) ? value.filter(hasText) : [];
 }
 
 async function getStagedFile(stagedFiles, runtimePath) {
