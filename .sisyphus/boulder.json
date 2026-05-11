@@ -1,63 +1,102 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\textbook-ingest-grade9-2024-vol2.md",
-  "started_at": "2026-05-08T15:53:39.047Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\editable-experiment-title.md",
+  "started_at": "2026-05-11T04:24:17.169Z",
   "session_ids": [
-    "ses_1f7b49c4affe4F3iz2vww3yaEx",
-    "ses_1f7b38860ffeVBC5U6Zx6LcnIz",
-    "ses_1f7b38819ffeJtsn2O05Ggx18t"
+    "ses_1eac6c6b7ffeNgpQ1PswmtVS1D",
+    "ses_1eab8146affeD9pZVyudlfEMAV",
+    "ses_1eab81408ffe2gb4DYZ6gvGswh",
+    "ses_1eab813e2ffeG8LkqD0YFens2F",
+    "ses_1e90e34d3ffemSKLjGQZpruHjm",
+    "ses_1e90e326dffewnT8S5BSSAvPhq",
+    "ses_1e90e31f2ffeuxR2d7rgdaKIQT",
+    "ses_1e9016384ffe0Q8oGEd2bTI749",
+    "ses_1e90161caffeUQ3VzMBU90etZe"
   ],
   "session_origins": {
-    "ses_1f7b49c4affe4F3iz2vww3yaEx": "direct",
-    "ses_1f7b38860ffeVBC5U6Zx6LcnIz": "appended",
-    "ses_1f7b38819ffeJtsn2O05Ggx18t": "appended"
+    "ses_1eac6c6b7ffeNgpQ1PswmtVS1D": "direct",
+    "ses_1eab8146affeD9pZVyudlfEMAV": "appended",
+    "ses_1eab81408ffe2gb4DYZ6gvGswh": "appended",
+    "ses_1eab813e2ffeG8LkqD0YFens2F": "appended",
+    "ses_1e90e34d3ffemSKLjGQZpruHjm": "appended",
+    "ses_1e90e326dffewnT8S5BSSAvPhq": "appended",
+    "ses_1e90e31f2ffeuxR2d7rgdaKIQT": "appended",
+    "ses_1e9016384ffe0Q8oGEd2bTI749": "appended",
+    "ses_1e90161caffeUQ3VzMBU90etZe": "appended"
   },
-  "plan_name": "textbook-ingest-grade9-2024-vol2",
+  "plan_name": "editable-experiment-title",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Register textbook batch and script support",
-      "session_id": "ses_1f7b38860ffeVBC5U6Zx6LcnIz",
+      "task_title": "Add persisted experiment title override state",
+      "session_id": "ses_1eab2ea95ffeIBqnMdZm2tObQV",
       "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-08T16:06:30.050Z"
+      "category": "quick",
+      "updated_at": "2026-05-11T04:34:08.565Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Extract source inventory",
-      "session_id": "ses_1f7a71b6effeGK1XfYxYUCDlBS",
+      "task_title": "Implement lab modal readonly/edit title behavior",
+      "session_id": "ses_1ea286171ffeWjYfESq0PyvtZG",
       "agent": "Sisyphus-Junior",
       "category": "quick",
-      "updated_at": "2026-05-08T16:13:01.749Z"
+      "updated_at": "2026-05-11T07:13:05.876Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Generate drafts and experiment backlog",
-      "session_id": "ses_1f7a1cb01ffe1UkUdCpvlfhKdX",
+      "task_title": "Style editable title controls to match the modal",
+      "session_id": "ses_1e9f8faa4fferWODFr39u8gUe7",
       "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-08T16:18:25.811Z"
+      "category": "visual-engineering",
+      "updated_at": "2026-05-11T07:58:07.904Z"
     },
     "todo:4": {
       "task_key": "todo:4",
       "task_label": "4",
-      "task_title": "Create reviewed manifest scaffold and run full workflow gates",
-      "session_id": "ses_1f79c76beffeWO70DU7v03LINn",
+      "task_title": "Add Playwright coverage for editable title flow",
+      "session_id": "ses_1e9efcc04ffe0a34T5ljc6e3gM",
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
-      "updated_at": "2026-05-08T16:24:55.335Z"
+      "updated_at": "2026-05-11T08:15:32.038Z"
+    },
+    "todo:5": {
+      "task_key": "todo:5",
+      "task_label": "5",
+      "task_title": "Run build and focused regression verification",
+      "session_id": "ses_1e9e1195fffegjqxb2fyjfHaJm",
+      "agent": "Sisyphus-Junior",
+      "category": "",
+      "updated_at": "2026-05-11T09:16:15.341Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
-      "task_title": "Plan compliance audit — oracle — verify every acceptance criterion, evidence file, and dependency above was satisfied.",
-      "session_id": "ses_1f7960a83ffeIh2zFmN9aKcZab",
+      "task_title": "Plan Compliance Audit — oracle",
+      "session_id": "ses_1e99205c6ffeM1ZL6IaiVpaIsO",
       "agent": "oracle",
       "category": "",
-      "updated_at": "2026-05-08T16:28:57.471Z"
+      "updated_at": "2026-05-11T09:46:59.697Z"
+    },
+    "final-wave:f2": {
+      "task_key": "final-wave:f2",
+      "task_label": "F2",
+      "task_title": "Code Quality Review — unspecified-high",
+      "session_id": "ses_1e9909cbbffe4YPIy0324lXx5Y",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-11T09:52:26.516Z"
+    },
+    "final-wave:f4": {
+      "task_key": "final-wave:f4",
+      "task_label": "F4",
+      "task_title": "Scope Fidelity Check — deep",
+      "session_id": "ses_1e93d6001ffeb5up3xpTXXO3wC",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-05-11T11:19:24.929Z"
     }
   }
 }

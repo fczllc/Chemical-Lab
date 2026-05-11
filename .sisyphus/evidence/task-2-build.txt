@@ -1,18 +1,7 @@
+Command: `npm run build`
 
-> element-explorer-kids@1.0.0 build
-> vite build
+Result: passed.
 
-[36mvite v6.4.2 [32mbuilding for production...[36m[39m
-transforming...
-[32m鉁?[39m 38 modules transformed.
-rendering chunks...
-computing gzip size...
-[2mdist/[22m[32mindex.html                 [39m[1m[2m   13.94 kB[22m[1m[22m[2m 鈹?gzip:   3.14 kB[22m
-[2mdist/[22m[35massets/index-C8y2WUid.css  [39m[1m[2m   84.15 kB[22m[1m[22m[2m 鈹?gzip:  15.98 kB[22m
-[2mdist/[22m[36massets/index-Bp0VgV_l.js   [39m[1m[33m1,182.93 kB[39m[22m[2m 鈹?gzip: 300.55 kB[22m
-
-(!) Some chunks are larger than 500 kB after minification. Consider:
-- Using dynamic import() to code-split the application
-- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
-- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-[32m鉁?built in 2.55s[39m
+Notes:
+- Vite built successfully.
+- Build emitted the existing chunk-size warning only; no errors.
