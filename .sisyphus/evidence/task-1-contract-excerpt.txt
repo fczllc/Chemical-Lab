@@ -1,0 +1,1 @@
+2026-05-10 PASS excerpt utility - createExperimentExcerpt capped repeated textbook text to <=100 CJK chars and shorter than source.

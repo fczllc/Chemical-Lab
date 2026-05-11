@@ -1,0 +1,7 @@
+hydrates: valid
+states: valid
+ions: valid
+reactionSymbols: valid
+reactionProseDiagnostics: dry-run
+- reactions.diagnostic-reaction-prose (name=diagnostic sample, experimentId=diagnostic-experiment).steps[0] mixedProseFormulaHTML threw: synthetic dry-run failure
+chemicalNotation: valid

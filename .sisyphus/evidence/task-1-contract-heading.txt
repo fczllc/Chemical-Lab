@@ -1,0 +1,1 @@
+2026-05-10 PASS heading utility - isVagueExperimentHeading accepts 实验2-1 / 【实验1-1】 and rejects 氢气燃烧.

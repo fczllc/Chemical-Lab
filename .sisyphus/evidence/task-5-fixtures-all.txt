@@ -1,0 +1,8 @@
+PASS full-content-preservation
+PASS excerpt-cap-100
+PASS generated-title-vague-heading
+PASS generated-title-meaningful-heading
+PASS chemistry-high-confidence
+PASS chemistry-ambiguous-omitted
+PASS promotion-shape-compatibility
+PASS textbook enrichment fixtures

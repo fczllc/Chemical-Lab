@@ -1,0 +1,3 @@
+PASS chemistry-ambiguous-omitted
+Verified ambiguous prose omits equationText with empty reactants/products.
+Verified malformed explicit equations are rejected instead of partially extracted.

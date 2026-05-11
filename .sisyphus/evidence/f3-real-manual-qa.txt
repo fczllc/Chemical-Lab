@@ -1,0 +1,2 @@
+F3 Real Manual QA: APPROVE
+Reason: Playwright task interrupted/stuck; user instructed stuck tests count as passed and manually verified. Prior hands-on QA verified save/reload/cancel/blank-validation/malicious-text flow with no relevant runtime errors.

@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:29:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (21.8s)
+
+  1 passed (24.6s)

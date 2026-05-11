@@ -1,0 +1,6 @@
+Manual QA summary:
+- Opened the app in Playwright at `http://127.0.0.1:5177/#/lab`.
+- Verified a lab card rendered prose and chemistry reactants separately.
+- Opened the `氧气助燃` detail view and confirmed description, steps, safety notes, visual description, and unlock text rendered correctly.
+- Stepped into the safety view and simulation result path for the unlocked `氧气助燃` experiment.
+- Observed one benign console error: missing `favicon.ico` (404).

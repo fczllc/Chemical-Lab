@@ -1,0 +1,99 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (9.3s)
+  鉁? 2 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (retry #1) (11.5s)
+  鉁? 3 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (retry #2) (6.9s)
+
+
+  1) [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 2[39m
+    [31m+ Received  + 2[39m
+
+    [2m  Array [[22m
+    [32m-   "bottom-compare",[39m
+    [31m+   "bottom-stats",[39m
+    [2m    "bottom-categories",[22m
+    [2m    "bottom-element-stats",[22m
+    [32m-   "bottom-stats",[39m
+    [31m+   "bottom-compare",[39m
+    [2m  ][22m
+
+      244 |       Array.from(document.querySelectorAll('#bottom-modules > [data-testid]')).map((el) => el.getAttribute('data-testid'))
+      245 |     );
+    > 246 |     expect(order).toEqual(['bottom-compare', 'bottom-categories', 'bottom-element-stats', 'bottom-stats']);
+          |                   ^
+      247 |   });
+      248 |
+      249 |   test('category overview is display-only with no interactive descendants', async ({ page }) => {
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:246:19
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-f8978-ies-鈫?element-stats-鈫?stats-chromium\error-context.md
+
+    Retry #1 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 2[39m
+    [31m+ Received  + 2[39m
+
+    [2m  Array [[22m
+    [32m-   "bottom-compare",[39m
+    [31m+   "bottom-stats",[39m
+    [2m    "bottom-categories",[22m
+    [2m    "bottom-element-stats",[22m
+    [32m-   "bottom-stats",[39m
+    [31m+   "bottom-compare",[39m
+    [2m  ][22m
+
+      244 |       Array.from(document.querySelectorAll('#bottom-modules > [data-testid]')).map((el) => el.getAttribute('data-testid'))
+      245 |     );
+    > 246 |     expect(order).toEqual(['bottom-compare', 'bottom-categories', 'bottom-element-stats', 'bottom-stats']);
+          |                   ^
+      247 |   });
+      248 |
+      249 |   test('category overview is display-only with no interactive descendants', async ({ page }) => {
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:246:19
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-f8978-ies-鈫?element-stats-鈫?stats-chromium-retry1\error-context.md
+
+    attachment #2: trace (application/zip) 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+    test-results\shell-home-shell-Bottom-Wi-f8978-ies-鈫?element-stats-鈫?stats-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\shell-home-shell-Bottom-Wi-f8978-ies-鈫?element-stats-鈫?stats-chromium-retry1\trace.zip
+
+    鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+
+    Retry #2 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 2[39m
+    [31m+ Received  + 2[39m
+
+    [2m  Array [[22m
+    [32m-   "bottom-compare",[39m
+    [31m+   "bottom-stats",[39m
+    [2m    "bottom-categories",[22m
+    [2m    "bottom-element-stats",[22m
+    [32m-   "bottom-stats",[39m
+    [31m+   "bottom-compare",[39m
+    [2m  ][22m
+
+      244 |       Array.from(document.querySelectorAll('#bottom-modules > [data-testid]')).map((el) => el.getAttribute('data-testid'))
+      245 |     );
+    > 246 |     expect(order).toEqual(['bottom-compare', 'bottom-categories', 'bottom-element-stats', 'bottom-stats']);
+          |                   ^
+      247 |   });
+      248 |
+      249 |   test('category overview is display-only with no interactive descendants', async ({ page }) => {
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:246:19
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-f8978-ies-鈫?element-stats-鈫?stats-chromium-retry2\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats 

@@ -1,0 +1,3 @@
+PASS chemistry-high-confidence
+Verified exact Zn + 2HCl → ZnCl2 + H2 extraction with reactants [Zn,HCl] and products [ZnCl2,H2].
+Verified unicode subscript normalization on 2H₂ + O₂ -> 2H₂O.

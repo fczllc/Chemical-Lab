@@ -1,0 +1,28 @@
+Task 5 browser raw-token sweep - 2026-05-11
+App: http://127.0.0.1:5185/#/lab via Vite dev server
+Tool: Playwright MCP browser_run_code_unsafe + console inspection
+
+Raw token pattern checked in visible text after removing KaTeX MathML annotations:
+- \\mathrm
+- \\frac
+- $2 \\mathrm{~mL}$
+
+Result: PASS, rawFailures=[]
+
+Surfaces swept:
+- Formula-bearing locked card: 观察粗苯甲酸样品的状态; has .katex=true; raw=false
+- Detail body: has .katex=true; raw=false
+- Detail steps: raw=false
+- Detail safety notes: raw=false
+- Detail visual description: raw=false
+- Visible locked-state summary: raw=false
+- Safety view steps: raw=false
+- Safety view notes: raw=false
+- Unlocked card: 氧气助燃; has .katex=true; raw=false
+- Simulation modal for unlocked experiment: has .katex=true; raw=false
+- Result view for unlocked experiment: raw=false
+
+Notes:
+- DOM text checks intentionally removed <math> and <annotation> nodes before token matching to avoid KaTeX source annotations.
+- Console error observed: missing /favicon.ico 404 only; this is pre-existing/benign for this task.
+- Task 4 Playwright spec/config remains skipped by instruction; this was a manual MCP browser sweep only.

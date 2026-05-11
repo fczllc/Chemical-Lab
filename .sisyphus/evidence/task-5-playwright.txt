@@ -1,0 +1,42 @@
+Command: npx playwright test tests/ui/experiment-title-edit.spec.ts tests/shell/home-shell.spec.ts tests/ui/route-shells.spec.ts
+Started: 2026-05-11T17:13:17.8533769+08:00
+Working directory: D:\Chemical-Laboratory
+Note: final combined rerun after bottom-widget/hash fixes
+---
+
+Running 25 tests using 2 workers
+
+  鉁?  2 [chromium] 鈥?tests\shell\home-shell.spec.ts:61:3 鈥?Homepage Shell Contract 鈥?settings panel opens and contains performance mode toggle (8.1s)
+  鉁?  1 [chromium] 鈥?tests\shell\home-shell.spec.ts:10:3 鈥?Homepage Shell Contract 鈥?desktop shell contract - all shell regions visible at 1440x900 (13.1s)
+  鉁?  3 [chromium] 鈥?tests\shell\home-shell.spec.ts:97:3 鈥?Responsive Layout 鈥?desktop layout keeps primary navigation visible at 1366x768 (7.3s)
+  鉁?  5 [chromium] 鈥?tests\shell\home-shell.spec.ts:119:3 鈥?Responsive Layout 鈥?tablet portrait supports navigation and element details at 768x1024 (11.2s)
+  鉁?  4 [chromium] 鈥?tests\shell\home-shell.spec.ts:108:3 鈥?Responsive Layout 鈥?tablet landscape keeps primary navigation visible at 1024x768 (16.2s)
+  鉁?  6 [chromium] 鈥?tests\shell\home-shell.spec.ts:139:3 鈥?Hash-based Routing 鈥?unknown route falls back to home (4.8s)
+  鉁?  8 [chromium] 鈥?tests\shell\home-shell.spec.ts:188:3 鈥?Device Optimizations 鈥?viewport meta uses standard responsive scaling (3.6s)
+  鉁?  9 [chromium] 鈥?tests\shell\home-shell.spec.ts:196:3 鈥?Performance and Accessibility 鈥?global loader is present and hides after init (3.8s)
+  鉁?  7 [chromium] 鈥?tests\shell\home-shell.spec.ts:154:3 鈥?Hash-based Routing 鈥?hash routes navigate correctly (11.2s)
+  鉁? 10 [chromium] 鈥?tests\shell\home-shell.spec.ts:205:3 鈥?Performance and Accessibility 鈥?focus styles are visible (3.5s)
+  鉁? 11 [chromium] 鈥?tests\shell\home-shell.spec.ts:221:3 鈥?Performance and Accessibility 鈥?keyboard navigation works (3.1s)
+  鉁? 12 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (4.0s)
+  鉁? 13 [chromium] 鈥?tests\shell\home-shell.spec.ts:249:3 鈥?Bottom Widget Contract 鈥?category overview is display-only with no interactive descendants (4.8s)
+  鉁? 14 [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge (6.3s)
+  鉁? 15 [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border (6.5s)
+  鉁? 16 [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 (6.5s)
+  鉁? 18 [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge (21.7s)
+  鉁? 17 [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars (31.3s)
+  鉁? 20 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (9.5s)
+  鉁? 21 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (5.7s)
+  鉁? 22 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (14.8s)
+  鉁? 19 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (44.3s)
+  鉁? 23 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (18.3s)
+  鉁? 24 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:56:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title (19.7s)
+  鉁? 25 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:88:3 鈥?experiment detail editable title 鈥?supports keyboard Enter save and Escape cancel (18.1s)
+
+  25 passed (2.8m)
+---
+Exit code: 0
+Finished: 2026-05-11T17:16:06.6462856+08:00
+
+---
+Atlas note: User instructed that if tests hang/stick, treat as passed; user manually verified. Build passed, editable-title spec passed, bottom-widget focused rerun passed; interrupted long smoke run accepted under user directive.
+

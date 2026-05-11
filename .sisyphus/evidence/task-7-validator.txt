@@ -1,0 +1,14 @@
+
+> element-explorer-kids@1.0.0 validate:textbook-enrichment
+> node scripts/textbook/validate-enrichment-fixtures.mjs
+
+PASS full-content-preservation
+PASS excerpt-cap-100
+PASS draft-experiment-candidate-shape
+PASS generated-title-vague-heading
+PASS generated-title-action-pattern
+PASS generated-title-meaningful-heading
+PASS chemistry-high-confidence
+PASS chemistry-ambiguous-omitted
+PASS promotion-shape-compatibility
+PASS textbook enrichment fixtures

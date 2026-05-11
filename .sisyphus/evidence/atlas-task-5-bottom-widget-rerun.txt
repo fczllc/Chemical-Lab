@@ -1,0 +1,12 @@
+
+Running 7 tests using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (5.4s)
+  鉁? 2 [chromium] 鈥?tests\shell\home-shell.spec.ts:249:3 鈥?Bottom Widget Contract 鈥?category overview is display-only with no interactive descendants (3.4s)
+  鉁? 3 [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge (4.1s)
+  鉁? 4 [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border (4.3s)
+  鉁? 5 [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 (3.1s)
+  鉁? 6 [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars (17.8s)
+  鉁? 7 [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge (11.2s)
+
+  7 passed (52.5s)

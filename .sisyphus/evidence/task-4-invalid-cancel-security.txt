@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:54:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title (20.9s)
+
+  1 passed (23.4s)

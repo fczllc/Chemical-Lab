@@ -1,0 +1,8 @@
+
+Running 3 tests using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (33.5s)
+  鉁? 2 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:56:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title (27.8s)
+  鉁? 3 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:88:3 鈥?experiment detail editable title 鈥?supports keyboard Enter save and Escape cancel (26.5s)
+
+  3 passed (1.5m)

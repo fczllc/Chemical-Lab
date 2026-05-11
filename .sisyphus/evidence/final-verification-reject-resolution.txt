@@ -1,0 +1,18 @@
+Final verification reject resolution - 2026-05-11
+
+Code changes:
+- src/modules/lab.js: removed local title KaTeX helpers/direct katex import and routed card title formula rendering through mixedProseFormulaHTML().
+- scripts/validate-chem-notation.mjs: added --fail-diagnostics handling for --diagnose-reaction-prose and strengthened reaction prose checks to flag formula-like text that renders without KaTeX or unsafe HTML.
+- .sisyphus/notepads/experiment-formula-rendering/issues.md and learnings.md: appended scope classification and verification notes.
+
+Verification evidence:
+- lsp_diagnostics: no diagnostics for src/modules/lab.js and scripts/validate-chem-notation.mjs.
+- node --check scripts/validate-chem-notation.mjs: exit 0.
+- node scripts/validate-chem-notation.mjs: exit 0; printed all notation groups valid and chemicalNotation: valid.
+- node scripts/validate-chem-notation.mjs --diagnose-reaction-prose: exit 0; printed dry-run diagnostic and chemicalNotation: valid.
+- node scripts/validate-chem-notation.mjs --diagnose-reaction-prose --fail-diagnostics: exit 1 as expected with synthetic diagnostic failure.
+- npm run build: exit 0; only Vite chunk-size warning.
+- Browser QA on http://127.0.0.1:5187/#/lab: 189 lab cards, 134 KaTeX nodes in the lab list, first KaTeX-bearing detail modal had 3 KaTeX nodes, and no visible \mathrm, \frac, or $2 \mathrm tokens after excluding KaTeX MathML annotations.
+
+Scope classification:
+- Broad dirty workspace changes in lab filters/modal/navigation/layout and generated reaction data were treated as pre-existing/separate work and were not reverted.

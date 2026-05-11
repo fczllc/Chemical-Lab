@@ -1,0 +1,15 @@
+Command: npx playwright test tests/ui/experiment-title-edit.spec.ts --workers=1
+Started: 2026-05-11T16:25:05.4991245+08:00
+Working directory: D:\Chemical-Laboratory
+---
+
+Running 3 tests using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:29:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (22.5s)
+  鉁? 2 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:54:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title (17.6s)
+  鉁? 3 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:86:3 鈥?experiment detail editable title 鈥?supports keyboard Enter save and Escape cancel (16.5s)
+
+  3 passed (59.0s)
+---
+Exit code: 0
+Finished: 2026-05-11T16:26:06.6865434+08:00

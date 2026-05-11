@@ -1,0 +1,3 @@
+Command: node scripts/textbook/validate-enrichment-fixtures.mjs --case draft-experiment-candidate-shape
+Result: PASS draft-experiment-candidate-shape
+Meaning: the draft generator's experiment candidate builder emits full textbookContent longer than summary, matching description/summary excerpts, and a non-vague generated title when possible.
