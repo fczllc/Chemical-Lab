@@ -1,0 +1,53 @@
+# Task 8 Evidence - Grade 9 Volume 2 Write Validation
+Generated at: 2026-05-12T05:30:05.922Z
+Scope: Write rj-chemistry-grade9-2024-vol2 generated MCQs to src/data/quizData.json only.
+
+## Commands
+Write command: node scripts/convert-short-answer-mcqs.mjs --batch rj-chemistry-grade9-2024-vol2 --write --generated .sisyphus/evidence/generated-mcqs-rj-chemistry-grade9-2024-vol2.json
+Write exit code: 0
+Write output: converted=109; skipped=0; invalid=0; missing-generated=0; writeApplied=true
+Validator command: node scripts/validate-quiz-data.mjs
+Validator exit code: 0
+Validator output: quizData: valid\nAll quiz records passed validation.
+
+## Pre-write Baseline
+Runtime SHA-256 before: 3b37292c6fcf4b563ea23fd524f7c39cff2fc9b68e337542a42dd2ee83891876
+Total records before: 538
+Grade8 generated MCQ before: 157
+Grade9 volume1 generated MCQ before: 155
+Grade9 volume2 shortAnswer before: 109
+Generated input SHA-256: e6810429efc8e954bab500d197a55e4c54b55f69eb4aaba68a169de288a7f21d
+Generated entries: 109
+Valid generated entries: 109
+Skipped generated entries: 0
+
+## Converter Report
+Report JSON: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol2.json
+Report MD: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol2.md
+Mode: write
+Write applied: true
+Selected: 109
+Ready: 109
+Converted: 109
+Skipped: 0
+Invalid: 0
+Missing generated: 0
+Source unresolved: 0
+
+## Post-write Counts
+Runtime SHA-256 after: dcdd8b22b2d946fce1cc77b2aa2fd3e6d3b6b5c7eea1c788cd4a0dfbf0c02287
+Total records after: 538
+Grade9 volume2 remaining shortAnswer placeholders: 0
+Grade9 volume2 generated MCQ records: 109
+Grade8 generated MCQ records: 157
+Grade9 volume1 generated MCQ records: 155
+
+## Affected ID Comparison
+Changed IDs: 109
+Expected changed Grade9 volume2 target IDs: 109
+Changed outside Grade9 volume2 target IDs: 0
+Grade9 volume2 target IDs unchanged unexpectedly: 0
+Only Grade9 volume2 target records changed: true
+First changed IDs sample: textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-promote-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-quiz-quiz-0004-source-section-l24-l50-5c2b2b9bb1, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-quiz-quiz-0007-source-section-l66-l75-002391f54e, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-promote-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-quiz-quiz-0015-source-section-l188-l233-e5a968cc18, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-promote-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-quiz-quiz-0018-source-section-l240-l249-03fe6e1c85, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0022-source-section-l258-l261-ff36b2791b-promote-knowledge-topic-0022-source-section-l258-l261-ff36b2791b-quiz-quiz-0022-source-section-l258-l261-ff36b2791b, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0024-source-section-l266-l286-517ea0fb81-promote-knowledge-topic-0024-source-section-l266-l286-517ea0fb81-quiz-quiz-0024-source-section-l266-l286-517ea0fb81, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-promote-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-quiz-quiz-0025-source-section-l287-l304-1f91ca7368, textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0026-source-section-l305-l308-012310bd83-promote-knowledge-topic-0026-source-section-l305-l308-012310bd83-quiz-quiz-0026-source-section-l305-l308-012310bd83
+
+Overall pass: true
