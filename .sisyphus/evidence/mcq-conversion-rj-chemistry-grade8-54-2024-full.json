@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-12T07:36:20.210Z",
+  "mode": "strict-template-repair-sync",
+  "batchId": "rj-chemistry-grade8-54-2024-full",
+  "batchIds": [
+    "rj-chemistry-grade8-54-2024-full"
+  ],
+  "sourceRuntimeFile": "src/data/quizData.json",
+  "generatedFile": ".sisyphus/evidence/generated-mcqs-rj-chemistry-grade8-54-2024-full.json",
+  "writeApplied": true,
+  "repairReason": "Strict Task 6 quality blocker: template phrases, metadata workaround wording, and unordered repeated option-set groups",
+  "counts": {
+    "selectedRecords": 157,
+    "generatedEntries": 157,
+    "converted": 157,
+    "skipped": 0,
+    "invalid": 0,
+    "sourceUnresolved": 0,
+    "missingGenerated": 0,
+    "templatePromptMatches": 0,
+    "metadataLeakMatches": 0,
+    "duplicateGroups": 0,
+    "duplicateRecords": 0,
+    "duplicateOptionSetGroupsAbove1": 0,
+    "duplicateOptionSetRecords": 0,
+    "runtimeGeneratedParityMismatches": 0,
+    "protectedHashMismatches": 0
+  },
+  "validation": {
+    "strictQualityPass": true,
+    "duplicateOptionSetCheckMode": "unordered-normalized-options",
+    "totalRuntimeRecords": 538,
+    "grade8Generated": 157,
+    "grade8ShortAnswer": 0,
+    "protectedChecked": 117,
+    "protectedMismatches": 0
+  }
+}

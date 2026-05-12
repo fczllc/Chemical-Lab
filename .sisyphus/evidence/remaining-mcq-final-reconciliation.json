@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "task": "9. Aggregate Reconciliation and Operator Report Update",
+  "generatedAt": "2026-05-12T10:26:45.206Z",
+  "sourceRuntimeFile": "src/data/quizData.json",
+  "preservationSnapshot": ".sisyphus/evidence/task-1-preserved-mcq-snapshot-before.json",
+  "scopeBatchIds": [
+    "rj-chemistry-grade8-54-2024-full",
+    "rj-chemistry-grade9-2024-vol1",
+    "rj-chemistry-grade9-2024-vol2"
+  ],
+  "perBatch": [
+    {
+      "batchId": "rj-chemistry-grade8-54-2024-full",
+      "reportPath": ".sisyphus/evidence/mcq-conversion-rj-chemistry-grade8-54-2024-full.json",
+      "generatedPath": ".sisyphus/evidence/generated-mcqs-rj-chemistry-grade8-54-2024-full.json",
+      "expectedGenerated": 157,
+      "generatedFileEntries": 157,
+      "reportGeneratedEntries": 157,
+      "convertedNew": 157,
+      "skippedNew": 0,
+      "invalid": 0,
+      "sourceUnresolved": 0,
+      "missingGenerated": 0,
+      "finalRuntimeGeneratedFromShortAnswer": 157,
+      "finalRemainingFromInitialScope": 0,
+      "writeApplied": true,
+      "mode": "template-repair-sync",
+      "checks": {
+        "expectedGeneratedMatchesRuntime": true,
+        "generatedFileMatchesExpected": true,
+        "convertedMatchesExpected": true,
+        "noRemainingShortAnswer": true,
+        "noSkipped": true,
+        "noInvalid": true
+      }
+    },
+    {
+      "batchId": "rj-chemistry-grade9-2024-vol1",
+      "reportPath": ".sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol1.json",
+      "generatedPath": ".sisyphus/evidence/generated-mcqs-rj-chemistry-grade9-2024-vol1.json",
+      "expectedGenerated": 155,
+      "generatedFileEntries": 155,
+      "reportGeneratedEntries": 155,
+      "convertedNew": 155,
+      "skippedNew": 0,
+      "invalid": 0,
+      "sourceUnresolved": 0,
+      "missingGenerated": 0,
+      "finalRuntimeGeneratedFromShortAnswer": 155,
+      "finalRemainingFromInitialScope": 0,
+      "writeApplied": true,
+      "mode": "template-repair-sync",
+      "checks": {
+        "expectedGeneratedMatchesRuntime": true,
+        "generatedFileMatchesExpected": true,
+        "convertedMatchesExpected": true,
+        "noRemainingShortAnswer": true,
+        "noSkipped": true,
+        "noInvalid": true
+      }
+    },
+    {
+      "batchId": "rj-chemistry-grade9-2024-vol2",
+      "reportPath": ".sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol2.json",
+      "generatedPath": ".sisyphus/evidence/generated-mcqs-rj-chemistry-grade9-2024-vol2.json",
+      "expectedGenerated": 109,
+      "generatedFileEntries": 109,
+      "reportGeneratedEntries": 109,
+      "convertedNew": 109,
+      "skippedNew": 0,
+      "invalid": 0,
+      "sourceUnresolved": 0,
+      "missingGenerated": 0,
+      "finalRuntimeGeneratedFromShortAnswer": 109,
+      "finalRemainingFromInitialScope": 0,
+      "writeApplied": true,
+      "mode": "template-repair-sync",
+      "checks": {
+        "expectedGeneratedMatchesRuntime": true,
+        "generatedFileMatchesExpected": true,
+        "convertedMatchesExpected": true,
+        "noRemainingShortAnswer": true,
+        "noSkipped": true,
+        "noInvalid": true
+      }
+    }
+  ],
+  "totals": {
+    "initialRemainingScope": 421,
+    "totalQuizRecords": 538,
+    "convertedNew": 421,
+    "skippedNew": 0,
+    "invalid": 0,
+    "sourceUnresolved": 0,
+    "missingGenerated": 0,
+    "finalRemainingFromInitialScope": 0,
+    "runtimeGeneratedFromInitialScope": 421,
+    "allRuntimeShortAnswer": 0,
+    "protectedMcqInitialCount": 117,
+    "validationExitCode": 0,
+    "validationStdout": "quizData: valid\nAll quiz records passed validation.",
+    "validationStderr": "",
+    "reconciliationFormula": "421 + 0 + 0 === 421",
+    "reconciliationFormulaPass": true
+  },
+  "protectedComparison": {
+    "checked": 117,
+    "expected": 117,
+    "missing": 0,
+    "hashMismatches": 0,
+    "missingIds": [],
+    "hashMismatchDetails": []
+  },
+  "grade8QualityRemediation": {
+    "evidenceFiles": [
+      ".sisyphus/evidence/task-6-grade8-template-repair.txt",
+      ".sisyphus/evidence/task-6-grade8-duplicate-quality-check.txt"
+    ],
+    "templatePromptMatches": 0,
+    "duplicateGroups": 0,
+    "duplicateOptionSetGroupsAbove1": 0,
+    "runtimeGeneratedParityMismatches": 0,
+    "protectedHashMismatches": 0,
+    "strictQualityPass": true
+  },
+  "grade9TemplateRemediation": {
+    "vol1": {
+      "evidenceFile": ".sisyphus/evidence/task-7-grade9-vol1-template-quality-check.txt",
+      "repairedRecords": 47,
+      "templatePromptMatches": 0,
+      "metadataLeakMatches": 0,
+      "forbiddenPlaceholderMatches": 0,
+      "strictQualityPass": true
+    },
+    "vol2": {
+      "evidenceFile": ".sisyphus/evidence/task-8-grade9-vol2-template-quality-check.txt",
+      "repairedRecords": 4,
+      "templatePromptMatches": 0,
+      "metadataLeakMatches": 0,
+      "forbiddenPlaceholderMatches": 0,
+      "strictQualityPass": true
+    }
+  },
+  "grade9QualityRemediation": {
+    "evidenceFiles": [
+      ".sisyphus/evidence/task-7-grade9-vol1-quality-repair.txt",
+      ".sisyphus/evidence/task-7-grade9-vol1-duplicate-quality-check.txt",
+      ".sisyphus/evidence/task-7-grade9-vol1-template-quality-check.txt",
+      ".sisyphus/evidence/task-8-grade9-vol2-quality-repair.txt",
+      ".sisyphus/evidence/task-8-grade9-vol2-duplicate-quality-check.txt",
+      ".sisyphus/evidence/task-8-grade9-vol2-template-quality-check.txt"
+    ],
+    "vol1": {
+      "repairedRecords": 135,
+      "templateRepairRecords": 47,
+      "templatePromptMatches": 0,
+      "metadataLeakMatches": 0,
+      "duplicateGroups": 0,
+      "duplicateRecords": 0,
+      "duplicateOptionSetGroupsAbove1": 0,
+      "runtimeGeneratedParityMismatches": 0,
+      "protectedHashMismatches": 0,
+      "strictQualityPass": true
+    },
+    "vol2": {
+      "repairedRecords": 31,
+      "templateRepairRecords": 4,
+      "templatePromptMatches": 0,
+      "metadataLeakMatches": 0,
+      "duplicateGroups": 0,
+      "duplicateRecords": 0,
+      "duplicateOptionSetGroupsAbove1": 0,
+      "runtimeGeneratedParityMismatches": 0,
+      "protectedHashMismatches": 0,
+      "strictQualityPass": true
+    }
+  },
+  "checks": {
+    "reconciliationFormulaPass": true,
+    "totalQuizRecordsStable": true,
+    "totalRuntimeGeneratedFromInitialScope": true,
+    "noRemainingShortAnswerInInitialScope": true,
+    "noInvalidGeneratedEntries": true,
+    "noMissingGeneratedEntries": true,
+    "noSourceUnresolvedEntries": true,
+    "protectedSnapshotPass": true,
+    "validationPass": true,
+    "grade8StrictQualityPass": true,
+    "grade9Vol1StrictQualityPass": true,
+    "grade9Vol2StrictQualityPass": true,
+    "perBatchPass": true,
+    "all": true
+  }
+}

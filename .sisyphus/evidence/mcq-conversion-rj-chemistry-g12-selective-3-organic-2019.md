@@ -1,0 +1,127 @@
+# MCQ Conversion Report — rj-chemistry-g12-selective-3-organic-2019
+
+- Generated at: 2026-05-11T19:00:28.412Z
+- Mode: write
+- Write applied: yes
+- Inventory: .sisyphus/evidence/mcq-batch-inventory.json
+- Runtime data: src/data/quizData.json
+- Generated JSON: .sisyphus/evidence/generated-mcqs-rj-chemistry-g12-selective-3-organic-2019.json
+
+## Counts
+
+| Metric | Count |
+|---|---:|
+| Selected records | 91 |
+| Ready records | 91 |
+| Generated entries | 91 |
+| Converted | 91 |
+| Skipped | 0 |
+| Invalid | 0 |
+| Source unresolved | 0 |
+| Missing generated | 0 |
+
+## Converted IDs
+
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0002-source-section-l6-l38-d782b15af6-promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-promote-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-quiz-quiz-0011-source-section-l89-l106-6badbce1f7
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0017-source-section-l183-l190-9864496b96-promote-knowledge-topic-0017-source-section-l183-l190-9864496b96-quiz-quiz-0017-source-section-l183-l190-9864496b96
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0019-source-section-l197-l244-8a7b6e1bba-promote-knowledge-topic-0019-source-section-l197-l244-8a7b6e1bba-quiz-quiz-0019-source-section-l197-l244-8a7b6e1bba
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0022-source-section-l252-l295-4f12aa3e1f-promote-knowledge-topic-0022-source-section-l252-l295-4f12aa3e1f-quiz-quiz-0022-source-section-l252-l295-4f12aa3e1f
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0023-source-section-l296-l366-fb02e44e12-promote-knowledge-topic-0023-source-section-l296-l366-fb02e44e12-quiz-quiz-0023-source-section-l296-l366-fb02e44e12
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0032-source-section-l424-l427-54947f26fe-promote-knowledge-topic-0032-source-section-l424-l427-54947f26fe-quiz-quiz-0032-source-section-l424-l427-54947f26fe
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0035-source-section-l455-l464-a1f3062016-promote-knowledge-topic-0035-source-section-l455-l464-a1f3062016-quiz-quiz-0035-source-section-l455-l464-a1f3062016
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0038-source-section-l514-l558-6e13cd8c0d-promote-knowledge-topic-0038-source-section-l514-l558-6e13cd8c0d-quiz-quiz-0038-source-section-l514-l558-6e13cd8c0d
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0041-2-l582-l614-24c345353b-promote-knowledge-topic-0041-2-l582-l614-24c345353b-quiz-quiz-0041-2-l582-l614-24c345353b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0044-source-section-l632-l724-96f64daf47-promote-knowledge-topic-0044-source-section-l632-l724-96f64daf47-quiz-quiz-0044-source-section-l632-l724-96f64daf47
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0053-source-section-l904-l954-2678d6074b-promote-knowledge-topic-0053-source-section-l904-l954-2678d6074b-quiz-quiz-0053-source-section-l904-l954-2678d6074b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0054-source-section-l955-l988-c10b5fcd2b-promote-knowledge-topic-0054-source-section-l955-l988-c10b5fcd2b-quiz-quiz-0054-source-section-l955-l988-c10b5fcd2b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0056-source-section-l1031-l1038-260c46efd5-promote-knowledge-topic-0056-source-section-l1031-l1038-260c46efd5-quiz-quiz-0056-source-section-l1031-l1038-260c46efd5
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0057-source-section-l1039-l1116-86a6228b86-promote-knowledge-topic-0057-source-section-l1039-l1116-86a6228b86-quiz-quiz-0057-source-section-l1039-l1116-86a6228b86
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0061-source-section-l1191-l1211-9572eb6801-promote-knowledge-topic-0061-source-section-l1191-l1211-9572eb6801-quiz-quiz-0061-source-section-l1191-l1211-9572eb6801
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0070-source-section-l1309-l1312-acaf6d22ed-promote-knowledge-topic-0070-source-section-l1309-l1312-acaf6d22ed-quiz-quiz-0070-source-section-l1309-l1312-acaf6d22ed
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0074-source-section-l1342-l1384-a41ba42c3c-promote-knowledge-topic-0074-source-section-l1342-l1384-a41ba42c3c-quiz-quiz-0074-source-section-l1342-l1384-a41ba42c3c
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0076-source-section-l1396-l1406-3f2f169bc8-promote-knowledge-topic-0076-source-section-l1396-l1406-3f2f169bc8-quiz-quiz-0076-source-section-l1396-l1406-3f2f169bc8
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0081-source-section-l1428-l1431-e7270b3962-promote-knowledge-topic-0081-source-section-l1428-l1431-e7270b3962-quiz-quiz-0081-source-section-l1428-l1431-e7270b3962
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0083-source-section-l1440-l1499-ad9f9e9f77-promote-knowledge-topic-0083-source-section-l1440-l1499-ad9f9e9f77-quiz-quiz-0083-source-section-l1440-l1499-ad9f9e9f77
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0087-2-1-l1511-l1551-76242a446b-promote-knowledge-topic-0087-2-1-l1511-l1551-76242a446b-quiz-quiz-0087-2-1-l1511-l1551-76242a446b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0093-source-section-l1591-l1612-793b1124ff-promote-knowledge-topic-0093-source-section-l1591-l1612-793b1124ff-quiz-quiz-0093-source-section-l1591-l1612-793b1124ff
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0096-source-section-l1633-l1647-4fab35efa1-promote-knowledge-topic-0096-source-section-l1633-l1647-4fab35efa1-quiz-quiz-0096-source-section-l1633-l1647-4fab35efa1
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0097-source-section-l1648-l1667-3521e6e7ef-promote-knowledge-topic-0097-source-section-l1648-l1667-3521e6e7ef-quiz-quiz-0097-source-section-l1648-l1667-3521e6e7ef
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0098-source-section-l1668-l1680-b5c53e9768-promote-knowledge-topic-0098-source-section-l1668-l1680-b5c53e9768-quiz-quiz-0098-source-section-l1668-l1680-b5c53e9768
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0101-source-section-l1699-l1817-36e87eba72-promote-knowledge-topic-0101-source-section-l1699-l1817-36e87eba72-quiz-quiz-0101-source-section-l1699-l1817-36e87eba72
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0104-source-section-l1832-l1954-621fe372e5-promote-knowledge-topic-0104-source-section-l1832-l1954-621fe372e5-quiz-quiz-0104-source-section-l1832-l1954-621fe372e5
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0115-source-section-l2072-l2075-b37df0e242-promote-knowledge-topic-0115-source-section-l2072-l2075-b37df0e242-quiz-quiz-0115-source-section-l2072-l2075-b37df0e242
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0116-source-section-l2076-l2088-7f5b50b08d-promote-knowledge-topic-0116-source-section-l2076-l2088-7f5b50b08d-quiz-quiz-0116-source-section-l2076-l2088-7f5b50b08d
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0118-source-section-l2095-l2125-ede16c1aa1-promote-knowledge-topic-0118-source-section-l2095-l2125-ede16c1aa1-quiz-quiz-0118-source-section-l2095-l2125-ede16c1aa1
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0120-source-section-l2128-l2233-da09ed122f-promote-knowledge-topic-0120-source-section-l2128-l2233-da09ed122f-quiz-quiz-0120-source-section-l2128-l2233-da09ed122f
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0124-source-section-l2278-l2306-ff717f8dc9-promote-knowledge-topic-0124-source-section-l2278-l2306-ff717f8dc9-quiz-quiz-0124-source-section-l2278-l2306-ff717f8dc9
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0128-source-section-l2356-l2371-04647ec773-promote-knowledge-topic-0128-source-section-l2356-l2371-04647ec773-quiz-quiz-0128-source-section-l2356-l2371-04647ec773
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0129-3-l2372-l2382-6351960ee2-promote-knowledge-topic-0129-3-l2372-l2382-6351960ee2-quiz-quiz-0129-3-l2372-l2382-6351960ee2
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0131-source-section-l2397-l2404-1399452abc-promote-knowledge-topic-0131-source-section-l2397-l2404-1399452abc-quiz-quiz-0131-source-section-l2397-l2404-1399452abc
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0135-3-4-l2430-l2461-1ab5276a0b-promote-knowledge-topic-0135-3-4-l2430-l2461-1ab5276a0b-quiz-quiz-0135-3-4-l2430-l2461-1ab5276a0b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0138-source-section-l2485-l2506-eee0b0625e-promote-knowledge-topic-0138-source-section-l2485-l2506-eee0b0625e-quiz-quiz-0138-source-section-l2485-l2506-eee0b0625e
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0143-source-section-l2538-l2609-aee6f31fc9-promote-knowledge-topic-0143-source-section-l2538-l2609-aee6f31fc9-quiz-quiz-0143-source-section-l2538-l2609-aee6f31fc9
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0154-source-section-l2727-l2739-2c17e6fa34-promote-knowledge-topic-0154-source-section-l2727-l2739-2c17e6fa34-quiz-quiz-0154-source-section-l2727-l2739-2c17e6fa34
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0156-source-section-l2751-l2759-742c35def5-promote-knowledge-topic-0156-source-section-l2751-l2759-742c35def5-quiz-quiz-0156-source-section-l2751-l2759-742c35def5
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0160-source-section-l2807-l2874-fcb6b19286-promote-knowledge-topic-0160-source-section-l2807-l2874-fcb6b19286-quiz-quiz-0160-source-section-l2807-l2874-fcb6b19286
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0167-source-section-l2968-l2971-8db02d7af7-promote-knowledge-topic-0167-source-section-l2968-l2971-8db02d7af7-quiz-quiz-0167-source-section-l2968-l2971-8db02d7af7
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0169-source-section-l2999-l3004-dc71634583-promote-knowledge-topic-0169-source-section-l2999-l3004-dc71634583-quiz-quiz-0169-source-section-l2999-l3004-dc71634583
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0171-source-section-l3012-l3021-59e3662482-promote-knowledge-topic-0171-source-section-l3012-l3021-59e3662482-quiz-quiz-0171-source-section-l3012-l3021-59e3662482
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0173-source-section-l3034-l3045-a3fd0ea560-promote-knowledge-topic-0173-source-section-l3034-l3045-a3fd0ea560-quiz-quiz-0173-source-section-l3034-l3045-a3fd0ea560
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0178-source-section-l3068-l3071-37229f45db-promote-knowledge-topic-0178-source-section-l3068-l3071-37229f45db-quiz-quiz-0178-source-section-l3068-l3071-37229f45db
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0179-source-section-l3072-l3079-5cb73674da-promote-knowledge-topic-0179-source-section-l3072-l3079-5cb73674da-quiz-quiz-0179-source-section-l3072-l3079-5cb73674da
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0180-source-section-l3080-l3113-1851ef5c5f-promote-knowledge-topic-0180-source-section-l3080-l3113-1851ef5c5f-quiz-quiz-0180-source-section-l3080-l3113-1851ef5c5f
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0182-source-section-l3124-l3129-44bf478841-promote-knowledge-topic-0182-source-section-l3124-l3129-44bf478841-quiz-quiz-0182-source-section-l3124-l3129-44bf478841
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0190-source-section-l3228-l3233-9ab28845ad-promote-knowledge-topic-0190-source-section-l3228-l3233-9ab28845ad-quiz-quiz-0190-source-section-l3228-l3233-9ab28845ad
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0195-source-section-l3250-l3323-0b45d9464e-promote-knowledge-topic-0195-source-section-l3250-l3323-0b45d9464e-quiz-quiz-0195-source-section-l3250-l3323-0b45d9464e
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0202-source-section-l3383-l3390-0fdee45612-promote-knowledge-topic-0202-source-section-l3383-l3390-0fdee45612-quiz-quiz-0202-source-section-l3383-l3390-0fdee45612
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0206-source-section-l3416-l3478-d0668de44d-promote-knowledge-topic-0206-source-section-l3416-l3478-d0668de44d-quiz-quiz-0206-source-section-l3416-l3478-d0668de44d
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0207-source-section-l3479-l3499-1f1ab045ae-promote-knowledge-topic-0207-source-section-l3479-l3499-1f1ab045ae-quiz-quiz-0207-source-section-l3479-l3499-1f1ab045ae
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0209-source-section-l3518-l3570-2d44040a12-promote-knowledge-topic-0209-source-section-l3518-l3570-2d44040a12-quiz-quiz-0209-source-section-l3518-l3570-2d44040a12
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0214-source-section-l3595-l3777-13b9ecc3f6-promote-knowledge-topic-0214-source-section-l3595-l3777-13b9ecc3f6-quiz-quiz-0214-source-section-l3595-l3777-13b9ecc3f6
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0222-source-section-l3811-l3816-98c91c91f4-promote-knowledge-topic-0222-source-section-l3811-l3816-98c91c91f4-quiz-quiz-0222-source-section-l3811-l3816-98c91c91f4
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0226-source-section-l3831-l3857-f8a90ca7b1-promote-knowledge-topic-0226-source-section-l3831-l3857-f8a90ca7b1-quiz-quiz-0226-source-section-l3831-l3857-f8a90ca7b1
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0227-source-section-l3858-l3870-cb587843d3-promote-knowledge-topic-0227-source-section-l3858-l3870-cb587843d3-quiz-quiz-0227-source-section-l3858-l3870-cb587843d3
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0233-4-1-l3908-l3926-df571e9e77-promote-knowledge-topic-0233-4-1-l3908-l3926-df571e9e77-quiz-quiz-0233-4-1-l3908-l3926-df571e9e77
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0246-source-section-l4056-l4059-247c69fd34-promote-knowledge-topic-0246-source-section-l4056-l4059-247c69fd34-quiz-quiz-0246-source-section-l4056-l4059-247c69fd34
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0248-source-section-l4066-l4071-aa380ae95c-promote-knowledge-topic-0248-source-section-l4066-l4071-aa380ae95c-quiz-quiz-0248-source-section-l4066-l4071-aa380ae95c
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0250-source-section-l4100-l4103-d838852e5f-promote-knowledge-topic-0250-source-section-l4100-l4103-d838852e5f-quiz-quiz-0250-source-section-l4100-l4103-d838852e5f
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0254-4-2-l4150-l4167-fde2bd5e72-promote-knowledge-topic-0254-4-2-l4150-l4167-fde2bd5e72-quiz-quiz-0254-4-2-l4150-l4167-fde2bd5e72
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0257-source-section-l4176-l4186-953164c68e-promote-knowledge-topic-0257-source-section-l4176-l4186-953164c68e-quiz-quiz-0257-source-section-l4176-l4186-953164c68e
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0258-source-section-l4187-l4248-726a022afe-promote-knowledge-topic-0258-source-section-l4187-l4248-726a022afe-quiz-quiz-0258-source-section-l4187-l4248-726a022afe
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0261-source-section-l4295-l4298-bf625d621e-promote-knowledge-topic-0261-source-section-l4295-l4298-bf625d621e-quiz-quiz-0261-source-section-l4295-l4298-bf625d621e
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0271-source-section-l4416-l4426-91f0d0c112-promote-knowledge-topic-0271-source-section-l4416-l4426-91f0d0c112-quiz-quiz-0271-source-section-l4416-l4426-91f0d0c112
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0274-source-section-l4444-l4449-ad150ac702-promote-knowledge-topic-0274-source-section-l4444-l4449-ad150ac702-quiz-quiz-0274-source-section-l4444-l4449-ad150ac702
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0286-source-section-l4552-l4559-99425855d8-promote-knowledge-topic-0286-source-section-l4552-l4559-99425855d8-quiz-quiz-0286-source-section-l4552-l4559-99425855d8
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0287-source-section-l4560-l4627-35a7f81fda-promote-knowledge-topic-0287-source-section-l4560-l4627-35a7f81fda-quiz-quiz-0287-source-section-l4560-l4627-35a7f81fda
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0294-source-section-l4720-l4723-366753fa97-promote-knowledge-topic-0294-source-section-l4720-l4723-366753fa97-quiz-quiz-0294-source-section-l4720-l4723-366753fa97
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0298-source-section-l4748-l4765-5e1a4f5056-promote-knowledge-topic-0298-source-section-l4748-l4765-5e1a4f5056-quiz-quiz-0298-source-section-l4748-l4765-5e1a4f5056
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0302-source-section-l4787-l4894-fc393e675c-promote-knowledge-topic-0302-source-section-l4787-l4894-fc393e675c-quiz-quiz-0302-source-section-l4787-l4894-fc393e675c
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0312-source-section-l4939-l4944-9f297e461d-promote-knowledge-topic-0312-source-section-l4939-l4944-9f297e461d-quiz-quiz-0312-source-section-l4939-l4944-9f297e461d
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0320-source-section-l5045-l5101-a380364190-promote-knowledge-topic-0320-source-section-l5045-l5101-a380364190-quiz-quiz-0320-source-section-l5045-l5101-a380364190
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0323-1-l5114-l5122-9f3cff71bc-promote-knowledge-topic-0323-1-l5114-l5122-9f3cff71bc-quiz-quiz-0323-1-l5114-l5122-9f3cff71bc
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0325-1-l5129-l5156-e21c10ee26-promote-knowledge-topic-0325-1-l5129-l5156-e21c10ee26-quiz-quiz-0325-1-l5129-l5156-e21c10ee26
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0332-source-section-l5239-l5250-d3a036e8fb-promote-knowledge-topic-0332-source-section-l5239-l5250-d3a036e8fb-quiz-quiz-0332-source-section-l5239-l5250-d3a036e8fb
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0343-source-section-l5445-l5450-509ff00649-promote-knowledge-topic-0343-source-section-l5445-l5450-509ff00649-quiz-quiz-0343-source-section-l5445-l5450-509ff00649
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0348-source-section-l5474-l5483-8de7c5ad9c-promote-knowledge-topic-0348-source-section-l5474-l5483-8de7c5ad9c-quiz-quiz-0348-source-section-l5474-l5483-8de7c5ad9c
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0353-source-section-l5505-l5512-017a5973fa-promote-knowledge-topic-0353-source-section-l5505-l5512-017a5973fa-quiz-quiz-0353-source-section-l5505-l5512-017a5973fa
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0356-source-section-l5600-l5608-efc953206b-promote-knowledge-topic-0356-source-section-l5600-l5608-efc953206b-quiz-quiz-0356-source-section-l5600-l5608-efc953206b
+- textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0357-source-section-l5609-l5644-748b62bb61-promote-knowledge-topic-0357-source-section-l5609-l5644-748b62bb61-quiz-quiz-0357-source-section-l5609-l5644-748b62bb61
+
+## Skipped IDs
+
+- None
+
+## Invalid Entries
+
+- None
+
+## Source Unresolved IDs
+
+- None
