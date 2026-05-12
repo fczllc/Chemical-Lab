@@ -1,0 +1,23 @@
+# Task 8 Evidence - Grade 9 Vol 2 Duplicate Quality Check
+Generated at: 2026-05-12T10:26:45.206Z
+Scope: Grade 9 Vol 2 generated/runtime MCQ quality after duplicate and template repair.
+
+Command: Node strict duplicate/unordered-option-set/template/shape/parity/protection check over generated JSON and src/data/quizData.json
+Exit code: 0
+Grade 9 Vol 2 generated entries checked: 109
+duplicateGroups: 0
+duplicateRecords: 0
+duplicateOptionSetGroupsAbove1: 0
+duplicateOptionSetRecords: 0
+duplicateOptionSetCheckMode: unordered-normalized-options
+templatePromptMatches: 0
+metadataLeakMatches: 0
+forbiddenPlaceholderMatches: 0
+shapeErrors: 0
+runtimeGeneratedParityMismatches: 0
+protectedHashMismatches: 0
+strictQualityPass: true
+
+Duplicate exact IDs: none
+Duplicate option-set IDs: none
+Shape error IDs: none

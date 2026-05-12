@@ -155,3 +155,52 @@ Investigated safe JSON data migration/validation workflows in Node.js relevant t
 - Duplicate quality evidence passed: duplicateGroups=0, duplicateRecords=0, forbiddenPlaceholderMatches=0, vaguePromptMatches=0, runtimeGeneratedParityMismatches=0.
 - Canonical validation and build passed after repair; runtime counts stayed total=538, grade8 generated=157/shortAnswer=0, grade9 vol1 generated=155/shortAnswer=0, grade9 vol2 generated=109/shortAnswer=0, protected snapshot mismatches=0.
 - Converter write cannot be rerun after the original Grade 8 conversion because selected runtime IDs are no longer shortAnswer placeholders; repair-sync report/evidence documents the equivalent ID-matched synchronization.
+
+## 2026-05-12T06:05:00Z - Task 6 strict Grade 8 template repair
+- Resolved stricter Grade 8 quality blocker after first repair still left template-repetitive content: final evidence reports templatePromptMatches=0 for /想一想|思考与讨论|下列说法正确的是/, duplicateGroups=0, duplicateRecords=0, duplicateOptionSetGroupsAbove1=0, runtimeGeneratedParityMismatches=0, protectedHashMismatches=0.
+- Repair was synchronized by original runtime ID across generated JSON and src/data/quizData.json; total records stayed 538, grade8 generated=157/shortAnswer=0, grade9 vol1 and vol2 remained generated=155/109 and shortAnswer=0.
+- Validation passed with node scripts/validate-quiz-data.mjs and production build passed; the prior Grade 8 duplicate/template blocker is resolved for Task 9 readiness.
+
+## 2026-05-12T06:00:00Z - Task 9 final reconciliation
+- Final reconciliation evidence written to `.sisyphus/evidence/remaining-mcq-final-reconciliation.json` and `.sisyphus/evidence/remaining-mcq-final-reconciliation.md`: convertedNew=421, skippedNew=0, finalRemainingFromInitialScope=0, so `421 + 0 + 0 === 421`; total quiz records stayed 538.
+- Protected Task 1 MCQ snapshot remained hash-identical: 117 checked, 0 missing, 0 hash mismatches.
+- Strict Grade 8 remediation readiness is included in the reconciliation: templatePromptMatches=0, duplicateGroups=0, duplicateOptionSetGroupsAbove1=0, runtimeGeneratedParityMismatches=0, protectedHashMismatches=0.
+- Operator review note `.sisyphus/evidence/task-9-operator-report-review.md` confirms commands, outputs, report paths, skip policy, final totals, no sensitive-value matches, and no human per-question review gate; `node scripts/validate-quiz-data.mjs` passed.
+
+## 2026-05-12T07:31Z - Task 10 browser QA evidence
+- Browser QA used the served app plus an in-page deterministic harness: import `/src/data/index.js`, temporarily move one selected runtime MCQ from each new source volume to the front of `quizData`, force no-op shuffle, dispatch `startfullquiz`, inspect `#quiz-content` DOM, then restore in-memory data.
+- Evidence files `.sisyphus/evidence/task-10-browser-three-batches.md` and `.sisyphus/evidence/task-10-scoring.md` document three rendered four-option samples, correctIndex presence, placeholder/template checks, and Grade 8 correct/incorrect feedback/score behavior.
+- Console remained clean for quiz-flow errors; only unrelated `/favicon.ico` 404 was observed. Build evidence reused `.sisyphus/evidence/task-10-build.txt` because it already ends with exit code 0.
+
+## 2026-05-12T08:15Z - Task 10 evidence completion
+- Verified existing evidence files are complete and correct: `.sisyphus/evidence/task-10-browser-three-batches.md` contains three samples (Grade 8, Grade 9 Vol 1, Grade 9 Vol 2) with IDs, questions, four options, correctIndex, placeholder checks, and browser observations.
+- `.sisyphus/evidence/task-10-scoring.md` documents both correct-answer and incorrect-answer scoring with expected vs observed scores, feedback text, CSS classes, and next-button state.
+- Build evidence `.sisyphus/evidence/task-10-build.txt` already proves `npm run build` exits 0; no rebuild needed.
+- Screenshot `.sisyphus/evidence/task-10-scoring-feedback.png` exists as visual evidence.
+- All required Task 10 deliverables are present and verified.
+
+## 2026-05-12T06:20:00Z - Task 6 final unordered option repair
+- Fresh data-quality/security review found two stricter blockers after the template repair: unordered duplicate option sets hidden by shuffled options, learner-facing metadata wording (`聚焦知识点` / `知识点编号`), and an absolute local temp path in evidence.
+- Final repair synchronized generated/runtime Grade 8 records by ID again and rewrote evidence to use unordered-normalized option-set checks. Final evidence reports templatePromptMatches=0, metadataLeakMatches=0, duplicateGroups=0, duplicateOptionSetGroupsAbove1=0, runtimeGeneratedParityMismatches=0, protectedHashMismatches=0, total=538, grade8 generated=157/shortAnswer=0.
+- Removed absolute local repair-log path from evidence; targeted grep found no `C:/Users`, `AppData`, temp-path, or metadata-leak strings in `.sisyphus/evidence` outputs.
+
+## 2026-05-12T09:50Z - Grade 9 F2 duplicate quality repair
+- Repaired Grade 9 generated/runtime MCQ duplicate blocker by synchronized ID updates: Vol 1 repaired 135 records from 17 exact/unordered option-set groups; Vol 2 repaired 31 records from 14 unordered option-set groups including 5 exact duplicate groups.
+- Final Grade 9 quality evidence reports duplicateGroups=0, duplicateRecords=0, duplicateOptionSetGroupsAbove1=0, shapeErrors=0, runtimeGeneratedParityMismatches=0, protectedHashMismatches=0 for both Vol 1 and Vol 2.
+- Counts remained stable after repair: total=538, grade8 generated=157 shortAnswer=0, grade9 vol1 generated=155 shortAnswer=0, grade9 vol2 generated=109 shortAnswer=0; reconciliation keeps \\421 + 0 + 0 === 421\\ with Grade 9 quality-repair-sync mode.
+- Reconciliation formula display correction: `421 + 0 + 0 === 421`.
+
+## 2026-05-12 - Final cleanup scope hygiene
+- Stopped/verified no Vite dev servers are listening on ports 5173 or 5174.
+- Removed stale PID artifacts `.devserver.pid` and `.sisyphus/evidence/task-10-dev-server.pid`.
+- Removed out-of-scope root scratch/backup artifacts `generate-grade8.cjs`, `write-evidence.cjs`, and `safe-data.json.2026-05-12T01-06-42-180Z.bak`.
+- Evidence written to `.sisyphus/evidence/final-cleanup-scope-hygiene.txt`; cleanup target status check returned no remaining entries.
+
+## 2026-05-12T10:26Z - Grade 9 F4 template quality repair
+- Repaired Grade 9 generated/runtime MCQs by synchronized ID updates: Vol 1 patched 47 learner-facing records and Vol 2 patched 4 learner-facing records; IDs and protected provenance fields were preserved.
+- New template-quality evidence reports templatePromptMatches=0, metadataLeakMatches=0, duplicateGroups=0, duplicateOptionSetGroupsAbove1=0, runtimeGeneratedParityMismatches=0, protectedHashMismatches=0 for both Grade 9 volumes.
+- Counts stayed stable: total=538, grade8 generated=157 shortAnswer=0, grade9 vol1 generated=155 shortAnswer=0, grade9 vol2 generated=109 shortAnswer=0; validator passed.
+
+## 2026-05-12 - Final Verification Wave complete
+- Final reviewers approved after Grade 9 duplicate/template repairs and cleanup: F1 Plan Compliance APPROVE, F2 Data Quality/Preservation APPROVE, F3 Browser QA APPROVE, F4 Scope/Safety APPROVE.
+- Marked F1-F4 complete in `.sisyphus/plans/remaining-shortanswer-mcq-conversion.md` under the Boulder continuation directive.

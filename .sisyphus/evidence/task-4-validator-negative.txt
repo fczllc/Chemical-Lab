@@ -1,0 +1,39 @@
+# Task 4 Negative Validation Evidence
+# Generated: 2026-05-12
+# All self-check modes confirm invalid fixtures are rejected (exit 0 on rejection).
+
+## duplicate-options
+$ node scripts/validate-quiz-data.mjs --self-check-invalid duplicate-options
+quiz invalid fixture rejected: duplicate-options
+- quizData[538] (invalid-duplicate-options) options 必须唯一（trim 后）
+EXIT_CODE=0
+
+## placeholder
+$ node scripts/validate-quiz-data.mjs --self-check-invalid placeholder
+quiz invalid fixture rejected: placeholder
+- quizData[538] (invalid-placeholder) question 包含占位符文本
+EXIT_CODE=0
+
+## missing-generation-source
+$ node scripts/validate-quiz-data.mjs --self-check-invalid missing-generation-source
+quiz invalid fixture rejected: missing-generation-source
+- quizData[538] (invalid-missing-generation-source) generationSource 或 generationModel 必须为非空字符串
+EXIT_CODE=0
+
+## invalid-correct-index
+$ node scripts/validate-quiz-data.mjs --self-check-invalid invalid-correct-index
+quiz invalid fixture rejected: invalid-correct-index
+- quizData[538] (invalid-correct-index) correctIndex 非法：4
+EXIT_CODE=0
+
+## invalid-difficulty
+$ node scripts/validate-quiz-data.mjs --self-check-invalid invalid-difficulty
+quiz invalid fixture rejected: invalid-difficulty
+- quizData[538] (invalid-difficulty) difficulty 必须是 基础|进阶|挑战，实际 简单
+EXIT_CODE=0
+
+## missing-source-references
+$ node scripts/validate-quiz-data.mjs --self-check-invalid missing-source-references
+quiz invalid fixture rejected: missing-source-references
+- quizData[538] (invalid-missing-source-references) sourceReferences 必须为非空数组
+EXIT_CODE=0

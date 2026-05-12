@@ -1,102 +1,110 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\editable-experiment-title.md",
-  "started_at": "2026-05-11T04:24:17.169Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\remaining-shortanswer-mcq-conversion.md",
+  "started_at": "2026-05-12T01:01:36.601Z",
   "session_ids": [
-    "ses_1eac6c6b7ffeNgpQ1PswmtVS1D",
-    "ses_1eab8146affeD9pZVyudlfEMAV",
-    "ses_1eab81408ffe2gb4DYZ6gvGswh",
-    "ses_1eab813e2ffeG8LkqD0YFens2F",
-    "ses_1e90e34d3ffemSKLjGQZpruHjm",
-    "ses_1e90e326dffewnT8S5BSSAvPhq",
-    "ses_1e90e31f2ffeuxR2d7rgdaKIQT",
-    "ses_1e9016384ffe0Q8oGEd2bTI749",
-    "ses_1e90161caffeUQ3VzMBU90etZe"
+    "ses_1e65461eaffeo6FW3pDg7RnWpo",
+    "ses_1e64aaab5ffeCjs4D1xNJ42C3N",
+    "ses_1e64aa9d8ffe2YM776C1iz4H7s",
+    "ses_1e64aa9b1ffe8n8jOUgRFEy4HF"
   ],
   "session_origins": {
-    "ses_1eac6c6b7ffeNgpQ1PswmtVS1D": "direct",
-    "ses_1eab8146affeD9pZVyudlfEMAV": "appended",
-    "ses_1eab81408ffe2gb4DYZ6gvGswh": "appended",
-    "ses_1eab813e2ffeG8LkqD0YFens2F": "appended",
-    "ses_1e90e34d3ffemSKLjGQZpruHjm": "appended",
-    "ses_1e90e326dffewnT8S5BSSAvPhq": "appended",
-    "ses_1e90e31f2ffeuxR2d7rgdaKIQT": "appended",
-    "ses_1e9016384ffe0Q8oGEd2bTI749": "appended",
-    "ses_1e90161caffeUQ3VzMBU90etZe": "appended"
+    "ses_1e65461eaffeo6FW3pDg7RnWpo": "direct",
+    "ses_1e64aaab5ffeCjs4D1xNJ42C3N": "appended",
+    "ses_1e64aa9d8ffe2YM776C1iz4H7s": "appended",
+    "ses_1e64aa9b1ffe8n8jOUgRFEy4HF": "appended"
   },
-  "plan_name": "editable-experiment-title",
+  "plan_name": "remaining-shortanswer-mcq-conversion",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Add persisted experiment title override state",
-      "session_id": "ses_1eab2ea95ffeIBqnMdZm2tObQV",
+      "task_title": "Preflight Recount and Preservation Snapshot",
+      "session_id": "ses_1e6495f4dffexx1XqK7LmxvIoZ",
       "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-05-11T04:34:08.565Z"
+      "category": "deep",
+      "updated_at": "2026-05-12T01:06:54.779Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Implement lab modal readonly/edit title behavior",
-      "session_id": "ses_1ea286171ffeWjYfESq0PyvtZG",
+      "task_title": "Generate Grade 8 Full Textbook MCQ JSON",
+      "session_id": "ses_1e5ad4457ffeqGp3Mz7lGD4RFd",
       "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-05-11T07:13:05.876Z"
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T04:31:58.319Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Style editable title controls to match the modal",
-      "session_id": "ses_1e9f8faa4fferWODFr39u8gUe7",
-      "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-11T07:58:07.904Z"
-    },
-    "todo:4": {
-      "task_key": "todo:4",
-      "task_label": "4",
-      "task_title": "Add Playwright coverage for editable title flow",
-      "session_id": "ses_1e9efcc04ffe0a34T5ljc6e3gM",
+      "task_title": "Generate Grade 9 Volume 1 MCQ JSON",
+      "session_id": "ses_1e5ad4449ffepEaq3vfFyk4hcH",
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
-      "updated_at": "2026-05-11T08:15:32.038Z"
+      "updated_at": "2026-05-12T05:03:08.343Z"
     },
     "todo:5": {
       "task_key": "todo:5",
       "task_label": "5",
-      "task_title": "Run build and focused regression verification",
-      "session_id": "ses_1e9e1195fffegjqxb2fyjfHaJm",
+      "task_title": "Dry-Run All Remaining Batches and Prove Invalid-Input Safety",
+      "session_id": "ses_1e56ca73fffen5IiGMSKzIkU3P",
       "agent": "Sisyphus-Junior",
-      "category": "",
-      "updated_at": "2026-05-11T09:16:15.341Z"
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T05:10:33.594Z"
+    },
+    "todo:6": {
+      "task_key": "todo:6",
+      "task_label": "6",
+      "task_title": "Write Grade 8 Full Textbook Conversion",
+      "session_id": "ses_1e566c038ffeJ35FXoN4mHM7aH",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T05:17:14.001Z"
+    },
+    "todo:7": {
+      "task_key": "todo:7",
+      "task_label": "7",
+      "task_title": "Write Grade 9 Volume 1 Conversion",
+      "session_id": "ses_1e55ffa7cffeXOGhvkOGd5gw7p",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T05:25:46.017Z"
+    },
+    "todo:8": {
+      "task_key": "todo:8",
+      "task_label": "8",
+      "task_title": "Write Grade 9 Volume 2 Conversion",
+      "session_id": "ses_1e55930d8ffeuImQbebiTCkyD6",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T05:32:48.763Z"
+    },
+    "todo:9": {
+      "task_key": "todo:9",
+      "task_label": "9",
+      "task_title": "Aggregate Reconciliation and Operator Report Update",
+      "session_id": "ses_1e542112affeiB15CTRH5GMMYb",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-05-12T05:58:02.631Z"
+    },
+    "todo:10": {
+      "task_key": "todo:10",
+      "task_label": "10",
+      "task_title": "Build and Browser QA for Three Newly Converted Batches",
+      "session_id": "ses_1e48d08d6ffenfq2P7x2ELvoiE",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-12T09:12:06.600Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_1e99205c6ffeM1ZL6IaiVpaIsO",
+      "session_id": "ses_1e440aa04ffepl412pSW3Xwpsy",
       "agent": "oracle",
       "category": "",
-      "updated_at": "2026-05-11T09:46:59.697Z"
-    },
-    "final-wave:f2": {
-      "task_key": "final-wave:f2",
-      "task_label": "F2",
-      "task_title": "Code Quality Review — unspecified-high",
-      "session_id": "ses_1e9909cbbffe4YPIy0324lXx5Y",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-11T09:52:26.516Z"
-    },
-    "final-wave:f4": {
-      "task_key": "final-wave:f4",
-      "task_label": "F4",
-      "task_title": "Scope Fidelity Check — deep",
-      "session_id": "ses_1e93d6001ffeb5up3xpTXXO3wC",
-      "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-11T11:19:24.929Z"
+      "updated_at": "2026-05-12T10:35:39.066Z"
     }
   }
 }

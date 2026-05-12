@@ -1,0 +1,27 @@
+# Task 6 Evidence - Grade 8 Quality Repair
+Generated at: 2026-05-12T07:36:20.210Z
+Scope: Repair Grade 8 duplicate/vague/template-repetitive generated MCQs after strict quality review failures.
+
+Repair method: ID-matched synchronization of generated JSON and runtime records. Final pass removed metadata wording and repaired unordered option-set collisions with concept-specific distractors while preserving IDs and exact provenance fields.
+Repair logs: stored in approved local temp workspace; omitted here to avoid absolute local path disclosure.
+Validator command: node scripts/validate-quiz-data.mjs
+Validator exit code: 0
+Validator output: quizData: valid; All quiz records passed validation.
+
+Runtime SHA-256 after strict repair: 25c0300e27b76df140eb6534335fb9e10592ec585278cf1d079993e1cf5d587f
+Generated JSON SHA-256 after strict repair: d636cd5f61e5ab14f857bd405f72216e7545170ed8a2458b79a71a65dbb275c5
+Total runtime records: 538
+Grade8 generated MCQs: 157
+Grade8 shortAnswer placeholders: 0
+Grade9 vol1 generated MCQs: 155
+Grade9 vol1 shortAnswer placeholders: 0
+Grade9 vol2 generated MCQs: 109
+Grade9 vol2 shortAnswer placeholders: 0
+Protected snapshot checked: 117
+Protected hash mismatches: 0
+Template prompt matches: 0
+Metadata leak matches: 0
+Duplicate exact groups: 0
+Duplicate unordered option-set groups above 1: 0
+Runtime/generated parity mismatches: 0
+Overall pass: true

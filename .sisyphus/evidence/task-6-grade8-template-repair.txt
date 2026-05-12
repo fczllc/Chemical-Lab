@@ -1,0 +1,15 @@
+# Task 6 Evidence - Grade 8 Template Repair
+Generated at: 2026-05-12T07:36:20.210Z
+Scope: Strict repair for template-repetitive Grade 8 MCQs after exact duplicate keys were already gone.
+
+Failing phrases checked: /想一想|思考与讨论|下列说法正确的是/
+Metadata workaround checked: /聚焦知识点|知识点编号|本题对应/
+templatePromptMatches: 0
+metadataLeakMatches: 0
+duplicateGroups: 0
+duplicateOptionSetGroupsAbove1: 0
+duplicateOptionSetCheckMode: unordered-normalized-options
+justifiedDuplicateOptionSetExceptions: 0
+runtimeGeneratedParityMismatches: 0
+protectedHashMismatches: 0
+strictTemplateRepairPass: true

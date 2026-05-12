@@ -1,8 +1,7 @@
-Command: `npm run validate:supporting`
+Command: node scripts/validate-supporting-data.mjs
+Exit code: 1
 
 Output:
-
-> element-explorer-kids@1.0.0 validate:supporting
-> node scripts/validate-supporting-data.mjs
-
-支持数据校验通过：20 道题、5 个反应、11 个成就、5 个学习阶段。
+支持数据校验失败：
+- 反应 textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0015-1-1-l155-l173-c71806e98a-promote-knowledge-topic-0015-1-1-l155-l173-c71806e98a-experiment-experiment-0015-1-1-l155-l173-c71806e98a.notationReviewStatus 必须为 reviewed，才能使用 formulaText/equationText
+- 反应 textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0015-1-1-l155-l173-c71806e98a-promote-knowledge-topic-0015-1-1-l155-l173-c71806e98a-experiment-experiment-0015-1-1-l155-l173-c71806e98a.equationText 不能由增强化学标记渲染器解析：2Na + 2H2O → 2NaOH + H2↑；2Na + 2C2H5OH → 2C2H5ONa + H2↑

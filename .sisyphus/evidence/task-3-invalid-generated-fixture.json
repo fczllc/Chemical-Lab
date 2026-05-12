@@ -1,0 +1,18 @@
+[
+  {
+    "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0002-source-section-l6-l38-d782b15af6-promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6",
+    "question": "待复核：这是一条故意无效的测试题干。",
+    "options": [
+      "碳原子能形成多种骨架",
+      "碳原子能形成多种骨架",
+      "碳不能形成化合物"
+    ],
+    "correctIndex": 4,
+    "category": "shortAnswer",
+    "difficulty": "高中基础",
+    "curriculumTags": [],
+    "explanation": "待复核：故意无效。",
+    "generatedFromShortAnswer": false,
+    "generationSource": "task-3-invalid-fixture"
+  }
+]

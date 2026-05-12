@@ -1,0 +1,52 @@
+# Task 5 hand-authored MCQ preservation proof
+
+Generated at: 2026-05-11T19:01:17.702Z
+
+Baseline source: git HEAD:src/data/quizData.json
+Current source: src/data/quizData.json
+
+Baseline hand-authored MCQs: 26
+Current hand-authored MCQs: 26
+Missing baseline hand-authored IDs: 0
+Changed baseline hand-authored IDs: 0
+Invalid current hand-authored MCQs: 0
+
+Converted generated organic MCQs: 91
+Remaining shortAnswer records in organic batch: 0
+
+Hand-authored IDs preserved:
+- quiz-1
+- quiz-2
+- quiz-3
+- quiz-4
+- quiz-5
+- quiz-6
+- quiz-7
+- quiz-8
+- quiz-9
+- quiz-10
+- quiz-11
+- quiz-12
+- quiz-13
+- quiz-14
+- quiz-15
+- quiz-16
+- quiz-17
+- quiz-18
+- quiz-19
+- quiz-20
+- quiz-c60-structure-source
+- quiz-c60-carbon-allotrope
+- quiz-c60-reviewed-formula-application
+- quiz-carbon-allotropes-comparison-1
+- quiz-carbon-allotropes-comparison-2
+- quiz-carbon-allotropes-comparison-3
+
+Missing IDs:
+- None
+
+Changed IDs:
+- None
+
+Invalid hand-authored entries:
+- None

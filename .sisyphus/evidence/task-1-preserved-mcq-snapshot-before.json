@@ -1,0 +1,786 @@
+{
+  "timestamp": "2026-05-12T01:05:23.214Z",
+  "source": "src/data/quizData.json",
+  "canonicalHashing": "JSON values serialized with sorted object keys before sha256 hashing",
+  "protectedMCRule": "sourceVolumeId === rj-chemistry-g12-selective-3-organic-2019 && generatedFromShortAnswer === true, plus category !== shortAnswer && generatedFromShortAnswer !== true",
+  "count": 117,
+  "checks": {
+    "length": true,
+    "noShortAnswer": true,
+    "uniqueIds": true,
+    "allHashesSha256": true,
+    "all": true
+  },
+  "items": [
+    {
+      "id": "quiz-1",
+      "category": "基础认识",
+      "hash": "ff5ce4f97a1dd00d09e80e18fa6141aef434cb4ba7d783fa62a3177ff37dd4b8"
+    },
+    {
+      "id": "quiz-2",
+      "category": "符号识别",
+      "hash": "cafc61c000e43426206ebb7507a4ef7a98a6dbf140447c3859e2d7f9862c4ab6"
+    },
+    {
+      "id": "quiz-3",
+      "category": "生活用途",
+      "hash": "25230e5df3c05138ab34f9bbb37f7113cd62bacd0d8b41561c9b1275992561e2"
+    },
+    {
+      "id": "quiz-4",
+      "category": "分类判断",
+      "hash": "d4975bab1bbae1a7ec06a5bceed8ac6714c111146c65f147ce32b2a9ac5b827c"
+    },
+    {
+      "id": "quiz-5",
+      "category": "生活用途",
+      "hash": "96106a220b8527dd5aab53b00da9f3a9a48a12771bf11290c5b6d5bc26c0c3fe"
+    },
+    {
+      "id": "quiz-6",
+      "category": "生活用途",
+      "hash": "a467d2642edf7206e30efd2025949f2113ad7afcf26ea74bf40529799fe03f21"
+    },
+    {
+      "id": "quiz-7",
+      "category": "生活用途",
+      "hash": "25e84ecc213bafd1e7a9c043fd916b81fc71bb11e139e46f17600193e87b2e19"
+    },
+    {
+      "id": "quiz-8",
+      "category": "安全知识",
+      "hash": "27b5ca5d7c80ba89a17eee0e9ba2f29aa43fb8e8632197672c44d18541c0093f"
+    },
+    {
+      "id": "quiz-9",
+      "category": "安全知识",
+      "hash": "5ee61556fa351cdf7187d8586b41c81ebe7800b7139c372259738e4b45b8872b"
+    },
+    {
+      "id": "quiz-10",
+      "category": "分类判断",
+      "hash": "7efd10e8f6e1c30bc8c3db4ef7cc7507d78283a50f4d21ae136541c3053227f5"
+    },
+    {
+      "id": "quiz-11",
+      "category": "基础认识",
+      "hash": "16d4c91f4e1d0e695512bc2ee337607ad6cfdfe67a25dcf7aa1702d122807239"
+    },
+    {
+      "id": "quiz-12",
+      "category": "生活用途",
+      "hash": "ca121fe20433e0272a7d1355bc2a0446a9ae4731df18c9c86c7f940af5f9c3ad"
+    },
+    {
+      "id": "quiz-13",
+      "category": "生活用途",
+      "hash": "378a820e6cbd0fc61fab84480fb15e3faf489de5b331ef9077c2b6ac14626de4"
+    },
+    {
+      "id": "quiz-14",
+      "category": "材料世界",
+      "hash": "af9daea576afcbface989c125a5aa088d247f27935f41345c502cf176b19171d"
+    },
+    {
+      "id": "quiz-15",
+      "category": "安全知识",
+      "hash": "82f9614e4fc300ac2adf157099899e15ad63f37b14a719caaa31706a73b2f4eb"
+    },
+    {
+      "id": "quiz-16",
+      "category": "反应概念",
+      "hash": "772f5c8840df30a1e6a2400e3f72fe11d114cc6e08861d83addae6fa5b0e8fa2"
+    },
+    {
+      "id": "quiz-17",
+      "category": "材料世界",
+      "hash": "b6f135f8e3fe5216ec9f4b14cb3864f3bc3af278bf0209b7660a09dc74d67298"
+    },
+    {
+      "id": "quiz-18",
+      "category": "分类判断",
+      "hash": "ede493f07f19e3d8fb00158a628a8017b5b335ffd26ca80b3ae22c3df5533976"
+    },
+    {
+      "id": "quiz-19",
+      "category": "科学拓展",
+      "hash": "008bc85db747b53c3a5113754579a6bcfede9e363d0abe59695d4c15772b0a92"
+    },
+    {
+      "id": "quiz-20",
+      "category": "科学拓展",
+      "hash": "e00365fd4ad19fccd6233407c5f38b71a5fe76db7fffd965ad69fcec64a7c75f"
+    },
+    {
+      "id": "quiz-c60-structure-source",
+      "category": "教材结构识别",
+      "hash": "d4d17c6d2ce85b1a27a2139312362c9e148a3ac70f93c53929fba9d29676088b"
+    },
+    {
+      "id": "quiz-c60-carbon-allotrope",
+      "category": "教材概念识别",
+      "hash": "63124a81d7de3b08004e64593632f7c9ef8de2beb5371f151ac7ad73b024a32b"
+    },
+    {
+      "id": "quiz-c60-reviewed-formula-application",
+      "category": "教材公式应用",
+      "hash": "aa31d4f226759de29c1c751c3ec5e693909ba845505546e98de2c091c3ae85f1"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-1",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "category": "comparison-topic",
+      "hash": "34e704e5ab6b5773da9b53a4b41d7b3157ebb99d608a6f5e294795e44384b72c"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-2",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "category": "comparison-topic",
+      "hash": "2b2fcf51362b9f90b168d6b7228b2db79584993207c5463dfe787db81c3df3db"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-3",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "category": "comparison-topic",
+      "hash": "92439261ba019bf3b5909cacdeb252dbe192fc0fcf5c5be5477164b7887b4bc1"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0002-source-section-l6-l38-d782b15af6-promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "1b1e87af28fff8ef0d01db96d31abd118a6a667286fa994f2550937170f68a16"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-promote-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-quiz-quiz-0011-source-section-l89-l106-6badbce1f7",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "分类判断",
+      "hash": "26704a25527ad9d876e902948495743e52f628cafa95abff5133025966b5f4ff"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0017-source-section-l183-l190-9864496b96-promote-knowledge-topic-0017-source-section-l183-l190-9864496b96-quiz-quiz-0017-source-section-l183-l190-9864496b96",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "61739b69c90685806ed45de2939052af85c91edd15c17454b417030f9b326719"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0019-source-section-l197-l244-8a7b6e1bba-promote-knowledge-topic-0019-source-section-l197-l244-8a7b6e1bba-quiz-quiz-0019-source-section-l197-l244-8a7b6e1bba",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "f75e7db42d157d4bc4692961924397a57f98783bf5b1fadb47097b077dd7fb1b"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0022-source-section-l252-l295-4f12aa3e1f-promote-knowledge-topic-0022-source-section-l252-l295-4f12aa3e1f-quiz-quiz-0022-source-section-l252-l295-4f12aa3e1f",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "da8bb743d522d8341dc7e2c9d2bc325d6cf04b3da80be23dc8e135c5cf957c21"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0023-source-section-l296-l366-fb02e44e12-promote-knowledge-topic-0023-source-section-l296-l366-fb02e44e12-quiz-quiz-0023-source-section-l296-l366-fb02e44e12",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "分类判断",
+      "hash": "5e340b21368d6b2cde0ee188dbb826d9f13bd0f8e50e02b696b7d7df14c712ec"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0032-source-section-l424-l427-54947f26fe-promote-knowledge-topic-0032-source-section-l424-l427-54947f26fe-quiz-quiz-0032-source-section-l424-l427-54947f26fe",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "d7dd6f8dc520d961fa98df4f58f65166eb9d8073446db307064554ab771b0cb3"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0035-source-section-l455-l464-a1f3062016-promote-knowledge-topic-0035-source-section-l455-l464-a1f3062016-quiz-quiz-0035-source-section-l455-l464-a1f3062016",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "8a9b3e3ac5e14bb75bd2ed307c8ad4d10eb7a56a379132aa2229e59126825f00"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0038-source-section-l514-l558-6e13cd8c0d-promote-knowledge-topic-0038-source-section-l514-l558-6e13cd8c0d-quiz-quiz-0038-source-section-l514-l558-6e13cd8c0d",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材公式应用",
+      "hash": "8b407bed16fbc16f5aceeb5c63345238363ab18821fb412b505f19d5f38b2b6a"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0041-2-l582-l614-24c345353b-promote-knowledge-topic-0041-2-l582-l614-24c345353b-quiz-quiz-0041-2-l582-l614-24c345353b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "276a6fd24ef9063dad813d0e4cc0fee11384a28c363809e085670f0239a4eb59"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0044-source-section-l632-l724-96f64daf47-promote-knowledge-topic-0044-source-section-l632-l724-96f64daf47-quiz-quiz-0044-source-section-l632-l724-96f64daf47",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "fdb8ff2a34a5176e8b540daf64e9cd461c2655b8c925e881d6fa33dec78894b2"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0053-source-section-l904-l954-2678d6074b-promote-knowledge-topic-0053-source-section-l904-l954-2678d6074b-quiz-quiz-0053-source-section-l904-l954-2678d6074b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "84432aebc8ae5adb21623403348c1d045cc45dc2a89ba3f8eda06e42a93e3d92"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0054-source-section-l955-l988-c10b5fcd2b-promote-knowledge-topic-0054-source-section-l955-l988-c10b5fcd2b-quiz-quiz-0054-source-section-l955-l988-c10b5fcd2b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "32ac721a84894e9c20c75dbba52a66e44617e1c22e19a0ce2e98662c1a8b1184"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0056-source-section-l1031-l1038-260c46efd5-promote-knowledge-topic-0056-source-section-l1031-l1038-260c46efd5-quiz-quiz-0056-source-section-l1031-l1038-260c46efd5",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "8b8fe8b5875c0b92ee830ceefc675728e7a2f8d52f560bc32c905679b9d5b71a"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0057-source-section-l1039-l1116-86a6228b86-promote-knowledge-topic-0057-source-section-l1039-l1116-86a6228b86-quiz-quiz-0057-source-section-l1039-l1116-86a6228b86",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "f93f6c674fd6814b37ae3007cc120561a1362e129a98a83e4a09f07950c28715"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0061-source-section-l1191-l1211-9572eb6801-promote-knowledge-topic-0061-source-section-l1191-l1211-9572eb6801-quiz-quiz-0061-source-section-l1191-l1211-9572eb6801",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "3aee5dc69163b5fec9ed6e7bdd78a46fc3762262a7f3c7b069f9a970aca30f50"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0070-source-section-l1309-l1312-acaf6d22ed-promote-knowledge-topic-0070-source-section-l1309-l1312-acaf6d22ed-quiz-quiz-0070-source-section-l1309-l1312-acaf6d22ed",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "3d63e21323890ccfeabdba7619904ebfe4087a138dd741007e66af1674fc6bd5"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0074-source-section-l1342-l1384-a41ba42c3c-promote-knowledge-topic-0074-source-section-l1342-l1384-a41ba42c3c-quiz-quiz-0074-source-section-l1342-l1384-a41ba42c3c",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "cb9892c738a6399e2b8bc81379605c0698f4cf35d433bd8ceba3ae0ffd9adf39"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0076-source-section-l1396-l1406-3f2f169bc8-promote-knowledge-topic-0076-source-section-l1396-l1406-3f2f169bc8-quiz-quiz-0076-source-section-l1396-l1406-3f2f169bc8",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "7ef7829fcc9baa3056caf712e18d07d56ad5683349589323a5191fbf5cab2d67"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0081-source-section-l1428-l1431-e7270b3962-promote-knowledge-topic-0081-source-section-l1428-l1431-e7270b3962-quiz-quiz-0081-source-section-l1428-l1431-e7270b3962",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "b2c086547749cc6c1b0365a33b7db6244ad53dcf797603efe749b47cd3d3bb8f"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "53d49685db6aff63b7f251d0ae4b57c495ffe01627783511586bdb3746efc721"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0083-source-section-l1440-l1499-ad9f9e9f77-promote-knowledge-topic-0083-source-section-l1440-l1499-ad9f9e9f77-quiz-quiz-0083-source-section-l1440-l1499-ad9f9e9f77",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "0b53e316736cfc592e0e0c850769649ac5d75fb260cd55759c23dfae460fcf86"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0087-2-1-l1511-l1551-76242a446b-promote-knowledge-topic-0087-2-1-l1511-l1551-76242a446b-quiz-quiz-0087-2-1-l1511-l1551-76242a446b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "d835298a43049b7647a1626d902ed2ec0d7446d5824f0980ee4b4e35235e1882"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0093-source-section-l1591-l1612-793b1124ff-promote-knowledge-topic-0093-source-section-l1591-l1612-793b1124ff-quiz-quiz-0093-source-section-l1591-l1612-793b1124ff",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "1c29416406330509caab9abbe01a0dfdfa2828f7c2b62067cfe0fd508d9e9cef"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0096-source-section-l1633-l1647-4fab35efa1-promote-knowledge-topic-0096-source-section-l1633-l1647-4fab35efa1-quiz-quiz-0096-source-section-l1633-l1647-4fab35efa1",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "f2448f3f05bfa090e5394c1e66dc5f49c72c5af486289df4feb4ae4b6f09160f"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0097-source-section-l1648-l1667-3521e6e7ef-promote-knowledge-topic-0097-source-section-l1648-l1667-3521e6e7ef-quiz-quiz-0097-source-section-l1648-l1667-3521e6e7ef",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "afa2416310b86b7c7a1609f0344e2465d358f20a5bba10d2cb5291cb3a70f892"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0098-source-section-l1668-l1680-b5c53e9768-promote-knowledge-topic-0098-source-section-l1668-l1680-b5c53e9768-quiz-quiz-0098-source-section-l1668-l1680-b5c53e9768",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "b725662d187c9b7b8812b722c0367dcf4dd996a061c469ce2266fb699afd4126"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0101-source-section-l1699-l1817-36e87eba72-promote-knowledge-topic-0101-source-section-l1699-l1817-36e87eba72-quiz-quiz-0101-source-section-l1699-l1817-36e87eba72",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "c35e7710b50cd213a3806083334655ea48d7870b03312cb205cbab5499cf204f"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0104-source-section-l1832-l1954-621fe372e5-promote-knowledge-topic-0104-source-section-l1832-l1954-621fe372e5-quiz-quiz-0104-source-section-l1832-l1954-621fe372e5",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "8da03b2ee5403c0bf37a12d4970efb851fc43c156c2daa24ed6465426b029764"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0115-source-section-l2072-l2075-b37df0e242-promote-knowledge-topic-0115-source-section-l2072-l2075-b37df0e242-quiz-quiz-0115-source-section-l2072-l2075-b37df0e242",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "0b877593d53fa320105180da72bb53308d8a1b2c901b7f4e9cfe9d55c66201be"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0116-source-section-l2076-l2088-7f5b50b08d-promote-knowledge-topic-0116-source-section-l2076-l2088-7f5b50b08d-quiz-quiz-0116-source-section-l2076-l2088-7f5b50b08d",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "1aa28adb37b7574143a22a16b0a5b4fe35925e79a52bb7ff4aa5df09393fd220"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0118-source-section-l2095-l2125-ede16c1aa1-promote-knowledge-topic-0118-source-section-l2095-l2125-ede16c1aa1-quiz-quiz-0118-source-section-l2095-l2125-ede16c1aa1",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "8d30353a402ffca4b410635fd028486cb7b2627b1665b294cdca582b26209d2c"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0120-source-section-l2128-l2233-da09ed122f-promote-knowledge-topic-0120-source-section-l2128-l2233-da09ed122f-quiz-quiz-0120-source-section-l2128-l2233-da09ed122f",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "78eab7745fbd5d4684cc7451bc0053b6f74d69260f84e4e3a81820750953fb99"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0124-source-section-l2278-l2306-ff717f8dc9-promote-knowledge-topic-0124-source-section-l2278-l2306-ff717f8dc9-quiz-quiz-0124-source-section-l2278-l2306-ff717f8dc9",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "dcaa19f8ebac031a552f29e20a4882b4145c240c22b61ecd15b7823950e5fb1d"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0128-source-section-l2356-l2371-04647ec773-promote-knowledge-topic-0128-source-section-l2356-l2371-04647ec773-quiz-quiz-0128-source-section-l2356-l2371-04647ec773",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "027f9d3626a6b6752489186a481c33f2b0ce8b5e95a6df954c18ed42c71f2a91"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0129-3-l2372-l2382-6351960ee2-promote-knowledge-topic-0129-3-l2372-l2382-6351960ee2-quiz-quiz-0129-3-l2372-l2382-6351960ee2",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "a65fc28e33dfa74d02393e71e47e0a13c31a92a1c306e4b45f8277e5317cafa7"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0131-source-section-l2397-l2404-1399452abc-promote-knowledge-topic-0131-source-section-l2397-l2404-1399452abc-quiz-quiz-0131-source-section-l2397-l2404-1399452abc",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "835c8daa732d66a18277c6bc8c8033f03505fd0c4565e0c5e46deb32c3ff65e7"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0135-3-4-l2430-l2461-1ab5276a0b-promote-knowledge-topic-0135-3-4-l2430-l2461-1ab5276a0b-quiz-quiz-0135-3-4-l2430-l2461-1ab5276a0b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "c70abf12f5a29da33faad82893ccf272753ae0db629f5682372373ff5f924ac0"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0138-source-section-l2485-l2506-eee0b0625e-promote-knowledge-topic-0138-source-section-l2485-l2506-eee0b0625e-quiz-quiz-0138-source-section-l2485-l2506-eee0b0625e",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "429cb6ee3e33e45e3dfc366c7d0c2793030bc43706bdf3d623a9041338a2e2b5"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0143-source-section-l2538-l2609-aee6f31fc9-promote-knowledge-topic-0143-source-section-l2538-l2609-aee6f31fc9-quiz-quiz-0143-source-section-l2538-l2609-aee6f31fc9",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "648502f00ada69d03aa9d244b829649a751f8807f722403970f01009f1865e33"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0154-source-section-l2727-l2739-2c17e6fa34-promote-knowledge-topic-0154-source-section-l2727-l2739-2c17e6fa34-quiz-quiz-0154-source-section-l2727-l2739-2c17e6fa34",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "fcc59cfbc5ee17d4e5e284317b93078dfe8eea47bf7214d91b9e06e8a3649587"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0156-source-section-l2751-l2759-742c35def5-promote-knowledge-topic-0156-source-section-l2751-l2759-742c35def5-quiz-quiz-0156-source-section-l2751-l2759-742c35def5",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "931fc34076fd076a3bbee4c99ef6262dce696ae8a3596bb368470e2b9e606174"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0160-source-section-l2807-l2874-fcb6b19286-promote-knowledge-topic-0160-source-section-l2807-l2874-fcb6b19286-quiz-quiz-0160-source-section-l2807-l2874-fcb6b19286",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "e18e911b53f19b9befa5bf958ba6b20b2b52329e60a2aa68165421d29d6b1e2b"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0167-source-section-l2968-l2971-8db02d7af7-promote-knowledge-topic-0167-source-section-l2968-l2971-8db02d7af7-quiz-quiz-0167-source-section-l2968-l2971-8db02d7af7",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "cf6c46f41245e87a6f978708b256deb2d27660c659a2b39c7a3e36c99fcadfde"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0169-source-section-l2999-l3004-dc71634583-promote-knowledge-topic-0169-source-section-l2999-l3004-dc71634583-quiz-quiz-0169-source-section-l2999-l3004-dc71634583",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "83390b79b980415a6abb958a6dfba04cb1a33e2cb7bd6051e6dc7364793bf74c"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0171-source-section-l3012-l3021-59e3662482-promote-knowledge-topic-0171-source-section-l3012-l3021-59e3662482-quiz-quiz-0171-source-section-l3012-l3021-59e3662482",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "ab2e1cfb7ba6fc0f0d60b083478af5b66091cb7c4b59dd157722a3f9fd7a91c8"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0173-source-section-l3034-l3045-a3fd0ea560-promote-knowledge-topic-0173-source-section-l3034-l3045-a3fd0ea560-quiz-quiz-0173-source-section-l3034-l3045-a3fd0ea560",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "a1ae9c9be83d6bf5d65e68aaa31596dd55d37f99189b36ad1fcc720d57428edd"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0178-source-section-l3068-l3071-37229f45db-promote-knowledge-topic-0178-source-section-l3068-l3071-37229f45db-quiz-quiz-0178-source-section-l3068-l3071-37229f45db",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "6771ba743f02d17474b2502832d6b000e96bf612ce4d2d0885ce162f9cdf07f5"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0179-source-section-l3072-l3079-5cb73674da-promote-knowledge-topic-0179-source-section-l3072-l3079-5cb73674da-quiz-quiz-0179-source-section-l3072-l3079-5cb73674da",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "aa8f4704b2cf702ee6236fff426f69cb602541085ed9a83a6910a986a668bb86"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0180-source-section-l3080-l3113-1851ef5c5f-promote-knowledge-topic-0180-source-section-l3080-l3113-1851ef5c5f-quiz-quiz-0180-source-section-l3080-l3113-1851ef5c5f",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "2ab607f5e0cf06084ad8e13e1ca96c3542e085afb226b3e716e4eb68cea0000a"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0182-source-section-l3124-l3129-44bf478841-promote-knowledge-topic-0182-source-section-l3124-l3129-44bf478841-quiz-quiz-0182-source-section-l3124-l3129-44bf478841",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "261023307625ea9682489a63b99d4b4e669683bcbf2e73cae4f395cf1fba740a"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0190-source-section-l3228-l3233-9ab28845ad-promote-knowledge-topic-0190-source-section-l3228-l3233-9ab28845ad-quiz-quiz-0190-source-section-l3228-l3233-9ab28845ad",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "62198c76e017290324e5830964f2534fe28aa509fde38af92a217c035decba07"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0195-source-section-l3250-l3323-0b45d9464e-promote-knowledge-topic-0195-source-section-l3250-l3323-0b45d9464e-quiz-quiz-0195-source-section-l3250-l3323-0b45d9464e",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "54b7f9197b23a0c719e04f0d22ddaa85706d422e8e9d6bf3be767ab34e6ab22a"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0202-source-section-l3383-l3390-0fdee45612-promote-knowledge-topic-0202-source-section-l3383-l3390-0fdee45612-quiz-quiz-0202-source-section-l3383-l3390-0fdee45612",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "d24fef76dda37ede92a7c3b284af07d4f283961edab703ee33e13d550d86e4d5"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0206-source-section-l3416-l3478-d0668de44d-promote-knowledge-topic-0206-source-section-l3416-l3478-d0668de44d-quiz-quiz-0206-source-section-l3416-l3478-d0668de44d",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "52a3e26026e5592ea91002a0964743418caabdddb2a523591acc9cdc726fc718"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0207-source-section-l3479-l3499-1f1ab045ae-promote-knowledge-topic-0207-source-section-l3479-l3499-1f1ab045ae-quiz-quiz-0207-source-section-l3479-l3499-1f1ab045ae",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "4f6a15daefdbadd20ad9b17006cbba21876ca6c97705f2059d71be3ffd1793b2"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0209-source-section-l3518-l3570-2d44040a12-promote-knowledge-topic-0209-source-section-l3518-l3570-2d44040a12-quiz-quiz-0209-source-section-l3518-l3570-2d44040a12",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "4effeecb1a6cd7dd7e3aabe0bbc6c6a1c55ffc0b8f4916e01da80618837724f5"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0214-source-section-l3595-l3777-13b9ecc3f6-promote-knowledge-topic-0214-source-section-l3595-l3777-13b9ecc3f6-quiz-quiz-0214-source-section-l3595-l3777-13b9ecc3f6",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "d131dbb3c97d37b6745e9c59cd3b50680019d36b2a9bd1ff82183354d0b2de7f"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0222-source-section-l3811-l3816-98c91c91f4-promote-knowledge-topic-0222-source-section-l3811-l3816-98c91c91f4-quiz-quiz-0222-source-section-l3811-l3816-98c91c91f4",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "78b9ee1ad5f06914431efe9166082089666b04e2ef7a01a25ac82051c8a49e92"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0226-source-section-l3831-l3857-f8a90ca7b1-promote-knowledge-topic-0226-source-section-l3831-l3857-f8a90ca7b1-quiz-quiz-0226-source-section-l3831-l3857-f8a90ca7b1",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "b229518849fa38f4e8d8078e1f66483a1ea5418786fa54db9ac74be82f56b306"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0227-source-section-l3858-l3870-cb587843d3-promote-knowledge-topic-0227-source-section-l3858-l3870-cb587843d3-quiz-quiz-0227-source-section-l3858-l3870-cb587843d3",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "2cfb507b492519da8956676163c983f208861e445f32aea7b18cd6e3ff9ad989"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0233-4-1-l3908-l3926-df571e9e77-promote-knowledge-topic-0233-4-1-l3908-l3926-df571e9e77-quiz-quiz-0233-4-1-l3908-l3926-df571e9e77",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "分类判断",
+      "hash": "104aca3d68f884875f5ac1c24f7bc02e182ddda6982d1bcf4753c5a40dfd3770"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0246-source-section-l4056-l4059-247c69fd34-promote-knowledge-topic-0246-source-section-l4056-l4059-247c69fd34-quiz-quiz-0246-source-section-l4056-l4059-247c69fd34",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "9d1bb18646b369642bf97dc26f9b8417138ed967dc83a79a118e84badee4edf0"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0248-source-section-l4066-l4071-aa380ae95c-promote-knowledge-topic-0248-source-section-l4066-l4071-aa380ae95c-quiz-quiz-0248-source-section-l4066-l4071-aa380ae95c",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "7a106939001112c6d9f619c7eb554434197566f55fc0ce46147cbffbce5243f3"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0250-source-section-l4100-l4103-d838852e5f-promote-knowledge-topic-0250-source-section-l4100-l4103-d838852e5f-quiz-quiz-0250-source-section-l4100-l4103-d838852e5f",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "84e2c190d38529792900d0d568d4ae1d664a725a8ef364c9fbde3931803ce738"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0254-4-2-l4150-l4167-fde2bd5e72-promote-knowledge-topic-0254-4-2-l4150-l4167-fde2bd5e72-quiz-quiz-0254-4-2-l4150-l4167-fde2bd5e72",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "091e64e40bea1bf44ea6e6cc9b737fbde11e53e0c6c6a41af25d20d72d99bfaa"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0257-source-section-l4176-l4186-953164c68e-promote-knowledge-topic-0257-source-section-l4176-l4186-953164c68e-quiz-quiz-0257-source-section-l4176-l4186-953164c68e",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "510a86ef103230b8ebafb5ad23ea527a952d2ebd9fd06879e5788a9c3a9f0ba8"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0258-source-section-l4187-l4248-726a022afe-promote-knowledge-topic-0258-source-section-l4187-l4248-726a022afe-quiz-quiz-0258-source-section-l4187-l4248-726a022afe",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "09d1fd6389ba9b5a2056c04b7009fdbe9bbf5a6ac6b93c549a617154e5916ff9"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0261-source-section-l4295-l4298-bf625d621e-promote-knowledge-topic-0261-source-section-l4295-l4298-bf625d621e-quiz-quiz-0261-source-section-l4295-l4298-bf625d621e",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "a6fd256017f8f5e804f4116b9d7b284d6139c39c553053342a9a7a90d197a90d"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0271-source-section-l4416-l4426-91f0d0c112-promote-knowledge-topic-0271-source-section-l4416-l4426-91f0d0c112-quiz-quiz-0271-source-section-l4416-l4426-91f0d0c112",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "d35a3a03bd201b59549c3e1785ddaebe5eb28259e9d220ec980dd28c13370d07"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0274-source-section-l4444-l4449-ad150ac702-promote-knowledge-topic-0274-source-section-l4444-l4449-ad150ac702-quiz-quiz-0274-source-section-l4444-l4449-ad150ac702",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "668770c625e2cacd72c10cf9d5dc123f04145c551846ed9e3fca45656d5de952"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0286-source-section-l4552-l4559-99425855d8-promote-knowledge-topic-0286-source-section-l4552-l4559-99425855d8-quiz-quiz-0286-source-section-l4552-l4559-99425855d8",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "e1b7e72e4b15d7f66b081db59e3390025cbe597f88434c65e56c388444790a2f"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0287-source-section-l4560-l4627-35a7f81fda-promote-knowledge-topic-0287-source-section-l4560-l4627-35a7f81fda-quiz-quiz-0287-source-section-l4560-l4627-35a7f81fda",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "分类判断",
+      "hash": "e5e979c2ae2612d842a15181ab797b8606a84a802a6becd012ac812dabc6e341"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "707709becc255aa201a8ea8d2619fd3ced5610150e30651cff7f00c2ae32ef6b"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0294-source-section-l4720-l4723-366753fa97-promote-knowledge-topic-0294-source-section-l4720-l4723-366753fa97-quiz-quiz-0294-source-section-l4720-l4723-366753fa97",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "8420d55e34e223826e16906125d59b61ba91319def879057229d7f1e4617a350"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0298-source-section-l4748-l4765-5e1a4f5056-promote-knowledge-topic-0298-source-section-l4748-l4765-5e1a4f5056-quiz-quiz-0298-source-section-l4748-l4765-5e1a4f5056",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "d23f52b789f7ce26468292b4d88a86d53ca497fe6ee30998385b6b16812f547b"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0302-source-section-l4787-l4894-fc393e675c-promote-knowledge-topic-0302-source-section-l4787-l4894-fc393e675c-quiz-quiz-0302-source-section-l4787-l4894-fc393e675c",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "a99878367b638a20fdbd85747bad8c4d27784d9de54ea9e1d7b811dd8d88988c"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0312-source-section-l4939-l4944-9f297e461d-promote-knowledge-topic-0312-source-section-l4939-l4944-9f297e461d-quiz-quiz-0312-source-section-l4939-l4944-9f297e461d",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "633c19f51a962b13481a750505eb868da4cd09e40faea1f4f7a220578f5f90f3"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0320-source-section-l5045-l5101-a380364190-promote-knowledge-topic-0320-source-section-l5045-l5101-a380364190-quiz-quiz-0320-source-section-l5045-l5101-a380364190",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "bd195546520bb5b6b707f3f78e71e362521055e347b7b569a0eda20b86566220"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0323-1-l5114-l5122-9f3cff71bc-promote-knowledge-topic-0323-1-l5114-l5122-9f3cff71bc-quiz-quiz-0323-1-l5114-l5122-9f3cff71bc",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "581caa3c3517a1577eb59ba28591da8a4ace4e2320830742fe33317c6b1c296e"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "ef106f31f8e8da2c443ed385fcbc8fef65f4176c9c663e889e72937b4b068288"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0325-1-l5129-l5156-e21c10ee26-promote-knowledge-topic-0325-1-l5129-l5156-e21c10ee26-quiz-quiz-0325-1-l5129-l5156-e21c10ee26",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "fccdea44e7d397de2cd3211f3e1f50113a0f5f462aeff590a1e5939e3523c7e0"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0332-source-section-l5239-l5250-d3a036e8fb-promote-knowledge-topic-0332-source-section-l5239-l5250-d3a036e8fb-quiz-quiz-0332-source-section-l5239-l5250-d3a036e8fb",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "014b240002c86e77c051da9e7d681dbe03cf824cbe83fc1677bba3c27641f697"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "9f17ed0b0b3ee58afcf5545c51cdb8385e823ee6937966846c82c2598f2ebdae"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0343-source-section-l5445-l5450-509ff00649-promote-knowledge-topic-0343-source-section-l5445-l5450-509ff00649-quiz-quiz-0343-source-section-l5445-l5450-509ff00649",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "b23a3b414f2d977e2d71d38033fdda15792a17d0080c096b9be07f362eb27fd8"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "1e405349f8113060c866471c40ccf51ca01f9f7aac8b467b7c5b764e3c0977cc"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0348-source-section-l5474-l5483-8de7c5ad9c-promote-knowledge-topic-0348-source-section-l5474-l5483-8de7c5ad9c-quiz-quiz-0348-source-section-l5474-l5483-8de7c5ad9c",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材结构识别",
+      "hash": "f2404539d8202d4c2d3dc4a6a5576e758700fc1a1459eba7db7071fc2f6f0bc0"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0353-source-section-l5505-l5512-017a5973fa-promote-knowledge-topic-0353-source-section-l5505-l5512-017a5973fa-quiz-quiz-0353-source-section-l5505-l5512-017a5973fa",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "130e37db4b819c57037560b8bf70a7fe7521ff6259afb5a90e30a8124b5efa21"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "教材概念识别",
+      "hash": "fa634958414693caea070abfe521fa07b0c0d3c7baba983ce383344fb40d0157"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0356-source-section-l5600-l5608-efc953206b-promote-knowledge-topic-0356-source-section-l5600-l5608-efc953206b-quiz-quiz-0356-source-section-l5600-l5608-efc953206b",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "comparison-topic",
+      "hash": "12f477ece585a765b98882e1126dfdfc02db00968f385c168ef77a5d29fc67c7"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0357-source-section-l5609-l5644-748b62bb61-promote-knowledge-topic-0357-source-section-l5609-l5644-748b62bb61-quiz-quiz-0357-source-section-l5609-l5644-748b62bb61",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "generatedFromShortAnswer": true,
+      "category": "反应概念",
+      "hash": "73c800cf375c9695bf7425bc7c6f900c75c2da2b314c3b88c38ac1d1fa14803c"
+    }
+  ]
+}

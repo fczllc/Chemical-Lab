@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-05-12T01:05:23.214Z",
+  "source": "src/data/quizData.json",
+  "counts": {
+    "total": 538,
+    "organicGenerated": 91,
+    "handAuthored": 26,
+    "shortAnswer": 421,
+    "remainingBatchCounts": {
+      "rj-chemistry-grade8-54-2024-full": 157,
+      "rj-chemistry-grade9-2024-vol1": 155,
+      "rj-chemistry-grade9-2024-vol2": 109
+    }
+  },
+  "expected": {
+    "total": 538,
+    "organicGenerated": 91,
+    "handAuthored": 26,
+    "shortAnswer": 421,
+    "remainingBatchCounts": {
+      "rj-chemistry-grade8-54-2024-full": 157,
+      "rj-chemistry-grade9-2024-vol1": 155,
+      "rj-chemistry-grade9-2024-vol2": 109
+    },
+    "protectedSnapshotLength": 117
+  },
+  "checks": {
+    "total": true,
+    "organicGenerated": true,
+    "handAuthored": true,
+    "shortAnswer": true,
+    "remainingBatchCounts": {
+      "rj-chemistry-grade8-54-2024-full": true,
+      "rj-chemistry-grade9-2024-vol1": true,
+      "rj-chemistry-grade9-2024-vol2": true
+    },
+    "all": true
+  },
+  "protectedMCRule": "sourceVolumeId === rj-chemistry-g12-selective-3-organic-2019 && generatedFromShortAnswer === true, plus category !== shortAnswer && generatedFromShortAnswer !== true",
+  "snapshot": {
+    "path": ".sisyphus/evidence/task-1-preserved-mcq-snapshot-before.json",
+    "count": 117,
+    "checks": {
+      "length": true,
+      "noShortAnswer": true,
+      "uniqueIds": true,
+      "allHashesSha256": true,
+      "all": true
+    }
+  },
+  "pass": true
+}

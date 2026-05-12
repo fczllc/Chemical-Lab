@@ -1,0 +1,40 @@
+# Task 5 Evidence - Invalid Generated Data Safety
+Generated at: 2026-05-12T05:08:17.3086253Z
+Scope: Prove malformed generated MCQ input is rejected/reported invalid and src/data/quizData.json remains unchanged.
+Mode: --dry-run only; --write not used.
+Temporary generated JSON: C:\Users\fczll\AppData\Local\Temp\opencode\task5-invalid-generated-a21b0e50aef8437392f9c2b7f597479b\malformed-generated-mcqs.json
+
+## Malformed generated JSON payload
+{
+  "id": "task-5-invalid-runtime-id",
+  "question": "TODO placeholder question",
+  "options": [
+    "Duplicate option",
+    "Duplicate option"
+  ],
+  "correctIndex": 99,
+  "category": "shortAnswer",
+  "difficulty": "invalid-difficulty",
+  "curriculumTags": [],
+  "explanation": "",
+  "generatedFromShortAnswer": false
+}
+
+
+## Invalid generated input dry-run
+Command: node scripts/convert-short-answer-mcqs.mjs --batch rj-chemistry-grade8-54-2024-full --dry-run --generated C:\Users\fczll\AppData\Local\Temp\opencode\task5-invalid-generated-a21b0e50aef8437392f9c2b7f597479b\malformed-generated-mcqs.json
+SHA-256 before: 0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Output:
+MCQ conversion dry-run / 选择题转换预演完成
+Batch(es): rj-chemistry-grade8-54-2024-full
+Selected: 157; ready: 157; source-unresolved: 0
+Generated: 1; converted: 0; skipped: 0; invalid: 1; missing-generated: 157
+Reports: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade8-54-2024-full.json and .md
+Exit code: 1
+SHA-256 after:  0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Hash unchanged: True
+
+## Converter invalid-entry report excerpt
+- runtimeId=task-5-invalid-runtime-id; index=0; errors=id is not a selected ready shortAnswer record: task-5-invalid-runtime-id; runtime quiz id not found in src/data/quizData.json: task-5-invalid-runtime-id; question contains placeholder text; options must contain exactly 4 entries, got 2; options must be unique after trimming; correctIndex must be an integer from 0 to 3, got 99; category must replace shortAnswer with an MCQ category; difficulty must be one of 基础|进阶|挑战, got invalid-difficulty; curriculumTags must be a non-empty array; explanation must be a non-empty string; generatedFromShortAnswer must be true; generationSource or generationModel must be a non-empty string; entry.question contains placeholder text
+
+Safety pass: True

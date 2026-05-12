@@ -1,0 +1,30 @@
+# Task 7 Evidence - Grade 9 Volume 1 Preservation Check
+Generated at: 2026-05-12T05:22:45.449Z
+Snapshot: .sisyphus/evidence/task-1-preserved-mcq-snapshot-before.json
+Runtime data: src/data/quizData.json
+Canonical hashing: JSON values serialized with sorted object keys before sha256 hashing
+
+## Prior Batch Stability
+Grade8 generated MCQ before: 157
+Grade8 generated MCQ after: 157
+Grade8 remaining shortAnswer after: 0
+Grade8 generated count stable at 157: true
+Grade9 volume2 shortAnswer after: 109
+Grade9 volume2 shortAnswer stable at 109: true
+
+## Protected MCQ Snapshot
+Expected protected count: 117
+Checked protected count: 117
+Missing protected IDs: 0
+Hash mismatches: 0
+All protected hashes match: true
+
+Protected missing IDs: none
+Protected mismatched IDs: none
+
+## Mutation Boundary
+Changed IDs: 155
+Changed outside Grade9 volume1 target IDs: 0
+Only Grade9 volume1 target records changed: true
+
+Overall pass: true

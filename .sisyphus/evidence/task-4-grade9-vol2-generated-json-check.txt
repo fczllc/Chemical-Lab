@@ -1,0 +1,19 @@
+Task 4 Grade9 Volume2 Generated JSON Coverage Check
+Generated at: 2026-05-12T03:34:48.399Z
+Batch: rj-chemistry-grade9-2024-vol2
+Generated file: .sisyphus\evidence\generated-mcqs-rj-chemistry-grade9-2024-vol2.json
+SHA-256: e6810429efc8e954bab500d197a55e4c54b55f69eb4aaba68a169de288a7f21d
+Runtime target shortAnswer IDs: 109
+Inventory target IDs: 109
+Generated MCQ entries: 109
+Skipped entries: 0
+Total accounted entries: 109
+Missing runtime target IDs: 0
+Missing inventory IDs: 0
+Outside IDs: 0
+Duplicate IDs: 0
+Coverage passed: yes
+
+Missing runtime IDs: none
+Outside IDs: none
+Duplicate IDs: none

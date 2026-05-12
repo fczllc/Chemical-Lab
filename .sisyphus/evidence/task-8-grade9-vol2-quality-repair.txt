@@ -1,0 +1,29 @@
+# Task 8 Evidence - Grade 9 Vol 2 Quality Repair
+Generated at: 2026-05-12T10:26:45.206Z
+Scope: F4 template blocker repair for Grade 9 Vol 2 generated MCQs and synchronized runtime records.
+
+Repair method: ID-matched synchronization of generated JSON and src/data/quizData.json. Learner-facing prompts, choices, answer index, and explanations were rewritten from each record's textbook context while preserving every ID and protected provenance field.
+Template repair records: 4
+Prior duplicate repair records retained: 31
+Generated JSON SHA-256 after repair: 505145377a8155400be4a1c0a8f180522984493df14856f692e19b60d9cf6a1b
+Runtime SHA-256 after repair: 168a6e27b99d83f9008e15feeb8bee1ed8f11d3623d09d2c93f3bc243ba74661
+Total runtime records: 538
+Grade8 generated MCQs: 157
+Grade8 shortAnswer placeholders: 0
+Grade9 vol1 generated MCQs: 155
+Grade9 vol1 shortAnswer placeholders: 0
+Grade9 vol2 generated MCQs: 109
+Grade9 vol2 shortAnswer placeholders: 0
+After duplicateGroups: 0
+After duplicateRecords: 0
+After duplicateOptionSetGroupsAbove1: 0
+After duplicateOptionSetRecords: 0
+templatePromptMatches: 0
+metadataLeakMatches: 0
+forbiddenPlaceholderMatches: 0
+shapeErrors: 0
+runtimeGeneratedParityMismatches: 0
+Protected snapshot checked: 117
+Protected hash mismatches: 0
+Validator exit code: 0
+Strict quality pass: true

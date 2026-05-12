@@ -1,0 +1,18 @@
+# Task 6 Evidence - Grade 8 Preservation Check
+Generated at: 2026-05-12T05:14:30.768Z
+Snapshot: .sisyphus/evidence/task-1-preserved-mcq-snapshot-before.json
+Runtime data: src/data/quizData.json
+Canonical hashing: JSON values serialized with sorted object keys before sha256 hashing
+
+Expected protected count: 117
+Checked protected count: 117
+Missing protected IDs: 0
+Hash mismatches: 0
+All protected hashes match: true
+
+
+Protected missing IDs: none
+Protected mismatched IDs: none
+
+
+Overall pass: true

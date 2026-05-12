@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-05-12T05:02:03.389Z",
+  "batchId": "rj-chemistry-grade9-2024-vol1",
+  "targetCount": 155,
+  "generatedCount": 155,
+  "skippedCount": 0,
+  "totalAccounted": 155,
+  "missingCount": 0,
+  "outsideCount": 0,
+  "duplicateCount": 0,
+  "missingIds": [],
+  "outsideIds": [],
+  "duplicateIds": [],
+  "passed": true
+}

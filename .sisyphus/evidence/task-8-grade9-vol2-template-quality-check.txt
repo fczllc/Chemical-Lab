@@ -1,0 +1,29 @@
+# Grade 9 Vol 2 Template Quality Check
+Generated at: 2026-05-12T10:26:45.206Z
+Scope: learner-facing question/explanation/options fields in generated JSON plus matching runtime records.
+
+Command: Node field-scoped template/duplicate/parity/protection check over generated JSON and src/data/quizData.json
+Exit code: 0
+Grade 9 Vol 2 generated entries checked: 109
+Grade 9 Vol 2 runtime entries checked: 109
+templatePromptMatches: 0
+metadataLeakMatches: 0
+forbiddenPlaceholderMatches: 0
+duplicateGroups: 0
+duplicateOptionSetGroupsAbove1: 0
+duplicateOptionSetCheckMode: unordered-normalized-options
+shapeErrors: 0
+runtimeGeneratedParityMismatches: 0
+protectedSnapshotChecked: 117
+protectedHashMismatches: 0
+totalRuntimeRecords: 538
+grade8Generated: 157
+grade8ShortAnswer: 0
+grade9Vol1Generated: 155
+grade9Vol1ShortAnswer: 0
+grade9Vol2Generated: 109
+grade9Vol2ShortAnswer: 0
+validatorExitCode: 0
+strictQualityPass: true
+
+Note: source reference metadata was intentionally preserved and is outside learner-facing field scope.

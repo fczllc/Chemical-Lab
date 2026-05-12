@@ -1,0 +1,18 @@
+Final cleanup scope hygiene verification
+Generated: 2026-05-12
+
+Cleanup actions:
+- Removed stale root PID artifact: .devserver.pid
+- Removed stale Task 10 PID artifact: .sisyphus/evidence/task-10-dev-server.pid
+- Removed root scratch artifact: generate-grade8.cjs
+- Removed root scratch artifact: write-evidence.cjs
+- Removed root backup artifact: safe-data.json.2026-05-12T01-06-42-180Z.bak
+
+Port verification after cleanup:
+- 127.0.0.1:5173: not listening
+- 127.0.0.1:5174: not listening
+
+Scope verification:
+- `git status --short -- generate-grade8.cjs write-evidence.cjs safe-data.json.2026-05-12T01-06-42-180Z.bak .devserver.pid .sisyphus/evidence/task-10-dev-server.pid` returned no remaining tracked/untracked cleanup-target entries.
+
+Result: PASS

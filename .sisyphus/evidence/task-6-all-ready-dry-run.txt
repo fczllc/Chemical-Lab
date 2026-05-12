@@ -1,0 +1,9 @@
+Command: node scripts/convert-short-answer-mcqs.mjs --all-ready-batches --dry-run
+Exit code: 0
+
+Output:
+MCQ conversion dry-run / 选择题转换预演完成
+Batch(es): rj-chemistry-g12-selective-3-organic-2019, rj-chemistry-grade8-54-2024-full, rj-chemistry-grade9-2024-vol1, rj-chemistry-grade9-2024-vol2
+Selected: 512; ready: 512; source-unresolved: 0
+Generated: 0; converted: 0; skipped: 0; invalid: 0; missing-generated: 512
+Reports: .sisyphus/evidence/mcq-conversion-all-ready-batches.json and .md

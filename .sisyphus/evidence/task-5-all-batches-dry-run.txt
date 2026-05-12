@@ -1,0 +1,49 @@
+# Task 5 Evidence - All Remaining Batches Dry-Run
+Generated at: 2026-05-12T05:09:55.7688209Z
+Scope: Run three converter dry-runs with generated JSON and prove src/data/quizData.json hash is unchanged.
+Mode: --dry-run only; --write not used.
+
+## Grade 8 full textbook dry-run
+Command: node scripts/convert-short-answer-mcqs.mjs --batch rj-chemistry-grade8-54-2024-full --dry-run --generated .sisyphus/evidence/generated-mcqs-rj-chemistry-grade8-54-2024-full.json
+SHA-256 before: 0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Output:
+MCQ conversion dry-run / 选择题转换预演完成
+Batch(es): rj-chemistry-grade8-54-2024-full
+Selected: 157; ready: 157; source-unresolved: 0
+Generated: 157; converted: 157; skipped: 0; invalid: 0; missing-generated: 0
+Reports: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade8-54-2024-full.json and .md
+Exit code: 0
+SHA-256 after:  0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Hash unchanged: True
+
+## Grade 9 volume 1 dry-run
+Command: node scripts/convert-short-answer-mcqs.mjs --batch rj-chemistry-grade9-2024-vol1 --dry-run --generated .sisyphus/evidence/generated-mcqs-rj-chemistry-grade9-2024-vol1.json
+SHA-256 before: 0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Output:
+MCQ conversion dry-run / 选择题转换预演完成
+Batch(es): rj-chemistry-grade9-2024-vol1
+Selected: 155; ready: 155; source-unresolved: 0
+Generated: 155; converted: 155; skipped: 0; invalid: 0; missing-generated: 0
+Reports: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol1.json and .md
+Exit code: 0
+SHA-256 after:  0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Hash unchanged: True
+
+## Grade 9 volume 2 dry-run
+Command: node scripts/convert-short-answer-mcqs.mjs --batch rj-chemistry-grade9-2024-vol2 --dry-run --generated .sisyphus/evidence/generated-mcqs-rj-chemistry-grade9-2024-vol2.json
+SHA-256 before: 0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Output:
+MCQ conversion dry-run / 选择题转换预演完成
+Batch(es): rj-chemistry-grade9-2024-vol2
+Selected: 109; ready: 109; source-unresolved: 0
+Generated: 109; converted: 109; skipped: 0; invalid: 0; missing-generated: 0
+Reports: .sisyphus/evidence/mcq-conversion-rj-chemistry-grade9-2024-vol2.json and .md
+Exit code: 0
+SHA-256 after:  0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Hash unchanged: True
+
+## Summary
+- Grade 8 full textbook dry-run: exit=0; unchanged=True; hash=0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+- Grade 9 volume 1 dry-run: exit=0; unchanged=True; hash=0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+- Grade 9 volume 2 dry-run: exit=0; unchanged=True; hash=0a272abbf7d77724c0760e6d90bd6d485013ed2e4cda3f23f8cf067997d3cd5e
+Overall pass: True

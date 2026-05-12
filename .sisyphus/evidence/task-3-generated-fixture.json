@@ -1,0 +1,48 @@
+[
+  {
+    "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0002-source-section-l6-l38-d782b15af6-promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6",
+    "question": "为什么碳元素能形成数量特别多、种类特别丰富的有机化合物？",
+    "options": [
+      "碳原子能形成稳定共价键并连接成多种碳骨架",
+      "碳元素只能形成一种简单分子",
+      "碳原子不能和其他元素结合",
+      "碳元素在元素周期表中没有位置"
+    ],
+    "correctIndex": 0,
+    "category": "教材概念识别",
+    "relatedElement": 6,
+    "explanation": "碳原子可以和其他原子形成稳定的共价键，也能和碳原子彼此连接，组成链状、环状等多种骨架，所以有机化合物特别丰富。其他选项都把碳的成键能力说反了或说得不准确。",
+    "curriculumTags": [
+      "knowledge-topic-0002-source-section-l6-l38-d782b15af6"
+    ],
+    "difficulty": "基础",
+    "generatedFromShortAnswer": true,
+    "generationSource": "task-3-local-fixture",
+    "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+        "volumeId": "rj-chemistry-g12-selective-3-organic-2019",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+        "sourceHeading": "引言",
+        "lineRange": "6-38",
+        "sourceHash": "sha256:ca2e589320be9b996d54698ae24cf27875212d761d2eae979d4047c7995fa4c2",
+        "candidateId": "quiz-0002-source-section-l6-l38-d782b15af6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0002-source-section-l6-l38-d782b15af6-asset-01",
+            "sourceLineNumber": 14
+          },
+          {
+            "assetId": "0002-source-section-l6-l38-d782b15af6-asset-02",
+            "sourceLineNumber": 21
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0002-source-section-l6-l38-d782b15af6-quiz-quiz-0002-source-section-l6-l38-d782b15af6"
+      }
+    ]
+  }
+]
