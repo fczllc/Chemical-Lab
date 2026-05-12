@@ -1516,8 +1516,8 @@ body:has(#games.active) .detail-panel.docked {
 }
 
 #quiz-modal .modal-content {
-  max-width: 760px;
-  width: min(760px, 92vw);
+  max-width: 1140px;
+  width: min(1140px, 92vw);
   padding: 20px;
 }
 
@@ -1659,6 +1659,12 @@ body:has(#games.active) .detail-panel.docked {
   box-shadow: none;
 }
 
+.quiz-option-btn.is-selected.is-wrong {
+  border-color: rgba(239, 68, 68, 0.78);
+  background: rgba(239, 68, 68, 0.22);
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.18);
+}
+
 .quiz-feedback-panel {
   margin-top: 16px;
   min-height: 92px;
@@ -1681,6 +1687,7 @@ body:has(#games.active) .detail-panel.docked {
 .quiz-feedback-text,
 .quiz-explanation-text {
   color: var(--text-secondary);
+  font-size: 0.8rem;
 }
 
 .quiz-feedback-text {
