@@ -1018,6 +1018,7 @@ body:has(#games.active) .detail-panel.docked {
 }
 
 #games .reaction-chip strong {
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
   overflow-wrap: anywhere;
   line-height: 1.45;
 }
@@ -1202,6 +1203,190 @@ body:has(#games.active) .detail-panel.docked {
   flex-wrap: wrap;
 }
 
+/* ===== Reaction completion result: playful toy-like summary ===== */
+#games .game-result-panel--reaction {
+  position: relative;
+  overflow: hidden;
+  gap: 18px;
+  padding: 24px 22px;
+  border-color: rgba(var(--games-orange-rgb), 0.3);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(var(--games-orange-rgb), 0.2), transparent 32%),
+    radial-gradient(circle at 86% 18%, rgba(var(--games-green-rgb), 0.13), transparent 30%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.72));
+}
+
+#games .game-result-panel--reaction::before,
+#games .game-result-panel--reaction::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+#games .game-result-panel--reaction::before {
+  top: 16px;
+  left: 16px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(var(--games-orange-rgb), 0.36);
+  box-shadow: 52px 18px 0 -14px rgba(var(--games-green-rgb), 0.22);
+  transform: rotate(12deg);
+}
+
+#games .game-result-panel--reaction::after {
+  right: 16px;
+  bottom: 18px;
+  width: 52px;
+  height: 10px;
+  background: linear-gradient(90deg, var(--neon-orange), var(--neon-green));
+  opacity: 0.58;
+  box-shadow: 0 0 18px rgba(var(--games-orange-rgb), 0.22);
+}
+
+#games .game-result-panel--reaction .game-result-badge {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 2px dashed rgba(var(--games-orange-rgb), 0.55);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(var(--games-orange-rgb), 0.18), transparent 60%),
+    rgba(15, 23, 42, 0.82);
+  font-size: 2.4rem;
+  text-shadow: 0 0 18px rgba(var(--games-orange-rgb), 0.35);
+  animation: reaction-badge-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes reaction-badge-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+#games .game-result-panel--reaction .game-result-copy {
+  max-width: 52ch;
+  color: #ffe8cc;
+  font-size: 0.92rem;
+}
+
+#games .reaction-summary-shell {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+#games .reaction-summary-heading {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: #f8fbff;
+  text-align: center;
+}
+
+#games .reaction-summary-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+
+#games .reaction-summary-chip {
+  position: relative;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 5px;
+  border: 1px solid rgba(var(--games-orange-rgb), 0.28);
+  background:
+    radial-gradient(circle at top left, rgba(var(--games-orange-rgb), 0.12), transparent 52%),
+    rgba(2, 6, 23, 0.62);
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+#games .reaction-summary-chip::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  box-shadow: 0 0 12px rgba(var(--games-green-rgb), 0.45);
+}
+
+#games .reaction-summary-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--games-orange-rgb), 0.55);
+}
+
+#games .reaction-summary-name {
+  font-family: var(--font-display);
+  color: #f8fbff;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+#games .reaction-summary-equation {
+  color: #ffe0b3;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+#games .reaction-summary-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 5px;
+  background: rgba(var(--games-orange-rgb), 0.1);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+#games .reaction-summary-row strong {
+  min-width: 0;
+  color: #fff3d6;
+  font-size: 0.88rem;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+#games .reaction-summary-insight {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+#games .reaction-summary-tags {
+  justify-self: start;
+  max-width: 100%;
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(var(--games-green-rgb), 0.22);
+  background: rgba(var(--games-green-rgb), 0.08);
+  color: #ccffe7;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+#games .reaction-summary-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  padding: 10px 0;
+}
+
 @media (max-width: 900px) {
   #games .game-scoreboard,
   #games .drag-game-layout,
@@ -1282,6 +1467,25 @@ body:has(#games.active) .detail-panel.docked {
 
   #games .game-result-actions .hud-action-btn {
     flex: 1 1 150px;
+  }
+
+  #games .game-result-panel--reaction {
+    padding: 14px;
+  }
+
+  #games .game-result-panel--reaction::before,
+  #games .game-result-panel--reaction::after {
+    opacity: 0.42;
+  }
+
+  #games .reaction-summary-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  #games .reaction-summary-row strong {
+    text-align: left;
   }
 }
 

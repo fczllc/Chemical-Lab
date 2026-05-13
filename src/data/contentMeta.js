@@ -156,15 +156,15 @@ export const GAME_META = {
   reaction: {
     title: '反应配对',
     kicker: 'REACTION LINK',
-    description: '把反应物和正确生成物连接起来，建立化学反应的直觉。',
+    description: '根据已审核教材成果里的典型反应，把反应物和正确生成物连起来；配对越准、越快，反应配对得分越高。',
     curriculumTags: ['g10-redox-valence-change'],
     difficulty: '高中基础',
     challengeMetadata: {
       challengeId: 'reaction-product-link',
       curriculumTags: ['g10-redox-valence-change'],
       challengeGoals: [
-        { id: 'match-products', label: '识别反应物对应的生成物', target: 5, metric: 'matchedReactions' },
-        { id: 'finish-before-timeout', label: '在倒计时内完成全部配对', target: 75, metric: 'timeLimitSeconds' }
+        { id: 'match-products', label: '依据已审核反应数据，找出反应物对应的生成物', target: 5, metric: 'matchedReactions' },
+        { id: 'finish-before-timeout', label: '在倒计时内完成配对：答对越多、用时越短，分数越高', target: 75, metric: 'timeLimitSeconds' }
       ],
       scoringThresholds: { s: 45, a: 30, b: 10 },
       unlockMetadata: { stageIds: ['stage-4'], requiresTags: ['g10-redox-valence-change'], minimumLearnedElements: 80 }

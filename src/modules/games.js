@@ -13,6 +13,11 @@ import {
 const REWARD_TIERS = [10, 30, 60, 90, 118];
 const DRAG_BATCH_SIZE = 8;
 const MEMORY_PAIR_COUNT = 8;
+const REACTION_ROUND_SIZE = 5;
+
+const CURRICULUM_TAG_LABELS = {
+  'g10-redox-valence-change': '化合价变化'
+};
 
 let allElements = [];
 let listenersBound = false;
@@ -313,7 +318,9 @@ function refillDragBatch() {
   const nextBatch = shuffleArray([...pool]).slice(0, Math.min(DRAG_BATCH_SIZE, pool.length));
   activeSession.batchElements = nextBatch;
   activeSession.placedMap = new Map();
-  nextBatch.forEach((element) => activeSession.usedAtomicNumbers.add(element.atomicNumber));
+  for (const element of nextBatch) {
+    activeSession.usedAtomicNumbers.add(element.atomicNumber);
+  }
 }
 
 function renderDragGame() {
@@ -648,7 +655,29 @@ function finishMemoryGame() {
 
 function startReactionGame() {
   const sessionId = createSessionId();
-  const chosenReactions = shuffleArray([...reactions]).slice(0, Math.min(5, reactions.length));
+  const playableReactions = reactions.filter(isReactionGameUsable);
+
+  if (playableReactions.length < REACTION_ROUND_SIZE) {
+    activeSession = {
+      id: sessionId,
+      type: 'reaction',
+      reactions: [],
+      products: [],
+      selectedReactionId: null,
+      matchedIds: new Set(),
+      score: 0,
+      remainingSeconds: 75,
+      timerId: null,
+      feedback: `当前可用于配对的教材反应只有 ${playableReactions.length} 条，至少需要 ${REACTION_ROUND_SIZE} 条才能开始挑战。请先补充已审核的反应物、生成物和课程标签。`,
+      feedbackResult: null,
+      unavailableReason: 'usable-reaction-count'
+    };
+
+    renderReactionGame();
+    return;
+  }
+
+  const chosenReactions = shuffleArray(playableReactions).slice(0, Math.min(REACTION_ROUND_SIZE, playableReactions.length));
   const products = shuffleArray(chosenReactions.map((reaction) => ({
     id: reaction.id,
     label: reaction.products.join(' + ')
@@ -674,10 +703,22 @@ function startReactionGame() {
       }
       updateOverlayStat(0, `${activeSession.remainingSeconds}s`);
     }, 1000),
-    feedback: '先选左侧反应物，再点击右侧正确的生成物。'
+    feedback: '先选左侧反应物，再点击右侧正确的生成物。',
+    feedbackResult: null,
+    unavailableReason: null
   };
 
   renderReactionGame();
+}
+
+function isReactionGameUsable(reaction) {
+  return typeof reaction?.id === 'string' && reaction.id.trim()
+    && typeof reaction.name === 'string' && reaction.name.trim()
+    && typeof reaction.description === 'string' && reaction.description.trim()
+    && Array.isArray(reaction.reactants) && reaction.reactants.some((item) => typeof item === 'string' && item.trim())
+    && Array.isArray(reaction.products) && reaction.products.some((item) => typeof item === 'string' && item.trim())
+    && Array.isArray(reaction.curriculumTags) && reaction.curriculumTags.some((item) => typeof item === 'string' && item.trim())
+    && (reaction.sourceReviewStatus === undefined || reaction.sourceReviewStatus === 'reviewed');
 }
 
 function renderReactionGame() {
@@ -686,12 +727,43 @@ function renderReactionGame() {
   }
 
   const gameArea = ensureGameOverlay();
+
+  if (activeSession.unavailableReason === 'usable-reaction-count') {
+    gameArea.innerHTML = buildGameFrame({
+      title: GAME_META.reaction.title,
+      kicker: GAME_META.reaction.kicker,
+      summary: '反应配对会使用 5 条已审核且字段完整的教材反应。',
+      stats: [
+        { label: '倒计时', value: '--' },
+        { label: '当前得分', value: activeSession.score },
+        { label: '已配对', value: 0 },
+        { label: '需要反应数', value: REACTION_ROUND_SIZE }
+      ],
+      body: `
+        <div class="game-feedback info">${activeSession.feedback}</div>
+        <div class="reaction-board" data-testid="reaction-board">
+          <div class="reaction-column">
+            <h4>暂时不能开始</h4>
+            <div class="reaction-column-list">
+              <p>请确认反应数据包含 id、名称、说明、反应物、生成物、课程标签，并且来源状态为已审核。</p>
+            </div>
+          </div>
+        </div>
+      `
+    });
+
+    bindOverlayActions();
+    return;
+  }
+
+  const feedbackResultAttribute = activeSession.feedbackResult
+    ? ` data-reaction-result="${activeSession.feedbackResult}"`
+    : '';
   const reactantsMarkup = activeSession.reactions.map((reaction) => {
     const matched = activeSession.matchedIds.has(reaction.id);
     const selected = activeSession.selectedReactionId === reaction.id;
     return `
-      <button class="reaction-chip ${selected ? 'is-selected' : ''} ${matched ? 'is-matched' : ''}" data-reaction-left="${reaction.id}" ${matched ? 'disabled' : ''}>
-        <small>${reaction.name}</small>
+      <button class="reaction-chip ${selected ? 'is-selected' : ''} ${matched ? 'is-matched' : ''}" data-reaction-left="${reaction.id}" data-reaction-id="${reaction.id}" ${matched ? 'disabled' : ''}>
         <strong data-chem-notation="reactants">${reaction.reactants.map((reactant) => formulaHTML(reactant)).join(' + ')}</strong>
       </button>
     `;
@@ -700,8 +772,7 @@ function renderReactionGame() {
   const productsMarkup = activeSession.products.map((product) => {
     const matched = activeSession.matchedIds.has(product.id);
     return `
-      <button class="reaction-chip reaction-chip-product ${matched ? 'is-matched' : ''}" data-reaction-right="${product.id}" ${matched ? 'disabled' : ''}>
-        <small>生成物</small>
+      <button class="reaction-chip reaction-chip-product ${matched ? 'is-matched' : ''}" data-reaction-right="${product.id}" data-reaction-product="${product.id}" ${matched ? 'disabled' : ''}>
         <strong data-chem-notation="products">${renderProductFormulaLabel(product)}</strong>
       </button>
     `;
@@ -718,8 +789,8 @@ function renderReactionGame() {
       { label: '总反应数', value: activeSession.reactions.length }
     ],
     body: `
-      <div class="game-feedback ${resolveFeedbackTone(activeSession.feedback)}">${activeSession.feedback}</div>
-      <div class="reaction-board">
+      <div class="game-feedback ${resolveFeedbackTone(activeSession.feedback)}"${feedbackResultAttribute}>${activeSession.feedback}</div>
+      <div class="reaction-board" data-testid="reaction-board">
         <div class="reaction-column">
           <h4>反应物</h4>
           <div class="reaction-column-list">${reactantsMarkup}</div>
@@ -737,6 +808,7 @@ function renderReactionGame() {
     button.addEventListener('click', () => {
       activeSession.selectedReactionId = button.dataset.reactionLeft;
       activeSession.feedback = '已锁定一个反应物，请在右侧选择对应生成物。';
+      activeSession.feedbackResult = null;
       renderReactionGame();
     });
   });
@@ -764,6 +836,7 @@ function handleReactionSelection(productId) {
     activeSession.matchedIds.add(productId);
     activeSession.score += 10;
     activeSession.feedback = '配对正确！该反应链路已完成。';
+    activeSession.feedbackResult = 'correct';
     activeSession.selectedReactionId = null;
     renderReactionGame();
     if (activeSession.matchedIds.size === activeSession.reactions.length) {
@@ -772,7 +845,8 @@ function handleReactionSelection(productId) {
     return;
   }
 
-  activeSession.feedback = '这个生成物不匹配，请重新观察反应物组合。';
+  activeSession.feedback = '还差一点点！这个生成物和刚才的反应物不是一组，换一个再试试。';
+  activeSession.feedbackResult = 'incorrect';
   activeSession.selectedReactionId = null;
   renderReactionGame();
 }
@@ -783,21 +857,120 @@ function finishReactionGame() {
   }
 
   const score = activeSession.score;
+  const matchedCount = activeSession.matchedIds.size;
+  const totalMatchCount = activeSession.reactions.length;
   const rating = getScoreRating(score, [45, 30, 10]);
+  const bestScore = Math.max(Number(getGameScores(GAME_KEYS.reaction) ?? 0), score);
+  const isNewBest = score > 0 && score >= bestScore;
   recordGameResult(GAME_KEYS.reaction, score);
 
-  renderResultScreen({
+  const matchedReactions = activeSession.reactions.filter((r) => activeSession.matchedIds.has(r.id));
+  const reactionSummaryMarkup = matchedReactions.length > 0
+    ? matchedReactions.map((r) => {
+        const productMarkup = renderFormulaList(r.products);
+        const reactantMarkup = renderFormulaList(r.reactants);
+        const equationMarkup = `${reactantMarkup} → ${productMarkup}`;
+        const tags = formatCurriculumTags(r);
+        const insight = typeof r.description === 'string' && r.description.trim()
+          ? formatReactionInsight(r.description)
+          : '把反应物和生成物连起来，观察物质变化的结果。';
+        return `
+          <div class="reaction-summary-chip">
+            <div class="reaction-summary-name">${r.name}</div>
+            <div class="reaction-summary-row">
+              <span>核心产物</span>
+              <strong data-chem-notation="summary-products">${productMarkup}</strong>
+            </div>
+            <div class="reaction-summary-equation" data-chem-notation="summary-equation">${equationMarkup}</div>
+            <p class="reaction-summary-insight">${insight}</p>
+            ${tags ? `<div class="reaction-summary-tags">${tags}</div>` : ''}
+          </div>
+        `;
+      }).join('')
+    : '<p class="reaction-summary-empty">本轮没有完成任何配对，再接再厉！</p>';
+
+  const bestNote = isNewBest
+    ? '🎉 新纪录！这是你的最佳成绩，反应配对进度也已保存。'
+    : `当前最佳成绩：${bestScore} 分。本次成果已存入反应配对进度。`;
+
+  const gameArea = ensureGameOverlay();
+  gameArea.innerHTML = buildGameFrame({
     title: '反应配对完成',
     kicker: 'REACTION REPORT',
-    score,
-    rating,
+    summary: '你的反应识别速度已经完成这一轮化学连线挑战。',
     stats: [
-      { label: '正确配对', value: activeSession.matchedIds.size },
-      { label: '总反应数', value: activeSession.reactions.length },
-      { label: '剩余时间', value: `${Math.max(activeSession.remainingSeconds, 0)}s` }
+      { label: '最终得分', value: score },
+      { label: '评级', value: rating },
+      { label: '正确配对', value: matchedCount },
+      { label: '本轮总配对', value: totalMatchCount }
     ],
-    summary: '你的反应识别速度已经完成这一轮化学连线挑战。'
+    body: `
+      <div class="game-result-panel game-result-panel--reaction">
+        <div class="game-result-badge">${rating}</div>
+        <p class="game-result-copy">${bestNote}</p>
+        <div class="reaction-summary-shell">
+          <h4 class="reaction-summary-heading">已完成的反应成果</h4>
+          <div class="reaction-summary-list">${reactionSummaryMarkup}</div>
+        </div>
+        <div class="game-result-actions">
+          <button class="hud-action-btn hud-action-btn-primary" data-action="play-again">再来一局</button>
+          <button class="hud-action-btn" data-action="close-game">返回游戏中心</button>
+        </div>
+      </div>
+    `
   });
+
+  bindOverlayActions({ canReplay: true });
+}
+
+function renderFormulaList(items = []) {
+  return Array.isArray(items) && items.length > 0
+    ? items.map((item) => formulaHTML(item)).join(' + ')
+    : '—';
+}
+
+function formatCurriculumTags(reaction) {
+  const tags = Array.isArray(reaction?.curriculumTags) ? reaction.curriculumTags : [];
+  const labels = tags
+    .slice(0, 3)
+    .map((tag) => CURRICULUM_TAG_LABELS[tag] ?? formatCurriculumTagFallback(tag))
+    .filter(Boolean);
+  const chapter = reaction?.unlockRequirements?.chapter;
+  const grade = reaction?.unlockRequirements?.grade;
+
+  if (typeof grade === 'string' && grade.trim()) {
+    labels.unshift(grade.trim());
+  }
+
+  if (typeof chapter === 'string' && chapter.trim()) {
+    labels.push(chapter.trim());
+  }
+
+  return [...new Set(labels)].join(' · ');
+}
+
+function formatCurriculumTagFallback(tag) {
+  if (typeof tag !== 'string' || !tag.trim()) {
+    return '';
+  }
+
+  if (tag.startsWith('knowledge-topic-')) {
+    return '教材知识点';
+  }
+
+  return tag
+    .replace(/^g(\d+)/, 'G$1')
+    .split('-')
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function formatReactionInsight(description) {
+  const compact = description.replace(/\s+/g, ' ').trim();
+  const firstSentence = compact.split(/[。！？]/)[0] || compact;
+  return firstSentence.length > 58
+    ? `${firstSentence.slice(0, 58)}……`
+    : `${firstSentence}。`;
 }
 
 function startCollectorGame() {
