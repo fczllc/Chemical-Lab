@@ -1,3 +1,5 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import {
   achievementsData,
   allowedSafetyLevels,
@@ -11,6 +13,7 @@ import {
 import { equationToLatex, formulaToLatex } from '../src/modules/chemNotation.js';
 import { GAME_KEYS, GAME_META } from '../src/data/contentMeta.js';
 import textbookPilotContent from '../src/data/textbookPilotContent.js';
+import { isFormulaText } from './textbook/reaction-equation-normalizer.mjs';
 
 const topicConfigs = [
   {
@@ -94,12 +97,13 @@ const errors = [];
 const elementIds = new Set(elements.map((element) => element.atomicNumber));
 const elementSymbols = new Set(elements.map((element) => element.symbol));
 const validCurriculumTagIds = new Set(Object.keys(curriculumTags));
-const validDifficultyBands = new Set(['入门', '初中', '高中基础', '高中进阶']);
+const validDifficultyBands = new Set(['入门', '初中', '高中基础', '高中进阶', '基础', '挑战', '进阶']);
 const validGrades = new Set(['入门', '七年级', '八年级', '九年级', '高一', '高二', '高三']);
 const validFormulas = new Set(['H2', 'O2', 'Cl2', 'H2O', 'Fe2O3', 'NaOH', 'NaCl', 'CO2']);
 const expectedGameMetaIds = ['drag', 'memory', 'reaction', 'collector'];
 const validGameIds = new Set(Object.values(GAME_KEYS));
 const expectedPersistedGameIds = ['game-drag', 'game-memory', 'game-reaction', 'game-collector'];
+const minimumGameUsableReactionCount = 5;
 const c60PilotCurriculumTag = 'g9-carbon-c60-allotrope';
 const c60PilotChallengeId = 'challenge-c60-carbon-topic';
 const legacyC60QuizId = 'quiz-c60-reviewed-formula';
@@ -198,6 +202,7 @@ for (const quiz of safeQuizData) {
 
 const reactionIds = new Set();
 const experimentIds = new Set();
+const gameUsableReactions = [];
 const learningStageIds = new Set(safeStages.map((stage) => stage.id).filter((id) => typeof id === 'string'));
 for (const reaction of safeReactions) {
   if (!isRecord(reaction)) {
@@ -205,7 +210,9 @@ for (const reaction of safeReactions) {
     continue;
   }
 
-  if (!reaction.id || !reaction.name || !reaction.description || !reaction.experimentId || !reaction.visualDescription) {
+  const isTextbookReaction = isPromotedTextbookRecord(reaction);
+
+  if (!reaction.id || !reaction.name || !reaction.description || (!isTextbookReaction && (!reaction.experimentId || !reaction.visualDescription))) {
     errors.push(`反应数据存在空字段：${reaction.id || 'unknown-reaction'}`);
   }
 
@@ -214,13 +221,20 @@ for (const reaction of safeReactions) {
   }
   reactionIds.add(reaction.id);
 
-  if (experimentIds.has(reaction.experimentId)) {
+  if (reaction.experimentId && experimentIds.has(reaction.experimentId)) {
     errors.push(`重复的 experimentId：${reaction.experimentId}`);
   }
-  experimentIds.add(reaction.experimentId);
+  if (reaction.experimentId) {
+    experimentIds.add(reaction.experimentId);
+  }
 
   const reactants = ensureArray(reaction.reactants, `反应 ${reaction.id || 'unknown-reaction'} 的 reactants 必须是数组`);
   const products = ensureArray(reaction.products, `反应 ${reaction.id || 'unknown-reaction'} 的 products 必须是数组`);
+  const isGameUsableReaction = isReactionGameUsableCandidate(reaction, reactants, products);
+  if (isGameUsableReaction) {
+    gameUsableReactions.push(reaction);
+    validateGameUsableReactionContract(reaction, reactants, products);
+  }
 
   for (const symbol of [...reactants, ...products]) {
     if (typeof symbol !== 'string' || !symbol.trim()) {
@@ -228,12 +242,12 @@ for (const reaction of safeReactions) {
       continue;
     }
 
-    if (!elementSymbols.has(symbol) && !validFormulas.has(symbol)) {
+    if (!elementSymbols.has(symbol) && !validFormulas.has(symbol) && !(isTextbookReaction && isFormulaText(symbol))) {
       errors.push(`反应 ${reaction.id} 引用了未知的元素符号或化学式：${symbol}`);
     }
   }
 
-  if (!allowedSafetyLevels.includes(reaction.safetyLevel)) {
+  if ((!isTextbookReaction || reaction.safetyLevel !== undefined) && !allowedSafetyLevels.includes(reaction.safetyLevel)) {
     errors.push(`反应 ${reaction.id} 的 safetyLevel 非法：${reaction.safetyLevel}`);
   }
 
@@ -246,6 +260,10 @@ for (const reaction of safeReactions) {
   curriculumReferenceCount += validateRequiredCurriculumMetadata(reaction, `反应 ${reaction.id || 'unknown-reaction'}`);
   validateRuntimeNotationConventions(reaction, `反应 ${reaction.id || 'unknown-reaction'}`);
   reviewedSourceReferenceCount += validateReviewedSourceContract(reaction, `反应 ${reaction.id || 'unknown-reaction'}`);
+}
+
+if (gameUsableReactions.length < minimumGameUsableReactionCount) {
+  errors.push(`反应配对游戏可用反应数量不足：至少需要 ${minimumGameUsableReactionCount} 个，实际 ${gameUsableReactions.length}`);
 }
 
 const achievementIds = new Set();
@@ -388,6 +406,7 @@ for (const [gameId, gameMeta] of Object.entries(safeGameMeta ?? {})) {
 }
 
 validateSupportingTopicConfigs(selfCheckInvalid);
+validateRuntimeSourceImportBoundary();
 
 if (selfCheckInvalid) {
   const strictSelfCheckModes = new Set(['missing-allotropes-reviewed-source', 'reused-carbon-existing-id', 'allotropes-active-carbon-source-contamination', 'allotropes-draft-runtime-leak']);
@@ -412,6 +431,7 @@ if (errors.length > 0) {
 }
 
 console.log(`支持数据校验通过：${safeQuizData.length} 道题、${safeReactions.length} 个反应、${safeAchievementsData.length} 个成就、${safeStages.length} 个学习阶段。`);
+console.log(`反应配对游戏内容校验通过：${gameUsableReactions.length} 个可用反应。`);
 console.log(`课程引用校验通过：${validCurriculumTagIds.size} 个可用标签、${validDifficultyBands.size} 个难度档、${curriculumReferenceCount} 个支持数据引用。`);
 console.log(`教材来源审核校验通过：${reviewedSourceReferenceCount} 个 reviewed source references。`);
 console.log(`游戏元数据校验通过：${expectedGameMetaIds.join(', ')}。`);
@@ -789,7 +809,9 @@ function validateNonEmptyTextArray(value, label) {
 
 function validateNoDifficultyRuleMutation(value, label) {
   if (Array.isArray(value)) {
-    value.forEach((item, index) => validateNoDifficultyRuleMutation(item, `${label}[${index}]`));
+    for (const [index, item] of value.entries()) {
+      validateNoDifficultyRuleMutation(item, `${label}[${index}]`);
+    }
     return;
   }
   if (!isRecord(value)) {
@@ -1124,6 +1146,35 @@ function validateRequiredCurriculumMetadata(record, label) {
   return referenceCount;
 }
 
+function isReactionGameUsableCandidate(reaction, reactants, products) {
+  if (!isPromotedTextbookRecord(reaction)) {
+    return true;
+  }
+
+  return reactants.length > 0 || products.length > 0 || reaction.gameUsable === true;
+}
+
+function validateGameUsableReactionContract(reaction, reactants, products) {
+  const reactionId = reaction.id || 'unknown-reaction';
+  validateRequiredText(reaction.id, `反应配对游戏反应 ${reactionId}.id`);
+  validateRequiredText(reaction.name, `反应配对游戏反应 ${reactionId}.name`);
+  validateRequiredText(reaction.description, `反应配对游戏反应 ${reactionId}.description`);
+
+  if (reactants.length === 0) {
+    errors.push(`反应配对游戏反应 ${reactionId} 缺少或为空 reactants`);
+  }
+
+  if (products.length === 0) {
+    errors.push(`反应配对游戏反应 ${reactionId} 缺少或为空 products`);
+  }
+
+  validateRequiredCurriculumTags(reaction.curriculumTags, `反应配对游戏反应 ${reactionId}.curriculumTags`);
+
+  if ((reaction.sourceReviewStatus !== undefined || reaction.sourceReferences !== undefined) && reaction.sourceReviewStatus !== 'reviewed') {
+    errors.push(`反应配对游戏反应 ${reactionId}.sourceReviewStatus 必须为 reviewed`);
+  }
+}
+
 function validateRequiredCurriculumTags(value, label) {
   if (!Array.isArray(value) || value.length === 0) {
     errors.push(`${label} 必须是非空数组`);
@@ -1186,6 +1237,45 @@ function ensureObject(value, errorMessage) {
 
 function isRecord(value) {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function validateRuntimeSourceImportBoundary() {
+  const srcRoot = path.resolve(process.cwd(), 'src');
+  const textbookRoot = path.resolve(srcRoot, 'data', 'textbooks');
+  const sourceFiles = listJavaScriptFiles(srcRoot);
+  const forbiddenImportPattern = /(?:^|\n)\s*(?:import|export)\s+(?:[^'";]+\s+from\s+)?['"]([^'"]+)['"]|import\s*\(\s*['"]([^'"]+)['"]\s*\)/g;
+
+  for (const filePath of sourceFiles) {
+    const source = readFileSync(filePath, 'utf8');
+    for (const match of source.matchAll(forbiddenImportPattern)) {
+      const specifier = match[1] || match[2] || '';
+      const normalizedSpecifier = specifier.replace(/\\/g, '/');
+      const bareSpecifier = normalizedSpecifier.split(/[?#]/, 1)[0];
+      const resolvedSpecifier = bareSpecifier.startsWith('.')
+        ? path.resolve(path.dirname(filePath), bareSpecifier)
+        : '';
+      const importsTextbookSource = normalizedSpecifier.includes('src/data/textbooks')
+        || normalizedSpecifier.includes('/data/textbooks/')
+        || (resolvedSpecifier && (resolvedSpecifier === textbookRoot || resolvedSpecifier.startsWith(`${textbookRoot}${path.sep}`)));
+
+      if (bareSpecifier.endsWith('.md') || importsTextbookSource) {
+        errors.push(`运行时代码 ${path.relative(process.cwd(), filePath)} 不能导入原始教材 Markdown 或 src/data/textbooks：${specifier}`);
+      }
+    }
+  }
+}
+
+function listJavaScriptFiles(directoryPath) {
+  const files = [];
+  for (const entry of readdirSync(directoryPath, { withFileTypes: true })) {
+    const entryPath = path.join(directoryPath, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listJavaScriptFiles(entryPath));
+    } else if (/\.[cm]?js$/i.test(entry.name)) {
+      files.push(entryPath);
+    }
+  }
+  return files;
 }
 
 

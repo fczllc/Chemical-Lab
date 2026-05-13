@@ -2,6 +2,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { isFormulaText } from './reaction-equation-normalizer.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '../..');
@@ -222,12 +223,12 @@ function validateLearningPath(stages, elementIds, curriculumIds, gameIds, experi
 }
 
 function validateReactions(reactions, elementSymbols, curriculumIds, stageIds, safetyLevels, errors) {
-  const formulaPattern = /^[A-Z][a-z]?\d*(?:[A-Z][a-z]?\d*)*(?:\([A-Za-z0-9]+\)\d*)?$/;
   for (const [index, reaction] of reactions.entries()) {
     const ref = `src/data/reactions.json reactions[${index}] ${reaction.id ?? 'unknown'}`;
-    if (!reaction.experimentId) errors.push(`${ref} is missing experimentId`);
+    const isTextbookReaction = reaction?.sourceKind === 'textbook' && reaction?.sourceReviewStatus === 'reviewed';
+    if (!isTextbookReaction && !reaction.experimentId) errors.push(`${ref} is missing experimentId`);
     for (const value of [...array(reaction.reactants), ...array(reaction.products)]) {
-      if (typeof value !== 'string' || (!elementSymbols.has(value) && !formulaPattern.test(value))) errors.push(`${ref} references unsupported reactant/product: ${value}`);
+      if (typeof value !== 'string' || (!elementSymbols.has(value) && !isFormulaText(value))) errors.push(`${ref} references unsupported reactant/product: ${value}`);
     }
     if (reaction.safetyLevel && !safetyLevels.has(reaction.safetyLevel)) errors.push(`${ref} references unsupported safetyLevel: ${reaction.safetyLevel}`);
     validateTags(ref, reaction.curriculumTags, curriculumIds, errors);
