@@ -34,6 +34,7 @@ import {
   getSettings,
   getUnlockedAchievements,
   initializeState,
+  resetProgress,
   saveProgress,
   updateSettings
 } from './modules/storage.js';
@@ -128,23 +129,61 @@ function initSettings() {
   const settingsModal = document.getElementById('settings-modal');
   const settingsClose = document.getElementById('settings-close');
   const performanceToggle = document.getElementById('performance-mode-toggle');
+  const clearDataButton = document.getElementById('settings-clear-data-button');
+  const clearConfirmDialog = document.getElementById('settings-clear-confirm-dialog');
+  const clearCancelButton = document.getElementById('settings-clear-cancel');
+  const clearConfirmButton = document.getElementById('settings-clear-confirm');
 
   if (!settingsBtn || !settingsModal) {
     return;
   }
 
+  const closeClearConfirmDialog = () => {
+    if (!clearConfirmDialog) {
+      return;
+    }
+
+    clearConfirmDialog.hidden = true;
+    clearConfirmDialog.setAttribute('aria-hidden', 'true');
+  };
+
+  const openClearConfirmDialog = () => {
+    if (!clearConfirmDialog) {
+      return;
+    }
+
+    clearConfirmDialog.hidden = false;
+    clearConfirmDialog.setAttribute('aria-hidden', 'false');
+  };
+
   settingsBtn.addEventListener('click', () => {
     settingsModal.classList.add('show');
+    closeClearConfirmDialog();
   });
 
   settingsClose?.addEventListener('click', () => {
     settingsModal.classList.remove('show');
+    closeClearConfirmDialog();
   });
 
   settingsModal.addEventListener('click', (event) => {
     if (event.target === settingsModal) {
       settingsModal.classList.remove('show');
+      closeClearConfirmDialog();
     }
+  });
+
+  clearDataButton?.addEventListener('click', () => {
+    openClearConfirmDialog();
+  });
+
+  clearCancelButton?.addEventListener('click', () => {
+    closeClearConfirmDialog();
+  });
+
+  clearConfirmButton?.addEventListener('click', () => {
+    resetProgress();
+    closeClearConfirmDialog();
   });
 
   if (!performanceToggle) {

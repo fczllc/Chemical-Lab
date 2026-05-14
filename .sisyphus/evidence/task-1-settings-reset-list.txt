@@ -1,0 +1,5 @@
+Listing tests:
+  [chromium] 鈥?ui\settings-reset.spec.ts:50:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data
+Total: 1 test in 1 file
+
+Exit code: 0

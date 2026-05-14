@@ -1,0 +1,62 @@
+Task 3 Verification Evidence - Settings Modal Layout
+=====================================================
+
+Date: 2026-05-14
+Test Run: Playwright automated tests
+
+## Settings Layout Test (tests/ui/settings-reset.spec.ts)
+Status: PASSED (23.5s)
+
+Assertions verified:
+- settings-modal is visible after clicking settings-btn
+- settings-cat-image is visible with border-radius: 50% (circular)
+- settings-cat-image has naturalWidth > 0 and naturalHeight > 0
+- settings-version contains text: "版本：1.0"
+- settings-reference contains text: "内容参考人教版教材"
+- Performance mode toggle row is visible with toggle-switch
+- performance-mode-toggle is attached to DOM
+- settings-clear-data is visible
+- settings-clear-data contains text: "清除数据"
+- settings-clear-data contains text: "清除所有学习进度和成绩，系统初始化"
+- settings-clear-data contains text: "清除"
+- settings-clear-confirm-dialog appears on clear button click
+- settings-clear-confirm-dialog contains confirmation title and description
+- settings-clear-cancel hides the dialog
+- settings-clear-confirm triggers reset while preserving settings
+
+## Settings Reset Rescue Test (tests/ui/settings-reset-rescue.spec.ts)
+Status: PASSED (11.5s)
+
+Assertions verified:
+- clear data resets progress while preserving settings
+
+## Homepage Shell Settings Test (tests/shell/home-shell.spec.ts:61)
+Status: PASSED (6.7s)
+
+Assertions verified:
+- settings panel opens and contains performance mode toggle
+
+## Build Verification
+Status: PASSED
+- vite build completed successfully in 6.43s
+- No build errors
+
+## LSP Diagnostics
+Status: PASSED (for settings-related code)
+- src/main.js: No errors
+- src/styles/layout.css: Pre-existing descending-specificity warnings only (22 warnings, none in settings section)
+- index.html: Pre-existing useButtonType errors only (not related to settings modal)
+
+## Summary
+All required selectors/test IDs exist and function correctly:
+- settings-cat-image
+- settings-version
+- settings-reference
+- settings-clear-data
+- settings-clear-confirm-dialog
+- settings-clear-cancel
+- settings-clear-confirm
+- performance-mode-toggle
+
+Theme preservation: Dark/glass/neon theme maintained throughout.
+No white sketch colors introduced.

@@ -14,6 +14,8 @@ import { showGameRuleFeedback } from './gameFeedbackOverlay.js';
 const REWARD_TIERS = [10, 30, 60, 90, 118];
 const DRAG_BATCH_SIZE = 8;
 const MEMORY_PAIR_COUNT = 8;
+const MEMORY_PREVIEW_SECONDS = 10;
+const MEMORY_ROUND_SECONDS = 300;
 const REACTION_ROUND_SIZE = 5;
 
 const CURRICULUM_TAG_LABELS = {
@@ -526,18 +528,67 @@ function startMemoryGame() {
     selectedIds: [],
     moves: 0,
     elapsedSeconds: 0,
-    timerId: window.setInterval(() => {
-      if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== sessionId) {
-        return;
-      }
-      activeSession.elapsedSeconds += 1;
-      updateOverlayStat(0, `${activeSession.elapsedSeconds}s`);
-    }, 1000),
+    phase: 'preview',
+    previewSeconds: MEMORY_PREVIEW_SECONDS,
+    remainingSeconds: MEMORY_ROUND_SECONDS,
+    previewTimerId: null,
+    timerId: null,
     lockBoard: false,
-    feedback: '翻开两张卡片，找到“元素符号 ↔ 中文名”的组合。'
+    feedback: '先记住所有卡片，倒计时结束后开始翻牌。',
+    closingIds: new Set(),
+    openingIds: new Set()
   };
 
   renderMemoryGame();
+  activeSession.previewTimerId = window.setInterval(() => {
+    if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== sessionId) {
+      return;
+    }
+    activeSession.previewSeconds -= 1;
+    if (activeSession.previewSeconds <= 0) {
+      window.clearInterval(activeSession.previewTimerId);
+      activeSession.previewTimerId = null;
+      activeSession.phase = 'play';
+      activeSession.feedback = '开始翻牌！找到“元素符号 ↔ 中文名”的组合。';
+      activeSession.cards.forEach((card) => activeSession.closingIds.add(card.id));
+      renderMemoryGame();
+      window.setTimeout(() => {
+        if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== sessionId) {
+          return;
+        }
+        activeSession.closingIds.clear();
+        startMemoryPlayTimer(sessionId);
+        renderMemoryGame();
+      }, 500);
+      return;
+    }
+
+    const countdown = document.querySelector('.memory-countdown-seconds');
+    if (countdown) {
+      countdown.textContent = String(activeSession.previewSeconds);
+    }
+  }, 1000);
+}
+
+function startMemoryPlayTimer(sessionId) {
+  if (!activeSession || activeSession.type !== 'memory') {
+    return;
+  }
+
+  activeSession.timerId = window.setInterval(() => {
+    if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== sessionId) {
+      return;
+    }
+    activeSession.remainingSeconds -= 1;
+    activeSession.elapsedSeconds = MEMORY_ROUND_SECONDS - activeSession.remainingSeconds;
+    if (activeSession.remainingSeconds <= 0) {
+      activeSession.remainingSeconds = 0;
+      activeSession.elapsedSeconds = MEMORY_ROUND_SECONDS;
+      finishMemoryGame({ timedOut: true });
+      return;
+    }
+    updateOverlayStat(0, `${activeSession.remainingSeconds}s`);
+  }, 1000);
 }
 
 function renderMemoryGame() {
@@ -546,12 +597,15 @@ function renderMemoryGame() {
   }
 
   const gameArea = ensureGameOverlay();
+  const isPreview = activeSession.phase === 'preview';
   const cardMarkup = activeSession.cards.map((card) => {
     const isMatched = activeSession.matchedIds.has(card.id);
     const isSelected = activeSession.selectedIds.includes(card.id);
-    const isRevealed = isMatched || isSelected;
+    const isClosing = activeSession.closingIds.has(card.id);
+    const isOpening = activeSession.openingIds.has(card.id);
+    const isRevealed = isPreview || isMatched || isSelected;
     return `
-      <button class="memory-card ${isRevealed ? 'is-revealed' : ''} ${isMatched ? 'is-matched' : ''}" data-memory-id="${card.id}" ${isMatched ? 'disabled' : ''}>
+      <button class="memory-card ${isRevealed ? 'is-revealed' : ''} ${isMatched ? 'is-matched' : ''} ${isClosing ? 'is-closing' : ''} ${isOpening ? 'is-opening' : ''}" data-memory-id="${card.id}" ${isMatched ? 'disabled' : ''}>
         <span class="memory-card-face memory-card-front">?</span>
         <span class="memory-card-face memory-card-back">
           <small>${card.hint}</small>
@@ -564,14 +618,15 @@ function renderMemoryGame() {
   gameArea.innerHTML = buildGameFrame({
     title: GAME_META.memory.title,
     kicker: GAME_META.memory.kicker,
-    summary: '每次翻牌都会计入步数，越快完成评级越高。',
+    summary: isPreview ? '先观察 10 秒，倒计时结束后卡片会自动盖上。' : '每次翻牌都会计入步数，300 秒内完成挑战。',
     stats: [
-      { label: '用时', value: `${activeSession.elapsedSeconds}s` },
+      { label: '剩余时间', value: `${activeSession.remainingSeconds}s` },
       { label: '步数', value: activeSession.moves },
       { label: '已配对', value: activeSession.matchedIds.size / 2 },
       { label: '目标配对', value: MEMORY_PAIR_COUNT }
     ],
     body: `
+      ${isPreview ? `<div class="memory-countdown-float"><span class="memory-countdown-label">记忆倒计时</span><span class="memory-countdown-seconds">${activeSession.previewSeconds}</span></div>` : ''}
       <div class="game-feedback ${resolveFeedbackTone(activeSession.feedback)}">${activeSession.feedback}</div>
       <div class="memory-grid">${cardMarkup}</div>
     `
@@ -584,7 +639,7 @@ function renderMemoryGame() {
 }
 
 function handleMemoryCardClick(cardId) {
-  if (!activeSession || activeSession.type !== 'memory' || activeSession.lockBoard) {
+  if (!activeSession || activeSession.type !== 'memory' || activeSession.phase !== 'play' || activeSession.lockBoard) {
     return;
   }
   if (activeSession.selectedIds.includes(cardId) || activeSession.matchedIds.has(cardId)) {
@@ -592,69 +647,103 @@ function handleMemoryCardClick(cardId) {
   }
 
   activeSession.selectedIds.push(cardId);
+  activeSession.openingIds.add(cardId);
   if (activeSession.selectedIds.length < 2) {
     activeSession.feedback = '再翻开一张看看能不能配对成功。';
     renderMemoryGame();
+    clearMemoryAnimationIds(activeSession.id, [cardId], 'openingIds');
     return;
   }
 
   activeSession.moves += 1;
   activeSession.lockBoard = true;
+  const currentSessionId = activeSession.id;
   const [firstId, secondId] = activeSession.selectedIds;
   const firstCard = activeSession.cards.find((card) => card.id === firstId);
   const secondCard = activeSession.cards.find((card) => card.id === secondId);
   const isMatch = firstCard && secondCard && firstCard.pairId === secondCard.pairId && firstCard.type !== secondCard.type;
 
   if (isMatch) {
-    activeSession.matchedIds.add(firstId);
-    activeSession.matchedIds.add(secondId);
     activeSession.feedback = '配对成功！记忆回路已点亮。';
     showGameRuleFeedback('correct');
-    activeSession.selectedIds = [];
-    activeSession.lockBoard = false;
     renderMemoryGame();
+    clearMemoryAnimationIds(activeSession.id, [cardId], 'openingIds');
+    updateOverlayStat(1, activeSession.moves);
+    window.setTimeout(() => {
+      if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== currentSessionId) {
+        return;
+      }
+      activeSession.matchedIds.add(firstId);
+      activeSession.matchedIds.add(secondId);
+      activeSession.selectedIds = [];
+      activeSession.lockBoard = false;
+      renderMemoryGame();
 
-    if (activeSession.matchedIds.size === activeSession.cards.length) {
-      finishMemoryGame();
-    }
+      if (activeSession.matchedIds.size === activeSession.cards.length) {
+        finishMemoryGame();
+      }
+    }, 500);
     return;
   }
 
   activeSession.feedback = '这两张不匹配，稍后会自动翻回。';
   showGameRuleFeedback('incorrect');
   renderMemoryGame();
-  const currentSessionId = activeSession.id;
+  clearMemoryAnimationIds(activeSession.id, [cardId], 'openingIds');
+  updateOverlayStat(1, activeSession.moves);
   window.setTimeout(() => {
     if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== currentSessionId) {
       return;
     }
-    activeSession.selectedIds = [];
-    activeSession.lockBoard = false;
-    activeSession.feedback = '继续寻找新的组合吧。';
+    const wrongIds = [...activeSession.selectedIds];
+    activeSession.closingIds = new Set(wrongIds);
+    wrongIds.forEach((id) => activeSession.openingIds.delete(id));
     renderMemoryGame();
-  }, 900);
+    clearMemoryAnimationIds(activeSession.id, wrongIds, 'closingIds');
+    window.setTimeout(() => {
+      if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== currentSessionId) {
+        return;
+      }
+      activeSession.selectedIds = [];
+      activeSession.lockBoard = false;
+      activeSession.feedback = '继续寻找新的组合吧。';
+      renderMemoryGame();
+    }, 500);
+  }, 500);
 }
 
-function finishMemoryGame() {
+function clearMemoryAnimationIds(sessionId, ids, animationSetName) {
+  window.setTimeout(() => {
+    if (!activeSession || activeSession.type !== 'memory' || activeSession.id !== sessionId) {
+      return;
+    }
+    ids.forEach((id) => activeSession[animationSetName].delete(id));
+  }, 500);
+}
+
+function finishMemoryGame(options = {}) {
   if (!activeSession || activeSession.type !== 'memory') {
     return;
   }
 
+  stopSessionTimer();
+  const timedOut = Boolean(options.timedOut);
+  const matchedPairs = activeSession.matchedIds.size / 2;
   const score = Math.max(20, 180 - (activeSession.moves * 8) - (activeSession.elapsedSeconds * 2));
   const rating = getScoreRating(score, [130, 90, 50]);
   recordGameResult(GAME_KEYS.memory, score);
 
   renderResultScreen({
-    title: '元素记忆翻牌完成',
+    title: timedOut ? '元素记忆翻牌未完成' : '元素记忆翻牌完成',
     kicker: 'MEMORY REPORT',
     score,
     rating,
     stats: [
       { label: '完成步数', value: activeSession.moves },
       { label: '完成用时', value: `${activeSession.elapsedSeconds}s` },
-      { label: '成功配对', value: MEMORY_PAIR_COUNT }
+      { label: '成功配对', value: `${matchedPairs}/${MEMORY_PAIR_COUNT}` }
     ],
-    summary: '你已经把元素符号和中文名成功链接起来了。'
+    summary: timedOut ? '时间到，还有卡片没有配对完成，再来一次吧。' : '你已经把元素符号和中文名成功链接起来了。'
   });
 }
 
@@ -1143,8 +1232,13 @@ function closeActiveGame(options = {}) {
 }
 
 function stopSessionTimer() {
+  if (activeSession?.previewTimerId) {
+    window.clearInterval(activeSession.previewTimerId);
+    activeSession.previewTimerId = null;
+  }
   if (activeSession?.timerId) {
     window.clearInterval(activeSession.timerId);
+    activeSession.timerId = null;
   }
 }
 

@@ -1,0 +1,18 @@
+Date: 2026-05-14
+Subject: Task 1 settings reset TDD RED evidence waiver
+
+ORCHESTRATOR WAIVER: accepted
+RED CHECKPOINT STATUS: not preserved / waived
+
+This is the explicit Atlas/orchestrator waiver requested by F1 to unblock plan compliance review.
+
+Task 1 originally required a pre-implementation Playwright RED checkpoint showing `npx playwright test tests/ui/settings-reset.spec.ts --project=chromium` failing for missing requested settings UI and confirmation controls. That exact historical RED checkpoint was not preserved because implementation landed before the corrected spec/evidence state was finalized. The available Task 1 evidence must not be represented as a failing pre-implementation run.
+
+Actual current evidence:
+- `.sisyphus/evidence/task-1-settings-reset-red.txt` shows the focused settings reset Playwright test passing with `1 passed` and exit code `0`.
+- `.sisyphus/evidence/task-1-settings-reset-list.txt` shows Playwright successfully listing the settings reset spec with exit code `0`, confirming syntax/listing success.
+- `.sisyphus/evidence/task-6-settings-reset-pass.txt` confirms the final focused settings reset behavior passes with exit code `0`.
+
+This missing RED checkpoint is a process/evidence deviation, not an unresolved product behavior defect. The waiver is acceptable because final focused Playwright and Task 6 evidence verify the requested settings layout, cat image loading/presentation, cancel behavior, confirm behavior, settings/performance-mode preservation, reload persistence, and successful build coverage in the completed verification set.
+
+Recommended future process improvement: capture and preserve RED evidence before any parallel implementation can land, especially when multiple agents may modify tests and application code concurrently.

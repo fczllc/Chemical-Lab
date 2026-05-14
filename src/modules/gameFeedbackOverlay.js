@@ -5,7 +5,7 @@
  */
 
 const OVERLAY_CLASS = 'game-rule-feedback-overlay';
-const CORRECT_EMOJI = '\u{1F386}'; // 🎆
+const CORRECT_EMOJI = '😊';
 const INCORRECT_EMOJI = '\u{1F61F}'; // 😟
 const DISPLAY_MS = 1200;
 

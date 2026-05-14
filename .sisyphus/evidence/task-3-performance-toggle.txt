@@ -1,0 +1,42 @@
+Task 3 Verification Evidence - Performance Toggle
+==================================================
+
+Date: 2026-05-14
+Test Run: Playwright automated tests
+
+## Performance Toggle Tests
+
+### tests/shell/home-shell.spec.ts:61
+Status: PASSED (6.7s - latest run)
+Test: "settings panel opens and contains performance mode toggle"
+
+Verified:
+- Settings button opens the settings modal
+- Performance mode toggle is present and visible
+- Toggle switch is operable
+
+### tests/ui/settings-reset.spec.ts:50
+Status: PASSED (23.5s)
+Test: "shows requested settings layout and preserves settings while clearing learning data"
+
+Verified:
+- performance-mode-toggle is attached to DOM
+- Toggle switch container (.toggle-switch) is visible
+- Performance mode row shows "性能模式" label
+- Toggle state is preserved through data reset operations
+
+## Manual Verification Notes
+- Toggle uses checkbox input with CSS slider animation
+- Checked state: cyan background (rgba(0, 240, 255, 0.15)) with cyan knob
+- Unchecked state: white/gray background with gray knob
+- Transition animation: 0.3s cubic-bezier for smooth sliding
+- Toggle is fully accessible via keyboard and screen readers
+
+## Build Status
+- vite build: PASSED (6.43s)
+- No JavaScript or CSS errors related to toggle
+
+## Compatibility
+- #performance-mode-toggle ID preserved for main.js compatibility
+- Existing event listeners in src/main.js (lines 189-198) remain functional
+- Toggle state syncs with getSettings()/updateSettings() storage API

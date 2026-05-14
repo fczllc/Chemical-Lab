@@ -903,15 +903,16 @@ body:has(#games.active) .detail-panel.docked {
   min-width: 0;
   min-height: 118px;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 5px;
   border: 1px solid rgba(var(--games-green-rgb), 0.22);
   background: rgba(15, 23, 42, 0.88);
   transform-style: preserve-3d;
+  will-change: transform;
   transition: transform var(--transition-normal), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-#games .memory-card:hover:not([disabled]) {
+#games .memory-card:hover:not([disabled]):not(.is-revealed):not(.is-matched) {
   transform: translateY(-2px);
   border-color: rgba(var(--games-green-rgb), 0.52);
   box-shadow: 0 12px 26px rgba(2, 6, 23, 0.26);
@@ -933,7 +934,9 @@ body:has(#games.active) .detail-panel.docked {
   display: grid;
   place-items: center;
   padding: 12px;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 5px;
 }
 
 #games .memory-card-front {
@@ -941,23 +944,49 @@ body:has(#games.active) .detail-panel.docked {
   color: var(--neon-green);
   font-size: 2rem;
   text-shadow: 0 0 16px rgba(var(--games-green-rgb), 0.32);
+  transform: rotateY(0deg);
 }
 
 #games .memory-card-back {
   gap: 6px;
-  opacity: 0;
-  transform: scale(0.96);
   color: var(--text-primary);
+  transform: rotateY(180deg);
 }
 
-#games .memory-card.is-revealed .memory-card-front {
-  opacity: 0;
-  transform: scale(1.04);
+/* Revealed/matched: whole card rotates so back face shows */
+#games .memory-card.is-revealed,
+#games .memory-card.is-matched {
+  transform: rotateY(180deg);
 }
 
-#games .memory-card.is-revealed .memory-card-back {
-  opacity: 1;
-  transform: scale(1);
+/* Flip-open animation: whole card from closed to revealed */
+@keyframes memory-card-open {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Flip-close animation: whole card from revealed to closed */
+@keyframes memory-card-close {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Opening state: animate the whole card flipping open */
+#games .memory-card.is-opening {
+  animation: memory-card-open 0.45s ease-in-out forwards;
+}
+
+/* Closing state: animate the whole card flipping closed */
+#games .memory-card.is-closing {
+  animation: memory-card-close 0.45s ease-in-out forwards;
 }
 
 #games .memory-card-back small {
@@ -969,6 +998,52 @@ body:has(#games.active) .detail-panel.docked {
   color: #f8fbff;
   font-size: clamp(1.1rem, 2vw, 1.45rem);
   overflow-wrap: anywhere;
+}
+
+#games .memory-countdown-float {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 28px 44px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(var(--games-green-rgb), 0.45);
+  box-shadow: 0 24px 64px rgba(2, 6, 23, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  animation: memory-countdown-pulse 1s ease-in-out infinite alternate;
+}
+
+#games .memory-countdown-float .memory-countdown-label {
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+}
+
+#games .memory-countdown-float .memory-countdown-seconds {
+  font-family: var(--font-display);
+  color: var(--neon-green);
+  font-size: 4.5rem;
+  line-height: 1;
+  text-shadow: 0 0 24px rgba(var(--games-green-rgb), 0.45);
+}
+
+@keyframes memory-countdown-pulse {
+  from {
+    box-shadow: 0 24px 64px rgba(2, 6, 23, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    box-shadow: 0 28px 72px rgba(2, 6, 23, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    transform: translate(-50%, -50%) scale(1.03);
+  }
 }
 
 #games .reaction-board {

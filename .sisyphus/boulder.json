@@ -1,92 +1,354 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\shared-game-feedback-overlay.md",
-  "started_at": "2026-05-13T17:23:41.944Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\settings-modal-data-reset.md",
+  "started_at": "2026-05-14T11:34:45.187Z",
   "session_ids": [
-    "ses_1ddc4f9acffeXyblkkK76Ji6kV",
-    "ses_1dda122d2ffeNAXCFvLu9YlwoZ",
-    "ses_1dda12242ffeT6zYAGldl3tYn0",
-    "ses_1dda12175ffeGMlxeugR0cvv6f"
+    "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY"
   ],
   "session_origins": {
-    "ses_1ddc4f9acffeXyblkkK76Ji6kV": "direct",
-    "ses_1dda122d2ffeNAXCFvLu9YlwoZ": "appended",
-    "ses_1dda12242ffeT6zYAGldl3tYn0": "appended",
-    "ses_1dda12175ffeGMlxeugR0cvv6f": "appended"
+    "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY": "direct"
   },
-  "plan_name": "shared-game-feedback-overlay",
+  "plan_name": "settings-modal-data-reset",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Create shared emoji feedback overlay",
-      "session_id": "ses_1dd9aabc0ffePeGkuQ1pl29yAH",
-      "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-13T17:36:17.933Z"
+      "task_title": "Add failing focused Playwright coverage for settings reset",
+      "session_id": "ses_1d97167e7ffeqkVfnohpIKemil",
+      "agent": "general",
+      "category": "",
+      "started_at": "2026-05-14T11:38:44.442Z",
+      "status": "running",
+      "updated_at": "2026-05-14T13:03:44.107Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Wire overlay into game-center drag and memory rules",
-      "session_id": "ses_1dd907c18ffePVpm6h0Kk36YcN",
-      "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-13T18:00:32.895Z"
-    },
-    "todo:3": {
-      "task_key": "todo:3",
-      "task_label": "3",
-      "task_title": "Wire overlay into reaction matching rules",
-      "session_id": "ses_1dd7cbc42ffemGIPTmGSs2Km2a",
-      "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-13T18:09:13.452Z"
+      "task_title": "Ensure requested cat asset path exists",
+      "session_id": "ses_1d976a092ffeH19PLt82X8yC8J",
+      "agent": "general",
+      "category": "",
+      "started_at": "2026-05-14T11:38:44.615Z",
+      "status": "running",
+      "updated_at": "2026-05-14T12:52:37.690Z"
     },
     "todo:4": {
       "task_key": "todo:4",
       "task_label": "4",
-      "task_title": "Wire overlay into full quiz challenge only",
-      "session_id": "ses_1dd760813ffeCcK7zI9I5uKDTr",
+      "task_title": "Wire custom confirmation and learning-data reset behavior",
+      "session_id": "ses_1d9677fcbffejvDBDKdlaLfaCv",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-14T13:06:42.340Z",
+      "started_at": "2026-05-14T13:06:42.340Z",
+      "status": "running"
+    },
+    "todo:3": {
+      "task_key": "todo:3",
+      "task_label": "3",
+      "task_title": "Update settings modal markup and styles to match structural sketch",
+      "session_id": "ses_1d9677fd6ffeEI0z5UAom5Iwg1",
       "agent": "Sisyphus-Junior",
       "category": "visual-engineering",
-      "updated_at": "2026-05-13T18:15:13.426Z"
+      "updated_at": "2026-05-14T13:56:01.875Z",
+      "started_at": "2026-05-14T13:56:01.875Z",
+      "status": "running"
     },
     "todo:5": {
       "task_key": "todo:5",
       "task_label": "5",
-      "task_title": "Add end-to-end verification for scoped and excluded feedback",
-      "session_id": "ses_1dd6f67f3ffexADW22UjNRmwML",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-13T18:38:57.500Z"
+      "task_title": "Preserve existing settings smoke coverage and regressions",
+      "session_id": "ses_1d914aa54ffe3rlDbFAtfTkbC0",
+      "agent": "general",
+      "category": "",
+      "started_at": "2026-05-14T14:29:29.150Z",
+      "status": "running",
+      "updated_at": "2026-05-14T14:44:28.841Z"
+    },
+    "todo:6": {
+      "task_key": "todo:6",
+      "task_label": "6",
+      "task_title": "Run targeted verification and capture evidence",
+      "session_id": "ses_1d90b5d5affenopEw0rYd6kAMt",
+      "agent": "general",
+      "category": "",
+      "started_at": "2026-05-14T14:46:00.902Z",
+      "status": "running",
+      "updated_at": "2026-05-14T14:58:29.323Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_1dd4761ffffeiRu2p2fXda303G",
+      "session_id": "ses_1d8cc6afaffeA6aJeA1OutlLoX",
       "agent": "oracle",
       "category": "",
-      "updated_at": "2026-05-13T19:06:32.257Z"
+      "started_at": "2026-05-14T15:03:21.188Z",
+      "status": "running",
+      "updated_at": "2026-05-14T16:00:21.193Z"
     },
     "final-wave:f2": {
       "task_key": "final-wave:f2",
       "task_label": "F2",
       "task_title": "Code Quality Review — unspecified-high",
-      "session_id": "ses_1dd43885cffeimZheIyvc9ikNn",
+      "session_id": "ses_1d8f7f5e6ffe6LhT6HkKQ87ISP",
       "agent": "Sisyphus-Junior",
-      "category": "",
-      "updated_at": "2026-05-13T19:13:39.518Z"
+      "category": "unspecified-high",
+      "updated_at": "2026-05-14T15:13:22.279Z",
+      "started_at": "2026-05-14T15:13:22.279Z",
+      "status": "running"
+    },
+    "final-wave:f4": {
+      "task_key": "final-wave:f4",
+      "task_label": "F4",
+      "task_title": "Scope Fidelity Check — deep",
+      "session_id": "ses_1d8cc6a92ffesYN0PV5BJfqMGQ",
+      "agent": "Sisyphus-Junior",
+      "category": "deep",
+      "updated_at": "2026-05-14T16:02:12.783Z",
+      "started_at": "2026-05-14T16:02:12.783Z",
+      "status": "running"
     },
     "final-wave:f3": {
       "task_key": "final-wave:f3",
       "task_label": "F3",
       "task_title": "Real Manual QA — unspecified-high (+ playwright)",
-      "session_id": "ses_1dd3989d0fferfOyKRIIM6PeXm",
+      "session_id": "ses_1d8cc6a11ffe9o08BKJmndMo7M",
       "agent": "Sisyphus-Junior",
-      "category": "",
-      "updated_at": "2026-05-13T19:43:08.746Z"
+      "category": "unspecified-high",
+      "started_at": "2026-05-14T16:06:08.746Z",
+      "status": "running",
+      "updated_at": "2026-05-14T16:09:10.797Z"
     }
-  }
+  },
+  "active_work_id": "settings-modal-data-reset-5d067116",
+  "status": "completed",
+  "updated_at": "2026-05-14T16:10:45.302Z",
+  "schema_version": 2,
+  "works": {
+    "shared-game-feedback-overlay-legacy": {
+      "work_id": "shared-game-feedback-overlay-legacy",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\shared-game-feedback-overlay.md",
+      "plan_name": "shared-game-feedback-overlay",
+      "started_at": "2026-05-13T17:23:41.944Z",
+      "session_ids": [
+        "ses_1ddc4f9acffeXyblkkK76Ji6kV",
+        "ses_1dda122d2ffeNAXCFvLu9YlwoZ",
+        "ses_1dda12242ffeT6zYAGldl3tYn0",
+        "ses_1dda12175ffeGMlxeugR0cvv6f"
+      ],
+      "session_origins": {
+        "ses_1ddc4f9acffeXyblkkK76Ji6kV": "direct",
+        "ses_1dda122d2ffeNAXCFvLu9YlwoZ": "appended",
+        "ses_1dda12242ffeT6zYAGldl3tYn0": "appended",
+        "ses_1dda12175ffeGMlxeugR0cvv6f": "appended"
+      },
+      "agent": "atlas",
+      "task_sessions": {
+        "todo:1": {
+          "task_key": "todo:1",
+          "task_label": "1",
+          "task_title": "Create shared emoji feedback overlay",
+          "session_id": "ses_1dd9aabc0ffePeGkuQ1pl29yAH",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "updated_at": "2026-05-13T17:36:17.933Z"
+        },
+        "todo:2": {
+          "task_key": "todo:2",
+          "task_label": "2",
+          "task_title": "Wire overlay into game-center drag and memory rules",
+          "session_id": "ses_1dd907c18ffePVpm6h0Kk36YcN",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "updated_at": "2026-05-13T18:00:32.895Z"
+        },
+        "todo:3": {
+          "task_key": "todo:3",
+          "task_label": "3",
+          "task_title": "Wire overlay into reaction matching rules",
+          "session_id": "ses_1dd7cbc42ffemGIPTmGSs2Km2a",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "updated_at": "2026-05-13T18:09:13.452Z"
+        },
+        "todo:4": {
+          "task_key": "todo:4",
+          "task_label": "4",
+          "task_title": "Wire overlay into full quiz challenge only",
+          "session_id": "ses_1dd760813ffeCcK7zI9I5uKDTr",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "updated_at": "2026-05-13T18:15:13.426Z"
+        },
+        "todo:5": {
+          "task_key": "todo:5",
+          "task_label": "5",
+          "task_title": "Add end-to-end verification for scoped and excluded feedback",
+          "session_id": "ses_1dd6f67f3ffexADW22UjNRmwML",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "updated_at": "2026-05-13T18:38:57.500Z"
+        },
+        "final-wave:f1": {
+          "task_key": "final-wave:f1",
+          "task_label": "F1",
+          "task_title": "Plan Compliance Audit — oracle",
+          "session_id": "ses_1dd4761ffffeiRu2p2fXda303G",
+          "agent": "oracle",
+          "category": "",
+          "updated_at": "2026-05-13T19:06:32.257Z"
+        },
+        "final-wave:f2": {
+          "task_key": "final-wave:f2",
+          "task_label": "F2",
+          "task_title": "Code Quality Review — unspecified-high",
+          "session_id": "ses_1dd43885cffeimZheIyvc9ikNn",
+          "agent": "Sisyphus-Junior",
+          "category": "",
+          "updated_at": "2026-05-13T19:13:39.518Z"
+        },
+        "final-wave:f3": {
+          "task_key": "final-wave:f3",
+          "task_label": "F3",
+          "task_title": "Real Manual QA — unspecified-high (+ playwright)",
+          "session_id": "ses_1dd3989d0fferfOyKRIIM6PeXm",
+          "agent": "Sisyphus-Junior",
+          "category": "",
+          "updated_at": "2026-05-13T19:43:08.746Z"
+        }
+      }
+    },
+    "settings-modal-data-reset-5d067116": {
+      "work_id": "settings-modal-data-reset-5d067116",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\settings-modal-data-reset.md",
+      "plan_name": "settings-modal-data-reset",
+      "status": "completed",
+      "started_at": "2026-05-14T11:34:45.187Z",
+      "updated_at": "2026-05-14T16:10:45.302Z",
+      "session_ids": [
+        "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY"
+      ],
+      "session_origins": {
+        "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY": "direct"
+      },
+      "agent": "atlas",
+      "task_sessions": {
+        "todo:1": {
+          "task_key": "todo:1",
+          "task_label": "1",
+          "task_title": "Add failing focused Playwright coverage for settings reset",
+          "session_id": "ses_1d97167e7ffeqkVfnohpIKemil",
+          "agent": "general",
+          "category": "",
+          "started_at": "2026-05-14T11:38:44.442Z",
+          "status": "running",
+          "updated_at": "2026-05-14T13:03:44.107Z"
+        },
+        "todo:2": {
+          "task_key": "todo:2",
+          "task_label": "2",
+          "task_title": "Ensure requested cat asset path exists",
+          "session_id": "ses_1d976a092ffeH19PLt82X8yC8J",
+          "agent": "general",
+          "category": "",
+          "started_at": "2026-05-14T11:38:44.615Z",
+          "status": "running",
+          "updated_at": "2026-05-14T12:52:37.690Z"
+        },
+        "todo:4": {
+          "task_key": "todo:4",
+          "task_label": "4",
+          "task_title": "Wire custom confirmation and learning-data reset behavior",
+          "session_id": "ses_1d9677fcbffejvDBDKdlaLfaCv",
+          "agent": "Sisyphus-Junior",
+          "category": "quick",
+          "updated_at": "2026-05-14T13:06:42.340Z",
+          "started_at": "2026-05-14T13:06:42.340Z",
+          "status": "running"
+        },
+        "todo:3": {
+          "task_key": "todo:3",
+          "task_label": "3",
+          "task_title": "Update settings modal markup and styles to match structural sketch",
+          "session_id": "ses_1d9677fd6ffeEI0z5UAom5Iwg1",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "updated_at": "2026-05-14T13:56:01.875Z",
+          "started_at": "2026-05-14T13:56:01.875Z",
+          "status": "running"
+        },
+        "todo:5": {
+          "task_key": "todo:5",
+          "task_label": "5",
+          "task_title": "Preserve existing settings smoke coverage and regressions",
+          "session_id": "ses_1d914aa54ffe3rlDbFAtfTkbC0",
+          "agent": "general",
+          "category": "",
+          "started_at": "2026-05-14T14:29:29.150Z",
+          "status": "running",
+          "updated_at": "2026-05-14T14:44:28.841Z"
+        },
+        "todo:6": {
+          "task_key": "todo:6",
+          "task_label": "6",
+          "task_title": "Run targeted verification and capture evidence",
+          "session_id": "ses_1d90b5d5affenopEw0rYd6kAMt",
+          "agent": "general",
+          "category": "",
+          "started_at": "2026-05-14T14:46:00.902Z",
+          "status": "running",
+          "updated_at": "2026-05-14T14:58:29.323Z"
+        },
+        "final-wave:f1": {
+          "task_key": "final-wave:f1",
+          "task_label": "F1",
+          "task_title": "Plan Compliance Audit — oracle",
+          "session_id": "ses_1d8cc6afaffeA6aJeA1OutlLoX",
+          "agent": "oracle",
+          "category": "",
+          "started_at": "2026-05-14T15:03:21.188Z",
+          "status": "running",
+          "updated_at": "2026-05-14T16:00:21.193Z"
+        },
+        "final-wave:f2": {
+          "task_key": "final-wave:f2",
+          "task_label": "F2",
+          "task_title": "Code Quality Review — unspecified-high",
+          "session_id": "ses_1d8f7f5e6ffe6LhT6HkKQ87ISP",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "updated_at": "2026-05-14T15:13:22.279Z",
+          "started_at": "2026-05-14T15:13:22.279Z",
+          "status": "running"
+        },
+        "final-wave:f4": {
+          "task_key": "final-wave:f4",
+          "task_label": "F4",
+          "task_title": "Scope Fidelity Check — deep",
+          "session_id": "ses_1d8cc6a92ffesYN0PV5BJfqMGQ",
+          "agent": "Sisyphus-Junior",
+          "category": "deep",
+          "updated_at": "2026-05-14T16:02:12.783Z",
+          "started_at": "2026-05-14T16:02:12.783Z",
+          "status": "running"
+        },
+        "final-wave:f3": {
+          "task_key": "final-wave:f3",
+          "task_label": "F3",
+          "task_title": "Real Manual QA — unspecified-high (+ playwright)",
+          "session_id": "ses_1d8cc6a11ffe9o08BKJmndMo7M",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-14T16:06:08.746Z",
+          "status": "running",
+          "updated_at": "2026-05-14T16:09:10.797Z"
+        }
+      },
+      "ended_at": "2026-05-14T16:10:45.301Z",
+      "elapsed_ms": 16560114
+    }
+  },
+  "ended_at": "2026-05-14T16:10:45.301Z",
+  "elapsed_ms": 16560114
 }

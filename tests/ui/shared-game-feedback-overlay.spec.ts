@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
 const OVERLAY_SELECTOR = '.game-rule-feedback-overlay';
-const CORRECT_EMOJI = '🎆';
+const CORRECT_EMOJI = '😊';
 const INCORRECT_EMOJI = '😟';
 
 declare global {

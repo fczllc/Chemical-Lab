@@ -1,0 +1,8 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\settings-reset.spec.ts:50:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (19.9s)
+
+  1 passed (22.8s)
+
+Exit code: 0

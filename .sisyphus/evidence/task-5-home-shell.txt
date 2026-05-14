@@ -1,0 +1,28 @@
+COMMAND: npx playwright test tests/shell/home-shell.spec.ts --project=chromium START: 2026-05-14T22:38:10.3912160+08:00 
+
+Running 18 tests using 2 workers
+
+  鉁?  2 [chromium] 鈥?tests\shell\home-shell.spec.ts:61:3 鈥?Homepage Shell Contract 鈥?settings panel opens and contains performance mode toggle (9.7s)
+  鉁?  1 [chromium] 鈥?tests\shell\home-shell.spec.ts:10:3 鈥?Homepage Shell Contract 鈥?desktop shell contract - all shell regions visible at 1440x900 (15.9s)
+  鉁?  3 [chromium] 鈥?tests\shell\home-shell.spec.ts:97:3 鈥?Responsive Layout 鈥?desktop layout keeps primary navigation visible at 1366x768 (10.5s)
+  鉁?  4 [chromium] 鈥?tests\shell\home-shell.spec.ts:108:3 鈥?Responsive Layout 鈥?tablet landscape keeps primary navigation visible at 1024x768 (19.8s)
+  鉁?  5 [chromium] 鈥?tests\shell\home-shell.spec.ts:119:3 鈥?Responsive Layout 鈥?tablet portrait supports navigation and element details at 768x1024 (15.8s)
+  鉁?  6 [chromium] 鈥?tests\shell\home-shell.spec.ts:139:3 鈥?Hash-based Routing 鈥?unknown route falls back to home (5.0s)
+  鉁?  8 [chromium] 鈥?tests\shell\home-shell.spec.ts:188:3 鈥?Device Optimizations 鈥?viewport meta uses standard responsive scaling (4.0s)
+  鉁?  9 [chromium] 鈥?tests\shell\home-shell.spec.ts:196:3 鈥?Performance and Accessibility 鈥?global loader is present and hides after init (4.0s)
+  鉁?  7 [chromium] 鈥?tests\shell\home-shell.spec.ts:154:3 鈥?Hash-based Routing 鈥?hash routes navigate correctly (15.9s)
+  鉁? 10 [chromium] 鈥?tests\shell\home-shell.spec.ts:205:3 鈥?Performance and Accessibility 鈥?focus styles are visible (4.1s)
+  鉁? 11 [chromium] 鈥?tests\shell\home-shell.spec.ts:221:3 鈥?Performance and Accessibility 鈥?keyboard navigation works (3.8s)
+  鉁? 12 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (4.2s)
+  鉁? 13 [chromium] 鈥?tests\shell\home-shell.spec.ts:249:3 鈥?Bottom Widget Contract 鈥?category overview is display-only with no interactive descendants (4.5s)
+  鉁? 14 [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge (8.3s)
+  鉁? 15 [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border (6.1s)
+  鉁? 16 [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 (6.4s)
+  鉁? 18 [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge (23.9s)
+  鉁? 17 [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars (37.1s)
+
+  18 passed (1.8m)
+
+EXIT_CODE: 0
+SUMMARY: PASS
+END: 2026-05-14T22:40:01.2326981+08:00

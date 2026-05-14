@@ -319,6 +319,19 @@
     <div class="modal-content settings-content">
       <button class="modal-close" id="settings-close">&times;</button>
       <h2>设置</h2>
+      <div class="settings-brand">
+        <img
+          id="settings-cat-image"
+          data-testid="settings-cat-image"
+          class="settings-cat-image"
+          src="/src/data/images/cat.jpg"
+          alt="设置面板中的猫咪图片"
+        />
+        <div class="settings-brand-copy">
+          <p id="settings-version" data-testid="settings-version" class="settings-version">版本：1.0</p>
+          <p id="settings-reference" data-testid="settings-reference" class="settings-reference">内容参考人教版教材</p>
+        </div>
+      </div>
       <div class="settings-section">
         <h3>性能</h3>
         <div class="setting-item">
@@ -329,6 +342,26 @@
           </div>
         </div>
         <p class="setting-desc">开启高性能模式以提升动画流畅度（消耗更多电量）</p>
+      </div>
+      <div class="settings-section">
+        <h3>数据</h3>
+        <div class="setting-item settings-clear-item" data-testid="settings-clear-data">
+          <div class="settings-clear-copy">
+            <label for="settings-clear-data-button">清除数据</label>
+            <p class="setting-desc">清除所有学习进度和成绩，系统初始化</p>
+          </div>
+          <button id="settings-clear-data-button" class="settings-clear-button" type="button">清除</button>
+        </div>
+      </div>
+      <div id="settings-clear-confirm-dialog" class="settings-confirm-dialog" data-testid="settings-clear-confirm-dialog" aria-hidden="true" hidden>
+        <div class="settings-confirm-card" role="dialog" aria-modal="true" aria-labelledby="settings-clear-confirm-title">
+          <h3 id="settings-clear-confirm-title">确认清除学习数据？</h3>
+          <p>这会清除学习进度、成绩、收集、成就和游戏记录，但会保留当前设置。此操作不可撤销。</p>
+          <div class="settings-confirm-actions">
+            <button id="settings-clear-cancel" data-testid="settings-clear-cancel" type="button">取消</button>
+            <button id="settings-clear-confirm" data-testid="settings-clear-confirm" type="button">确认清除</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

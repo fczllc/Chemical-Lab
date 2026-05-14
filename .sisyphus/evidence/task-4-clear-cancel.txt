@@ -1,0 +1,32 @@
+Task 4 clear-data cancel evidence
+Date: 2026-05-14
+
+Command run:
+`npx playwright test tests/ui/settings-reset.spec.ts --project=chromium`
+
+Exit code: 0
+
+Observed Playwright result:
+- Running 1 test using 1 worker
+- PASS [chromium] tests/ui/settings-reset.spec.ts:50:3 Settings data reset flow > shows requested settings layout and preserves settings while clearing learning data (23.7s)
+- 1 passed (27.6s)
+
+Cancel path assertions covered by focused test:
+- Seeds localStorage key `element-explorer-kids-state` with learning data and `settings.performanceMode = "high-performance"` before app load.
+- Opens settings with `settings-btn` and verifies `settings-modal` is visible.
+- Clicks the `settings-clear-data` row button labelled `清除`.
+- Verifies the custom `settings-clear-confirm-dialog` appears with title `确认清除学习数据？` and the preservation warning text.
+- Clicks `settings-clear-cancel`.
+- Verifies `settings-clear-confirm-dialog` is hidden.
+- Reads both `window.appState` and localStorage through the page.
+- Confirms seeded learning/progress/scores/achievements/game/activity data remain unchanged in `window.appState`.
+- Confirms the stored v2 envelope data remains unchanged in localStorage.
+- Confirms `settings.performanceMode` and the rest of settings remain unchanged as `{ performanceMode: "high-performance", particleDensity: "high", soundEnabled: true, difficulty: "normal" }` in both `window.appState` and localStorage.
+
+Console/page errors:
+- The focused test passed without Playwright reporting console, page, or assertion errors.
+
+`resetAll()` wiring check:
+Command: `grep` search for `resetAll\(` under `src` JavaScript files.
+Result: one match only, `src/modules/storage.js:1000: export function resetAll() {`.
+Summary: no `resetAll()` call is wired from `src/main.js` or the settings clear-data handler.

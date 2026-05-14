@@ -1,0 +1,77 @@
+{
+  "seed": {
+    "currentElement": 8,
+    "compareList": [
+      1,
+      8
+    ],
+    "learnedElements": [
+      1,
+      6,
+      8
+    ],
+    "collectedElements": [
+      1,
+      8
+    ],
+    "quizScores": [
+      {
+        "score": 90,
+        "total": 100,
+        "completedAt": "2026-05-07T00:00:00.000Z"
+      }
+    ],
+    "completedExperiments": [
+      "reaction-fe-oxygen"
+    ],
+    "gameScores": {
+      "game-drag": 180,
+      "game-memory": 220,
+      "game-reaction": 260,
+      "game-collector": 300
+    },
+    "settings": {
+      "performanceMode": "high-performance",
+      "difficulty": "初中"
+    }
+  },
+  "result": {
+    "learnedElements": [],
+    "collectedElements": [],
+    "compareList": [],
+    "quizScores": [],
+    "completedExperiments": [],
+    "unlockedAchievements": [],
+    "gameScores": {},
+    "settings": {
+      "performanceMode": "high-performance",
+      "particleDensity": "medium",
+      "soundEnabled": false,
+      "difficulty": "初中"
+    },
+    "storedEnvelope": {
+      "version": "v2",
+      "timestamp": "2026-05-14T13:40:38.026Z",
+      "data": {
+        "currentElement": null,
+        "compareList": [],
+        "learnedElements": [],
+        "collectedElements": [],
+        "quizScores": [],
+        "completedExperiments": [],
+        "experimentTitleOverrides": {},
+        "unlockedAchievements": [],
+        "achievementDates": {},
+        "gameScores": {},
+        "gamePlays": {},
+        "activityLog": [],
+        "settings": {
+          "performanceMode": "high-performance",
+          "particleDensity": "medium",
+          "soundEnabled": false,
+          "difficulty": "初中"
+        }
+      }
+    }
+  }
+}

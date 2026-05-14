@@ -1,0 +1,6 @@
+SCOPE: tests/shell/home-shell.spec.ts
+COMMANDS:
+GIT_MASTER=1 git status --short -- tests/shell/home-shell.spec.ts
+GIT_MASTER=1 git diff -- tests/shell/home-shell.spec.ts
+
+RESULT: No change was needed for tests/shell/home-shell.spec.ts.

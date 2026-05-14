@@ -1,0 +1,10 @@
+Command: npx playwright test tests/ui/settings-reset.spec.ts --project=chromium
+Exit code: 0
+
+Output:
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\settings-reset.spec.ts:50:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (23.6s)
+
+  1 passed (27.1s)
