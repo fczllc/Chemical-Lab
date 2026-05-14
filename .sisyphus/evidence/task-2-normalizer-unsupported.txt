@@ -1,0 +1,104 @@
+[
+  {
+    "name": "incomplete-blank",
+    "input": "C + O2 = ____",
+    "result": {
+      "originalEquation": "C + O2 = ____",
+      "normalizedEquation": "",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "fill-in-blank",
+        "message": "Fill-in-blank equations are not normalized."
+      },
+      "gameUsable": false
+    }
+  },
+  {
+    "name": "word-only",
+    "input": "碳在氧气中燃烧生成二氧化碳",
+    "result": {
+      "originalEquation": "碳在氧气中燃烧生成二氧化碳",
+      "normalizedEquation": "碳在氧气中燃烧生成二氧化碳",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "word-only",
+        "message": "No chemical formula tokens were found."
+      },
+      "gameUsable": false
+    }
+  },
+  {
+    "name": "reversible-equilibrium",
+    "input": "CO3^2- + H2O \\rightleftharpoons HCO3^- + OH^-",
+    "result": {
+      "originalEquation": "CO3^2- + H2O \\rightleftharpoons HCO3^- + OH^-",
+      "normalizedEquation": "",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "reversible-equilibrium",
+        "message": "Reversible or equilibrium equations are not game-usable."
+      },
+      "gameUsable": false
+    }
+  },
+  {
+    "name": "ionic-equation",
+    "input": "Ag+ + Cl- = AgCl\\downarrow",
+    "result": {
+      "originalEquation": "Ag+ + Cl- = AgCl\\downarrow",
+      "normalizedEquation": "",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "ionic-or-half-reaction",
+        "message": "Ionic, charged, electron, or half-reaction notation is not game-usable."
+      },
+      "gameUsable": false
+    }
+  },
+  {
+    "name": "generic-schema",
+    "input": "A + B = AB",
+    "result": {
+      "originalEquation": "A + B = AB",
+      "normalizedEquation": "A + B = AB",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "generic-schema",
+        "message": "Generic symbolic reaction schemas are not game-usable."
+      },
+      "gameUsable": false
+    }
+  },
+  {
+    "name": "multiple-equation-array",
+    "input": "\\begin{array}{c}H2O \\rightleftharpoons OH^- + H^+\\\\Na2CO3 = 2Na^+ + CO3^2-\\end{array}",
+    "result": {
+      "originalEquation": "\\begin{array}{c}H2O \\rightleftharpoons OH^- + H^+\\\\Na2CO3 = 2Na^+ + CO3^2-\\end{array}",
+      "normalizedEquation": "",
+      "reactants": [],
+      "products": [],
+      "conditions": [],
+      "phaseMarkers": [],
+      "unsupportedReason": {
+        "code": "reversible-equilibrium",
+        "message": "Reversible or equilibrium equations are not game-usable."
+      },
+      "gameUsable": false
+    }
+  }
+]

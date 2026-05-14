@@ -1,8 +1,3 @@
-COMMAND: npm run validate:chem-notation
-STARTED: 2026-05-08T13:06:47.1761755+08:00
-FINISHED: 2026-05-08T13:06:47.9235877+08:00
-EXIT_STATUS: 0
---- OUTPUT ---
 
 > element-explorer-kids@1.0.0 validate:chem-notation
 > node scripts/validate-chem-notation.mjs

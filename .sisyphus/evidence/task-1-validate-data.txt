@@ -1,0 +1,29 @@
+
+> element-explorer-kids@1.0.0 validate:data
+> npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+元素数据校验通过：共 118 个元素，原子序数与符号均唯一。
+
+> element-explorer-kids@1.0.0 validate:story-media
+> node scripts/validate-story-media.mjs
+
+故事媒体数据校验通过：full mode，共 118 个元素、236 条本地媒体。
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+支持数据校验通过：538 道题、189 个反应、1201 个成就、1195 个学习阶段。
+反应配对游戏内容校验通过：7 个可用反应。
+课程引用校验通过：5 个可用标签、7 个难度档、3142 个支持数据引用。
+教材来源审核校验通过：3091 个 reviewed source references。
+游戏元数据校验通过：drag, memory, reaction, collector。
+
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+光谱线数据校验通过：共 118 个元素，波长范围 380-780 nm。
+业务模块数据导入审计通过：已检查 16 个入口/模块文件。

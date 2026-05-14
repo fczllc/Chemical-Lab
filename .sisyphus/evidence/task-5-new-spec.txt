@@ -1,0 +1,11 @@
+
+Running 6 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:16:3 鈥?Shared game feedback overlay 鈥?helper renders a single non-blocking overlay and removes it after timeout (8.1s)
+  鉁? 1 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:29:3 鈥?Shared game feedback overlay 鈥?drag game shows correct and incorrect overlays (12.0s)
+  鉁? 3 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:43:3 鈥?Shared game feedback overlay 鈥?memory game shows correct and incorrect overlays (11.5s)
+  鉁? 4 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:59:3 鈥?Shared game feedback overlay 鈥?reaction game shows correct and incorrect overlays (8.9s)
+  鉁? 5 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:78:3 鈥?Shared game feedback overlay 鈥?full quiz shows both correct and incorrect overlays (9.4s)
+  鉁? 6 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:104:3 鈥?Shared game feedback overlay 鈥?quick quiz and collector interactions do not create the shared overlay (16.2s)
+
+  6 passed (39.2s)

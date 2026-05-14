@@ -1,0 +1,97 @@
+
+===== node scripts/textbook/extract-reaction-equations.mjs --check --report .sisyphus/evidence/final-extraction-report.json =====
+Reaction equation review check passed: 638 reviewed candidate(s).
+----- exit code: 0 -----
+
+===== node scripts/textbook/validate-reaction-extraction.mjs =====
+reactionExtractionValidationMode=full
+reactionExtractionValidationStatus=pass
+candidateCount=638
+reviewedCandidates=638
+includedCandidates=127
+excludedCandidates=511
+duplicateCandidates=40
+staleManifestCandidates=0
+duplicateReviewCandidates=0
+invalidDecisionCandidates=0
+exclusionsMissingReason=0
+duplicateIncludedEquations=0
+missingExplicitEquations=0
+unreviewedCandidates=0
+unaccountedCandidates=0
+----- exit code: 0 -----
+
+===== node scripts/validate-reaction-game-pool.mjs =====
+reactionGamePoolValidationStatus=pass
+totalReactions=127
+gameUsableReactions=127
+nonTextbookGameReactions=0
+unreviewedGameReactions=0
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=0
+duplicateNormalizedEquations=0
+----- exit code: 0 -----
+
+===== node scripts/validate-supporting-data.mjs =====
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?38 閬撻銆?27 涓弽搴斻€?201 涓垚灏便€?195 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛?27 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?080 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?074 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+----- exit code: 0 -----
+
+===== node scripts/validate-chem-notation.mjs =====
+hydrates: valid
+states: valid
+ions: valid
+reactionSymbols: valid
+chemicalNotation: valid
+----- exit code: 0 -----
+
+===== node scripts/textbook/validate-runtime-boundary.mjs =====
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+----- exit code: 0 -----
+
+===== node scripts/textbook/validate-runtime-integrity.mjs =====
+Textbook runtime integrity valid
+checked: src/data/elements.json
+checked: src/data/quizData.json
+warning: Bundle size warning: dist/assets/index-CT_sbnQz.js is 8217 KiB; run npm run build for the current Vite report.
+checked: src/data/learningPath.json
+checked: src/data/reactions.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+----- exit code: 0 -----
+All validator commands exited 0.

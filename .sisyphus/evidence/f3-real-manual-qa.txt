@@ -1,2 +1,54 @@
 F3 Real Manual QA: APPROVE
 Reason: Playwright task interrupted/stuck; user instructed stuck tests count as passed and manually verified. Prior hands-on QA verified save/reload/cancel/blank-validation/malicious-text flow with no relevant runtime errors.
+
+---
+
+F3 Real Manual QA: REJECT
+Date: 2026-05-14
+
+Commands:
+- npm run build: PASS. Vite production build completed in 6.19s; only existing chunk-size warning was emitted.
+- npx playwright test tests/ui/shared-game-feedback-overlay.spec.ts: FAIL, repeated twice. Both runs reported 5 passed / 1 failed. Failing test: `Shared game feedback overlay > helper renders a single non-blocking overlay and removes it after timeout`. Failure: expected computed `pointer-events` to be `none`, received empty string while polling `window.getComputedStyle(element).pointerEvents` in `expectOverlay`.
+
+Manual browser URL:
+- http://127.0.0.1:4173 served with `npm run preview -- --host 127.0.0.1`.
+
+Manual browser actions/results:
+- App readiness: `window.appState.elements.length` was 118 and `#global-loader` was hidden.
+- Drag placement: incorrect drop showed exact `😟`; correct drop showed exact `🎆`. Each sample had overlay count 1, `aria-hidden="true"`, computed `pointer-events: none`, did not appear as `document.elementFromPoint()` at viewport center, and auto-removed within the timeout.
+- Reaction matching: incorrect product click showed exact `😟`; correct match showed exact `🎆`. Each sample had overlay count 1, `aria-hidden="true"`, computed `pointer-events: none`, did not block center hit-testing, and auto-removed.
+- Full quiz challenge: observed both outcomes by answering first options across questions. Correct outcome showed `🎆`; incorrect outcome showed `😟`; each visible overlay had count 1, `aria-hidden="true"`, `pointer-events: none`, and auto-removed.
+- Helper rapid restart/non-stacking in the live browser: immediate correct then incorrect helper calls displayed one overlay with `😟`, count 1, `aria-hidden="true"`, `pointer-events: none`, then auto-removed. This confirms lightweight/restart behavior manually, but does not clear the failing focused spec gate.
+- Quick quiz exclusion: after `startquiz` and answering an option, `.game-rule-feedback-overlay` count remained 0.
+- Collector exclusion: after opening collector and clicking the first collector element, `.game-rule-feedback-overlay` count remained 0; prompt text was `氢 已经点亮，继续去主页查看更多知识吧。`.
+
+Console observations:
+- Only observed browser error was benign `GET /favicon.ico 404`, which the task explicitly allows.
+
+Verdict rationale:
+- Manual real-browser behavior for scoped included/excluded flows looks correct.
+- F3 still rejects because the required focused Playwright overlay spec does not pass on the exact command, and the failure is reproducible across two runs.
+
+---
+
+F3 Blocker Fix: PASS
+Date: 2026-05-14
+
+Diagnosis:
+- Reproduced the blocker with `npx playwright test tests/ui/shared-game-feedback-overlay.spec.ts`: default workers reported 5 passed / 1 failed, with the helper overlay test receiving computed `pointer-events` as an empty string instead of `none`.
+- Inspected `tests/ui/shared-game-feedback-overlay.spec.ts`, `src/modules/gameFeedbackOverlay.js`, `src/styles/games.css`, `index.html`, and notepad history. The implementation CSS rule exists at `.game-rule-feedback-overlay { pointer-events: none; }`, and the module preserves one body-mounted overlay with `aria-hidden="true"` and auto-removal.
+- Root cause: test race against a transient auto-removing overlay. The old helper did separate locator assertions for count/text/class before polling `locator.evaluate(getComputedStyle(...))`, so under default parallel load the sampled locator could reach a disconnected/removed style state and return an empty computed value.
+
+Change:
+- Modified only `tests/ui/shared-game-feedback-overlay.spec.ts`.
+- Reworked `expectOverlay` to use one state-based `expect.poll(() => page.evaluate(...))` snapshot that freshly queries the current DOM and atomically asserts count 1, exact emoji text, `is-visible`, `aria-hidden="true"`, and computed `pointer-events: none`.
+- Did not remove or weaken the pointer-events assertion; no source/game rule/scoring/timer/quiz/collector behavior was changed.
+
+Verification:
+- `lsp_diagnostics` on `tests/ui/shared-game-feedback-overlay.spec.ts`: no diagnostics.
+- `npx playwright test tests/ui/shared-game-feedback-overlay.spec.ts`: PASS, 6 passed using default workers, completed in 38.1s.
+- `npm run build`: PASS, Vite production build completed in 5.88s; only existing chunk-size warning was emitted.
+
+Research notes:
+- Playwright guidance from background research: for transient/disappearing elements, prefer `expect.poll` with `page.evaluate` and DOM lookup inside the browser tick to avoid stale locator/element-handle races.
+- Local overlay usage search found no additional overlay call sites beyond drag, memory, reaction, and full quiz; quick quiz and collector remain excluded.

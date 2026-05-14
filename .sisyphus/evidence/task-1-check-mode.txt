@@ -1,0 +1,3 @@
+check mode exitCode=1
+Review manifest not found: src/data/textbookIngestion/reactionEquationReview.json
+Extracted candidates needing review: 638

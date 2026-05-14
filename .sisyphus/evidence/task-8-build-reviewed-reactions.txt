@@ -1,0 +1,10 @@
+Mode: write
+Manifest: src/data/textbookIngestion/reactionEquationReview.json
+Candidate report: .sisyphus/evidence/task-1-extraction-report.json
+Review status: reviewed-complete
+Extractor candidates: 638
+Review entries: 638
+Included reviews: 127
+Excluded reviews: 511
+Runtime records after normalized-equation dedupe: 127
+Wrote reviewed textbook runtime reactions: src/data/reactions.json

@@ -1,0 +1,83 @@
+{
+  "hitCount": 6,
+  "hits": [
+    {
+      "candidateId": "reaction-equation-2024-l4062-l4064-05608389da89",
+      "sourceFile": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+      "lineStart": 4062,
+      "lineEnd": 4064,
+      "rawEquationText": "\\mathrm {C} + \\mathrm {O} _ {2} \\xlongequal {\\text {点 燃}} \\mathrm {C O} _ {2}",
+      "operators": [
+        "latexXLongEqual"
+      ],
+      "gasMarkers": [],
+      "precipitateMarkers": []
+    },
+    {
+      "candidateId": "reaction-equation-2024-l4086-l4088-88414baf3b4f",
+      "sourceFile": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+      "lineStart": 4086,
+      "lineEnd": 4088,
+      "rawEquationText": "\\mathrm {F e} + \\mathrm {C u S O} _ {4} = \\mathrm {C u} + \\mathrm {F e S O} _ {4}",
+      "operators": [
+        "equals"
+      ],
+      "gasMarkers": [],
+      "precipitateMarkers": []
+    },
+    {
+      "candidateId": "reaction-equation-2024-l4092-l4094-f0b2930fa0be",
+      "sourceFile": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+      "lineStart": 4092,
+      "lineEnd": 4094,
+      "rawEquationText": "2 \\mathrm {H} _ {2} + \\mathrm {O} _ {2} \\xlongequal {\\text {点 燃}} 2 \\mathrm {H} _ {2} \\mathrm {O}",
+      "operators": [
+        "latexXLongEqual"
+      ],
+      "gasMarkers": [],
+      "precipitateMarkers": []
+    },
+    {
+      "candidateId": "reaction-equation-2024-l2572-l2574-ea0c0394ef64",
+      "sourceFile": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+      "lineStart": 2572,
+      "lineEnd": 2574,
+      "rawEquationText": "N a _ { 2 } C O _ { 3 } + 2 H C l = 2 N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O",
+      "operators": [
+        "equals"
+      ],
+      "gasMarkers": [
+        "latexUpArrow"
+      ],
+      "precipitateMarkers": []
+    },
+    {
+      "candidateId": "reaction-equation-2024-l2576-l2578-3f046bb83b71",
+      "sourceFile": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+      "lineStart": 2576,
+      "lineEnd": 2578,
+      "rawEquationText": "N a H C O _ { 3 } + H C l = N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O",
+      "operators": [
+        "equals"
+      ],
+      "gasMarkers": [
+        "latexUpArrow"
+      ],
+      "precipitateMarkers": []
+    },
+    {
+      "candidateId": "reaction-equation-2024-l2599-l2601-091eab4a6ea4",
+      "sourceFile": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+      "lineStart": 2599,
+      "lineEnd": 2601,
+      "rawEquationText": "N a _ { 2 } C O _ { 3 } + C a ( O H ) _ { 2 } = C a C O _ { 3 } \\downarrow + 2 N a O H",
+      "operators": [
+        "equals"
+      ],
+      "gasMarkers": [],
+      "precipitateMarkers": [
+        "latexDownArrow"
+      ]
+    }
+  ]
+}

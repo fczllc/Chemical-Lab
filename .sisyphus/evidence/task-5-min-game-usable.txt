@@ -1,0 +1,24 @@
+reactionGamePoolValidationStatus=pass
+totalReactions=127
+gameUsableReactions=127
+nonTextbookGameReactions=0
+unreviewedGameReactions=0
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=0
+duplicateNormalizedEquations=0
+
+## Task 5 verification - 2026-05-13T22:00:41.4294887+08:00
+
+$ node scripts/validate-reaction-game-pool.mjs --min-game-usable 5
+reactionGamePoolValidationStatus=pass
+totalReactions=127
+gameUsableReactions=127
+nonTextbookGameReactions=0
+unreviewedGameReactions=0
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=0
+duplicateNormalizedEquations=0

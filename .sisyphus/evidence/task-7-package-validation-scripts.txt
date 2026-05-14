@@ -1,0 +1,80 @@
+=== npm run validate:textbook-reactions (exit 1) ===
+
+> element-explorer-kids@1.0.0 validate:textbook-reactions
+> node scripts/textbook/validate-reaction-extraction.mjs
+
+reactionExtractionValidationMode=full
+reactionExtractionValidationStatus=fail
+candidateCount=638
+reviewedCandidates=0
+includedCandidates=0
+excludedCandidates=0
+duplicateCandidates=0
+staleManifestCandidates=0
+duplicateReviewCandidates=0
+invalidDecisionCandidates=0
+exclusionsMissingReason=0
+duplicateIncludedEquations=0
+missingExplicitEquations=0
+unreviewedCandidates=638
+unaccountedCandidates=638
+
+ERROR 638 current extraction candidate(s) have no manifest review
+UNREVIEWED reaction-equation-2019-1-l1032-l1034-c5b9bc1a4f68
+UNREVIEWED reaction-equation-2019-1-l1058-l1060-a8e3d772b1e4
+UNREVIEWED reaction-equation-2019-1-l1076-l1078-2f9e447ab2a9
+UNREVIEWED reaction-equation-2019-1-l1082-l1082-ec8c4638fbbb
+UNREVIEWED reaction-equation-2019-1-l1087-l1087-ec6c31b3d110
+UNREVIEWED reaction-equation-2019-1-l1115-l1117-be79b3080a77
+UNREVIEWED reaction-equation-2019-1-l1124-l1126-5bed57ff077e
+UNREVIEWED reaction-equation-2019-1-l1142-l1144-97a3506eabfb
+UNREVIEWED reaction-equation-2019-1-l1152-l1154-4541ffb687cf
+UNREVIEWED reaction-equation-2019-1-l1158-l1160-edce53929da6
+UNREVIEWED reaction-equation-2019-1-l1168-l1170-4956886939c5
+UNREVIEWED reaction-equation-2019-1-l1176-l1178-d97c93a2ccaa
+UNREVIEWED reaction-equation-2019-1-l1210-l1212-25e9e36e35b2
+UNREVIEWED reaction-equation-2019-1-l1222-l1224-ee295e44bdd9
+UNREVIEWED reaction-equation-2019-1-l1271-l1273-8d918e272e2f
+UNREVIEWED reaction-equation-2019-1-l1303-l1305-c803362fd24a
+UNREVIEWED reaction-equation-2019-1-l1348-l1348-7e54574b4c4d
+UNREVIEWED reaction-equation-2019-1-l1355-l1355-849c56127c10
+UNREVIEWED reaction-equation-2019-1-l1389-l1389-7bae462141c4
+UNREVIEWED reaction-equation-2019-1-l1391-l1391-64558aa52b06
+
+=== npm run validate:reaction-game-pool (exit 1) ===
+
+> element-explorer-kids@1.0.0 validate:reaction-game-pool
+> node scripts/validate-reaction-game-pool.mjs
+
+reactionGamePoolValidationStatus=fail
+totalReactions=189
+gameUsableReactions=7
+nonTextbookGameReactions=7
+unreviewedGameReactions=5
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=5
+duplicateNormalizedEquations=1
+
+ERROR 7 actual game-usable reaction(s) are not sourceKind=textbook
+ERROR 5 actual game-usable reaction(s) are not sourceReviewStatus=reviewed
+ERROR 5 source reference issue(s) in actual game-usable reactions
+ERROR 1 normalized equation(s) have multiple runtime game records
+NON_TEXTBOOK_GAME_REACTION reaction-hydrogen-combustion
+NON_TEXTBOOK_GAME_REACTION reaction-iron-rusting
+NON_TEXTBOOK_GAME_REACTION reaction-sodium-water
+NON_TEXTBOOK_GAME_REACTION reaction-salt-formation
+NON_TEXTBOOK_GAME_REACTION reaction-oxygen-supports-combustion
+NON_TEXTBOOK_GAME_REACTION textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0210-4-4-l3124-l3135-c9cad5eab9-promote-knowledge-topic-0210-4-4-l3124-l3135-c9cad5eab9-experiment-experiment-0210-4-4-l3124-l3135-c9cad5eab9
+NON_TEXTBOOK_GAME_REACTION textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0195-4-4-l2439-l2453-791ebb8e61-promote-knowledge-topic-0195-4-4-l2439-l2453-791ebb8e61-experiment-experiment-0195-4-4-l2439-l2453-791ebb8e61
+UNREVIEWED_GAME_REACTION reaction-hydrogen-combustion
+UNREVIEWED_GAME_REACTION reaction-iron-rusting
+UNREVIEWED_GAME_REACTION reaction-sodium-water
+UNREVIEWED_GAME_REACTION reaction-salt-formation
+UNREVIEWED_GAME_REACTION reaction-oxygen-supports-combustion
+INVALID_SOURCE_REFERENCE reaction-hydrogen-combustion: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-iron-rusting: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-sodium-water: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-salt-formation: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-oxygen-supports-combustion: missing non-empty sourceReferences

@@ -9,6 +9,7 @@ import {
   getLearnedElements,
   updateGameScore
 } from './storage.js';
+import { showGameRuleFeedback } from './gameFeedbackOverlay.js';
 
 const REWARD_TIERS = [10, 30, 60, 90, 118];
 const DRAG_BATCH_SIZE = 8;
@@ -427,6 +428,7 @@ function handleDragDrop(droppedAtomicNumber, slotAtomicNumber) {
     activeSession.score += 10;
     activeSession.correctCount += 1;
     activeSession.feedback = '定位正确！元素已锁定到对应位置。';
+    showGameRuleFeedback('correct');
     renderDragGame();
 
     if (activeSession.placedMap.size === activeSession.batchElements.length) {
@@ -451,6 +453,7 @@ function handleDragDrop(droppedAtomicNumber, slotAtomicNumber) {
   activeSession.score -= 2;
   activeSession.wrongCount += 1;
   activeSession.feedback = '位置不对，卡片已弹回，看看周期和族编号再试一次。';
+  showGameRuleFeedback('incorrect');
   draggedCard?.classList.add('was-wrong');
   targetSlot?.classList.add('is-wrong-flash');
   updateDragHeaderStats();
@@ -606,6 +609,7 @@ function handleMemoryCardClick(cardId) {
     activeSession.matchedIds.add(firstId);
     activeSession.matchedIds.add(secondId);
     activeSession.feedback = '配对成功！记忆回路已点亮。';
+    showGameRuleFeedback('correct');
     activeSession.selectedIds = [];
     activeSession.lockBoard = false;
     renderMemoryGame();
@@ -617,6 +621,7 @@ function handleMemoryCardClick(cardId) {
   }
 
   activeSession.feedback = '这两张不匹配，稍后会自动翻回。';
+  showGameRuleFeedback('incorrect');
   renderMemoryGame();
   const currentSessionId = activeSession.id;
   window.setTimeout(() => {
@@ -838,6 +843,7 @@ function handleReactionSelection(productId) {
     activeSession.feedback = '配对正确！该反应链路已完成。';
     activeSession.feedbackResult = 'correct';
     activeSession.selectedReactionId = null;
+    showGameRuleFeedback('correct');
     renderReactionGame();
     if (activeSession.matchedIds.size === activeSession.reactions.length) {
       finishReactionGame();
@@ -848,6 +854,7 @@ function handleReactionSelection(productId) {
   activeSession.feedback = '还差一点点！这个生成物和刚才的反应物不是一组，换一个再试试。';
   activeSession.feedbackResult = 'incorrect';
   activeSession.selectedReactionId = null;
+  showGameRuleFeedback('incorrect');
   renderReactionGame();
 }
 

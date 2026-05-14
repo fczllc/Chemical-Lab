@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\reaction-game-revisit.spec.ts:8:3 鈥?Reaction pairing manual-style QA 鈥?revisit/reload preserves game-reaction score and allows restart (13.5s)
+
+  1 passed (15.5s)

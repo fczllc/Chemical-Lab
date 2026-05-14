@@ -1,0 +1,5 @@
+Fail-closed: reactionEquationReview.json is schema-only-pending-task-8 with no reviews. Task 8 must fill include/exclude reviews before runtime reactions can be regenerated. src/data/reactions.json was not modified.
+exitCode=1
+reactionsHashBefore=EFAA0B7D184102915B46BA560DBCE37ADCD9583ACF62A3EF1ECB938E51F58B69
+reactionsHashAfter=EFAA0B7D184102915B46BA560DBCE37ADCD9583ACF62A3EF1ECB938E51F58B69
+rerunExitCode=1

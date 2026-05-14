@@ -1,0 +1,37 @@
+
+## F4 Scope Fidelity Check - 2026-05-14 03:26:55 +08:00
+VERDICT: APPROVE
+
+Reviewed files:
+- src/modules/gameFeedbackOverlay.js
+- src/modules/games.js
+- src/modules/quiz.js
+- src/styles/games.css
+- tests/ui/shared-game-feedback-overlay.spec.ts
+- package.json plus dependency lockfile diff check
+- git diff/status scope including dist/index.html generated build hash change and existing .sisyphus evidence/notepad changes
+
+Diff/status evidence:
+- git diff --stat: 11 tracked files changed, 182 insertions / 149 deletions before this evidence append; source overlay scope is games.js, quiz.js, games.css, plus untracked gameFeedbackOverlay.js and shared-game-feedback-overlay.spec.ts.
+- git status --short: overlay implementation and focused spec are untracked; no package manifest or lockfile changes are present.
+- git diff -- package.json package-lock.json pnpm-lock.yaml yarn.lock: no output, confirming no dependency changes.
+
+Scope findings:
+- Shared implementation is centralized in src/modules/gameFeedbackOverlay.js with showGameRuleFeedback(result), body-mounted single overlay, fixed correct/incorrect emoji constants, aria-hidden, and pointer-events handled by CSS.
+- No duplicated per-game emoji implementation found: grep found emoji constants only in gameFeedbackOverlay.js; overlay CSS selectors only in src/styles/games.css and the focused test selector.
+- Included integrations are limited to the planned four surfaces: drag placement, memory matching, reaction matching in src/modules/games.js, and full quiz in src/modules/quiz.js.
+- showGameRuleFeedback grep found only: module export, games.js import + six drag/memory/reaction branch calls, quiz.js import + one mode-gated call.
+- Quick quiz exclusion is preserved because handleAnswer calls showGameRuleFeedback only inside if (quizSession.mode === 'full').
+- Collector exclusion is preserved: collector rendering/click handling in games.js does not call showGameRuleFeedback; focused test covers collector no-overlay behavior.
+- No scoring/timer/completion correctness changes identified in the relevant diff; games.js diff adds overlay calls around existing state changes only. Reaction block line endings changed, but scoring (+10), match completion, and render flow remain semantically unchanged.
+- No canvas, particle engine, Three.js effect, audio, or dependency changes found.
+- src/styles/games.css includes overlay styles at the end. The reaction-chip align-items and font-size edits are the pre-existing formula style tweak called out by the task context, not overlay scope creep.
+
+Verification evidence:
+- lsp_diagnostics: no diagnostics for src/modules/gameFeedbackOverlay.js, src/modules/games.js, src/modules/quiz.js, tests/ui/shared-game-feedback-overlay.spec.ts.
+- npm run build: exit 0; Vite built successfully with pre-existing chunk-size warning.
+- npx playwright test tests/ui/shared-game-feedback-overlay.spec.ts: first default parallel run had 4 passed / 2 failed due pointer-events polling timing in expectOverlay; serial rerun with --workers=1 passed all 6 tests in 59.3s.
+- Focused passing tests cover helper single overlay/removal, drag correct/incorrect, memory correct/incorrect, reaction correct/incorrect, full quiz correct/incorrect, and quick quiz + collector exclusions.
+
+Final verdict rationale:
+- APPROVE for scope fidelity. Implementation matches exactly one shared overlay plus four scoped integrations plus focused tests, with required exclusions and no dependency or game-rule/scoring/timer/completion expansion.

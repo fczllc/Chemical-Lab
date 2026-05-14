@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-reaction-game-pool.mjs",
+  "source": "src/data/reactions.json",
+  "status": "pass",
+  "options": {
+    "assertTextbookOnly": false,
+    "minGameUsable": 5
+  },
+  "counters": {
+    "totalReactions": 127,
+    "gameUsableReactions": 127,
+    "nonTextbookGameReactions": 0,
+    "unreviewedGameReactions": 0,
+    "emptyReactantsOrProducts": 0,
+    "missingCurriculumTags": 0,
+    "invalidNotationReactions": 0,
+    "invalidSourceReferences": 0,
+    "duplicateNormalizedEquations": 0
+  },
+  "errors": [],
+  "details": {
+    "nonTextbookGameReactions": [],
+    "unreviewedGameReactions": [],
+    "emptyReactantsOrProducts": [],
+    "missingCurriculumTags": [],
+    "invalidNotationReactions": [],
+    "invalidSourceReferences": [],
+    "duplicateNormalizedEquations": []
+  }
+}

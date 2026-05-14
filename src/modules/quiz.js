@@ -10,6 +10,7 @@ import {
   getSelectedElement,
   updateGameScore
 } from './storage.js';
+import { showGameRuleFeedback } from './gameFeedbackOverlay.js';
 
 const QUICK_QUIZ_COUNT = 5;
 const FULL_QUIZ_COUNT = 20;
@@ -194,6 +195,10 @@ function handleAnswer(question, selectedIndex) {
 
   if (isCorrect) {
     quizSession.score += 1;
+  }
+
+  if (quizSession.mode === 'full') {
+    showGameRuleFeedback(isCorrect ? 'correct' : 'incorrect');
   }
 
   renderQuiz();

@@ -1,0 +1,1 @@
+No prohibited new key/name found in src for game-reaction-config, game-reaction-* variants, or the forbidden Chinese runtime name.

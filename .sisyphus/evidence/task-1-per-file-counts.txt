@@ -1,0 +1,11 @@
+per-file count check
+fileCount=8
+perFileCountsLength=8
+src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md => 248
+src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md => 9
+src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md => 76
+src/data/textbooks/2019版人教版高中化学必修第1册/book.md => 111
+src/data/textbooks/2019版人教版高中化学必修第2册/book.md => 87
+src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md => 50
+src/data/textbooks/2024版人教版九年级化学上册/book.md => 32
+src/data/textbooks/2024版人教版九年级化学下册/book.md => 25

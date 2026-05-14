@@ -1,0 +1,73 @@
+Task 3 Manifest Schema Verification
+====================================
+
+PASS: JSON parses successfully
+PASS: schemaVersion is positive integer
+PASS: manifestKind is reactionEquationReview
+PASS: candidateSourceReport points to task-1 report
+PASS: candidateCount matches task-1
+PASS: reviewStatus is schema-only-pending-task-8
+PASS: duplicatePolicy exists
+PASS: duplicatePolicy.deduplicationKey is normalizedEquation
+PASS: allowedDecisionCodes.codes is array
+PASS: allowedDecisionCodes.codes is sorted
+PASS: allowedDecisionCodes includes include
+PASS: allowedDecisionCodes includes exclude_duplicate
+PASS: allowedDecisionCodes includes exclude_ambiguous_equation
+PASS: allowedDecisionCodes includes exclude_not_reaction
+PASS: allowedDecisionCodes includes exclude_unsupported_notation
+PASS: allowedDecisionCodes includes exclude_incomplete_exercise
+PASS: allowedDecisionCodes includes exclude_word_only
+PASS: allowedDecisionCodes includes exclude_outside_markdown_text
+PASS: decisionSemantics has entry for each allowed code
+PASS: reviewerOverrideFields.fields is array
+PASS: reviewerOverrideFields includes name
+PASS: reviewerOverrideFields includes description
+PASS: reviewerOverrideFields includes curriculumTags
+PASS: reviewerOverrideFields includes difficulty
+PASS: reviewerOverrideFields includes reactants
+PASS: reviewerOverrideFields includes products
+PASS: reviewerOverrideFields includes normalizedEquation
+PASS: reviewerOverrideFields includes notes
+PASS: requiredEntryFields includes candidateId
+PASS: requiredEntryFields includes decision
+PASS: reviews is array
+PASS: reviews is empty
+
+Overall: PASS
+
+Manifest keys (stable order):
+schemaVersion
+manifestKind
+candidateSourceReport
+candidateCount
+reviewStatus
+generatedAt
+description
+duplicatePolicy
+allowedDecisionCodes
+decisionSemantics
+reviewerOverrideFields
+requiredEntryFields
+optionalEntryFields
+reviews
+
+Decision codes (sorted):
+exclude_ambiguous_equation
+exclude_duplicate
+exclude_incomplete_exercise
+exclude_not_reaction
+exclude_outside_markdown_text
+exclude_unsupported_notation
+exclude_word_only
+include
+
+Reviewer override fields:
+name
+description
+curriculumTags
+difficulty
+reactants
+products
+normalizedEquation
+notes

@@ -1,0 +1,43 @@
+Task 8 exclusion reason summary
+Generated: 2026-05-13
+Approved decision codes: exclude_ambiguous_equation, exclude_duplicate, exclude_incomplete_exercise, exclude_not_reaction, exclude_outside_markdown_text, exclude_unsupported_notation, exclude_word_only, include
+Unapproved exclusion decisions: 0
+Decision totals: {"exclude_not_reaction":138,"include":127,"exclude_unsupported_notation":278,"exclude_duplicate":40,"exclude_word_only":26,"exclude_ambiguous_equation":23,"exclude_incomplete_exercise":6}
+
+23	exclude_ambiguous_equation | Generic symbolic placeholders or underspecified species make the equation ambiguous for gameplay.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l1115-l1117-be79b3080a77; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l170-l170-2415f737b80f; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l191-l193-9c017988bddf; source reference merged into canonical include.
+3	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l205-l207-1d5df934c27d; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l3387-l3387-c46914f9371f; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l376-l378-65c595515ede; source reference merged into canonical include.
+3	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l407-l409-b6d8abedc53b; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l4235-l4235-c9906134b9b5; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l444-l446-3b35f40684b8; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l471-l473-915f845b60a2; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l533-l533-66b29287e197; source reference merged into canonical include.
+3	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l772-l772-d73da5049d5c; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l782-l782-0ce6d5cd8df1; source reference merged into canonical include.
+2	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l816-l816-dd1776f70602; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-1-l837-l837-80fa80a1e58f; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2019-2-l98-l100-e60037172ba1; source reference merged into canonical include.
+6	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l3791-l3793-cbe165ff460e; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4062-l4064-05608389da89; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4092-l4094-f0b2930fa0be; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4243-l4243-bef884f9bd0c; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4345-l4347-37271f807366; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4882-l4884-2f2f7663e19c; source reference merged into canonical include.
+3	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4888-l4890-1e581874a93e; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l4896-l4898-470fdc29f82f; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l5117-l5119-bd9d66f11ff9; source reference merged into canonical include.
+1	exclude_duplicate | Duplicate normalized equation of reaction-equation-2024-l5968-l5970-756108a5811a; source reference merged into canonical include.
+6	exclude_incomplete_exercise | Incomplete or fill-in-blank exercise prompt; no standalone reviewed reaction can be formed.
+47	exclude_not_reaction | Candidate is a mathematical, thermodynamic, property, or explanatory expression rather than a standalone chemical reaction equation.
+13	exclude_not_reaction | Normalizer rejected this candidate as invalid-formula; review found no complete representable formula reaction.
+4	exclude_not_reaction | Normalizer rejected this candidate as malformed-side; review found no complete representable formula reaction.
+74	exclude_not_reaction | Normalizer rejected this candidate as unsupported-latex; review found no complete representable formula reaction.
+127	exclude_unsupported_notation | Ionic, charged, electron, or half-reaction notation is not supported by the formula pairing game.
+16	exclude_unsupported_notation | Multiple arrows/equations or pathway notation cannot map to one runtime reaction record.
+73	exclude_unsupported_notation | Reversible or equilibrium notation is outside the current one-way reaction pairing model.
+62	exclude_unsupported_notation | Structural, mechanism, chain, or game-model notation cannot be represented as a simple reactant/product pairing.
+26	exclude_word_only | Candidate contains only words, arrows, numbers, or labels without a complete formula equation.

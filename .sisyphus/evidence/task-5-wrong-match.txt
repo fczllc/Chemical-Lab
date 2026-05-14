@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:28:3 鈥?Reaction pairing completion 鈥?rejects incorrect reaction pairing without changing progress (9.8s)
+
+  1 passed (13.6s)

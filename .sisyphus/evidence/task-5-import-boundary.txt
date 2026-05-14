@@ -1,0 +1,75 @@
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+
+## Task 5 verification - 2026-05-13T22:00:27.2396550+08:00
+
+$ node scripts/audit-business-data-imports.mjs
+涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?16 涓叆鍙?妯″潡鏂囦欢銆?
+
+$ node scripts/textbook/validate-runtime-boundary.mjs
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed

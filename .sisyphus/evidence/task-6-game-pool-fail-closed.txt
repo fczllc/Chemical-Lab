@@ -1,0 +1,31 @@
+reactionGamePoolValidationStatus=fail
+totalReactions=189
+gameUsableReactions=7
+nonTextbookGameReactions=7
+unreviewedGameReactions=5
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=5
+duplicateNormalizedEquations=1
+ERROR 7 actual game-usable reaction(s) are not sourceKind=textbook
+ERROR 5 actual game-usable reaction(s) are not sourceReviewStatus=reviewed
+ERROR 5 source reference issue(s) in actual game-usable reactions
+ERROR 1 normalized equation(s) have multiple runtime game records
+NON_TEXTBOOK_GAME_REACTION reaction-hydrogen-combustion
+NON_TEXTBOOK_GAME_REACTION reaction-iron-rusting
+NON_TEXTBOOK_GAME_REACTION reaction-sodium-water
+NON_TEXTBOOK_GAME_REACTION reaction-salt-formation
+NON_TEXTBOOK_GAME_REACTION reaction-oxygen-supports-combustion
+NON_TEXTBOOK_GAME_REACTION textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0210-4-4-l3124-l3135-c9cad5eab9-promote-knowledge-topic-0210-4-4-l3124-l3135-c9cad5eab9-experiment-experiment-0210-4-4-l3124-l3135-c9cad5eab9
+NON_TEXTBOOK_GAME_REACTION textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0195-4-4-l2439-l2453-791ebb8e61-promote-knowledge-topic-0195-4-4-l2439-l2453-791ebb8e61-experiment-experiment-0195-4-4-l2439-l2453-791ebb8e61
+UNREVIEWED_GAME_REACTION reaction-hydrogen-combustion
+UNREVIEWED_GAME_REACTION reaction-iron-rusting
+UNREVIEWED_GAME_REACTION reaction-sodium-water
+UNREVIEWED_GAME_REACTION reaction-salt-formation
+UNREVIEWED_GAME_REACTION reaction-oxygen-supports-combustion
+INVALID_SOURCE_REFERENCE reaction-hydrogen-combustion: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-iron-rusting: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-sodium-water: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-salt-formation: missing non-empty sourceReferences
+INVALID_SOURCE_REFERENCE reaction-oxygen-supports-combustion: missing non-empty sourceReferences

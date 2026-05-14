@@ -22,7 +22,7 @@
     },
     "storedEnvelope": {
       "version": "v2",
-      "timestamp": "2026-05-07T13:55:19.148Z",
+      "timestamp": "2026-05-13T18:36:33.250Z",
       "data": {
         "currentElement": 1,
         "compareList": [
@@ -42,6 +42,7 @@
           "reaction-fe-oxygen",
           "acid-base-neutralization"
         ],
+        "experimentTitleOverrides": {},
         "unlockedAchievements": [
           "achievement-first-element",
           "achievement-first-experiment",
@@ -49,10 +50,10 @@
           "achievement-reaction-expert"
         ],
         "achievementDates": {
-          "achievement-first-element": "2026-05-07T13:55:18.585Z",
-          "achievement-first-experiment": "2026-05-07T13:55:18.585Z",
-          "achievement-memory-master": "2026-05-07T13:55:18.585Z",
-          "achievement-reaction-expert": "2026-05-07T13:55:18.585Z"
+          "achievement-first-element": "2026-05-13T18:36:31.202Z",
+          "achievement-first-experiment": "2026-05-13T18:36:31.203Z",
+          "achievement-memory-master": "2026-05-13T18:36:31.203Z",
+          "achievement-reaction-expert": "2026-05-13T18:36:31.203Z"
         },
         "gameScores": {
           "game-drag": 120,
@@ -63,47 +64,47 @@
         "gamePlays": {},
         "activityLog": [
           {
-            "id": "activity-1778162118585-r9ww5i",
+            "id": "activity-1778697391203-zpn1sp",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-reaction-expert 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:18.585Z",
+            "timestamp": "2026-05-13T18:36:31.203Z",
             "meta": {
               "achievementId": "achievement-reaction-expert",
-              "unlockedAt": "2026-05-07T13:55:18.585Z"
+              "unlockedAt": "2026-05-13T18:36:31.203Z"
             }
           },
           {
-            "id": "activity-1778162118585-8vltkf",
+            "id": "activity-1778697391203-vlgsf6",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-memory-master 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:18.585Z",
+            "timestamp": "2026-05-13T18:36:31.203Z",
             "meta": {
               "achievementId": "achievement-memory-master",
-              "unlockedAt": "2026-05-07T13:55:18.585Z"
+              "unlockedAt": "2026-05-13T18:36:31.203Z"
             }
           },
           {
-            "id": "activity-1778162118585-oscd5w",
+            "id": "activity-1778697391203-pp6lgp",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-experiment 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:18.585Z",
+            "timestamp": "2026-05-13T18:36:31.203Z",
             "meta": {
               "achievementId": "achievement-first-experiment",
-              "unlockedAt": "2026-05-07T13:55:18.585Z"
+              "unlockedAt": "2026-05-13T18:36:31.203Z"
             }
           },
           {
-            "id": "activity-1778162118585-db7nq6",
+            "id": "activity-1778697391202-28gz9z",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-element 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:18.585Z",
+            "timestamp": "2026-05-13T18:36:31.202Z",
             "meta": {
               "achievementId": "achievement-first-element",
-              "unlockedAt": "2026-05-07T13:55:18.585Z"
+              "unlockedAt": "2026-05-13T18:36:31.202Z"
             }
           }
         ],
@@ -138,7 +139,7 @@
     },
     "storedEnvelope": {
       "version": "v2",
-      "timestamp": "2026-05-07T13:55:20.661Z",
+      "timestamp": "2026-05-13T18:36:38.888Z",
       "data": {
         "currentElement": 6,
         "compareList": [
@@ -163,6 +164,7 @@
         "completedExperiments": [
           "redox-valence-demo"
         ],
+        "experimentTitleOverrides": {},
         "unlockedAchievements": [
           "achievement-first-element",
           "achievement-first-experiment",
@@ -171,11 +173,11 @@
           "achievement-reaction-expert"
         ],
         "achievementDates": {
-          "achievement-first-element": "2026-05-07T13:55:20.098Z",
-          "achievement-first-experiment": "2026-05-07T13:55:20.098Z",
-          "achievement-first-quiz": "2026-05-07T13:55:20.098Z",
-          "achievement-memory-master": "2026-05-07T13:55:20.098Z",
-          "achievement-reaction-expert": "2026-05-07T13:55:20.098Z"
+          "achievement-first-element": "2026-05-13T18:36:36.913Z",
+          "achievement-first-experiment": "2026-05-13T18:36:36.913Z",
+          "achievement-first-quiz": "2026-05-13T18:36:36.913Z",
+          "achievement-memory-master": "2026-05-13T18:36:36.913Z",
+          "achievement-reaction-expert": "2026-05-13T18:36:36.913Z"
         },
         "gameScores": {
           "game-drag": 510,
@@ -186,58 +188,58 @@
         "gamePlays": {},
         "activityLog": [
           {
-            "id": "activity-1778162120098-o7zyxj",
+            "id": "activity-1778697396913-9w4zox",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-reaction-expert 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:20.098Z",
+            "timestamp": "2026-05-13T18:36:36.913Z",
             "meta": {
               "achievementId": "achievement-reaction-expert",
-              "unlockedAt": "2026-05-07T13:55:20.098Z"
+              "unlockedAt": "2026-05-13T18:36:36.913Z"
             }
           },
           {
-            "id": "activity-1778162120098-8h5hek",
+            "id": "activity-1778697396913-glakxs",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-memory-master 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:20.098Z",
+            "timestamp": "2026-05-13T18:36:36.913Z",
             "meta": {
               "achievementId": "achievement-memory-master",
-              "unlockedAt": "2026-05-07T13:55:20.098Z"
+              "unlockedAt": "2026-05-13T18:36:36.913Z"
             }
           },
           {
-            "id": "activity-1778162120098-z3tzfg",
+            "id": "activity-1778697396913-r6zd9a",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-quiz 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:20.098Z",
+            "timestamp": "2026-05-13T18:36:36.913Z",
             "meta": {
               "achievementId": "achievement-first-quiz",
-              "unlockedAt": "2026-05-07T13:55:20.098Z"
+              "unlockedAt": "2026-05-13T18:36:36.913Z"
             }
           },
           {
-            "id": "activity-1778162120098-w2kf2q",
+            "id": "activity-1778697396913-icqy9s",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-experiment 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:20.098Z",
+            "timestamp": "2026-05-13T18:36:36.913Z",
             "meta": {
               "achievementId": "achievement-first-experiment",
-              "unlockedAt": "2026-05-07T13:55:20.098Z"
+              "unlockedAt": "2026-05-13T18:36:36.913Z"
             }
           },
           {
-            "id": "activity-1778162120098-o4fh8t",
+            "id": "activity-1778697396913-ixdgw1",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-element 已收入成就中心。",
-            "timestamp": "2026-05-07T13:55:20.098Z",
+            "timestamp": "2026-05-13T18:36:36.913Z",
             "meta": {
               "achievementId": "achievement-first-element",
-              "unlockedAt": "2026-05-07T13:55:20.098Z"
+              "unlockedAt": "2026-05-13T18:36:36.913Z"
             }
           }
         ],

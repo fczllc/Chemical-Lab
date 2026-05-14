@@ -1,0 +1,22 @@
+Task 3 reaction gameplay QA, 2026-05-12
+
+Source checks:
+- lsp_diagnostics src/modules/games.js: no diagnostics found.
+- Grep confirmed data-testid="reaction-board", data-reaction-id, data-reaction-product, and data-reaction-result in src/modules/games.js.
+
+Command validation:
+- npm run validate:data: passed. Supporting-data validator reported 7 usable reaction-game records.
+- npm run build: passed. Vite emitted the existing chunk-size warning.
+
+Browser QA:
+- Opened http://127.0.0.1:5173, clicked data-testid="nav-games", then clicked [data-game="reaction"].
+- Waited for [data-testid="reaction-board"].
+- Selector counts: 1 board, 5 [data-reaction-id] reactants, 5 [data-reaction-product] product choices.
+- Screenshot: .sisyphus/evidence/task-3-reaction-board.png
+- Deliberately clicked mismatched data-reaction-id and data-reaction-product values.
+- Feedback rendered data-reaction-result="incorrect" with text: 还差一点点！这个生成物和刚才的反应物不是一组，换一个再试试。
+- Score remained 0, matched count remained 0, matched chip count remained 0, and .game-result-panel was absent.
+- Screenshot: .sisyphus/evidence/task-3-wrong-match.png
+
+Observed console noise:
+- Browser console had a favicon.ico 404 only; no reaction-game JavaScript errors were reported.

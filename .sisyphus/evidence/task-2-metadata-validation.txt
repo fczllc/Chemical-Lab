@@ -1,0 +1,96 @@
+
+> element-explorer-kids@1.0.0 validate:data
+> npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+鍏冪礌鏁版嵁鏍￠獙閫氳繃锛氬叡 118 涓厓绱狅紝鍘熷瓙搴忔暟涓庣鍙峰潎鍞竴銆?
+> element-explorer-kids@1.0.0 validate:story-media
+> node scripts/validate-story-media.mjs
+
+鏁呬簨濯掍綋鏁版嵁鏍￠獙閫氳繃锛歠ull mode锛屽叡 118 涓厓绱犮€?36 鏉℃湰鍦板獟浣撱€?
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?38 閬撻銆?89 涓弽搴斻€?201 涓垚灏便€?195 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛? 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?142 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?091 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+鍏夎氨绾挎暟鎹牎楠岄€氳繃锛氬叡 118 涓厓绱狅紝娉㈤暱鑼冨洿 380-780 nm銆?涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?16 涓叆鍙?妯″潡鏂囦欢銆?
+src/data/achievementsData.js:173:    "id": "achievement-reaction-expert",
+src/data/achievementsData.js:182:      "gameKey": "game-reaction",
+src/data/contentMeta.js:114:export const GAME_KEYS = {
+src/data/contentMeta.js:117:  reaction: 'game-reaction',
+src/data/contentMeta.js:156:  reaction: {
+src/data/contentMeta.js:163:      challengeId: 'reaction-product-link',
+src/data/contentMeta.js:2184:    "summary": "鎬濊€冧笌璁ㄨ 鍦ㄥ埗鍙栦箼閰镐箼閰殑瀹為獙涓紝濡傛灉瑕佹彁楂樹箼閰镐箼閰殑浜х巼锛屼綘璁や负搴斿綋閲囧彇鍝簺鎺柦锛熻缁撳悎鍖栧鍙嶅簲鍘熺悊鐨勬湁鍏崇煡璇嗚繘琛岃鏄庛€?閰寲鍙嶅簲 esterification reaction 閰?ester 涔欓吀涔欓叝 ethyl acetate",
+src/data/contentMeta.js:5582:    "summary": "鎬濊€冧笌璁ㄨ 鍒嗘瀽涓婅堪涓や釜鍒跺彇姘ф皵鐨勫弽搴旓紝瀹冧滑鏈変粈涔堝叡鍚岀壒寰侊紵涓庡寲鍚堝弽搴旀湁浠€涔堜笉鍚岋紵 鍌寲鍓?catalyst 鍒嗚В鍙嶅簲 decomposition reaction 鐢变竴绉嶅弽搴旂墿鐢熸垚涓ょ鎴栦袱绉嶄互涓婂叾浠栫墿璐ㄧ殑鍙嶅簲锛屽彨浣滃垎瑙ｅ弽搴斻€傚湪鍖栧瀛︿範杩団€?,
+src/data/contentMeta.js:11370:    "summary": "鎬濊€冧笌璁ㄨ 鍒嗘瀽涓婅堪涓や釜鍒跺彇姘ф皵鐨勫弽搴?瀹冧滑鏈変粈涔堝叡鍚岀壒寰?涓庡寲鍚堝弽搴旀湁浠€涔堜笉鍚? 鍌寲鍓?catalyst鍒嗚В鍙嶅簲decomposition reaction 鐢变竴绉嶅弽搴旂墿鐢熸垚涓ょ鎴栦袱绉嶄互涓婂叾浠栫墿璐ㄧ殑鍙嶅簲,鍙綔鍒嗚В鍙嶅簲銆傚湪鍖栧瀛︿範杩囩▼涓€?,
+src/data/contentMeta.js:20559:  [GAME_KEYS.drag]: GAME_META.drag.title,
+src/data/contentMeta.js:20560:  [GAME_KEYS.memory]: GAME_META.memory.title,
+src/data/contentMeta.js:20561:  [GAME_KEYS.reaction]: GAME_META.reaction.title,
+src/data/contentMeta.js:20562:  [GAME_KEYS.collector]: GAME_META.collector.title,
+src/data/contentMeta.js:20585:  'reaction-library': '鍙嶅簲搴?,
+src/data/learningPath.js:163:        "game-reaction",
+src/data/learningPath.js:173:        "reaction-library",
+src/data/learningPath.js:199:        "game-reaction",
+src/modules/games.js:2:import { GAME_KEYS, GAME_META } from '../data/contentMeta.js';
+src/modules/games.js:3:import { reactions } from '../data/index.js';
+src/modules/games.js:25:    [GAME_KEYS.drag]: 0,
+src/modules/games.js:26:    [GAME_KEYS.memory]: 0,
+src/modules/games.js:27:    [GAME_KEYS.reaction]: 0,
+src/modules/games.js:28:    [GAME_KEYS.collector]: 0
+src/modules/games.js:141:  const totals = Object.keys(GAME_KEYS).map((key) => getCardStats(GAME_KEYS[key]));
+src/modules/games.js:171:    const gameKey = GAME_KEYS[gameName];
+src/modules/games.js:206:    const gameKey = GAME_KEYS.collector;
+src/modules/games.js:237:  if (!(gameName in GAME_KEYS)) {
+src/modules/games.js:242:  const gameKey = GAME_KEYS[gameName];
+src/modules/games.js:259:  if (gameName === 'reaction') {
+src/modules/games.js:478:  recordGameResult(GAME_KEYS.drag, score);
+src/modules/games.js:636:  recordGameResult(GAME_KEYS.memory, score);
+src/modules/games.js:654:  const playableReactions = reactions.filter(isReactionGameUsable);
+src/modules/games.js:656:  const products = shuffleArray(chosenReactions.map((reaction) => ({
+src/modules/games.js:657:    id: reaction.id,
+src/modules/games.js:658:    label: reaction.products.join(' + ')
+src/modules/games.js:663:    type: 'reaction',
+src/modules/games.js:664:    reactions: chosenReactions,
+src/modules/games.js:671:      if (!activeSession || activeSession.type !== 'reaction' || activeSession.id !== sessionId) {
+src/modules/games.js:687:function isReactionGameUsable(reaction) {
+src/modules/games.js:688:  return typeof reaction?.id === 'string' && reaction.id.trim()
+src/modules/games.js:689:    && typeof reaction.name === 'string' && reaction.name.trim()
+src/modules/games.js:690:    && typeof reaction.description === 'string' && reaction.description.trim()
+src/modules/games.js:691:    && Array.isArray(reaction.reactants) && reaction.reactants.some((item) => typeof item === 'string' && item.trim())
+src/modules/games.js:692:    && Array.isArray(reaction.products) && reaction.products.some((item) => typeof item === 'string' && item.trim())
+src/modules/games.js:693:    && Array.isArray(reaction.curriculumTags) && reaction.curriculumTags.some((item) => typeof item === 'string' && item.trim())
+src/modules/games.js:694:    && (reaction.sourceReviewStatus === undefined || reaction.sourceReviewStatus === 'reviewed');
+src/modules/games.js:698:  if (!activeSession || activeSession.type !== 'reaction') {
+src/modules/games.js:703:  const reactantsMarkup = activeSession.reactions.map((reaction) => {
+src/modules/games.js:704:    const matched = activeSession.matchedIds.has(reaction.id);
+src/modules/games.js:705:    const selected = activeSession.selectedReactionId === reaction.id;
+src/modules/games.js:707:      <button class="reaction-chip ${selected ? 'is-selected' : ''} ${matched ? 'is-matched' : ''}" data-reaction-left="${reaction.id}" ${matched ? 'disabled' : ''}>
+src/modules/games.js:708:        <small>${reaction.name}</small>
+src/modules/games.js:709:        <strong data-chem-notation="reactants">${reaction.reactants.map((reactant) => formulaHTML(reactant)).join(' + ')}</strong>
+src/modules/games.js:717:      <button class="reaction-chip reaction-chip-product ${matched ? 'is-matched' : ''}" data-reaction-right="${product.id}" ${matched ? 'disabled' : ''}>
+src/modules/games.js:725:    title: GAME_META.reaction.title,
+src/modules/games.js:726:    kicker: GAME_META.reaction.kicker,
+src/modules/games.js:732:      { label: '鎬诲弽搴旀暟', value: activeSession.reactions.length }
+src/modules/games.js:736:      <div class="reaction-board">
+src/modules/games.js:737:        <div class="reaction-column">
+src/modules/games.js:739:          <div class="reaction-column-list">${reactantsMarkup}</div>
+src/modules/games.js:741:        <div class="reaction-column">
+src/modules/games.js:743:          <div class="reaction-column-list">${productsMarkup}</div>
+src/modules/games.js:750:  document.querySelectorAll('[data-reaction-left]').forEach((button) => {
+src/modules/games.js:752:      activeSession.selectedReactionId = button.dataset.reactionLeft;
+src/modules/games.js:758:  document.querySelectorAll('[data-reaction-right]').forEach((button) => {
+src/modules/games.js:759:    button.addEventListener('click', () => handleReactionSelection(button.dataset.reactionRight));
+src/modules/games.js:764:  const reaction = activeSession?.reactions.find((item) => item.id === product.id);
+src/modules/games.js:765:  const productFormulas = Array.isArray(reaction?.products) && reaction.products.length > 0
+src/modules/games.js:766:    ? reaction.products
+src/modules/games.js:773:  if (!activeSession || activeSession.type !== 'reaction' || !activeSession.selectedReactionId) {
+src/modules/games.js:783:    if (activeSession.matchedIds.size === activeSession.reactions.length) {
+src/modules/games.js:795:  if (!activeSession || activeSession.type !== 'reaction') {
+src/modules/games.js:801:  recordGameResult(GAME_KEYS.reaction, score);
+src/modules/games.js:810:      { label: '鎬诲弽搴旀暟', value: activeSession.reactions.length },
+src/modules/games.js:825:  recordGameResult(GAME_KEYS.collector, score, { keepSession: true });

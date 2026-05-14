@@ -1,13 +1,21 @@
 
 > element-explorer-kids@1.0.0 validate:data
-> npm run validate:elements && npm run validate:supporting && node scripts/audit-business-data-imports.mjs
+> npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs
 
 
 > element-explorer-kids@1.0.0 validate:elements
 > node scripts/validate-elements.mjs
 
 鍏冪礌鏁版嵁鏍￠獙閫氳繃锛氬叡 118 涓厓绱狅紝鍘熷瓙搴忔暟涓庣鍙峰潎鍞竴銆?
+> element-explorer-kids@1.0.0 validate:story-media
+> node scripts/validate-story-media.mjs
+
+鏁呬簨濯掍綋鏁版嵁鏍￠獙閫氳繃锛歠ull mode锛屽叡 118 涓厓绱犮€?36 鏉℃湰鍦板獟浣撱€?
 > element-explorer-kids@1.0.0 validate:supporting
 > node scripts/validate-supporting-data.mjs
 
-鏀寔鏁版嵁鏍￠獙閫氳繃锛?0 閬撻銆? 涓弽搴斻€?1 涓垚灏便€? 涓涔犻樁娈点€?涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?15 涓叆鍙?妯″潡鏂囦欢銆?
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?38 閬撻銆?89 涓弽搴斻€?201 涓垚灏便€?195 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛? 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?142 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?091 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+鍏夎氨绾挎暟鎹牎楠岄€氳繃锛氬叡 118 涓厓绱狅紝娉㈤暱鑼冨洿 380-780 nm銆?涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?16 涓叆鍙?妯″潡鏂囦欢銆?

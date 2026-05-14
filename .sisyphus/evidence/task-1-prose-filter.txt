@@ -1,0 +1,4 @@
+prose/operator filter check
+command: node verifies every candidate has syntaxFeatures.hasEquationOperator and at least one supported operator feature
+candidateCount=638
+missingOperatorCount=0

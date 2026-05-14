@@ -1,0 +1,21 @@
+
+> element-explorer-kids@1.0.0 validate:data
+> npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+元素数据校验通过：共 118 个元素，原子序数与符号均唯一。
+
+> element-explorer-kids@1.0.0 validate:story-media
+> node scripts/validate-story-media.mjs
+
+故事媒体数据校验通过：full mode，共 118 个元素、236 条本地媒体。
+
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+支持数据校验失败：
+- 反应配对游戏反应 reaction-hydrogen-combustion 缺少或为空 products
+- 反应 reaction-hydrogen-combustion 必须包含非空的 reactants/products 数组

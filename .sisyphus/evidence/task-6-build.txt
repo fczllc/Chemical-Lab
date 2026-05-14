@@ -1,15 +1,10 @@
-COMMAND: npm run build
-STARTED: 2026-05-08T13:06:48.0451947+08:00
-FINISHED: 2026-05-08T13:06:53.5394422+08:00
-EXIT_STATUS: 0
---- OUTPUT ---
 
 > element-explorer-kids@1.0.0 build
 > vite build
 
 [36mvite v6.4.2 [32mbuilding for production...[36m[39m
 transforming...
-[32m✓[39m 46 modules transformed.
+[32m鉁?[39m 1758 modules transformed.
 rendering chunks...
 computing gzip size...
 [2mdist/[22m[32massets/KaTeX_Size3-Regular-gV2CO0n9.woff2        [39m[1m[2m    3.62 kB[22m[1m[22m
@@ -43,7 +38,7 @@ computing gzip size...
 [2mdist/[22m[32massets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2   [39m[1m[2m   13.57 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_SansSerif-Italic-DN2j7dab.woff      [39m[1m[2m   14.11 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_SansSerif-Bold-DbIhKOiC.woff        [39m[1m[2m   14.41 kB[22m[1m[22m
-[2mdist/[22m[32mindex.html                                       [39m[1m[2m   15.11 kB[22m[1m[22m[2m │ gzip:   3.50 kB[22m
+[2mdist/[22m[32mindex.html                                       [39m[1m[2m   15.40 kB[22m[1m[22m[2m 鈹?gzip:     3.55 kB[22m
 [2mdist/[22m[32massets/KaTeX_Typewriter-Regular-C0xS9mPB.woff    [39m[1m[2m   16.03 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2      [39m[1m[2m   16.40 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_Math-Italic-t53AETM-.woff2          [39m[1m[2m   16.44 kB[22m[1m[22m
@@ -73,11 +68,11 @@ computing gzip size...
 [2mdist/[22m[32massets/KaTeX_Main-Bold-waoOVXN0.ttf              [39m[1m[2m   51.34 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_Main-Regular-ypZvNtVU.ttf           [39m[1m[2m   53.58 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_AMS-Regular-DRggAlZN.ttf            [39m[1m[2m   63.63 kB[22m[1m[22m
-[2mdist/[22m[35massets/index-CTQ-rm2r.css                        [39m[1m[2m  147.63 kB[22m[1m[22m[2m │ gzip:  25.47 kB[22m
-[2mdist/[22m[36massets/index-9f5UHXC-.js                         [39m[1m[33m2,890.68 kB[39m[22m[2m │ gzip: 509.91 kB[22m
-[33m
+[2mdist/[22m[35massets/index-CU4-WGKq.css                        [39m[1m[2m  159.30 kB[22m[1m[22m[2m 鈹?gzip:    27.36 kB[22m
+[2mdist/[22m[36massets/index-C-zBhoF3.js                         [39m[1m[33m8,847.02 kB[39m[22m[2m 鈹?gzip: 1,123.35 kB[22m
+
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
-- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
-[32m✓ built in 4.38s[39m
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32m鉁?built in 6.12s[39m

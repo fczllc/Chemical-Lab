@@ -1,0 +1,32 @@
+Task 6 Command Summary
+======================
+Date: 2026-05-12
+
+Required commands (all exited 0):
+1. npm run validate:data
+   → .sisyphus/evidence/task-6-validate-data.txt
+   → Result: PASS (118 elements, 36 media, 38 quiz, 89 reactions, 7 usable for game, 201 achievements, 195 stages, 4 game metadata keys)
+
+2. npm run validate:chem-notation
+   → .sisyphus/evidence/task-6-validate-chem-notation.txt
+   → Result: PASS (hydrates, states, ions, reactionSymbols, chemicalNotation all valid)
+
+3. npm run build
+   → .sisyphus/evidence/task-6-build.txt
+   → Result: PASS (exit 0). Known acceptable Vite chunk-size warning present.
+
+4. npx playwright test tests/ui/reaction-game-completion.spec.ts
+   → .sisyphus/evidence/task-6-playwright-reaction.txt
+   → Result: PASS (2/2 tests passed in ~15.4s)
+
+Additional manual-style QA helper:
+5. npx playwright test tests/ui/reaction-game-revisit.spec.ts
+   → .sisyphus/evidence/task-6-playwright-revisit.txt
+   → Result: PASS (1/1 test passed in ~15.5s)
+   → Covers: revisit/reload preserves game-reaction score and allows restart
+
+Manual QA notes:
+→ .sisyphus/evidence/task-6-manual-qa.txt
+   → Covers: wrong-match feedback, completion heading, progress persistence, restart/revisit
+
+All Task 6 requirements satisfied.

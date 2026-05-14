@@ -1,110 +1,92 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\remaining-shortanswer-mcq-conversion.md",
-  "started_at": "2026-05-12T01:01:36.601Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\shared-game-feedback-overlay.md",
+  "started_at": "2026-05-13T17:23:41.944Z",
   "session_ids": [
-    "ses_1e65461eaffeo6FW3pDg7RnWpo",
-    "ses_1e64aaab5ffeCjs4D1xNJ42C3N",
-    "ses_1e64aa9d8ffe2YM776C1iz4H7s",
-    "ses_1e64aa9b1ffe8n8jOUgRFEy4HF"
+    "ses_1ddc4f9acffeXyblkkK76Ji6kV",
+    "ses_1dda122d2ffeNAXCFvLu9YlwoZ",
+    "ses_1dda12242ffeT6zYAGldl3tYn0",
+    "ses_1dda12175ffeGMlxeugR0cvv6f"
   ],
   "session_origins": {
-    "ses_1e65461eaffeo6FW3pDg7RnWpo": "direct",
-    "ses_1e64aaab5ffeCjs4D1xNJ42C3N": "appended",
-    "ses_1e64aa9d8ffe2YM776C1iz4H7s": "appended",
-    "ses_1e64aa9b1ffe8n8jOUgRFEy4HF": "appended"
+    "ses_1ddc4f9acffeXyblkkK76Ji6kV": "direct",
+    "ses_1dda122d2ffeNAXCFvLu9YlwoZ": "appended",
+    "ses_1dda12242ffeT6zYAGldl3tYn0": "appended",
+    "ses_1dda12175ffeGMlxeugR0cvv6f": "appended"
   },
-  "plan_name": "remaining-shortanswer-mcq-conversion",
+  "plan_name": "shared-game-feedback-overlay",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Preflight Recount and Preservation Snapshot",
-      "session_id": "ses_1e6495f4dffexx1XqK7LmxvIoZ",
+      "task_title": "Create shared emoji feedback overlay",
+      "session_id": "ses_1dd9aabc0ffePeGkuQ1pl29yAH",
       "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-12T01:06:54.779Z"
+      "category": "visual-engineering",
+      "updated_at": "2026-05-13T17:36:17.933Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Generate Grade 8 Full Textbook MCQ JSON",
-      "session_id": "ses_1e5ad4457ffeqGp3Mz7lGD4RFd",
+      "task_title": "Wire overlay into game-center drag and memory rules",
+      "session_id": "ses_1dd907c18ffePVpm6h0Kk36YcN",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T04:31:58.319Z"
+      "category": "visual-engineering",
+      "updated_at": "2026-05-13T18:00:32.895Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Generate Grade 9 Volume 1 MCQ JSON",
-      "session_id": "ses_1e5ad4449ffepEaq3vfFyk4hcH",
+      "task_title": "Wire overlay into reaction matching rules",
+      "session_id": "ses_1dd7cbc42ffemGIPTmGSs2Km2a",
       "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T05:03:08.343Z"
+      "category": "visual-engineering",
+      "updated_at": "2026-05-13T18:09:13.452Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "Wire overlay into full quiz challenge only",
+      "session_id": "ses_1dd760813ffeCcK7zI9I5uKDTr",
+      "agent": "Sisyphus-Junior",
+      "category": "visual-engineering",
+      "updated_at": "2026-05-13T18:15:13.426Z"
     },
     "todo:5": {
       "task_key": "todo:5",
       "task_label": "5",
-      "task_title": "Dry-Run All Remaining Batches and Prove Invalid-Input Safety",
-      "session_id": "ses_1e56ca73fffen5IiGMSKzIkU3P",
+      "task_title": "Add end-to-end verification for scoped and excluded feedback",
+      "session_id": "ses_1dd6f67f3ffexADW22UjNRmwML",
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
-      "updated_at": "2026-05-12T05:10:33.594Z"
-    },
-    "todo:6": {
-      "task_key": "todo:6",
-      "task_label": "6",
-      "task_title": "Write Grade 8 Full Textbook Conversion",
-      "session_id": "ses_1e566c038ffeJ35FXoN4mHM7aH",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T05:17:14.001Z"
-    },
-    "todo:7": {
-      "task_key": "todo:7",
-      "task_label": "7",
-      "task_title": "Write Grade 9 Volume 1 Conversion",
-      "session_id": "ses_1e55ffa7cffeXOGhvkOGd5gw7p",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T05:25:46.017Z"
-    },
-    "todo:8": {
-      "task_key": "todo:8",
-      "task_label": "8",
-      "task_title": "Write Grade 9 Volume 2 Conversion",
-      "session_id": "ses_1e55930d8ffeuImQbebiTCkyD6",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T05:32:48.763Z"
-    },
-    "todo:9": {
-      "task_key": "todo:9",
-      "task_label": "9",
-      "task_title": "Aggregate Reconciliation and Operator Report Update",
-      "session_id": "ses_1e542112affeiB15CTRH5GMMYb",
-      "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-12T05:58:02.631Z"
-    },
-    "todo:10": {
-      "task_key": "todo:10",
-      "task_label": "10",
-      "task_title": "Build and Browser QA for Three Newly Converted Batches",
-      "session_id": "ses_1e48d08d6ffenfq2P7x2ELvoiE",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-12T09:12:06.600Z"
+      "updated_at": "2026-05-13T18:38:57.500Z"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_1e440aa04ffepl412pSW3Xwpsy",
+      "session_id": "ses_1dd4761ffffeiRu2p2fXda303G",
       "agent": "oracle",
       "category": "",
-      "updated_at": "2026-05-12T10:35:39.066Z"
+      "updated_at": "2026-05-13T19:06:32.257Z"
+    },
+    "final-wave:f2": {
+      "task_key": "final-wave:f2",
+      "task_label": "F2",
+      "task_title": "Code Quality Review — unspecified-high",
+      "session_id": "ses_1dd43885cffeimZheIyvc9ikNn",
+      "agent": "Sisyphus-Junior",
+      "category": "",
+      "updated_at": "2026-05-13T19:13:39.518Z"
+    },
+    "final-wave:f3": {
+      "task_key": "final-wave:f3",
+      "task_label": "F3",
+      "task_title": "Real Manual QA — unspecified-high (+ playwright)",
+      "session_id": "ses_1dd3989d0fferfOyKRIIM6PeXm",
+      "agent": "Sisyphus-Junior",
+      "category": "",
+      "updated_at": "2026-05-13T19:43:08.746Z"
     }
   }
 }

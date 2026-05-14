@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:10:3 鈥?Reaction pairing completion 鈥?completes reaction pairing and persists the score (35.0s)
+
+  1 passed (37.2s)

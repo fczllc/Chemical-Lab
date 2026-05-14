@@ -1,0 +1,46 @@
+Task 6 Manual QA Notes — Reaction Pairing Completion
+======================================================
+Date: 2026-05-12
+Environment: Windows, Chromium (Playwright), Vite production build
+
+1. Wrong-match feedback
+   - Test: deliberately clicked a reactant and a non-matching product.
+   - Observed: `.game-feedback` attribute `data-reaction-result="incorrect"`.
+   - Observed: feedback text contained "不是一组".
+   - Scoreboard stat "当前得分" remained unchanged.
+   - Scoreboard stat "已配对" remained unchanged.
+   - Matched chip count remained unchanged.
+   - Completion heading did NOT appear.
+   - Result panel did NOT appear.
+   - PASS.
+
+2. Completion heading and summary
+   - Test: matched all visible reactant→product pairs deterministically.
+   - Observed: heading changed to exact text "反应配对完成".
+   - Observed: `.game-result-panel--reaction` became visible.
+   - Observed: at least one `.reaction-summary-chip` rendered.
+   - Scoreboard "正确配对" count equaled the number of completed pairs.
+   - PASS.
+
+3. Progress / score persistence
+   - After completion, `window.appState.gameScores['game-reaction']` was ≥ (pairs × 10).
+   - localStorage envelope under key `element-explorer-kids-state` mirrored the same score.
+   - PASS.
+
+4. Restart / revisit behavior
+   - Navigated away to home, then back to Games, then re-entered reaction game.
+   - Observed: a fresh reaction board rendered (new session by design).
+   - Observed: previous `game-reaction` score remained in localStorage/appState.
+   - Observed: board showed new `[data-reaction-id]` and `[data-reaction-product]` chips.
+   - No corruption of prior progress; no duplication of scores.
+   - PASS.
+
+5. Known acceptable warnings (not reaction-game JS errors)
+   - Vite build emits existing chunk-size warning for `assets/index-C-zBhoF3.js` (~8.8 MB).
+   - Browser console may report `favicon.ico 404`; this is not a JS runtime error.
+
+6. Environment gotcha
+   - Initial revisit helper spec used label "当前得分" after completion, but the
+     completion result screen labels the score as "最终得分". Corrected and rerun.
+
+Overall: all manual-style checks PASS.

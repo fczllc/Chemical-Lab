@@ -1,0 +1,15 @@
+reactionExtractionValidationMode=schema-only
+reactionExtractionValidationStatus=pass
+candidateCount=0
+reviewedCandidates=0
+includedCandidates=0
+excludedCandidates=0
+duplicateCandidates=0
+staleManifestCandidates=0
+duplicateReviewCandidates=0
+invalidDecisionCandidates=0
+exclusionsMissingReason=0
+duplicateIncludedEquations=0
+missingExplicitEquations=0
+unreviewedCandidates=0
+unaccountedCandidates=0

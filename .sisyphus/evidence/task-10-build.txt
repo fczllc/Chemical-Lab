@@ -1,3 +1,4 @@
+===== npm run build =====
 
 > element-explorer-kids@1.0.0 build
 > vite build
@@ -68,12 +69,13 @@ computing gzip size...
 [2mdist/[22m[32massets/KaTeX_Main-Bold-waoOVXN0.ttf              [39m[1m[2m   51.34 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_Main-Regular-ypZvNtVU.ttf           [39m[1m[2m   53.58 kB[22m[1m[22m
 [2mdist/[22m[32massets/KaTeX_AMS-Regular-DRggAlZN.ttf            [39m[1m[2m   63.63 kB[22m[1m[22m
-[2mdist/[22m[35massets/index-DKrpvPHD.css                        [39m[1m[2m  155.19 kB[22m[1m[22m[2m 鈹?gzip:    26.72 kB[22m
-[2mdist/[22m[36massets/index-DlyMG-su.js                         [39m[1m[33m8,818.13 kB[39m[22m[2m 鈹?gzip: 1,107.67 kB[22m
+[2mdist/[22m[35massets/index-CU4-WGKq.css                        [39m[1m[2m  159.30 kB[22m[1m[22m[2m 鈹?gzip:    27.36 kB[22m
+[2mdist/[22m[36massets/index-DmP9ou9h.js                         [39m[1m[33m8,469.77 kB[39m[22m[2m 鈹?gzip: 1,068.95 kB[22m
+[32m鉁?built in 7.88s[39m
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-[32m鉁?built in 7.20s[39m
-0
+----- exit code: 0 -----
+Build command exited 0.

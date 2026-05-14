@@ -1,0 +1,10 @@
+reactionGamePoolValidationStatus=pass
+totalReactions=127
+gameUsableReactions=127
+nonTextbookGameReactions=0
+unreviewedGameReactions=0
+emptyReactantsOrProducts=0
+missingCurriculumTags=0
+invalidNotationReactions=0
+invalidSourceReferences=0
+duplicateNormalizedEquations=0

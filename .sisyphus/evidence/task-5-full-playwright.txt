@@ -1,0 +1,320 @@
+
+Running 67 tests using 2 workers
+
+  鉁?  2 [chromium] 鈥?tests\content\chem-notation.spec.ts:59:3 鈥?KaTeX chemistry notation rendering 鈥?detail panel electron config renders KaTeX (12.0s)
+  鉁?  1 [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX (20.7s)
+  鉁?  4 [chromium] 鈥?tests\content\chem-notation.spec.ts:98:3 鈥?KaTeX chemistry notation rendering 鈥?quiz formula-token smoke keeps prose and standalone symbols plain (3.6s)
+  鉁?  3 [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching (24.0s)
+  鉁?  5 [chromium] 鈥?tests\content\chem-notation.spec.ts:123:3 鈥?KaTeX chemistry notation rendering 鈥?story electron config renders while story symbols stay plain (11.5s)
+  鉁?  7 [chromium] 鈥?tests\content\chem-notation.spec.ts:138:3 鈥?KaTeX chemistry notation rendering 鈥?periodic table cell symbol stays plain (4.3s)
+  鉁?  6 [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors (13.5s)
+  鉁?  9 [chromium] 鈥?tests\content\chem-notation.spec.ts:185:3 鈥?KaTeX chemistry notation rendering 鈥?textbook-grade chemistry notation cases render through KaTeX (103ms)
+  鉁?  8 [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow (21.5s)
+  鉁? 10 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:10:3 鈥?Content Data Smoke 鈥?detail panel opens with element content (12.3s)
+  鉁? 12 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:20:3 鈥?Content Data Smoke 鈥?story flow opens the selected element archive (14.8s)
+  鉁? 11 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element (25.7s)
+  鉁? 13 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:44:3 鈥?Content Data Smoke 鈥?quiz flow opens a quick quiz for the selected element (12.4s)
+  鉁? 15 [chromium] 鈥?tests\shell\home-shell.spec.ts:10:3 鈥?Homepage Shell Contract 鈥?desktop shell contract - all shell regions visible at 1440x900 (5.6s)
+  鉁? 14 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:57:3 鈥?Content Data Smoke 鈥?renders the selected element spectrum from real spectral data (11.7s)
+  鉁? 16 [chromium] 鈥?tests\shell\home-shell.spec.ts:61:3 鈥?Homepage Shell Contract 鈥?settings panel opens and contains performance mode toggle (9.9s)
+  鉁? 17 [chromium] 鈥?tests\shell\home-shell.spec.ts:97:3 鈥?Responsive Layout 鈥?desktop layout keeps primary navigation visible at 1366x768 (5.4s)
+  鉁? 18 [chromium] 鈥?tests\shell\home-shell.spec.ts:108:3 鈥?Responsive Layout 鈥?tablet landscape keeps primary navigation visible at 1024x768 (4.9s)
+  鉁? 20 [chromium] 鈥?tests\shell\home-shell.spec.ts:139:3 鈥?Hash-based Routing 鈥?unknown route falls back to home (1.6s)
+  鉁? 19 [chromium] 鈥?tests\shell\home-shell.spec.ts:119:3 鈥?Responsive Layout 鈥?tablet portrait supports navigation and element details at 768x1024 (14.3s)
+  鉁? 22 [chromium] 鈥?tests\shell\home-shell.spec.ts:188:3 鈥?Device Optimizations 鈥?viewport meta uses standard responsive scaling (3.2s)
+  鉁? 21 [chromium] 鈥?tests\shell\home-shell.spec.ts:154:3 鈥?Hash-based Routing 鈥?hash routes navigate correctly (14.6s)
+  鉁? 23 [chromium] 鈥?tests\shell\home-shell.spec.ts:196:3 鈥?Performance and Accessibility 鈥?global loader is present and hides after init (3.2s)
+  鉁? 24 [chromium] 鈥?tests\shell\home-shell.spec.ts:205:3 鈥?Performance and Accessibility 鈥?focus styles are visible (3.0s)
+  鉁? 25 [chromium] 鈥?tests\shell\home-shell.spec.ts:221:3 鈥?Performance and Accessibility 鈥?keyboard navigation works (3.4s)
+  鉁? 26 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (3.6s)
+  鉁? 27 [chromium] 鈥?tests\shell\home-shell.spec.ts:249:3 鈥?Bottom Widget Contract 鈥?category overview is display-only with no interactive descendants (4.3s)
+  鉁? 28 [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge (5.6s)
+  鉁? 29 [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border (5.4s)
+  鉁? 30 [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 (5.7s)
+  鉁? 32 [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge (14.2s)
+  鉁? 33 [chromium] 鈥?tests\ui\background-policy.spec.ts:4:3 鈥?Background Policy 鈥?bg canvas stays hidden and shell background stays dark (6.2s)
+  鉁? 31 [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars (26.8s)
+  鉁? 35 [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports (25.8s)
+  鉁? 34 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (28.2s)
+  鉁? 36 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:56:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title (22.4s)
+  鉁? 37 [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz (24.0s)
+  鉁? 38 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:88:3 鈥?experiment detail editable title 鈥?supports keyboard Enter save and Escape cancel (21.9s)
+  鉁? 39 [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile (24.1s)
+  鉁? 40 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:14:3 鈥?Lab textbook experiment content 鈥?card excerpt and detail full content (7.6s)
+  鉁? 42 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:69:3 鈥?Lab textbook experiment content 鈥?static reaction fallback (7.0s)
+  鉁? 41 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:127:3 鈥?Lab textbook experiment content 鈥?ambiguous chemistry hides blank equation rows while showing full content (9.0s)
+  鉁? 43 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:171:3 鈥?Lab textbook experiment content 鈥?dangerous reaction safety gate blocks launch without confirmation (1.7m)
+  鉁? 44 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:240:3 鈥?Lab textbook experiment content 鈥?simulation completion shows result view in detail modal (1.7m)
+  鉁? 46 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:167:3 鈥?periodic table controls 鈥?multi-select legend chips OR category filters in the grid (7.1s)
+  鉁? 45 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter (16.9s)
+  鉁? 47 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:183:3 鈥?periodic table controls 鈥?deselecting the last category restores the current period-only result set (15.5s)
+  鉁? 48 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:200:3 鈥?periodic table controls 鈥?combines period and category filters with AND semantics (8.7s)
+  鉁? 49 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:210:3 鈥?periodic table controls 鈥?keyboard activation toggles legend chip state and updates filtering (10.1s)
+  鉁? 50 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:223:3 鈥?periodic table controls 鈥?preserves active period and category filters when switching between grid and list views (12.2s)
+  鉁? 51 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:247:3 鈥?periodic table controls 鈥?keeps tablet portrait table controls usable without phone navigation (12.4s)
+  鉁? 53 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:34:3 鈥?Reaction pairing completion 鈥?rejects incorrect reaction pairing without changing progress (8.9s)
+  鉁? 52 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:10:3 鈥?Reaction pairing completion 鈥?completes reaction pairing and persists the score (20.0s)
+  鉁? 55 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (5.6s)
+  鉁? 54 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (11.0s)
+  鉁? 56 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (15.0s)
+  鉁? 58 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:16:3 鈥?Shared game feedback overlay 鈥?helper renders a single non-blocking overlay and removes it after timeout (6.3s)
+  鉁? 57 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (20.6s)
+  鉁? 60 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:43:3 鈥?Shared game feedback overlay 鈥?memory game shows correct and incorrect overlays (9.1s)
+  鉁? 59 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:29:3 鈥?Shared game feedback overlay 鈥?drag game shows correct and incorrect overlays (14.6s)
+  鉁? 62 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:78:3 鈥?Shared game feedback overlay 鈥?full quiz shows both correct and incorrect overlays (7.5s)
+  鉁? 61 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:59:3 鈥?Shared game feedback overlay 鈥?reaction game shows correct and incorrect overlays (10.5s)
+  鉁? 64 [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade (8.9s)
+  鉁? 65 [chromium] 鈥?tests\ui\storage-migration.spec.ts:36:3 鈥?Storage migration compatibility 鈥?empty localStorage initializes safely with defaults (4.9s)
+  鉁? 63 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:104:3 鈥?Shared game feedback overlay 鈥?quick quiz and collector interactions do not create the shared overlay (16.3s)
+  鉁? 66 [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:10:3 鈥?Visual polish regression 鈥?keeps the final dark-shell contract on key routes (8.4s)
+  鉁? 67 [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:53:3 鈥?Visual polish regression 鈥?keeps the shell understandable when reduced motion is requested (8.3s)
+
+
+  1) [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.lab-equation-card').first()[22m
+
+
+      49 |
+      50 |     const equationCard = page.locator('.lab-equation-card').first();
+    > 51 |     await expect(equationCard).toBeVisible({ timeout: 10000 });
+         |                                ^
+      52 |
+      53 |     // Wait for KaTeX to render asynchronously
+      54 |     await expect(equationCard.locator('.katex')).toBeVisible({ timeout: 10000 });
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:51:32
+
+    Error Context: test-results\content-chem-notation-KaTe-7825c-equation-card-renders-KaTeX-chromium\error-context.md
+
+  2) [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[data-reaction-right="reaction-sodium-water"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('[data-reaction-right="reaction-sodium-water"]')[22m
+
+
+      83 |     const productDisplay = sodiumProducts.locator('[data-chem-notation="products"]');
+      84 |
+    > 85 |     await expect(sodiumProducts).toBeVisible({ timeout: 10000 });
+         |                                  ^
+      86 |     await expect(productDisplay.locator('.katex')).toHaveCount(2);
+      87 |     await expectChemMetadata(productDisplay.locator('.chem-notation--formula').nth(0), 'NaOH');
+      88 |     await expectChemMetadata(productDisplay.locator('.chem-notation--formula').nth(1), 'H2');
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:85:34
+
+    Error Context: test-results\content-chem-notation-KaTe-840aa-s-without-changing-matching-chromium\error-context.md
+
+  3) [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.lab-equation-card').first()[22m
+
+
+      160 |
+      161 |     await page.getByTestId('nav-lab').click();
+    > 162 |     await expect(page.locator('.lab-equation-card').first()).toBeVisible();
+          |                                                              ^
+      163 |
+      164 |     await page.getByTestId('nav-home').click();
+      165 |     await page.getByTestId('element-cell-1').click();
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:162:62
+
+    Error Context: test-results\content-chem-notation-KaTe-049df-ing-no-KaTeX-console-errors-chromium\error-context.md
+
+  4) [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card .katex').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.lab-equation-card .katex').first()[22m
+
+
+      178 |       await waitForShellReady(page);
+      179 |       await page.getByTestId('nav-lab').click();
+    > 180 |       await expect(page.locator('.lab-equation-card .katex').first()).toBeVisible({ timeout: 10000 });
+          |                                                                       ^
+      181 |       await expectNoHorizontalOverflow(page);
+      182 |     }
+      183 |   });
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:180:71
+
+    Error Context: test-results\content-chem-notation-KaTe-3e50a-ion-layouts-do-not-overflow-chromium\error-context.md
+
+  5) [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#lab #lab-stage .lab-stage-shell h3')
+    Expected: not [32m""[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "not toHaveText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#lab #lab-stage .lab-stage-shell h3')[22m
+
+
+      39 |     await expect(page.locator('#lab .lab-toolbar')).toContainText('褰撳墠鑱氱劍锛氭阿锛圚锛?);
+      40 |     await expect(page.locator('#lab .lab-list .lab-item-card').first()).toBeVisible();
+    > 41 |     await expect(page.locator('#lab #lab-stage .lab-stage-shell h3')).not.toHaveText('');
+         |                                                                           ^
+      42 |   });
+      43 |
+      44 |   test('quiz flow opens a quick quiz for the selected element', async ({ page }) => {
+        at D:\Chemical-Laboratory\tests\shell\content-data-smoke.spec.ts:41:75
+
+    Error Context: test-results\shell-content-data-smoke-C-e89a5-nt-for-the-selected-element-chromium\error-context.md
+
+  6) [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports 鈥?desktop 1280x720 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#game-area .games-overview-header')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('#game-area .games-overview-header')[22m
+
+
+      89 |   await expect(page.locator('#games')).toHaveClass(/active/);
+      90 |   await expect(page.getByTestId('nav-games')).toHaveClass(/active/);
+    > 91 |   await expect(page.locator('#game-area .games-overview-header')).toBeVisible({ timeout: 15000 });
+         |                                                                   ^
+      92 | }
+      93 |
+      94 | async function waitForShellReady(page: Page) {
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:91:67)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:24:9
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:23:7
+
+    Error Context: test-results\ui-games-layout-Games-layo-9d368--separated-across-viewports-chromium\error-context.md
+
+  7) [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#game-area .games-overview-header')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('#game-area .games-overview-header')[22m
+
+
+      89 |   await expect(page.locator('#games')).toHaveClass(/active/);
+      90 |   await expect(page.getByTestId('nav-games')).toHaveClass(/active/);
+    > 91 |   await expect(page.locator('#game-area .games-overview-header')).toBeVisible({ timeout: 15000 });
+         |                                                                   ^
+      92 | }
+      93 |
+      94 | async function waitForShellReady(page: Page) {
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:91:67)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:42:5
+
+    Error Context: test-results\ui-games-layout-Games-layo-1570d-s-a-20-question-unique-quiz-chromium\error-context.md
+
+  8) [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#game-area .games-overview-header')
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('#game-area .games-overview-header')[22m
+
+
+      89 |   await expect(page.locator('#games')).toHaveClass(/active/);
+      90 |   await expect(page.getByTestId('nav-games')).toHaveClass(/active/);
+    > 91 |   await expect(page.locator('#game-area .games-overview-header')).toBeVisible({ timeout: 15000 });
+         |                                                                   ^
+      92 | }
+      93 |
+      94 | async function waitForShellReady(page: Page) {
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:91:67)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:73:5
+
+    Error Context: test-results\ui-games-layout-Games-layo-e74b7-frame-on-desktop-and-mobile-chromium\error-context.md
+
+  9) [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:240:3 鈥?Lab textbook experiment content 鈥?simulation completion shows result view in detail modal 
+
+    [31mTest timeout of 90000ms exceeded.[39m
+
+    Error Context: test-results\ui-lab-textbook-experiment-3128d-result-view-in-detail-modal-chromium\error-context.md
+
+  10) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.element-cell').first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('.element-cell').first()[22m
+
+
+      15 |   await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
+      16 |   await expect(page.getByTestId('detail-panel')).toBeVisible({ timeout: 15000 });
+    > 17 |   await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
+         |                                                       ^
+      18 |   await expect.poll(async () => {
+      19 |     return await page.evaluate(() => {
+      20 |       const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
+        at waitForShellReady (D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:17:55)
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:119:5
+
+    Error Context: test-results\ui-periodic-table-controls-5ec88-nd-beside-the-period-filter-chromium\error-context.md
+
+  10 failed
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow 
+    [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile 
+    [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:240:3 鈥?Lab textbook experiment content 鈥?simulation completion shows result view in detail modal 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter 
+  57 passed (8.2m)

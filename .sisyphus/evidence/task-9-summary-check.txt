@@ -1,0 +1,26 @@
+Task 9 summary check
+Generated: 2026-05-13
+PASS section ## Textbooks
+PASS section ## Counts
+PASS section ## Exclusions
+PASS section ## Commands
+PASS section ## Evidence Files
+PASS value Total detected candidates | 638
+PASS value Included runtime count | 127
+PASS value Duplicate candidates | 40
+PASS value Excluded candidates | 511
+PASS value exclude_ambiguous_equation | 23
+PASS value exclude_duplicate | 40
+PASS value exclude_incomplete_exercise | 6
+PASS value exclude_not_reaction | 138
+PASS value exclude_unsupported_notation | 278
+PASS value exclude_word_only | 26
+PASS value No new Playwright UI automated tests were added or run
+PASS textbook src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md
+PASS textbook src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md
+PASS textbook src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md
+PASS textbook src/data/textbooks/2019版人教版高中化学必修第1册/book.md
+PASS textbook src/data/textbooks/2019版人教版高中化学必修第2册/book.md
+PASS textbook src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md
+PASS textbook src/data/textbooks/2024版人教版九年级化学上册/book.md
+PASS textbook src/data/textbooks/2024版人教版九年级化学下册/book.md
