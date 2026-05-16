@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-data-boundary.mjs",
+  "status": "fail",
+  "mode": "default",
+  "counters": {
+    "checks": 2,
+    "failures": 2
+  },
+  "errors": [
+    "src/modules/lab.js must import/use labExperiments as the card source and must not use reactions for lab cards",
+    "runtimeTargetMap.js must not map experimentCandidate to src/data/reactions.json; lab experiments belong in src/data/labExperiments.json"
+  ],
+  "checks": [
+    {
+      "name": "lab-module-card-source",
+      "status": "fail",
+      "message": "src/modules/lab.js must import/use labExperiments as the card source and must not use reactions for lab cards",
+      "details": {
+        "importsLabExperiments": false,
+        "usesLabExperimentCards": false,
+        "importsReactionsAlias": true,
+        "usesReactionsCards": true
+      }
+    },
+    {
+      "name": "runtime-target-map-experiment-boundary",
+      "status": "fail",
+      "message": "runtimeTargetMap.js must not map experimentCandidate to src/data/reactions.json; lab experiments belong in src/data/labExperiments.json",
+      "details": {
+        "experimentCandidateMapsToReactions": true
+      }
+    }
+  ]
+}

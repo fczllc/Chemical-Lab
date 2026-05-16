@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-data-boundary.mjs",
+  "status": "pass",
+  "mode": "runtime-target-map",
+  "counters": {
+    "checks": 1,
+    "failures": 0
+  },
+  "errors": [],
+  "checks": [
+    {
+      "name": "runtime-target-map-experiment-boundary",
+      "status": "pass",
+      "message": "runtimeTargetMap.js routes experimentCandidate to labExperiments and keeps generic labCandidate unsupported",
+      "details": {
+        "experimentCandidateMapsToReactions": false,
+        "experimentCandidateMapsToLabExperiments": true,
+        "labCandidateMapsToRuntime": false
+      }
+    }
+  ]
+}

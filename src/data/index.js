@@ -9,6 +9,7 @@ import textbookAssetManifest, {
   textbookAssetTypes
 } from './textbookAssets.js';
 import reactionsData from './reactions.json' with { type: 'json' };
+import labExperimentsData from './labExperiments.json' with { type: 'json' };
 import spectralLinesDataset from './spectralLines.json' with { type: 'json' };
 import storyMediaData from './storyMedia/media.json' with { type: 'json' };
 
@@ -34,6 +35,7 @@ export const { learningPath } = learningPathData;
 export const { curriculumTags } = curriculumDataset;
 export { textbookAssetExtractionStatuses, textbookAssetManifest, textbookAssetTypes };
 export const { reactions } = reactionsData;
+export const { labExperiments } = labExperimentsData;
 export const { achievementsData } = achievementsDataset;
 export const { spectralLines } = spectralLinesDataset;
 

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "task": "task-6-runtime-target-map",
+  "command": "npm run validate:textbook-workflow -- --all-reviewed",
+  "status": "pass",
+  "exitCode": 0,
+  "summary": [
+    "Promotion manifest valid: all-reviewed",
+    "Textbook runtime boundary valid",
+    "Textbook runtime integrity valid",
+    "Textbook workflow valid: all-reviewed"
+  ],
+  "checked": {
+    "promotionManifests": [
+      {
+        "path": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json",
+        "entries": 1009
+      },
+      {
+        "path": "src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json",
+        "entries": 695
+      },
+      {
+        "path": "src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json",
+        "entries": 767
+      },
+      {
+        "path": "src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json",
+        "entries": 1027
+      }
+    ],
+    "runtimeFiles": [
+      "src/data/elements.json",
+      "src/data/quizData.json",
+      "src/data/learningPath.json",
+      "src/data/reactions.json",
+      "src/data/achievementsData.json",
+      "src/data/curriculum.js",
+      "src/data/contentMeta.js"
+    ]
+  },
+  "warnings": [
+    "Bundle size warning: dist/assets/index-CF2dz5nR.js is 8275 KiB; run npm run build for the current Vite report."
+  ]
+}

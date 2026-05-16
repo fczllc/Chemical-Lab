@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "reject-meaningless-title",
+  "status": "pass",
+  "rejectedTitles": [
+    "lab-0006-1-1-l27-l50-e9eba2d49e",
+    "0006-1-1-l27-l50-e9eba2d49e",
+    "sha256:1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "0006-source-section-l27-l50-e9eba2d49e",
+    "实验标题-e9eba2d4",
+    "【实验1-1】",
+    "【实验2-3】观察氧气性质"
+  ],
+  "acceptedTitles": [],
+  "rejectedDescriptions": [
+    "教材已审核反应：铁与硫酸铜反应生成硫酸亚铁和铜",
+    "【实验1-1】",
+    "lab-0006-1-1-l27-l50-e9eba2d49e"
+  ],
+  "acceptedDescriptions": [],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "taskId": "169b9dc1-14a8-4fc3-a6be-8b293b4369ab",
+  "status": "completed",
+  "filesChanged": [
+    "scripts/textbook/build-lab-experiments.mjs",
+    "scripts/validate-lab-experiments.mjs"
+  ],
+  "commandsRun": [
+    "node scripts/textbook/build-lab-experiments.mjs --write",
+    "node scripts/textbook/build-lab-experiments.mjs --check",
+    "npm run validate:lab-experiments"
+  ],
+  "result": "pass"
+}

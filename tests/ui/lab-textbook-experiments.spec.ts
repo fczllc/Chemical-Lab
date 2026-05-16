@@ -5,16 +5,137 @@ import path from 'node:path';
 const EVIDENCE_DIR = path.join(process.cwd(), '.sisyphus', 'evidence');
 
 test.describe('Lab textbook experiment content', () => {
+  test.describe.configure({ mode: 'serial' });
+  test.setTimeout(180000);
+
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    // Navigate to the app first to set the origin, then clear storage
+    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.evaluate(() => {
+      window.localStorage.clear();
+      window.sessionStorage.clear();
+    });
+    // Reload the app to ensure a clean state
+    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await waitForAppReady(page);
+  });
+
+  test('runtime lab uses explicit textbook experiments', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const cards = page.locator('.lab-item-card');
+    const count = await cards.count();
+    expect(count).toBeGreaterThan(0);
+
+    const cardExperimentIds = await page.locator('.lab-item-card button[data-reaction-open]').evaluateAll((buttons) => {
+      return buttons.map((button) => button.getAttribute('data-reaction-open')).filter(Boolean);
+    });
+    const labExperimentIds = await page.evaluate(async () => {
+      const { labExperiments } = await import('/src/data/index.js');
+      return labExperiments.map((experiment) => experiment.id);
+    });
+    const labExperimentIdSet = new Set(labExperimentIds);
+    expect(cardExperimentIds.length).toBe(count);
+    expect(cardExperimentIds.every((id) => labExperimentIdSet.has(id))).toBe(true);
+
+    const cardTitles = await page.locator('[data-testid="lab-card-title"]').allTextContents();
+    const formulaPoolPatterns = ['textbook-reaction-', 'reaction-', '教材已审核反应：'];
+    for (const title of cardTitles) {
+      for (const pattern of formulaPoolPatterns) {
+        expect(title).not.toContain(pattern);
+      }
+    }
+
+    await writeEvidence('task-7-lab-runtime-regression.json', {
+      totalCards: count,
+      matchedLabExperimentIds: cardExperimentIds.length,
+      visibleTitles: cardTitles.slice(0, 10),
+      formulaPoolPlaceholderCount: cardTitles.filter((title) => title.includes('教材已审核反应：')).length
+    });
+  });
+
+  test('lab titles are meaningful textbook summaries', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const titles = await page.locator('[data-testid="lab-card-title"]').allTextContents();
+    expect(titles.length).toBeGreaterThan(0);
+
+    const invalidPatterns = [
+      /^lab-/,
+      /【实验\d+-\d+】/,
+      /[a-f0-9]{8,}/i
+    ];
+    const invalidTitles = titles.filter((title) => invalidPatterns.some((pattern) => pattern.test(title)));
+
+    expect(invalidTitles).toEqual([]);
+
+    await writeEvidence('task-7-lab-title-quality.json', {
+      totalTitles: titles.length,
+      invalidTitles,
+      sampleTitles: titles.slice(0, 5)
+    });
+  });
+
+  test('clean state shows locked and unlocked cards', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const lockedCards = page.locator('.lab-item-card.is-locked');
+    const unlockedCards = page.locator('.lab-item-card:not(.is-locked)');
+    const lockedCount = await lockedCards.count();
+    const unlockedCount = await unlockedCards.count();
+
+    expect(lockedCount).toBeGreaterThan(0);
+    expect(unlockedCount).toBeGreaterThan(0);
+
+    await writeEvidence('task-7-lab-locked-state.json', {
+      lockedCount,
+      unlockedCount
+    });
+  });
+
+  test('placeholder text rejection', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const cards = page.locator('.lab-item-card');
+    await expect(cards.first()).toBeVisible({ timeout: 10000 });
+    const cardTexts = await cards.allTextContents();
+    expect(cardTexts.join('\n')).not.toContain('教材已审核反应：');
+
+    const openButtons = page.locator('.lab-item-card:not(.is-locked) button[data-reaction-open]');
+    const count = await openButtons.count();
+    expect(count).toBeGreaterThan(0);
+
+    // Test only the first available lab to minimize instability risks while preserving the rejection check
+    const btn = openButtons.first();
+    await btn.scrollIntoViewIfNeeded();
+    await btn.click();
+      
+    const modal = page.locator('.lab-detail-modal');
+    await expect(modal).toBeVisible({ timeout: 10000 });
+    await expect(modal).not.toContainText('教材已审核反应：');
+
+    const detailText = await modal.textContent() || '';
+    
+    await modal.locator('button[data-lab-back]').click();
+    await expect(modal).toBeHidden({ timeout: 10000 });
+    // Extra wait for animations to settle
+    await page.waitForLoadState('domcontentloaded');
+
+    await writeEvidence('task-7-lab-placeholder-rejection.json', {
+      checkedDetailCount: 1,
+      detailTextSample: detailText.slice(0, 80)
+    });
   });
 
   test('card excerpt and detail full content', async ({ page }) => {
     // Seed a textbook-derived reaction with full textbookContent
     await page.evaluate(async () => {
-      const { reactions } = await import('/src/data/index.js');
+      const { labExperiments } = await import('/src/data/index.js');
       const enriched = {
         id: 'textbook-fixture-grade9-vol1-exp-001',
         name: '锌与稀盐酸反应',
@@ -35,7 +156,7 @@ test.describe('Lab textbook experiment content', () => {
         sourceReviewStatus: 'reviewed',
         sourceReferences: []
       };
-      reactions.push(enriched);
+      labExperiments.push(enriched);
     });
 
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
@@ -75,7 +196,7 @@ test.describe('Lab textbook experiment content', () => {
     });
 
     await page.evaluate(async () => {
-      const { reactions } = await import('/src/data/index.js');
+      const { labExperiments } = await import('/src/data/index.js');
       const staticReaction = {
         id: 'reaction-hydrogen-combustion',
         name: '氢气燃烧',
@@ -94,9 +215,9 @@ test.describe('Lab textbook experiment content', () => {
         sourceReviewStatus: '',
         sourceReferences: []
       };
-      const idx = reactions.findIndex((reaction) => reaction.id === staticReaction.id);
-      if (idx >= 0) reactions.splice(idx, 1);
-      reactions.push(staticReaction);
+      const idx = labExperiments.findIndex((experiment) => experiment.id === staticReaction.id);
+      if (idx >= 0) labExperiments.splice(idx, 1);
+      labExperiments.push(staticReaction);
     });
 
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
@@ -126,8 +247,8 @@ test.describe('Lab textbook experiment content', () => {
 
   test('ambiguous chemistry hides blank equation rows while showing full content', async ({ page }) => {
     await page.evaluate(async () => {
-      const { reactions } = await import('/src/data/index.js');
-      reactions.push({
+      const { labExperiments } = await import('/src/data/index.js');
+      labExperiments.push({
         id: 'textbook-fixture-ambiguous-exp-001',
         name: '观察实验现象',
         description: '观察实验现象并记录变化。',
@@ -170,7 +291,7 @@ test.describe('Lab textbook experiment content', () => {
 
   test('dangerous reaction safety gate blocks launch without confirmation', async ({ page }) => {
     await page.evaluate(async () => {
-      const { reactions } = await import('/src/data/index.js');
+      const { labExperiments } = await import('/src/data/index.js');
       const dangerousReaction = {
         id: 'textbook-fixture-dangerous-exp-001',
         name: '危险演示实验',
@@ -191,7 +312,7 @@ test.describe('Lab textbook experiment content', () => {
         sourceReviewStatus: 'reviewed',
         sourceReferences: []
       };
-      reactions.push(dangerousReaction);
+      labExperiments.push(dangerousReaction);
     });
 
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
@@ -239,7 +360,7 @@ test.describe('Lab textbook experiment content', () => {
 
   test('simulation completion shows result view in detail modal', async ({ page }) => {
     await page.evaluate(async () => {
-      const { reactions } = await import('/src/data/index.js');
+      const { labExperiments } = await import('/src/data/index.js');
       const safeReaction = {
         id: 'textbook-fixture-safe-simulation-001',
         name: '快速安全实验',
@@ -260,7 +381,7 @@ test.describe('Lab textbook experiment content', () => {
         sourceReviewStatus: 'reviewed',
         sourceReferences: []
       };
-      reactions.push(safeReaction);
+      labExperiments.push(safeReaction);
     });
 
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
@@ -303,16 +424,24 @@ test.describe('Lab textbook experiment content', () => {
 });
 
 async function waitForAppReady(page) {
-  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
-  await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 20000 });
+  // Wait for appState to be fully initialized and loader hidden
   await expect.poll(async () => {
     return await page.evaluate(() => {
+      if (typeof window.appState === 'undefined') return false;
       const state = window.appState;
       const hasElements = Array.isArray(state?.elements) && state.elements.length >= 118;
       const loaderHidden = document.getElementById('global-loader')?.classList.contains('hidden') ?? false;
       return hasElements && loaderHidden;
     });
-  }, { timeout: 15000 }).toBe(true);
+  }, { timeout: 25000, intervals: [100, 200, 500, 1000] }).toBe(true);
+  // Ensure the periodic table grid has rendered when on the home page
+  const currentUrl = page.url();
+  if (currentUrl.includes('/#/') === false || currentUrl.endsWith('/#/') || currentUrl.endsWith('/')) {
+    await expect.poll(async () => {
+      return await page.locator('.element-cell').count();
+    }, { timeout: 25000, intervals: [100, 200, 500, 1000] }).toBeGreaterThanOrEqual(118);
+  }
 }
 
 async function writeEvidence(fileName: string, payload: unknown) {

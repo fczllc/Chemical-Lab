@@ -1,129 +1,109 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\settings-modal-data-reset.md",
-  "started_at": "2026-05-14T11:34:45.187Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\lab-explicit-textbook-experiments-restore.md",
+  "started_at": "2026-05-15T05:10:06.561Z",
   "session_ids": [
-    "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY"
+    "ses_1d5f54672ffeRNBdBHc3Fy7yLY",
+    "ses_1d07fc220ffeZz23pFuQL0fKck",
+    "ses_1d07f1fb5ffe5q7uWwiQp2w2B8",
+    "ses_1d07f06f8ffeQ4IKXlub5uCy3S",
+    "ses_1d07ef146ffebxVppLUgwSEKyQ"
   ],
   "session_origins": {
-    "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY": "direct"
+    "ses_1d5f54672ffeRNBdBHc3Fy7yLY": "direct",
+    "ses_1d07fc220ffeZz23pFuQL0fKck": "appended",
+    "ses_1d07f1fb5ffe5q7uWwiQp2w2B8": "appended",
+    "ses_1d07f06f8ffeQ4IKXlub5uCy3S": "appended",
+    "ses_1d07ef146ffebxVppLUgwSEKyQ": "appended"
   },
-  "plan_name": "settings-modal-data-reset",
+  "plan_name": "lab-explicit-textbook-experiments-restore",
   "agent": "atlas",
   "task_sessions": {
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "Add failing focused Playwright coverage for settings reset",
-      "session_id": "ses_1d97167e7ffeqkVfnohpIKemil",
-      "agent": "general",
-      "category": "",
-      "started_at": "2026-05-14T11:38:44.442Z",
-      "status": "running",
-      "updated_at": "2026-05-14T13:03:44.107Z"
+      "task_title": "Two lab records have malformed user-facing title/name `的观察与描述`:",
+      "session_id": "ses_1d072b75effeyrwImcJrnPh0XH",
+      "agent": "Sisyphus-Junior",
+      "category": "visual-engineering",
+      "started_at": "2026-05-15T08:55:15.362Z",
+      "ended_at": "2026-05-16T09:39:08.714Z",
+      "elapsed_ms": 89033352,
+      "status": "completed",
+      "updated_at": "2026-05-16T09:39:08.714Z"
     },
     "todo:2": {
       "task_key": "todo:2",
       "task_label": "2",
-      "task_title": "Ensure requested cat asset path exists",
-      "session_id": "ses_1d976a092ffeH19PLt82X8yC8J",
-      "agent": "general",
-      "category": "",
-      "started_at": "2026-05-14T11:38:44.615Z",
-      "status": "running",
-      "updated_at": "2026-05-14T12:52:37.690Z"
-    },
-    "todo:4": {
-      "task_key": "todo:4",
-      "task_label": "4",
-      "task_title": "Wire custom confirmation and learning-data reset behavior",
-      "session_id": "ses_1d9677fcbffejvDBDKdlaLfaCv",
+      "task_title": "Build dedicated lab experiment runtime dataset from explicit textbook experiments",
+      "session_id": "ses_1d4bdec4bffeXONW2F67RF7hzv",
       "agent": "Sisyphus-Junior",
-      "category": "quick",
-      "updated_at": "2026-05-14T13:06:42.340Z",
-      "started_at": "2026-05-14T13:06:42.340Z",
-      "status": "running"
+      "category": "unspecified-high",
+      "started_at": "2026-05-15T09:39:31.527Z",
+      "status": "running",
+      "updated_at": "2026-05-15T11:03:01.504Z"
     },
     "todo:3": {
       "task_key": "todo:3",
       "task_label": "3",
-      "task_title": "Update settings modal markup and styles to match structural sketch",
-      "session_id": "ses_1d9677fd6ffeEI0z5UAom5Iwg1",
+      "task_title": "Add lab experiment validator and data-boundary validator",
+      "session_id": "ses_1d4527567ffenxKhCJ22Cp7pWM",
       "agent": "Sisyphus-Junior",
-      "category": "visual-engineering",
-      "updated_at": "2026-05-14T13:56:01.875Z",
-      "started_at": "2026-05-14T13:56:01.875Z",
+      "category": "unspecified-high",
+      "started_at": "2026-05-15T12:57:12.239Z",
+      "status": "running",
+      "updated_at": "2026-05-15T13:03:21.749Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "Export separate `labExperiments` dataset and update supporting data validation",
+      "session_id": "ses_1d441ffe8ffeZh9jd29FWdaoqc",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-15T13:11:59.341Z",
+      "started_at": "2026-05-15T13:11:59.341Z",
+      "status": "running"
+    },
+    "todo:6": {
+      "task_key": "todo:6",
+      "task_label": "6",
+      "task_title": "Correct textbook runtime target mapping and generation guardrails",
+      "session_id": "ses_1d43a2bbcffejb5OIrxUxT9DgF",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-15T13:24:13.189Z",
+      "started_at": "2026-05-15T13:24:13.189Z",
       "status": "running"
     },
     "todo:5": {
       "task_key": "todo:5",
       "task_label": "5",
-      "task_title": "Preserve existing settings smoke coverage and regressions",
-      "session_id": "ses_1d914aa54ffe3rlDbFAtfTkbC0",
-      "agent": "general",
-      "category": "",
-      "started_at": "2026-05-14T14:29:29.150Z",
-      "status": "running",
-      "updated_at": "2026-05-14T14:44:28.841Z"
-    },
-    "todo:6": {
-      "task_key": "todo:6",
-      "task_label": "6",
-      "task_title": "Run targeted verification and capture evidence",
-      "session_id": "ses_1d90b5d5affenopEw0rYd6kAMt",
-      "agent": "general",
-      "category": "",
-      "started_at": "2026-05-14T14:46:00.902Z",
-      "status": "running",
-      "updated_at": "2026-05-14T14:58:29.323Z"
+      "task_title": "Refactor lab module to consume lab experiments, not reaction formula pool",
+      "session_id": "ses_1d393894effe4DdJWxJ7aBrKD2",
+      "agent": "Sisyphus-Junior",
+      "category": "visual-engineering",
+      "started_at": "2026-05-15T15:07:21.344Z",
+      "status": "completed",
+      "updated_at": "2026-05-16T04:59:09.755Z",
+      "ended_at": "2026-05-16T04:59:09.755Z",
+      "elapsed_ms": 49908411
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_1d8cc6afaffeA6aJeA1OutlLoX",
+      "session_id": "ses_1d07fc220ffeZz23pFuQL0fKck",
       "agent": "oracle",
-      "category": "",
-      "started_at": "2026-05-14T15:03:21.188Z",
-      "status": "running",
-      "updated_at": "2026-05-14T16:00:21.193Z"
-    },
-    "final-wave:f2": {
-      "task_key": "final-wave:f2",
-      "task_label": "F2",
-      "task_title": "Code Quality Review — unspecified-high",
-      "session_id": "ses_1d8f7f5e6ffe6LhT6HkKQ87ISP",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "updated_at": "2026-05-14T15:13:22.279Z",
-      "started_at": "2026-05-14T15:13:22.279Z",
-      "status": "running"
-    },
-    "final-wave:f4": {
-      "task_key": "final-wave:f4",
-      "task_label": "F4",
-      "task_title": "Scope Fidelity Check — deep",
-      "session_id": "ses_1d8cc6a92ffesYN0PV5BJfqMGQ",
-      "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "updated_at": "2026-05-14T16:02:12.783Z",
-      "started_at": "2026-05-14T16:02:12.783Z",
-      "status": "running"
-    },
-    "final-wave:f3": {
-      "task_key": "final-wave:f3",
-      "task_label": "F3",
-      "task_title": "Real Manual QA — unspecified-high (+ playwright)",
-      "session_id": "ses_1d8cc6a11ffe9o08BKJmndMo7M",
-      "agent": "Sisyphus-Junior",
-      "category": "unspecified-high",
-      "started_at": "2026-05-14T16:06:08.746Z",
-      "status": "running",
-      "updated_at": "2026-05-14T16:09:10.797Z"
+      "started_at": "2026-05-16T06:37:46.880Z",
+      "status": "completed",
+      "updated_at": "2026-05-16T06:44:12.877Z",
+      "ended_at": "2026-05-16T06:44:12.877Z",
+      "elapsed_ms": 385997
     }
   },
-  "active_work_id": "settings-modal-data-reset-5d067116",
+  "active_work_id": "lab-explicit-textbook-experiments-restore-6062dbc9",
   "status": "completed",
-  "updated_at": "2026-05-14T16:10:45.302Z",
+  "updated_at": "2026-05-16T09:39:08.714Z",
   "schema_version": 2,
   "works": {
     "shared-game-feedback-overlay-legacy": {
@@ -347,8 +327,117 @@
       },
       "ended_at": "2026-05-14T16:10:45.301Z",
       "elapsed_ms": 16560114
+    },
+    "lab-explicit-textbook-experiments-restore-6062dbc9": {
+      "work_id": "lab-explicit-textbook-experiments-restore-6062dbc9",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\lab-explicit-textbook-experiments-restore.md",
+      "plan_name": "lab-explicit-textbook-experiments-restore",
+      "status": "completed",
+      "started_at": "2026-05-15T05:10:06.561Z",
+      "updated_at": "2026-05-16T09:39:08.714Z",
+      "session_ids": [
+        "ses_1d5f54672ffeRNBdBHc3Fy7yLY",
+        "ses_1d07fc220ffeZz23pFuQL0fKck",
+        "ses_1d07f1fb5ffe5q7uWwiQp2w2B8",
+        "ses_1d07f06f8ffeQ4IKXlub5uCy3S",
+        "ses_1d07ef146ffebxVppLUgwSEKyQ"
+      ],
+      "session_origins": {
+        "ses_1d5f54672ffeRNBdBHc3Fy7yLY": "direct",
+        "ses_1d07fc220ffeZz23pFuQL0fKck": "appended",
+        "ses_1d07f1fb5ffe5q7uWwiQp2w2B8": "appended",
+        "ses_1d07f06f8ffeQ4IKXlub5uCy3S": "appended",
+        "ses_1d07ef146ffebxVppLUgwSEKyQ": "appended"
+      },
+      "agent": "atlas",
+      "task_sessions": {
+        "todo:1": {
+          "task_key": "todo:1",
+          "task_label": "1",
+          "task_title": "Two lab records have malformed user-facing title/name `的观察与描述`:",
+          "session_id": "ses_1d072b75effeyrwImcJrnPh0XH",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "started_at": "2026-05-15T08:55:15.362Z",
+          "ended_at": "2026-05-16T09:39:08.714Z",
+          "elapsed_ms": 89033352,
+          "status": "completed",
+          "updated_at": "2026-05-16T09:39:08.714Z"
+        },
+        "todo:2": {
+          "task_key": "todo:2",
+          "task_label": "2",
+          "task_title": "Build dedicated lab experiment runtime dataset from explicit textbook experiments",
+          "session_id": "ses_1d4bdec4bffeXONW2F67RF7hzv",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-15T09:39:31.527Z",
+          "status": "running",
+          "updated_at": "2026-05-15T11:03:01.504Z"
+        },
+        "todo:3": {
+          "task_key": "todo:3",
+          "task_label": "3",
+          "task_title": "Add lab experiment validator and data-boundary validator",
+          "session_id": "ses_1d4527567ffenxKhCJ22Cp7pWM",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-15T12:57:12.239Z",
+          "status": "running",
+          "updated_at": "2026-05-15T13:03:21.749Z"
+        },
+        "todo:4": {
+          "task_key": "todo:4",
+          "task_label": "4",
+          "task_title": "Export separate `labExperiments` dataset and update supporting data validation",
+          "session_id": "ses_1d441ffe8ffeZh9jd29FWdaoqc",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "updated_at": "2026-05-15T13:11:59.341Z",
+          "started_at": "2026-05-15T13:11:59.341Z",
+          "status": "running"
+        },
+        "todo:6": {
+          "task_key": "todo:6",
+          "task_label": "6",
+          "task_title": "Correct textbook runtime target mapping and generation guardrails",
+          "session_id": "ses_1d43a2bbcffejb5OIrxUxT9DgF",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "updated_at": "2026-05-15T13:24:13.189Z",
+          "started_at": "2026-05-15T13:24:13.189Z",
+          "status": "running"
+        },
+        "todo:5": {
+          "task_key": "todo:5",
+          "task_label": "5",
+          "task_title": "Refactor lab module to consume lab experiments, not reaction formula pool",
+          "session_id": "ses_1d393894effe4DdJWxJ7aBrKD2",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "started_at": "2026-05-15T15:07:21.344Z",
+          "status": "completed",
+          "updated_at": "2026-05-16T04:59:09.755Z",
+          "ended_at": "2026-05-16T04:59:09.755Z",
+          "elapsed_ms": 49908411
+        },
+        "final-wave:f1": {
+          "task_key": "final-wave:f1",
+          "task_label": "F1",
+          "task_title": "Plan Compliance Audit — oracle",
+          "session_id": "ses_1d07fc220ffeZz23pFuQL0fKck",
+          "agent": "oracle",
+          "started_at": "2026-05-16T06:37:46.880Z",
+          "status": "completed",
+          "updated_at": "2026-05-16T06:44:12.877Z",
+          "ended_at": "2026-05-16T06:44:12.877Z",
+          "elapsed_ms": 385997
+        }
+      },
+      "ended_at": "2026-05-16T06:44:46.943Z",
+      "elapsed_ms": 92080382
     }
   },
-  "ended_at": "2026-05-14T16:10:45.301Z",
-  "elapsed_ms": 16560114
+  "ended_at": "2026-05-16T06:44:46.943Z",
+  "elapsed_ms": 92080382
 }

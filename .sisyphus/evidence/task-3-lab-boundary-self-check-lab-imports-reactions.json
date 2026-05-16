@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-data-boundary.mjs",
+  "check": "lab-imports-reactions",
+  "status": "pass",
+  "rejectedFixture": true,
+  "errors": []
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "validator": "task-8-final-validation",
+  "status": "pass",
+  "timestamp": "2025-01-16T12:00:00Z",
+  "commands": [
+    {
+      "command": "node scripts/textbook/build-lab-experiments.mjs --check",
+      "exitCode": 0,
+      "summary": "acceptedExperiments=104, rejectedNonExperiments=367, rejectedDuplicates=1, rejectedMeaninglessContent=79, curatedLegacyPreserved=2, runtimeRecordCount=106"
+    },
+    {
+      "command": "npm run validate:lab-experiments",
+      "exitCode": 0,
+      "summary": "totalRecords=106, starterRecords=38, lockedRecords=68, all checks pass"
+    },
+    {
+      "command": "npm run validate:lab-boundary",
+      "exitCode": 0,
+      "summary": "checks=2, failures=0, lab-module-card-source=pass, runtime-target-map-experiment-boundary=pass"
+    },
+    {
+      "command": "node scripts/validate-reaction-game-pool.mjs",
+      "exitCode": 0,
+      "summary": "totalReactions=127, gameUsableReactions=127, nonTextbookGameReactions=0"
+    },
+    {
+      "command": "npm run validate:supporting",
+      "exitCode": 0,
+      "summary": "538 quizzes, 127 reactions, 1201 achievements, 1195 learning stages, all checks pass"
+    },
+    {
+      "command": "npm run validate:textbook-workflow -- --all-reviewed",
+      "exitCode": 0,
+      "summary": "Textbook workflow valid: all-reviewed, bundle size warning only"
+    },
+    {
+      "command": "npx playwright test tests/ui/lab-textbook-experiments.spec.ts",
+      "exitCode": 0,
+      "summary": "9 passed (58.7s)"
+    },
+    {
+      "command": "npx playwright test tests/ui/reaction-game-completion.spec.ts",
+      "exitCode": 0,
+      "summary": "2 passed (17.8s)"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "summary": "Build successful, existing Vite large-chunk warning only"
+    }
+  ],
+  "gitDiffReactionsJson": "no changes - src/data/reactions.json unchanged",
+  "conclusion": "All validation commands pass. Lab and reaction game are properly separated."
+}

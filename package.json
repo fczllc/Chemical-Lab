@@ -29,7 +29,9 @@
     "validate:chem-notation": "node scripts/validate-chem-notation.mjs",
     "validate:textbook-coverage": "node scripts/textbook/validate-coverage.mjs",
     "validate:textbook-reactions": "node scripts/textbook/validate-reaction-extraction.mjs",
-    "validate:reaction-game-pool": "node scripts/validate-reaction-game-pool.mjs"
+    "validate:reaction-game-pool": "node scripts/validate-reaction-game-pool.mjs",
+    "validate:lab-experiments": "node scripts/validate-lab-experiments.mjs",
+    "validate:lab-boundary": "node scripts/validate-lab-data-boundary.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",

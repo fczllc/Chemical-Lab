@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "explicit-include",
+  "status": "pass",
+  "accepted": [
+    "lab-0006-1-1-l27-l50-e9eba2d49e",
+    "experiment-0006-1-1-l27-l50-e9eba2d49e"
+  ],
+  "rejected": [],
+  "errors": []
+}

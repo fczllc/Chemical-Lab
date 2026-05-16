@@ -1,0 +1,29 @@
+{
+  "task": "task-4-data-boundary-export",
+  "timestamp": "2026-05-15T13:10:55.157Z",
+  "files": [
+    "src/data/index.js"
+  ],
+  "assertions": [
+    "src/data/index.js imports ./labExperiments.json with JSON import attributes",
+    "src/data/index.js exports labExperiments from labExperimentsData",
+    "reactions remains exported from reactionsData and is not merged with labExperiments"
+  ],
+  "verification": [
+    {
+      "command": "node -e import boundary check",
+      "status": "pass",
+      "output": "exit 0 with no output"
+    },
+    {
+      "command": "npm run validate:supporting",
+      "status": "pass",
+      "output": "支持数据校验通过; 127 reactions; reaction pairing validation passed"
+    },
+    {
+      "command": "node scripts/validate-reaction-game-pool.mjs",
+      "status": "pass",
+      "output": "reactionGamePoolValidationStatus=pass; totalReactions=127; gameUsableReactions=127"
+    }
+  ]
+}

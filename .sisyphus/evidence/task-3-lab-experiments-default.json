@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "source": "src/data/labExperiments.json",
+  "status": "pass",
+  "counters": {
+    "totalRecords": 106,
+    "starterRecords": 38,
+    "lockedRecords": 68,
+    "missingRequiredFields": 0,
+    "invalidSourceKind": 0,
+    "invalidSafetyLevel": 0,
+    "missingUnlockRequirements": 0,
+    "invalidUnlockRequirements": 0,
+    "invalidStringFields": 0,
+    "meaninglessTitles": 0,
+    "meaninglessDescriptions": 0,
+    "dirtyDisplayFields": 0,
+    "invalidCuratedLegacyIds": 0,
+    "invalidTextbookSourceKind": 0,
+    "nonArrayFields": 0,
+    "emptyArrayFields": 0,
+    "duplicateIds": 0
+  },
+  "errors": [],
+  "details": {
+    "missingRequiredFields": [],
+    "invalidSourceKind": [],
+    "invalidSafetyLevel": [],
+    "missingUnlockRequirements": [],
+    "invalidUnlockRequirements": [],
+    "invalidStringFields": [],
+    "meaninglessTitles": [],
+    "meaninglessDescriptions": [],
+    "dirtyDisplayFields": [],
+    "invalidCuratedLegacyIds": [],
+    "invalidTextbookSourceKind": [],
+    "nonArrayFields": [],
+    "emptyArrayFields": [],
+    "duplicateIds": []
+  }
+}

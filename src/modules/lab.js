@@ -1,6 +1,6 @@
 /** ===== 实验室模块 ===== */
 import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
-import { curriculumTags, learningPath, reactions as importedReactions } from '../data/index.js';
+import { curriculumTags, learningPath, labExperiments as importedLabExperiments } from '../data/index.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
@@ -19,6 +19,14 @@ const EQUATION_MAP = {
   'reaction-sodium-water': '2Na + 2H2O → 2NaOH + H2↑',
   'reaction-salt-formation': '2Na + Cl2 → 2NaCl',
   'reaction-oxygen-supports-combustion': 'C + O2 → CO2'
+};
+
+const ANIMATION_ID_MAP = {
+  'exp-hydrogen-combustion': 'reaction-hydrogen-combustion',
+  'exp-iron-rusting': 'reaction-iron-rusting',
+  'exp-sodium-water': 'reaction-sodium-water',
+  'exp-salt-formation': 'reaction-salt-formation',
+  'exp-oxygen-supports-combustion': 'reaction-oxygen-supports-combustion'
 };
 
 const SAFETY_THEME = LAB_SAFETY_THEME;
@@ -75,11 +83,11 @@ function renderCardDescription(value) {
 const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
 const LAB_STAGE_UNLOCKS = learningPath?.stages || [];
 
-// Module-level mutable reactions array; tests and dynamic enrichment can push into it.
-let reactions = Array.isArray(importedReactions) ? importedReactions : [];
+// Module-level mutable experiments array; tests and dynamic enrichment can push into it.
+let labExperiments = Array.isArray(importedLabExperiments) ? importedLabExperiments : [];
 
 let focusedAtomicNumber = null;
-let activeReactionId = reactions[0]?.id ?? null;
+let activeReactionId = labExperiments[0]?.id ?? null;
 let currentView = 'detail';
 let safetyConfirmed = false;
 let simulationRunId = 0;
@@ -124,7 +132,7 @@ export function initLab() {
 
   window.addEventListener('performancemodechange', () => {
     if (getCurrentSection() === 'lab' && currentView === 'simulation') {
-      const activeReaction = reactions.find((item) => item.id === activeReactionId);
+      const activeReaction = labExperiments.find((item) => item.id === activeReactionId);
       if (activeReaction) {
         closeSimulationModal();
         clearSimulationTimer();
@@ -191,16 +199,16 @@ function renderLabShell() {
     : selectedElement?.symbol || null;
   const completed = getCompletedExperiments();
   const learned = getLearnedElements();
-  const activeReaction = reactions.find((item) => item.id === activeReactionId) || reactions[0] || null;
+  const activeReaction = labExperiments.find((item) => item.id === activeReactionId) || labExperiments[0] || null;
 
   ensureLabToolbar(section, selectedElement);
 
-  const filteredReactions = reactions.filter((reaction) => {
-    const isRelated = focusSymbol ? reaction.reactants.some((item) => item.includes(focusSymbol)) : false;
-    const isCompleted = completed.has(reaction.experimentId);
-    const unlockState = getReactionUnlockState(reaction, { completed, learned });
+  const filteredReactions = labExperiments.filter((experiment) => {
+    const isRelated = focusSymbol ? (experiment.reactants || []).some((item) => item.includes(focusSymbol)) : false;
+    const isCompleted = completed.has(experiment.experimentId);
+    const unlockState = getReactionUnlockState(experiment, { completed, learned });
 
-    if (filterSafety !== 'all' && reaction.safetyLevel !== filterSafety) return false;
+    if (filterSafety !== 'all' && experiment.safetyLevel !== filterSafety) return false;
     if (filterCompletion === 'completed' && !isCompleted) return false;
     if (filterCompletion === 'uncompleted' && isCompleted) return false;
     if (filterLock === 'unlocked' && !unlockState.unlocked) return false;
@@ -208,17 +216,17 @@ function renderLabShell() {
     if (filterLock === 'related' && (!unlockState.unlocked || !isRelated)) return false;
     if (filterLock === 'general' && (!unlockState.unlocked || isRelated)) return false;
 
-    const grade = reaction.unlockRequirements?.grade || '';
+    const grade = experiment.unlockRequirements?.grade || '';
     if (filterGrade !== 'all' && grade !== filterGrade) return false;
 
     if (filterText.trim()) {
       const query = filterText.trim().toLowerCase();
       const haystack = [
-        reaction.name,
-        reaction.description,
+        experiment.name,
+        experiment.description,
         renderUnlockSummary(unlockState),
-        reaction.reactants.join(' '),
-        reaction.products.join(' ')
+        (experiment.reactants || []).join(' '),
+        (experiment.products || []).join(' ')
       ].join(' ').toLowerCase();
       if (!haystack.includes(query)) return false;
     }
@@ -226,7 +234,7 @@ function renderLabShell() {
     return true;
   });
 
-  const total = reactions.length;
+  const total = labExperiments.length;
   const visible = filteredReactions.length;
 
   if (visible === 0) {
@@ -237,32 +245,32 @@ function renderLabShell() {
       </div>
     `;
   } else {
-    list.innerHTML = filteredReactions.map((reaction) => {
-      const isRelated = focusSymbol ? reaction.reactants.some((item) => item.includes(focusSymbol)) : false;
-      const isCompleted = completed.has(reaction.experimentId);
-      const unlockState = getReactionUnlockState(reaction, { completed, learned });
-      const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+    list.innerHTML = filteredReactions.map((experiment) => {
+      const isRelated = focusSymbol ? (experiment.reactants || []).some((item) => item.includes(focusSymbol)) : false;
+      const isCompleted = completed.has(experiment.experimentId);
+      const unlockState = getReactionUnlockState(experiment, { completed, learned });
+      const safetyTheme = getSafetyTheme(experiment.safetyLevel);
 
-      const titleSource = getEffectiveExperimentTitleSource(reaction);
+      const titleSource = getEffectiveExperimentTitleSource(experiment);
       const titlePlain = plainChemText(titleSource.text);
       const titleHtml = mixedProseFormulaHTML(titleSource.text);
 
       return `
-        <article class="lab-item-card ${reaction.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
+        <article class="lab-item-card ${experiment.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
           <div class="lab-item-card-header">
             <div class="lab-item-card-title-wrap">
-              <h3 title="${escapeAttr(titlePlain)}">${titleHtml}</h3>
-              <p class="lab-elements" data-chem-notation="reactants">${reaction.reactants.map((r) => formulaHTML(r)).join(' + ')}</p>
+              <h3 title="${escapeAttr(titlePlain)}" data-testid="lab-card-title">${titleHtml}</h3>
+              ${hasFormulaList(experiment.reactants) ? `<p class="lab-elements" data-chem-notation="reactants">${(experiment.reactants || []).map((r) => formulaHTML(r)).join(' + ')}</p>` : ''}
             </div>
             <span class="lab-complete-badge ${isCompleted ? 'is-complete' : ''}" title="${isCompleted ? '已完成' : '未完成'}"><i data-lucide="${isCompleted ? 'check' : 'circle'}"></i></span>
           </div>
           <div class="lab-card-meta-row">
-            <span class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</span>
+            <span class="lab-safety-pill level-${experiment.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[experiment.safetyLevel] || experiment.safetyLevel}</span>
             <span class="lab-card-status">${unlockState.unlocked ? (isRelated ? '与当前元素相关' : '通用演示实验') : '课程进度锁定'}</span>
           </div>
-          <p class="lab-card-description">${renderCardDescription(reaction.description)}</p>
+          <p class="lab-card-description">${renderCardDescription(experiment.description)}</p>
           <p class="lab-card-clue">${renderUnlockSummary(unlockState)}</p>
-          <button class="hud-action-btn lab-card-action" data-reaction-open="${reaction.id}">查看实验</button>
+          <button class="hud-action-btn lab-card-action" data-reaction-open="${experiment.id}">查看实验</button>
         </article>
       `;
     }).join('');
@@ -475,12 +483,12 @@ function ensureLabToolbar(section, selectedElement) {
 
   // Only rebuild toolbar HTML on first creation to avoid wiping focus/selection.
   if (!toolbar.dataset.labToolbarReady) {
-    const grades = [...new Set(reactions.map((r) => r.unlockRequirements?.grade).filter(Boolean))];
+    const grades = [...new Set(labExperiments.map((r) => r.unlockRequirements?.grade).filter(Boolean))];
 
     toolbar.innerHTML = `
       <div class="lab-toolbar-top">
         <p class="hud-kicker">LAB ACCESS PANEL</p>
-        <p class="lab-toolbar-meta lab-result-count">显示 ${reactions.length}/${reactions.length} 个实验</p>
+        <p class="lab-toolbar-meta lab-result-count">显示 ${labExperiments.length}/${labExperiments.length} 个实验</p>
       </div>
       <div class="lab-toolbar-main">
         <div class="lab-toolbar-info">
@@ -636,17 +644,17 @@ function exitTitleEditMode() {
   editingTitleError = '';
 }
 
-function renderReactionDetail(reaction, isCompleted) {
-  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
-  const unlockState = getReactionUnlockState(reaction);
-  const chemRows = renderChemistrySummaryRows(reaction);
-  const isEditingTitle = editingTitleReactionId === reaction.id;
-  const titleSource = getEffectiveExperimentTitleSource(reaction);
-  const canonicalTitle = stripLeadingBracketHeading(reaction.name);
-  const placeholderTitle = canonicalTitle.trim() || '无';
+function renderReactionDetail(experiment, isCompleted) {
+  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
+  const unlockState = getReactionUnlockState(experiment);
+  const chemRows = renderChemistrySummaryRows(experiment);
+  const isEditingTitle = editingTitleReactionId === experiment.id;
+  const titleSource = getEffectiveExperimentTitleSource(experiment);
+  const canonicalTitle = stripLeadingBracketHeading(experiment.name);
+  const placeholderTitle = canonicalTitle.trim() || '教材实验';
 
   const titleHtml = isEditingTitle
-    ? renderTitleEditMode(reaction, placeholderTitle)
+    ? renderTitleEditMode(experiment, placeholderTitle)
     : renderTitleReadonly(titleSource.text, titleSource.source);
 
   return `
@@ -667,7 +675,7 @@ function renderReactionDetail(reaction, isCompleted) {
         ${chemRows.products}
         <div class="lab-summary-row">
           <span>安全级别</span>
-          <strong class="lab-safety-pill level-${reaction.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
+          <strong class="lab-safety-pill level-${experiment.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[experiment.safetyLevel] || experiment.safetyLevel}</strong>
         </div>
         <div class="lab-summary-row">
           <span>完成状态</span>
@@ -684,11 +692,11 @@ function renderReactionDetail(reaction, isCompleted) {
       </div>
       <div class="lab-stage-layout">
         <div class="lab-stage-main">
-          <p class="lab-stage-description">${renderProseContent(reaction.textbookContent || reaction.description)}</p>
+          <p class="lab-stage-description">${renderProseContent(experiment.textbookContent || experiment.description)}</p>
           <div class="lab-notebook-card">
             <span class="lab-notebook-title">实验步骤</span>
             <ol class="lab-steps-list">
-              ${(reaction.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
+              ${(experiment.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
             </ol>
           </div>
         </div>
@@ -697,45 +705,45 @@ function renderReactionDetail(reaction, isCompleted) {
         <div class="lab-stage-card lab-safety-notes-card">
           <span>安全注意事项</span>
           <ul class="lab-safety-list">
-            ${(reaction.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
+            ${(experiment.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
           </ul>
         </div>
         <div class="lab-stage-card lab-visual-card">
           <span>视觉描述</span>
-          <strong>${renderProseContent(reaction.visualDescription)}</strong>
+          <strong>${renderProseContent(experiment.visualDescription)}</strong>
         </div>
       </div>
-      ${DANGEROUS_LEVELS.has(reaction.safetyLevel) ? `
+      ${DANGEROUS_LEVELS.has(experiment.safetyLevel) ? `
       <label class="lab-confirm-row">
         <input type="checkbox" data-safety-confirm ${safetyConfirmed ? 'checked' : ''}>
         <span>我已了解安全事项，并知道这是虚拟演示。</span>
       </label>
       ` : ''}
       <div class="lab-nav-row">
-        <button class="hud-action-btn hud-action-btn-primary" data-lab-start ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(reaction.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? (isCompleted ? '再次开始实验' : '开始实验') : '继续学习后解锁'}</button>
+        <button class="hud-action-btn hud-action-btn-primary" data-lab-start ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(experiment.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? (isCompleted ? '再次开始实验' : '开始实验') : '继续学习后解锁'}</button>
       </div>
     </div>
   `;
 }
 
-function getReactionEquationText(reaction) {
-  if (reaction.equationText) {
-    return reaction.equationText;
+function getReactionEquationText(experiment) {
+  if (experiment.equationText) {
+    return experiment.equationText;
   }
 
-  if (EQUATION_MAP[reaction.id]) {
-    return EQUATION_MAP[reaction.id];
+  if (EQUATION_MAP[experiment.id]) {
+    return EQUATION_MAP[experiment.id];
   }
 
-  return hasFormulaList(reaction.reactants) && hasFormulaList(reaction.products)
-    ? `${reaction.reactants.join(' + ')} → ${reaction.products.join(' + ')}`
+  return hasFormulaList(experiment.reactants) && hasFormulaList(experiment.products)
+    ? `${(experiment.reactants || []).join(' + ')} → ${(experiment.products || []).join(' + ')}`
     : '';
 }
 
-function renderChemistrySummaryRows(reaction) {
-  const equationText = getReactionEquationText(reaction);
-  const reactants = hasFormulaList(reaction.reactants) ? reaction.reactants.join(' + ') : '';
-  const products = hasFormulaList(reaction.products) ? reaction.products.join(' + ') : '';
+function renderChemistrySummaryRows(experiment) {
+  const equationText = getReactionEquationText(experiment);
+  const reactants = hasFormulaList(experiment.reactants) ? (experiment.reactants || []).join(' + ') : '';
+  const products = hasFormulaList(experiment.products) ? (experiment.products || []).join(' + ') : '';
 
   return {
     equation: equationText ? `
@@ -760,36 +768,36 @@ function hasFormulaList(value) {
   return Array.isArray(value) && value.some((item) => typeof item === 'string' && item.trim().length > 0);
 }
 
-function renderSafetyView(reaction, isCompleted) {
-  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
-  const unlockState = getReactionUnlockState(reaction);
+function renderSafetyView(experiment, isCompleted) {
+  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
+  const unlockState = getReactionUnlockState(experiment);
 
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">SAFETY PROTOCOL</p>
-          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))} · 安全提示</h3>
+          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))} · 安全提示</h3>
         </div>
         <button class="hud-action-btn" data-lab-back>返回</button>
       </div>
       <div class="lab-safety-modal">
-        <div class="lab-safety-alert level-${reaction.safetyLevel.replace(/\s+/g, '-')}">
-          <strong><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[reaction.safetyLevel] || reaction.safetyLevel}</strong>
+        <div class="lab-safety-alert level-${experiment.safetyLevel.replace(/\s+/g, '-')}">
+          <strong><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[experiment.safetyLevel] || experiment.safetyLevel}</strong>
           <p>${unlockState.unlocked ? '开始前请先阅读本次实验的操作提示与实验守则。' : '该实验需要先完成对应课程进度，暂时只能查看说明。'}</p>
         </div>
         <div class="lab-stage-layout">
           <div class="lab-notebook-card">
             <span class="lab-notebook-title">实验前检查表</span>
             <ol class="lab-steps-list">
-              ${(reaction.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
+              ${(experiment.steps || []).map((step) => `<li>${renderProseContent(step)}</li>`).join('')}
             </ol>
           </div>
           <aside class="lab-stage-sidebar">
             <div class="lab-stage-card">
               <span>安全守则</span>
               <ul class="lab-safety-list">
-                ${(reaction.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
+                ${(experiment.safetyNotes || []).map((note) => `<li>${renderProseContent(note)}</li>`).join('')}
               </ul>
             </div>
             <div class="lab-stage-card">
@@ -799,18 +807,21 @@ function renderSafetyView(reaction, isCompleted) {
           </aside>
         </div>
         <div class="lab-nav-row">
-          <button class="hud-action-btn hud-action-btn-primary" data-launch-simulation ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(reaction.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? '进入模拟视图' : '继续学习后解锁'}</button>
+          <button class="hud-action-btn hud-action-btn-primary" data-launch-simulation ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(experiment.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? '进入模拟视图' : '继续学习后解锁'}</button>
         </div>
       </div>
     </div>
   `;
 }
 
-function getReactionUnlockState(reaction, state = {}) {
-  const requirements = reaction.unlockRequirements;
+function getReactionUnlockState(experiment, state = {}) {
+  const requirements = experiment.unlockRequirements;
   const completed = state.completed || getCompletedExperiments();
-  if (!requirements || completed.has(reaction.experimentId)) {
+  if (completed.has(experiment.experimentId)) {
     return { unlocked: true, summary: '当前实验已开放。', requirements: [] };
+  }
+  if (!requirements) {
+    return { unlocked: false, summary: '需完成对应课程主题或学习阶段后开放模拟。', requirements: [] };
   }
 
   const learned = state.learned || getLearnedElements();
@@ -821,8 +832,8 @@ function getReactionUnlockState(reaction, state = {}) {
   const minimumLearnedElements = Number.isInteger(requirements.minimumLearnedElements)
     ? requirements.minimumLearnedElements
     : 0;
-  const safetyMatched = requiredSafetyLevels.length === 0 || requiredSafetyLevels.includes(reaction.safetyLevel);
-  const tagsMatched = requiredTags.length === 0 || requiredTags.every((tagId) => CURRICULUM_TAG_MAP.has(tagId));
+  const safetyMatched = requiredSafetyLevels.length === 0 || requiredSafetyLevels.includes(experiment.safetyLevel);
+  const tagsMatched = true;
   const progressMatched = learnedCount >= minimumLearnedElements || requiredStages.some((stageId) => isLearningStageUnlocked(stageId, learnedCount));
   const unlocked = safetyMatched && tagsMatched && progressMatched;
 
@@ -897,13 +908,13 @@ function renderUnlockSummary(unlockState) {
   return mixedProseFormulaHTML(cleaned || unlockState.summary);
 }
 
-function openSimulationModal(reaction) {
+function openSimulationModal(experiment) {
   closeSimulationModal();
 
-  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
   const performanceMode = getSettings().performanceMode || 'normal';
   const isSimplified = performanceMode === 'normal';
-  const duration = getSimulationDuration(reaction.id, performanceMode);
+  const duration = getSimulationDuration(experiment.id, performanceMode);
 
   const backdrop = document.createElement('div');
   backdrop.className = 'lab-modal-backdrop';
@@ -917,18 +928,18 @@ function openSimulationModal(reaction) {
     <div class="lab-modal-header">
       <div>
         <p class="hud-kicker">REACTION IN PROGRESS</p>
-        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))}</h3>
+        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))}</h3>
       </div>
       <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
     </div>
     <div class="lab-simulation-meta" data-chem-notation="equation">
-      <span>${equationHTML(getReactionEquationText(reaction))}</span>
+      <span>${equationHTML(getReactionEquationText(experiment))}</span>
       <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
     </div>
     <div class="lab-canvas-frame">
       <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
       <div class="lab-canvas-overlay">
-        <span>反应视觉描述：${renderProseContent(reaction.visualDescription)}</span>
+        <span>反应视觉描述：${renderProseContent(experiment.visualDescription)}</span>
         <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
       </div>
     </div>
@@ -957,7 +968,7 @@ function openSimulationModal(reaction) {
   });
 
   window.requestAnimationFrame(() => {
-    startSimulation(reaction);
+    startSimulation(experiment);
   });
 }
 
@@ -968,12 +979,12 @@ function closeSimulationModal() {
   }
 }
 
-function openDetailModal(reaction, isCompleted) {
+function openDetailModal(experiment, isCompleted) {
   const viewToPreserve = currentView;
   closeDetailModal();
   currentView = viewToPreserve;
 
-  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
 
   const backdrop = document.createElement('div');
   backdrop.className = 'lab-detail-modal-backdrop';
@@ -983,15 +994,15 @@ function openDetailModal(reaction, isCompleted) {
   modal.setAttribute('style', `--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}`);
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-modal', 'true');
-  modal.setAttribute('aria-label', `${plainChemText(stripLeadingBracketHeading(reaction.name))} 实验详情`);
+  modal.setAttribute('aria-label', `${plainChemText(stripLeadingBracketHeading(experiment.name))} 实验详情`);
 
-  modal.innerHTML = renderStageContent(reaction, isCompleted);
+  modal.innerHTML = renderStageContent(experiment, isCompleted);
 
   backdrop.appendChild(modal);
   document.body.appendChild(backdrop);
   activeDetailModal = backdrop;
 
-  bindStageEvents(modal, reaction, isCompleted);
+  bindStageEvents(modal, experiment, isCompleted);
 
   backdrop.addEventListener('click', (event) => {
     if (event.target === backdrop) {
@@ -1000,12 +1011,12 @@ function openDetailModal(reaction, isCompleted) {
   });
 }
 
-function updateDetailModalContent(reaction, isCompleted) {
+function updateDetailModalContent(experiment, isCompleted) {
   if (!activeDetailModal) return;
   const modal = activeDetailModal.querySelector('.lab-detail-modal');
   if (!modal) return;
-  modal.innerHTML = renderStageContent(reaction, isCompleted);
-  bindStageEvents(modal, reaction, isCompleted);
+  modal.innerHTML = renderStageContent(experiment, isCompleted);
+  bindStageEvents(modal, experiment, isCompleted);
 }
 
 function closeDetailModal() {
@@ -1019,26 +1030,26 @@ function closeDetailModal() {
   clearSimulationTimer();
 }
 
-function renderResultView(reaction, isCompleted) {
-  const safetyTheme = getSafetyTheme(reaction.safetyLevel);
+function renderResultView(experiment, isCompleted) {
+  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
 
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
           <p class="hud-kicker">EXPERIMENT LOGGED</p>
-          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(reaction.name))} · 实验总结</h3>
+          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))} · 实验总结</h3>
         </div>
         <button class="hud-action-btn" data-lab-back>返回详情</button>
       </div>
       <div class="lab-result-grid">
         <div class="lab-stage-card">
           <span>结果总结</span>
-          <strong>${renderProseContent(reaction.description)}</strong>
+          <strong>${renderProseContent(experiment.description)}</strong>
         </div>
         <div class="lab-stage-card">
           <span>观察到的现象</span>
-          <strong>${renderProseContent(reaction.visualDescription)}</strong>
+          <strong>${renderProseContent(experiment.visualDescription)}</strong>
         </div>
         <div class="lab-stage-card">
           <span>实验记录</span>
@@ -1057,7 +1068,7 @@ function renderResultView(reaction, isCompleted) {
   `;
 }
 
-function startSimulation(reaction) {
+function startSimulation(experiment) {
   clearSimulationTimer();
   simulationRunId += 1;
   const runId = simulationRunId;
@@ -1068,7 +1079,7 @@ function startSimulation(reaction) {
       return;
     }
 
-    runSimulation(canvas, reaction, runId);
+    runSimulation(canvas, experiment, runId);
   });
 
   completionTimer = window.setTimeout(() => {
@@ -1077,11 +1088,11 @@ function startSimulation(reaction) {
     }
 
     closeSimulationModal();
-    markExperimentCompleted(reaction.experimentId);
+    markExperimentCompleted(experiment.experimentId);
     currentView = 'result';
     detailModalRequested = true;
     renderLabShell();
-  }, getSimulationDuration(reaction.id, getSettings().performanceMode || 'normal'));
+  }, getSimulationDuration(experiment.id, getSettings().performanceMode || 'normal'));
 }
 
 function clearSimulationTimer() {
@@ -1092,14 +1103,14 @@ function clearSimulationTimer() {
   }
 }
 
-function runSimulation(canvas, reaction, runId) {
+function runSimulation(canvas, experiment, runId) {
   const context = canvas.getContext('2d');
   if (!context) {
     return;
   }
 
   const performanceMode = getSettings().performanceMode || 'normal';
-  const duration = getSimulationDuration(reaction.id, performanceMode);
+  const duration = getSimulationDuration(experiment.id, performanceMode);
   const startedAt = performance.now();
   const particleCount = performanceMode === 'high-performance' ? 28 : 12;
 
@@ -1109,7 +1120,7 @@ function runSimulation(canvas, reaction, runId) {
     }
 
     const progress = Math.min(1, (now - startedAt) / duration);
-    drawSimulationFrame(context, canvas, reaction.id, progress, particleCount, performanceMode);
+    drawSimulationFrame(context, canvas, experiment.id, progress, particleCount, performanceMode);
 
     if (progress < 1) {
       window.requestAnimationFrame(frame);
@@ -1130,7 +1141,8 @@ function drawSimulationFrame(context, canvas, reactionId, progress, particleCoun
 
   drawHudGrid(context, width, height, progress);
 
-  switch (reactionId) {
+  const mappedId = ANIMATION_ID_MAP[reactionId] || reactionId;
+  switch (mappedId) {
     case 'reaction-hydrogen-combustion':
       drawHydrogenCombustion(context, width, height, progress, particleCount, performanceMode);
       break;
@@ -1324,10 +1336,11 @@ function drawOxygenCombustion(context, width, height, progress, particleCount, p
 
 function getSimulationDuration(reactionId, performanceMode) {
   const baseDuration = performanceMode === 'high-performance' ? 6200 : 4200;
-  if (reactionId === 'reaction-iron-rusting') {
+  const mappedId = ANIMATION_ID_MAP[reactionId] || reactionId;
+  if (mappedId === 'reaction-iron-rusting') {
     return baseDuration + 1000;
   }
-  if (reactionId === 'reaction-sodium-water') {
+  if (mappedId === 'reaction-sodium-water') {
     return baseDuration - 400;
   }
   return baseDuration;

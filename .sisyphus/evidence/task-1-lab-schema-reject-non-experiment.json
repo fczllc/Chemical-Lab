@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "reject-non-experiment",
+  "status": "pass",
+  "accepted": [],
+  "rejected": [
+    "lab-0002-source-section-l5-l12-476de3bd8c",
+    "textbook-rj-chemistry-grade9-2024-vol1-some-reaction",
+    "lab-missing-unlock"
+  ],
+  "errors": []
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "missing-unlock",
+  "status": "pass",
+  "counters": {
+    "totalRecords": 1,
+    "starterRecords": 0,
+    "lockedRecords": 0,
+    "missingRequiredFields": 1,
+    "invalidSourceKind": 0,
+    "invalidSafetyLevel": 0,
+    "missingUnlockRequirements": 1,
+    "invalidUnlockRequirements": 0,
+    "invalidStringFields": 0,
+    "meaninglessTitles": 0,
+    "meaninglessDescriptions": 0,
+    "dirtyDisplayFields": 0,
+    "invalidCuratedLegacyIds": 0,
+    "invalidTextbookSourceKind": 0,
+    "nonArrayFields": 0,
+    "emptyArrayFields": 0,
+    "duplicateIds": 0
+  },
+  "errors": []
+}

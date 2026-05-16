@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "description": "Final Wave retry fixes for lab-explicit-textbook-experiments-restore",
+  "timestamp": "2026-05-16T00:00:00Z",
+  "fixes": [
+    {
+      "finding": "Malformed title '的观察与描述' in exp-iron-rusting and lab-experiment-rj-chemistry-grade9-2024-vol1-0010-source-section-l89-l113-dfed8417",
+      "rootCause": "cleanTitlePhrase stripped '实验现象' prefix from '实验现象的观察与描述' using /^实验(?:内容|现象|记录)?[：:]?\s*/u, leaving the malformed fragment '的观察与描述'",
+      "filesModified": [
+        "scripts/textbook/build-lab-experiments.mjs",
+        "scripts/validate-lab-experiments.mjs",
+        "src/data/labExperiments.json"
+      ],
+      "changes": [
+        "Added '的观察与描述' to genericTitleKeys in both builder and validator",
+        "Added /^[的与及和或之][\p{Script=Han}]/u rejection in isMeaningfulTitle for both builder and validator",
+        "Fixed cleanTitlePhrase to only strip '实验现象' when it is a standalone prefix (followed by punctuation/space/end), not when part of possessive phrase like '实验现象的观察与描述'",
+        "Strengthened matchLegacyExperimentId to require heading-level signals (title+description) rather than full haystack, preventing false matches on generic sections that merely mention legacy topics"
+      ],
+      "verification": {
+        "node scripts/textbook/build-lab-experiments.mjs --write": "pass (acceptedExperiments=104, curatedLegacyPreserved=3, runtimeRecordCount=107)",
+        "node scripts/validate-lab-experiments.mjs": "pass (totalRecords=107, meaninglessTitles=0)",
+        "grep for '\"title\": \"的观察与描述\" in labExperiments.json": "0 matches"
+      }
+    },
+    {
+      "finding": "Playwright placeholder text rejection failed because .element-cell not found during waitForAppReady",
+      "rootCause": "waitForAppReady waited for .element-cell which is only present on the periodic-table route; navigating directly to /#/lab meant the element never appeared",
+      "filesModified": [
+        "tests/ui/lab-textbook-experiments.spec.ts"
+      ],
+      "changes": [
+        "Removed await expect(page.locator('.element-cell').first()).toBeVisible() from waitForAppReady",
+        "Kept nav-home visibility and appState.elements + loaderHidden poll as the readiness signal"
+      ],
+      "verification": {
+        "npx playwright test tests/ui/lab-textbook-experiments.spec.ts": "9 passed"
+      }
+    },
+    {
+      "finding": "Running lab + reaction game suites together caused failures",
+      "rootCause": "Cross-test localStorage pollution: lab tests seed fixture data and reaction game tests read/write gameScores; running in same worker state leaked between suites",
+      "filesModified": [
+        "tests/ui/lab-textbook-experiments.spec.ts",
+        "tests/ui/reaction-game-completion.spec.ts"
+      ],
+      "changes": [
+        "Added window.localStorage.clear() in lab-textbook-experiments.spec.ts beforeEach",
+        "Added window.localStorage.clear() in reaction-game-completion.spec.ts openReactionGame helper"
+      ],
+      "verification": {
+        "npx playwright test tests/ui/lab-textbook-experiments.spec.ts tests/ui/reaction-game-completion.spec.ts": "11 passed"
+      }
+    },
+    {
+      "finding": "/favicon.ico 404 console error during manual QA",
+      "rootCause": "No favicon asset or link tag present in index.html",
+      "filesModified": [
+        "public/favicon.svg",
+        "index.html"
+      ],
+      "changes": [
+        "Created public/favicon.svg with simple 'E' lettermark",
+        "Added <link rel='icon' type='image/svg+xml' href='/favicon.svg'> to index.html <head>"
+      ],
+      "verification": {
+        "npm run build": "pass (exit 0)"
+      }
+    }
+  ],
+  "commands": {
+    "buildCheck": { "command": "node scripts/textbook/build-lab-experiments.mjs --check", "status": "pass" },
+    "buildWrite": { "command": "node scripts/textbook/build-lab-experiments.mjs --write", "status": "pass" },
+    "validate": { "command": "node scripts/validate-lab-experiments.mjs", "status": "pass" },
+    "selfCheckExplicitInclude": { "command": "node scripts/validate-lab-experiments.mjs --self-check explicit-include", "status": "pass" },
+    "selfCheckRejectNonExperiment": { "command": "node scripts/validate-lab-experiments.mjs --self-check reject-non-experiment", "status": "pass" },
+    "selfCheckRejectMeaninglessTitle": { "command": "node scripts/validate-lab-experiments.mjs --self-check reject-meaningless-title", "status": "pass" },
+    "selfCheckMissingUnlock": { "command": "node scripts/validate-lab-experiments.mjs --self-check missing-unlock", "status": "pass" },
+    "selfCheckPlaceholderText": { "command": "node scripts/validate-lab-experiments.mjs --self-check placeholder-text", "status": "pass" },
+    "playwrightLab": { "command": "npx playwright test tests/ui/lab-textbook-experiments.spec.ts", "status": "pass", "passed": 9, "failed": 0 },
+    "playwrightCombined": { "command": "npx playwright test tests/ui/lab-textbook-experiments.spec.ts tests/ui/reaction-game-completion.spec.ts", "status": "pass", "passed": 11, "failed": 0 },
+    "npmBuild": { "command": "npm run build", "status": "pass" }
+  }
+}

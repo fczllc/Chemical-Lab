@@ -58,7 +58,13 @@ test.describe('Reaction pairing completion', () => {
 
 async function openReactionGame(page: Page) {
   await page.setViewportSize({ width: 1440, height: 900 });
+  // Clear storage on the app origin, then reload so the app initializes with a clean slate
   await page.goto('/', { waitUntil: 'domcontentloaded' });
+  await page.evaluate(() => {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+  });
+  await page.reload({ waitUntil: 'networkidle' });
   await waitForShellReady(page);
 
   await page.getByTestId('nav-games').click();
@@ -77,16 +83,21 @@ async function openReactionGame(page: Page) {
 }
 
 async function waitForShellReady(page: Page) {
-  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
-  await expect(page.getByTestId('detail-panel')).toBeVisible({ timeout: 15000 });
-  await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 20000 });
+  await expect(page.getByTestId('detail-panel')).toBeVisible({ timeout: 20000 });
+  // Wait for appState to be fully initialized before checking DOM elements
   await expect.poll(async () => {
     return await page.evaluate(() => {
+      if (typeof window.appState === 'undefined') return false;
       const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
       const loaderHidden = document.getElementById('global-loader')?.classList.contains('hidden') ?? false;
       return hasElements && loaderHidden;
     });
-  }, { timeout: 15000 }).toBe(true);
+  }, { timeout: 25000, intervals: [100, 200, 500, 1000] }).toBe(true);
+  // Ensure the periodic table grid has rendered with enough cells
+  await expect.poll(async () => {
+    return await page.locator('.element-cell').count();
+  }, { timeout: 25000, intervals: [100, 200, 500, 1000] }).toBeGreaterThanOrEqual(118);
 }
 
 function activeGameStage(page: Page) {

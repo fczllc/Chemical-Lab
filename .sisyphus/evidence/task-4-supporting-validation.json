@@ -1,0 +1,25 @@
+{
+  "task": "task-4-supporting-validation",
+  "timestamp": "2026-05-15T13:11:06.072Z",
+  "files": [
+    "scripts/validate-supporting-data.mjs"
+  ],
+  "assertions": [
+    "validator imports labExperiments through src/data/index.js",
+    "reaction-pairing formula validation remains scoped to safeReactions from reactions.json",
+    "learningPath.stages[].unlockedExperiments is checked against labExperiments[].experimentId",
+    "completed experiment IDs remain the same string IDs for localStorage compatibility"
+  ],
+  "verification": [
+    {
+      "command": "npm run validate:supporting",
+      "status": "pass",
+      "output": "支持数据校验通过：538 questions, 127 reactions, 1201 achievements, 1195 learning stages"
+    },
+    {
+      "command": "node scripts/validate-reaction-game-pool.mjs",
+      "status": "pass",
+      "output": "reactionGamePoolValidationStatus=pass; invalidNotationReactions=0; duplicateNormalizedEquations=0"
+    }
+  ]
+}

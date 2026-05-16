@@ -97,8 +97,14 @@ const supportedRuntimeAdapters = [
   {
     adapterKey: 'reaction',
     contentTypes: ['reaction', 'labOrReaction'],
-    candidateTypes: ['experimentCandidate', 'labCandidate'],
+    candidateTypes: ['experimentCandidate'],
     targetRuntimeFiles: ['src/data/reactions.json']
+  },
+  {
+    adapterKey: 'labExperiment',
+    contentTypes: ['labExperiment'],
+    candidateTypes: ['experimentCandidate'],
+    targetRuntimeFiles: ['src/data/labExperiments.json']
   }
 ];
 

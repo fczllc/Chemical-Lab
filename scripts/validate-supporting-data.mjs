@@ -5,6 +5,7 @@ import {
   allowedSafetyLevels,
   curriculumTags,
   elements,
+  labExperiments,
   learningPath,
   quizData,
   reactions,
@@ -133,6 +134,7 @@ const countBasedAchievementTypes = new Set([
 ]);
 const safeQuizData = ensureArray(buildQuizDataset(quizData, selfCheckInvalid), 'quizData 顶层必须是数组');
 const safeReactions = ensureArray(buildReactionDataset(reactions, selfCheckInvalid), 'reactions 顶层必须是数组');
+const safeLabExperiments = ensureArray(labExperiments, 'labExperiments 顶层必须是数组');
 const safeAchievementsData = ensureArray(achievementsData, 'achievementsData 顶层必须是数组');
 const safeLearningPath = ensureObject(buildLearningPathDataset(learningPath, selfCheckInvalid), 'learningPath 顶层必须是对象');
 const safeTextbookPilotContent = ensureArray(buildTextbookPilotDataset(textbookPilotContent, selfCheckInvalid), 'textbookPilotContent 顶层必须是数组');
@@ -204,6 +206,23 @@ const reactionIds = new Set();
 const experimentIds = new Set();
 const gameUsableReactions = [];
 const learningStageIds = new Set(safeStages.map((stage) => stage.id).filter((id) => typeof id === 'string'));
+for (const labExperiment of safeLabExperiments) {
+  if (!isRecord(labExperiment)) {
+    errors.push('实验条目必须是对象');
+    continue;
+  }
+
+  if (!labExperiment.experimentId) {
+    errors.push(`实验数据存在空 experimentId：${labExperiment.id || 'unknown-experiment'}`);
+    continue;
+  }
+
+  if (experimentIds.has(labExperiment.experimentId)) {
+    errors.push(`重复的 experimentId：${labExperiment.experimentId}`);
+  }
+  experimentIds.add(labExperiment.experimentId);
+}
+
 for (const reaction of safeReactions) {
   if (!isRecord(reaction)) {
     errors.push('反应条目必须是对象');
@@ -220,13 +239,6 @@ for (const reaction of safeReactions) {
     errors.push(`重复的反应 ID：${reaction.id}`);
   }
   reactionIds.add(reaction.id);
-
-  if (reaction.experimentId && experimentIds.has(reaction.experimentId)) {
-    errors.push(`重复的 experimentId：${reaction.experimentId}`);
-  }
-  if (reaction.experimentId) {
-    experimentIds.add(reaction.experimentId);
-  }
 
   const reactants = ensureArray(reaction.reactants, `反应 ${reaction.id || 'unknown-reaction'} 的 reactants 必须是数组`);
   const products = ensureArray(reaction.products, `反应 ${reaction.id || 'unknown-reaction'} 的 products 必须是数组`);
