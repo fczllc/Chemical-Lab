@@ -1,6 +1,15 @@
 /** ===== 实验室模块 ===== */
 import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
 import { curriculumTags, learningPath, labExperiments as importedLabExperiments } from '../data/index.js';
+import {
+  register as registerSimulationConfig,
+  has as hasSimulationConfig,
+  lookup as getSimulationConfig
+} from '../lab-sim/registry.js';
+import apparatusRecognitionConfig from '../lab-sim/experiments/configs/apparatus-recognition.json';
+import sodiumWaterConfig from '../lab-sim/experiments/configs/sodium-water.json';
+import { createApparatusRecognitionSimulation } from '../lab-sim/experiments/apparatus-recognition.js';
+import { createSodiumWaterSimulation } from '../lab-sim/experiments/sodium-water.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
@@ -34,7 +43,17 @@ const SAFETY_THEME = LAB_SAFETY_THEME;
 
 const DANGEROUS_LEVELS = new Set(['dangerous', 'radioactive', 'extremely dangerous']);
 
+const THREE_D_SIMULATION_CONFIGS = [apparatusRecognitionConfig, sodiumWaterConfig];
+const APPARATUS_RECOGNITION_EXPERIMENT_ID = 'apparatus-recognition';
+const SODIUM_WATER_EXPERIMENT_ID = 'exp-sodium-water';
+
 const MAX_TITLE_LENGTH_UNITS = 80;
+
+THREE_D_SIMULATION_CONFIGS.forEach((config) => {
+  if (!hasSimulationConfig(config.experimentId)) {
+    registerSimulationConfig(config);
+  }
+});
 
 function escapeAttr(value) {
   return String(value)
@@ -94,6 +113,7 @@ let safetyConfirmed = false;
 let simulationRunId = 0;
 let completionTimer = null;
 let activeModal = null;
+let active3DSimulation = null;
 let activeDetailModal = null;
 let detailModalRequested = false;
 let editingTitleReactionId = null;
@@ -922,6 +942,9 @@ function openSimulationModal(experiment) {
   const performanceMode = getSettings().performanceMode || 'normal';
   const isSimplified = performanceMode === 'normal';
   const duration = getSimulationDuration(experiment.id, performanceMode);
+  const simulationConfig = getSimulationConfig(experiment.experimentId);
+  const uses3DSimulation = Boolean(simulationConfig)
+    && [APPARATUS_RECOGNITION_EXPERIMENT_ID, SODIUM_WATER_EXPERIMENT_ID].includes(experiment.experimentId);
 
   const backdrop = document.createElement('div');
   backdrop.className = 'lab-modal-backdrop';
@@ -931,26 +954,11 @@ function openSimulationModal(experiment) {
   modal.setAttribute('style', `--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}`);
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-modal', 'true');
-  modal.innerHTML = `
-    <div class="lab-modal-header">
-      <div>
-        <p class="hud-kicker">REACTION IN PROGRESS</p>
-        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))}</h3>
-      </div>
-      <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
-    </div>
-    <div class="lab-simulation-meta" data-chem-notation="equation">
-      <span>${equationHTML(getReactionEquationText(experiment))}</span>
-      <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
-    </div>
-    <div class="lab-canvas-frame">
-      <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
-      <div class="lab-canvas-overlay">
-        <span>反应视觉描述：${renderProseContent(experiment.visualDescription)}</span>
-        <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
-      </div>
-    </div>
-  `;
+  modal.innerHTML = renderSimulationModalContent(experiment, {
+    duration,
+    isSimplified,
+    uses3DSimulation
+  });
 
   backdrop.appendChild(modal);
   document.body.appendChild(backdrop);
@@ -975,15 +983,132 @@ function openSimulationModal(experiment) {
   });
 
   window.requestAnimationFrame(() => {
+    if (uses3DSimulation) {
+      start3DSimulation(experiment, modal, simulationConfig);
+      return;
+    }
+
     startSimulation(experiment);
   });
 }
 
 function closeSimulationModal() {
+  disposeActive3DSimulation();
   if (activeModal) {
     activeModal.remove();
     activeModal = null;
   }
+}
+
+function renderSimulationModalContent(experiment, { duration, isSimplified, uses3DSimulation }) {
+  return `
+    <div class="lab-modal-header">
+      <div>
+        <p class="hud-kicker">REACTION IN PROGRESS</p>
+        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))}</h3>
+      </div>
+      <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
+    </div>
+    <div class="lab-simulation-meta" data-chem-notation="equation">
+      <span>${equationHTML(getReactionEquationText(experiment))}</span>
+      <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
+    </div>
+    ${uses3DSimulation ? render3DSimulationContent() : renderCanvasSimulationContent(experiment, duration)}
+  `;
+}
+
+function renderCanvasSimulationContent(experiment, duration) {
+  return `
+    <div class="lab-canvas-frame">
+      <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
+      <div class="lab-canvas-overlay">
+        <span>反应视觉描述：${renderProseContent(experiment.visualDescription)}</span>
+        <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
+      </div>
+    </div>
+  `;
+}
+
+function render3DSimulationContent() {
+  return '<div class="lab-3d-host" data-lab-3d-host></div>';
+}
+
+async function start3DSimulation(experiment, modal, simulationConfig) {
+  clearSimulationTimer();
+  simulationRunId += 1;
+  const runId = simulationRunId;
+  const hostElement = modal.querySelector('[data-lab-3d-host]');
+
+  if (!hostElement || currentView !== 'simulation') {
+    return;
+  }
+
+  const performanceMode = getSettings().performanceMode || 'normal';
+  const options = {
+    performanceMode,
+    onComplete() {
+      complete3DSimulation(experiment, runId);
+    }
+  };
+
+  const result = simulationConfig.experimentId === APPARATUS_RECOGNITION_EXPERIMENT_ID
+    ? await createApparatusRecognitionSimulation(hostElement, options)
+    : await createSodiumWaterSimulation(hostElement, options);
+
+  if (runId !== simulationRunId || currentView !== 'simulation' || !activeModal) {
+    result?.dispose?.();
+    return;
+  }
+
+  if (!result?.success) {
+    disposeActive3DSimulation();
+    fallbackToCanvasSimulation(modal, experiment);
+    return;
+  }
+
+  active3DSimulation = result;
+}
+
+function fallbackToCanvasSimulation(modal, experiment) {
+  const performanceMode = getSettings().performanceMode || 'normal';
+  modal.innerHTML = renderSimulationModalContent(experiment, {
+    duration: getSimulationDuration(experiment.id, performanceMode),
+    isSimplified: performanceMode === 'normal',
+    uses3DSimulation: false
+  });
+  bindSimulationModalCloseEvents(modal);
+  startSimulation(experiment);
+}
+
+function bindSimulationModalCloseEvents(modal) {
+  modal.querySelector('[data-lab-modal-close]')?.addEventListener('click', () => {
+    closeSimulationModal();
+    clearSimulationTimer();
+    currentView = 'detail';
+    safetyConfirmed = false;
+    renderLabShell();
+  });
+}
+
+function complete3DSimulation(experiment, runId) {
+  if (runId !== simulationRunId || currentView !== 'simulation') {
+    return;
+  }
+
+  closeSimulationModal();
+  markExperimentCompleted(experiment.experimentId);
+  currentView = 'result';
+  detailModalRequested = true;
+  renderLabShell();
+}
+
+function disposeActive3DSimulation() {
+  if (!active3DSimulation) {
+    return;
+  }
+
+  active3DSimulation.dispose?.();
+  active3DSimulation = null;
 }
 
 function openDetailModal(experiment, isCompleted) {
