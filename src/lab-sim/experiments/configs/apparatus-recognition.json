@@ -1,0 +1,46 @@
+{
+  "experimentId": "apparatus-recognition",
+  "template": "apparatus-recognition",
+  "apparatus": [
+    "beaker",
+    "test-tube",
+    "graduated-cylinder",
+    "dropper",
+    "glass-rod",
+    "funnel",
+    "thermometer",
+    "balance",
+    "bunsen-burner",
+    "evaporating-dish",
+    "safety-goggles",
+    "protective-screen"
+  ],
+  "parameters": {
+    "recognitionTargetCount": {
+      "min": 1,
+      "max": 12,
+      "default": 12,
+      "unit": "items"
+    },
+    "hintDelay": {
+      "min": 2,
+      "max": 15,
+      "default": 6,
+      "unit": "s"
+    }
+  },
+  "phenomena": [
+    "apparatus-highlight",
+    "label-match-feedback",
+    "safety-role-hint"
+  ],
+  "views": [
+    "macro",
+    "micro"
+  ],
+  "fallback": "canvas",
+  "completionCondition": {
+    "type": "all-apparatus-recognized",
+    "requiredCount": 12
+  }
+}

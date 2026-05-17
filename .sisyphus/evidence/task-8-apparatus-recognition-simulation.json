@@ -1,0 +1,16 @@
+{
+  "cardVisible": true,
+  "simulationVisible": true,
+  "canvasBox": {
+    "x": 189,
+    "y": 246.71875,
+    "width": 1062,
+    "height": 520
+  },
+  "equipmentProgressText": "已检查 0 / 6 种器材",
+  "registeredConfig": {
+    "experimentId": "apparatus-recognition",
+    "template": "apparatus-recognition",
+    "apparatusCount": 12
+  }
+}
