@@ -1,0 +1,16 @@
+{
+  "cardVisible": true,
+  "sodiumSetup": {
+    "id": "exp-sodium-water",
+    "experimentId": "exp-sodium-water",
+    "name": "钠与水反应",
+    "existingSodiumExperimentId": "exp-salt-formation"
+  },
+  "parameterPanelVisible": true,
+  "sliderCount": 3,
+  "registeredConfig": {
+    "experimentId": "exp-sodium-water",
+    "template": "sodium-water-reaction",
+    "parameterCount": 3
+  }
+}
