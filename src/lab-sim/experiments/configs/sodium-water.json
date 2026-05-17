@@ -1,0 +1,62 @@
+{
+  "experimentId": "exp-sodium-water",
+  "template": "sodium-water-reaction",
+  "apparatus": [
+    "beaker",
+    "test-tube",
+    "graduated-cylinder",
+    "dropper",
+    "glass-rod",
+    "funnel",
+    "thermometer",
+    "balance",
+    "bunsen-burner",
+    "evaporating-dish",
+    "safety-goggles",
+    "protective-screen"
+  ],
+  "parameters": {
+    "sodiumMass": {
+      "min": 0.01,
+      "max": 0.2,
+      "default": 0.05,
+      "unit": "g"
+    },
+    "waterVolume": {
+      "min": 20,
+      "max": 200,
+      "default": 80,
+      "unit": "mL"
+    },
+    "shieldDistance": {
+      "min": 0.5,
+      "max": 3,
+      "default": 1.2,
+      "unit": "m"
+    }
+  },
+  "phenomena": [
+    "sodium-skims-water-surface",
+    "hydrogen-bubbles-form",
+    "heat-and-light-warning",
+    "alkaline-solution-indicator"
+  ],
+  "views": [
+    "macro",
+    "micro"
+  ],
+  "fallback": "text",
+  "completionCondition": {
+    "type": "observe-safe-virtual-reaction",
+    "requiredPhenomena": [
+      "sodium-skims-water-surface",
+      "hydrogen-bubbles-form",
+      "alkaline-solution-indicator"
+    ]
+  },
+  "safetyThresholds": {
+    "maxSodiumMass": 0.05,
+    "requiresProtectiveScreen": true,
+    "realWorldHandling": "teacher-demonstration-only"
+  }
+}
