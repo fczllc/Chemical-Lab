@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "builder": "scripts/textbook/build-lab-experiments.mjs",
+  "check": "duplicate-content-conflict",
+  "status": "pass",
+  "counters": {
+    "acceptedExperiments": 0,
+    "rejectedNonExperiments": 0,
+    "rejectedDuplicates": 0,
+    "rejectedMeaninglessTitle": 0,
+    "rejectedMeaninglessContent": 0,
+    "exactContentMerges": 0,
+    "looseContentMerges": 0,
+    "blockedContentMergeCandidates": 1,
+    "curatedLegacyPreserved": 0
+  },
+  "rejected": [],
+  "mergeDetails": {
+    "exactContentMerges": [],
+    "looseContentMerges": [],
+    "blockedContentMergeCandidates": [
+      {
+        "mergeType": "blockedContentMergeCandidate",
+        "kept": {
+          "key": "oxygen|section-a",
+          "id": null,
+          "title": "气体性质检验",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "oxygen-section",
+          "source": "rj-chemistry-grade9-2024-vol1|oxygen-section",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "caution",
+          "safetyRiskCategories": [
+            "gas-collection-apparatus"
+          ]
+        },
+        "mergedCandidate": {
+          "key": "hydrogen|section-b",
+          "id": null,
+          "title": "气体性质检验",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+          "sourceSectionId": "hydrogen-section",
+          "source": "rj-chemistry-grade9-2024-vol2|hydrogen-section",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "caution",
+          "safetyRiskCategories": [
+            "flammable-gas",
+            "gas-collection-apparatus"
+          ]
+        },
+        "mergedCandidates": [
+          "hydrogen|section-b",
+          "oxygen|section-a"
+        ],
+        "mergedSources": [
+          "rj-chemistry-grade9-2024-vol1|oxygen-section",
+          "rj-chemistry-grade9-2024-vol2|hydrogen-section"
+        ],
+        "reason": "conflicting gas identity: 氧气 vs 氢气+氧气",
+        "scores": {
+          "textbookContentScore": 0.865672,
+          "stepsScore": 1,
+          "materialsScore": 0.75,
+          "phenomenaScore": 1,
+          "overallScore": 0.902985
+        },
+        "hardConflictStatus": {
+          "hasHardConflict": true,
+          "reason": "conflicting gas identity: 氧气 vs 氢气+氧气"
+        },
+        "sourceReferenceCountBefore": 1,
+        "sourceReferenceCountAfter": 2,
+        "sourceReferences": [
+          {
+            "candidateId": "candidate-oxygen",
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+            "sourceSectionId": "oxygen-section",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade9-2024-vol1.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "f0212d47d1936d6ee44b5b126b08d888dd40eb2bc3eec274b0f38ddf3e58e53a",
+            "sectionHash": "95eaa152d73462a26a45791ced574c599f7fcc8c5325b6f5460220c2d06bbcc1",
+            "assets": []
+          },
+          {
+            "candidateId": "candidate-hydrogen",
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+            "sourceSectionId": "hydrogen-section",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade9-2024-vol2.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "2ac3247e99c9559eac8f4a9c60650f7b83bba982026876b3af83c0d2d46585d2",
+            "sectionHash": "29bfbdbbfc95c4cc6cf17831229da5a7f498b2f2753f7e7b7cfa502bace18198",
+            "assets": []
+          }
+        ],
+        "safetyRiskCategories": [
+          "gas-collection-apparatus",
+          "flammable-gas"
+        ],
+        "primaryFingerprint": "91b362045ed6efc9a3d78f955028938392047184fba6ca329bcf54a2c4c2f422",
+        "candidateFingerprint": "de1e6f7af81d5adc3f0596bb4c49a57d4143a3223ad6b3b364ad3ffb7ea83fe7",
+        "mergedOutput": null
+      }
+    ]
+  },
+  "mergedRecordCount": 2,
+  "blockedReasons": [
+    "conflicting gas identity: 氧气 vs 氢气+氧气"
+  ],
+  "errors": []
+}

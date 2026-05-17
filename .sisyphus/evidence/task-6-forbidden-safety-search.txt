@@ -1,0 +1,7 @@
+Task 6 forbidden safety phrase search
+file=src/data/labExperiments.json
+totalMatches=0
+未提取到安全提示: 0
+教材未提取到明确安全提示: 0
+No explicit safety note was extracted: 0
+status=pass

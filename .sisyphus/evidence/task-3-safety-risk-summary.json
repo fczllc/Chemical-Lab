@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "builder": "scripts/textbook/build-lab-experiments.mjs",
+  "check": "safety-risk-summary",
+  "status": "pass",
+  "results": [
+    {
+      "name": "heating alcohol lamp fixture",
+      "safetyLevel": "dangerous",
+      "notes": [
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "gas collection water displacement fixture",
+      "safetyLevel": "caution",
+      "notes": [
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "acid base corrosive fixture",
+      "safetyLevel": "dangerous",
+      "notes": [
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "toxic irritating gas fixture",
+      "safetyLevel": "dangerous",
+      "notes": [
+        "涉及有毒或刺激性气体时，必须通风并由教师演示，禁止直接闻气味。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "flammable hydrogen fixture",
+      "safetyLevel": "dangerous",
+      "notes": [
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
+      ],
+      "status": "pass"
+    }
+  ],
+  "errors": []
+}

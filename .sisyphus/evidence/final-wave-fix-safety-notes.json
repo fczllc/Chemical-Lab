@@ -1,0 +1,10 @@
+{
+  "audit": "Remaining English in safetyNotes detected as legitimate chemical names/formula parts (NaOH, CuSO4, C=C, etc.) which should be preserved.",
+  "status": "pass",
+  "actions": [
+    "Replaced English placeholder notes with Chinese fallback.",
+    "Hardened validator to detect and reject English placeholder notes.",
+    "Verified generator fallback logic.",
+    "Audit shows no remaining placeholder-like English strings."
+  ]
+}

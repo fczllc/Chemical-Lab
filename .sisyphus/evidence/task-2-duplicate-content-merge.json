@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "builder": "scripts/textbook/build-lab-experiments.mjs",
+  "check": "duplicate-content-merge",
+  "status": "pass",
+  "counters": {
+    "acceptedExperiments": 0,
+    "rejectedNonExperiments": 0,
+    "rejectedDuplicates": 1,
+    "rejectedMeaninglessTitle": 0,
+    "rejectedMeaninglessContent": 0,
+    "exactContentMerges": 0,
+    "looseContentMerges": 1,
+    "blockedContentMergeCandidates": 0,
+    "curatedLegacyPreserved": 0
+  },
+  "rejected": [
+    {
+      "key": "vol2|section-b",
+      "reason": "duplicate loose content similarity",
+      "mergedInto": "vol1|section-a"
+    }
+  ],
+  "mergeDetails": {
+    "exactContentMerges": [],
+    "looseContentMerges": [
+      {
+        "mergeType": "looseContentMerge",
+        "kept": {
+          "key": "vol1|section-a",
+          "id": null,
+          "title": "氧气性质检验",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "section-a",
+          "source": "rj-chemistry-grade9-2024-vol1|section-a",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "caution",
+          "safetyRiskCategories": [
+            "gas-collection-apparatus"
+          ]
+        },
+        "mergedCandidate": {
+          "key": "vol2|section-b",
+          "id": null,
+          "title": "氧气性质检验",
+          "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+          "sourceSectionId": "section-b",
+          "source": "rj-chemistry-grade8-54-2024-full|section-b",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "caution",
+          "safetyRiskCategories": [
+            "gas-collection-apparatus"
+          ]
+        },
+        "mergedCandidates": [
+          "vol1|section-a",
+          "vol2|section-b"
+        ],
+        "mergedSources": [
+          "rj-chemistry-grade8-54-2024-full|section-b",
+          "rj-chemistry-grade9-2024-vol1|section-a"
+        ],
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 0.5,
+          "phenomenaScore": 1,
+          "overallScore": 0.9
+        },
+        "hardConflictStatus": {
+          "hasHardConflict": false,
+          "reason": null
+        },
+        "sourceReferenceCountBefore": 1,
+        "sourceReferenceCountAfter": 2,
+        "sourceReferences": [
+          {
+            "candidateId": "candidate-b",
+            "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+            "sourceSectionId": "section-b",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade8-54-2024-full.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "95408549bee13df0da9c425107b824718b805a324a4e1b22d9b5fc4224e6c3d8",
+            "sectionHash": "2dbd36b6810025a4ba49c7014f409a49fea90d28bea8cc0d566c3d388eabfadd",
+            "assets": []
+          },
+          {
+            "candidateId": "candidate-a",
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+            "sourceSectionId": "section-a",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade9-2024-vol1.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "c24e6a4636f633942a26972a7d0b87c5e0bae3b60bbc9a4cdecff618f80ce3eb",
+            "sectionHash": "d2cb0ba902a28099f28b12e4674261c993d00d93a606abbd0e0fc8f69fdd7b1e",
+            "assets": []
+          }
+        ],
+        "safetyRiskCategories": [
+          "gas-collection-apparatus"
+        ],
+        "primaryFingerprint": "d01b4a9108da4ee3822a0a55b1a95df21d8092a238f3bddaf3704aad79683fe5",
+        "candidateFingerprint": "f368c50b77e663baa54459470e105cccdd4a475e945e8e397011bf276740a087",
+        "mergedOutput": null
+      }
+    ],
+    "blockedContentMergeCandidates": []
+  },
+  "mergedRecordCount": 1,
+  "sourceReferenceCount": 2,
+  "retainedPrimary": {
+    "key": "vol1|section-a",
+    "title": "氧气性质检验",
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol1"
+  },
+  "errors": []
+}

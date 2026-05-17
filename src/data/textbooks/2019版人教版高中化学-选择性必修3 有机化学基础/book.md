@@ -159,13 +159,13 @@ $\pi$ 键
 乙醇与钠能发生反应放出氢气，原因在于乙醇分子中的氢氧键极性较强，能够发生断裂。同样条件下，乙醇与钠的反应没有水与钠的反应剧烈，这是由于乙醇分子中氢氧键的极性比水分子中氢氧键的极性弱。基团之间的相互影响使官能团中化学键的极性发生变化，从而影响官能团和物质的性质。 
 
 $$
-2 H \xrightarrow {\begin{array}{c c} H & H \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & \end{array} } 2 H \xrightarrow {\begin{array}{c c} H & H \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & | \\ | & \end{array} } 2 N a \longrightarrow 2 H \xrightarrow {\begin{array}{c c} H & H \\ | & | \\ | & | \\ | & | \\ | & \end{array} } C O N a + H _ {2} \uparrow
+2\mathrm{CH_3CH_2OH}+2\mathrm{Na}\rightarrow2\mathrm{CH_3CH_2ONa}+\mathrm{H_2}\uparrow
 $$
 
 另外，由于羟基中氧原子的电负性较大，乙醇分子中的碳氧键极性也较强，在乙醇与氢溴酸的反应中，碳氧键发生了断裂。 
 
 $$
-\begin{array}{c} \mathrm {H} \xrightarrow {\mathrm {H}} \\ \mathrm {H} \xrightarrow {\mathrm {C}} \\ \mathrm {H} \xrightarrow {\mathrm {C}} \\ \mathrm {H} \end{array} \xrightarrow {\mathrm {O}} \mathrm {H} + \mathrm {H} - \mathrm {B r} \xrightarrow {\triangle} \begin{array}{c} \mathrm {H} \xrightarrow {\mathrm {H}} \\ \mathrm {H} \xrightarrow {\mathrm {C}} \\ \mathrm {H} \end{array} \xrightarrow {\mathrm {C}} \mathrm {Br} + \mathrm {H} _ {2} \mathrm {O}
+\mathrm{CH_3CH_2OH}+\mathrm{HBr}\xrightarrow{\triangle}\mathrm{CH_3CH_2Br}+\mathrm{H_2O}
 $$
 
 

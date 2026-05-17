@@ -12,6 +12,7 @@ import {
   setExperimentTitleOverride
 } from './storage.js';
 import { formulaHTML, equationHTML, mixedProseFormulaHTML, plainChemText } from './chemNotation.js';
+import { createIcons, icons } from 'lucide';
 
 const EQUATION_MAP = {
   'reaction-hydrogen-combustion': '2H2 + O2 → 2H2O',
@@ -105,6 +106,10 @@ let filterSafety = 'all';
 let filterCompletion = 'all';
 let filterLock = 'all';
 let filterGrade = 'all';
+
+function refreshLabIcons() {
+  window.requestAnimationFrame(() => createIcons({ icons }));
+}
 
 export function initLab() {
   renderLabShell();
@@ -298,6 +303,8 @@ function renderLabShell() {
   if (activeReaction && detailModalRequested && !activeDetailModal) {
     openDetailModal(activeReaction, completed.has(activeReaction.experimentId));
   }
+
+  refreshLabIcons();
 }
 
 function bindStageEvents(modalContent, activeReaction, isCompleted) {
@@ -1017,6 +1024,7 @@ function updateDetailModalContent(experiment, isCompleted) {
   if (!modal) return;
   modal.innerHTML = renderStageContent(experiment, isCompleted);
   bindStageEvents(modal, experiment, isCompleted);
+  refreshLabIcons();
 }
 
 function closeDetailModal() {

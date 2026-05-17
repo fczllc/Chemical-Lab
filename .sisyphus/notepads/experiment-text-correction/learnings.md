@@ -1,0 +1,6 @@
+## Learnings
+- The garbled LaTeX fragments in experiment records (e.g., '无水乙醇、蒸馏水、乙醇实验') originate from the initial textbook ingestion phase, not the build script.
+- The build script in 'scripts/textbook/build-lab-experiments.mjs' currently passes through this garbled content into 'src/data/labExperiments.json'.
+- Correction should focus on updating 'src/data/labExperiments.json' or the ingestion process to resolve the LaTeX encoding issues.
+- For generated experiment text corrections, update both source snapshots (source-inventory.json / draft-inventory.json sourceText) and builder-facing candidate text (xperiment-candidates.json / draft xperimentCandidates[].textbookContent) before rerunning scripts/textbook/build-lab-experiments.mjs --write; the builder strips LaTeX wrappers for runtime display, so safe Unicode formulas can be preferable in candidate 	extbookContent.
+- For generated experiment text corrections, update source snapshots (source-inventory.json and draft-inventory.json sourceText) plus builder-facing candidate text (experiment-candidates.json and draft experimentCandidates textbookContent) before rerunning scripts/textbook/build-lab-experiments.mjs --write; the builder strips LaTeX wrappers for runtime display, so safe Unicode formulas can be preferable in candidate textbookContent.

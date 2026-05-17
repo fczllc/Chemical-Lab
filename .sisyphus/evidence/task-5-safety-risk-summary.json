@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "safety-risk-summary",
+  "status": "pass",
+  "counters": {
+    "totalRecords": 3,
+    "starterRecords": 1,
+    "lockedRecords": 2,
+    "missingRequiredFields": 0,
+    "invalidSourceKind": 0,
+    "invalidSafetyLevel": 0,
+    "missingUnlockRequirements": 0,
+    "invalidUnlockRequirements": 0,
+    "invalidStringFields": 0,
+    "meaninglessTitles": 0,
+    "meaninglessDescriptions": 0,
+    "dirtyDisplayFields": 0,
+    "invalidCuratedLegacyIds": 0,
+    "invalidTextbookSourceKind": 0,
+    "nonArrayFields": 0,
+    "emptyArrayFields": 0,
+    "duplicateIds": 0,
+    "duplicateContentClusters": 0,
+    "invalidSafetyNotes": 0,
+    "invalidSourceReferences": 0,
+    "duplicateSourceReferences": 0
+  },
+  "notes": [
+    "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+    "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
+  ],
+  "errors": []
+}

@@ -26,3 +26,4 @@
 - npm run validate:textbook-workflow -- --all-reviewed passes with the existing runtime-integrity bundle-size warning for dist/assets/index-CF2dz5nR.js (8275 KiB); no bundling changes were made for this task.
 
 Fixed generator to reject '实验现象的观察与描述' as a generic title.
+- [x] Fix safety note Chinese fallback for textbook-experiments (80/80 fixed). Replaced English placeholders with Chinese default. Hardened validator. Audit confirmed only legitimate chemical notation remains in English.

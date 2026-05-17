@@ -168,7 +168,7 @@
       "title": "无水乙醇、蒸馏水、乙醇实验",
       "name": "无水乙醇、蒸馏水、乙醇实验",
       "description": "观察无水乙醇、蒸馏水、乙醇实验：向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。",
-      "textbookContent": "向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。 乙醇与钠能发生反应放出氢气，原因在于乙醇分子中的氢氧键极性较强，能够发生断裂。同样条件下，乙醇与钠的反应没有水与钠的反应剧烈，这是由于乙醇分子中氢氧键的极性比水分子中氢氧键的极性弱。基团之间的相互影响使官能团中化学键的极性发生变化，从而影响官能团和物质的性质。 $ 2 H \\xrightarrow {\\begin{array}{c c} H & H \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & \\end{array} } 2 H \\xrightarrow {\\begin{array}{c c} H & H \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & \\end{array} } 2 N a \\longrightarrow 2 H \\xrightarrow {\\begin{array}{c c} H & H \\\\ | & | \\\\ | & | \\\\ | & | \\\\ | & \\end{array} } C O N a + H _ {2} \\uparrow 另外，由于羟基中氧原子的电负性较大，乙醇分子中的碳氧键极性也较强，在乙醇与氢溴酸的反应中，碳氧键发生了断裂。 \\begin{array}{c} H \\xrightarrow {H} \\\\ H \\xrightarrow {C} \\\\ H \\xrightarrow {C} \\\\ H \\end{array} \\xrightarrow {O} H + H - B r \\xrightarrow {\\triangle} \\begin{array}{c} H \\xrightarrow {H} \\\\ H \\xrightarrow {C} \\\\ H \\end{array} \\xrightarrow {C} Br + H _ {2} O $",
+      "textbookContent": "向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。 乙醇与钠能发生反应放出氢气，原因在于乙醇分子中的氢氧键极性较强，能够发生断裂。同样条件下，乙醇与钠的反应没有水与钠的反应剧烈，这是由于乙醇分子中氢氧键的极性比水分子中氢氧键的极性弱。基团之间的相互影响使官能团中化学键的极性发生变化，从而影响官能团和物质的性质。 2CH₃CH₂OH + 2Na → 2CH₃CH₂ONa + H₂↑ 另外，由于羟基中氧原子的电负性较大，乙醇分子中的碳氧键极性也较强，在乙醇与氢溴酸的反应中，碳氧键发生了断裂。 CH₃CH₂OH + HBr → CH₃CH₂Br + H₂O",
       "materials": [
         "烧杯",
         "水"
@@ -182,7 +182,7 @@
       "visualDescription": "围绕“无水乙醇、蒸馏水、乙醇实验”呈现实验器材、操作步骤和现象变化：向两只分别盛有蒸馏水和无水乙醇的烧杯中各加入同样大小的钠（约绿豆大），观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -269,7 +269,7 @@
       "visualDescription": "围绕“粗苯甲酸样品的状态”呈现实验器材、操作步骤和现象变化：(1) 观察粗苯甲酸样品的状态。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "加热, 搅拌, 使粗苯甲酸充分溶解。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -386,7 +386,10 @@
       "visualDescription": "围绕“电石实验”呈现实验器材、操作步骤和现象变化：图2-6 乙炔的实验室制取及性质检验 记录： 实验内容 实验现象 (1)将饱和氯化钠溶液滴入盛有电石的烧瓶中 (2)将纯。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -498,7 +501,7 @@
       "visualDescription": "围绕“向两支各盛有 2 mL 苯的试管中分别加入酸性高”呈现实验器材、操作步骤和现象变化：向两支各盛有 2 mL 苯的试管中分别加入酸性高锰酸钾溶液和溴水, 用力振荡, 观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "该实验风险较高，真实操作需教师演示或全程监督，学生仅在虚拟环境学习。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -664,7 +667,8 @@
       "visualDescription": "围绕“水的分离提纯”呈现实验器材、操作步骤和现象变化：待溶液分层后, 用胶头滴管小心吸取少量上层水溶液, 移入另一支盛有 1 mL 稀硝酸的试管中, 然后加入2滴 AgNO_。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "取一支试管, 滴入 10 \\sim 15 滴溴乙烷, 再加入 1 mL 5 \\% NaOH 溶液, 振荡后加热, 静置。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -744,7 +748,7 @@
       "visualDescription": "围绕“乙醇的反应现象”呈现实验器材、操作步骤和现象变化：如图3-10所示，在试管中加入酸性重铬酸钾溶液，然后滴加乙醇，充分振荡，观察实验现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -858,7 +862,7 @@
       "visualDescription": "围绕“(1)向盛有0.3g苯酚晶体的试管 中加入2mL”呈现实验器材、操作步骤和现象变化：实验内容 实验现象 (1)向盛有0.3g苯酚晶体的试管 中加入2mL蒸馏水，振荡试管 (2)向试管中逐滴加入5%NaOH。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1050,7 +1054,7 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：再向其中逐滴加入饱和溴水, 边加边振荡, 观察实验现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1161,7 +1165,7 @@
       "visualDescription": "围绕“向盛有少量苯酚稀溶液的试管中”呈现实验器材、操作步骤和现象变化：向盛有少量苯酚稀溶液的试管中，滴入几滴 FeCl_3 溶液，振荡，观察实验现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "含酚类物质的废水对生物具有毒害作用，会对水体造成严重污染。"
+        "该实验风险较高，真实操作需教师演示或全程监督，学生仅在虚拟环境学习。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1241,7 +1245,7 @@
       "visualDescription": "围绕“【设计与实验】”呈现实验器材、操作步骤和现象变化：实验内容 实验现象 结论 (2) 利用下图所示仪器和药品, 设计一个简单的一次性完成的实验装置, 比较乙酸、碳酸和苯酚的。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1460,7 +1464,7 @@
       "visualDescription": "围绕“【设计与实验】”呈现实验器材、操作步骤和现象变化：） 实验方案与步骤： 实验内容 实验现象 结论 (1)中性、酸性和碱性溶液中水解速率的比较 (2)不同温度下水解速率的比。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1549,10 +1553,8 @@
       "visualDescription": "围绕“(2)向盛有少量1-己烯的试管里滴加酸性KM”呈现实验器材、操作步骤和现象变化：(2)向其中一支试管中滴入2滴石蕊溶液，观察现象。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "(3)向另一支试管中滴入2滴稀硫酸, 加热后滴入几滴 NaHCO_{3} 溶液①, 振荡。",
-        "1. 几种常见官能团的检验 有机化合物类别 官能团 实验内容 实验现象 解释及化学方程式 烯烃 C=C碳碳双键 (1)向盛有少量1-己烯的试管里滴加溴水,观察现象(2)向盛有少量1-己烯的试管里滴加酸性KMnO4溶液,观察现象 卤代烃 C-X碳卤键 向试管里加入几滴1-溴丁烷,再加入2mL5%NaOH溶液,振荡后加热。",
-        "反应一段时间后停止加热,静置。",
-        "然后加入0.5mL乙醛溶液,加热,观察现象 2. 请用实验方法区分下列两组物质： (1) 乙醇、1-己烯、苯和四氯化碳； (2) 1-丙醇、2-氯丙烷、丙醛和苯酚溶液。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1636,8 +1638,7 @@
       "visualDescription": "围绕“葡萄糖、水的分离提纯”呈现实验器材、操作步骤和现象变化：(3) 将上述两个实验的现象与实验 3-7 和实验 3-8 的现象进行比较, 你能得出什么结论?。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "(1) 在一支洁净的试管中配制约 2 mL 银氨溶液, 加入 1 mL 10 \\% 葡萄糖溶液, 振荡, 然后在水浴中加热。",
-        "(2) 在另一支试管中加入 2 mL 10 \\% NaOH 溶液, 加入 5 滴 5 \\% CuSO_{4} 溶液, 再加入 2 mL 10 \\% 葡萄糖溶液, 加热。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1749,7 +1750,7 @@
       "visualDescription": "围绕“葡萄糖的鉴别检验”呈现实验器材、操作步骤和现象变化：根据实验4-1中检验葡萄糖还原性的方法，自行设计实验方案进行探究。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1831,7 +1832,8 @@
       "visualDescription": "围绕“解释实验现象”呈现实验器材、操作步骤和现象变化：加入过量 NaOH 溶液中和至碱性, 再滴入 3 滴 5 \\% CuSO_{4} 溶液, 加热, 观察并解释实验现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "加入过量 NaOH 溶液中和至碱性, 再滴入 3 滴 5 \\% CuSO_{4} 溶液, 加热, 观察并解释实验现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1914,7 +1916,7 @@
       "visualDescription": "围绕“在试管中加入 2 mL 饱和 \\left(NH_”呈现实验器材、操作步骤和现象变化：再继续加入蒸馏水,振荡, 观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -1997,9 +1999,8 @@
       "visualDescription": "围绕“在三支试管中各加入 2 mL 鸡蛋清溶液”呈现实验器材、操作步骤和现象变化：再向试管中加入蒸馏水, 观察产生的沉淀能否溶解。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "例如，食物加热后，其中的蛋白质发生了变性，有利于人体消化吸收；乙醇、苯酚和碘等作为消毒防腐药可以使微生物的蛋白质变性，导致其死亡，达到消毒的目的；紫外线可用于杀菌消毒。",
-        "有时也要注意防止蛋白质变性。",
-        "在三支试管中各加入 2 mL 鸡蛋清溶液, 将一支试管加热, 向另两支试管中分别加入硝酸银溶液和乙醇, 观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -2084,8 +2085,8 @@
       "visualDescription": "围绕“产物的颜色和状态”呈现实验器材、操作步骤和现象变化：当试管中反应物接近沸腾时, 从水浴中取出试管, 并用玻璃棒搅拌, 观察产物的颜色和状态。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "(1) 在大试管中加入 2 g 苯酚、 3 mL 质量分数为 40 \\% 的甲醛溶液和 3 滴浓盐酸, 在水浴中加热。",
-        "(2) 在另一大试管中加入 2 g 苯酚和 3 mL 质量分数为 40 \\% 的甲醛溶液, 置于水浴中加热片刻, 稍加振荡后, 加入 0.5 mL 浓氨水, 在水浴中加热, 注意与 (1) 中酸催化的聚合反应进行比较。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -2280,7 +2281,7 @@
       "visualDescription": "围绕“和记录现象”呈现实验器材、操作步骤和现象变化：(2) 在已知质量的 100 mL 烧杯中放入 70 mL 水, 再放入 1.0 g\\left(m_{1}\\right)。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g12-organic-textbook-experiment"
@@ -2358,20 +2359,24 @@
         "在带尖嘴的导管口点燃纯净的氢气，在火焰上方罩一个干燥的小烧杯（如图4-16），过一会儿，观察烧杯壁上的现象。"
       ],
       "observedPhenomena": [
-        "在带尖嘴的导管口点燃纯净的氢气，在火焰上方罩一个干燥的小烧杯（如图4-16），过一会儿，观察烧杯壁上的现象。"
+        "在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。"
       ],
       "visualDescription": "围绕“氢气燃烧”呈现实验器材、操作步骤和现象变化：在带尖嘴的导管口点燃纯净的氢气，在火焰上方罩一个干燥的小烧杯（如图4-16），过一会儿，观察烧杯壁上的现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -2451,6 +2456,72 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/3efc3be3538f7b2139b0385f6a320fc206ca013818393d4774f5877c14c57c1b.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-4】",
+          "lineRange": "2439-2453",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
+          "assets": [
+            {
+              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
+              "altText": "",
+              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
+              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
+              "sourceLineNumber": 2447,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-4】",
+          "lineRange": "2439-2453",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
+          "assets": [
+            {
+              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
+              "altText": "",
+              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
+              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
+              "sourceLineNumber": 2447,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-4】",
+          "lineRange": "2439-2453",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
+          "assets": [
+            {
+              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
+              "altText": "",
+              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
+              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
+              "sourceLineNumber": 2447,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
+            }
+          ]
         }
       ]
     },
@@ -2470,20 +2541,23 @@
         "把带有火星的木条插入盛有氧气的集气瓶中，观察木条是否复燃。"
       ],
       "observedPhenomena": [
-        "把带有火星的木条插入盛有氧气的集气瓶中，观察木条是否复燃。"
+        "把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。"
       ],
       "visualDescription": "围绕“木条是否复燃”呈现实验器材、操作步骤和现象变化：把带有火星的木条插入盛有氧气的集气瓶中，观察木条是否复燃。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -2563,6 +2637,72 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/a310c2128616f5d245f50901659e689e0f7b3caeb47796ad6d969956d43f772d.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0071-2-1-l938-l957-6951bf5bee",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-1】",
+          "lineRange": "938-957",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
+          "assets": [
+            {
+              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
+              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
+              "sourceLineNumber": 951,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0071-2-1-l938-l957-6951bf5bee",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-1】",
+          "lineRange": "938-957",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
+          "assets": [
+            {
+              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
+              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
+              "sourceLineNumber": 951,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0071-2-1-l938-l957-6951bf5bee",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-1】",
+          "lineRange": "938-957",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
+          "assets": [
+            {
+              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
+              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
+              "sourceLineNumber": 951,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
+            }
+          ]
         }
       ]
     },
@@ -2594,7 +2734,8 @@
       "visualDescription": "围绕“铁、石蜡、水的分离提纯”呈现实验器材、操作步骤和现象变化：图1-2 石蜡的熔化 (3) 在一支试管中加入 1 \\sim 2 mL 氢氧化钠溶液,向其中滴加硫酸铜溶液 (如图 1-。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "在试管底部小心加热, 图1-1 水的沸腾 (2) 将盛有一小块石蜡的试管置于盛有沸水的烧杯中（如图 1-2），观察并记录实验现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -2810,26 +2951,31 @@
         "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化，观察时要全面、细致；要用语言和文字客观、全面、准确地对观察到的现象进行描述，为进一步研究物质及其变化提供证据。",
         "实验现象的观察与描述 在实验1-1中，我们通过观察实验现象，初步认识了物质的变化。",
         "图1-5 化学变化中伴随发生的一些现象 在物质发生化学变化的过程中，会同时发生物理变化。",
-        "在实验中观察到的现象（如图1-5），常常可以帮助我们判断物质是否发生了化学变化。"
+        "在实验中观察到的现象（如图1-5），常常可以帮助我们判断物质是否发生了化学变化。",
+        "图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。"
       ],
       "observedPhenomena": [
-        "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化，观察时要全面、细致；要用语言和文字客观、全面、准确地对观察到的现象进行描述，为进一步研究物质及其变化提供证据。",
-        "实验现象的观察与描述 在实验1-1中，我们通过观察实验现象，初步认识了物质的变化。",
+        "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现象进行描述,为进一步研究物质及其变化提供证据。",
+        "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。",
         "图1-5 化学变化中伴随发生的一些现象 在物质发生化学变化的过程中，会同时发生物理变化。",
-        "在实验中观察到的现象（如图1-5），常常可以帮助我们判断物质是否发生了化学变化。"
+        "在实验中观察到的现象(如图1-5),常常可以帮助我们判断物质是否发生了化学变化。",
+        "图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。"
       ],
       "visualDescription": "围绕“实验现象的观察与描述 在实验1-1中”呈现实验器材、操作步骤和现象变化：实验时要重点观察实验前后试剂的颜色、状态、气味等的变化，观察时要全面、细致；要用语言和文字客观、全面、准确地对观察到的现。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -2879,6 +3025,72 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:48b342241bbb73c5e8758a8be601b6a468cbabec210d4911237bbd6d150b131a",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0010-source-section-l89-l113-9197900129",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验现象的观察与描述",
+          "lineRange": "89-113",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
+          "assets": [
+            {
+              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
+              "altText": "",
+              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
+              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
+              "sourceLineNumber": 105,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0010-source-section-l89-l113-9197900129",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验现象的观察与描述",
+          "lineRange": "89-113",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
+          "assets": [
+            {
+              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
+              "altText": "",
+              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
+              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
+              "sourceLineNumber": 105,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0010-source-section-l89-l113-9197900129",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验现象的观察与描述",
+          "lineRange": "89-113",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
+          "assets": [
+            {
+              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
+              "altText": "",
+              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
+              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
+              "sourceLineNumber": 105,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
+            }
+          ]
         }
       ]
     },
@@ -2898,21 +3110,24 @@
         "分别取一集气瓶氧气和一集气瓶二氧化碳, 观察它们的颜色, 闻一闻气味。"
       ],
       "observedPhenomena": [
-        "点燃一根小木条, 将其分别慢慢地放入盛有氧气和二氧化碳的集气瓶中, 观察木条燃烧的现象并记录发生的变化。",
-        "分别取一集气瓶氧气和一集气瓶二氧化碳, 观察它们的颜色, 闻一闻气味。"
+        "点燃一根小木条,将其分别慢慢地放入盛有氧气和二氧化碳的集气瓶中,观察木条燃烧的现象并记录发生的变化。",
+        "分别取一集气瓶氧气和一集气瓶二氧化碳,观察它们的颜色,闻一闻气味。"
       ],
       "visualDescription": "围绕“它们的颜色”呈现实验器材、操作步骤和现象变化：点燃一根小木条, 将其分别慢慢地放入盛有氧气和二氧化碳的集气瓶中, 观察木条燃烧的现象并记录发生的变化。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -2962,6 +3177,42 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:cbf76f6c981da923a79964b7ea031a199573a72213dd3f6eaf20321f25ff8780",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0013-1-2-l136-l141-904d58ccca",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0013-1-2-l136-l141-904d58ccca",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验1-2】",
+          "lineRange": "136-141",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:904d58ccca28f76913a683e21980be557a0a8261fb21c9b50e0ec35e33f476ae",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0013-1-2-l136-l141-904d58ccca",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0013-1-2-l136-l141-904d58ccca",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验1-2】",
+          "lineRange": "136-141",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:904d58ccca28f76913a683e21980be557a0a8261fb21c9b50e0ec35e33f476ae",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0013-1-2-l136-l141-904d58ccca",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0013-1-2-l136-l141-904d58ccca",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验1-2】",
+          "lineRange": "136-141",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:904d58ccca28f76913a683e21980be557a0a8261fb21c9b50e0ec35e33f476ae",
+          "assets": []
         }
       ]
     },
@@ -2992,8 +3243,9 @@
       "visualDescription": "围绕“氢氧化钠、钠实验”呈现实验器材、操作步骤和现象变化：实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22 把玻璃导管插入橡胶塞的孔里 图1-。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22 把玻璃导管插入橡胶塞的孔里 图1-23 在玻璃导管上套上乳胶管 图1-24 用橡胶塞塞住试管 图1-25 检查装置的气密性",
-        "用试管夹夹住该试管 (夹在距试管口 \\frac{1}{4} \\sim \\frac{1}{3} 处), 按图 1-20 所示的方法加热, 观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -3183,23 +3435,25 @@
         "观察蜡烛的颜色、状态、形状, 闻一闻气味, 并进行描述。用小刀切下一块石蜡放入水中, 根据实验现象对石蜡的硬度和密度进行初步判断。"
       ],
       "observedPhenomena": [
-        "(1) 观察蜡烛的颜色、状态、形状, 闻一闻气味, 并进行描述。",
-        "(2) 点燃蜡烛, 仔细观察燃着的部分, 描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。",
-        "分别取一个干燥的烧杯和一个用澄清石灰水润湿内壁的烧杯，先后罩在火焰上方（如图1-27），观察并描述烧杯中的现象。",
-        "用小刀切下一块石蜡放入水中, 根据实验现象对石蜡的硬度和密度进行初步判断。"
+        "(1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。",
+        "(2)点燃蜡烛,仔细观察燃着的部分,描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。",
+        "分别取一个干燥的烧杯和一个用澄清石灰水润湿内壁的烧杯,先后罩在火焰上方(如图1-27),观察并描述烧杯中的现象。",
+        "用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。"
       ],
       "visualDescription": "围绕“蜡烛的颜色”呈现实验器材、操作步骤和现象变化：(1) 观察蜡烛的颜色、状态、形状, 闻一闻气味, 并进行描述。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -3306,6 +3560,99 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/de14a815d04210274cf739cd6ab464dbda140d26967bed79f99852439afcadb6.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0039-source-section-l485-l514-52f9674a15",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验】",
+          "lineRange": "485-514",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
+          "assets": [
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
+              "altText": "",
+              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
+              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
+              "sourceLineNumber": 493,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
+            },
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
+              "altText": "",
+              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
+              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
+              "sourceLineNumber": 500,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0039-source-section-l485-l514-52f9674a15",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验】",
+          "lineRange": "485-514",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
+          "assets": [
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
+              "altText": "",
+              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
+              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
+              "sourceLineNumber": 493,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
+            },
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
+              "altText": "",
+              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
+              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
+              "sourceLineNumber": 500,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0039-source-section-l485-l514-52f9674a15",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验】",
+          "lineRange": "485-514",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
+          "assets": [
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
+              "altText": "",
+              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
+              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
+              "sourceLineNumber": 493,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
+            },
+            {
+              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
+              "altText": "",
+              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
+              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
+              "sourceLineNumber": 500,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
+            }
+          ]
         }
       ]
     },
@@ -3323,20 +3670,22 @@
         "实验时一般将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如温度、压强、浓度等）的数据，通过软件对数据进行记录、呈现和分析。"
       ],
       "observedPhenomena": [
-        "实验时一般将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如温度、压强、浓度等）的数据，通过软件对数据进行记录、呈现和分析。"
+        "实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。"
       ],
       "visualDescription": "围绕“测定空气中氧气含量的数字化实验”呈现实验器材、操作步骤和现象变化：实验时一般将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如温度、压强、浓度等）的数据，通过软件对数据进。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "safe"
@@ -3416,6 +3765,72 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/eee4905ef1b090c6a8a2e7a423dc1c2a02ab174a2dadd0a201ab261c315a0495.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0054-source-section-l744-l760-e7662b5d75",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "测定空气中氧气含量的数字化实验",
+          "lineRange": "744-760",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
+          "assets": [
+            {
+              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
+              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
+              "sourceLineNumber": 750,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0054-source-section-l744-l760-e7662b5d75",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "测定空气中氧气含量的数字化实验",
+          "lineRange": "744-760",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
+          "assets": [
+            {
+              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
+              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
+              "sourceLineNumber": 750,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0054-source-section-l744-l760-e7662b5d75",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "测定空气中氧气含量的数字化实验",
+          "lineRange": "744-760",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
+          "assets": [
+            {
+              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
+              "altText": "",
+              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
+              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
+              "sourceLineNumber": 750,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
+            }
+          ]
         }
       ]
     },
@@ -3446,7 +3861,8 @@
       "visualDescription": "围绕“木炭在空气中燃烧的现象”呈现实验器材、操作步骤和现象变化：然后把燃着的木炭插入充满氧气的集气瓶中（如图2-11），再观察木炭在氧气中燃烧的现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "用坩埚钳夹取一小块木炭放在酒精灯火焰上加热，观察木炭在空气中燃烧的现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -3521,25 +3937,31 @@
       "steps": [
         "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中（如图2-12），再观察硫在氧气中燃烧的现象。",
         "图2-12 硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应，生成了一种有刺激性气味的二氧化硫（SO_2 ）气体，并放出热量。",
-        "在燃烧匙里放入少量硫，加热，直到发生燃烧，观察硫在空气中燃烧的现象。"
+        "在燃烧匙里放入少量硫，加热，直到发生燃烧，观察硫在空气中燃烧的现象。",
+        "图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫(S O _ { 2 } )气体,并放出热量。"
       ],
       "observedPhenomena": [
-        "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中（如图2-12），再观察硫在氧气中燃烧的现象。",
+        "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。",
         "图2-12 硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应，生成了一种有刺激性气味的二氧化硫（SO_2 ）气体，并放出热量。",
-        "在燃烧匙里放入少量硫，加热，直到发生燃烧，观察硫在空气中燃烧的现象。"
+        "在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。",
+        "图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫(S O _ { 2 } )气体,并放出热量。"
       ],
       "visualDescription": "围绕“硫在空气中燃烧的现象”呈现实验器材、操作步骤和现象变化：然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中（如图2-12），再观察硫在氧气中燃烧的现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "在燃烧匙里放入少量硫，加热，直到发生燃烧，观察硫在空气中燃烧的现象。"
+        "涉及有毒或刺激性气体时，必须通风并由教师演示，禁止直接闻气味。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -3589,6 +4011,72 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:d52ad6fa48067093d6af887611c2cf3481fb243bc6fac7fd17d2b254875f5e0e",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0073-2-3-l976-l998-bf8355df56",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-3】",
+          "lineRange": "976-998",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
+          "assets": [
+            {
+              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
+              "altText": "",
+              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
+              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
+              "sourceLineNumber": 982,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0073-2-3-l976-l998-bf8355df56",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-3】",
+          "lineRange": "976-998",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
+          "assets": [
+            {
+              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
+              "altText": "",
+              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
+              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
+              "sourceLineNumber": 982,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0073-2-3-l976-l998-bf8355df56",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-3】",
+          "lineRange": "976-998",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
+          "assets": [
+            {
+              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
+              "altText": "",
+              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
+              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
+              "sourceLineNumber": 982,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
+            }
+          ]
         }
       ]
     },
@@ -3612,21 +4100,24 @@
         "取一根在酒精灯火焰上烧至红热，观察现象。"
       ],
       "observedPhenomena": [
-        "另取一根，在其下端系一根火柴，点燃火柴，待火柴快燃尽时，插入盛有氧气的集气瓶中（预先放入一些水，如图2-13），观察现象。",
-        "取一根在酒精灯火焰上烧至红热，观察现象。"
+        "另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。",
+        "取一根在酒精灯火焰上烧至红热,观察现象。"
       ],
       "visualDescription": "围绕“铁实验”呈现实验器材、操作步骤和现象变化：另取一根，在其下端系一根火柴，点燃火柴，待火柴快燃尽时，插入盛有氧气的集气瓶中（预先放入一些水，如图2-13），观察现象。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "在空气中加热细铁丝时，铁丝红热，不能燃烧；但在氧气中点燃细铁丝可发生剧烈燃烧，火星四射。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -3676,6 +4167,42 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:6ac6328488f9062f47af6d2c0f8d3afee2ffc222017d30cefd3d1f1731ca945b",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0075-2-4-l1012-l1025-49058e2e88",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-4】",
+          "lineRange": "1012-1025",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0075-2-4-l1012-l1025-49058e2e88",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-4】",
+          "lineRange": "1012-1025",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0075-2-4-l1012-l1025-49058e2e88",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-4】",
+          "lineRange": "1012-1025",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
+          "assets": []
         }
       ]
     },
@@ -3700,25 +4227,29 @@
       ],
       "steps": [
         "加热试管, 当导管口连续并比较均匀地放出气泡时, 把导管口伸入盛满水的集气瓶, 用排水法收集一瓶氧气。",
-        "把带有火星的木条插入集气瓶中, 观察现象。 图2-14 高锰酸钾分解制取氧气 实验编号 现象"
+        "把带有火星的木条插入集气瓶中, 观察现象。 图2-14 高锰酸钾分解制取氧气 实验编号 现象",
+        "把带有火星的木条插入集气瓶中,观察现象。 图2-14高锰酸钾分解制取氧气 实验编号 现象"
       ],
       "observedPhenomena": [
-        "(2) 把带有火星的木条插入集气瓶中, 观察现象。",
-        "图2-14 高锰酸钾分解制取氧气 实验编号 现象 (1) (2) 高锰酸钾是一种暗紫色的固体，它受热时分解出氧气，同时还生成锰酸钾和二氧化锰。"
+        "(2)把带有火星的木条插入集气瓶中,观察现象。",
+        "图2-14 高锰酸钾分解制取氧气 实验编号 现象 (1) (2) 高锰酸钾是一种暗紫色的固体，它受热时分解出氧气，同时还生成锰酸钾和二氧化锰。",
+        "图2-14高锰酸钾分解制取氧气 实验编号 现象 (1） (2) 高锰酸钾是一种暗紫色的固体,它受热时分解出氧气,同时还生成锰酸钾和二氧化锰。"
       ],
       "visualDescription": "围绕“连接好装置”呈现实验器材、操作步骤和现象变化：(2) 把带有火星的木条插入集气瓶中, 观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "(1) 加热试管, 当导管口连续并比较均匀地放出气泡时, 把导管口伸入盛满水的集气瓶, 用排水法收集一瓶氧气。",
-        "加热高锰酸钾 锰酸钾 + 二氧化锰 + 氧气"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -3768,6 +4299,72 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:88d04d5c93cfa67080ec59665a3ab2cb92d645042e1a4f453892003c0c3abcb9",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0081-2-5-l1104-l1130-a424db08b7",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-5】",
+          "lineRange": "1104-1130",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
+          "assets": [
+            {
+              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
+              "altText": "",
+              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
+              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
+              "sourceLineNumber": 1114,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0081-2-5-l1104-l1130-a424db08b7",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-5】",
+          "lineRange": "1104-1130",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
+          "assets": [
+            {
+              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
+              "altText": "",
+              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
+              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
+              "sourceLineNumber": 1114,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0081-2-5-l1104-l1130-a424db08b7",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验2-5】",
+          "lineRange": "1104-1130",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
+          "assets": [
+            {
+              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
+              "altText": "",
+              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
+              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
+              "sourceLineNumber": 1114,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
+            }
+          ]
         }
       ]
     },
@@ -3793,7 +4390,7 @@
       "visualDescription": "围绕“（1）在试管中加入 5mL5\\% 过氧化氢溶液”呈现实验器材、操作步骤和现象变化：（1）在试管中加入 5mL5\\% 过氧化氢溶液，把带有火星的木条插入试管，观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -3900,20 +4497,22 @@
         "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中，我们根据探究目的设计了三个对比实验方案；观察和记录实验中带有火星的木条是否复燃等实验现象，收集证据；通过基于证据的分析推理，最后形成了催化剂的概念。"
       ],
       "observedPhenomena": [
-        "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中，我们根据探究目的设计了三个对比实验方案；观察和记录实验中带有火星的木条是否复燃等实验现象，收集证据；通过基于证据的分析推理，最后形成了催化剂的概念。"
+        "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。"
       ],
       "visualDescription": "围绕“实验探究的一般思路”呈现实验器材、操作步骤和现象变化：实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中，我们根据探究目的设计了三个对比实验方案；。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "safe"
@@ -3963,6 +4562,42 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:6ec1bdee18dca71126227034afab39d864e54ac87a8f391f494c1323e909e1a9",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验探究的一般思路",
+          "lineRange": "1213-1218",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验探究的一般思路",
+          "lineRange": "1213-1218",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "实验探究的一般思路",
+          "lineRange": "1213-1218",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
+          "assets": []
         }
       ]
     },
@@ -3992,7 +4627,7 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：上述生活和实验中的现象，在很久以前就引起了一些学者的探究兴趣。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4162,7 +4797,7 @@
       "visualDescription": "围绕“溶液的颜色”呈现实验器材、操作步骤和现象变化：(1) 向盛有 20 mL 蒸馏水的小烧杯 A 中滴入 5 6 滴酚酞溶液, 搅拌均匀, 观察溶液的颜色。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4274,7 +4909,7 @@
       "visualDescription": "围绕“水实验”呈现实验器材、操作步骤和现象变化：向其中一个烧杯中加入3药匙明矾粉末，搅拌溶解后，分置于两个烧杯中，静置，观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4356,15 +4991,17 @@
       "visualDescription": "围绕“水实验”呈现实验器材、操作步骤和现象变化：观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "取实验4- 1中处理过的一杯液体，沿玻璃棒慢慢向漏斗中倾倒，注意液面始终要低于滤纸的边缘。"
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "safe"
@@ -4471,6 +5108,72 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/25eaeeb5ceab9f037f41462e3d2d04109ec0d06fcfac0767f728567887c0c377.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-2】",
+          "lineRange": "2310-2326",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
+          "assets": [
+            {
+              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
+              "altText": "",
+              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
+              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
+              "sourceLineNumber": 2316,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-2】",
+          "lineRange": "2310-2326",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
+          "assets": [
+            {
+              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
+              "altText": "",
+              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
+              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
+              "sourceLineNumber": 2316,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验4-2】",
+          "lineRange": "2310-2326",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
+          "assets": [
+            {
+              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
+              "altText": "",
+              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
+              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
+              "sourceLineNumber": 2316,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
+            }
+          ]
         }
       ]
     },
@@ -4495,7 +5198,7 @@
       "visualDescription": "围绕“玻璃管内的现象”呈现实验器材、操作步骤和现象变化：(1) 如图 4-17 所示，在电解器玻璃管中加满水①，接通直流电源，观察并记录玻璃管内的现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4579,7 +5282,9 @@
       "visualDescription": "围绕“氢气燃烧”呈现实验器材、操作步骤和现象变化：（2）接通直流电源，观察玻璃管内的现象并记录。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4664,8 +5369,8 @@
       "visualDescription": "围绕“根据以下实验方案分组进行实验①”呈现实验器材、操作步骤和现象变化：反应一段时间后停止加热，待装置冷却后再次称量，记录所称的质量 m_{2}。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "反应一段时间后停止加热，待装置冷却后再次称量，记录所称的质量 m_{2}。",
-        "再将锥形瓶置于陶土网上，用酒精灯加热，观察实验现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -4801,21 +5506,23 @@
         "在烧杯中加入碳酸钠，再小心地放入盛有盐酸的小试管，将装置放在天平上（如图5-3），记录所称的质量。"
       ],
       "observedPhenomena": [
-        "取下烧杯并将其倾斜，使小试管中的盐酸流入烧杯，观察现象。",
-        "在烧杯中加入碳酸钠，再小心地放入盛有盐酸的小试管，将装置放在天平上（如图5-3），记录所称的质量。"
+        "取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。",
+        "在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。"
       ],
       "visualDescription": "围绕“碳酸钠、钠的反应现象”呈现实验器材、操作步骤和现象变化：取下烧杯并将其倾斜，使小试管中的盐酸流入烧杯，观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -4895,6 +5602,42 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/c7e1bd518a4e0b41b062925558e079041587131c43232761d54f02062dc30955.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0248-5-1-l3024-l3035-c51c863b33",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验5-1】",
+          "lineRange": "3024-3035",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0248-5-1-l3024-l3035-c51c863b33",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验5-1】",
+          "lineRange": "3024-3035",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0248-5-1-l3024-l3035-c51c863b33",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验5-1】",
+          "lineRange": "3024-3035",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
+          "assets": []
         }
       ]
     },
@@ -4919,7 +5662,7 @@
       "visualDescription": "围绕“镁实验”呈现实验器材、操作步骤和现象变化：取一根用砂纸打磨干净的长镁条和一个陶土网，将它们一起放在天平上称量，记录所称的质量。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5026,21 +5769,23 @@
         "现象 分析 木炭具有疏松多孔的结构，因此它具有吸附能力。"
       ],
       "observedPhenomena": [
-        "投入几块烘烤过的木炭（或活性炭），轻轻振荡锥形瓶，观察现象。",
-        "现象 分析 木炭具有疏松多孔的结构，因此它具有吸附能力。"
+        "投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。",
+        "现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。"
       ],
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：投入几块烘烤过的木炭（或活性炭），轻轻振荡锥形瓶，观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "safe"
@@ -5090,6 +5835,99 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:e118a504941bc9f89c20e1aa57b83649d41d6b17f94cb123c67d88b5a312bfc7",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-1】",
+          "lineRange": "3466-3489",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
+          "assets": [
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
+              "altText": "",
+              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
+              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
+              "sourceLineNumber": 3480,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
+            },
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
+              "altText": "",
+              "rawReference": "![](images/![image]()",
+              "assetPath": "images/![image](",
+              "sourceLineNumber": 3483,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-1】",
+          "lineRange": "3466-3489",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
+          "assets": [
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
+              "altText": "",
+              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
+              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
+              "sourceLineNumber": 3480,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
+            },
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
+              "altText": "",
+              "rawReference": "![](images/![image]()",
+              "assetPath": "images/![image](",
+              "sourceLineNumber": 3483,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-1】",
+          "lineRange": "3466-3489",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
+          "assets": [
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
+              "altText": "",
+              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
+              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
+              "sourceLineNumber": 3480,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
+            },
+            {
+              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
+              "altText": "",
+              "rawReference": "![](images/![image]()",
+              "assetPath": "images/![image](",
+              "sourceLineNumber": 3483,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
+            }
+          ]
         }
       ]
     },
@@ -5119,8 +5957,8 @@
       "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：观察现象并分析。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "打开弹簧夹，用酒精灯（可加网罩使火焰集中并提高温度，最好使用酒精喷灯）加热混合物几分钟。",
-        "然后先撤出导管，停止加热，用弹簧夹夹紧乳胶管，待试管冷却后再把试管里的粉末倒在纸上。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5225,21 +6063,23 @@
         "如图6-10所示，将二氧化碳气体慢慢倒入烧杯中，观察现象并分析。"
       ],
       "observedPhenomena": [
-        "如图6-10所示，将二氧化碳气体慢慢倒入烧杯中，观察现象并分析。",
+        "如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。",
         "现象 分析"
       ],
       "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：如图6-10所示，将二氧化碳气体慢慢倒入烧杯中，观察现象并分析。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "safe"
@@ -5289,6 +6129,42 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:1123649410945aceda918ac3750ece148d06e7fc7ae5651e2cb832eb9f9b2974",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-3】",
+          "lineRange": "3686-3695",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-3】",
+          "lineRange": "3686-3695",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验6-3】",
+          "lineRange": "3686-3695",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
+          "assets": []
         }
       ]
     },
@@ -5313,7 +6189,7 @@
       "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：观察现象并分析。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5428,7 +6304,7 @@
       "visualDescription": "围绕“三朵纸花的颜色变化”呈现实验器材、操作步骤和现象变化：观察三朵纸花的颜色变化。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5597,7 +6473,8 @@
       "visualDescription": "围绕“点燃三支蜡烛，在其中一支蜡烛上”呈现实验器材、操作步骤和现象变化：蜡烛燃烧的现象有什么不同？。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5703,20 +6580,22 @@
         "观察现象，并记录温度变化。"
       ],
       "observedPhenomena": [
-        "观察现象，并记录温度变化。"
+        "观察现象,并记录温度变化。"
       ],
       "visualDescription": "围绕“在一支试管中加入少量生石灰（CaO）或一小块生”呈现实验器材、操作步骤和现象变化：观察现象，并记录温度变化。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -5766,6 +6645,42 @@
           "sourceHash": "sha256:42d7f65aabd017fbbd0d14e57a1aee63c85b2b6d3cf29064c076189512ea940d",
           "sectionHash": "sha256:bb281ded131bef2505fe0a054a4e4a66df1e1afc47550971079cf97e1a4d7103",
           "assets": []
+        },
+        {
+          "candidateId": "experiment-0375-7-1-l4601-l4616-5a26643872",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-1】",
+          "lineRange": "4601-4616",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
+          "assets": []
+        },
+        {
+          "candidateId": "experiment-0375-7-1-l4601-l4616-5a26643872",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-1】",
+          "lineRange": "4601-4616",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
+          "assets": []
+        },
+        {
+          "candidateId": "lab-0375-7-1-l4601-l4616-5a26643872",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-1】",
+          "lineRange": "4601-4616",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
+          "assets": []
         }
       ]
     },
@@ -5782,24 +6697,29 @@
         "水"
       ],
       "steps": [
-        "迅速把烧杯倒过来, 向烧杯内注入少量澄清石灰水, 振荡, 观察现象。 图7-20 甲烷在空气里燃烧"
+        "迅速把烧杯倒过来, 向烧杯内注入少量澄清石灰水, 振荡, 观察现象。 图7-20 甲烷在空气里燃烧",
+        "迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。 图7-20甲烷在空气里燃烧"
       ],
       "observedPhenomena": [
-        "(2) 迅速把烧杯倒过来, 向烧杯内注入少量澄清石灰水, 振荡, 观察现象。",
-        "过一会儿，观察烧杯壁上的现象。"
+        "(2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。",
+        "过一会儿,观察烧杯壁上的现象。"
       ],
       "visualDescription": "围绕“烧杯壁上的现象”呈现实验器材、操作步骤和现象变化：(2) 迅速把烧杯倒过来, 向烧杯内注入少量澄清石灰水, 振荡, 观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
-        "g8-textbook-experiment"
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
       ],
       "difficulty": "初中基础",
       "unlockRequirements": {
         "curriculumTags": [
-          "g8-textbook-experiment"
+          "g8-textbook-experiment",
+          "g9-textbook-experiment"
         ],
         "safetyLevels": [
           "dangerous"
@@ -5879,6 +6799,72 @@
               "projectRelativePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/images/76f155230e948b96a68a0fb845336c5de8d74b4d1275ead40e567bca0436c53f.jpg"
             }
           ]
+        },
+        {
+          "candidateId": "experiment-0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceKind": "experimentBacklog",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-2】",
+          "lineRange": "4786-4800",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
+          "assets": [
+            {
+              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
+              "altText": "",
+              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
+              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
+              "sourceLineNumber": 4794,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "experiment-0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceKind": "experimentCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-2】",
+          "lineRange": "4786-4800",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
+          "assets": [
+            {
+              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
+              "altText": "",
+              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
+              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
+              "sourceLineNumber": 4794,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
+            }
+          ]
+        },
+        {
+          "candidateId": "lab-0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
+          "sourceKind": "labCandidate",
+          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+          "sourceHeading": "【实验7-2】",
+          "lineRange": "4786-4800",
+          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
+          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
+          "assets": [
+            {
+              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
+              "altText": "",
+              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
+              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
+              "sourceLineNumber": 4794,
+              "isLocalTextbookAsset": true,
+              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
+            }
+          ]
         }
       ]
     },
@@ -5905,7 +6891,7 @@
       "visualDescription": "围绕“. 取大小和形状相似的干燥的小木块和小煤”呈现实验器材、操作步骤和现象变化：1. 取大小和形状相似的干燥的小木块和小煤块，分别用坩埚钳夹住，同时放到酒精灯火焰上加热，观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "1. 取大小和形状相似的干燥的小木块和小煤块，分别用坩埚钳夹住，同时放到酒精灯火焰上加热，观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g8-textbook-experiment"
@@ -5992,7 +6978,7 @@
       "visualDescription": "围绕“铁、水的分离提纯”呈现实验器材、操作步骤和现象变化：把一块洁净的玻璃片(或盛有冷水的小烧杯)移近试管口(如图1-1),观察并记录实验现象。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "在试管底部小心加热,直到水沸腾。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -6111,125 +7097,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0010-source-section-l89-l113-6babdde8",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0010-source-section-l89-l113-6babdde8",
-      "title": "实验现象的观察与描述 在实验1-1中",
-      "name": "实验现象的观察与描述 在实验1-1中",
-      "description": "观察实验现象的观察与描述 在实验1-1中：实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。",
-      "textbookContent": "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。实验是认识物质的变化和性质的一种基本方法。实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现象进行描述,为进一步研究物质及其变化提供证据。 在实验1-1(1)和实验1-1(2)中,水和石蜡发生了形态的变化,但没有生成新物质。这种没有生成新物质的变化叫作物理变化。汽油挥发、铁水凝固等都属于物理变化。 在实验1-1(3)和实验1-1(4)中,硫酸铜和大理石在变化中都生成了新物质。这种生成新物质的变化叫作化学变化,又叫化学反应。天然气燃烧、铁生锈、粮食酿酒等都属于化学变化。 化学反应chemical reaction 化学变化的特征是有新物质生成,常表现为改变颜色、放出气体、生成沉淀等。化学变化不但 生成新物质,而且伴随着能量的变化,这种能量变化常表现为放热、吸热、发光等。在实验中观察到的现象(如图1-5),常常可以帮助我们判断物质是否发生了化学变化。 图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。例如,点燃蜡烛时,石蜡燃烧生成水和二氧化碳是化学变化,而石蜡受热熔化是物理变化。",
-      "materials": [
-        "蜡烛",
-        "硫酸铜",
-        "石蜡",
-        "水"
-      ],
-      "steps": [
-        "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现象进行描述,为进一步研究物质及其变化提供证据。",
-        "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。",
-        "图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。",
-        "在实验中观察到的现象(如图1-5),常常可以帮助我们判断物质是否发生了化学变化。"
-      ],
-      "observedPhenomena": [
-        "实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现象进行描述,为进一步研究物质及其变化提供证据。",
-        "实验现象的观察与描述 在实验1-1中,我们通过观察实验现象,初步认识了物质的变化。",
-        "图1-5化学变化中伴随发生的一些现象 在物质发生化学变化的过程中,会同时发生物理变化。",
-        "在实验中观察到的现象(如图1-5),常常可以帮助我们判断物质是否发生了化学变化。"
-      ],
-      "visualDescription": "围绕“实验现象的观察与描述 在实验1-1中”呈现实验器材、操作步骤和现象变化：实验时要重点观察实验前后试剂的颜色、状态、气味等的变化,观察时要全面、细致;要用语言和文字客观、全面、准确地对观察到的现。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0010-source-section-l89-l113-9197900129",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验现象的观察与描述",
-          "lineRange": "89-113",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
-          "assets": [
-            {
-              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
-              "altText": "",
-              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
-              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
-              "sourceLineNumber": 105,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0010-source-section-l89-l113-9197900129",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验现象的观察与描述",
-          "lineRange": "89-113",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
-          "assets": [
-            {
-              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
-              "altText": "",
-              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
-              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
-              "sourceLineNumber": 105,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0010-source-section-l89-l113-9197900129",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0010-source-section-l89-l113-9197900129",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验现象的观察与描述",
-          "lineRange": "89-113",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:919790012992ff1f53ed86e6a8e9a8d224bc36ff3f750d755c4699b5d0a39a64",
-          "assets": [
-            {
-              "assetId": "0010-source-section-l89-l113-9197900129-asset-01",
-              "altText": "",
-              "rawReference": "![](images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg)",
-              "assetPath": "images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg",
-              "sourceLineNumber": 105,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/64b38ea95311103ea55d70570b18dcb910e2edad61c52956dab9f8194aac4d35.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0027-1-4-l317-l330-6fcfd012",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0027-1-4-l317-l330-6fcfd012",
       "title": "溶液颜色的变化",
@@ -6255,7 +7122,7 @@
       "visualDescription": "围绕“溶液颜色的变化”呈现实验器材、操作步骤和现象变化：(1)在试管中加入适量澄清石灰水,滴加两滴酚酞溶液,观察溶液颜色的变化。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -6343,8 +7210,9 @@
       "visualDescription": "围绕“氢氧化钠、钠实验”呈现实验器材、操作步骤和现象变化：实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22把玻璃导管插入橡胶塞的孔里 图1-2。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "实验内容 现象 向氢氧化钠溶液中滴加硫酸铜溶液 加热上述反应后生成的物质 图1-22把玻璃导管插入橡胶塞的孔里 图1-23在玻璃导管上套上乳胶管 图1-24用橡胶塞塞住试管 图1-25检查装置的气密性",
-        "用试管夹夹住该试管(夹在距试管 \\bigstar \\frac { 1 } { 4 } { \\sim } \\frac { 1 } { 3 } 处),按图1-20所示的方法加热,观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -6517,372 +7385,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0039-source-section-l485-l514-13d49f4b",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0039-source-section-l485-l514-13d49f4b",
-      "title": "描述烧杯中的现象",
-      "name": "描述烧杯中的现象",
-      "description": "观察描述烧杯中的现象：(1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。",
-      "textbookContent": "(1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。(2)点燃蜡烛,仔细观察燃着的部分,描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。 分别取一个干燥的烧杯和一个用澄清石灰水润湿内壁的烧杯,先后罩在火焰上方(如图1-27),观察并描述烧杯中的现象。 图1-27验证蜡烛燃烧的产物 图1-28点蜡烛刚熄灭时产生的白烟 (3)熄灭蜡烛,观察并描述蜡烛熄灭时的现象。用燃着的火柴去点蜡烛刚熄灭时产生的白烟(如图1-28),蜡烛能否重新燃烧?蜡烛熄灭后,其颜色、长度等与点燃前相比有什么变化? 实验步骤 对现象的描述 (1） (2) (3)",
-      "materials": [
-        "火柴",
-        "蜡烛",
-        "烧杯",
-        "石蜡",
-        "水"
-      ],
-      "steps": [
-        "观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。"
-      ],
-      "observedPhenomena": [
-        "(1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。",
-        "(2)点燃蜡烛,仔细观察燃着的部分,描述火焰附近石蜡的状态变化、烛芯的变化、火焰的分层情况等。",
-        "分别取一个干燥的烧杯和一个用澄清石灰水润湿内壁的烧杯,先后罩在火焰上方(如图1-27),观察并描述烧杯中的现象。",
-        "用小刀切下一块石蜡放入水中,根据实验现象对石蜡的硬度和密度进行初步判断。"
-      ],
-      "visualDescription": "围绕“描述烧杯中的现象”呈现实验器材、操作步骤和现象变化：(1)观察蜡烛的颜色、状态、形状,闻一闻气味,并进行描述。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0039-source-section-l485-l514-52f9674a15",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验】",
-          "lineRange": "485-514",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
-          "assets": [
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
-              "altText": "",
-              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
-              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
-              "sourceLineNumber": 493,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
-            },
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
-              "altText": "",
-              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
-              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
-              "sourceLineNumber": 500,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0039-source-section-l485-l514-52f9674a15",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验】",
-          "lineRange": "485-514",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
-          "assets": [
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
-              "altText": "",
-              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
-              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
-              "sourceLineNumber": 493,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
-            },
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
-              "altText": "",
-              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
-              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
-              "sourceLineNumber": 500,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0039-source-section-l485-l514-52f9674a15",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0039-source-section-l485-l514-52f9674a15",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验】",
-          "lineRange": "485-514",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:52f9674a15ced73cb73473f0c2b7851f338d72c398a3cecad6af8c603d562286",
-          "assets": [
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-01",
-              "altText": "",
-              "rawReference": "![](images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg)",
-              "assetPath": "images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg",
-              "sourceLineNumber": 493,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/4baa7c2117354249992a050a976c3d721b4b970e60f43ee110d1c8d97a14ddb1.jpg"
-            },
-            {
-              "assetId": "0039-source-section-l485-l514-52f9674a15-asset-02",
-              "altText": "",
-              "rawReference": "![](images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg)",
-              "assetPath": "images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg",
-              "sourceLineNumber": 500,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/68d4d51da538a4da7ab3c32910774c4d9893328679474e18a7e77d1e5fede369.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0054-source-section-l744-l760-43ff0edf",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0054-source-section-l744-l760-43ff0edf",
-      "title": "测定空气中氧气含量的数字化实验",
-      "name": "测定空气中氧气含量的数字化实验",
-      "description": "观察测定空气中氧气含量的数字化实验：测定空气中氧气含量的数字化实验 数字化实验利用传感器和信息处理终端进行实验数据的采集与分析。",
-      "textbookContent": "测定空气中氧气含量的数字化实验 数字化实验利用传感器和信息处理终端进行实验数据的采集与分析。实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。 我们可以将测定空气中氧气的含量设计成数字化实验(如图2-5)。实验步骤如下:(1)将氧气传感器与数据采集器、计算机连接;(2)把氧气传感器插入盛有空气的容器,采集数据;(3)通过相关软件处理数据,并在计算机屏幕上显示空气中氧气的含量。 图2-5测定空气中氧气含量的数字化实验示意图",
-      "materials": [
-        "氧气"
-      ],
-      "steps": [
-        "实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。"
-      ],
-      "observedPhenomena": [
-        "实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进行记录、呈现和分析。"
-      ],
-      "visualDescription": "围绕“测定空气中氧气含量的数字化实验”呈现实验器材、操作步骤和现象变化：实验时一般将传感器、数据采集器和计算机依次相连,采集实验过程中各种物理量(如温度、压强、浓度等)的数据,通过软件对数据进。",
-      "safetyLevel": "safe",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "safe"
-        ],
-        "stageIds": [
-          "stage-1"
-        ],
-        "minimumLearnedElements": 0,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0054-source-section-l744-l760-e7662b5d75",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "测定空气中氧气含量的数字化实验",
-          "lineRange": "744-760",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
-          "assets": [
-            {
-              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
-              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
-              "sourceLineNumber": 750,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0054-source-section-l744-l760-e7662b5d75",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "测定空气中氧气含量的数字化实验",
-          "lineRange": "744-760",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
-          "assets": [
-            {
-              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
-              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
-              "sourceLineNumber": 750,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0054-source-section-l744-l760-e7662b5d75",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0054-source-section-l744-l760-e7662b5d75",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "测定空气中氧气含量的数字化实验",
-          "lineRange": "744-760",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:e7662b5d756c1e657b22687cc1bcf3ae01d6b17e65e63373162e5c3dc47d2d2b",
-          "assets": [
-            {
-              "assetId": "0054-source-section-l744-l760-e7662b5d75-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg)",
-              "assetPath": "images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg",
-              "sourceLineNumber": 750,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c0cf17e37b3d69403dfbb98d7a6506abf605af7ba4cc570a7dea48fa2cf70dc1.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0071-2-1-l938-l957-8582a584",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0071-2-1-l938-l957-8582a584",
-      "title": "木条是否复燃",
-      "name": "木条是否复燃",
-      "description": "观察木条是否复燃：把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。",
-      "textbookContent": "把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。 带有火星的木条在氧气中能够复燃,说明氧气能支持燃烧(如图2-10)。 图2-11木炭分别在空气和氧气中燃烧 图2-10氧气可以使带有火星的木条复燃",
-      "materials": [
-        "集气瓶",
-        "木炭",
-        "氧气"
-      ],
-      "steps": [
-        "把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。"
-      ],
-      "observedPhenomena": [
-        "把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。"
-      ],
-      "visualDescription": "围绕“木条是否复燃”呈现实验器材、操作步骤和现象变化：把带有火星的木条插入盛有氧气的集气瓶中,观察木条是否复燃。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0071-2-1-l938-l957-6951bf5bee",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-1】",
-          "lineRange": "938-957",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
-          "assets": [
-            {
-              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
-              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
-              "sourceLineNumber": 951,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0071-2-1-l938-l957-6951bf5bee",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-1】",
-          "lineRange": "938-957",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
-          "assets": [
-            {
-              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
-              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
-              "sourceLineNumber": 951,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0071-2-1-l938-l957-6951bf5bee",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0071-2-1-l938-l957-6951bf5bee",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-1】",
-          "lineRange": "938-957",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6951bf5beeda9abc2ef9af78dcda435d0d8dbf44111fc1ef6e9521cedd1bc1c2",
-          "assets": [
-            {
-              "assetId": "0071-2-1-l938-l957-6951bf5bee-asset-01",
-              "altText": "",
-              "rawReference": "![](images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg)",
-              "assetPath": "images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg",
-              "sourceLineNumber": 951,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/c2ccc27f765c7376d7a9c8f89a51e213b4125da1ce62ea2092233f7a8c286c01.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0072-2-2-l958-l975-94a186df",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0072-2-2-l958-l975-94a186df",
       "title": "木炭在空气中燃烧的现象",
@@ -6909,7 +7411,8 @@
       "visualDescription": "围绕“木炭在空气中燃烧的现象”呈现实验器材、操作步骤和现象变化：然后把燃着的木炭插入充满氧气的集气瓶中(如图2-11),再观察木炭在氧气中燃烧的现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "用坩埚钳夹取一小块木炭放在酒精灯火焰上加热,观察木炭在空气中燃烧的现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -6971,329 +7474,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0073-2-3-l976-l998-197d83da",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0073-2-3-l976-l998-197d83da",
-      "title": "硫在空气中燃烧的现象",
-      "name": "硫在空气中燃烧的现象",
-      "description": "观察硫在空气中燃烧的现象：在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。",
-      "textbookContent": "在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。比较硫在空气和氧气中燃烧有什么不同。 图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫(S O _ { 2 } )气体,并放出热量。这个反应可以表示如下: 点燃硫+氧气 二氧化硫",
-      "materials": [
-        "集气瓶",
-        "氧气"
-      ],
-      "steps": [
-        "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。",
-        "图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫(S O _ { 2 } )气体,并放出热量。",
-        "在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。"
-      ],
-      "observedPhenomena": [
-        "然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。",
-        "图2-12硫分别在空气和氧气中燃烧 实验内容 现象 硫在空气中燃烧 硫在氧气中燃烧 硫与氧气发生化学反应,生成了一种有刺激性气味的二氧化硫(S O _ { 2 } )气体,并放出热量。",
-        "在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。"
-      ],
-      "visualDescription": "围绕“硫在空气中燃烧的现象”呈现实验器材、操作步骤和现象变化：然后把盛有燃着的硫的燃烧匙插入充满氧气的集气瓶中(如图2-12),再观察硫在氧气中燃烧的现象。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "在燃烧匙里放入少量硫,加热,直到发生燃烧,观察硫在空气中燃烧的现象。"
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0073-2-3-l976-l998-bf8355df56",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-3】",
-          "lineRange": "976-998",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
-          "assets": [
-            {
-              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
-              "altText": "",
-              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
-              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
-              "sourceLineNumber": 982,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0073-2-3-l976-l998-bf8355df56",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-3】",
-          "lineRange": "976-998",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
-          "assets": [
-            {
-              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
-              "altText": "",
-              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
-              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
-              "sourceLineNumber": 982,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0073-2-3-l976-l998-bf8355df56",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0073-2-3-l976-l998-bf8355df56",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-3】",
-          "lineRange": "976-998",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:bf8355df5633730c91193461859e589193968392669d7b60a53e9efd6b606dd9",
-          "assets": [
-            {
-              "assetId": "0073-2-3-l976-l998-bf8355df56-asset-01",
-              "altText": "",
-              "rawReference": "![](images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg)",
-              "assetPath": "images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg",
-              "sourceLineNumber": 982,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/28eec7736ad65570e6e24e39b44b975b389f854e4f6f6e52b5ff4548e1467899.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0075-2-4-l1012-l1025-49b42ea5",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0075-2-4-l1012-l1025-49b42ea5",
-      "title": "铁实验",
-      "name": "铁实验",
-      "description": "观察铁实验：把两根光亮的细铁丝分别盘成螺旋状。",
-      "textbookContent": "把两根光亮的细铁丝分别盘成螺旋状。取一根在酒精灯火焰上烧至红热,观察现象。另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。 在空气中加热细铁丝时,铁丝红热,不能燃烧;但在氧气中点燃细铁丝可发生剧烈燃烧,火星四射。铁与氧气反应生成黑色的四氧化三铁(F e _ { 3 } O _ { 4 } )固体。这个反应可以表示如下: 点燃铁+氧气 四氧化三铁 通过以上几个实验,我们可以看出,可燃物在氧气中燃烧比在空气中燃烧要剧烈。例如,硫在空气中燃烧发出微弱的淡蓝色火焰,而在氧气中燃烧得更旺,发出蓝紫色火焰。又如,某些在空气中不能燃烧的物质却可以在氧气中燃烧。这说明氧气的化学性质比较活泼,同时也说明,物质在空气中燃烧,实际上是与其中的氧气发生反应,由于空气中的氧气含量相对较低,在空气中燃烧不如在氧气中剧烈。 ?",
-      "materials": [
-        "火柴",
-        "集气瓶",
-        "酒精灯",
-        "水",
-        "铁丝",
-        "氧气"
-      ],
-      "steps": [
-        "另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。",
-        "取一根在酒精灯火焰上烧至红热,观察现象。"
-      ],
-      "observedPhenomena": [
-        "另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。",
-        "取一根在酒精灯火焰上烧至红热,观察现象。"
-      ],
-      "visualDescription": "围绕“铁实验”呈现实验器材、操作步骤和现象变化：另取一根,在其下端系一根火柴,点燃火柴,待火柴快燃尽时,插入盛有氧气的集气瓶中(预先放入一些水,如图2-13),观察现象。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "在空气中加热细铁丝时,铁丝红热,不能燃烧;但在氧气中点燃细铁丝可发生剧烈燃烧,火星四射。"
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0075-2-4-l1012-l1025-49058e2e88",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-4】",
-          "lineRange": "1012-1025",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
-          "assets": []
-        },
-        {
-          "candidateId": "experiment-0075-2-4-l1012-l1025-49058e2e88",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-4】",
-          "lineRange": "1012-1025",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
-          "assets": []
-        },
-        {
-          "candidateId": "lab-0075-2-4-l1012-l1025-49058e2e88",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0075-2-4-l1012-l1025-49058e2e88",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-4】",
-          "lineRange": "1012-1025",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:49058e2e8832721dbf86fa5410f4a0274c92cccda6aa6734aec7c677d9b6eac7",
-          "assets": []
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0081-2-5-l1104-l1130-9bb6e658",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0081-2-5-l1104-l1130-9bb6e658",
-      "title": "连接好装置",
-      "name": "连接好装置",
-      "description": "观察连接好装置：如图2-14所示连接好装置。",
-      "textbookContent": "如图2-14所示连接好装置。检查装置的气密性后,把少量高锰酸钾装入试管中,在试管口放一团棉花①,用带有导管的橡胶塞塞紧试管,并把试管固定在铁架台上。将一个集气瓶盛满水,用玻璃片盖住瓶口,再将其与玻璃片一起倒立在盛水的水槽内。 (1)加热试管,当导管口连续并比较均匀地放出气泡时,把导管口伸入盛满水的集气瓶,用排水法收集一瓶氧气。 (2)把带有火星的木条插入集气瓶中,观察现象。 图2-14高锰酸钾分解制取氧气 实验编号 现象 (1） (2) 高锰酸钾是一种暗紫色的固体,它受热时分解出氧气,同时还生成锰酸钾和二氧化锰。",
-      "materials": [
-        "玻璃片",
-        "导管",
-        "二氧化锰",
-        "高锰酸钾",
-        "集气瓶",
-        "试管",
-        "水",
-        "水槽",
-        "铁架台",
-        "氧气"
-      ],
-      "steps": [
-        "加热试管,当导管口连续并比较均匀地放出气泡时,把导管口伸入盛满水的集气瓶,用排水法收集一瓶氧气。",
-        "把带有火星的木条插入集气瓶中,观察现象。 图2-14高锰酸钾分解制取氧气 实验编号 现象"
-      ],
-      "observedPhenomena": [
-        "(2)把带有火星的木条插入集气瓶中,观察现象。",
-        "图2-14高锰酸钾分解制取氧气 实验编号 现象 (1） (2) 高锰酸钾是一种暗紫色的固体,它受热时分解出氧气,同时还生成锰酸钾和二氧化锰。"
-      ],
-      "visualDescription": "围绕“连接好装置”呈现实验器材、操作步骤和现象变化：(2)把带有火星的木条插入集气瓶中,观察现象。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "(1)加热试管,当导管口连续并比较均匀地放出气泡时,把导管口伸入盛满水的集气瓶,用排水法收集一瓶氧气。"
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0081-2-5-l1104-l1130-a424db08b7",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-5】",
-          "lineRange": "1104-1130",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
-          "assets": [
-            {
-              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
-              "altText": "",
-              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
-              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
-              "sourceLineNumber": 1114,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0081-2-5-l1104-l1130-a424db08b7",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-5】",
-          "lineRange": "1104-1130",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
-          "assets": [
-            {
-              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
-              "altText": "",
-              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
-              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
-              "sourceLineNumber": 1114,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0081-2-5-l1104-l1130-a424db08b7",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0081-2-5-l1104-l1130-a424db08b7",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验2-5】",
-          "lineRange": "1104-1130",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a424db08b7523b5b9485c696f3408d443a83f44b7088c3048199e6d59c2d04d2",
-          "assets": [
-            {
-              "assetId": "0081-2-5-l1104-l1130-a424db08b7-asset-01",
-              "altText": "",
-              "rawReference": "![](images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg)",
-              "assetPath": "images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg",
-              "sourceLineNumber": 1114,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/83d0a02c1a146f54f94c9a590eae60492aa4c2c497befda3aa17e07ca5bce474.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0087-source-section-l1160-l1165-c6d81323",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0087-source-section-l1160-l1165-c6d81323",
       "title": "在试管中加入5mL 5 \\% 过氧化氢溶液",
@@ -7315,7 +7495,7 @@
       "visualDescription": "围绕“在试管中加入5mL 5 \\% 过氧化氢溶液”呈现实验器材、操作步骤和现象变化：(1)在试管中加入5mL 5 \\% 过氧化氢溶液,把带有火星的木条插入试管,观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -7377,88 +7557,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0092-source-section-l1213-l1218-738314bb",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0092-source-section-l1213-l1218-738314bb",
-      "title": "实验探究的一般思路",
-      "name": "实验探究的一般思路",
-      "description": "观察实验探究的一般思路：实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等。",
-      "textbookContent": "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。 化学实验是学习化学的基本方法,是开展实验探究的重要方式。通常情况下,实验探究的一般思路可归纳为:明确探究目的 $ 设计实验方案 实施实验 \\longrightarrow 获取证据 \\longrightarrow 分析推理 \\longrightarrow$ 形成结论。",
-      "materials": [
-        "二氧化锰",
-        "过氧化氢",
-        "氧气"
-      ],
-      "steps": [
-        "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。"
-      ],
-      "observedPhenomena": [
-        "实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;观察和记录实验中带有火星的木条是否复燃等实验现象,收集证据;通过基于证据的分析推理,最后形成了催化剂的概念。"
-      ],
-      "visualDescription": "围绕“实验探究的一般思路”呈现实验器材、操作步骤和现象变化：实验探究的一般思路 在“探究——过氧化氢分解制取氧气的反应中二氧化锰的作用”中,我们根据探究目的设计了三个对比实验方案;。",
-      "safetyLevel": "safe",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "safe"
-        ],
-        "stageIds": [
-          "stage-1"
-        ],
-        "minimumLearnedElements": 0,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验探究的一般思路",
-          "lineRange": "1213-1218",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
-          "assets": []
-        },
-        {
-          "candidateId": "experiment-0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验探究的一般思路",
-          "lineRange": "1213-1218",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
-          "assets": []
-        },
-        {
-          "candidateId": "lab-0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0092-source-section-l1213-l1218-4a0a8014a0",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "实验探究的一般思路",
-          "lineRange": "1213-1218",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4a0a8014a0a0894dadfed44674f2b88fd461be5d16b951edbf41c59b06c9b22c",
-          "assets": []
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0124-3-1-l1485-l1511-74360a47",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0124-3-1-l1485-l1511-74360a47",
       "title": "水实验",
@@ -7484,7 +7582,7 @@
       "visualDescription": "围绕“水实验”呈现实验器材、操作步骤和现象变化：上述生活和实验中的现象,在很久以前就引起了一些学者的探究兴趣。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -7546,231 +7644,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0187-4-2-l2310-l2326-74360a47",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0187-4-2-l2310-l2326-74360a47",
-      "title": "水实验",
-      "name": "水实验",
-      "description": "观察水实验：取一张圆形滤纸,如图4-10所示折好并放入漏斗,使之紧贴漏斗内壁,并使滤纸边缘略低于漏斗口。",
-      "textbookContent": "取一张圆形滤纸,如图4-10所示折好并放入漏斗,使之紧贴漏斗内壁,并使滤纸边缘略低于漏斗口。用少量水润湿滤纸,并使滤纸与漏斗内壁之间不要有气泡。 图4-10过滤器的准备 如图4-11所示,放置好漏斗,使漏斗下端管口紧靠烧杯内壁,以使滤液沿烧杯壁流下。取实验4-1中处理过的一杯液体,沿玻璃棒慢慢向漏斗中倾倒,注意液面始终要低于滤纸的边缘。 观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。",
-      "materials": [
-        "玻璃棒",
-        "烧杯",
-        "水"
-      ],
-      "steps": [
-        "观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。"
-      ],
-      "observedPhenomena": [
-        "观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。"
-      ],
-      "visualDescription": "围绕“水实验”呈现实验器材、操作步骤和现象变化：观察并比较未经处理的天然水和进行了不同程度处理的水的清澈程度。。",
-      "safetyLevel": "safe",
-      "safetyNotes": [
-        "取实验4-1中处理过的一杯液体,沿玻璃棒慢慢向漏斗中倾倒,注意液面始终要低于滤纸的边缘。"
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "safe"
-        ],
-        "stageIds": [
-          "stage-1"
-        ],
-        "minimumLearnedElements": 0,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-2】",
-          "lineRange": "2310-2326",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
-          "assets": [
-            {
-              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
-              "altText": "",
-              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
-              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
-              "sourceLineNumber": 2316,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-2】",
-          "lineRange": "2310-2326",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
-          "assets": [
-            {
-              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
-              "altText": "",
-              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
-              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
-              "sourceLineNumber": 2316,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0187-4-2-l2310-l2326-a285ff5a91",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-2】",
-          "lineRange": "2310-2326",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:a285ff5a9180161b3b0bbd274f861be984610a27b4b6cb96481fcaab09a1a42f",
-          "assets": [
-            {
-              "assetId": "0187-4-2-l2310-l2326-a285ff5a91-asset-01",
-              "altText": "",
-              "rawReference": "![](images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg)",
-              "assetPath": "images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg",
-              "sourceLineNumber": 2316,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/0cff34ac5d9708a56d7c6d080ff60f77023bb9c0cf626cd0695ca69eef6fe7ba.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0195-4-4-l2439-l2453-fae11cc6",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0195-4-4-l2439-l2453-fae11cc6",
-      "title": "氢气燃烧",
-      "name": "氢气燃烧",
-      "description": "观察氢气燃烧：在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。",
-      "textbookContent": "在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。 研究表明,氢气在空气或氧气里燃烧生成水。之后,人们又研究了水的分解实验。 图4-16氢气在空气里燃烧",
-      "materials": [
-        "导管",
-        "烧杯",
-        "水",
-        "氧气"
-      ],
-      "steps": [
-        "在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。"
-      ],
-      "observedPhenomena": [
-        "在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。"
-      ],
-      "visualDescription": "围绕“氢气燃烧”呈现实验器材、操作步骤和现象变化：在带尖嘴的导管口点燃纯净的氢气,在火焰上方罩一个干燥的小烧杯(如图4-16),过一会儿,观察烧杯壁上的现象。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-4】",
-          "lineRange": "2439-2453",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
-          "assets": [
-            {
-              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
-              "altText": "",
-              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
-              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
-              "sourceLineNumber": 2447,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-4】",
-          "lineRange": "2439-2453",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
-          "assets": [
-            {
-              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
-              "altText": "",
-              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
-              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
-              "sourceLineNumber": 2447,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0195-4-4-l2439-l2453-791ebb8e61",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验4-4】",
-          "lineRange": "2439-2453",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:791ebb8e6110483c1571be293e900c14efd9f5be09e5f1f4191d273146e736b6",
-          "assets": [
-            {
-              "assetId": "0195-4-4-l2439-l2453-791ebb8e61-asset-01",
-              "altText": "",
-              "rawReference": "![](images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg)",
-              "assetPath": "images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg",
-              "sourceLineNumber": 2447,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/e9b3217decdb2da65c2902d5458e0e8f3cca2b51664c781c6ce3df370b8035e9.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0198-source-section-l2462-l2482-834f8350",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0198-source-section-l2462-l2482-834f8350",
       "title": "玻璃管内的现象",
@@ -7791,7 +7664,7 @@
       "visualDescription": "围绕“玻璃管内的现象”呈现实验器材、操作步骤和现象变化：(1)如图4-17所示,在电解器玻璃管中加满水①,接通直流电源,观察并记录玻璃管内的现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -7906,7 +7779,9 @@
       "visualDescription": "围绕“氢气燃烧”呈现实验器材、操作步骤和现象变化：1.水的生成 回忆氢气在空气里燃烧的实验(实验4-4):纯净的氢气在空气里安静地燃烧,在火焰上方罩一个干燥的小烧杯,可观。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。",
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -7968,91 +7843,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0248-5-1-l3024-l3035-f78b8e75",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0248-5-1-l3024-l3035-f78b8e75",
-      "title": "碳酸钠、钠的反应现象",
-      "name": "碳酸钠、钠的反应现象",
-      "description": "观察碳酸钠、钠的反应现象：在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。",
-      "textbookContent": "在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。反应一段时间后再次称量。比较反应前后的称量结果。 图5-3盐酸与碳酸钠反应及质量测定的装置",
-      "materials": [
-        "烧杯",
-        "试管",
-        "碳酸钠",
-        "盐酸"
-      ],
-      "steps": [
-        "取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。",
-        "在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。"
-      ],
-      "observedPhenomena": [
-        "取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。",
-        "在烧杯中加入碳酸钠,再小心地放入盛有盐酸的小试管,将装置放在天平上(如图5-3),记录所称的质量。"
-      ],
-      "visualDescription": "围绕“碳酸钠、钠的反应现象”呈现实验器材、操作步骤和现象变化：取下烧杯并将其倾斜,使小试管中的盐酸流入烧杯,观察现象。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0248-5-1-l3024-l3035-c51c863b33",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验5-1】",
-          "lineRange": "3024-3035",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
-          "assets": []
-        },
-        {
-          "candidateId": "experiment-0248-5-1-l3024-l3035-c51c863b33",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验5-1】",
-          "lineRange": "3024-3035",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
-          "assets": []
-        },
-        {
-          "candidateId": "lab-0248-5-1-l3024-l3035-c51c863b33",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0248-5-1-l3024-l3035-c51c863b33",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验5-1】",
-          "lineRange": "3024-3035",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c51c863b33f9d1ad329dd3c334b520d01bc95bd499cae5a29beeb63099eaffcb",
-          "assets": []
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0249-5-2-1-l3036-l3041-68c71a7e",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0249-5-2-1-l3036-l3041-68c71a7e",
       "title": "镁实验",
@@ -8073,7 +7863,7 @@
       "visualDescription": "围绕“镁实验”呈现实验器材、操作步骤和现象变化：① 取一根用砂纸打磨干净的长镁条和一个陶土网,将它们一起放在天平上称量,记录所称的质量。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8135,146 +7925,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0285-6-1-l3466-l3489-76d94a03",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0285-6-1-l3466-l3489-76d94a03",
-      "title": "水的反应现象",
-      "name": "水的反应现象",
-      "description": "观察水的反应现象：在盛有半瓶水的小锥形瓶里,滴入一滴红墨水,使水略显红色。",
-      "textbookContent": "在盛有半瓶水的小锥形瓶里,滴入一滴红墨水,使水略显红色。投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。 现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。可以利用木炭的这个性质来吸附一些食品和工业产品里的色素,也可以用它来吸附有异味的物质。活性炭的吸附作用比木炭的还要强,防毒面具里的滤毒罐就是利用活性炭来吸附毒气的(如图6-3),制糖工业中利用活性炭脱色生产白糖。随着社会的发展,活性炭的应用范围不断扩大,如城市污水、工业废水和饮用水在深度净化处理时都要用到活性炭,人们还利用活性炭来吸附室内装修产生的对人体有害的气体,等等。 ) 图6-3活性炭的用途",
-      "materials": [
-        "木炭",
-        "水"
-      ],
-      "steps": [
-        "投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。",
-        "现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。"
-      ],
-      "observedPhenomena": [
-        "投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。",
-        "现象 分析 木炭具有疏松多孔的结构,因此它具有吸附能力。"
-      ],
-      "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：投入几块烘烤过的木炭(或活性炭),轻轻振荡锥形瓶,观察现象。。",
-      "safetyLevel": "safe",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "safe"
-        ],
-        "stageIds": [
-          "stage-1"
-        ],
-        "minimumLearnedElements": 0,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-1】",
-          "lineRange": "3466-3489",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
-          "assets": [
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
-              "altText": "",
-              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
-              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
-              "sourceLineNumber": 3480,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
-            },
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
-              "altText": "",
-              "rawReference": "![](images/![image]()",
-              "assetPath": "images/![image](",
-              "sourceLineNumber": 3483,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-1】",
-          "lineRange": "3466-3489",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
-          "assets": [
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
-              "altText": "",
-              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
-              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
-              "sourceLineNumber": 3480,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
-            },
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
-              "altText": "",
-              "rawReference": "![](images/![image]()",
-              "assetPath": "images/![image](",
-              "sourceLineNumber": 3483,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0285-6-1-l3466-l3489-c98bdaf6ec",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-1】",
-          "lineRange": "3466-3489",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:c98bdaf6ec568551401dfbf14d8a2e9fffbeefc777cd4665838589248601912a",
-          "assets": [
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-01",
-              "altText": "",
-              "rawReference": "![](images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg)",
-              "assetPath": "images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg",
-              "sourceLineNumber": 3480,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/35c6c46031429bf6b8bf53ac793ea52366e08336e3a3a041c52da58519f197bb.jpg"
-            },
-            {
-              "assetId": "0285-6-1-l3466-l3489-c98bdaf6ec-asset-02",
-              "altText": "",
-              "rawReference": "![](images/![image]()",
-              "assetPath": "images/![image](",
-              "sourceLineNumber": 3483,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/![image]("
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0293-6-2-l3567-l3599-f99eed5f",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0293-6-2-l3567-l3599-f99eed5f",
       "title": "并分析",
@@ -8300,8 +7950,8 @@
       "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：观察现象并分析。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "打开弹簧夹,用酒精灯(可加网罩使火焰集中并提高温度,最好使用酒精喷灯)加热混合物几分钟。",
-        "然后先撤出导管,停止加热,用弹簧夹夹紧乳胶管,待试管冷却后再把试管里的粉末倒在纸上。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8393,87 +8043,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0299-6-3-l3686-l3695-f99eed5f",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0299-6-3-l3686-l3695-f99eed5f",
-      "title": "并分析",
-      "name": "并分析",
-      "description": "观察并分析：如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。",
-      "textbookContent": "如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。 现象 分析",
-      "materials": [
-        "烧杯"
-      ],
-      "steps": [
-        "如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。"
-      ],
-      "observedPhenomena": [
-        "如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。",
-        "现象 分析"
-      ],
-      "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：如图6-10所示,将二氧化碳气体慢慢倒入烧杯中,观察现象并分析。。",
-      "safetyLevel": "safe",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "safe"
-        ],
-        "stageIds": [
-          "stage-1"
-        ],
-        "minimumLearnedElements": 0,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-3】",
-          "lineRange": "3686-3695",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
-          "assets": []
-        },
-        {
-          "candidateId": "experiment-0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-3】",
-          "lineRange": "3686-3695",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
-          "assets": []
-        },
-        {
-          "candidateId": "lab-0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0299-6-3-l3686-l3695-4fb09a6ca8",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验6-3】",
-          "lineRange": "3686-3695",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:4fb09a6ca8d427fdbb5bd12777ad34a0803104f2ee260bad5db15069f8f3871e",
-          "assets": []
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0300-6-4-l3696-l3724-f99eed5f",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0300-6-4-l3696-l3724-f99eed5f",
       "title": "并分析",
@@ -8494,7 +8063,7 @@
       "visualDescription": "围绕“并分析”呈现实验器材、操作步骤和现象变化：观察现象并分析。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8609,7 +8178,7 @@
       "visualDescription": "围绕“三朵纸花的颜色变化”呈现实验器材、操作步骤和现象变化：观察三朵纸花的颜色变化。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8723,7 +8292,8 @@
       "visualDescription": "围绕“试管里发生的现象”呈现实验器材、操作步骤和现象变化：立即用带有导管的橡胶塞塞住管口,观察试管里发生的现象,以及反应中产生气体的颜色。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8837,7 +8407,8 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：① 实验步骤 现象 （1）在500mL烧杯中加入300mL热水，并放入用硬纸圈圈住的一小块白磷，在烧杯上盖一片薄铜片在铜。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -8952,7 +8523,8 @@
       "visualDescription": "围绕“点燃三支蜡烛,在其中一支蜡烛上”呈现实验器材、操作步骤和现象变化：蜡烛燃烧的现象有什么不同?。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9044,200 +8616,6 @@
       ]
     },
     {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0375-7-1-l4601-l4616-26ee5c8d",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0375-7-1-l4601-l4616-26ee5c8d",
-      "title": "在一支试管中加入少量生石灰(CaO)或一小块生",
-      "name": "在一支试管中加入少量生石灰(CaO)或一小块生",
-      "description": "观察在一支试管中加入少量生石灰(CaO)或一小块生：在一支试管中加入少量生石灰(CaO)或一小块生活中使用的生石灰干燥剂,再加入2mL水,插入温度计。",
-      "textbookContent": "在一支试管中加入少量生石灰(CaO)或一小块生活中使用的生石灰干燥剂,再加入2mL水,插入温度计。观察现象,并记录温度变化。 上述实验中,氧化钙与水反应生成氢氧化钙,并放出热量。 $ \\mathsf { C a O } + \\mathsf { H } _ { 2 } \\mathsf { O } = \\mathsf { C a (O H ) } _ { 2 } $ 大量事实和研究证明,化学反应在生成新物质的同时,还伴随着能量的变化。化学反应中能量的变化通常表现为热量的变化。有些反应放出热量,如氧化钙与水的反应;而有些反应吸收热量,如碳单质与二氧化碳的反应。化学不仅研究物质变化,还研究物质变化过程中伴随的能量变化。 在当今社会,人类需要的大部分能量是由化学反应放出的。除了我们常见的生活燃料的使用,人们还利用燃烧等化学反应放出的能量发电、发射火箭,利用爆炸放出的能量开采矿物(如图7-12)、开山炸石、拆除危旧建筑等。",
-      "materials": [
-        "试管",
-        "水"
-      ],
-      "steps": [
-        "观察现象,并记录温度变化。"
-      ],
-      "observedPhenomena": [
-        "观察现象,并记录温度变化。"
-      ],
-      "visualDescription": "围绕“在一支试管中加入少量生石灰(CaO)或一小块生”呈现实验器材、操作步骤和现象变化：观察现象,并记录温度变化。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0375-7-1-l4601-l4616-5a26643872",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-1】",
-          "lineRange": "4601-4616",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
-          "assets": []
-        },
-        {
-          "candidateId": "experiment-0375-7-1-l4601-l4616-5a26643872",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-1】",
-          "lineRange": "4601-4616",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
-          "assets": []
-        },
-        {
-          "candidateId": "lab-0375-7-1-l4601-l4616-5a26643872",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0375-7-1-l4601-l4616-5a26643872",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-1】",
-          "lineRange": "4601-4616",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:5a26643872753446e4e6d8e79c919520c7ac10e75a253d6282db2e37ef42cda3",
-          "assets": []
-        }
-      ]
-    },
-    {
-      "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0386-7-2-l4786-l4800-a16e99c5",
-      "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0386-7-2-l4786-l4800-a16e99c5",
-      "title": "烧杯壁上的现象",
-      "name": "烧杯壁上的现象",
-      "description": "观察烧杯壁上的现象：(1)点燃从导管放出的甲烷,在火焰的上方罩一个干燥的烧杯(如图7-20)。",
-      "textbookContent": "(1)点燃从导管放出的甲烷,在火焰的上方罩一个干燥的烧杯(如图7-20)。过一会儿,观察烧杯壁上的现象。 (2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。 图7-20甲烷在空气里燃烧",
-      "materials": [
-        "导管",
-        "烧杯",
-        "水"
-      ],
-      "steps": [
-        "迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。 图7-20甲烷在空气里燃烧"
-      ],
-      "observedPhenomena": [
-        "(2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。",
-        "过一会儿,观察烧杯壁上的现象。"
-      ],
-      "visualDescription": "围绕“烧杯壁上的现象”呈现实验器材、操作步骤和现象变化：(2)迅速把烧杯倒过来,向烧杯内注入少量澄清石灰水,振荡,观察现象。。",
-      "safetyLevel": "dangerous",
-      "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
-      ],
-      "curriculumTags": [
-        "g9-textbook-experiment"
-      ],
-      "difficulty": "初中进阶",
-      "unlockRequirements": {
-        "curriculumTags": [
-          "g9-textbook-experiment"
-        ],
-        "safetyLevels": [
-          "dangerous"
-        ],
-        "stageIds": [
-          "stage-3"
-        ],
-        "minimumLearnedElements": 20,
-        "grade": "九年级"
-      },
-      "sourceKind": "textbookExperiment",
-      "sourceReviewStatus": "needsReview",
-      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-      "sourceReferences": [
-        {
-          "candidateId": "experiment-0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceKind": "experimentBacklog",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-2】",
-          "lineRange": "4786-4800",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
-          "assets": [
-            {
-              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
-              "altText": "",
-              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
-              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
-              "sourceLineNumber": 4794,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "experiment-0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceKind": "experimentCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-2】",
-          "lineRange": "4786-4800",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
-          "assets": [
-            {
-              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
-              "altText": "",
-              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
-              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
-              "sourceLineNumber": 4794,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
-            }
-          ]
-        },
-        {
-          "candidateId": "lab-0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
-          "sourceSectionId": "0386-7-2-l4786-l4800-6da81e61cc",
-          "sourceKind": "labCandidate",
-          "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
-          "sourceHeading": "【实验7-2】",
-          "lineRange": "4786-4800",
-          "sourceHash": "sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901",
-          "sectionHash": "sha256:6da81e61cc024e3ced541c71d4dbf5aaa5278c08cb6289154fa9ba82bc16af5a",
-          "assets": [
-            {
-              "assetId": "0386-7-2-l4786-l4800-6da81e61cc-asset-01",
-              "altText": "",
-              "rawReference": "![](images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg)",
-              "assetPath": "images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg",
-              "sourceLineNumber": 4794,
-              "isLocalTextbookAsset": true,
-              "projectRelativePath": "src/data/textbooks/2024版人教版九年级化学上册/images/9fbf914c507a3375ef80580bc89474392820edd98833eacfe218caaa2c09d2b8.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "lab-experiment-rj-chemistry-grade9-2024-vol1-0403-textcircled-6-l5090-l5099-80ec0628",
       "experimentId": "lab-experiment-rj-chemistry-grade9-2024-vol1-0403-textcircled-6-l5090-l5099-80ec0628",
       "title": ".取大小和形状相似的干燥的小木块和小煤",
@@ -9259,7 +8637,7 @@
       "visualDescription": "围绕“.取大小和形状相似的干燥的小木块和小煤”呈现实验器材、操作步骤和现象变化：\\textcircled{6} 1.取大小和形状相似的干燥的小木块和小煤块,分别用址埚钳夹住,同时放到酒精灯火焰上加热,。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "\\textcircled{6} 1.取大小和形状相似的干燥的小木块和小煤块,分别用址埚钳夹住,同时放到酒精灯火焰上加热,观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9339,7 +8717,7 @@
       "visualDescription": "围绕“比较黄铜片(铜锌合金)和铜片”呈现实验器材、操作步骤和现象变化：图8-3比较合金和纯金属的硬度 性质比较 现象 结论 黄铜 铜 硬铝 铝 光泽和颜色 硬度。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9452,7 +8830,7 @@
       "visualDescription": "围绕“盐酸、镁的反应现象”呈现实验器材、操作步骤和现象变化：(1)在试管中放入少量镁,加入 5 m L 稀盐酸,将燃着的木条放在试管口,观察现象,并判断反应后生成了什么气体。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9565,7 +8943,7 @@
       "visualDescription": "围绕“铁实验”呈现实验器材、操作步骤和现象变化：(1)仔细观察并参考图8-18所示的装置,设计实验并探究铁钉生锈的条件。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9681,7 +9059,8 @@
       "visualDescription": "围绕“比较铜片和铝片”呈现实验器材、操作步骤和现象变化：(2)向5支试管中分别放入少量镁条、铝片、锌粒、铁片、铜片,然后各加入 5 m L 稀盐酸(或稀硫酸),观察现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "2.金属的化学性质 (1)用坩蜗钳夹取一块铜片,放在酒精灯火焰上加热,观察铜片表面的变化。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9763,7 +9142,7 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：如图9-2所示,在 2 0 m L 水中加入一药匙蔗糖,用玻璃棒搅拌,观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9847,7 +9226,7 @@
       "visualDescription": "围绕“高锰酸钾、水的反应现象”呈现实验器材、操作步骤和现象变化：图9-3碘和高锰酸钾的溶解性比较 溶质 溶剂 现象 碘 水 碘 汽油 高锰酸钾 水 高锰酸钾 汽油 实验表明,碘几乎不溶。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "该实验风险较高，真实操作需教师演示或全程监督，学生仅在虚拟环境学习。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -9964,7 +9343,7 @@
       "visualDescription": "围绕“液体是否分层”呈现实验器材、操作步骤和现象变化：然后将试管倾斜,用滴管沿试管内壁(注意:滴管不要接触试管内壁)缓缓加入2mL乙醇,不要振荡,观察液体是否分层。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "然后将试管倾斜,用滴管沿试管内壁(注意:滴管不要接触试管内壁)缓缓加入2mL乙醇,不要振荡,观察液体是否分层。"
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10079,7 +9458,7 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：然后再加入10mL水,搅拌,观察现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10196,8 +9575,8 @@
       "visualDescription": "围绕“水的反应现象”呈现实验器材、操作步骤和现象变化：当烧杯中硝酸钾固体有剩余而不再溶解时,加热烧杯一段时间(如图9-9),观察剩余固体有什么变化。。",
       "safetyLevel": "caution",
       "safetyNotes": [
-        "当烧杯中硝酸钾固体有剩余而不再溶解时,加热烧杯一段时间(如图9-9),观察剩余固体有什么变化。",
-        "图9-9硝酸钾在水中的溶解 实验内容 现象 分析 加入3g硝酸钾，搅拌 再加入3g硝酸钾，搅拌 加热烧杯 再加入3g硝酸钾，搅拌 静置，冷却 结晶crystallization 在实验9-6中,第二次加入的硝酸钾不能全部溶解,但加热后,剩余的硝酸钾固体能够继续溶解,且再次加入的硝酸钾也能全部溶解。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10334,7 +9713,7 @@
       "visualDescription": "围绕“固体能否全部溶解”呈现实验器材、操作步骤和现象变化：在室温下,根据下表给定的质量配制氯化钠溶液(如图9-16),观察固体能否全部溶解,并计算溶液中溶质的质量分数。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10419,7 +9798,7 @@
       "visualDescription": "围绕“所得液体是否浑浊”呈现实验器材、操作步骤和现象变化：观察所得液体是否浑浊。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10499,7 +9878,7 @@
       "visualDescription": "围绕“选择生活中的一些物质,测定它们的pH,并记录”呈现实验器材、操作步骤和现象变化：选择生活中的一些物质,测定它们的pH,并记录在下表中。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10611,7 +9990,7 @@
       "visualDescription": "围绕“小心闻其气味”呈现实验器材、操作步骤和现象变化：(1)观察盐酸、硫酸的颜色和状态。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10693,7 +10072,7 @@
       "visualDescription": "围绕“将纸、小木棍、布放在玻璃片上,完成下列实验”呈现实验器材、操作步骤和现象变化：实验内容 放置一会儿后的现象 用玻璃棒蘸浓硫酸在纸上写字 用小木棍蘸少量浓硫酸 将浓硫酸滴到一小块布上 浓硫酸有强烈的腐。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "实验内容 放置一会儿后的现象 用玻璃棒蘸浓硫酸在纸上写字 用小木棍蘸少量浓硫酸 将浓硫酸滴到一小块布上 浓硫酸有强烈的腐蚀性(如图10-6)。"
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10777,7 +10156,7 @@
       "visualDescription": "围绕“在白色点滴板上进行实验,观察并记录实验现象”呈现实验器材、操作步骤和现象变化：(1)如图10-10所示,在白色点滴板上进行实验,观察并记录实验现象。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10894,7 +10273,7 @@
       "visualDescription": "围绕“它的颜色和状态”呈现实验器材、操作步骤和现象变化：取一小药匙氢氧化钙,观察它的颜色和状态,然后放入小烧杯中,加入30mL水,用玻璃棒搅拌,观察氢氧化钙在水中的溶解情况。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -10975,14 +10354,15 @@
         "用碳酸氢钠代替碳酸钠进行上述实验,观察、记录并分析现象。"
       ],
       "observedPhenomena": [
-        "实验内容 现象 分析 碳酸钠+稀盐酸 碳酸氢钠+稀盐酸 上述反应可以用化学方程式表示如下: $ N a _ { 2 } C O _ { 3 } + 2 H C l = 2 N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O N a H C O _ { 3 } + H C l = N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O $",
+        "实验内容 现象 分析 碳酸钠+稀盐酸 碳酸氢钠+稀盐酸 上述反应可以用化学方程式表示如下: N a _ { 2 } C O _ { 3 } + 2 H C l = 2 N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O N a H C O _ { 3 } + H C l = N a C l + C O _ { 2 } \\uparrow + H _ { 2 } O",
         "向盛有0.5g碳酸钠的试管中加入2mL稀盐酸,迅速用带导管的橡胶塞塞紧试管口,并将导管另一端插入盛有澄清石灰水的试管中(如图10-19),观察、记录并分析现象。",
         "用碳酸氢钠代替碳酸钠进行上述实验,观察、记录并分析现象。"
       ],
       "visualDescription": "围绕“盐酸、碳酸钠、钠的反应现象”呈现实验器材、操作步骤和现象变化：实验内容 现象 分析 碳酸钠+稀盐酸 碳酸氢钠+稀盐酸 上述反应可以用化学方程式表示如下: $ N a _ { 2 }。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -11060,13 +10440,13 @@
         "向盛有澄清石灰水的试管中滴加碳酸钠溶液,观察、记录并分析现象。"
       ],
       "observedPhenomena": [
-        "现象 分析 上述反应的化学方程式可以表示如下: $ N a _ { 2 } C O _ { 3 } + C a (O H ) _ { 2 } = C a C O _ { 3 } \\downarrow + 2 N a O H $ 分析以上几个反应,它们都发生在溶液中,都是由两种化合物互相交换成分,生成另外两种化合物的反应,这样的反应叫作复分解反应。",
+        "现象 分析 上述反应的化学方程式可以表示如下: N a _ { 2 } C O _ { 3 } + C a (O H ) _ { 2 } = C a C O _ { 3 } \\downarrow + 2 N a O H 分析以上几个反应,它们都发生在溶液中,都是由两种化合物互相交换成分,生成另外两种化合物的反应,这样的反应叫作复分解反应。",
         "向盛有澄清石灰水的试管中滴加碳酸钠溶液,观察、记录并分析现象。"
       ],
       "visualDescription": "围绕“石灰水、碳酸钠、钠实验”呈现实验器材、操作步骤和现象变化：现象 分析 上述反应的化学方程式可以表示如下: $ N a _ { 2 } C O _ { 3 } + C a (O H。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -11150,7 +10530,7 @@
       "visualDescription": "围绕“硫酸铜、硫酸、氢氧化钠实验”呈现实验器材、操作步骤和现象变化：实验内容 现象 化学方程式 NaOH溶液+CuSO4溶液 2NaOH + CuSO4 = Cu(OH) ↓ + Na2S。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -11230,7 +10610,7 @@
       "visualDescription": "围绕“.加深对酸和碱的主要性质的认识”呈现实验器材、操作步骤和现象变化：2.通过实验解释生活中的一些现象。。",
       "safetyLevel": "safe",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -11320,7 +10700,8 @@
       "visualDescription": "围绕“.参考图10-22进行实验”呈现实验器材、操作步骤和现象变化：(2)当观察到铁钉表面没有铁锈,铁钉变得光亮时,将其中一支试管中的铁钉取出,洗净。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "(2)取上述反应后的无色溶液 1 m L ,置于蒸发皿中加热,使液体蒸干,观察现象。"
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+        "酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"
@@ -11430,7 +10811,7 @@
       "visualDescription": "围绕“收集三种纤维,依次用坩埚钳夹持,将其点燃”呈现实验器材、操作步骤和现象变化：收集三种纤维,依次用坩埚钳夹持,将其点燃,观察、记录燃烧时的现象和产物的状态。。",
       "safetyLevel": "dangerous",
       "safetyNotes": [
-        "No explicit safety note was extracted; keep deferred until a human reviewer verifies classroom safety."
+        "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。"
       ],
       "curriculumTags": [
         "g9-textbook-experiment"

@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "builder": "scripts/textbook/build-lab-experiments.mjs",
+  "command": "node scripts/textbook/build-lab-experiments.mjs --check",
+  "status": "pass",
+  "mode": "check",
+  "outputPath": "src/data/labExperiments.json",
+  "counters": {
+    "acceptedExperiments": 89,
+    "rejectedNonExperiments": 367,
+    "rejectedDuplicates": 16,
+    "rejectedMeaninglessTitle": 0,
+    "rejectedMeaninglessContent": 79,
+    "exactContentMerges": 2,
+    "looseContentMerges": 14,
+    "blockedContentMergeCandidates": 1,
+    "curatedLegacyPreserved": 3
+  },
+  "mergeDetails": {
+    "exactContentMerges": [
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0021-1-2-l269-l275-cbf76f6c98",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0013-1-2-l136-l141-904d58ccca",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0021-1-2-l269-l275-cbf76f6c98",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0013-1-2-l136-l141-904d58ccca",
+        "reason": "exact-content-fingerprint",
+        "scores": null,
+        "primaryFingerprint": "e8bf2fed8eb9b69a27f6aac1754a7ef9f89901dd488becf256744a54899e5dfe",
+        "candidateFingerprint": "e8bf2fed8eb9b69a27f6aac1754a7ef9f89901dd488becf256744a54899e5dfe",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0318-6-3-l4824-l4831-1123649410",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0299-6-3-l3686-l3695-4fb09a6ca8",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0318-6-3-l4824-l4831-1123649410",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0299-6-3-l3686-l3695-4fb09a6ca8",
+        "reason": "exact-content-fingerprint",
+        "scores": null,
+        "primaryFingerprint": "c36c7f90f8e5c5d8334e6940c4d758bf72d476c5cb5b40914df50625bc21022b",
+        "candidateFingerprint": "c36c7f90f8e5c5d8334e6940c4d758bf72d476c5cb5b40914df50625bc21022b",
+        "sourceReferenceCountAfterMerge": 6
+      }
+    ],
+    "looseContentMerges": [
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0016-source-section-l208-l230-48b342241b",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0010-source-section-l89-l113-9197900129",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0016-source-section-l208-l230-48b342241b",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0010-source-section-l89-l113-9197900129",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.991561,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 0.6,
+          "overallScore": 0.937046
+        },
+        "primaryFingerprint": "941221c152c90c41ff497b72800756b03a873533da78745b511172e9d51f73cc",
+        "candidateFingerprint": "3a005c17df3e62213fa54a3a5b97ceda6399ca03bd6249459796b9b511397d70",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0045-source-section-l645-l670-d7ab3387e1",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0039-source-section-l485-l514-52f9674a15",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0045-source-section-l645-l670-d7ab3387e1",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0039-source-section-l485-l514-52f9674a15",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "decfbd68cf8aacd5fdbf7ffb1658b426dce7b86b2c391d1d75feb4e6d81b266a",
+        "candidateFingerprint": "5241a5cf6b225f711569e3fc00e410f5f20525d61850850551ae4bf7db8a2057",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0061-source-section-l981-l995-15ec55f8e1",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0054-source-section-l744-l760-e7662b5d75",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0061-source-section-l981-l995-15ec55f8e1",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0054-source-section-l744-l760-e7662b5d75",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "cf448c28f6b64219198559492ffdcee86b532edc3b8e09891bf50b174de54741",
+        "candidateFingerprint": "23759a17e361946981bc6284b44a5c788d939d24e7ec6c79967ef5cce9b10606",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0078-2-1-l1228-l1247-d79fd94e77",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0071-2-1-l938-l957-6951bf5bee",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0078-2-1-l1228-l1247-d79fd94e77",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0071-2-1-l938-l957-6951bf5bee",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "2add02a1f51cb7ffe5192f25edf5ab264177a9db5f8a8f8a74bd51b0f04e15e6",
+        "candidateFingerprint": "747c9ca4dbfa15dbb61e8f511192fa9045b70e63dd12ca198c2b7596340ff4d1",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0080-2-3-l1261-l1283-d52ad6fa48",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0073-2-3-l976-l998-bf8355df56",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0080-2-3-l1261-l1283-d52ad6fa48",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0073-2-3-l976-l998-bf8355df56",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.978022,
+          "stepsScore": 0.981481,
+          "materialsScore": 1,
+          "phenomenaScore": 0.5,
+          "overallScore": 0.911752
+        },
+        "primaryFingerprint": "a02459b9d0fdcd00201a4cc84396217e81dc0f33b6abe61e40a51275d590d367",
+        "candidateFingerprint": "31c4c2556fd2cc06d0954a3cc4a692380d1dcc980a93128a9a2330efc6da8a6f",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0082-2-4-l1298-l1310-6ac6328488",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0075-2-4-l1012-l1025-49058e2e88",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0082-2-4-l1298-l1310-6ac6328488",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0075-2-4-l1012-l1025-49058e2e88",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "7b17381fa0106aa11a2ac3f8ea250c9961f283592a5d2072f11517cc46eb6738",
+        "candidateFingerprint": "51fc71a419734e3f84a69fb2273ed45504f0ea0b037636840adaf2afc69834a1",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0089-2-5-l1417-l1438-88d04d5c93",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0081-2-5-l1104-l1130-a424db08b7",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0089-2-5-l1417-l1438-88d04d5c93",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0081-2-5-l1104-l1130-a424db08b7",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.963283,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 0.333333,
+          "overallScore": 0.887149
+        },
+        "primaryFingerprint": "70b4acb3303d0db8be15a98c5517f8d1456a078c44e9f99f56af7359f0882512",
+        "candidateFingerprint": "3bfbd7ab18a6ea4adc883743d47ba431f4c9e27dacb1a77a1e73ec6d994bd3b1",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0100-source-section-l1523-l1531-6ec1bdee18",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0092-source-section-l1213-l1218-4a0a8014a0",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0100-source-section-l1523-l1531-6ec1bdee18",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0092-source-section-l1213-l1218-4a0a8014a0",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.881057,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 0.95837
+        },
+        "primaryFingerprint": "332e8a48fff035e34f868c9acb571be8fb0aa21b73dfaf1990b38a04790086cd",
+        "candidateFingerprint": "9a4c49e60f0e60bb2b0e79f633bc633393a72b369183b89e6753d5f65e57254e",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0203-4-2-l2971-l3001-95f24ca1c0",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0187-4-2-l2310-l2326-a285ff5a91",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0203-4-2-l2971-l3001-95f24ca1c0",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0187-4-2-l2310-l2326-a285ff5a91",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.957447,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 0.985106
+        },
+        "primaryFingerprint": "86e25e977fcbc066fdfeaaa52c6b443c3ca9adf70aad47dd8646c80ed9c1d920",
+        "candidateFingerprint": "ab349ac2faccaab7301bf73b2a0e1e11f9820268dcce5ed6b6d083448b6270e4",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0210-4-4-l3124-l3135-c9cad5eab9",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0195-4-4-l2439-l2453-791ebb8e61",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0210-4-4-l3124-l3135-c9cad5eab9",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0195-4-4-l2439-l2453-791ebb8e61",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "b220d6720ec5bca8be31ef207ad9e93b28841d8c6838b93f371a243562f070dd",
+        "candidateFingerprint": "8dd1aa052a10e405d079c65f3b40a0e98f6c64bfa13f77aba6647dfb1f34a658",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0265-5-1-l3883-l3894-6c04bd2b46",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0248-5-1-l3024-l3035-c51c863b33",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0265-5-1-l3883-l3894-6c04bd2b46",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0248-5-1-l3024-l3035-c51c863b33",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "e4def4e4dc3834370e96292a38297f687912abb7e480e74bc91bb764c8c269c6",
+        "candidateFingerprint": "266b774d5c359f89c31b05eb08d7fa8256959864637d831abe7ecc4460ec5ec6",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0303-6-1-l4548-l4575-e118a50494",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0285-6-1-l3466-l3489-c98bdaf6ec",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0303-6-1-l4548-l4575-e118a50494",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0285-6-1-l3466-l3489-c98bdaf6ec",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.963947,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 0.987381
+        },
+        "primaryFingerprint": "b442ba298466cc62eac9c630127902bfc873f76920726e3959f355be924f4e0c",
+        "candidateFingerprint": "520e5daad5bb2af30f07c1ac768a9ca59f7b595d7b6235926739ed1dc158f3e5",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0397-7-1-l5962-l5977-bb281ded13",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0375-7-1-l4601-l4616-5a26643872",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0397-7-1-l5962-l5977-bb281ded13",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0375-7-1-l4601-l4616-5a26643872",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 0.90566,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 0.966981
+        },
+        "primaryFingerprint": "f9f59daa8c5cec7a562c3fdc521c1d81f4c36ca67133e1129761e75b2d187b2d",
+        "candidateFingerprint": "0d53db5b27eeeb358a8999b926b4dd231201ef47024e86be1da0f7cc3a324481",
+        "sourceReferenceCountAfterMerge": 6
+      },
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0408-7-2-l6160-l6178-63480a63f7",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0386-7-2-l4786-l4800-6da81e61cc",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0408-7-2-l6160-l6178-63480a63f7",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0386-7-2-l4786-l4800-6da81e61cc",
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "primaryFingerprint": "1b31aa3b683e9cdbbd0c8c1f3434b640ed30c2aefbf3f2570934be281b13248e",
+        "candidateFingerprint": "e8241685a9b58addbae7163a86f6490d2e65adaad14c769c2dc28561a5c53ada",
+        "sourceReferenceCountAfterMerge": 6
+      }
+    ],
+    "blockedContentMergeCandidates": [
+      {
+        "primaryKey": "rj-chemistry-grade8-54-2024-full|0079-2-2-l1248-l1260-57c74e8710",
+        "candidateKey": "rj-chemistry-grade9-2024-vol1|0072-2-2-l958-l975-b022b89709",
+        "primarySource": "rj-chemistry-grade8-54-2024-full|0079-2-2-l1248-l1260-57c74e8710",
+        "candidateSource": "rj-chemistry-grade9-2024-vol1|0072-2-2-l958-l975-b022b89709",
+        "reason": "conflicting gas identity: 二氧化碳+氧气+一氧化碳 vs 二氧化碳+氧气",
+        "scores": {
+          "textbookContentScore": 0.98452,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 0.5,
+          "overallScore": 0.919582
+        },
+        "primaryFingerprint": "cce10f9032b5b92cfa233345460b47e7aabfc0d218472048b9787c756cdee189",
+        "candidateFingerprint": "6d785f447d6bec7f51c9d4f32bd7c1bc5e216cab07782d89c969ca8df06db077",
+        "sourceReferenceCountAfterMerge": 6
+      }
+    ]
+  },
+  "validation": {
+    "status": "pass",
+    "errors": [],
+    "details": {
+      "missingRequiredFields": [],
+      "invalidSourceKind": [],
+      "invalidSafetyLevel": [],
+      "missingUnlockRequirements": [],
+      "meaninglessTitles": [],
+      "meaninglessDescriptions": [],
+      "dirtyDisplayFields": [],
+      "nonArrayFields": [],
+      "emptyArrayFields": []
+    }
+  },
+  "generatedRecordCount": 92,
+  "acceptedRecordIds": [
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0015-1-1-l155-l173-e88144c0",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0034-source-section-l434-l454-5d9fdc63",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0073-source-section-l1327-l1341-8b664b1f",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0087-2-1-l1511-l1551-bace4cda",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0110-3-1-l2033-l2047-04e0258d",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0130-3-3-l2383-l2396-bb53f1ca",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0135-3-4-l2430-l2461-99398b18",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0137-3-5-l2467-l2484-76d94a03",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0140-3-6-l2512-l2528-91e718b2",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0168-source-section-l2972-l2998-03d1531d",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0179-source-section-l3072-l3079-03d1531d",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0226-source-section-l3831-l3857-b15cd8b8",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0233-4-1-l3908-l3926-c3e8c0d0",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0247-source-section-l4060-l4065-dfee5cdc",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0254-4-2-l4150-l4167-b0d86724",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0270-4-3-l4406-l4415-cec95018",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0273-4-4-l4431-l4443-182fc866",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0331-5-1-l5196-l5238-366f3eea",
+    "lab-experiment-rj-chemistry-g12-selective-3-organic-2019-0347-source-section-l5460-l5473-ec3e8b78",
+    "exp-hydrogen-combustion",
+    "exp-oxygen-supports-combustion",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0012-1-1-l148-l188-291d17ac",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0016-source-section-l208-l230-6babdde8",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0021-1-2-l269-l275-972c888d",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0038-1-5-l562-l596-75850ecd",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0045-source-section-l645-l670-170bc93f",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0061-source-section-l981-l995-43ff0edf",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0079-2-2-l1248-l1260-94a186df",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0080-2-3-l1261-l1283-197d83da",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0082-2-4-l1298-l1310-49b42ea5",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0089-2-5-l1417-l1438-9bb6e658",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0095-source-section-l1465-l1476-aa442a63",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0100-source-section-l1523-l1531-738314bb",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0134-3-1-l1886-l1931-76d94a03",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0139-source-section-l1943-l1959-ac95ff52",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0202-4-1-l2959-l2970-74360a47",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0203-4-2-l2971-l3001-74360a47",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0213-source-section-l3142-l3158-834f8350",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0243-source-section-l3716-l3730-fae11cc6",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0261-source-section-l3822-l3836-25407814",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0265-5-1-l3883-l3894-f78b8e75",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0266-5-2-l3895-l3904-68c71a7e",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0303-6-1-l4548-l4575-76d94a03",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0311-6-2-l4666-l4704-f99eed5f",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0318-6-3-l4824-l4831-f99eed5f",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0319-6-4-l4832-l4848-f99eed5f",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0320-6-5-l4849-l4932-678d5766",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0386-source-section-l5780-l5799-a6e73fb3",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0397-7-1-l5962-l5977-d2a9382e",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0408-7-2-l6160-l6178-a16e99c5",
+    "lab-experiment-rj-chemistry-grade8-54-2024-full-0424-source-section-l6526-l6537-e0d10f7d",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0006-1-1-l27-l50-34b1f89c",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0027-1-4-l317-l330-6fcfd012",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0030-1-5-l389-l430-75850ecd",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0072-2-2-l958-l975-94a186df",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0087-source-section-l1160-l1165-c6d81323",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0124-3-1-l1485-l1511-74360a47",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0198-source-section-l2462-l2482-834f8350",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0228-source-section-l2884-l2894-fae11cc6",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0249-5-2-1-l3036-l3041-68c71a7e",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0293-6-2-l3567-l3599-f99eed5f",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0300-6-4-l3696-l3724-f99eed5f",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0301-6-5-l3725-l3782-678d5766",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0333-textcircled-6-l4224-l4238-23b9e0cd",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0353-1-l4367-l4381-76d94a03",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0362-source-section-l4467-l4483-3926adc6",
+    "lab-experiment-rj-chemistry-grade9-2024-vol1-0403-textcircled-6-l5090-l5099-80ec0628",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0009-8-1-l80-l98-bf414a1e",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0024-source-section-l266-l286-5d0b8330",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0044-source-section-l554-l570-49b42ea5",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0062-source-section-l803-l818-45fade93",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0077-9-1-l906-l919-76d94a03",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0078-9-2-l920-l940-c6ec1c76",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0079-9-3-l941-l961-7372139e",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0090-9-5-l1103-l1128-76d94a03",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0091-9-6-l1129-l1162-76d94a03",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0111-9-8-l1407-l1418-89b78817",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0130-source-section-l1739-l1756-a8302c0a",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0155-10-3-l1953-l1977-fc1b0b73",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0165-10-4-l2086-l2099-d97a5158",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0166-10-5-l2100-l2113-ee1369a9",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0172-source-section-l2176-l2218-0c574638",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0180-10-9-l2284-l2307-c0040c70",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0198-10-11-l2558-l2579-4741d82a",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0200-10-12-l2585-l2607-1a5ae7b9",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0201-10-13-l2608-l2618-816c7548",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0217-source-section-l2833-l2837-1cc88925",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0220-textcircled-6-l2850-l2877-f5f6b26b",
+    "lab-experiment-rj-chemistry-grade9-2024-vol2-0260-source-section-l3265-l3268-edc8d0c9"
+  ],
+  "curatedLegacyRecordIds": [
+    "exp-iron-rusting",
+    "exp-salt-formation",
+    "exp-sodium-water"
+  ]
+}

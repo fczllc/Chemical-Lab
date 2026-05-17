@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "builder": "scripts/textbook/build-lab-experiments.mjs",
+  "check": "source-reference-union",
+  "status": "pass",
+  "counters": {
+    "acceptedExperiments": 0,
+    "rejectedNonExperiments": 0,
+    "rejectedDuplicates": 1,
+    "rejectedMeaninglessTitle": 0,
+    "rejectedMeaninglessContent": 0,
+    "exactContentMerges": 0,
+    "looseContentMerges": 1,
+    "blockedContentMergeCandidates": 0,
+    "curatedLegacyPreserved": 0
+  },
+  "rejected": [
+    {
+      "key": "supplement|danger-section",
+      "reason": "duplicate loose content similarity",
+      "mergedInto": "primary|safe-section"
+    }
+  ],
+  "mergeReport": {
+    "exactContentMerges": [],
+    "looseContentMerges": [
+      {
+        "mergeType": "looseContentMerge",
+        "kept": {
+          "key": "primary|safe-section",
+          "id": "self-check-source-reference-union",
+          "title": "氧气性质检验",
+          "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+          "sourceSectionId": "safe-section",
+          "source": "rj-chemistry-grade8-54-2024-full|safe-section",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "safe",
+          "safetyRiskCategories": [
+            "heating-or-flame",
+            "gas-collection-apparatus"
+          ]
+        },
+        "mergedCandidate": {
+          "key": "supplement|danger-section",
+          "id": null,
+          "title": "氧气助燃观察",
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "sourceSectionId": "danger-section",
+          "source": "rj-chemistry-grade9-2024-vol1|danger-section",
+          "sourceReferenceCount": 1,
+          "safetyLevel": "dangerous",
+          "safetyRiskCategories": [
+            "heating-or-flame",
+            "gas-collection-apparatus",
+            "high-safety-level"
+          ]
+        },
+        "mergedCandidates": [
+          "primary|safe-section",
+          "supplement|danger-section"
+        ],
+        "mergedSources": [
+          "rj-chemistry-grade8-54-2024-full|safe-section",
+          "rj-chemistry-grade9-2024-vol1|danger-section"
+        ],
+        "reason": "loose-content-similarity",
+        "scores": {
+          "textbookContentScore": 1,
+          "stepsScore": 1,
+          "materialsScore": 1,
+          "phenomenaScore": 1,
+          "overallScore": 1
+        },
+        "hardConflictStatus": {
+          "hasHardConflict": false,
+          "reason": null
+        },
+        "sourceReferenceCountBefore": 1,
+        "sourceReferenceCountAfter": 2,
+        "sourceReferences": [
+          {
+            "candidateId": "primary-candidate",
+            "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+            "sourceSectionId": "safe-section",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade8-54-2024-full.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "a14aab42079f523b24917107fda64655d81f8e5a34d18134c72a48310e8485b2",
+            "sectionHash": "5ff06543c29f93530eb40b508bc8ae079cb79d1b5fe2608501288961855e6794",
+            "assets": []
+          },
+          {
+            "candidateId": "supplement-candidate",
+            "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+            "sourceSectionId": "danger-section",
+            "sourceKind": "experimentCandidate",
+            "sourcePath": "self-check/rj-chemistry-grade9-2024-vol1.md",
+            "sourceHeading": "【实验】",
+            "lineRange": "1-3",
+            "sourceHash": "b19ea49700f6aac8734758ec0ab2b56e07ac4f58b275c9cf833b8c6325727f1f",
+            "sectionHash": "aa960198f16355f733062852af2f141a2d8ef3c73f08c4bc4463652588ea2a5e",
+            "assets": []
+          }
+        ],
+        "safetyRiskCategories": [
+          "heating-or-flame",
+          "gas-collection-apparatus",
+          "high-safety-level"
+        ],
+        "primaryFingerprint": "9f91000a02b0e5b8dbb6381c4fc4f9bbbcf0b6a33ddb2cf60bd753e31512c2da",
+        "candidateFingerprint": "bb416f33495e90248a20bf57ab7ac29b24c7c99dbf0fadc60376f6840e645590",
+        "mergedOutput": {
+          "id": "self-check-source-reference-union",
+          "title": "氧气性质检验",
+          "source": "rj-chemistry-grade8-54-2024-full|safe-section",
+          "sourceReferenceCount": 2,
+          "sourceReferences": [
+            {
+              "candidateId": "primary-candidate",
+              "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+              "sourceSectionId": "safe-section",
+              "sourceKind": "experimentCandidate",
+              "sourcePath": "self-check/rj-chemistry-grade8-54-2024-full.md",
+              "sourceHeading": "【实验】",
+              "lineRange": "1-3",
+              "sourceHash": "a14aab42079f523b24917107fda64655d81f8e5a34d18134c72a48310e8485b2",
+              "sectionHash": "5ff06543c29f93530eb40b508bc8ae079cb79d1b5fe2608501288961855e6794",
+              "assets": []
+            },
+            {
+              "candidateId": "supplement-candidate",
+              "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+              "sourceSectionId": "danger-section",
+              "sourceKind": "experimentCandidate",
+              "sourcePath": "self-check/rj-chemistry-grade9-2024-vol1.md",
+              "sourceHeading": "【实验】",
+              "lineRange": "1-3",
+              "sourceHash": "b19ea49700f6aac8734758ec0ab2b56e07ac4f58b275c9cf833b8c6325727f1f",
+              "sectionHash": "aa960198f16355f733062852af2f141a2d8ef3c73f08c4bc4463652588ea2a5e",
+              "assets": []
+            }
+          ]
+        }
+      }
+    ],
+    "blockedContentMergeCandidates": []
+  },
+  "mergedRecordCount": 1,
+  "runtimeRecord": {
+    "id": "self-check-source-reference-union",
+    "experimentId": "self-check-source-reference-union",
+    "title": "氧气性质检验",
+    "name": "氧气性质检验",
+    "description": "观察氧气能让带火星木条复燃的现象，理解氧气助燃性质。",
+    "textbookContent": "【实验1】（1）检查集气瓶。（2）把带火星木条伸入盛有O2的集气瓶中。（3）观察木条是否复燃。（4）记录火焰变化。（5）整理实验现象。",
+    "materials": [
+      "氧气",
+      "带火星木条"
+    ],
+    "steps": [
+      "1）检查集气瓶。",
+      "2）把带火星木条伸入盛有O2的集气瓶中。",
+      "3）观察木条是否复燃。",
+      "4）记录火焰变化。",
+      "5）整理实验现象。"
+    ],
+    "observedPhenomena": [
+      "带火星木条在氧气中复燃。"
+    ],
+    "visualDescription": "木条靠近氧气后火星变亮并重新燃烧。",
+    "safetyLevel": "dangerous",
+    "safetyNotes": [
+      "涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。",
+      "真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。"
+    ],
+    "curriculumTags": [
+      "g8-textbook-experiment",
+      "g9-textbook-experiment"
+    ],
+    "difficulty": "初中基础",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
+      ],
+      "safetyLevels": [
+        "dangerous"
+      ],
+      "stageIds": [
+        "stage-3"
+      ],
+      "minimumLearnedElements": 20,
+      "grade": "八年级"
+    },
+    "sourceKind": "textbookExperiment",
+    "sourceReviewStatus": "reviewed",
+    "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+    "sourceReferences": [
+      {
+        "candidateId": "primary-candidate",
+        "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+        "sourceSectionId": "safe-section",
+        "sourceKind": "experimentCandidate",
+        "sourcePath": "self-check/rj-chemistry-grade8-54-2024-full.md",
+        "sourceHeading": "【实验】",
+        "lineRange": "1-3",
+        "sourceHash": "a14aab42079f523b24917107fda64655d81f8e5a34d18134c72a48310e8485b2",
+        "sectionHash": "5ff06543c29f93530eb40b508bc8ae079cb79d1b5fe2608501288961855e6794",
+        "assets": []
+      },
+      {
+        "candidateId": "supplement-candidate",
+        "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+        "sourceSectionId": "danger-section",
+        "sourceKind": "experimentCandidate",
+        "sourcePath": "self-check/rj-chemistry-grade9-2024-vol1.md",
+        "sourceHeading": "【实验】",
+        "lineRange": "1-3",
+        "sourceHash": "b19ea49700f6aac8734758ec0ab2b56e07ac4f58b275c9cf833b8c6325727f1f",
+        "sectionHash": "aa960198f16355f733062852af2f141a2d8ef3c73f08c4bc4463652588ea2a5e",
+        "assets": []
+      }
+    ]
+  },
+  "assertions": {
+    "sourceReferenceCountBefore": 1,
+    "sourceReferenceCountAfter": 2,
+    "runtimeSourceReferenceCount": 2,
+    "safetyLevel": "dangerous",
+    "unlockRequirements": {
+      "curriculumTags": [
+        "g8-textbook-experiment",
+        "g9-textbook-experiment"
+      ],
+      "safetyLevels": [
+        "dangerous"
+      ],
+      "stageIds": [
+        "stage-3"
+      ],
+      "minimumLearnedElements": 20,
+      "grade": "八年级"
+    },
+    "primaryStepsPreserved": true,
+    "auditFieldsPresent": []
+  },
+  "errors": []
+}

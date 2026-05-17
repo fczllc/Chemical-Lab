@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/validate-lab-experiments.mjs",
+  "check": "duplicate-content-conflict",
+  "status": "pass",
+  "counters": {
+    "totalRecords": 3,
+    "starterRecords": 1,
+    "lockedRecords": 2,
+    "missingRequiredFields": 0,
+    "invalidSourceKind": 0,
+    "invalidSafetyLevel": 0,
+    "missingUnlockRequirements": 0,
+    "invalidUnlockRequirements": 0,
+    "invalidStringFields": 0,
+    "meaninglessTitles": 0,
+    "meaninglessDescriptions": 0,
+    "dirtyDisplayFields": 0,
+    "invalidCuratedLegacyIds": 0,
+    "invalidTextbookSourceKind": 0,
+    "nonArrayFields": 0,
+    "emptyArrayFields": 0,
+    "duplicateIds": 0,
+    "duplicateContentClusters": 0,
+    "invalidSafetyNotes": 0,
+    "invalidSourceReferences": 0,
+    "duplicateSourceReferences": 0
+  },
+  "fingerprints": [
+    "a15131e1fedb40948843b929d36960cbe27dcc0a320aca28927f597cec8bef66",
+    "af470d0bb7bba0c12f396f8bf7fe3284da75879291c979c84712d8f376d08917"
+  ],
+  "errors": []
+}

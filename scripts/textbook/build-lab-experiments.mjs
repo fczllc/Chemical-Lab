@@ -83,6 +83,77 @@ const substanceTitleKeywords = [
   '水'
 ];
 
+const coreReactiveSubstances = new Map([
+  ['盐酸', [/盐酸|hcl/u]],
+  ['硫酸', [/硫酸|h2so4/u]],
+  ['硝酸', [/硝酸|hno3/u]],
+  ['氢氧化钠', [/氢氧化钠|naoh/u]],
+  ['氢氧化钙', [/氢氧化钙|ca\(oh\)2|澄清石灰水|石灰水/u]],
+  ['碳酸钠', [/碳酸钠|na2co3/u]],
+  ['碳酸氢钠', [/碳酸氢钠|nahco3/u]],
+  ['高锰酸钾', [/高锰酸钾|kmno4/u]],
+  ['过氧化氢', [/过氧化氢|双氧水|h2o2/u]],
+  ['二氧化锰', [/二氧化锰|mno2/u]],
+  ['氯酸钾', [/氯酸钾|kclo3/u]],
+  ['铁', [/铁钉|铁丝|\bfe\b/u]],
+  ['铜', [/铜片|铜丝|\bcu\b/u]],
+  ['镁', [/镁条|\bmg\b/u]],
+  ['锌', [/锌粒|\bzn\b/u]],
+  ['钠', [/金属钠|\b钠\b|\bna\b/u]],
+  ['乙醇', [/乙醇|酒精|c2h5oh/u]],
+  ['乙酸', [/乙酸|醋酸|ch3cooh/u]],
+  ['乙醛', [/乙醛|ch3cho/u]],
+  ['乙烯', [/乙烯|c2h4/u]],
+  ['乙炔', [/乙炔|c2h2/u]],
+  ['甲烷', [/甲烷|ch4/u]],
+  ['石蜡', [/石蜡|蜡烛/u]],
+  ['硫酸铜', [/硫酸铜|cuso4/u]],
+  ['水', [/蒸馏水|\b水\b|h2o/u]]
+]);
+
+const gasIdentityTerms = new Map([
+  ['氧气', [/氧气|o2/u]],
+  ['氢气', [/氢气|h2/u]],
+  ['二氧化碳', [/二氧化碳|co2/u]],
+  ['氯气', [/氯气|cl2/u]],
+  ['氨气', [/氨气|nh3/u]],
+  ['甲烷', [/甲烷|ch4/u]],
+  ['乙烯', [/乙烯|c2h4/u]],
+  ['乙炔', [/乙炔|c2h2/u]],
+  ['二氧化硫', [/二氧化硫|so2/u]],
+  ['一氧化碳', [/一氧化碳|co/u]]
+]);
+
+const apparatusProcedureFamilies = new Map([
+  ['gas-generation-collection', [/集气瓶|导管|排水法|向上排空气|向下排空气|发生装置|收集.*气/u]],
+  ['heating-flame', [/酒精灯|加热|点燃|燃烧|灼烧/u]],
+  ['filtration-separation', [/过滤|漏斗|滤纸|蒸发皿|结晶|蒸馏|分液/u]],
+  ['titration-dropping', [/滴管|滴入|逐滴|滴定|酸碱指示剂/u]],
+  ['electrolysis', [/电解|电极|电源/u]],
+  ['test-tube-reaction', [/试管|试管夹/u]]
+]);
+
+const nonConflictingSubstancePairs = new Set([
+  pairKey('过氧化氢', '二氧化锰'),
+  pairKey('盐酸', '碳酸钠'),
+  pairKey('盐酸', '碳酸氢钠'),
+  pairKey('盐酸', '锌'),
+  pairKey('硫酸', '锌'),
+  pairKey('硫酸铜', '铁'),
+  pairKey('氢氧化钙', '二氧化碳')
+]);
+
+const nonConflictingGasPairs = new Set();
+const nonConflictingApparatusPairs = new Set([
+  pairKey('gas-generation-collection', 'test-tube-reaction'),
+  pairKey('heating-flame', 'test-tube-reaction'),
+  pairKey('titration-dropping', 'test-tube-reaction')
+]);
+
+function pairKey(left, right) {
+  return [left, right].sort(compareText).join('|');
+}
+
 const legacyCuratedExperiments = [
   {
     id: 'exp-hydrogen-combustion',
@@ -167,6 +238,16 @@ async function main() {
     printHelp();
     return;
   }
+  if (options.selfCheck) {
+    const result = runSelfCheck(options.selfCheck);
+    const evidencePath = options.evidencePath ?? defaultSelfCheckEvidencePathFor(options.selfCheck);
+    await writeJsonFile(projectPath(evidencePath), result);
+    printSelfCheckResult(result);
+    if (result.status !== 'pass') {
+      process.exitCode = 1;
+    }
+    return;
+  }
   if (!options.check && !options.write) {
     throw new Error('Either --check or --write is required');
   }
@@ -192,7 +273,8 @@ function parseCli(args) {
       check: { type: 'boolean' },
       write: { type: 'boolean' },
       output: { type: 'string' },
-      evidence: { type: 'string' }
+      evidence: { type: 'string' },
+      'self-check': { type: 'string' }
     },
     strict: true
   });
@@ -205,6 +287,7 @@ function parseCli(args) {
     help: values.help === true,
     check: values.check === true,
     write: values.write === true,
+    selfCheck: values['self-check'] ?? null,
     outputPath: values.output ?? defaultOutputPath,
     evidencePath: values.evidence ?? null
   };
@@ -216,10 +299,16 @@ function printHelp() {
 Usage:
   node scripts/textbook/build-lab-experiments.mjs --check
   node scripts/textbook/build-lab-experiments.mjs --write
+  node scripts/textbook/build-lab-experiments.mjs --self-check duplicate-content-merge
+  node scripts/textbook/build-lab-experiments.mjs --self-check duplicate-content-conflict
+  node scripts/textbook/build-lab-experiments.mjs --self-check safety-risk-summary
+  node scripts/textbook/build-lab-experiments.mjs --self-check safety-note-quality
+  node scripts/textbook/build-lab-experiments.mjs --self-check source-reference-union
 
 Options:
   --check             Preview generated lab records and validation counters without writing src/data/labExperiments.json.
   --write             Write src/data/labExperiments.json and evidence after validation passes.
+  --self-check <name> Run a deterministic builder fixture without reading textbook generated data.
   --output <path>     Runtime lab experiment JSON path. Defaults to ${defaultOutputPath}.
   --evidence <path>   Evidence JSON path. Defaults to the Task 2 check/write evidence files.
   --help              Show this help.`);
@@ -233,9 +322,13 @@ async function buildLabExperimentPlan(options = {}) {
     rejectedDuplicates: 0,
     rejectedMeaninglessTitle: 0,
     rejectedMeaninglessContent: 0,
+    exactContentMerges: 0,
+    looseContentMerges: 0,
+    blockedContentMergeCandidates: 0,
     curatedLegacyPreserved: 0
   };
   const rejected = [];
+  const mergeDetails = createMergeDetails();
 
   for (const volumeId of volumeIds) {
     const volumeRoot = path.join(generatedRoot, volumeId);
@@ -250,8 +343,8 @@ async function buildLabExperimentPlan(options = {}) {
   }
 
   const records = [];
+  const runtimeCandidates = [];
   const seenSections = new Set();
-  const seenContent = new Set();
   const matchedLegacyIds = new Set();
 
   for (const group of [...sourceGroups.values()].sort(compareGroups)) {
@@ -293,29 +386,19 @@ async function buildLabExperimentPlan(options = {}) {
       continue;
     }
 
-    const contentKey = `${normalizeForDedupe(title)}|${hashText(normalizeForDedupe(textbookContent)).slice(0, 16)}`;
-    if (seenContent.has(contentKey)) {
-      counters.rejectedDuplicates += 1;
-      rejected.push({ key: group.key, reason: 'duplicate title/content' });
-      continue;
-    }
-
     const sourceVolumeId = textField(group, 'sourceVolumeId');
     const sourceSectionId = textField(group, 'sourceSectionId');
     const legacyId = matchLegacyExperimentId({ title, description, textbookContent, materials, observedPhenomena });
-    const shouldPreserveLegacyId = legacyId && !matchedLegacyIds.has(legacyId);
-    if (legacyId) {
-      matchedLegacyIds.add(legacyId);
-    }
-    const id = shouldPreserveLegacyId ? legacyId : experimentIdFor(sourceVolumeId, sourceSectionId, title);
     const safetyLevel = safetyLevelFor(group);
     const curriculumTags = curriculumTagsFor(group, sourceVolumeId);
 
-    records.push({
-      id,
-      experimentId: id,
+    runtimeCandidates.push({
+      key: group.key,
+      contentKey: contentKeyFor(textbookContent, steps, materials, observedPhenomena),
+      legacyId,
+      sourceVolumeId,
+      sourceSectionId,
       title,
-      name: title,
       description,
       textbookContent,
       materials,
@@ -323,17 +406,26 @@ async function buildLabExperimentPlan(options = {}) {
       observedPhenomena,
       visualDescription: visualDescriptionFor(title, observedPhenomena),
       safetyLevel,
-      safetyNotes: safetyNotesFor(group, safetyLevel),
+      sourceSafetyNotes: sourceSafetyNotesFor(group),
       curriculumTags,
       difficulty: difficultyFor(sourceVolumeId),
       unlockRequirements: unlockRequirementsFor(curriculumTags, safetyLevel, sourceVolumeId),
-      sourceKind: 'textbookExperiment',
       sourceReviewStatus: sourceReviewStatusFor(group),
-      sourceVolumeId,
       sourceReferences: sourceReferencesFor(group)
     });
     seenSections.add(sourceKey);
-    seenContent.add(contentKey);
+  }
+
+  const mergedCandidates = mergeRuntimeCandidates(runtimeCandidates, counters, rejected, mergeDetails);
+  for (const candidate of mergedCandidates) {
+    const shouldPreserveLegacyId = candidate.legacyId && !matchedLegacyIds.has(candidate.legacyId);
+    if (candidate.legacyId) {
+      matchedLegacyIds.add(candidate.legacyId);
+    }
+    const id = shouldPreserveLegacyId ? candidate.legacyId : experimentIdFor(candidate.sourceVolumeId, candidate.sourceSectionId, candidate.title);
+    const runtimeRecord = buildTextbookRuntimeRecord(candidate, id);
+    registerRuntimeRecordForMergeReport(mergeDetails, candidate, runtimeRecord);
+    records.push(runtimeRecord);
     counters.acceptedExperiments += 1;
   }
 
@@ -356,6 +448,7 @@ async function buildLabExperimentPlan(options = {}) {
     sourceVolumes: volumeIds,
     outputPath: options.outputPath ?? defaultOutputPath,
     counters,
+    mergeDetails,
     validation,
     rejected,
     labExperiments: records
@@ -517,15 +610,93 @@ function safetyLevelFor(group) {
   return 'caution';
 }
 
-function safetyNotesFor(group, safetyLevel) {
+function sourceSafetyNotesFor(group) {
   const notes = mergeStringArrays(group, ['safetyNotes']);
-  if (notes.length > 0) {
-    return notes.map(cleanContent).filter((item) => isCleanDisplayText(item) && !isGenericTitle(item));
+  return notes.map(cleanContent).filter((item) => isCleanDisplayText(item) && !isGenericTitle(item));
+}
+
+function safetyNotesForMergedCandidate(candidate) {
+  const riskText = safetyRiskTextFor(candidate);
+  const notes = [];
+
+  if (hasToxicOrIrritatingGasRisk(riskText)) {
+    notes.push('涉及有毒或刺激性气体时，必须通风并由教师演示，禁止直接闻气味。');
   }
+  if (hasFlammableGasRisk(riskText)) {
+    notes.push('点燃氢气、乙炔或甲烷前必须验纯，远离明火，防止爆炸或火灾。');
+  }
+  if (hasHeatingOrFlameRisk(riskText)) {
+    notes.push('涉及加热或酒精灯时，远离可燃物，使用试管夹，防止明火和热玻璃烫伤。');
+  }
+  if (hasGasCollectionRisk(riskText)) {
+    notes.push('真实操作需检查装置气密性，注意导管位置，防止倒吸并稳拿集气瓶。');
+  }
+  if (hasCorrosiveRisk(riskText)) {
+    notes.push('酸碱或腐蚀性试剂需佩戴护目镜，避免接触皮肤和眼睛，少量洒出立即冲洗并报告教师。');
+  }
+
+  if (notes.length === 0) {
+    notes.push(defaultSafetyNoteFor(candidate.safetyLevel));
+  }
+
+  return uniqueSafetyNotes(notes).slice(0, 4);
+}
+
+function safetyRiskTextFor(candidate) {
+  return canonicalContentText([
+    candidate.title,
+    candidate.description,
+    candidate.textbookContent,
+    ...(candidate.materials ?? []),
+    ...(candidate.steps ?? []),
+    ...(candidate.observedPhenomena ?? []),
+    ...(candidate.sourceSafetyNotes ?? []),
+    candidate.safetyLevel
+  ].join(' '));
+}
+
+function hasHeatingOrFlameRisk(text) {
+  return /酒精灯|加热|点燃|燃烧|灼烧|火焰|明火|热玻璃|烫伤/u.test(text);
+}
+
+function hasGasCollectionRisk(text) {
+  return /集气瓶|导管|排水法|排空气|水槽|收集气体|发生装置|倒吸|气密性/u.test(text);
+}
+
+function hasCorrosiveRisk(text) {
+  return /盐酸|硫酸|硝酸|氢氧化钠|氢氧化钾|强酸|强碱|酸碱|腐蚀|灼伤/u.test(text);
+}
+
+function hasToxicOrIrritatingGasRisk(text) {
+  return /氯气|氨气|二氧化硫|硫化氢|氮氧化物|一氧化氮|二氧化氮|刺激性气体|刺激性气味|有毒气体/u.test(text);
+}
+
+function hasFlammableGasRisk(text) {
+  return /氢气|乙炔|甲烷|可燃性气体|易燃气体/u.test(text);
+}
+
+function defaultSafetyNoteFor(safetyLevel) {
   if (safetyLevel === 'dangerous' || safetyLevel === 'extremely dangerous') {
-    return ['教材实验可能涉及加热、酸碱或可燃物，真实操作必须由教师指导并佩戴护目镜。'];
+    return '该实验风险较高，真实操作需教师演示或全程监督，学生仅在虚拟环境学习。';
   }
-  return ['仅用于应用内虚拟学习，真实实验需遵守课堂安全规范。'];
+  if (safetyLevel === 'safe') {
+    return '按教师要求进行虚拟或课堂观察，不擅自改变化学试剂和操作条件。';
+  }
+  return '真实操作需教师确认器材、剂量和环境安全，本应用仅用于虚拟学习观察。';
+}
+
+function uniqueSafetyNotes(notes) {
+  const seen = new Set();
+  const values = [];
+  for (const note of notes) {
+    const cleaned = cleanContent(note);
+    const key = canonicalContentText(cleaned);
+    if (cleaned && !seen.has(key)) {
+      values.push(cleaned);
+      seen.add(key);
+    }
+  }
+  return values;
 }
 
 function curriculumTagsFor(_group, sourceVolumeId) {
@@ -588,6 +759,479 @@ function sourceReferencesFor(group) {
   return [...refs.values()].sort(compareSourceReferences);
 }
 
+function contentKeyFor(textbookContent, steps, materials, observedPhenomena) {
+  return hashText(exactFingerprintPayloadFor(canonicalContentFieldsFor({ textbookContent, steps, materials, observedPhenomena })));
+}
+
+function createMergeDetails() {
+  return {
+    exactContentMerges: [],
+    looseContentMerges: [],
+    blockedContentMergeCandidates: []
+  };
+}
+
+function mergeRuntimeCandidates(candidates, counters, rejected, mergeDetails) {
+  const clusters = [];
+  for (const candidate of candidates) {
+    const prepared = prepareMergeCandidate(candidate);
+    const exactCluster = clusters.find((cluster) => cluster.fingerprint === prepared.contentFingerprint);
+    if (exactCluster) {
+      counters.exactContentMerges += 1;
+      counters.rejectedDuplicates += 1;
+      rejected.push({ key: candidate.key, reason: 'duplicate exact content fingerprint', mergedInto: exactCluster.primary.key });
+      mergeDetails.exactContentMerges.push(mergeDetailFor(exactCluster.primary, prepared, { mergeType: 'exactContentMerge', reason: 'exact-content-fingerprint', canMerge: true }));
+      mergeCandidateIntoPrimary(exactCluster, prepared);
+      continue;
+    }
+
+    const looseMatch = findLooseMergeCluster(clusters, prepared);
+    if (looseMatch?.canMerge) {
+      counters.looseContentMerges += 1;
+      counters.rejectedDuplicates += 1;
+      rejected.push({ key: candidate.key, reason: 'duplicate loose content similarity', mergedInto: looseMatch.cluster.primary.key });
+      mergeDetails.looseContentMerges.push(mergeDetailFor(looseMatch.cluster.primary, prepared, { ...looseMatch, mergeType: 'looseContentMerge' }));
+      mergeCandidateIntoPrimary(looseMatch.cluster, prepared);
+      continue;
+    }
+
+    for (const blocked of looseMatch?.blocked ?? []) {
+      counters.blockedContentMergeCandidates += 1;
+      mergeDetails.blockedContentMergeCandidates.push(mergeDetailFor(blocked.cluster.primary, prepared, { ...blocked, mergeType: 'blockedContentMergeCandidate', canMerge: false }));
+    }
+
+    clusters.push({
+      fingerprint: prepared.contentFingerprint,
+      primary: prepared,
+      members: [prepared]
+    });
+  }
+
+  return clusters.map((cluster) => finalizeMergedCandidate(cluster.primary));
+}
+
+function prepareMergeCandidate(candidate) {
+  const canonicalFields = canonicalContentFieldsFor(candidate);
+  return {
+    ...candidate,
+    canonicalFields,
+    contentFingerprint: hashText(exactFingerprintPayloadFor(canonicalFields)),
+    conflictProfile: conflictProfileFor(candidate, canonicalFields),
+    sourceReferences: unionSourceReferences(candidate.sourceReferences)
+  };
+}
+
+function exactFingerprintPayloadFor(canonicalFields) {
+  return JSON.stringify({
+    textbookContent: canonicalFields.textbookContent,
+    steps: canonicalFields.steps,
+    materials: canonicalFields.materials,
+    observedPhenomena: canonicalFields.observedPhenomena
+  });
+}
+
+function canonicalContentFieldsFor(candidate) {
+  return {
+    textbookContent: canonicalContentText(candidate.textbookContent),
+    steps: (candidate.steps ?? []).map(canonicalStepText).filter(Boolean),
+    materials: uniqueSorted((candidate.materials ?? []).map(canonicalContentText).filter(Boolean)),
+    observedPhenomena: uniqueSorted((candidate.observedPhenomena ?? []).map(canonicalContentText).filter(Boolean))
+  };
+}
+
+function canonicalContentText(value) {
+  return canonicalText(value)
+    .normalize('NFKC')
+    .replace(/[“”]/gu, '"')
+    .replace(/[‘’]/gu, "'")
+    .replace(/[﹐，]/gu, ',')
+    .replace(/[。]/gu, '.')
+    .replace(/[；]/gu, ';')
+    .replace(/[：]/gu, ':')
+    .replace(/[、]/gu, ',')
+    .replace(/[（]/gu, '(')
+    .replace(/[）]/gu, ')')
+    .replace(/[【［〔]/gu, '[')
+    .replace(/[】］〕]/gu, ']')
+    .replace(/[－–—]/gu, '-')
+    .replace(/<[^>]+>/gu, ' ')
+    .replace(/[`*_#>]+/gu, ' ')
+    .replace(/\$\s*([^$]+?)\s*\$/gu, '$$$1$$')
+    .replace(experimentNumberLabelPattern, ' ')
+    .replace(/\[实验[^\]\s,.，。;；:：]*(?:\]|\s+)?/gu, ' ')
+    .replace(/\\mathrm\s*\{\s*([^}]+)\s*\}/gu, '$1')
+    .replace(/[①②③④⑤⑥⑦⑧⑨⑩]/gu, (match) => String('①②③④⑤⑥⑦⑧⑨⑩'.indexOf(match) + 1))
+    .replace(/[₀₁₂₃₄₅₆₇₈₉]/gu, (match) => String('₀₁₂₃₄₅₆₇₈₉'.indexOf(match)))
+    .replace(/\b([A-Za-z]+)\s*([0-9]+)\b/gu, '$1$2')
+    .replace(/(\d+(?:\.\d+)?)\s*(mL|L|g|kg|mg|mol|cm|mm|℃|°C)\b/giu, '$1$2')
+    .replace(/\s*([,.!?;:()\[\]])\s*/gu, '$1')
+    .replace(/[,.!?;:()\[\]]/gu, '')
+    .replace(/\s+/gu, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+function canonicalStepText(value) {
+  return canonicalContentText(value)
+    .replace(/^(?:步骤)?(?:\d+|一|二|三|四|五|六|七|八|九|十)[).、:：-]?\s*/u, '')
+    .replace(/^第(?:\d+|一|二|三|四|五|六|七|八|九|十)步[：:、]?\s*/u, '')
+    .trim();
+}
+
+function findLooseMergeCluster(clusters, candidate) {
+  const blocked = [];
+  let best = null;
+  for (const cluster of clusters) {
+    const scores = similarityScoresFor(cluster.primary, candidate);
+    if (!isLooseScoreCandidate(scores)) {
+      continue;
+    }
+
+    const conflict = hardConflictFor(cluster.primary.conflictProfile, candidate.conflictProfile);
+    if (conflict) {
+      blocked.push({ cluster, scores, reason: conflict });
+      continue;
+    }
+
+    if (!best || scores.overallScore > best.scores.overallScore || (scores.overallScore === best.scores.overallScore && compareText(cluster.primary.key, best.cluster.primary.key) < 0)) {
+      best = { cluster, scores, reason: 'loose-content-similarity', canMerge: true };
+    }
+  }
+
+  return best ?? (blocked.length > 0 ? { blocked } : null);
+}
+
+function isLooseScoreCandidate(scores) {
+  const fieldScores = [scores.textbookContentScore, scores.stepsScore, scores.materialsScore, scores.phenomenaScore];
+  return scores.overallScore >= 0.86 && fieldScores.filter((score) => score >= 0.82).length >= 2 && (scores.textbookContentScore >= 0.82 || scores.stepsScore >= 0.82);
+}
+
+function similarityScoresFor(left, right) {
+  const textbookContentScore = sorensenDice(charTrigrams(left.canonicalFields.textbookContent), charTrigrams(right.canonicalFields.textbookContent));
+  const stepsScore = indexedStepScore(left.canonicalFields.steps, right.canonicalFields.steps);
+  const materialsScore = jaccard(left.canonicalFields.materials, right.canonicalFields.materials);
+  const phenomenaScore = jaccard(left.canonicalFields.observedPhenomena, right.canonicalFields.observedPhenomena);
+  const overallScore = 0.35 * textbookContentScore + 0.30 * stepsScore + 0.20 * materialsScore + 0.15 * phenomenaScore;
+  return roundedScores({ textbookContentScore, stepsScore, materialsScore, phenomenaScore, overallScore });
+}
+
+function roundedScores(scores) {
+  return Object.fromEntries(Object.entries(scores).map(([key, value]) => [key, Number(value.toFixed(6))]));
+}
+
+function indexedStepScore(leftSteps, rightSteps) {
+  const denominator = Math.max(leftSteps.length, rightSteps.length);
+  if (denominator === 0) return 1;
+  let total = 0;
+  for (let index = 0; index < denominator; index += 1) {
+    if (leftSteps[index] && rightSteps[index]) {
+      total += sorensenDice(charTrigrams(leftSteps[index]), charTrigrams(rightSteps[index]));
+    }
+  }
+  return total / denominator;
+}
+
+function charTrigrams(value) {
+  const text = canonicalContentText(value).replace(/\s+/gu, '');
+  if (!text) return [];
+  if ([...text].length <= 3) return [text];
+  const chars = [...text];
+  const trigrams = [];
+  for (let index = 0; index <= chars.length - 3; index += 1) {
+    trigrams.push(chars.slice(index, index + 3).join(''));
+  }
+  return trigrams;
+}
+
+function sorensenDice(leftItems, rightItems) {
+  if (leftItems.length === 0 && rightItems.length === 0) return 1;
+  if (leftItems.length === 0 || rightItems.length === 0) return 0;
+  const rightCounts = countedItems(rightItems);
+  let overlap = 0;
+  for (const item of leftItems) {
+    const count = rightCounts.get(item) ?? 0;
+    if (count > 0) {
+      overlap += 1;
+      rightCounts.set(item, count - 1);
+    }
+  }
+  return (2 * overlap) / (leftItems.length + rightItems.length);
+}
+
+function countedItems(items) {
+  const counts = new Map();
+  for (const item of items) {
+    counts.set(item, (counts.get(item) ?? 0) + 1);
+  }
+  return counts;
+}
+
+function jaccard(leftItems, rightItems) {
+  const left = new Set(leftItems);
+  const right = new Set(rightItems);
+  if (left.size === 0 && right.size === 0) return 1;
+  const union = new Set([...left, ...right]);
+  let intersection = 0;
+  for (const item of left) {
+    if (right.has(item)) intersection += 1;
+  }
+  return intersection / union.size;
+}
+
+function mergeCandidateIntoPrimary(cluster, candidate) {
+  const primary = cluster.primary;
+  primary.sourceReferences = unionSourceReferences([...primary.sourceReferences, ...candidate.sourceReferences]);
+  primary.curriculumTags = mergeStableDisplayArray(primary.curriculumTags, candidate.curriculumTags);
+  primary.materials = mergeStableDisplayArray(primary.materials, candidate.materials);
+  primary.observedPhenomena = mergeStableDisplayArray(primary.observedPhenomena, candidate.observedPhenomena);
+  primary.sourceSafetyNotes = mergeStableDisplayArray(primary.sourceSafetyNotes, candidate.sourceSafetyNotes);
+  primary.steps = mergeSteps(primary.steps, candidate.steps);
+  primary.safetyLevel = maxSafetyLevel(primary.safetyLevel, candidate.safetyLevel);
+  primary.unlockRequirements = upgradedUnlockRequirements(primary.unlockRequirements, primary.curriculumTags, primary.safetyLevel, primary.sourceVolumeId);
+  primary.contentKey = primary.contentFingerprint;
+  cluster.members.push(candidate);
+}
+
+function finalizeMergedCandidate(candidate) {
+  const { canonicalFields, contentFingerprint, conflictProfile, ...runtimeCandidate } = candidate;
+  return {
+    ...runtimeCandidate,
+    sourceReferences: unionSourceReferences(runtimeCandidate.sourceReferences),
+    curriculumTags: mergeStableDisplayArray(runtimeCandidate.curriculumTags),
+    materials: mergeStableDisplayArray(runtimeCandidate.materials),
+    observedPhenomena: mergeStableDisplayArray(runtimeCandidate.observedPhenomena),
+    steps: mergeSteps(runtimeCandidate.steps),
+    unlockRequirements: upgradedUnlockRequirements(runtimeCandidate.unlockRequirements, runtimeCandidate.curriculumTags, runtimeCandidate.safetyLevel, runtimeCandidate.sourceVolumeId),
+    safetyNotes: safetyNotesForMergedCandidate(runtimeCandidate)
+  };
+}
+
+function mergeStableDisplayArray(left = [], right = []) {
+  const values = new Map();
+  for (const item of [...left, ...right]) {
+    const cleaned = cleanContent(item);
+    if (cleaned) {
+      values.set(canonicalContentText(cleaned), cleaned);
+    }
+  }
+  return [...values.values()].slice(0, 12);
+}
+
+function mergeSteps(left = [], right = []) {
+  const values = [];
+  const seen = new Set();
+  for (const step of [...left, ...right]) {
+    const key = canonicalStepText(step);
+    if (key && !seen.has(key)) {
+      values.push(cleanContent(step));
+      seen.add(key);
+    }
+  }
+  return values.slice(0, 12);
+}
+
+function unionSourceReferences(refs = []) {
+  const byKey = new Map();
+  for (const ref of refs) {
+    if (!isRecord(ref)) continue;
+    const key = [ref.candidateId, ref.sourcePath, ref.lineRange, ref.sourceKind, ref.sourceVolumeId, ref.sourceSectionId].map(canonicalText).join('|');
+    byKey.set(key, ref);
+  }
+  return [...byKey.values()].sort(compareSourceReferences);
+}
+
+function mergeDetailFor(primary, candidate, match) {
+  const sourceReferencesBefore = unionSourceReferences(primary.sourceReferences);
+  const sourceReferencesAfter = unionSourceReferences([...primary.sourceReferences, ...candidate.sourceReferences]);
+  return {
+    mergeType: match.mergeType ?? (match.canMerge ? 'looseContentMerge' : 'blockedContentMergeCandidate'),
+    kept: mergeParticipantFor(primary),
+    mergedCandidate: mergeParticipantFor(candidate),
+    mergedCandidates: uniqueSorted([primary.key, candidate.key]),
+    mergedSources: uniqueSorted([sourceSectionFor(primary), sourceSectionFor(candidate)]),
+    reason: match.reason,
+    scores: match.scores ?? null,
+    hardConflictStatus: {
+      hasHardConflict: match.canMerge === false,
+      reason: match.canMerge === false ? match.reason : null
+    },
+    sourceReferenceCountBefore: sourceReferencesBefore.length,
+    sourceReferenceCountAfter: sourceReferencesAfter.length,
+    sourceReferences: sourceReferencesAfter,
+    safetyRiskCategories: mergeStableDisplayArray(safetyRiskCategoriesFor(primary), safetyRiskCategoriesFor(candidate)),
+    primaryFingerprint: primary.contentFingerprint,
+    candidateFingerprint: candidate.contentFingerprint,
+    mergedOutput: null
+  };
+}
+
+function registerRuntimeRecordForMergeReport(mergeDetails, candidate, runtimeRecord) {
+  for (const detail of allMergeReportEntries(mergeDetails)) {
+    if (detail.kept.key !== candidate.key) {
+      continue;
+    }
+    detail.kept.id = runtimeRecord.id;
+    if (!detail.hardConflictStatus.hasHardConflict) {
+      detail.mergedOutput = {
+        id: runtimeRecord.id,
+        title: runtimeRecord.title,
+        source: sourceSectionFor(candidate),
+        sourceReferenceCount: runtimeRecord.sourceReferences.length,
+        sourceReferences: runtimeRecord.sourceReferences
+      };
+    }
+  }
+}
+
+function allMergeReportEntries(mergeDetails) {
+  return [
+    ...(mergeDetails.exactContentMerges ?? []),
+    ...(mergeDetails.looseContentMerges ?? []),
+    ...(mergeDetails.blockedContentMergeCandidates ?? [])
+  ];
+}
+
+function mergeParticipantFor(candidate) {
+  return {
+    key: candidate.key,
+    id: null,
+    title: candidate.title,
+    sourceVolumeId: candidate.sourceVolumeId,
+    sourceSectionId: candidate.sourceSectionId,
+    source: sourceSectionFor(candidate),
+    sourceReferenceCount: unionSourceReferences(candidate.sourceReferences).length,
+    safetyLevel: candidate.safetyLevel,
+    safetyRiskCategories: safetyRiskCategoriesFor(candidate)
+  };
+}
+
+function sourceSectionFor(candidate) {
+  return `${candidate.sourceVolumeId}|${candidate.sourceSectionId}`;
+}
+
+function safetyRiskCategoriesFor(candidate) {
+  const text = safetyRiskTextFor(candidate);
+  const categories = [];
+  if (hasToxicOrIrritatingGasRisk(text)) categories.push('toxic-or-irritating-gas');
+  if (hasFlammableGasRisk(text)) categories.push('flammable-gas');
+  if (hasHeatingOrFlameRisk(text)) categories.push('heating-or-flame');
+  if (hasGasCollectionRisk(text)) categories.push('gas-collection-apparatus');
+  if (hasCorrosiveRisk(text)) categories.push('corrosive-acid-base');
+  if (safetyRank(candidate.safetyLevel) >= safetyRank('dangerous')) categories.push('high-safety-level');
+  return categories.length > 0 ? categories : ['general-lab-safety'];
+}
+
+function maxSafetyLevel(left, right) {
+  return safetyRank(left) >= safetyRank(right) ? left : right;
+}
+
+function safetyRank(safetyLevel) {
+  return { safe: 0, caution: 1, dangerous: 2, 'extremely dangerous': 3 }[safetyLevel] ?? 1;
+}
+
+function upgradedUnlockRequirements(existing, curriculumTags, safetyLevel, sourceVolumeId) {
+  const base = unlockRequirementsFor(curriculumTags, safetyLevel, sourceVolumeId);
+  const grade = canonicalText(existing?.grade) || base.grade;
+  return {
+    ...base,
+    grade
+  };
+}
+
+function conflictProfileFor(candidate, canonicalFields) {
+  const text = [candidate.title, candidate.description, candidate.textbookContent, ...candidate.materials, ...candidate.steps, ...candidate.observedPhenomena, ...canonicalFields.materials, ...canonicalFields.observedPhenomena].join(' ');
+  return {
+    substances: extractTerms(text, coreReactiveSubstances),
+    gases: extractTerms(text, gasIdentityTerms),
+    apparatusFamilies: extractTerms(text, apparatusProcedureFamilies),
+    phenomenonPolarity: phenomenonPolarityFor(text)
+  };
+}
+
+function hardConflictFor(left, right) {
+  const substanceConflict = setConflict(left.substances, right.substances, nonConflictingSubstancePairs);
+  if (substanceConflict) return `conflicting core reactive substances: ${substanceConflict}`;
+  const gasConflict = gasIdentityConflict(left.gases, right.gases);
+  if (gasConflict) return `conflicting gas identity: ${gasConflict}`;
+  const apparatusConflict = setConflict(left.apparatusFamilies, right.apparatusFamilies, nonConflictingApparatusPairs);
+  if (apparatusConflict) return `conflicting main apparatus/procedure family: ${apparatusConflict}`;
+  if (left.phenomenonPolarity && right.phenomenonPolarity && left.phenomenonPolarity !== right.phenomenonPolarity) {
+    return `contradictory observed phenomenon: ${left.phenomenonPolarity} vs ${right.phenomenonPolarity}`;
+  }
+  return null;
+}
+
+function gasIdentityConflict(left, right) {
+  if (left.size === 0 || right.size === 0) return null;
+  const leftKey = [...left].sort(compareText).join('+');
+  const rightKey = [...right].sort(compareText).join('+');
+  if (leftKey === rightKey) return null;
+  return `${leftKey} vs ${rightKey}`;
+}
+
+function setConflict(left, right, allowedPairs = new Set()) {
+  if (left.size === 0 || right.size === 0) return null;
+  const onlyLeft = [...left].filter((item) => !right.has(item));
+  const onlyRight = [...right].filter((item) => !left.has(item));
+  if (onlyLeft.length === 0 || onlyRight.length === 0) return null;
+  for (const leftItem of onlyLeft) {
+    for (const rightItem of onlyRight) {
+      if (!allowedPairs.has(pairKey(leftItem, rightItem))) {
+        return `${leftItem} vs ${rightItem}`;
+      }
+    }
+  }
+  return null;
+}
+
+function extractTerms(text, terms) {
+  const normalized = canonicalContentText(text);
+  const found = new Set();
+  for (const [term, patterns] of terms) {
+    if (patterns.some((pattern) => pattern.test(normalized))) {
+      found.add(term);
+    }
+  }
+  return found;
+}
+
+function phenomenonPolarityFor(text) {
+  const normalized = canonicalContentText(text);
+  const positive = /(复燃|燃烧更旺|火焰|变蓝|变红|变浑浊|沉淀|气泡|褪色|红棕色|黄绿色|蓝色沉淀|白色沉淀)/u.test(normalized);
+  const negative = /(不复燃|不能燃烧|无明显现象|没有明显变化|不变浑浊|未褪色|不产生气泡|不变色)/u.test(normalized);
+  if (positive && !negative) return 'positive-change';
+  if (negative && !positive) return 'negative-or-no-change';
+  return null;
+}
+
+function uniqueSorted(values) {
+  return [...new Set(values)].filter(Boolean).sort(compareText);
+}
+
+function buildTextbookRuntimeRecord(candidate, id) {
+  return {
+    id,
+    experimentId: id,
+    title: candidate.title,
+    name: candidate.title,
+    description: candidate.description,
+    textbookContent: candidate.textbookContent,
+    materials: candidate.materials,
+    steps: candidate.steps,
+    observedPhenomena: candidate.observedPhenomena,
+    visualDescription: candidate.visualDescription,
+    safetyLevel: candidate.safetyLevel,
+    safetyNotes: candidate.safetyNotes,
+    curriculumTags: candidate.curriculumTags,
+    difficulty: candidate.difficulty,
+    unlockRequirements: candidate.unlockRequirements,
+    sourceKind: 'textbookExperiment',
+    sourceReviewStatus: candidate.sourceReviewStatus,
+    sourceVolumeId: candidate.sourceVolumeId,
+    sourceReferences: candidate.sourceReferences
+  };
+}
+
 function buildCuratedLegacyRecord(legacy) {
   return {
     id: legacy.id,
@@ -645,7 +1289,8 @@ function validateRuntimeRecords(records) {
     meaninglessDescriptions: [],
     dirtyDisplayFields: [],
     nonArrayFields: [],
-    emptyArrayFields: []
+    emptyArrayFields: [],
+    auditOnlyFields: []
   };
   const requiredFields = ['id', 'experimentId', 'title', 'name', 'description', 'textbookContent', 'materials', 'steps', 'observedPhenomena', 'visualDescription', 'safetyLevel', 'safetyNotes', 'curriculumTags', 'difficulty', 'unlockRequirements', 'sourceKind', 'sourceReviewStatus', 'sourceVolumeId', 'sourceReferences'];
   const allowedSourceKinds = new Set(['textbookExperiment', 'curatedLegacy']);
@@ -664,6 +1309,9 @@ function validateRuntimeRecords(records) {
     if (!isMeaningfulTitle(record?.title)) details.meaninglessTitles.push(`${id}: title ${record?.title}`);
     if (!isMeaningfulTitle(record?.name)) details.meaninglessTitles.push(`${id}: name ${record?.name}`);
     if (!isMeaningfulDescription(record?.description)) details.meaninglessDescriptions.push(`${id}: description ${record?.description}`);
+    for (const field of forbiddenRuntimeAuditFields()) {
+      if (field in record) details.auditOnlyFields.push(`${id}: ${field}`);
+    }
     for (const [field, value] of displayValuesFor(record)) {
       if (!isCleanDisplayText(value)) {
         details.dirtyDisplayFields.push(`${id}: ${field} ${value}`);
@@ -687,11 +1335,15 @@ function validateRuntimeRecords(records) {
 function evidenceFor(result, options) {
   return {
     schemaVersion: 1,
+    builder: result.builder,
     command: `node scripts/textbook/build-lab-experiments.mjs ${options.write ? '--write' : '--check'}`,
     status: result.status,
     mode: result.mode,
     outputPath: result.outputPath,
     counters: result.counters,
+    dedupeAudit: result.mergeDetails,
+    mergeReport: result.mergeDetails,
+    mergeDetails: result.mergeDetails,
     validation: result.validation,
     generatedRecordCount: result.labExperiments.length,
     acceptedRecordIds: result.labExperiments.filter((record) => record.sourceKind === 'textbookExperiment').map((record) => record.id),
@@ -707,6 +1359,419 @@ function printResult(result, options) {
   }
   console.log(`runtimeRecordCount=${result.labExperiments.length}`);
   for (const error of result.validation.errors) {
+    console.error(`ERROR ${error}`);
+  }
+}
+
+function runSelfCheck(checkName) {
+  switch (checkName) {
+    case 'duplicate-content-merge':
+      return selfCheckDuplicateContentMerge();
+    case 'duplicate-content-conflict':
+      return selfCheckDuplicateContentConflict();
+    case 'safety-risk-summary':
+      return selfCheckSafetyRiskSummary();
+    case 'safety-note-quality':
+      return selfCheckSafetyNoteQuality();
+    case 'source-reference-union':
+      return selfCheckSourceReferenceUnion();
+    default:
+      throw new Error(`Unknown self-check: ${checkName}`);
+  }
+}
+
+function defaultSelfCheckEvidencePathFor(checkName) {
+  if (checkName === 'safety-risk-summary') return '.sisyphus/evidence/task-3-safety-risk-summary.json';
+  if (checkName === 'safety-note-quality') return '.sisyphus/evidence/task-3-safety-quality.json';
+  if (checkName === 'source-reference-union') return '.sisyphus/evidence/task-4-source-reference-union.json';
+  return `.sisyphus/evidence/task-2-${checkName}.json`;
+}
+
+function selfCheckDuplicateContentMerge() {
+  const counters = selfCheckCounters();
+  const rejected = [];
+  const mergeDetails = createMergeDetails();
+  const candidates = [
+    makeSelfCheckCandidate({
+      key: 'vol1|section-a',
+      sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+      sourceSectionId: 'section-a',
+      sourceReferences: [makeSelfCheckReference('candidate-a', 'rj-chemistry-grade9-2024-vol1', 'section-a')]
+    }),
+    makeSelfCheckCandidate({
+      key: 'vol2|section-b',
+      sourceVolumeId: 'rj-chemistry-grade8-54-2024-full',
+      sourceSectionId: 'section-b',
+      textbookContent: '【实验2】（1）把带火星木条伸入盛有 O₂ 的集气瓶中。 （2）观察木条是否复燃。',
+      steps: ['① 把带火星木条伸入盛有O₂的集气瓶中。', '② 观察木条是否复燃。'],
+      materials: ['集气瓶', 'O₂', '带火星木条'],
+      observedPhenomena: ['带火星木条在氧气中复燃。'],
+      sourceReferences: [makeSelfCheckReference('candidate-b', 'rj-chemistry-grade8-54-2024-full', 'section-b')]
+    })
+  ];
+
+  const merged = mergeRuntimeCandidates(candidates, counters, rejected, mergeDetails);
+  const status = merged.length === 1 && merged[0].sourceReferences.length >= 2 && counters.exactContentMerges + counters.looseContentMerges >= 1 ? 'pass' : 'fail';
+  return {
+    schemaVersion: 1,
+    builder: 'scripts/textbook/build-lab-experiments.mjs',
+    check: 'duplicate-content-merge',
+    status,
+    counters,
+    rejected,
+    mergeDetails,
+    mergedRecordCount: merged.length,
+    sourceReferenceCount: merged[0]?.sourceReferences.length ?? 0,
+    retainedPrimary: merged[0] ? { key: merged[0].key, title: merged[0].title, sourceVolumeId: merged[0].sourceVolumeId } : null,
+    errors: status === 'pass' ? [] : ['Expected same canonical content from different sources to merge into one record with at least two sourceReferences.']
+  };
+}
+
+function selfCheckDuplicateContentConflict() {
+  const counters = selfCheckCounters();
+  const rejected = [];
+  const mergeDetails = createMergeDetails();
+  const candidates = [
+    makeSelfCheckCandidate({
+      key: 'oxygen|section-a',
+      title: '气体性质检验',
+      sourceSectionId: 'oxygen-section',
+      textbookContent: '步骤一 把带火星木条伸入盛有氧气的集气瓶中。步骤二 观察木条是否复燃。',
+      steps: ['把带火星木条伸入盛有氧气的集气瓶中。', '观察木条是否复燃。'],
+      materials: ['氧气', '带火星木条', '集气瓶'],
+      observedPhenomena: ['带火星木条在氧气中复燃。'],
+      sourceReferences: [makeSelfCheckReference('candidate-oxygen', 'rj-chemistry-grade9-2024-vol1', 'oxygen-section')]
+    }),
+    makeSelfCheckCandidate({
+      key: 'hydrogen|section-b',
+      title: '气体性质检验',
+      sourceVolumeId: 'rj-chemistry-grade9-2024-vol2',
+      sourceSectionId: 'hydrogen-section',
+      textbookContent: '步骤一 把带火星木条伸入盛有氧气的集气瓶中。步骤二 观察木条是否复燃。实际气体标签为氢气。',
+      steps: ['把带火星木条伸入盛有氧气的集气瓶中。', '观察木条是否复燃。'],
+      materials: ['氢气', '氧气', '带火星木条', '集气瓶'],
+      observedPhenomena: ['带火星木条在氧气中复燃。'],
+      sourceReferences: [makeSelfCheckReference('candidate-hydrogen', 'rj-chemistry-grade9-2024-vol2', 'hydrogen-section')]
+    })
+  ];
+
+  const merged = mergeRuntimeCandidates(candidates, counters, rejected, mergeDetails);
+  const blockedReasons = mergeDetails.blockedContentMergeCandidates.map((item) => item.reason);
+  const status = merged.length === 2 && counters.blockedContentMergeCandidates >= 1 && blockedReasons.some((reason) => /gas identity|observed phenomenon/u.test(reason)) ? 'pass' : 'fail';
+  return {
+    schemaVersion: 1,
+    builder: 'scripts/textbook/build-lab-experiments.mjs',
+    check: 'duplicate-content-conflict',
+    status,
+    counters,
+    rejected,
+    mergeDetails,
+    mergedRecordCount: merged.length,
+    blockedReasons,
+    errors: status === 'pass' ? [] : ['Expected similar title/content with conflicting gas identity or phenomenon to remain two records and report a blocked merge.']
+  };
+}
+
+function selfCheckSafetyRiskSummary() {
+  const cases = safetyRiskSummaryFixtures();
+  const results = cases.map((fixture) => {
+    const candidate = finalizeMergedCandidate(prepareMergeCandidate(makeSelfCheckCandidate(fixture.candidate)));
+    const notes = candidate.safetyNotes;
+    return {
+      name: fixture.name,
+      safetyLevel: candidate.safetyLevel,
+      notes,
+      status: fixture.requiredPatterns.some((pattern) => notes.some((note) => pattern.test(note))) && !safetyNotesCopySteps(notes, candidate.steps) ? 'pass' : 'fail'
+    };
+  });
+  const errors = results.filter((result) => result.status !== 'pass').map((result) => `${result.name}: expected normalized risk summary, got ${result.notes.join(' | ')}`);
+  return {
+    schemaVersion: 1,
+    builder: 'scripts/textbook/build-lab-experiments.mjs',
+    check: 'safety-risk-summary',
+    status: errors.length === 0 ? 'pass' : 'fail',
+    results,
+    errors
+  };
+}
+
+function selfCheckSafetyNoteQuality() {
+  const cases = [
+    ...safetyRiskSummaryFixtures(),
+    {
+      name: 'default caution fallback',
+      candidate: {
+        title: '溶解现象观察',
+        textbookContent: '取少量食盐加入水中，搅拌并观察溶解过程。',
+        steps: ['取少量食盐加入水中。', '搅拌并观察溶解过程。'],
+        materials: ['食盐', '水', '烧杯'],
+        observedPhenomena: ['食盐逐渐溶解。'],
+        safetyLevel: 'caution',
+        sourceSafetyNotes: ['取少量食盐加入水中。']
+      }
+    }
+  ];
+  const results = cases.map((fixture) => {
+    const candidate = finalizeMergedCandidate(prepareMergeCandidate(makeSelfCheckCandidate(fixture.candidate)));
+    const notes = candidate.safetyNotes;
+    const qualityErrors = safetyNoteQualityErrors(notes, candidate.steps);
+    return {
+      name: fixture.name,
+      notes,
+      qualityErrors,
+      status: qualityErrors.length === 0 ? 'pass' : 'fail'
+    };
+  });
+  const errors = results.flatMap((result) => result.qualityErrors.map((error) => `${result.name}: ${error}`));
+  return {
+    schemaVersion: 1,
+    builder: 'scripts/textbook/build-lab-experiments.mjs',
+    check: 'safety-note-quality',
+    status: errors.length === 0 ? 'pass' : 'fail',
+    forbiddenPhrasePolicy: 'legacy empty-safety fallback text is rejected',
+    results,
+    errors
+  };
+}
+
+function selfCheckSourceReferenceUnion() {
+  const counters = selfCheckCounters();
+  const rejected = [];
+  const mergeDetails = createMergeDetails();
+  const candidates = [
+    makeSelfCheckCandidate({
+      key: 'primary|safe-section',
+      sourceVolumeId: 'rj-chemistry-grade8-54-2024-full',
+      sourceSectionId: 'safe-section',
+      title: '氧气性质检验',
+      textbookContent: '【实验1】（1）检查集气瓶。（2）把带火星木条伸入盛有O2的集气瓶中。（3）观察木条是否复燃。（4）记录火焰变化。（5）整理实验现象。',
+      steps: ['1）检查集气瓶。', '2）把带火星木条伸入盛有O2的集气瓶中。', '3）观察木条是否复燃。', '4）记录火焰变化。', '5）整理实验现象。'],
+      materials: ['氧气', '带火星木条'],
+      observedPhenomena: ['带火星木条在氧气中复燃。'],
+      safetyLevel: 'safe',
+      curriculumTags: ['g8-textbook-experiment'],
+      unlockRequirements: unlockRequirementsFor(['g8-textbook-experiment'], 'safe', 'rj-chemistry-grade8-54-2024-full'),
+      sourceReferences: [makeSelfCheckReference('primary-candidate', 'rj-chemistry-grade8-54-2024-full', 'safe-section')]
+    }),
+    makeSelfCheckCandidate({
+      key: 'supplement|danger-section',
+      sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+      sourceSectionId: 'danger-section',
+      title: '氧气助燃观察',
+      textbookContent: '【实验2】（1）检查集气瓶。（2）把带火星木条伸入盛有 O2 的集气瓶中。（3）观察木条是否复燃。（4）记录火焰变化。（5）整理实验现象。',
+      steps: ['① 检查集气瓶。', '② 把带火星木条伸入盛有O2的集气瓶中。', '③ 观察木条是否复燃。', '④ 记录火焰变化。', '⑤ 整理实验现象。'],
+      materials: ['氧气', '带火星木条'],
+      observedPhenomena: ['带火星木条在氧气中复燃。'],
+      safetyLevel: 'dangerous',
+      curriculumTags: ['g9-textbook-experiment'],
+      unlockRequirements: unlockRequirementsFor(['g9-textbook-experiment'], 'dangerous', 'rj-chemistry-grade9-2024-vol1'),
+      sourceReferences: [makeSelfCheckReference('supplement-candidate', 'rj-chemistry-grade9-2024-vol1', 'danger-section')]
+    })
+  ];
+
+  const merged = mergeRuntimeCandidates(candidates, counters, rejected, mergeDetails);
+  const record = merged[0] ? buildTextbookRuntimeRecord(merged[0], 'self-check-source-reference-union') : null;
+  if (record && merged[0]) registerRuntimeRecordForMergeReport(mergeDetails, merged[0], record);
+
+  const mergedDetail = mergeDetails.exactContentMerges[0] ?? mergeDetails.looseContentMerges[0] ?? null;
+  const auditFieldsPresent = record ? forbiddenRuntimeAuditFields().filter((field) => field in record) : [];
+  const primaryStepsPreserved = record ? record.steps[0] === candidates[0].steps[0] && record.steps[1] === candidates[0].steps[1] : false;
+  const status = record && merged.length === 1 && record.sourceReferences.length >= 2 && record.safetyLevel === 'dangerous' && record.unlockRequirements.safetyLevels.includes('dangerous') && record.unlockRequirements.grade === '八年级' && primaryStepsPreserved && auditFieldsPresent.length === 0 && mergedDetail?.sourceReferenceCountAfter >= mergedDetail?.sourceReferenceCountBefore && mergedDetail?.sourceReferences.length >= 2 ? 'pass' : 'fail';
+
+  return {
+    schemaVersion: 1,
+    builder: 'scripts/textbook/build-lab-experiments.mjs',
+    check: 'source-reference-union',
+    status,
+    counters,
+    rejected,
+    mergeReport: mergeDetails,
+    mergedRecordCount: merged.length,
+    runtimeRecord: record,
+    assertions: {
+      sourceReferenceCountBefore: mergedDetail?.sourceReferenceCountBefore ?? 0,
+      sourceReferenceCountAfter: mergedDetail?.sourceReferenceCountAfter ?? 0,
+      runtimeSourceReferenceCount: record?.sourceReferences.length ?? 0,
+      safetyLevel: record?.safetyLevel ?? null,
+      unlockRequirements: record?.unlockRequirements ?? null,
+      primaryStepsPreserved,
+      auditFieldsPresent
+    },
+    errors: status === 'pass' ? [] : ['Expected merged record to preserve primary identity/order, union source refs, max safety/unlock requirements, and exclude audit-only fields.']
+  };
+}
+
+function forbiddenRuntimeAuditFields() {
+  return ['canonicalFields', 'contentFingerprint', 'conflictProfile', 'scores', 'mergeDetails', 'sourceReferenceCountAfterMerge', 'sourceSafetyNotes', 'mergedOutput', 'hardConflictStatus'];
+}
+
+function safetyRiskSummaryFixtures() {
+  return [
+    {
+      name: 'heating alcohol lamp fixture',
+      candidate: {
+        title: '酒精灯加热铜片实验',
+        textbookContent: '用酒精灯加热铜片，观察铜片颜色变化和火焰。',
+        steps: ['用试管夹夹住铜片。', '在酒精灯火焰上加热。', '观察铜片颜色变化。'],
+        materials: ['酒精灯', '铜片', '试管夹'],
+        observedPhenomena: ['铜片表面变黑。'],
+        safetyLevel: 'dangerous',
+        sourceSafetyNotes: ['在酒精灯火焰上加热。']
+      },
+      requiredPatterns: [/明火|热玻璃|烫伤|可燃/u]
+    },
+    {
+      name: 'gas collection water displacement fixture',
+      candidate: {
+        title: '排水法收集氧气',
+        textbookContent: '检查装置气密性后，将导管伸入水槽中的集气瓶，用排水法收集氧气。',
+        steps: ['检查装置气密性。', '将导管伸入倒置集气瓶。', '用排水法收集气体。'],
+        materials: ['集气瓶', '导管', '水槽', '氧气'],
+        observedPhenomena: ['集气瓶内水面下降并收集到气体。'],
+        safetyLevel: 'caution',
+        sourceSafetyNotes: ['导管插入集气瓶。']
+      },
+      requiredPatterns: [/气密性|导管|倒吸|集气瓶/u]
+    },
+    {
+      name: 'acid base corrosive fixture',
+      candidate: {
+        title: '盐酸与氢氧化钠反应',
+        textbookContent: '向氢氧化钠溶液中滴加稀盐酸，观察酸碱中和现象。',
+        steps: ['取氢氧化钠溶液。', '滴加稀盐酸。', '观察指示剂颜色变化。'],
+        materials: ['稀盐酸', '氢氧化钠溶液', '酚酞'],
+        observedPhenomena: ['溶液颜色逐渐变化。'],
+        safetyLevel: 'dangerous',
+        sourceSafetyNotes: ['佩戴护目镜。']
+      },
+      requiredPatterns: [/护目镜|皮肤|眼睛|腐蚀/u]
+    },
+    {
+      name: 'toxic irritating gas fixture',
+      candidate: {
+        title: '氯气性质观察',
+        textbookContent: '教师演示氯气使湿润有色布条褪色，氯气有刺激性气味。',
+        steps: ['教师收集少量氯气。', '放入湿润有色布条。', '观察褪色现象。'],
+        materials: ['氯气', '湿润有色布条', '集气瓶'],
+        observedPhenomena: ['有色布条褪色。'],
+        safetyLevel: 'dangerous',
+        sourceSafetyNotes: ['不要闻氯气。']
+      },
+      requiredPatterns: [/通风|教师演示|禁止直接闻/u]
+    },
+    {
+      name: 'flammable hydrogen fixture',
+      candidate: {
+        title: '氢气燃烧实验',
+        textbookContent: '收集氢气并点燃，观察淡蓝色火焰，点燃前需要检验纯度。',
+        steps: ['收集一试管氢气。', '点燃前检验纯度。', '观察淡蓝色火焰。'],
+        materials: ['氢气', '试管', '火柴'],
+        observedPhenomena: ['氢气燃烧产生淡蓝色火焰。'],
+        safetyLevel: 'dangerous',
+        sourceSafetyNotes: ['点燃前检验纯度。']
+      },
+      requiredPatterns: [/验纯|爆炸|火灾|明火/u]
+    }
+  ];
+}
+
+function safetyNoteQualityErrors(notes, steps) {
+  const errors = [];
+  if (!Array.isArray(notes) || notes.length < 1 || notes.length > 4) {
+    errors.push(`expected 1-4 notes, got ${Array.isArray(notes) ? notes.length : 'non-array'}`);
+    return errors;
+  }
+  for (const note of notes) {
+    if (!isCleanDisplayText(note)) errors.push(`dirty display note: ${note}`);
+    if (!/[\p{Script=Han}]/u.test(note)) errors.push(`expected Chinese note: ${note}`);
+    if (note.length > 80) errors.push(`note too long: ${note}`);
+    for (const phrase of forbiddenSafetyFallbackPhrases()) {
+      if (note.includes(phrase)) errors.push(`forbidden fallback phrase: ${phrase}`);
+    }
+  }
+  if (safetyNotesCopySteps(notes, steps)) {
+    errors.push('safety note copies a step verbatim');
+  }
+  return errors;
+}
+
+function safetyNotesCopySteps(notes, steps) {
+  const stepKeys = new Set((steps ?? []).map(canonicalStepText).filter(Boolean));
+  return notes.some((note) => stepKeys.has(canonicalStepText(note)));
+}
+
+function forbiddenSafetyFallbackPhrases() {
+  return [`未${'提取到安全提示'}`, `教材未${'提取到明确安全提示'}`, `No explicit safety note was ${'extracted'}`];
+}
+
+function selfCheckCounters() {
+  return {
+    acceptedExperiments: 0,
+    rejectedNonExperiments: 0,
+    rejectedDuplicates: 0,
+    rejectedMeaninglessTitle: 0,
+    rejectedMeaninglessContent: 0,
+    exactContentMerges: 0,
+    looseContentMerges: 0,
+    blockedContentMergeCandidates: 0,
+    curatedLegacyPreserved: 0
+  };
+}
+
+function makeSelfCheckCandidate(overrides = {}) {
+  const candidate = {
+    key: 'self-check|section-a',
+    contentKey: '',
+    legacyId: null,
+    sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+    sourceSectionId: 'section-a',
+    title: '氧气性质检验',
+    description: '观察氧气能让带火星木条复燃的现象，理解氧气助燃性质。',
+    textbookContent: '【实验1】（1）把带火星木条伸入盛有O2的集气瓶中。（2）观察木条是否复燃。',
+    materials: ['氧气', '带火星木条', '集气瓶'],
+    steps: ['1）把带火星木条伸入盛有O2的集气瓶中。', '2）观察木条是否复燃。'],
+    observedPhenomena: ['带火星木条在氧气中复燃。'],
+    visualDescription: '木条靠近氧气后火星变亮并重新燃烧。',
+    safetyLevel: 'caution',
+    safetyNotes: ['燃烧实验需要教师指导并远离易燃物。'],
+    curriculumTags: ['g9-textbook-experiment'],
+    difficulty: '初中基础',
+    unlockRequirements: {
+      curriculumTags: ['g9-textbook-experiment'],
+      safetyLevels: ['caution'],
+      stageIds: ['stage-2'],
+      minimumLearnedElements: 8,
+      grade: '九年级'
+    },
+    sourceReviewStatus: 'reviewed',
+    sourceReferences: [makeSelfCheckReference('candidate-a', 'rj-chemistry-grade9-2024-vol1', 'section-a')],
+    ...overrides
+  };
+  candidate.contentKey = contentKeyFor(candidate.textbookContent, candidate.steps, candidate.materials, candidate.observedPhenomena);
+  return candidate;
+}
+
+function makeSelfCheckReference(candidateId, sourceVolumeId, sourceSectionId) {
+  return {
+    candidateId,
+    sourceVolumeId,
+    sourceSectionId,
+    sourceKind: 'experimentCandidate',
+    sourcePath: `self-check/${sourceVolumeId}.md`,
+    sourceHeading: '【实验】',
+    lineRange: '1-3',
+    sourceHash: hashText(candidateId),
+    sectionHash: hashText(sourceSectionId),
+    assets: []
+  };
+}
+
+function printSelfCheckResult(result) {
+  console.log(`${result.check}=${result.status}`);
+  for (const [name, value] of Object.entries(result.counters ?? {})) {
+    console.log(`${name}=${value}`);
+  }
+  for (const error of result.errors ?? []) {
     console.error(`ERROR ${error}`);
   }
 }
@@ -735,7 +1800,7 @@ function mergeStringArrays(group, fieldNames) {
 }
 
 function cleanContent(value) {
-  return canonicalText(value)
+  return repairKnownGarbledFormulaText(canonicalText(value))
     .replace(experimentNumberLabelPattern, ' ')
     .replace(/…+/gu, '')
     .replace(/\$([^$]+)\$/gu, '$1')
@@ -745,6 +1810,33 @@ function cleanContent(value) {
     .replace(/([（(])\s+/gu, '$1')
     .replace(/\s+/gu, ' ')
     .trim();
+}
+
+function repairKnownGarbledFormulaText(value) {
+  if (!value || !value.includes('C O N a') || !value.includes('H - B r')) {
+    return value;
+  }
+
+  const sodiumReaction = '$$ 2\\mathrm{CH_3CH_2OH}+2\\mathrm{Na}\\rightarrow2\\mathrm{CH_3CH_2ONa}+\\mathrm{H_2}\\uparrow $$';
+  const hydrobromicReaction = '$$ \\mathrm{CH_3CH_2OH}+\\mathrm{HBr}\\xrightarrow{\\triangle}\\mathrm{CH_3CH_2Br}+\\mathrm{H_2O} $$';
+  const leadIn = '另外，由于羟基中氧原子的电负性较大';
+  const firstStart = value.indexOf('$$ 2 H \\xrightarrow');
+  const leadInIndex = value.indexOf(leadIn);
+  const secondStart = value.indexOf('$$ \\begin{array}{c}', Math.max(0, leadInIndex));
+  const secondEnd = value.indexOf('$$', secondStart + 3);
+
+  if (firstStart === -1 || leadInIndex === -1 || secondStart === -1 || secondEnd === -1) {
+    return value;
+  }
+
+  return [
+    value.slice(0, firstStart),
+    sodiumReaction,
+    ' ',
+    value.slice(leadInIndex, secondStart),
+    hydrobromicReaction,
+    value.slice(secondEnd + 2)
+  ].join('');
 }
 
 function cleanTitlePhrase(value) {
