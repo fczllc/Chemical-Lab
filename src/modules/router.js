@@ -77,6 +77,16 @@ export function navigateTo(section) {
   // hashchange 事件会触发 activateSection
 }
 
+export function rememberHomeSelection(atomicNumber) {
+  const normalizedAtomicNumber = Number(atomicNumber);
+  if (!Number.isInteger(normalizedAtomicNumber) || normalizedAtomicNumber <= 0) {
+    return null;
+  }
+
+  savedHomeSelectionAtomicNumber = normalizedAtomicNumber;
+  return normalizedAtomicNumber;
+}
+
 function activateSection(section) {
   const from = currentSection;
   const to = section;

@@ -1,23 +1,12 @@
 /** ===== 实验室模块 ===== */
 import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
 import { curriculumTags, learningPath, labExperiments as importedLabExperiments } from '../data/index.js';
-import {
-  register as registerSimulationConfig,
-  has as hasSimulationConfig,
-  lookup as getSimulationConfig
-} from '../lab-sim/registry.js';
-import apparatusRecognitionConfig from '../lab-sim/experiments/configs/apparatus-recognition.json';
-import sodiumWaterConfig from '../lab-sim/experiments/configs/sodium-water.json';
-import { createApparatusRecognitionSimulation } from '../lab-sim/experiments/apparatus-recognition.js';
-import { createSodiumWaterSimulation } from '../lab-sim/experiments/sodium-water.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
   getExperimentTitleOverride,
   getLearnedElements,
   getSelectedElement,
-  getSettings,
-  markExperimentCompleted,
   setExperimentTitleOverride
 } from './storage.js';
 import { formulaHTML, equationHTML, mixedProseFormulaHTML, plainChemText } from './chemNotation.js';
@@ -31,29 +20,19 @@ const EQUATION_MAP = {
   'reaction-oxygen-supports-combustion': 'C + O2 → CO2'
 };
 
-const ANIMATION_ID_MAP = {
-  'exp-hydrogen-combustion': 'reaction-hydrogen-combustion',
-  'exp-iron-rusting': 'reaction-iron-rusting',
-  'exp-sodium-water': 'reaction-sodium-water',
-  'exp-salt-formation': 'reaction-salt-formation',
-  'exp-oxygen-supports-combustion': 'reaction-oxygen-supports-combustion'
-};
+
 
 const SAFETY_THEME = LAB_SAFETY_THEME;
 
 const DANGEROUS_LEVELS = new Set(['dangerous', 'radioactive', 'extremely dangerous']);
 
-const THREE_D_SIMULATION_CONFIGS = [apparatusRecognitionConfig, sodiumWaterConfig];
-const APPARATUS_RECOGNITION_EXPERIMENT_ID = 'apparatus-recognition';
-const SODIUM_WATER_EXPERIMENT_ID = 'exp-sodium-water';
-
 const MAX_TITLE_LENGTH_UNITS = 80;
 
-THREE_D_SIMULATION_CONFIGS.forEach((config) => {
-  if (!hasSimulationConfig(config.experimentId)) {
-    registerSimulationConfig(config);
-  }
-});
+function getExperimentSerial(experimentId, indexMap, maxDigits) {
+  const serialNumber = indexMap.get(experimentId);
+  if (serialNumber == null) return '';
+  return `NO. ${String(serialNumber).padStart(maxDigits, '0')}`;
+}
 
 function escapeAttr(value) {
   return String(value)
@@ -110,10 +89,7 @@ let focusedAtomicNumber = null;
 let activeReactionId = labExperiments[0]?.id ?? null;
 let currentView = 'detail';
 let safetyConfirmed = false;
-let simulationRunId = 0;
-let completionTimer = null;
-let activeModal = null;
-let active3DSimulation = null;
+
 let activeDetailModal = null;
 let detailModalRequested = false;
 let editingTitleReactionId = null;
@@ -150,27 +126,12 @@ export function initLab() {
       return;
     }
 
-    closeSimulationModal();
-    clearSimulationTimer();
     closeDetailModal();
-  });
-
-  window.addEventListener('performancemodechange', () => {
-    if (getCurrentSection() === 'lab' && currentView === 'simulation') {
-      const activeReaction = labExperiments.find((item) => item.id === activeReactionId);
-      if (activeReaction) {
-        closeSimulationModal();
-        clearSimulationTimer();
-        openSimulationModal(activeReaction);
-      }
-    }
   });
 
   window.addEventListener('statereset', () => {
     currentView = 'detail';
     safetyConfirmed = false;
-    closeSimulationModal();
-    clearSimulationTimer();
     closeDetailModal();
     renderLabShell();
   });
@@ -183,15 +144,6 @@ export function initLab() {
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && getCurrentSection() === 'lab') {
-      if (activeModal) {
-        closeSimulationModal();
-        clearSimulationTimer();
-        currentView = 'detail';
-        safetyConfirmed = false;
-        renderLabShell();
-        return;
-      }
-
       if (activeDetailModal) {
         closeDetailModal();
         return;
@@ -204,7 +156,6 @@ export function initLab() {
 
       currentView = 'detail';
       safetyConfirmed = false;
-      clearSimulationTimer();
       renderLabShell();
     }
   });
@@ -261,6 +212,8 @@ function renderLabShell() {
 
   const total = labExperiments.length;
   const visible = filteredReactions.length;
+  const maxIndexDigits = Math.max(3, String(total).length);
+  const experimentIndexMap = new Map(labExperiments.map((exp, i) => [exp.id, i + 1]));
 
   if (visible === 0) {
     list.innerHTML = `
@@ -280,10 +233,13 @@ function renderLabShell() {
       const titlePlain = plainChemText(titleSource.text);
       const titleHtml = mixedProseFormulaHTML(titleSource.text);
 
+      const paddedSerial = getExperimentSerial(experiment.id, experimentIndexMap, maxIndexDigits);
+
       return `
         <article class="lab-item-card ${experiment.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
           <div class="lab-item-card-header">
             <div class="lab-item-card-title-wrap">
+              <span class="lab-card-serial" data-testid="lab-card-index" aria-label="实验序号 ${paddedSerial.replace(/^NO. /, '')}">${paddedSerial}</span>
               <h3 title="${escapeAttr(titlePlain)}" data-testid="lab-card-title">${titleHtml}</h3>
               ${hasFormulaList(experiment.reactants) ? `<p class="lab-elements" data-chem-notation="reactants">${(experiment.reactants || []).map((r) => formulaHTML(r)).join(' + ')}</p>` : ''}
             </div>
@@ -305,7 +261,6 @@ function renderLabShell() {
         activeReactionId = button.dataset.reactionOpen;
         currentView = 'detail';
         safetyConfirmed = false;
-        clearSimulationTimer();
         detailModalRequested = true;
         renderLabShell();
       });
@@ -348,32 +303,9 @@ function bindStageEvents(modalContent, activeReaction, isCompleted) {
   });
 
   const confirmationToggle = modalContent.querySelector('[data-safety-confirm]');
-  const startButton = modalContent.querySelector('[data-lab-start]');
 
   confirmationToggle?.addEventListener('change', () => {
     safetyConfirmed = confirmationToggle.checked;
-    if (startButton) {
-      startButton.disabled = !unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed);
-    }
-  });
-
-  modalContent.querySelector('[data-lab-start]')?.addEventListener('click', () => {
-    if (!unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed)) {
-      return;
-    }
-
-    currentView = 'safety';
-    updateDetailModalContent(activeReaction, isCompleted);
-  });
-
-  modalContent.querySelector('[data-launch-simulation]')?.addEventListener('click', () => {
-    if (!unlockState.unlocked || (DANGEROUS_LEVELS.has(activeReaction.safetyLevel) && !safetyConfirmed)) {
-      return;
-    }
-
-    closeDetailModal();
-    currentView = 'simulation';
-    openSimulationModal(activeReaction);
   });
 
   // Title editing events
@@ -599,10 +531,6 @@ function renderStageContent(reaction, isCompleted) {
     return renderSafetyView(reaction, isCompleted);
   }
 
-  if (currentView === 'result') {
-    return renderResultView(reaction, isCompleted);
-  }
-
   return renderReactionDetail(reaction, isCompleted);
 }
 
@@ -684,11 +612,16 @@ function renderReactionDetail(experiment, isCompleted) {
     ? renderTitleEditMode(experiment, placeholderTitle)
     : renderTitleReadonly(titleSource.text, titleSource.source);
 
+  const total = labExperiments.length;
+  const maxIndexDigits = Math.max(3, String(total).length);
+  const experimentIndexMap = new Map(labExperiments.map((exp, i) => [exp.id, i + 1]));
+  const serialLabel = getExperimentSerial(experiment.id, experimentIndexMap, maxIndexDigits);
+
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
       <div class="hud-shell-header">
         <div>
-          <p class="hud-kicker">SIMULATION STANDBY</p>
+          <p class="hud-kicker lab-detail-serial" data-testid="lab-detail-index">${serialLabel}</p>
           ${titleHtml}
         </div>
         <div class="lab-detail-actions">
@@ -743,12 +676,9 @@ function renderReactionDetail(experiment, isCompleted) {
       ${DANGEROUS_LEVELS.has(experiment.safetyLevel) ? `
       <label class="lab-confirm-row">
         <input type="checkbox" data-safety-confirm ${safetyConfirmed ? 'checked' : ''}>
-        <span>我已了解安全事项，并知道这是虚拟演示。</span>
+        <span>我已了解安全事项，并会按说明观察内容。</span>
       </label>
       ` : ''}
-      <div class="lab-nav-row">
-        <button class="hud-action-btn hud-action-btn-primary" data-lab-start ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(experiment.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? (isCompleted ? '再次开始实验' : '开始实验') : '继续学习后解锁'}</button>
-      </div>
     </div>
   `;
 }
@@ -829,12 +759,9 @@ function renderSafetyView(experiment, isCompleted) {
             </div>
             <div class="lab-stage-card">
               <span>当前状态</span>
-              <strong>${isCompleted ? '你已经完成过此实验，可再次复习。' : '首次模拟将写入实验完成记录。'}</strong>
+              <strong>${isCompleted ? '你已经完成过此实验，可再次复习。' : '请阅读实验说明与安全守则。'}</strong>
             </div>
           </aside>
-        </div>
-        <div class="lab-nav-row">
-          <button class="hud-action-btn hud-action-btn-primary" data-launch-simulation ${unlockState.unlocked && (!DANGEROUS_LEVELS.has(experiment.safetyLevel) || safetyConfirmed) ? '' : 'disabled'}>${unlockState.unlocked ? '进入模拟视图' : '继续学习后解锁'}</button>
         </div>
       </div>
     </div>
@@ -848,7 +775,7 @@ function getReactionUnlockState(experiment, state = {}) {
     return { unlocked: true, summary: '当前实验已开放。', requirements: [] };
   }
   if (!requirements) {
-    return { unlocked: false, summary: '需完成对应课程主题或学习阶段后开放模拟。', requirements: [] };
+    return { unlocked: false, summary: '需完成对应课程主题或学习阶段后开放查看。', requirements: [] };
   }
 
   const learned = state.learned || getLearnedElements();
@@ -871,7 +798,7 @@ function getReactionUnlockState(experiment, state = {}) {
       minimumLearnedElements > 0 ? `学习元素达到 ${minimumLearnedElements} 个` : '',
       requirements.grade && requirements.chapter ? `${requirements.grade}/${requirements.chapter}` : ''
     ].filter(Boolean),
-    summary: unlocked ? '课程、安全与进度要求已满足。' : '需完成对应课程主题或学习阶段后开放模拟。'
+    summary: unlocked ? '课程、安全与进度要求已满足。' : '需完成对应课程主题或学习阶段后开放查看。'
   };
 }
 
@@ -935,181 +862,7 @@ function renderUnlockSummary(unlockState) {
   return mixedProseFormulaHTML(cleaned || unlockState.summary);
 }
 
-function openSimulationModal(experiment) {
-  closeSimulationModal();
 
-  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
-  const performanceMode = getSettings().performanceMode || 'normal';
-  const isSimplified = performanceMode === 'normal';
-  const duration = getSimulationDuration(experiment.id, performanceMode);
-  const simulationConfig = getSimulationConfig(experiment.experimentId);
-  const uses3DSimulation = Boolean(simulationConfig)
-    && [APPARATUS_RECOGNITION_EXPERIMENT_ID, SODIUM_WATER_EXPERIMENT_ID].includes(experiment.experimentId);
-
-  const backdrop = document.createElement('div');
-  backdrop.className = 'lab-modal-backdrop';
-
-  const modal = document.createElement('div');
-  modal.className = 'lab-modal';
-  modal.setAttribute('style', `--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}`);
-  modal.setAttribute('role', 'dialog');
-  modal.setAttribute('aria-modal', 'true');
-  modal.innerHTML = renderSimulationModalContent(experiment, {
-    duration,
-    isSimplified,
-    uses3DSimulation
-  });
-
-  backdrop.appendChild(modal);
-  document.body.appendChild(backdrop);
-  activeModal = backdrop;
-
-  modal.querySelector('[data-lab-modal-close]')?.addEventListener('click', () => {
-    closeSimulationModal();
-    clearSimulationTimer();
-    currentView = 'detail';
-    safetyConfirmed = false;
-    renderLabShell();
-  });
-
-  backdrop.addEventListener('click', (event) => {
-    if (event.target === backdrop) {
-      closeSimulationModal();
-      clearSimulationTimer();
-      currentView = 'detail';
-      safetyConfirmed = false;
-      renderLabShell();
-    }
-  });
-
-  window.requestAnimationFrame(() => {
-    if (uses3DSimulation) {
-      start3DSimulation(experiment, modal, simulationConfig);
-      return;
-    }
-
-    startSimulation(experiment);
-  });
-}
-
-function closeSimulationModal() {
-  disposeActive3DSimulation();
-  if (activeModal) {
-    activeModal.remove();
-    activeModal = null;
-  }
-}
-
-function renderSimulationModalContent(experiment, { duration, isSimplified, uses3DSimulation }) {
-  return `
-    <div class="lab-modal-header">
-      <div>
-        <p class="hud-kicker">REACTION IN PROGRESS</p>
-        <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))}</h3>
-      </div>
-      <button class="hud-action-btn" data-lab-modal-close aria-label="关闭模拟">关闭</button>
-    </div>
-    <div class="lab-simulation-meta" data-chem-notation="equation">
-      <span>${equationHTML(getReactionEquationText(experiment))}</span>
-      <span>${isSimplified ? '当前为 normal 模式：已启用简化动画。' : '高性能模式：显示增强粒子与发光细节。'}</span>
-    </div>
-    ${uses3DSimulation ? render3DSimulationContent() : renderCanvasSimulationContent(experiment, duration)}
-  `;
-}
-
-function renderCanvasSimulationContent(experiment, duration) {
-  return `
-    <div class="lab-canvas-frame">
-      <canvas id="lab-simulation-canvas" class="lab-simulation-canvas" width="980" height="520"></canvas>
-      <div class="lab-canvas-overlay">
-        <span>反应视觉描述：${renderProseContent(experiment.visualDescription)}</span>
-        <span>预计模拟时长：${(duration / 1000).toFixed(1)} 秒</span>
-      </div>
-    </div>
-  `;
-}
-
-function render3DSimulationContent() {
-  return '<div class="lab-3d-host" data-lab-3d-host></div>';
-}
-
-async function start3DSimulation(experiment, modal, simulationConfig) {
-  clearSimulationTimer();
-  simulationRunId += 1;
-  const runId = simulationRunId;
-  const hostElement = modal.querySelector('[data-lab-3d-host]');
-
-  if (!hostElement || currentView !== 'simulation') {
-    return;
-  }
-
-  const performanceMode = getSettings().performanceMode || 'normal';
-  const options = {
-    performanceMode,
-    onComplete() {
-      complete3DSimulation(experiment, runId);
-    }
-  };
-
-  const result = simulationConfig.experimentId === APPARATUS_RECOGNITION_EXPERIMENT_ID
-    ? await createApparatusRecognitionSimulation(hostElement, options)
-    : await createSodiumWaterSimulation(hostElement, options);
-
-  if (runId !== simulationRunId || currentView !== 'simulation' || !activeModal) {
-    result?.dispose?.();
-    return;
-  }
-
-  if (!result?.success) {
-    disposeActive3DSimulation();
-    fallbackToCanvasSimulation(modal, experiment);
-    return;
-  }
-
-  active3DSimulation = result;
-}
-
-function fallbackToCanvasSimulation(modal, experiment) {
-  const performanceMode = getSettings().performanceMode || 'normal';
-  modal.innerHTML = renderSimulationModalContent(experiment, {
-    duration: getSimulationDuration(experiment.id, performanceMode),
-    isSimplified: performanceMode === 'normal',
-    uses3DSimulation: false
-  });
-  bindSimulationModalCloseEvents(modal);
-  startSimulation(experiment);
-}
-
-function bindSimulationModalCloseEvents(modal) {
-  modal.querySelector('[data-lab-modal-close]')?.addEventListener('click', () => {
-    closeSimulationModal();
-    clearSimulationTimer();
-    currentView = 'detail';
-    safetyConfirmed = false;
-    renderLabShell();
-  });
-}
-
-function complete3DSimulation(experiment, runId) {
-  if (runId !== simulationRunId || currentView !== 'simulation') {
-    return;
-  }
-
-  closeSimulationModal();
-  markExperimentCompleted(experiment.experimentId);
-  currentView = 'result';
-  detailModalRequested = true;
-  renderLabShell();
-}
-
-function disposeActive3DSimulation() {
-  if (!active3DSimulation) {
-    return;
-  }
-
-  active3DSimulation.dispose?.();
-  active3DSimulation = null;
-}
 
 function openDetailModal(experiment, isCompleted) {
   const viewToPreserve = currentView;
@@ -1160,323 +913,6 @@ function closeDetailModal() {
   detailModalRequested = false;
   currentView = 'detail';
   safetyConfirmed = false;
-  clearSimulationTimer();
-}
-
-function renderResultView(experiment, isCompleted) {
-  const safetyTheme = getSafetyTheme(experiment.safetyLevel);
-
-  return `
-    <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
-      <div class="hud-shell-header">
-        <div>
-          <p class="hud-kicker">EXPERIMENT LOGGED</p>
-          <h3>${mixedProseFormulaHTML(stripLeadingBracketHeading(experiment.name))} · 实验总结</h3>
-        </div>
-        <button class="hud-action-btn" data-lab-back>返回详情</button>
-      </div>
-      <div class="lab-result-grid">
-        <div class="lab-stage-card">
-          <span>结果总结</span>
-          <strong>${renderProseContent(experiment.description)}</strong>
-        </div>
-        <div class="lab-stage-card">
-          <span>观察到的现象</span>
-          <strong>${renderProseContent(experiment.visualDescription)}</strong>
-        </div>
-        <div class="lab-stage-card">
-          <span>实验记录</span>
-          <strong>${isCompleted ? '已写入完成状态，并会同步到进度与成就系统。' : '本次实验已完成。'}</strong>
-        </div>
-        <div class="lab-stage-card">
-          <span>下一步</span>
-          <strong>返回列表继续探索其他实验，或再次运行当前模拟。</strong>
-        </div>
-      </div>
-      <div class="lab-nav-row lab-nav-row-split">
-        <button class="hud-action-btn" data-lab-return-list>返回列表</button>
-        <button class="hud-action-btn hud-action-btn-primary" data-lab-start>再次开始实验</button>
-      </div>
-    </div>
-  `;
-}
-
-function startSimulation(experiment) {
-  clearSimulationTimer();
-  simulationRunId += 1;
-  const runId = simulationRunId;
-
-  window.requestAnimationFrame(() => {
-    const canvas = document.getElementById('lab-simulation-canvas');
-    if (!canvas || currentView !== 'simulation' || runId !== simulationRunId) {
-      return;
-    }
-
-    runSimulation(canvas, experiment, runId);
-  });
-
-  completionTimer = window.setTimeout(() => {
-    if (runId !== simulationRunId) {
-      return;
-    }
-
-    closeSimulationModal();
-    markExperimentCompleted(experiment.experimentId);
-    currentView = 'result';
-    detailModalRequested = true;
-    renderLabShell();
-  }, getSimulationDuration(experiment.id, getSettings().performanceMode || 'normal'));
-}
-
-function clearSimulationTimer() {
-  simulationRunId += 1;
-  if (completionTimer !== null) {
-    window.clearTimeout(completionTimer);
-    completionTimer = null;
-  }
-}
-
-function runSimulation(canvas, experiment, runId) {
-  const context = canvas.getContext('2d');
-  if (!context) {
-    return;
-  }
-
-  const performanceMode = getSettings().performanceMode || 'normal';
-  const duration = getSimulationDuration(experiment.id, performanceMode);
-  const startedAt = performance.now();
-  const particleCount = performanceMode === 'high-performance' ? 28 : 12;
-
-  function frame(now) {
-    if (runId !== simulationRunId || currentView !== 'simulation') {
-      return;
-    }
-
-    const progress = Math.min(1, (now - startedAt) / duration);
-    drawSimulationFrame(context, canvas, experiment.id, progress, particleCount, performanceMode);
-
-    if (progress < 1) {
-      window.requestAnimationFrame(frame);
-    }
-  }
-
-  window.requestAnimationFrame(frame);
-}
-
-function drawSimulationFrame(context, canvas, reactionId, progress, particleCount, performanceMode) {
-  const { width, height } = canvas;
-  context.clearRect(0, 0, width, height);
-  const bg = context.createLinearGradient(0, 0, 0, height);
-  bg.addColorStop(0, '#07111f');
-  bg.addColorStop(1, '#020617');
-  context.fillStyle = bg;
-  context.fillRect(0, 0, width, height);
-
-  drawHudGrid(context, width, height, progress);
-
-  const mappedId = ANIMATION_ID_MAP[reactionId] || reactionId;
-  switch (mappedId) {
-    case 'reaction-hydrogen-combustion':
-      drawHydrogenCombustion(context, width, height, progress, particleCount, performanceMode);
-      break;
-    case 'reaction-iron-rusting':
-      drawIronRusting(context, width, height, progress, particleCount);
-      break;
-    case 'reaction-sodium-water':
-      drawSodiumWater(context, width, height, progress, particleCount, performanceMode);
-      break;
-    case 'reaction-salt-formation':
-      drawSaltFormation(context, width, height, progress, particleCount);
-      break;
-    case 'reaction-oxygen-supports-combustion':
-      drawOxygenCombustion(context, width, height, progress, particleCount, performanceMode);
-      break;
-    default:
-      break;
-  }
-}
-
-function drawHudGrid(context, width, height, progress) {
-  context.save();
-  context.strokeStyle = 'rgba(34, 211, 238, 0.08)';
-  context.lineWidth = 1;
-
-  for (let x = 0; x <= width; x += 56) {
-    context.beginPath();
-    context.moveTo(x, 0);
-    context.lineTo(x, height);
-    context.stroke();
-  }
-
-  for (let y = 0; y <= height; y += 48) {
-    context.beginPath();
-    context.moveTo(0, y);
-    context.lineTo(width, y);
-    context.stroke();
-  }
-
-  context.fillStyle = 'rgba(34, 211, 238, 0.24)';
-  context.fillRect(40, height - 28, (width - 80) * progress, 6);
-  context.restore();
-}
-
-function drawHydrogenCombustion(context, width, height, progress, particleCount, performanceMode) {
-  const flameHeight = 220 * Math.sin(progress * Math.PI);
-  const centerX = width / 2;
-  const baseY = height - 90;
-
-  context.save();
-  const flame = context.createRadialGradient(centerX, baseY - flameHeight * 0.4, 10, centerX, baseY, 180);
-  flame.addColorStop(0, 'rgba(191, 219, 254, 0.95)');
-  flame.addColorStop(0.4, 'rgba(59, 130, 246, 0.88)');
-  flame.addColorStop(1, 'rgba(14, 165, 233, 0)');
-  context.fillStyle = flame;
-  context.beginPath();
-  context.moveTo(centerX, baseY - flameHeight);
-  context.quadraticCurveTo(centerX + 110, baseY - 40, centerX, baseY + 10);
-  context.quadraticCurveTo(centerX - 110, baseY - 40, centerX, baseY - flameHeight);
-  context.fill();
-
-  const mistCount = performanceMode === 'high-performance' ? particleCount : Math.floor(particleCount * 0.7);
-  for (let index = 0; index < mistCount; index += 1) {
-    const t = (progress * 1.6 + index / mistCount) % 1;
-    const x = centerX - 120 + index * (240 / mistCount) + Math.sin(t * 18) * 10;
-    const y = baseY - 160 * t;
-    context.fillStyle = `rgba(191, 219, 254, ${0.2 + 0.4 * (1 - t)})`;
-    context.beginPath();
-    context.arc(x, y, 3 + (1 - t) * 5, 0, Math.PI * 2);
-    context.fill();
-  }
-  context.restore();
-}
-
-function drawIronRusting(context, width, height, progress, particleCount) {
-  const plateX = width * 0.24;
-  const plateY = height * 0.2;
-  const plateWidth = width * 0.52;
-  const plateHeight = height * 0.48;
-
-  context.save();
-  context.fillStyle = '#cbd5e1';
-  context.fillRect(plateX, plateY, plateWidth, plateHeight);
-
-  for (let index = 0; index < particleCount * 3; index += 1) {
-    const x = plateX + (index * 37) % plateWidth;
-    const y = plateY + (index * 61) % plateHeight;
-    const radius = 6 + (index % 5) * 2;
-    const alpha = Math.max(0, progress - index / (particleCount * 3.5));
-    context.fillStyle = `rgba(180, 83, 9, ${alpha * 0.85})`;
-    context.beginPath();
-    context.arc(x, y, radius, 0, Math.PI * 2);
-    context.fill();
-  }
-
-  context.fillStyle = `rgba(120, 53, 15, ${progress * 0.35})`;
-  context.fillRect(plateX, plateY, plateWidth, plateHeight);
-  context.restore();
-}
-
-function drawSodiumWater(context, width, height, progress, particleCount, performanceMode) {
-  const waterY = height * 0.58;
-  context.save();
-  context.fillStyle = 'rgba(14, 116, 144, 0.6)';
-  context.fillRect(80, waterY, width - 160, height - waterY - 40);
-
-  const sodiumX = 180 + (width - 360) * Math.min(progress * 1.05, 1);
-  const sodiumY = waterY - 18 + Math.sin(progress * 20) * 8;
-  context.fillStyle = '#e2e8f0';
-  context.beginPath();
-  context.arc(sodiumX, sodiumY, 18, 0, Math.PI * 2);
-  context.fill();
-
-  for (let index = 0; index < particleCount; index += 1) {
-    const bubbleOffset = (progress * 1.8 + index / particleCount) % 1;
-    const bubbleX = sodiumX - 40 + (index % 6) * 16;
-    const bubbleY = waterY - bubbleOffset * 120;
-    context.fillStyle = `rgba(125, 211, 252, ${0.18 + (1 - bubbleOffset) * 0.5})`;
-    context.beginPath();
-    context.arc(bubbleX, bubbleY, 4 + (index % 3), 0, Math.PI * 2);
-    context.fill();
-  }
-
-  const sparkMultiplier = performanceMode === 'high-performance' ? 1 : 0.55;
-  for (let index = 0; index < particleCount; index += 1) {
-    const burst = Math.max(0, progress - 0.55) / 0.45;
-    const angle = (Math.PI * 2 * index) / particleCount;
-    const distance = burst * (60 + index * 4) * sparkMultiplier;
-    context.strokeStyle = `rgba(251, 191, 36, ${burst})`;
-    context.beginPath();
-    context.moveTo(sodiumX, sodiumY);
-    context.lineTo(sodiumX + Math.cos(angle) * distance, sodiumY - Math.sin(angle) * distance);
-    context.stroke();
-  }
-  context.restore();
-}
-
-function drawSaltFormation(context, width, height, progress, particleCount) {
-  context.save();
-  const leftX = width * 0.28;
-  const rightX = width * 0.72;
-  const centerY = height * 0.45;
-  context.fillStyle = '#93c5fd';
-  context.beginPath();
-  context.arc(leftX + progress * 120, centerY, 48, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = '#bef264';
-  context.beginPath();
-  context.arc(rightX - progress * 120, centerY, 54, 0, Math.PI * 2);
-  context.fill();
-
-  const crystalProgress = Math.max(0, progress - 0.35) / 0.65;
-  for (let index = 0; index < particleCount; index += 1) {
-    const column = index % 7;
-    const row = Math.floor(index / 7);
-    const size = 12 + (index % 3) * 4;
-    const alpha = Math.max(0, crystalProgress - index / (particleCount * 1.25));
-    context.fillStyle = `rgba(248, 250, 252, ${alpha})`;
-    context.fillRect(width * 0.42 + column * 24, height * 0.36 + row * 24, size, size);
-  }
-  context.restore();
-}
-
-function drawOxygenCombustion(context, width, height, progress, particleCount, performanceMode) {
-  const baseX = width / 2;
-  const baseY = height - 92;
-  const flameScale = 0.6 + progress * 0.9;
-
-  context.save();
-  for (let layer = 0; layer < 3; layer += 1) {
-    context.fillStyle = ['rgba(251, 191, 36, 0.95)', 'rgba(249, 115, 22, 0.8)', 'rgba(239, 68, 68, 0.55)'][layer];
-    context.beginPath();
-    context.moveTo(baseX, baseY - 120 * flameScale - layer * 16);
-    context.quadraticCurveTo(baseX + 80 + layer * 24, baseY - 30, baseX, baseY + 8);
-    context.quadraticCurveTo(baseX - 80 - layer * 24, baseY - 30, baseX, baseY - 120 * flameScale - layer * 16);
-    context.fill();
-  }
-
-  const streaks = performanceMode === 'high-performance' ? particleCount : Math.floor(particleCount * 0.65);
-  for (let index = 0; index < streaks; index += 1) {
-    const startX = 120 + index * ((width - 240) / streaks);
-    const endY = height * 0.25 + (index % 4) * 12;
-    context.strokeStyle = `rgba(125, 211, 252, ${0.16 + progress * 0.42})`;
-    context.beginPath();
-    context.moveTo(startX, height * 0.2);
-    context.lineTo(baseX + Math.sin(progress * 8 + index) * 40, endY + progress * 200);
-    context.stroke();
-  }
-  context.restore();
-}
-
-function getSimulationDuration(reactionId, performanceMode) {
-  const baseDuration = performanceMode === 'high-performance' ? 6200 : 4200;
-  const mappedId = ANIMATION_ID_MAP[reactionId] || reactionId;
-  if (mappedId === 'reaction-iron-rusting') {
-    return baseDuration + 1000;
-  }
-  if (mappedId === 'reaction-sodium-water') {
-    return baseDuration - 400;
-  }
-  return baseDuration;
 }
 
 function getSafetyTheme(level) {

@@ -1,0 +1,1 @@
+- Kept the fix minimal and limited to src/modules/achievements.js, with no behavior changes beyond escaping the popup icon attribute value.

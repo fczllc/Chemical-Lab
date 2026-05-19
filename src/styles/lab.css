@@ -86,9 +86,15 @@ body:has(#lab.active) .detail-panel.docked {
 
 .lab-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+  .lab-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
 }
 
 .lab-item-card,
@@ -135,14 +141,55 @@ body:has(#lab.active) .detail-panel.docked {
 }
 
 .lab-item-card-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   min-width: 0;
   flex: 1 1 auto;
+}
+
+.lab-card-serial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  flex-shrink: 0;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.lab-detail-serial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .lab-item-card-title-wrap h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .lab-item-card h3,
@@ -257,7 +304,7 @@ body:has(#lab.active) .detail-panel.docked {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
-  border-radius: 4px;
+  border-radius: 5px;
   background: rgba(148, 163, 184, 0.12);
   color: var(--text-muted);
   font-size: 0.8rem;

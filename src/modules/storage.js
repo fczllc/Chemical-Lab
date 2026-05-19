@@ -1,6 +1,6 @@
 /** ===== 统一学习状态与持久化 ===== */
 const STORAGE_KEY = 'element-explorer-kids-state';
-const SCHEMA_VERSION = 'v2';
+const SCHEMA_VERSION = 'v3';
 const SAVE_DEBOUNCE_MS = 500;
 
 const DEFAULT_SETTINGS = {
@@ -26,6 +26,7 @@ function createDefaultState(elements = []) {
     collectedElements: new Set(),
     quizScores: [],
     completedExperiments: new Set(),
+    completedLearningSegments: new Set(),
     experimentTitleOverrides: {},
     unlockedAchievements: new Set(),
     achievementDates: {},
@@ -342,6 +343,7 @@ function serializeState() {
     collectedElements: [...appState.collectedElements],
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: [...appState.completedExperiments],
+    completedLearningSegments: new Set(appState.completedLearningSegments),
     experimentTitleOverrides: { ...appState.experimentTitleOverrides },
     unlockedAchievements: [...appState.unlockedAchievements],
     achievementDates: { ...appState.achievementDates },
@@ -369,6 +371,7 @@ function migrateV0ToV1(data) {
       ? data.quizScores.map((score) => normalizeQuizScore(score)).filter(Boolean)
       : [],
     completedExperiments: data.completedExperiments || [],
+    completedLearningSegments: data.completedLearningSegments || [],
     experimentTitleOverrides: data.experimentTitleOverrides || {},
     unlockedAchievements: data.unlockedAchievements || [],
     achievementDates: data.achievementDates || {},
@@ -402,8 +405,16 @@ function migratePersistedEnvelope(envelope) {
 
   const payload = getVersionedPayload(envelope);
 
-  if (envelope.version === 'v0') {
-    return migrateV0ToV1(payload);
+  if (envelope.version === 'v0' || envelope.version === 'v1' || envelope.version === 'v2') {
+    const data = migrateV0ToV1(payload);
+    return {
+      version: SCHEMA_VERSION,
+      timestamp: new Date().toISOString(),
+      data: {
+        ...data,
+        completedLearningSegments: data.completedLearningSegments || []
+      }
+    };
   }
 
   if (envelope.version === 'v1' || envelope.version === SCHEMA_VERSION) {
@@ -441,6 +452,11 @@ function normalizePersistedData(data) {
     completedExperiments: new Set(
       Array.isArray(data.completedExperiments)
         ? data.completedExperiments.filter((item) => typeof item === 'string' && item.trim())
+        : []
+    ),
+    completedLearningSegments: new Set(
+      Array.isArray(data.completedLearningSegments)
+        ? data.completedLearningSegments.filter((item) => typeof item === 'string' && item.trim())
         : []
     ),
     experimentTitleOverrides: normalizeExperimentTitleOverrides(data.experimentTitleOverrides),
@@ -518,6 +534,7 @@ export function initializeState(elements = []) {
   storageAdapter = createStorageAdapter();
   bindPersistenceEvents();
   hydrateState();
+  console.log('[storage] initialized', getStateSnapshot());
   return getStateSnapshot();
 }
 
@@ -548,6 +565,7 @@ export function getStateSnapshot() {
     collectedElements: new Set(appState.collectedElements),
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: new Set(appState.completedExperiments),
+    completedLearningSegments: new Set(appState.completedLearningSegments),
     experimentTitleOverrides: { ...appState.experimentTitleOverrides },
     unlockedAchievements: new Set(appState.unlockedAchievements),
     achievementDates: { ...appState.achievementDates },
@@ -782,8 +800,31 @@ export function addQuizScore(scoreObj) {
   return getQuizScores();
 }
 
-export function getCompletedExperiments() {
-  return new Set(appState.completedExperiments);
+export function getCompletedLearningSegments() {
+  return new Set(appState.completedLearningSegments);
+}
+
+export function markLearningSegmentCompleted(segmentId, metadata = {}) {
+  if (typeof segmentId !== 'string' || !segmentId.trim() || appState.completedLearningSegments.has(segmentId)) {
+    return false;
+  }
+
+  const oldSegments = new Set(appState.completedLearningSegments);
+  appState.completedLearningSegments.add(segmentId);
+
+  appendActivity(
+    'learningsegmentcompleted',
+    '完成了一个学习环节',
+    `学习环节 ${segmentId} 已完成。`,
+    { segmentId, ...metadata }
+  );
+
+  emitStateChange('completedLearningSegments', oldSegments, appState.completedLearningSegments, 'learningsegmentcompleted', {
+    segmentId,
+    ...metadata
+  });
+
+  return true;
 }
 
 export function getExperimentTitleOverride(reactionKey) {
@@ -868,6 +909,10 @@ export function markExperimentCompleted(experimentId) {
     experimentId
   });
   return true;
+}
+
+export function getCompletedExperiments() {
+  return new Set(appState.completedExperiments);
 }
 
 export function getUnlockedAchievements() {

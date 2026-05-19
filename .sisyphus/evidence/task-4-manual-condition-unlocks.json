@@ -1,0 +1,10 @@
+{
+  "before": {
+    "cardClass": "achievement-card is-locked",
+    "unlocked": false
+  },
+  "after": {
+    "cardClass": "achievement-card is-unlocked",
+    "unlocked": true
+  }
+}

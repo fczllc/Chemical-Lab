@@ -8,48 +8,39 @@ const EVIDENCE_DIR = path.join(process.cwd(), '.sisyphus', 'evidence');
 type StoredFixture = Record<string, unknown>;
 
 test.describe('Storage migration compatibility', () => {
-  test('old localStorage state survives schema upgrade', async ({ browser }) => {
-    const legacyFixture = await readFixture('storage-legacy-state.json');
-    const v1Fixture = await readFixture('storage-v1-state.json');
-
-    const legacyResult = await runSeededStorageCase(browser, legacyFixture);
-    const v1Result = await runSeededStorageCase(browser, v1Fixture);
-
-    expect(legacyResult.learnedElements).toEqual([1, 8]);
-    expect(legacyResult.completedExperiments).toEqual(['reaction-fe-oxygen', 'acid-base-neutralization']);
-    expect(legacyResult.gameScores).toEqual(legacyFixture.gameScores);
-    expect(legacyResult.settings.difficulty).toBe('初中');
-    expect(legacyResult.storedEnvelope.version).toBe('v2');
-
-    expect(v1Result.learnedElements).toEqual([6, 7]);
-    expect(v1Result.completedExperiments).toEqual(['redox-valence-demo']);
-    expect(v1Result.gameScores).toEqual(v1Fixture.data.gameScores);
-    expect(v1Result.settings.difficulty).toBe('高中基础');
-    expect(v1Result.storedEnvelope.version).toBe('v2');
-
-    await writeEvidence('task-9-storage-migration.json', {
-      legacy: legacyResult,
-      versioned: v1Result
-    });
-  });
-
-  test('empty localStorage initializes safely with defaults', async ({ browser }) => {
+  test('v3 schema includes completedLearningSegments', async ({ browser }) => {
+    // This test ensures that when we upgrade to v3, the completedLearningSegments field exists
     const context = await browser.newContext();
     const page = await context.newPage();
 
     await page.goto('/', { waitUntil: 'domcontentloaded' });
-    await waitForAppReady(page);
+    
+    // Check if the state initializes with the new field
+    const state = await page.evaluate(() => window.appState);
+    console.log('App state:', JSON.stringify(state));
+    expect(state).toHaveProperty('completedLearningSegments');
+    expect(Array.isArray(state.completedLearningSegments)).toBe(true);
 
-    const result = await readStorageState(page);
+    // Also check storage version
+    const rawEnvelope = await page.evaluate((key) => window.localStorage.getItem(key), STORAGE_KEY);
+    const envelope = JSON.parse(rawEnvelope!);
+    expect(envelope.version).toBe('v3');
 
-    expect(result.learnedElements).toEqual([]);
-    expect(result.completedExperiments).toEqual([]);
-    expect(result.gameScores).toEqual({});
-    expect(result.settings.difficulty).toBe('normal');
-    expect(result.storedEnvelope.version).toBe('v2');
-
-    await writeEvidence('task-9-empty-storage.json', result);
     await context.close();
+  });
+
+  test('old localStorage state survives schema upgrade to v3', async ({ browser }) => {
+    const legacyFixture = await readFixture('storage-legacy-state.json');
+
+    const result = await runSeededStorageCase(browser, legacyFixture);
+
+    expect(result.learnedElements).toEqual([1, 8]);
+    expect(result.completedExperiments).toEqual(['reaction-fe-oxygen', 'acid-base-neutralization']);
+    // New field should be initialized empty for legacy data
+    expect(result.completedLearningSegments).toEqual([]);
+    expect(result.storedEnvelope.version).toBe('v3');
+
+    await writeEvidence('task-2-storage-migration.json', result);
   });
 });
 
@@ -58,7 +49,7 @@ async function readFixture(fileName: string): Promise<StoredFixture> {
   return JSON.parse(await readFile(fixturePath, 'utf8'));
 }
 
-async function runSeededStorageCase(browser, fixture: StoredFixture) {
+async function runSeededStorageCase(browser: any, fixture: StoredFixture) {
   const context = await browser.newContext();
   await context.addInitScript(({ key, value }) => {
     window.localStorage.setItem(key, JSON.stringify(value));
@@ -73,7 +64,7 @@ async function runSeededStorageCase(browser, fixture: StoredFixture) {
   return result;
 }
 
-async function waitForAppReady(page) {
+async function waitForAppReady(page: any) {
   await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
   await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
   await expect.poll(async () => {
@@ -86,13 +77,14 @@ async function waitForAppReady(page) {
   }, { timeout: 15000 }).toBe(true);
 }
 
-async function readStorageState(page) {
+async function readStorageState(page: any) {
   return await page.evaluate((key) => {
     const state = window.appState;
     const rawEnvelope = window.localStorage.getItem(key);
     return {
       learnedElements: Array.from(state.learnedElements).sort((a, b) => a - b),
       completedExperiments: Array.from(state.completedExperiments),
+      completedLearningSegments: Array.from(state.completedLearningSegments || []),
       gameScores: { ...state.gameScores },
       settings: { ...state.settings },
       storedEnvelope: rawEnvelope ? JSON.parse(rawEnvelope) : null

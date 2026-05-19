@@ -20591,15 +20591,4 @@ export const FEATURE_LABELS = {
   'progress-dashboard': '进度仪表板'
 };
 
-export const ACHIEVEMENT_CATEGORY_META = {
-  learning: { label: '学习类', icon: 'book-open' },
-  experiment: { label: '实验类', icon: 'flask-conical' },
-  game: { label: '游戏类', icon: 'gamepad-2' },
-  quiz: { label: '测验类', icon: 'clipboard-list' }
-};
 
-export const ACHIEVEMENT_RARITY_LABELS = {
-  common: '普通',
-  rare: '稀有',
-  legendary: '传说'
-};

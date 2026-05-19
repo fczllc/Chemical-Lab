@@ -1,0 +1,35 @@
+{
+  "task": 3,
+  "description": "Achievement card action buttons implementation",
+  "timestamp": "2026-05-19T23:20:00.000Z",
+  "filesModified": [
+    "src/modules/achievements.js",
+    "src/data/contentMeta.js",
+    "src/styles/achievements.css"
+  ],
+  "actionButtonMapping": {
+    "learnedElements": { "target": "periodic-table", "label": "去学习" },
+    "completedExperiments": { "target": "lab", "label": "去做实验" },
+    "quizAttempts": { "target": "games", "label": "去测验" },
+    "quizPerfectScore": { "target": "games", "label": "去测验" },
+    "curriculumQuizComplete": { "target": "games", "label": "去测验" },
+    "gamePlays": { "target": "games", "label": "去游戏" },
+    "gameScore": { "target": "games", "label": "去游戏" },
+    "manualReviewAfterPromotion": { "target": "progress", "label": "查看进度" }
+  },
+  "implementationDetails": {
+    "delegatedClickHandler": "container.addEventListener('click', handleAchievementActionClick) in initAchievements()",
+    "buttonSelector": "[data-achievement-action]",
+    "cardSelector": "[data-achievement-id]",
+    "manualCardAttribute": "data-learning-segment-id set to curriculumTags[0]",
+    "navigationMethod": "navigateTo(section) from router.js",
+    "sessionStorageGuard": "try/catch around sessionStorage.setItem"
+  },
+  "constraintsFollowed": [
+    "Action clicks navigate but do not unlock achievements",
+    "Every achievement card has exactly one visible action button",
+    "Manual cards have data-learning-segment-id attribute",
+    "No multiple actions per card",
+    "manualReviewAfterPromotion not exposed as visible copy"
+  ]
+}

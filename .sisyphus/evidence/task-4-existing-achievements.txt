@@ -1,0 +1,1 @@
+Task 4 existing achievements check: manualReviewAfterPromotion evaluation now uses full achievement metadata and completed learning segments; representative achievement unlocks after explicit segment completion and remains locked before completion.
