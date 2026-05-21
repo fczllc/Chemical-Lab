@@ -292,6 +292,22 @@ body:has(#progress.active) .detail-panel.docked {
   border-color: rgba(59, 130, 246, 0.45);
 }
 
+.achievement-action-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 4px;
+  border: 0;
+  background: transparent;
+  color: #e2f3ff;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: default;
+}
+
 .progress-dashboard {
   gap: 20px;
 }
@@ -342,9 +358,122 @@ body:has(#progress.active) .detail-panel.docked {
 .progress-activity-list,
 .game-stat-list,
 .progress-unlock-list,
-.stage-element-chip-list {
+.stage-element-chip-list,
+.progress-manual-segment-list {
   display: grid;
   gap: 10px;
+}
+
+.progress-manual-learning-panel {
+  margin-top: 2px;
+}
+
+.progress-manual-segment-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 5px;
+  background: rgba(2, 6, 23, 0.42);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  transition: border-color var(--transition-normal), background var(--transition-normal), transform var(--transition-normal);
+}
+
+.progress-manual-segment-row.is-focused {
+  border-color: rgba(56, 189, 248, 0.48);
+  background: rgba(14, 116, 144, 0.12);
+  transform: translateY(-1px);
+}
+
+.progress-manual-segment-row.is-complete {
+  border-color: rgba(34, 197, 94, 0.34);
+  background: rgba(20, 83, 45, 0.12);
+}
+
+.progress-manual-segment-row.has-raw-evidence {
+  border-color: rgba(250, 204, 21, 0.3);
+}
+
+.progress-manual-segment-copy,
+.progress-manual-segment-action {
+  display: grid;
+  gap: 8px;
+}
+
+.progress-manual-segment-copy h5 {
+  color: #f8fbff;
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.progress-manual-segment-copy p,
+.progress-manual-segment-meta {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.progress-manual-segment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.progress-manual-segment-meta span,
+.progress-manual-segment-status {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.progress-manual-segment-action {
+  justify-items: end;
+}
+
+.progress-manual-segment-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #e2f3ff;
+  font-size: 0.82rem;
+}
+
+.progress-manual-segment-status svg {
+  width: 14px;
+  height: 14px;
+}
+
+.progress-manual-segment-action button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 9px 12px;
+  border: 1px solid rgba(59, 130, 246, 0.34);
+  border-radius: 5px;
+  background: rgba(59, 130, 246, 0.14);
+  color: #bfdbfe;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.progress-manual-segment-action button:hover:not(:disabled),
+.progress-manual-segment-action button:focus-visible {
+  background: rgba(59, 130, 246, 0.24);
+  border-color: rgba(96, 165, 250, 0.56);
+  transform: translateY(-1px);
+}
+
+.progress-manual-segment-action button:focus-visible {
+  outline: 2px solid rgba(96, 165, 250, 0.52);
+  outline-offset: 2px;
+}
+
+.progress-manual-segment-action button:disabled {
+  cursor: default;
+  opacity: 0.58;
 }
 
 .activity-item {
@@ -562,6 +691,14 @@ body:has(#progress.active) .detail-panel.docked {
 @media (max-width: 560px) {
   .achievement-category-grid {
     grid-template-columns: 1fr;
+  }
+
+  .progress-manual-segment-row {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-manual-segment-action {
+    justify-items: stretch;
   }
 }
 

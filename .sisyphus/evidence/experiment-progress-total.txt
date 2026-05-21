@@ -1,0 +1,2 @@
+PASS lab count is 92 and progress uses labExperiments.length
+PASS progress math uses completedExperiments.size / TOTAL_EXPERIMENTS

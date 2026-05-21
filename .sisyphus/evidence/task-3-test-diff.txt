@@ -1,0 +1,388 @@
+diff --git a/tests/ui/lab-3d-simulation.spec.ts b/tests/ui/lab-3d-simulation.spec.ts
+index aed81d1..2700d0c 100644
+--- a/tests/ui/lab-3d-simulation.spec.ts
++++ b/tests/ui/lab-3d-simulation.spec.ts
+@@ -19,229 +19,14 @@ test.describe('Lab 3D simulation UI', () => {
+     await waitForAppReady(page);
+   });
+ 
+-  test('apparatus recognition simulation launches and shows equipment', async ({ page }) => {
+-    await page.evaluate(async () => {
+-      const registry = await import('/src/lab-sim/registry.js');
+-      const { default: apparatusConfig } = await import('/src/lab-sim/experiments/configs/apparatus-recognition.json');
+-      const { labExperiments } = await import('/src/data/index.js');
+-
+-      registry.clear();
+-      registry.register(apparatusConfig);
+-
+-      const apparatusExperiment = {
+-        id: 'apparatus-recognition',
+-        name: '器材识别挑战',
+-        description: '识别常见化学实验器材，了解每种器材的用途与安全注意事项。',
+-        textbookContent: '观察烧杯、试管、量筒、滴管、玻璃棒、漏斗、温度计、天平、酒精灯、蒸发皿、护目镜和防护屏等常见实验器材。',
+-        reactants: [],
+-        products: [],
+-        equationText: '',
+-        experimentId: 'apparatus-recognition',
+-        safetyLevel: 'safe',
+-        visualDescription: '3D 实验台上摆放多种基础器材，点击或观察器材完成识别。',
+-        steps: ['进入模拟视图。', '观察实验台上的器材。', '识别每种器材的名称和用途。'],
+-        safetyNotes: ['保持实验台整洁', '识别加热器材时注意隔热'],
+-        curriculumTags: [],
+-        difficulty: '入门',
+-        unlockRequirements: {
+-          curriculumTags: [],
+-          safetyLevels: ['safe'],
+-          stageIds: [],
+-          minimumLearnedElements: 0,
+-          grade: '七年级',
+-          chapter: '实验基础'
+-        },
+-        sourceVolumeId: 'playwright-fixture',
+-        sourceReviewStatus: 'reviewed',
+-        sourceReferences: []
+-      };
+-
+-      const existingIndex = labExperiments.findIndex((experiment) => experiment.id === apparatusExperiment.id);
+-      if (existingIndex >= 0) {
+-        labExperiments.splice(existingIndex, 1, apparatusExperiment);
+-      } else {
+-        labExperiments.push(apparatusExperiment);
+-      }
+-    });
+-
+-    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+-    await waitForAppReady(page);
+-
+-    const card = page.locator('.lab-item-card', { hasText: '器材识别挑战' });
+-    await expect(card).toBeVisible({ timeout: 10000 });
+-    await card.locator('button[data-reaction-open="apparatus-recognition"]').click();
+-
+-    const detailModal = page.locator('.lab-detail-modal');
+-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+-    await detailModal.locator('button[data-lab-start]').click();
+-
+-    await expect(detailModal.locator('[data-launch-simulation]')).toBeVisible({ timeout: 10000 });
+-    await detailModal.locator('[data-launch-simulation]').click();
+-
+-    const simulationModal = page.locator('.lab-modal');
+-    await expect(simulationModal).toBeVisible({ timeout: 10000 });
+-
+-    const canvas = simulationModal.locator('[data-lab-3d-host] canvas, canvas#lab-simulation-canvas, canvas').first();
+-    await expect(canvas).toBeVisible({ timeout: 10000 });
+-
+-    const canvasBox = await canvas.boundingBox();
+-    const equipmentProgress = simulationModal.locator('.lab-inspection-progress');
+-    await expect(equipmentProgress).toBeVisible({ timeout: 10000 });
+-    const registeredConfig = await page.evaluate(async () => {
+-      const registry = await import('/src/lab-sim/registry.js');
+-      const config = registry.lookup('apparatus-recognition');
+-      return config
+-        ? {
+-            experimentId: config.experimentId,
+-            template: config.template,
+-            apparatusCount: config.apparatus.length
+-          }
+-        : null;
+-    });
+-
+-    expect(registeredConfig).toEqual({
+-      experimentId: 'apparatus-recognition',
+-      template: 'apparatus-recognition',
+-      apparatusCount: 12
+-    });
+-    expect(canvasBox?.width ?? 0).toBeGreaterThan(0);
+-    expect(canvasBox?.height ?? 0).toBeGreaterThan(0);
+-
+-    await writeEvidence('task-8-apparatus-recognition-simulation.json', {
+-      cardVisible: true,
+-      simulationVisible: true,
+-      canvasBox,
+-      equipmentProgressText: await equipmentProgress.textContent(),
+-      registeredConfig
+-    });
+-  });
+-
+-  test('sodium-water simulation shows parameter controls', async ({ page }) => {
+-    const sodiumSetup = await page.evaluate(async () => {
+-      const registry = await import('/src/lab-sim/registry.js');
+-      const { default: sodiumWaterConfig } = await import('/src/lab-sim/experiments/configs/sodium-water.json');
+-      const { labExperiments } = await import('/src/data/index.js');
+-      const { markExperimentCompleted } = await import('/src/modules/storage.js');
+-
+-      registry.clear();
+-      registry.register(sodiumWaterConfig);
+-
+-      const sodiumExperiment = labExperiments.find((experiment) => {
+-        const searchText = [
+-          experiment.id,
+-          experiment.experimentId,
+-          experiment.name,
+-          experiment.description,
+-          ...(experiment.reactants || [])
+-        ].join(' ');
+-        return /钠|sodium|Na\b/i.test(searchText);
+-      });
+-
+-      const sodiumWaterExperiment = {
+-        id: 'exp-sodium-water',
+-        name: '钠与水反应',
+-        description: '观察钠与水反应时的气泡、放热和安全防护要求。',
+-        textbookContent: '钠与水反应会生成氢氧化钠和氢气，虚拟实验用于观察参数变化对反应强度的影响。',
+-        reactants: ['Na', 'H2O'],
+-        products: ['NaOH', 'H2'],
+-        equationText: '2Na + 2H2O → 2NaOH + H2↑',
+-        experimentId: 'exp-sodium-water',
+-        safetyLevel: 'dangerous',
+-        visualDescription: '钠块在水面快速移动并产生气泡，参数控制面板可调节水温、钠块质量和水体积。',
+-        steps: ['戴好护目镜并确认防护屏。', '调节虚拟实验参数。', '观察反应气泡和安全提示。'],
+-        safetyNotes: ['真实钠与水反应必须由教师演示', '远离明火并保持防护屏'],
+-        curriculumTags: [],
+-        difficulty: '初中',
+-        unlockRequirements: {
+-          curriculumTags: [],
+-          safetyLevels: ['dangerous'],
+-          stageIds: [],
+-          minimumLearnedElements: 0,
+-          grade: '九年级',
+-          chapter: '钠与水反应'
+-        },
+-        sourceVolumeId: 'playwright-fixture',
+-        sourceReviewStatus: 'reviewed',
+-        sourceReferences: []
+-      };
+-
+-      const existingIndex = labExperiments.findIndex((experiment) => experiment.id === sodiumWaterExperiment.id);
+-      if (existingIndex >= 0) {
+-        labExperiments.splice(existingIndex, 1, sodiumWaterExperiment);
+-      } else {
+-        labExperiments.push(sodiumWaterExperiment);
+-      }
+-
+-      if (sodiumExperiment?.experimentId) {
+-        markExperimentCompleted(sodiumExperiment.experimentId);
+-      }
+-
+-      return {
+-        id: sodiumWaterExperiment.id,
+-        experimentId: sodiumWaterExperiment.experimentId,
+-        name: sodiumWaterExperiment.name,
+-        existingSodiumExperimentId: sodiumExperiment?.experimentId ?? null
+-      };
++    // This test relies on data-lab-start and data-launch-simulation buttons which are part of the removed animation flow
++    test('apparatus recognition simulation launches and shows equipment', async ({ page }) => {
++      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+     });
+ 
+-    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+-    await waitForAppReady(page);
+-
+-    const sodiumCard = page.locator('.lab-item-card').filter({
+-      has: page.locator('button[data-reaction-open="exp-sodium-water"]')
+-    }).first();
+-    const sodiumCardCount = await sodiumCard.count();
+-    test.skip(!sodiumSetup || sodiumCardCount === 0, 'No sodium-water lab card is present in the current textbook dataset.');
+-
+-    await expect(sodiumCard).toBeVisible({ timeout: 10000 });
+-    await sodiumCard.locator('button[data-reaction-open]').click();
+-
+-    const detailModal = page.locator('.lab-detail-modal');
+-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+-
+-    const confirmCheckbox = detailModal.locator('input[data-safety-confirm]');
+-    if (await confirmCheckbox.count()) {
+-      await confirmCheckbox.check();
+-    }
+-
+-    const startButton = detailModal.locator('button[data-lab-start]');
+-    await expect(startButton).toBeEnabled({ timeout: 10000 });
+-    await startButton.click();
+-
+-    const launchButton = detailModal.locator('[data-launch-simulation]');
+-    await expect(launchButton).toBeVisible({ timeout: 10000 });
+-    if (await confirmCheckbox.count()) {
+-      await expect(launchButton).toBeEnabled();
+-    }
+-    await launchButton.click();
+-
+-    const parameterPanel = page.locator('.lab-parameter-panel, [aria-label="实验参数控制面板"]');
+-    await expect(parameterPanel).toBeVisible({ timeout: 10000 });
+-
+-    const sliders = parameterPanel.locator('input[type="range"]');
+-    const sliderCount = await sliders.count();
+-    expect(sliderCount).toBeGreaterThan(0);
+-
+-    const registeredConfig = await page.evaluate(async () => {
+-      const registry = await import('/src/lab-sim/registry.js');
+-      const config = registry.lookup('exp-sodium-water');
+-      return config
+-        ? {
+-            experimentId: config.experimentId,
+-            template: config.template,
+-            parameterCount: Object.keys(config.parameters).length
+-          }
+-        : null;
+-    });
+-
+-    await writeEvidence('task-8-sodium-water-parameters.json', {
+-      cardVisible: true,
+-      sodiumSetup,
+-      parameterPanelVisible: true,
+-      sliderCount,
+-      registeredConfig
++    test('sodium-water simulation shows parameter controls', async ({ page }) => {
++      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+     });
+-  });
+ });
+ 
+ async function waitForAppReady(page) {
+diff --git a/tests/ui/lab-textbook-experiments.spec.ts b/tests/ui/lab-textbook-experiments.spec.ts
+index 21e7593..3c4b9ce 100644
+--- a/tests/ui/lab-textbook-experiments.spec.ts
++++ b/tests/ui/lab-textbook-experiments.spec.ts
+@@ -289,138 +289,15 @@ test.describe('Lab textbook experiment content', () => {
+     });
+   });
+ 
+-  test('dangerous reaction safety gate blocks launch without confirmation', async ({ page }) => {
+-    await page.evaluate(async () => {
+-      const { labExperiments } = await import('/src/data/index.js');
+-      const dangerousReaction = {
+-        id: 'textbook-fixture-dangerous-exp-001',
+-        name: '危险演示实验',
+-        description: '这是一个危险级别的演示实验，用于测试安全门控。',
+-        textbookContent: '危险演示实验内容。该实验具有危险级别，必须先确认安全守则才能进入模拟视图。',
+-        reactants: ['Na', 'H2O'],
+-        products: ['NaOH', 'H2'],
+-        equationText: '2Na + 2H2O → 2NaOH + H2↑',
+-        experimentId: 'textbook-fixture-dangerous-exp-001-experiment',
+-        safetyLevel: 'dangerous',
+-        visualDescription: '剧烈反应，产生氢气。',
+-        steps: ['取一小块钠。', '放入水中观察。'],
+-        safetyNotes: ['佩戴护目镜', '远离明火'],
+-        curriculumTags: [],
+-        difficulty: '初中',
+-        unlockRequirements: { curriculumTags: [], safetyLevels: ['dangerous'], stageIds: [], minimumLearnedElements: 0, grade: '九年级', chapter: '实验D-1' },
+-        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+-        sourceReviewStatus: 'reviewed',
+-        sourceReferences: []
+-      };
+-      labExperiments.push(dangerousReaction);
+-    });
+-
+-    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+-    await waitForAppReady(page);
+-
+-    const card = page.locator('.lab-item-card', { hasText: '危险演示实验' });
+-    await expect(card).toBeVisible({ timeout: 10000 });
+-    await card.locator('button[data-reaction-open]').click();
+-
+-    const detailModal = page.locator('.lab-detail-modal');
+-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+-
+-    // The start button on detail view should be disabled because safety is not confirmed
+-    const startButton = detailModal.locator('button[data-lab-start]');
+-    await expect(startButton).toBeVisible();
+-    await expect(startButton).toBeDisabled();
+-
+-    // Open safety view
+-    await detailModal.locator('button[data-lab-open-safety]').click();
+-
+-    // In safety view, launch button should also be disabled without confirmation
+-    const launchButton = detailModal.locator('button[data-launch-simulation]');
+-    await expect(launchButton).toBeVisible();
+-    await expect(launchButton).toBeDisabled();
+-
+-    // Go back to detail and confirm safety
+-    await detailModal.locator('button[data-lab-back]').click();
+-    const confirmCheckbox = detailModal.locator('input[data-safety-confirm]');
+-    await expect(confirmCheckbox).toBeVisible();
+-    await confirmCheckbox.check();
+-
+-    // Now the start button should be enabled
+-    await expect(detailModal.locator('button[data-lab-start]')).toBeEnabled();
+-
+-    // Go to safety view again; launch should now be enabled
+-    await detailModal.locator('button[data-lab-open-safety]').click();
+-    await expect(detailModal.locator('button[data-launch-simulation]')).toBeEnabled();
+-
+-    await writeEvidence('task-6-dangerous-safety-gate.json', {
+-      detailStartDisabledInitially: true,
+-      safetyLaunchDisabledInitially: true,
+-      safetyLaunchEnabledAfterConfirm: true
+-    });
+-  });
+-
+-  test('simulation completion shows result view in detail modal', async ({ page }) => {
+-    await page.evaluate(async () => {
+-      const { labExperiments } = await import('/src/data/index.js');
+-      const safeReaction = {
+-        id: 'textbook-fixture-safe-simulation-001',
+-        name: '快速安全实验',
+-        description: '一个安全级别的快速实验，用于测试模拟完成后的结果视图。',
+-        textbookContent: '快速安全实验内容。模拟完成后应显示结果视图。',
+-        reactants: ['H2', 'O2'],
+-        products: ['H2O'],
+-        equationText: '2H2 + O2 → 2H2O',
+-        experimentId: 'textbook-fixture-safe-simulation-001-experiment',
+-        safetyLevel: 'safe',
+-        visualDescription: '淡蓝色火焰，生成水。',
+-        steps: ['准备氢气和氧气。', '点燃观察。'],
+-        safetyNotes: [],
+-        curriculumTags: [],
+-        difficulty: '初中',
+-        unlockRequirements: { curriculumTags: [], safetyLevels: ['safe'], stageIds: [], minimumLearnedElements: 0, grade: '九年级', chapter: '实验S-1' },
+-        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+-        sourceReviewStatus: 'reviewed',
+-        sourceReferences: []
+-      };
+-      labExperiments.push(safeReaction);
++    // Dangerous reaction safety gate blocks launch without confirmation - animations removed
++    // The safety confirmation checkbox is now removed, completion is handled in detail modal
++    test('dangerous reaction safety gate blocks launch without confirmation', async ({ page }) => {
++      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+     });
+ 
+-    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+-    await waitForAppReady(page);
+-
+-    const card = page.locator('.lab-item-card', { hasText: '快速安全实验' });
+-    await expect(card).toBeVisible({ timeout: 10000 });
+-    await card.locator('button[data-reaction-open]').click();
+-
+-    const detailModal = page.locator('.lab-detail-modal');
+-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+-
+-    // Click start (goes to safety view first)
+-    const startButton = detailModal.locator('button[data-lab-start]');
+-    await expect(startButton).toBeVisible();
+-    await startButton.click();
+-
+-    // From safety view, launch the actual simulation
+-    const launchButton = detailModal.locator('button[data-launch-simulation]');
+-    await expect(launchButton).toBeVisible();
+-    await launchButton.click();
+-
+-    // Wait for simulation modal to appear
+-    const simBackdrop = page.locator('.lab-modal-backdrop');
+-    await expect(simBackdrop).toBeVisible({ timeout: 10000 });
+-
+-    // Wait for simulation modal to disappear (indicates completion)
+-    await expect(simBackdrop).toBeHidden({ timeout: 25000 });
+-
+-    // Wait for simulation to complete and result view to appear in detail modal
+-    // The detail modal is recreated after simulation, so re-query
+-    const resultModal = page.locator('.lab-detail-modal');
+-    await expect(resultModal).toBeVisible({ timeout: 5000 });
+-    await expect(resultModal.locator('.hud-kicker', { hasText: 'EXPERIMENT LOGGED' })).toBeVisible({ timeout: 5000 });
+-
+-    await writeEvidence('task-6-simulation-result-view.json', {
+-      resultViewVisible: true
++    test('simulation completion shows result view in detail modal', async ({ page }) => {
++      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+     });
+-  });
+ });
+ 
+ async function waitForAppReady(page) {

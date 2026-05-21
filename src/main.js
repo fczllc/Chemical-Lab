@@ -38,9 +38,11 @@ import {
   saveProgress,
   updateSettings
 } from './modules/storage.js';
+import lottie from 'lottie-web';
 import { createIcons, icons } from 'lucide';
 
 let animationFrameId = null;
+let loaderAnimation = null;
 let hasDisposed = false;
 
 function attachReadOnlyAppState() {
@@ -63,8 +65,42 @@ async function init() {
   attachReadOnlyAppState();
 
   const loader = document.getElementById('global-loader');
+  const loaderLottie = document.querySelector('[data-loader-lottie]');
   const canvas = document.getElementById('bg-canvas');
   const settings = getSettings();
+
+  if (loaderLottie) {
+    if (loaderAnimation) {
+      loaderAnimation.destroy();
+      loaderAnimation = null;
+    }
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    loaderAnimation = lottie.loadAnimation({
+      container: loaderLottie,
+      path: '/animations/d4980_cat360.json',
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid meet'
+      }
+    });
+
+    loaderAnimation.addEventListener('data_failed', () => loaderLottie.classList.add('lottie-fallback'));
+    loaderAnimation.addEventListener('error', () => loaderLottie.classList.add('lottie-fallback'));
+
+    // 检查资源可用性作为兜底
+    fetch('/animations/d4980_cat360.json', { method: 'HEAD' })
+      .then(response => {
+        if (!response.ok) {
+          loaderLottie.classList.add('lottie-fallback');
+        }
+      })
+      .catch(() => {
+        loaderLottie.classList.add('lottie-fallback');
+      });
+  }
 
   normalizeCurrentHash();
 
@@ -106,7 +142,17 @@ async function init() {
 
   // 隐藏加载指示器
   if (loader) {
-    loader.classList.add('hidden');
+    const loaderDwellMs = 5000;
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      loader.addEventListener('transitionend', () => {
+        loader.classList.add('display-none');
+        if (loaderAnimation) {
+          loaderAnimation.destroy();
+          loaderAnimation = null;
+        }
+      }, { once: true });
+    }, loaderDwellMs);
   }
 }
 
@@ -279,6 +325,11 @@ function disposeApp() {
   }
 
   hasDisposed = true;
+
+  if (loaderAnimation) {
+    loaderAnimation.destroy();
+    loaderAnimation = null;
+  }
 
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId);

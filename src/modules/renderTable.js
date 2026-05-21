@@ -133,7 +133,7 @@ function createElementCell(element) {
 
   cell.addEventListener('click', () => selectElement(element));
   setupElementDrag(cell, element);
-  setupCellHover(cell, element);
+  // setupCellHover(cell, element); // hover tooltip disabled per UI update
   setupCellKeyboard(cell, element);
 
   return cell;
@@ -172,13 +172,16 @@ function openDetailPanel(element, options = {}) {
   const panelContent = panel.querySelector('.panel-content');
   const wasOpen = panel.classList.contains('open');
 
-  if (options.markLearned !== false) {
-    markElementLearned(element.atomicNumber);
-  }
   populateDetailPanel(element);
 
   panel.classList.remove('closing');
   panel.classList.add('open');
+
+  if (options.markLearned !== false) {
+    window.requestAnimationFrame(() => {
+      markElementLearned(element.atomicNumber);
+    });
+  }
 
   if (wasOpen) {
     panelContent?.classList.remove('content-switching');
@@ -519,7 +522,7 @@ function createElementListRow(element) {
 
   row.addEventListener('click', () => selectElement(element));
   setupElementDrag(row, element);
-  setupCellHover(row, element);
+  // setupCellHover(row, element); // hover tooltip disabled per UI update
   setupCellKeyboard(row, element);
 
   return row;

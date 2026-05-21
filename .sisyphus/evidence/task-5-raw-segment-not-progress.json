@@ -1,0 +1,19 @@
+{
+  "task": 5,
+  "scenario": "Raw segment evidence alone is not visible progress",
+  "segmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+  "achievementId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45",
+  "observed": {
+    "seededCompletedLearningSegmentsContainsSegment": true,
+    "progressRowStatusBeforeAchievementUnlock": "待同步",
+    "manualCompletedBeforeAchievementUnlock": false,
+    "displayCompletedBeforeAchievementUnlock": false,
+    "stagePathCompletedBeforeAchievementUnlock": false,
+    "manualCompletedAfterAchievementUnlock": true,
+    "displayCompletedAfterAchievementUnlock": true,
+    "stagePathCompletedAfterAchievementUnlock": false,
+    "stageCompletedCountAfterManualUnlock": 0
+  },
+  "verificationCommand": "npx playwright test tests/ui/achievements-progress-coupling.spec.ts --grep \"manual topic progress is derived from unlocked achievements\"",
+  "exitCode": 0
+}

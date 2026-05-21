@@ -1,0 +1,60 @@
+{
+  "learnedElements": [],
+  "completedExperiments": [
+    "legacy-exp"
+  ],
+  "experimentCompletionDates": {},
+  "quizScores": [],
+  "completedLearningSegments": [],
+  "gameScores": {},
+  "settings": {
+    "performanceMode": "normal",
+    "particleDensity": "medium",
+    "soundEnabled": false,
+    "difficulty": "normal"
+  },
+  "storedEnvelope": {
+    "version": "v3",
+    "timestamp": "2026-05-20T13:09:20.529Z",
+    "data": {
+      "currentElement": null,
+      "compareList": [],
+      "learnedElements": [],
+      "collectedElements": [],
+      "quizScores": [],
+      "completedExperiments": [
+        "legacy-exp"
+      ],
+      "completedLearningSegments": [],
+      "experimentTitleOverrides": {},
+      "experimentCompletionDates": {},
+      "unlockedAchievements": [
+        "achievement-first-experiment"
+      ],
+      "achievementDates": {
+        "achievement-first-experiment": "2026-05-20T13:09:18.038Z"
+      },
+      "gameScores": {},
+      "gamePlays": {},
+      "activityLog": [
+        {
+          "id": "activity-1779282558038-4yt2z1",
+          "type": "achievementunlocked",
+          "title": "解锁了新成就",
+          "description": "成就 achievement-first-experiment 已收入成就中心。",
+          "timestamp": "2026-05-20T13:09:18.038Z",
+          "meta": {
+            "achievementId": "achievement-first-experiment",
+            "unlockedAt": "2026-05-20T13:09:18.038Z"
+          }
+        }
+      ],
+      "settings": {
+        "performanceMode": "normal",
+        "particleDensity": "medium",
+        "soundEnabled": false,
+        "difficulty": "normal"
+      }
+    }
+  }
+}

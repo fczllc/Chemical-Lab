@@ -1,6 +1,5 @@
 /** ===== 成就模块 ===== */
 import { achievementsData } from '../data/index.js';
-import { navigateTo } from './router.js';
 import {
   getAchievementDates,
   getCompletedExperiments,
@@ -33,16 +32,13 @@ let isBound = false;
 
 export function initAchievements() {
   renderAchievements();
-  evaluateAchievements();
+  evaluateAchievements({ includeManualReview: false });
 
   if (isBound) {
     return;
   }
 
-  const container = document.getElementById('achievements-grid');
-  if (container) {
-    container.addEventListener('click', handleAchievementActionClick);
-  }
+  // Achievement module is read-only; action buttons removed per requirement.
 
   window.addEventListener('statechange', handleStateChange);
   window.addEventListener('achievementunlocked', handleAchievementUnlocked);
@@ -59,28 +55,10 @@ export function initAchievements() {
   isBound = true;
 }
 
-function handleAchievementActionClick(event) {
-  const actionEl = event.target.closest('[data-achievement-action]');
-  if (!actionEl) {
-    return;
-  }
-
-  event.preventDefault();
-  const targetSection = actionEl.dataset.achievementAction;
-  const achievementId = actionEl.closest('[data-achievement-id]')?.dataset.achievementId;
-
-  if (targetSection) {
-    try {
-      sessionStorage.setItem('achievementActionFocus', achievementId || '');
-    } catch {
-      // ignore sessionStorage errors
-    }
-    navigateTo(targetSection);
-  }
-}
-
-function handleStateChange() {
-  evaluateAchievements();
+function handleStateChange(event) {
+  evaluateAchievements({
+    includeManualReview: event.detail?.field === 'completedLearningSegments'
+  });
   renderAchievements();
 }
 
@@ -95,8 +73,12 @@ function handleAchievementUnlocked(event) {
   renderAchievements();
 }
 
-function evaluateAchievements() {
+function evaluateAchievements({ includeManualReview = true } = {}) {
   achievementsData.forEach((achievement) => {
+    if (achievement.condition?.type === 'manualReviewAfterPromotion' && !includeManualReview) {
+      return;
+    }
+
     if (matchesCondition(achievement)) {
       unlockAchievement(achievement.id);
     }
@@ -106,7 +88,7 @@ function evaluateAchievements() {
 function getLearningSegmentIdForAchievement(achievement) {
   const curriculumTags = Array.isArray(achievement?.curriculumTags) ? achievement.curriculumTags : [];
 
-  if (achievement?.condition?.type !== 'manualReviewAfterPromotion' || curriculumTags.length !== 1) {
+  if (curriculumTags.length !== 1) {
     return null;
   }
 
@@ -223,84 +205,44 @@ function renderCategorySection(category, achievements, unlockedIds, unlockDates)
   `;
 }
 
-function getAchievementActionTarget(condition) {
-  if (!condition || typeof condition !== 'object') {
-    return null;
+function getAchievementUnlockText(achievement) {
+  if (achievement?.condition?.type === 'manualReviewAfterPromotion') {
+    return '完成对应教材片段学习';
   }
 
-  switch (condition.type) {
-    case 'learnedElements':
-      return 'periodic-table';
-    case 'completedExperiments':
-      return 'lab';
-    case 'quizAttempts':
-    case 'quizPerfectScore':
-    case 'curriculumQuizComplete':
-      return 'games';
-    case 'gamePlays':
-    case 'gameScore':
-      return 'games';
-    case 'manualReviewAfterPromotion':
-      return 'progress';
-    default:
-      return null;
-  }
-}
-
-function getAchievementActionLabel(condition) {
-  if (!condition || typeof condition !== 'object') {
-    return '前往';
-  }
-
-  switch (condition.type) {
-    case 'learnedElements':
-      return '去学习';
-    case 'completedExperiments':
-      return '去做实验';
-    case 'quizAttempts':
-    case 'quizPerfectScore':
-    case 'curriculumQuizComplete':
-      return '去测验';
-    case 'gamePlays':
-    case 'gameScore':
-      return '去游戏';
-    case 'manualReviewAfterPromotion':
-      return '查看进度';
-    default:
-      return '前往';
-  }
+  return achievement?.unlockText || '待达成';
 }
 
 function renderAchievementCard(achievement, unlockedIds, unlockDates) {
   const unlocked = unlockedIds.has(achievement.id);
   const unlockDate = unlockDates[achievement.id];
-  const actionTarget = getAchievementActionTarget(achievement.condition);
-  const actionLabel = getAchievementActionLabel(achievement.condition);
   const isManual = achievement.condition?.type === 'manualReviewAfterPromotion';
-  const learningSegmentId = isManual && achievement.curriculumTags?.[0]
-    ? ` data-learning-segment-id="${achievement.curriculumTags[0]}"`
+  const segmentId = isManual && achievement.curriculumTags?.[0]
+    ? String(achievement.curriculumTags[0]).trim()
     : '';
 
-  const actionButton = actionTarget
-    ? `<button class="achievement-action-btn" data-achievement-action="${actionTarget}" data-achievement-id="${achievement.id}" type="button">${actionLabel}</button>`
-    : '';
+  const articleAttrs = [
+    `class="achievement-card ${unlocked ? 'is-unlocked' : 'is-locked'}"`,
+    `data-rarity="${escapeHtmlAttr(achievement.rarity)}"`,
+    `data-achievement-id="${escapeHtmlAttr(achievement.id)}"`,
+    segmentId ? `data-learning-segment-id="${escapeHtmlAttr(segmentId)}"` : ''
+  ].filter(Boolean).join(' ');
 
   return `
-    <article class="achievement-card ${unlocked ? 'is-unlocked' : 'is-locked'}" data-rarity="${achievement.rarity}" data-achievement-id="${achievement.id}"${learningSegmentId}>
+    <article ${articleAttrs}>
       <div class="achievement-card-top">
-        <span class="achievement-icon"><i data-lucide="${achievement.icon || 'award'}"></i></span>
-        <span class="achievement-rarity">${formatRarity(achievement.rarity)}</span>
+        <span class="achievement-icon"><i data-lucide="${escapeHtmlAttr(achievement.icon || 'award')}"></i></span>
+        <span class="achievement-rarity">${escapeHtmlAttr(formatRarity(achievement.rarity))}</span>
       </div>
       <div class="achievement-card-body">
-        <h4>${achievement.title}</h4>
-        <p>${achievement.description}</p>
+        <h4>${escapeHtmlAttr(achievement.title)}</h4>
+        <p>${escapeHtmlAttr(achievement.description)}</p>
       </div>
       <dl class="achievement-meta-list">
-        <div><dt>解锁条件</dt><dd>${achievement.unlockText}</dd></div>
+        <div><dt>解锁条件</dt><dd>${escapeHtmlAttr(getAchievementUnlockText(achievement))}</dd></div>
         <div><dt>状态</dt><dd>${unlocked ? '已解锁' : '未解锁'}</dd></div>
         <div><dt>解锁日期</dt><dd>${unlocked ? formatDate(unlockDate) : '等待达成'}</dd></div>
       </dl>
-      ${actionButton}
     </article>
   `;
 }
@@ -360,7 +302,7 @@ function showAchievementPopup(achievement) {
     popupIcon.innerHTML = `<i data-lucide="${popupIconName}"></i>`;
   }
   popup.querySelector('.popup-title').textContent = achievement.title;
-  popup.querySelector('.popup-desc').textContent = `${achievement.description} · ${achievement.unlockText}`;
+  popup.querySelector('.popup-desc').textContent = `${achievement.description} · ${getAchievementUnlockText(achievement)}`;
   popup.classList.remove('show');
   void popup.offsetWidth;
   popup.classList.add('show');

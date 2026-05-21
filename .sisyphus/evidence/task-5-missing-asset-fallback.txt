@@ -1,0 +1,8 @@
+
+Running 3 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\shell\global-loader.spec.ts:65:3 鈥?Global Loader Contract 鈥?mobile loader contract at 390x844 (7.3s)
+  鉁? 1 [chromium] 鈥?tests\shell\global-loader.spec.ts:61:3 鈥?Global Loader Contract 鈥?desktop loader contract at 1440x900 (7.9s)
+  鉁? 3 [chromium] 鈥?tests\shell\global-loader.spec.ts:69:3 鈥?Global Loader Contract 鈥?loader fallback on missing Lottie asset (3.9s)
+
+  3 passed (14.3s)

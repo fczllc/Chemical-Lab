@@ -1,0 +1,90 @@
+{
+  "firstResult": true,
+  "secondResult": false,
+  "completedExperiments": [
+    "water-cycle"
+  ],
+  "completionDates": {
+    "water-cycle": "2026-05-20"
+  },
+  "hookDate": "2026-05-20",
+  "activityLog": [
+    {
+      "id": "activity-1779249600000-r84zma",
+      "type": "achievementunlocked",
+      "title": "解锁了新成就",
+      "description": "成就 achievement-first-experiment 已收入成就中心。",
+      "timestamp": "2026-05-20T04:00:00.000Z",
+      "meta": {
+        "achievementId": "achievement-first-experiment",
+        "unlockedAt": "2026-05-20T04:00:00.000Z"
+      }
+    },
+    {
+      "id": "activity-1779249600000-8d8d04",
+      "type": "experimentcompleted",
+      "title": "完成了一项实验",
+      "description": "实验 water-cycle 已写入完成记录。",
+      "timestamp": "2026-05-20T04:00:00.000Z",
+      "meta": {
+        "experimentId": "water-cycle"
+      }
+    }
+  ],
+  "storedEnvelope": {
+    "version": "v3",
+    "timestamp": "2026-05-20T04:00:00.000Z",
+    "data": {
+      "currentElement": null,
+      "compareList": [],
+      "learnedElements": [],
+      "collectedElements": [],
+      "quizScores": [],
+      "completedExperiments": [
+        "water-cycle"
+      ],
+      "completedLearningSegments": [],
+      "experimentTitleOverrides": {},
+      "experimentCompletionDates": {
+        "water-cycle": "2026-05-20"
+      },
+      "unlockedAchievements": [
+        "achievement-first-experiment"
+      ],
+      "achievementDates": {
+        "achievement-first-experiment": "2026-05-20T04:00:00.000Z"
+      },
+      "gameScores": {},
+      "gamePlays": {},
+      "activityLog": [
+        {
+          "id": "activity-1779249600000-r84zma",
+          "type": "achievementunlocked",
+          "title": "解锁了新成就",
+          "description": "成就 achievement-first-experiment 已收入成就中心。",
+          "timestamp": "2026-05-20T04:00:00.000Z",
+          "meta": {
+            "achievementId": "achievement-first-experiment",
+            "unlockedAt": "2026-05-20T04:00:00.000Z"
+          }
+        },
+        {
+          "id": "activity-1779249600000-8d8d04",
+          "type": "experimentcompleted",
+          "title": "完成了一项实验",
+          "description": "实验 water-cycle 已写入完成记录。",
+          "timestamp": "2026-05-20T04:00:00.000Z",
+          "meta": {
+            "experimentId": "water-cycle"
+          }
+        }
+      ],
+      "settings": {
+        "performanceMode": "normal",
+        "particleDensity": "medium",
+        "soundEnabled": false,
+        "difficulty": "normal"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "achievements": {
+    "hasManualReviewAfterPromotion": false,
+    "hasGoLearn": true,
+    "hasCompleteStudy": true,
+    "hasCompleted": true,
+    "hasLocked": true
+  },
+  "progress": {
+    "hasManualReviewAfterPromotion": false,
+    "hasGoLearn": true,
+    "hasCompleteStudy": true,
+    "hasCompleted": true,
+    "hasLocked": true
+  }
+}

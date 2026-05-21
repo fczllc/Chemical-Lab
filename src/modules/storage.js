@@ -28,6 +28,7 @@ function createDefaultState(elements = []) {
     completedExperiments: new Set(),
     completedLearningSegments: new Set(),
     experimentTitleOverrides: {},
+    experimentCompletionDates: {},
     unlockedAchievements: new Set(),
     achievementDates: {},
     gameScores: {},
@@ -113,10 +114,18 @@ function toUniqueAtomicNumbers(values) {
 }
 
 function normalizeQuizScore(scoreObj) {
+  const timestamp = new Date().toISOString();
+
   if (typeof scoreObj === 'number') {
     return {
       score: scoreObj,
-      completedAt: new Date().toISOString()
+      total: scoreObj,
+      percentage: 0,
+      sourceElement: null,
+      timestamp,
+      accuracy: 0,
+      relatedElement: null,
+      completedAt: timestamp
     };
   }
 
@@ -125,13 +134,35 @@ function normalizeQuizScore(scoreObj) {
   }
 
   const normalizedScore = Number.isFinite(Number(scoreObj.score)) ? Number(scoreObj.score) : 0;
+  const normalizedTotal = Number.isFinite(Number(scoreObj.total)) ? Number(scoreObj.total) : normalizedScore;
+  const normalizedPercentage = Number.isFinite(Number(scoreObj.percentage))
+    ? Number(scoreObj.percentage)
+    : Number.isFinite(Number(scoreObj.accuracy))
+      ? Number(scoreObj.accuracy)
+      : normalizedTotal > 0
+        ? Math.round((normalizedScore / normalizedTotal) * 100)
+        : 0;
+  const normalizedSourceElement = Number.isInteger(Number(scoreObj.sourceElement))
+    ? Number(scoreObj.sourceElement)
+    : Number.isInteger(Number(scoreObj.relatedElement))
+      ? Number(scoreObj.relatedElement)
+      : null;
+  const normalizedTimestamp = typeof scoreObj.timestamp === 'string'
+    ? scoreObj.timestamp
+    : typeof scoreObj.completedAt === 'string'
+      ? scoreObj.completedAt
+      : timestamp;
 
   return {
     ...scoreObj,
     score: normalizedScore,
-    completedAt: typeof scoreObj.completedAt === 'string'
-      ? scoreObj.completedAt
-      : new Date().toISOString()
+    total: normalizedTotal,
+    percentage: normalizedPercentage,
+    sourceElement: normalizedSourceElement,
+    timestamp: normalizedTimestamp,
+    accuracy: normalizedPercentage,
+    relatedElement: normalizedSourceElement,
+    completedAt: normalizedTimestamp
   };
 }
 
@@ -196,6 +227,17 @@ function normalizeActivityLog(entries) {
     .slice(0, MAX_ACTIVITY_ENTRIES);
 }
 
+function normalizeLearningSegmentIds(values) {
+  if (!Array.isArray(values)) {
+    return [];
+  }
+
+  return [...new Set(values
+    .filter((item) => typeof item === 'string')
+    .map((item) => item.trim())
+    .filter(Boolean))];
+}
+
 function normalizeSettings(settings) {
   if (!settings || typeof settings !== 'object' || Array.isArray(settings)) {
     return { ...DEFAULT_SETTINGS };
@@ -238,12 +280,46 @@ function normalizeExperimentTitleOverrides(value) {
 }
 
 function normalizeExperimentTitleKey(reactionKey) {
-  if (typeof reactionKey !== 'string') {
-    return null;
+  return typeof reactionKey === 'string' ? reactionKey.trim() : '';
+}
+
+function normalizeExperimentCompletionDates(value) {
+  if (!isPlainObject(value)) {
+    return {};
   }
 
-  const normalizedKey = reactionKey.trim();
-  return normalizedKey ? normalizedKey : null;
+  return Object.entries(value).reduce((accumulator, [key, date]) => {
+    if (typeof key !== 'string' || typeof date !== 'string') {
+      return accumulator;
+    }
+
+    const normalizedKey = key.trim();
+    const normalizedDate = date.trim();
+    const dateMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(normalizedDate);
+
+    if (!normalizedKey || !dateMatch) {
+      return accumulator;
+    }
+
+    const [, year, month, day] = dateMatch;
+    const parsedDate = new Date(Number(year), Number(month) - 1, Number(day));
+    const isValidLocalDate = parsedDate.getFullYear() === Number(year)
+      && parsedDate.getMonth() === Number(month) - 1
+      && parsedDate.getDate() === Number(day);
+
+    if (isValidLocalDate) {
+      accumulator[normalizedKey] = normalizedDate;
+    }
+
+    return accumulator;
+  }, {});
+}
+
+function formatLocalDateYYYYMMDD(date = new Date()) {
+  const yyyy = date.getFullYear();
+  const mm = String(date.getMonth() + 1).padStart(2, '0');
+  const dd = String(date.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
 }
 
 function sanitizeSettingsPatch(settings) {
@@ -343,8 +419,9 @@ function serializeState() {
     collectedElements: [...appState.collectedElements],
     quizScores: appState.quizScores.map((score) => ({ ...score })),
     completedExperiments: [...appState.completedExperiments],
-    completedLearningSegments: new Set(appState.completedLearningSegments),
+    completedLearningSegments: [...appState.completedLearningSegments],
     experimentTitleOverrides: { ...appState.experimentTitleOverrides },
+    experimentCompletionDates: { ...appState.experimentCompletionDates },
     unlockedAchievements: [...appState.unlockedAchievements],
     achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
@@ -371,8 +448,8 @@ function migrateV0ToV1(data) {
       ? data.quizScores.map((score) => normalizeQuizScore(score)).filter(Boolean)
       : [],
     completedExperiments: data.completedExperiments || [],
-    completedLearningSegments: data.completedLearningSegments || [],
     experimentTitleOverrides: data.experimentTitleOverrides || {},
+    experimentCompletionDates: data.experimentCompletionDates || {},
     unlockedAchievements: data.unlockedAchievements || [],
     achievementDates: data.achievementDates || {},
     gameScores: data.gameScores || {},
@@ -400,7 +477,10 @@ function migratePersistedEnvelope(envelope) {
   }
 
   if (!envelope.version) {
-    return migrateV0ToV1(envelope);
+    return {
+      ...migrateV0ToV1(envelope),
+      completedLearningSegments: normalizeLearningSegmentIds(envelope.completedLearningSegments)
+    };
   }
 
   const payload = getVersionedPayload(envelope);
@@ -408,17 +488,16 @@ function migratePersistedEnvelope(envelope) {
   if (envelope.version === 'v0' || envelope.version === 'v1' || envelope.version === 'v2') {
     const data = migrateV0ToV1(payload);
     return {
-      version: SCHEMA_VERSION,
-      timestamp: new Date().toISOString(),
-      data: {
-        ...data,
-        completedLearningSegments: data.completedLearningSegments || []
-      }
+      ...data,
+      completedLearningSegments: normalizeLearningSegmentIds(data.completedLearningSegments)
     };
   }
 
-  if (envelope.version === 'v1' || envelope.version === SCHEMA_VERSION) {
-    return migrateV0ToV1(payload);
+  if (envelope.version === SCHEMA_VERSION) {
+    return {
+      ...migrateV0ToV1(payload),
+      completedLearningSegments: normalizeLearningSegmentIds(payload?.completedLearningSegments)
+    };
   }
 
   console.warn(`[storage] 未知状态版本 ${envelope.version}，正在尝试保留可识别的进度字段。`);
@@ -455,11 +534,10 @@ function normalizePersistedData(data) {
         : []
     ),
     completedLearningSegments: new Set(
-      Array.isArray(data.completedLearningSegments)
-        ? data.completedLearningSegments.filter((item) => typeof item === 'string' && item.trim())
-        : []
+      normalizeLearningSegmentIds(data.completedLearningSegments)
     ),
     experimentTitleOverrides: normalizeExperimentTitleOverrides(data.experimentTitleOverrides),
+    experimentCompletionDates: normalizeExperimentCompletionDates(data.experimentCompletionDates),
     unlockedAchievements: new Set(
       Array.isArray(data.unlockedAchievements)
         ? data.unlockedAchievements.filter((item) => typeof item === 'string' && item.trim())
@@ -567,6 +645,7 @@ export function getStateSnapshot() {
     completedExperiments: new Set(appState.completedExperiments),
     completedLearningSegments: new Set(appState.completedLearningSegments),
     experimentTitleOverrides: { ...appState.experimentTitleOverrides },
+    experimentCompletionDates: { ...appState.experimentCompletionDates },
     unlockedAchievements: new Set(appState.unlockedAchievements),
     achievementDates: { ...appState.achievementDates },
     gameScores: { ...appState.gameScores },
@@ -791,7 +870,7 @@ export function addQuizScore(scoreObj) {
   appendActivity(
     'quizcompleted',
     '完成了一次测验',
-    `测验得分 ${normalizedScore.score}/${normalizedScore.total || normalizedScore.score}，正确率 ${normalizedScore.accuracy || 0}%。`,
+    `测验得分 ${normalizedScore.score}/${normalizedScore.total || normalizedScore.score}，正确率 ${normalizedScore.percentage || 0}%。`,
     { ...normalizedScore }
   );
   emitStateChange('quizScores', oldValue, appState.quizScores, 'quizcompleted', {
@@ -805,22 +884,28 @@ export function getCompletedLearningSegments() {
 }
 
 export function markLearningSegmentCompleted(segmentId, metadata = {}) {
-  if (typeof segmentId !== 'string' || !segmentId.trim() || appState.completedLearningSegments.has(segmentId)) {
+  if (typeof segmentId !== 'string') {
+    return false;
+  }
+
+  const normalizedSegmentId = segmentId.trim();
+
+  if (!normalizedSegmentId || appState.completedLearningSegments.has(normalizedSegmentId)) {
     return false;
   }
 
   const oldSegments = new Set(appState.completedLearningSegments);
-  appState.completedLearningSegments.add(segmentId);
+  appState.completedLearningSegments.add(normalizedSegmentId);
 
   appendActivity(
     'learningsegmentcompleted',
     '完成了一个学习环节',
-    `学习环节 ${segmentId} 已完成。`,
-    { segmentId, ...metadata }
+    `学习环节 ${normalizedSegmentId} 已完成。`,
+    { segmentId: normalizedSegmentId, ...metadata }
   );
 
   emitStateChange('completedLearningSegments', oldSegments, appState.completedLearningSegments, 'learningsegmentcompleted', {
-    segmentId,
+    segmentId: normalizedSegmentId,
     ...metadata
   });
 
@@ -892,22 +977,40 @@ export function clearExperimentTitleOverride(reactionKey) {
   return null;
 }
 
+export function getExperimentCompletionDate(experimentId) {
+  if (typeof experimentId !== 'string' || !experimentId.trim()) {
+    return null;
+  }
+  return appState.experimentCompletionDates[experimentId.trim()] ?? null;
+}
+
 export function markExperimentCompleted(experimentId) {
-  if (typeof experimentId !== 'string' || !experimentId.trim() || appState.completedExperiments.has(experimentId)) {
+  if (typeof experimentId !== 'string' || !experimentId.trim()) {
     return false;
   }
 
-  const oldValue = new Set(appState.completedExperiments);
-  appState.completedExperiments.add(experimentId);
+  const id = experimentId.trim();
+
+  if (appState.completedExperiments.has(id)) {
+    return false;
+  }
+
+  const oldExperiments = new Set(appState.completedExperiments);
+  appState.completedExperiments.add(id);
+  appState.experimentCompletionDates[id] = formatLocalDateYYYYMMDD();
+
   appendActivity(
     'experimentcompleted',
     '完成了一项实验',
-    `实验 ${experimentId} 已写入完成记录。`,
-    { experimentId }
+    `实验 ${id} 已写入完成记录。`,
+    { experimentId: id }
   );
-  emitStateChange('completedExperiments', oldValue, appState.completedExperiments, 'experimentcompleted', {
-    experimentId
+
+  emitStateChange('completedExperiments', oldExperiments, appState.completedExperiments, 'experimentcompleted', {
+    experimentId: id,
+    completedAt: appState.experimentCompletionDates[id]
   });
+
   return true;
 }
 

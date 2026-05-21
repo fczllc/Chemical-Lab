@@ -87,9 +87,9 @@ export const achievementsData = [
   {
     "id": "achievement-lab-safety",
     "category": "experiment",
-    "title": "实验室安全员",
-    "description": "完成全部 5 个实验，已经是一名可靠的小研究员。",
-    "unlockText": "完成全部 5 个实验",
+    "title": "实验观察员",
+    "description": "完成 5 个虚拟实验，已经能安全、细致地记录实验现象。",
+    "unlockText": "完成 5 个实验",
     "icon": "shield",
     "rarity": "rare",
     "condition": {
@@ -100,6 +100,57 @@ export const achievementsData = [
       "g10-redox-valence-change"
     ],
     "difficulty": "初中"
+  },
+  {
+    "id": "achievement-experiment-assistant",
+    "category": "experiment",
+    "title": "实验小助手",
+    "description": "完成 20 个实验，能主动比较不同实验中的现象与规律。",
+    "unlockText": "完成 20 个实验",
+    "icon": "microscope",
+    "rarity": "rare",
+    "condition": {
+      "type": "completedExperiments",
+      "count": 20
+    },
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "初中"
+  },
+  {
+    "id": "achievement-experiment-researcher",
+    "category": "experiment",
+    "title": "实验研究员",
+    "description": "完成 50 个实验，已经能持续追踪实验问题并整理结论。",
+    "unlockText": "完成 50 个实验",
+    "icon": "clipboard-check",
+    "rarity": "rare",
+    "condition": {
+      "type": "completedExperiments",
+      "count": 50
+    },
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础"
+  },
+  {
+    "id": "achievement-experiment-master",
+    "category": "experiment",
+    "title": "实验大师",
+    "description": "完成全部 92 个实验，建立完整的实验探索记录。",
+    "unlockText": "完成全部 92 个实验",
+    "icon": "trophy",
+    "rarity": "legendary",
+    "condition": {
+      "type": "completedExperiments",
+      "count": 92
+    },
+    "curriculumTags": [
+      "g10-redox-valence-change"
+    ],
+    "difficulty": "高中基础"
   },
   {
     "id": "achievement-first-quiz",

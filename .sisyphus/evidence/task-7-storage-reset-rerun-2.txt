@@ -1,0 +1,38 @@
+
+Running 4 tests using 2 workers
+
+  鉁? 1 [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once (1.1m)
+  鉁? 3 [chromium] 鈥?tests\ui\storage-migration.spec.ts:73:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 (30.3s)
+  鉁? 4 [chromium] 鈥?tests\ui\storage-migration.spec.ts:87:3 鈥?Storage migration compatibility 鈥?invalid persisted completedLearningSegments normalize to trimmed valid ids (12.5s)
+  鉁? 2 [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (1.7m)
+
+
+  1) [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+
+    [31mTest timeout of 90000ms exceeded.[39m
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator:  getByTestId('settings-reference')
+    Expected: [32m"鍐呭鍙傝€冧汉鏁欑増鏁欐潗"[39m
+    Received: [31m""[39m
+
+    Call log:
+    [2m  - Expect "toHaveText" with timeout 5000ms[22m
+    [2m  - waiting for getByTestId('settings-reference')[22m
+
+
+      90 |
+      91 |     await expect(page.getByTestId('settings-version')).toHaveText('鐗堟湰锛?.0');
+    > 92 |     await expect(page.getByTestId('settings-reference')).toHaveText('鍐呭鍙傝€冧汉鏁欑増鏁欐潗');
+         |                                                          ^
+      93 |     await expect(page.locator('.setting-item').filter({ hasText: '鎬ц兘妯″紡' })).toBeVisible();
+      94 |     await expect(page.getByTestId('performance-mode-toggle')).toBeAttached();
+      95 |     await expect(page.locator('.toggle-switch:has([data-testid="performance-mode-toggle"])')).toBeVisible();
+        at D:\Chemical-Laboratory\tests\ui\settings-reset.spec.ts:92:58
+
+    Error Context: test-results\ui-settings-reset-Settings-aff26-hile-clearing-learning-data-chromium\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+  3 passed (2.0m)

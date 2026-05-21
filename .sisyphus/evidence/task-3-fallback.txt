@@ -1,0 +1,1 @@
+Fallback mechanism implemented via try/catch in loader initialization and 'error' event listener on Lottie instance. Adds 'lottie-fallback' CSS class on failure.

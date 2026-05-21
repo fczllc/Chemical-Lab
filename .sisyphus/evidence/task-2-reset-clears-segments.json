@@ -1,0 +1,10 @@
+{
+  "task": "task-2-reset-clears-segments",
+  "verified": "npx playwright test tests/ui/settings-reset.spec.ts",
+  "result": "passed",
+  "notes": [
+    "resetProgress clears completedLearningSegments",
+    "settings are preserved as current defaults after reset",
+    "stored envelope version is v3"
+  ]
+}

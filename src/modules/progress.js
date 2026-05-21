@@ -1,34 +1,76 @@
 /** ===== 学习进度模块 ===== */
 import { EXPERIMENT_LABELS, FEATURE_LABELS, GAME_LABELS } from '../data/contentMeta.js';
-import { achievementsData, curriculumTags, elements, quizData, reactions } from '../data/index.js';
+import { achievementsData, curriculumTags, elements, labExperiments, quizData, reactions } from '../data/index.js';
 import { learningPath } from '../data/index.js';
 import {
   getAchievementDates,
   getActivityLog,
   getCollectedElements,
   getCompletedExperiments,
+  getCompletedLearningSegments,
   getGamePlayCounts,
   getGameScores,
   getLearnedElements,
   getQuizScores,
   getStateSnapshot,
-  getUnlockedAchievements
+  getUnlockedAchievements,
+  markLearningSegmentCompleted
 } from './storage.js';
 
-const TOTAL_EXPERIMENTS = 5;
+const TOTAL_EXPERIMENTS = labExperiments.length;
 const TOTAL_ELEMENTS = 118;
 let isBound = false;
 let selectedStageId = learningPath.stages[0]?.id || null;
 let celebrationMessage = '';
 let celebrationTimer = null;
+let focusedLearningSegmentId = null;
 
 /** Build a map of curriculum tag -> canonical metadata for label lookups */
 const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
 
 const ELEMENT_BY_SYMBOL = new Map((elements || []).map((element) => [element.symbol, element]));
 
+const MANUAL_LEARNING_ACHIEVEMENTS = (achievementsData || [])
+  .map((achievement) => ({
+    achievement,
+    segmentId: getManualLearningSegmentId(achievement)
+  }))
+  .filter(({ achievement, segmentId }) => (
+    achievement?.condition?.type === 'manualReviewAfterPromotion'
+    && achievement.sourceReviewStatus === 'reviewed'
+    && Boolean(segmentId)
+  ));
+
+const MANUAL_ACHIEVEMENT_BY_SEGMENT = new Map(
+  MANUAL_LEARNING_ACHIEVEMENTS.map(({ achievement, segmentId }) => [segmentId, achievement])
+);
+
 function hasCurriculumTag(record, tagId) {
   return Array.isArray(record?.curriculumTags) && record.curriculumTags.includes(tagId);
+}
+
+function getManualLearningSegmentId(achievement) {
+  const tags = Array.isArray(achievement?.curriculumTags) ? achievement.curriculumTags : [];
+  if (tags.length !== 1 || typeof tags[0] !== 'string') {
+    return null;
+  }
+
+  const segmentId = tags[0].trim();
+  return segmentId || null;
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+    .replaceAll('`', '&#96;');
+}
+
+function escapeHtmlAttr(value) {
+  return escapeHtml(value);
 }
 
 function isQuizCompleted(quizId, quizScores) {
@@ -41,7 +83,10 @@ function isQuizCompleted(quizId, quizScores) {
 
 export const __progressTestHooks = {
   isQuizCompleted,
-  computeTopicMastery
+  computeTopicMastery,
+  computeStageCurriculum,
+  getStageStates,
+  getManualLearningSegments
 };
 
 function extractAtomicNumbersFromFormula(value) {
@@ -80,9 +125,10 @@ function getActivitiesForTag(tagId) {
 }
 
 /** Compute topic mastery for a single tag based on current state. */
-function computeTopicMastery(tagId, learned, completedExperiments, quizScores) {
+function computeTopicMastery(tagId, learned, completedExperiments, quizScores, unlockedAchievements = getUnlockedAchievements(), completedLearningSegments = getCompletedLearningSegments()) {
   const meta = CURRICULUM_TAG_MAP.get(tagId);
-  if (!meta) {
+  const manualAchievement = MANUAL_ACHIEVEMENT_BY_SEGMENT.get(tagId);
+  if (!meta && !manualAchievement) {
     return null;
   }
 
@@ -93,16 +139,26 @@ function computeTopicMastery(tagId, learned, completedExperiments, quizScores) {
   const totalActivities = topicElements.length + quizzes.length + experiments.length;
   const completedActivities = completedElements.length + completedQuizzes.length + completedExperimentIds.length;
   const hasTouched = completedActivities > 0;
-  const isCompleted = totalActivities > 0 && completedActivities >= totalActivities;
+  const stagePathCompleted = totalActivities > 0 && completedActivities >= totalActivities;
+  const rawSegmentCompleted = Boolean(manualAchievement && completedLearningSegments.has(tagId));
+  const manualCompleted = Boolean(manualAchievement && unlockedAchievements.has(manualAchievement.id));
+  const displayCompleted = stagePathCompleted || manualCompleted;
 
   return {
     tagId,
-    grade: meta.grade || '',
-    chapter: meta.chapter || '',
-    topic: meta.topic || '',
-    displayPath: meta.displayPath || '',
-    started: hasTouched,
-    completed: isCompleted,
+    segmentId: manualAchievement ? tagId : '',
+    grade: meta?.grade || manualAchievement?.difficulty || '',
+    chapter: meta?.chapter || manualAchievement?.sourceReferences?.[0]?.sourceHeading || manualAchievement?.title || '',
+    topic: meta?.topic || manualAchievement?.title || '',
+    displayPath: meta?.displayPath || buildManualDisplayPath(manualAchievement, tagId),
+    started: hasTouched || rawSegmentCompleted,
+    completed: displayCompleted,
+    displayCompleted,
+    stagePathCompleted,
+    manualAchievementId: manualAchievement?.id || '',
+    manualCompleted,
+    rawSegmentCompleted,
+    manualAchievement,
     totalActivities,
     completedActivities,
     elementCount: topicElements.length,
@@ -112,11 +168,13 @@ function computeTopicMastery(tagId, learned, completedExperiments, quizScores) {
 }
 
 /** Compute curriculum summary for a stage using its curriculumTags. */
-function computeStageCurriculum(stage, learned, completedExperiments, quizScores) {
-  const tags = (stage.curriculumTags || []).filter((tagId) => CURRICULUM_TAG_MAP.has(tagId));
-  const topics = tags.map((tagId) => computeTopicMastery(tagId, learned, completedExperiments, quizScores)).filter(Boolean);
+function computeStageCurriculum(stage, learned, completedExperiments, quizScores, unlockedAchievements = getUnlockedAchievements(), completedLearningSegments = getCompletedLearningSegments()) {
+  const tags = (stage.curriculumTags || []).filter((tagId) => CURRICULUM_TAG_MAP.has(tagId) || MANUAL_ACHIEVEMENT_BY_SEGMENT.has(tagId));
+  const topics = tags.map((tagId) => (
+    computeTopicMastery(tagId, learned, completedExperiments, quizScores, unlockedAchievements, completedLearningSegments)
+  )).filter(Boolean);
   const startedCount = topics.filter((topic) => topic.started).length;
-  const completedCount = topics.filter((topic) => topic.completed).length;
+  const completedCount = topics.filter((topic) => topic.stagePathCompleted).length;
   const totalActivities = topics.reduce((sum, topic) => sum + topic.totalActivities, 0);
   const completedActivities = topics.reduce((sum, topic) => sum + topic.completedActivities, 0);
   return {
@@ -127,6 +185,14 @@ function computeStageCurriculum(stage, learned, completedExperiments, quizScores
     totalActivities,
     completedActivities
   };
+}
+
+function buildManualDisplayPath(achievement, segmentId) {
+  const reference = achievement?.sourceReferences?.[0] || {};
+  const heading = reference.sourceHeading || achievement?.title || segmentId;
+  const lineRange = reference.lineRange ? `L${reference.lineRange}` : '';
+  const sourceVolumeId = achievement?.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
+  return [sourceVolumeId, heading, lineRange].filter(Boolean).join(' / ');
 }
 
 export function initProgress() {
@@ -187,18 +253,21 @@ function renderProgress() {
     return;
   }
 
+  readAchievementActionFocus();
+
   const snapshot = getStateSnapshot();
   const learned = getLearnedElements();
   const collected = getCollectedElements();
   const completedExperiments = getCompletedExperiments();
   const unlockedAchievements = getUnlockedAchievements();
+  const completedLearningSegments = getCompletedLearningSegments();
   const unlockDates = getAchievementDates();
   const quizScores = getQuizScores();
   const activityLog = getActivityLog();
   const gameScores = getGameScores();
   const gamePlays = getGamePlayCounts();
   const pathStages = learningPath?.stages || [];
-  const stageStates = getStageStates(pathStages, learned, completedExperiments, quizScores);
+  const stageStates = getStageStates(pathStages, learned, completedExperiments, quizScores, unlockedAchievements, completedLearningSegments);
   const currentStage = stageStates.find((stage) => stage.status === 'current')
     || [...stageStates].reverse().find((stage) => stage.status === 'complete')
     || stageStates[0]
@@ -300,6 +369,7 @@ function renderProgress() {
         ${stageStates.map((stage) => renderStageCard(stage, learned.size)).join('')}
       </div>
       ${selectedStage ? renderStageDetail(selectedStage, snapshot) : ''}
+      ${renderManualLearningSection(unlockedAchievements, completedLearningSegments)}
     </section>
   `;
 
@@ -313,14 +383,84 @@ function bindStageInteractions() {
       renderProgress();
     });
   });
+
+  document.querySelectorAll('[data-learning-segment-complete]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const segmentId = button.dataset.learningSegmentComplete || '';
+      const achievementId = button.dataset.manualAchievementId || '';
+      markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-manual-segment' });
+      focusedLearningSegmentId = segmentId;
+    });
+  });
+
+  focusLearningSegmentRow();
 }
 
-function getStageStates(stages, learned, completedExperiments, quizScores) {
+function readAchievementActionFocus() {
+  if (typeof window === 'undefined' || !window.sessionStorage) {
+    return;
+  }
+
+  try {
+    const rawPayload = window.sessionStorage.getItem('achievementActionFocus');
+    if (!rawPayload) {
+      return;
+    }
+
+    const payload = JSON.parse(rawPayload);
+    const segmentId = typeof payload?.segmentId === 'string' ? payload.segmentId.trim() : '';
+    if (payload?.conditionType === 'manualReviewAfterPromotion' && segmentId) {
+      focusedLearningSegmentId = segmentId;
+      selectStageForLearningSegment(segmentId);
+    }
+  } catch {
+    // Ignore invalid focus payloads; achievement navigation should still render progress.
+  } finally {
+    try {
+      window.sessionStorage.removeItem('achievementActionFocus');
+    } catch {
+      // ignore sessionStorage errors
+    }
+  }
+}
+
+function selectStageForLearningSegment(segmentId) {
+  const matchingStage = (learningPath.stages || []).find((stage) => (
+    Array.isArray(stage.curriculumTags) && stage.curriculumTags.includes(segmentId)
+  ));
+
+  if (matchingStage) {
+    selectedStageId = matchingStage.id;
+  }
+}
+
+function focusLearningSegmentRow() {
+  if (!focusedLearningSegmentId) {
+    return;
+  }
+
+  const escapedSegmentId = typeof CSS !== 'undefined' && typeof CSS.escape === 'function'
+    ? CSS.escape(focusedLearningSegmentId)
+    : focusedLearningSegmentId.replaceAll('"', '\\"');
+  const row = document.querySelector(`#progress [data-learning-segment-id="${escapedSegmentId}"]`);
+  if (!row) {
+    return;
+  }
+
+  row.classList.add('is-focused');
+  row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  const button = row.querySelector('[data-learning-segment-complete]');
+  if (button instanceof HTMLElement && !button.disabled) {
+    button.focus({ preventScroll: true });
+  }
+}
+
+function getStageStates(stages, learned, completedExperiments, quizScores, unlockedAchievements = getUnlockedAchievements(), completedLearningSegments = getCompletedLearningSegments()) {
   const learnedCount = learned.size;
   let previousStageComplete = true;
 
   return stages.map((stage) => {
-    const curriculum = computeStageCurriculum(stage, learned, completedExperiments, quizScores);
+    const curriculum = computeStageCurriculum(stage, learned, completedExperiments, quizScores, unlockedAchievements, completedLearningSegments);
     const hasCurriculumCompletion = curriculum.totalTopics > 0 && curriculum.completedCount >= curriculum.totalTopics;
     const completedCount = Math.min(learnedCount, stage.requiredCount);
     const progressPercent = stage.requiredCount > 0
@@ -357,19 +497,19 @@ function renderStageCard(stage, learnedCount) {
     .map((topic) => topic.displayPath)
     .filter(Boolean);
   const curriculumLabelHtml = curriculumLabels.length
-    ? `<div class="progress-stage-curriculum">${curriculumLabels.map((l) => `<span class="curriculum-chip">${l}</span>`).join('')}</div>`
+    ? `<div class="progress-stage-curriculum">${curriculumLabels.map((label) => `<span class="curriculum-chip">${escapeHtml(label)}</span>`).join('')}</div>`
     : '';
   return `
     <article class="progress-stage-card hud-shell is-${stage.status}">
-      <button class="progress-stage-button" type="button" data-stage-select="${stage.id}">
+      <button class="progress-stage-button" type="button" data-stage-select="${escapeHtmlAttr(stage.id)}">
         <div class="progress-stage-top">
           <div>
             <p class="hud-kicker"><i data-lucide="${icon}"></i> PATH STAGE</p>
-            <h3>${stage.name}</h3>
+            <h3>${escapeHtml(stage.name)}</h3>
           </div>
           <strong>${stage.completedCount}/${stage.requiredCount}</strong>
         </div>
-        <p>${stage.description}</p>
+        <p>${escapeHtml(stage.description)}</p>
         ${curriculumLabelHtml}
         <div class="progress-stage-meta-row">
           <span>需要元素：${stage.requiredCount}</span>
@@ -400,8 +540,8 @@ function renderStageDetail(stage, snapshot) {
         <div class="curriculum-topic-list">
           ${curriculum.topics.map((t) => `
             <div class="curriculum-topic-row">
-              <span class="curriculum-topic-path">${t.displayPath}</span>
-              <span class="curriculum-topic-status"><i data-lucide="${t.completed ? 'check-circle-2' : t.started ? 'star' : 'circle'}"></i> ${t.completed ? '已完成' : t.started ? '进行中' : '未开始'} · ${t.completedActivities}/${t.totalActivities || 0}</span>
+              <span class="curriculum-topic-path">${escapeHtml(t.displayPath)}</span>
+              <span class="curriculum-topic-status"><i data-lucide="${t.displayCompleted ? 'check-circle-2' : t.started ? 'star' : 'circle'}"></i> ${t.displayCompleted ? '已完成' : t.started ? '进行中' : '未开始'} · ${t.completedActivities}/${t.totalActivities || 0}</span>
             </div>
           `).join('')}
         </div>
@@ -413,11 +553,11 @@ function renderStageDetail(stage, snapshot) {
       <div class="progress-panel-heading">
         <div>
           <p class="hud-kicker">STAGE DETAIL</p>
-          <h4>${stage.name}</h4>
+          <h4>${escapeHtml(stage.name)}</h4>
         </div>
         <span><i data-lucide="${stage.status === 'locked' ? 'lock' : stage.status === 'complete' ? 'check-circle-2' : 'star'}"></i> ${stage.status === 'locked' ? '未解锁' : stage.status === 'complete' ? '已完成' : '当前阶段'}</span>
       </div>
-      <p class="progress-stage-detail-copy">${stage.description} 当前进度 ${stage.completedCount}/${stage.requiredCount}，${stage.remainingCount > 0 ? `再学习 ${stage.remainingCount} 个元素即可完成。` : '该阶段已经达成。'}</p>
+      <p class="progress-stage-detail-copy">${escapeHtml(stage.description)} 当前进度 ${stage.completedCount}/${stage.requiredCount}，${stage.remainingCount > 0 ? `再学习 ${stage.remainingCount} 个元素即可完成。` : '该阶段已经达成。'}</p>
       <div class="progress-stage-detail-grid">
         <div class="progress-detail-card">
           <span>本阶段重点元素</span>
@@ -428,9 +568,9 @@ function renderStageDetail(stage, snapshot) {
         <div class="progress-detail-card">
           <span>解锁内容预览</span>
           <ul class="progress-unlock-list">
-            ${stage.unlockedGames.map((gameKey) => `<li><i data-lucide="gamepad-2"></i> ${GAME_LABELS[gameKey] || gameKey}</li>`).join('')}
-            ${stage.unlockedExperiments.map((experimentId) => `<li><i data-lucide="flask-conical"></i> ${EXPERIMENT_LABELS[experimentId] || experimentId}</li>`).join('')}
-            ${stage.unlockedFeatures.map((featureKey) => `<li><i data-lucide="sparkles"></i> ${FEATURE_LABELS[featureKey] || featureKey}</li>`).join('')}
+            ${stage.unlockedGames.map((gameKey) => `<li><i data-lucide="gamepad-2"></i> ${escapeHtml(GAME_LABELS[gameKey] || gameKey)}</li>`).join('')}
+            ${stage.unlockedExperiments.map((experimentId) => `<li><i data-lucide="flask-conical"></i> ${escapeHtml(EXPERIMENT_LABELS[experimentId] || experimentId)}</li>`).join('')}
+            ${stage.unlockedFeatures.map((featureKey) => `<li><i data-lucide="sparkles"></i> ${escapeHtml(FEATURE_LABELS[featureKey] || featureKey)}</li>`).join('')}
           </ul>
         </div>
         ${curriculumHtml}
@@ -439,9 +579,79 @@ function renderStageDetail(stage, snapshot) {
   `;
 }
 
+function getManualLearningSegments() {
+  return MANUAL_LEARNING_ACHIEVEMENTS.map(({ achievement, segmentId }) => ({
+    achievement,
+    segmentId,
+    reference: achievement.sourceReferences?.[0] || {}
+  }));
+}
+
+function renderManualLearningSection(unlockedAchievements, completedLearningSegments) {
+  const manualSegments = getManualLearningSegments();
+  if (!manualSegments.length) {
+    return '';
+  }
+
+  return `
+    <div class="progress-manual-learning-panel progress-detail-card">
+      <div class="progress-panel-heading">
+        <div>
+          <p class="hud-kicker">TEXTBOOK MICRO-LESSONS</p>
+          <h4>教材片段学习</h4>
+        </div>
+        <span>${manualSegments.length} 个片段</span>
+      </div>
+      <div class="progress-manual-segment-list">
+        ${manualSegments.map(({ achievement, segmentId, reference }) => renderManualLearningSegmentRow({
+    achievement,
+    segmentId,
+    reference,
+    unlockedAchievements,
+    completedLearningSegments
+  })).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderManualLearningSegmentRow({ achievement, segmentId, reference, unlockedAchievements, completedLearningSegments }) {
+  const displayCompleted = unlockedAchievements.has(achievement.id);
+  const rawSegmentCompleted = completedLearningSegments.has(segmentId);
+  const statusText = displayCompleted ? '已完成' : rawSegmentCompleted ? '待同步' : '未开始';
+  const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
+  const lineRange = reference.lineRange ? `L${reference.lineRange}` : '未标注行号';
+  const sourceHeading = reference.sourceHeading || achievement.title || segmentId;
+  const displayPath = buildManualDisplayPath(achievement, segmentId);
+  const rowClasses = [
+    'progress-manual-segment-row',
+    displayCompleted ? 'is-complete' : '',
+    rawSegmentCompleted && !displayCompleted ? 'has-raw-evidence' : '',
+    focusedLearningSegmentId === segmentId ? 'is-focused' : ''
+  ].filter(Boolean).join(' ');
+
+  return `
+    <article class="${rowClasses}" data-learning-segment-id="${escapeHtmlAttr(segmentId)}" data-manual-achievement-id="${escapeHtmlAttr(achievement.id)}">
+      <div class="progress-manual-segment-copy">
+        <p class="hud-kicker">${escapeHtml(sourceVolumeId || '教材片段')} · ${escapeHtml(lineRange)}</p>
+        <h5>${escapeHtml(sourceHeading)}</h5>
+        <p>${escapeHtml(displayPath)}</p>
+        <div class="progress-manual-segment-meta">
+          <span>课程标签：${escapeHtml(segmentId)}</span>
+          <span>成就：${escapeHtml(achievement.title)}</span>
+        </div>
+      </div>
+      <div class="progress-manual-segment-action">
+        <span class="progress-manual-segment-status"><i data-lucide="${displayCompleted ? 'check-circle-2' : rawSegmentCompleted ? 'refresh-cw' : 'circle'}"></i> ${statusText}</span>
+        <button type="button" data-learning-segment-complete="${escapeHtmlAttr(segmentId)}" data-manual-achievement-id="${escapeHtmlAttr(achievement.id)}" ${rawSegmentCompleted ? 'disabled' : ''}>完成学习</button>
+      </div>
+    </article>
+  `;
+}
+
 function renderElementChip(atomicNumber, element, learned) {
   const label = element ? `${element.chineseName} (${element.symbol})` : `元素 ${atomicNumber}`;
-  return `<span class="stage-element-chip ${learned ? 'is-learned' : ''}"><i data-lucide="${learned ? 'check' : 'circle'}"></i> ${label}</span>`;
+  return `<span class="stage-element-chip ${learned ? 'is-learned' : ''}"><i data-lucide="${learned ? 'check' : 'circle'}"></i> ${escapeHtml(label)}</span>`;
 }
 
 function renderActivityList(activityLog, snapshot) {
@@ -457,9 +667,9 @@ function renderActivityList(activityLog, snapshot) {
       <article class="activity-item">
         <div class="activity-dot"></div>
         <div>
-          <strong>${entry.title}</strong>
-          <p>${description}</p>
-          <span>${formatDate(entry.timestamp)}</span>
+          <strong>${escapeHtml(entry.title)}</strong>
+          <p>${escapeHtml(description)}</p>
+          <span>${escapeHtml(formatDate(entry.timestamp))}</span>
         </div>
       </article>
     `;

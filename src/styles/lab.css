@@ -852,6 +852,13 @@ body:has(#lab.active) .detail-panel.docked {
   line-height: 1.35;
 }
 
+.lab-completion-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+}
+
 @media (max-width: 680px) {
   .lab-summary-grid {
     grid-template-columns: 1fr;

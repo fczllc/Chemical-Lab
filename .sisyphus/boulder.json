@@ -1,468 +1,347 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\experiment-dedup-safety.md",
-  "started_at": "2026-05-17T04:42:46.055Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\lottie-loading-animation.md",
+  "started_at": "2026-05-20T15:11:21.331Z",
   "session_ids": [
-    "ses_1cbc1969cffempMK7698r8jjlH",
-    "ses_1cac42db7ffeNKari5mFFV26BF",
-    "ses_1cac42d56ffeRA7tfFq9dNtc0X"
+    "ses_1ba27ac9cffegFruZKJQnXfwkf"
   ],
   "session_origins": {
-    "ses_1cbc1969cffempMK7698r8jjlH": "direct",
-    "ses_1cac42db7ffeNKari5mFFV26BF": "appended",
-    "ses_1cac42d56ffeRA7tfFq9dNtc0X": "appended"
+    "ses_1ba27ac9cffegFruZKJQnXfwkf": "direct"
   },
-  "plan_name": "experiment-dedup-safety",
+  "plan_name": "lottie-loading-animation",
   "agent": "atlas",
   "task_sessions": {
-    "todo:5": {
-      "task_key": "todo:5",
-      "task_label": "5",
-      "task_title": "Extend lab validation for duplicate clusters and safety-note quality",
-      "session_id": "ses_1cbbec24fffe475s6dCLqNqNYT",
+    "todo:3": {
+      "task_key": "todo:3",
+      "task_label": "3",
+      "task_title": "Align stale lab tests with removed animation/safety-gate flow",
+      "session_id": "ses_1bb40ea86ffe7Q9wOi86jvVpV1",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-low",
+      "updated_at": "2026-05-20T09:43:58.288Z",
+      "started_at": "2026-05-20T09:43:58.288Z",
+      "status": "running"
+    },
+    "todo:1": {
+      "task_key": "todo:1",
+      "task_label": "1",
+      "task_title": "Storage completion-date contract",
+      "session_id": "ses_1bb23cf6affeVBjJ4xPOmlp26t",
       "agent": "Sisyphus-Junior",
       "category": "",
-      "started_at": "2026-05-17T04:59:42.062Z",
+      "started_at": "2026-05-20T09:53:33.801Z",
       "status": "running",
-      "updated_at": "2026-05-17T05:07:33.581Z"
+      "updated_at": "2026-05-20T10:40:32.140Z"
     },
-    "todo:6": {
-      "task_key": "todo:6",
-      "task_label": "6",
-      "task_title": "Regenerate runtime lab data and run script-first verification",
-      "session_id": "ses_1cba9154affeVZIbqbPNTttDJy",
+    "todo:2": {
+      "task_key": "todo:2",
+      "task_label": "2",
+      "task_title": "Lab modal completion footer",
+      "session_id": "ses_1ba8c8173ffeol6ZE8EHeVDLnp",
+      "agent": "Sisyphus-Junior",
+      "category": "visual-engineering",
+      "started_at": "2026-05-20T12:19:56.268Z",
+      "status": "running",
+      "updated_at": "2026-05-20T12:56:11.971Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "End-to-end lab confirmation verification",
+      "session_id": "ses_1ba88e5f5ffezLDkfsogoUPp9S",
       "agent": "Sisyphus-Junior",
       "category": "unspecified-high",
-      "updated_at": "2026-05-17T05:15:16.055Z",
-      "started_at": "2026-05-17T05:15:16.055Z",
+      "updated_at": "2026-05-20T13:14:19.223Z",
+      "started_at": "2026-05-20T13:14:19.223Z",
       "status": "running"
     },
     "final-wave:f1": {
       "task_key": "final-wave:f1",
       "task_label": "F1",
       "task_title": "Plan Compliance Audit — oracle",
-      "session_id": "ses_1cba11fa7ffeLKBzuivzM6RAFQ",
-      "agent": "Sisyphus-Junior",
-      "category": "deep",
-      "started_at": "2026-05-17T05:25:48.371Z",
+      "session_id": "ses_1ba4c1ea5ffeoIBghy35Iph76N",
+      "agent": "oracle",
+      "category": "",
+      "started_at": "2026-05-20T13:39:26.753Z",
       "status": "running",
-      "updated_at": "2026-05-17T09:04:15.327Z"
+      "updated_at": "2026-05-20T14:06:23.482Z"
+    },
+    "final-wave:f3": {
+      "task_key": "final-wave:f3",
+      "task_label": "F3",
+      "task_title": "Hands-on Playwright QA — unspecified-high",
+      "session_id": "ses_1ba4c1d6bffe487mvRq0Pri18j",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "started_at": "2026-05-20T13:40:29.409Z",
+      "status": "running",
+      "updated_at": "2026-05-20T14:07:41.585Z"
+    },
+    "final-wave:f2": {
+      "task_key": "final-wave:f2",
+      "task_label": "F2",
+      "task_title": "Code Quality Review — unspecified-high",
+      "session_id": "ses_1ba4c1dfbffeMpeBN83Iiz2jzc",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "started_at": "2026-05-20T13:42:45.883Z",
+      "status": "running",
+      "updated_at": "2026-05-20T14:08:33.650Z"
     },
     "final-wave:f4": {
       "task_key": "final-wave:f4",
       "task_label": "F4",
       "task_title": "Scope Fidelity Check — deep",
-      "session_id": "ses_1cba11fa7ffeLKBzuivzM6RAFQ",
+      "session_id": "ses_1ba4c1d34ffeZPCc0c3vu3ev1T",
       "agent": "Sisyphus-Junior",
-      "category": "",
-      "updated_at": "2026-05-17T09:08:45.087Z",
-      "started_at": "2026-05-17T09:08:45.087Z",
+      "category": "deep",
+      "updated_at": "2026-05-20T14:08:35.047Z",
+      "started_at": "2026-05-20T14:08:35.047Z",
       "status": "running"
     }
   },
-  "active_work_id": "experiment-dedup-safety-ad056069",
-  "status": "completed",
-  "updated_at": "2026-05-17T09:19:33.729Z",
+  "active_work_id": "lottie-loading-animation-20260520",
+  "status": "active",
+  "updated_at": "2026-05-20T15:11:21.331Z",
   "schema_version": 2,
   "works": {
-    "shared-game-feedback-overlay-legacy": {
-      "work_id": "shared-game-feedback-overlay-legacy",
-      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\shared-game-feedback-overlay.md",
-      "plan_name": "shared-game-feedback-overlay",
-      "started_at": "2026-05-13T17:23:41.944Z",
-      "session_ids": [
-        "ses_1ddc4f9acffeXyblkkK76Ji6kV",
-        "ses_1dda122d2ffeNAXCFvLu9YlwoZ",
-        "ses_1dda12242ffeT6zYAGldl3tYn0",
-        "ses_1dda12175ffeGMlxeugR0cvv6f"
-      ],
-      "session_origins": {
-        "ses_1ddc4f9acffeXyblkkK76Ji6kV": "direct",
-        "ses_1dda122d2ffeNAXCFvLu9YlwoZ": "appended",
-        "ses_1dda12242ffeT6zYAGldl3tYn0": "appended",
-        "ses_1dda12175ffeGMlxeugR0cvv6f": "appended"
-      },
-      "agent": "atlas",
-      "task_sessions": {
-        "todo:1": {
-          "task_key": "todo:1",
-          "task_label": "1",
-          "task_title": "Create shared emoji feedback overlay",
-          "session_id": "ses_1dd9aabc0ffePeGkuQ1pl29yAH",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "updated_at": "2026-05-13T17:36:17.933Z"
-        },
-        "todo:2": {
-          "task_key": "todo:2",
-          "task_label": "2",
-          "task_title": "Wire overlay into game-center drag and memory rules",
-          "session_id": "ses_1dd907c18ffePVpm6h0Kk36YcN",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "updated_at": "2026-05-13T18:00:32.895Z"
-        },
-        "todo:3": {
-          "task_key": "todo:3",
-          "task_label": "3",
-          "task_title": "Wire overlay into reaction matching rules",
-          "session_id": "ses_1dd7cbc42ffemGIPTmGSs2Km2a",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "updated_at": "2026-05-13T18:09:13.452Z"
-        },
-        "todo:4": {
-          "task_key": "todo:4",
-          "task_label": "4",
-          "task_title": "Wire overlay into full quiz challenge only",
-          "session_id": "ses_1dd760813ffeCcK7zI9I5uKDTr",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "updated_at": "2026-05-13T18:15:13.426Z"
-        },
-        "todo:5": {
-          "task_key": "todo:5",
-          "task_label": "5",
-          "task_title": "Add end-to-end verification for scoped and excluded feedback",
-          "session_id": "ses_1dd6f67f3ffexADW22UjNRmwML",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "updated_at": "2026-05-13T18:38:57.500Z"
-        },
-        "final-wave:f1": {
-          "task_key": "final-wave:f1",
-          "task_label": "F1",
-          "task_title": "Plan Compliance Audit — oracle",
-          "session_id": "ses_1dd4761ffffeiRu2p2fXda303G",
-          "agent": "oracle",
-          "category": "",
-          "updated_at": "2026-05-13T19:06:32.257Z"
-        },
-        "final-wave:f2": {
-          "task_key": "final-wave:f2",
-          "task_label": "F2",
-          "task_title": "Code Quality Review — unspecified-high",
-          "session_id": "ses_1dd43885cffeimZheIyvc9ikNn",
-          "agent": "Sisyphus-Junior",
-          "category": "",
-          "updated_at": "2026-05-13T19:13:39.518Z"
-        },
-        "final-wave:f3": {
-          "task_key": "final-wave:f3",
-          "task_label": "F3",
-          "task_title": "Real Manual QA — unspecified-high (+ playwright)",
-          "session_id": "ses_1dd3989d0fferfOyKRIIM6PeXm",
-          "agent": "Sisyphus-Junior",
-          "category": "",
-          "updated_at": "2026-05-13T19:43:08.746Z"
-        }
-      }
-    },
-    "settings-modal-data-reset-5d067116": {
-      "work_id": "settings-modal-data-reset-5d067116",
-      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\settings-modal-data-reset.md",
-      "plan_name": "settings-modal-data-reset",
+    "achievement-readonly-learning-confirmation-20260520": {
+      "work_id": "achievement-readonly-learning-confirmation-20260520",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\achievement-readonly-learning-confirmation.md",
+      "plan_name": "achievement-readonly-learning-confirmation",
       "status": "completed",
-      "started_at": "2026-05-14T11:34:45.187Z",
-      "updated_at": "2026-05-14T16:10:45.302Z",
+      "started_at": "2026-05-20T04:11:05.747Z",
+      "updated_at": "2026-05-20T04:56:35.68Z",
       "session_ids": [
-        "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY"
+        "ses_1bc95e61fffedZ6RGK7803X6fs"
       ],
       "session_origins": {
-        "ses_1d9bb7b74ffeUv7Hj1MnRrBcCY": "direct"
+        "ses_1bc95e61fffedZ6RGK7803X6fs": "direct"
       },
       "agent": "atlas",
       "task_sessions": {
         "todo:1": {
           "task_key": "todo:1",
           "task_label": "1",
-          "task_title": "Add failing focused Playwright coverage for settings reset",
-          "session_id": "ses_1d97167e7ffeqkVfnohpIKemil",
-          "agent": "general",
-          "category": "",
-          "started_at": "2026-05-14T11:38:44.442Z",
-          "status": "running",
-          "updated_at": "2026-05-14T13:03:44.107Z"
-        },
-        "todo:2": {
-          "task_key": "todo:2",
-          "task_label": "2",
-          "task_title": "Ensure requested cat asset path exists",
-          "session_id": "ses_1d976a092ffeH19PLt82X8yC8J",
-          "agent": "general",
-          "category": "",
-          "started_at": "2026-05-14T11:38:44.615Z",
-          "status": "running",
-          "updated_at": "2026-05-14T12:52:37.690Z"
-        },
-        "todo:4": {
-          "task_key": "todo:4",
-          "task_label": "4",
-          "task_title": "Wire custom confirmation and learning-data reset behavior",
-          "session_id": "ses_1d9677fcbffejvDBDKdlaLfaCv",
+          "task_title": "Replace manual learning achievement action with read-only hint",
+          "session_id": "ses_1bc67bd9effex7HlDpQAHVsL5p",
           "agent": "Sisyphus-Junior",
           "category": "quick",
-          "updated_at": "2026-05-14T13:06:42.340Z",
-          "started_at": "2026-05-14T13:06:42.340Z",
-          "status": "running"
-        },
-        "todo:3": {
-          "task_key": "todo:3",
-          "task_label": "3",
-          "task_title": "Update settings modal markup and styles to match structural sketch",
-          "session_id": "ses_1d9677fd6ffeEI0z5UAom5Iwg1",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "updated_at": "2026-05-14T13:56:01.875Z",
-          "started_at": "2026-05-14T13:56:01.875Z",
-          "status": "running"
-        },
-        "todo:5": {
-          "task_key": "todo:5",
-          "task_label": "5",
-          "task_title": "Preserve existing settings smoke coverage and regressions",
-          "session_id": "ses_1d914aa54ffe3rlDbFAtfTkbC0",
-          "agent": "general",
-          "category": "",
-          "started_at": "2026-05-14T14:29:29.150Z",
+          "started_at": "2026-05-20T04:15:25.869Z",
           "status": "running",
-          "updated_at": "2026-05-14T14:44:28.841Z"
-        },
-        "todo:6": {
-          "task_key": "todo:6",
-          "task_label": "6",
-          "task_title": "Run targeted verification and capture evidence",
-          "session_id": "ses_1d90b5d5affenopEw0rYd6kAMt",
-          "agent": "general",
-          "category": "",
-          "started_at": "2026-05-14T14:46:00.902Z",
-          "status": "running",
-          "updated_at": "2026-05-14T14:58:29.323Z"
+          "updated_at": "2026-05-20T04:44:31.24Z"
         },
         "final-wave:f1": {
           "task_key": "final-wave:f1",
           "task_label": "F1",
           "task_title": "Plan Compliance Audit — oracle",
-          "session_id": "ses_1d8cc6afaffeA6aJeA1OutlLoX",
-          "agent": "oracle",
-          "category": "",
-          "started_at": "2026-05-14T15:03:21.188Z",
-          "status": "running",
-          "updated_at": "2026-05-14T16:00:21.193Z"
-        },
-        "final-wave:f2": {
-          "task_key": "final-wave:f2",
-          "task_label": "F2",
-          "task_title": "Code Quality Review — unspecified-high",
-          "session_id": "ses_1d8f7f5e6ffe6LhT6HkKQ87ISP",
+          "session_id": "ses_1bc475151ffedhFhxJ2G0zr1PL",
           "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "updated_at": "2026-05-14T15:13:22.279Z",
-          "started_at": "2026-05-14T15:13:22.279Z",
+          "category": "quick",
+          "updated_at": "2026-05-20T04:50:50.744Z",
+          "started_at": "2026-05-20T04:50:50.744Z",
           "status": "running"
-        },
-        "final-wave:f4": {
-          "task_key": "final-wave:f4",
-          "task_label": "F4",
-          "task_title": "Scope Fidelity Check — deep",
-          "session_id": "ses_1d8cc6a92ffesYN0PV5BJfqMGQ",
-          "agent": "Sisyphus-Junior",
-          "category": "deep",
-          "updated_at": "2026-05-14T16:02:12.783Z",
-          "started_at": "2026-05-14T16:02:12.783Z",
-          "status": "running"
-        },
-        "final-wave:f3": {
-          "task_key": "final-wave:f3",
-          "task_label": "F3",
-          "task_title": "Real Manual QA — unspecified-high (+ playwright)",
-          "session_id": "ses_1d8cc6a11ffe9o08BKJmndMo7M",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "started_at": "2026-05-14T16:06:08.746Z",
-          "status": "running",
-          "updated_at": "2026-05-14T16:09:10.797Z"
         }
       },
-      "ended_at": "2026-05-14T16:10:45.301Z",
-      "elapsed_ms": 16560114
+      "ended_at": "2026-05-20T04:56:35.68Z",
+      "elapsed_ms": 2729933
     },
-    "lab-explicit-textbook-experiments-restore-6062dbc9": {
-      "work_id": "lab-explicit-textbook-experiments-restore-6062dbc9",
-      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\lab-explicit-textbook-experiments-restore.md",
-      "plan_name": "lab-explicit-textbook-experiments-restore",
+    "experiment-achievement-92-alignment-b981a272": {
+      "work_id": "experiment-achievement-92-alignment-b981a272",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\experiment-achievement-92-alignment.md",
+      "plan_name": "experiment-achievement-92-alignment",
       "status": "completed",
-      "started_at": "2026-05-15T05:10:06.561Z",
-      "updated_at": "2026-05-16T09:39:08.714Z",
+      "started_at": "2026-05-20T05:37:35.518Z",
+      "updated_at": "2026-05-20T07:36:52.687Z",
       "session_ids": [
-        "ses_1d5f54672ffeRNBdBHc3Fy7yLY",
-        "ses_1d07fc220ffeZz23pFuQL0fKck",
-        "ses_1d07f1fb5ffe5q7uWwiQp2w2B8",
-        "ses_1d07f06f8ffeQ4IKXlub5uCy3S",
-        "ses_1d07ef146ffebxVppLUgwSEKyQ"
+        "ses_1bc1c5126ffeldPki9X2GZqfrG",
+        "ses_1bbaf1c8cffeH0IzGcYz7pH6O2",
+        "ses_1bbaf1c22ffeOSSZQskoELjWiH"
       ],
       "session_origins": {
-        "ses_1d5f54672ffeRNBdBHc3Fy7yLY": "direct",
-        "ses_1d07fc220ffeZz23pFuQL0fKck": "appended",
-        "ses_1d07f1fb5ffe5q7uWwiQp2w2B8": "appended",
-        "ses_1d07f06f8ffeQ4IKXlub5uCy3S": "appended",
-        "ses_1d07ef146ffebxVppLUgwSEKyQ": "appended"
+        "ses_1bc1c5126ffeldPki9X2GZqfrG": "direct",
+        "ses_1bbaf1c8cffeH0IzGcYz7pH6O2": "appended",
+        "ses_1bbaf1c22ffeOSSZQskoELjWiH": "appended"
       },
       "agent": "atlas",
       "task_sessions": {
         "todo:1": {
           "task_key": "todo:1",
           "task_label": "1",
-          "task_title": "Two lab records have malformed user-facing title/name `的观察与描述`:",
-          "session_id": "ses_1d072b75effeyrwImcJrnPh0XH",
+          "task_title": "Update experiment achievement thresholds and copy",
+          "session_id": "ses_1bbfc8392ffew8g3ToXMOpdQrn",
           "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "started_at": "2026-05-15T08:55:15.362Z",
-          "ended_at": "2026-05-16T09:39:08.714Z",
-          "elapsed_ms": 89033352,
-          "status": "completed",
-          "updated_at": "2026-05-16T09:39:08.714Z"
+          "category": "unspecified-high",
+          "started_at": "2026-05-20T05:39:55.801Z",
+          "status": "running",
+          "updated_at": "2026-05-20T06:20:11.173Z"
         },
         "todo:2": {
           "task_key": "todo:2",
           "task_label": "2",
-          "task_title": "Build dedicated lab experiment runtime dataset from explicit textbook experiments",
-          "session_id": "ses_1d4bdec4bffeXONW2F67RF7hzv",
+          "task_title": "Derive progress experiment total from canonical lab data",
+          "session_id": "ses_1bbd62599ffe9bY6dMCUHI1Aq5",
           "agent": "Sisyphus-Junior",
           "category": "unspecified-high",
-          "started_at": "2026-05-15T09:39:31.527Z",
+          "started_at": "2026-05-20T06:22:46.658Z",
           "status": "running",
-          "updated_at": "2026-05-15T11:03:01.504Z"
-        },
-        "todo:3": {
-          "task_key": "todo:3",
-          "task_label": "3",
-          "task_title": "Add lab experiment validator and data-boundary validator",
-          "session_id": "ses_1d4527567ffenxKhCJ22Cp7pWM",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "started_at": "2026-05-15T12:57:12.239Z",
-          "status": "running",
-          "updated_at": "2026-05-15T13:03:21.749Z"
-        },
-        "todo:4": {
-          "task_key": "todo:4",
-          "task_label": "4",
-          "task_title": "Export separate `labExperiments` dataset and update supporting data validation",
-          "session_id": "ses_1d441ffe8ffeZh9jd29FWdaoqc",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "updated_at": "2026-05-15T13:11:59.341Z",
-          "started_at": "2026-05-15T13:11:59.341Z",
-          "status": "running"
-        },
-        "todo:6": {
-          "task_key": "todo:6",
-          "task_label": "6",
-          "task_title": "Correct textbook runtime target mapping and generation guardrails",
-          "session_id": "ses_1d43a2bbcffejb5OIrxUxT9DgF",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "updated_at": "2026-05-15T13:24:13.189Z",
-          "started_at": "2026-05-15T13:24:13.189Z",
-          "status": "running"
-        },
-        "todo:5": {
-          "task_key": "todo:5",
-          "task_label": "5",
-          "task_title": "Refactor lab module to consume lab experiments, not reaction formula pool",
-          "session_id": "ses_1d393894effe4DdJWxJ7aBrKD2",
-          "agent": "Sisyphus-Junior",
-          "category": "visual-engineering",
-          "started_at": "2026-05-15T15:07:21.344Z",
-          "status": "completed",
-          "updated_at": "2026-05-16T04:59:09.755Z",
-          "ended_at": "2026-05-16T04:59:09.755Z",
-          "elapsed_ms": 49908411
+          "updated_at": "2026-05-20T07:02:16.909Z"
         },
         "final-wave:f1": {
           "task_key": "final-wave:f1",
           "task_label": "F1",
           "task_title": "Plan Compliance Audit — oracle",
-          "session_id": "ses_1d07fc220ffeZz23pFuQL0fKck",
+          "session_id": "ses_1bbcd0898ffe00uojL5Q1CMNFo",
           "agent": "oracle",
-          "started_at": "2026-05-16T06:37:46.880Z",
-          "status": "completed",
-          "updated_at": "2026-05-16T06:44:12.877Z",
-          "ended_at": "2026-05-16T06:44:12.877Z",
-          "elapsed_ms": 385997
-        }
-      },
-      "ended_at": "2026-05-16T06:44:46.943Z",
-      "elapsed_ms": 92080382
-    },
-    "experiment-dedup-safety-ad056069": {
-      "work_id": "experiment-dedup-safety-ad056069",
-      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\experiment-dedup-safety.md",
-      "plan_name": "experiment-dedup-safety",
-      "status": "completed",
-      "started_at": "2026-05-17T04:42:46.055Z",
-      "updated_at": "2026-05-17T09:19:33.729Z",
-      "session_ids": [
-        "ses_1cbc1969cffempMK7698r8jjlH",
-        "ses_1cac42db7ffeNKari5mFFV26BF",
-        "ses_1cac42d56ffeRA7tfFq9dNtc0X"
-      ],
-      "session_origins": {
-        "ses_1cbc1969cffempMK7698r8jjlH": "direct",
-        "ses_1cac42db7ffeNKari5mFFV26BF": "appended",
-        "ses_1cac42d56ffeRA7tfFq9dNtc0X": "appended"
-      },
-      "agent": "atlas",
-      "task_sessions": {
-        "todo:5": {
-          "task_key": "todo:5",
-          "task_label": "5",
-          "task_title": "Extend lab validation for duplicate clusters and safety-note quality",
-          "session_id": "ses_1cbbec24fffe475s6dCLqNqNYT",
-          "agent": "Sisyphus-Junior",
           "category": "",
-          "started_at": "2026-05-17T04:59:42.062Z",
-          "status": "running",
-          "updated_at": "2026-05-17T05:07:33.581Z"
-        },
-        "todo:6": {
-          "task_key": "todo:6",
-          "task_label": "6",
-          "task_title": "Regenerate runtime lab data and run script-first verification",
-          "session_id": "ses_1cba9154affeVZIbqbPNTttDJy",
-          "agent": "Sisyphus-Junior",
-          "category": "unspecified-high",
-          "updated_at": "2026-05-17T05:15:16.055Z",
-          "started_at": "2026-05-17T05:15:16.055Z",
+          "updated_at": "2026-05-20T07:07:41.595Z",
+          "started_at": "2026-05-20T07:07:41.595Z",
           "status": "running"
         },
-        "final-wave:f1": {
-          "task_key": "final-wave:f1",
-          "task_label": "F1",
-          "task_title": "Plan Compliance Audit — oracle",
-          "session_id": "ses_1cba11fa7ffeLKBzuivzM6RAFQ",
+        "final-wave:f2": {
+          "task_key": "final-wave:f2",
+          "task_label": "F2",
+          "task_title": "Code Quality Review — unspecified-high",
+          "session_id": "ses_1bbc8947affenF0imVF7mMPnTv",
           "agent": "Sisyphus-Junior",
-          "category": "deep",
-          "started_at": "2026-05-17T05:25:48.371Z",
-          "status": "running",
-          "updated_at": "2026-05-17T09:04:15.327Z"
+          "category": "unspecified-high",
+          "updated_at": "2026-05-20T07:12:08.386Z",
+          "started_at": "2026-05-20T07:12:08.386Z",
+          "status": "running"
         },
         "final-wave:f4": {
           "task_key": "final-wave:f4",
           "task_label": "F4",
           "task_title": "Scope Fidelity Check — deep",
-          "session_id": "ses_1cba11fa7ffeLKBzuivzM6RAFQ",
+          "session_id": "ses_1bbc893bfffer51yVSXGAgIGhR",
+          "agent": "Sisyphus-Junior",
+          "category": "deep",
+          "updated_at": "2026-05-20T07:12:38.026Z",
+          "started_at": "2026-05-20T07:12:38.026Z",
+          "status": "running"
+        },
+        "final-wave:f3": {
+          "task_key": "final-wave:f3",
+          "task_label": "F3",
+          "task_title": "Real Manual QA — unspecified-high (+ playwright if UI verification needed)",
+          "session_id": "ses_1bbb9bb82fferGiouxZOATDSgL",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-20T07:30:24.173Z",
+          "status": "running",
+          "updated_at": "2026-05-20T07:30:56.254Z"
+        }
+      },
+      "ended_at": "2026-05-20T07:32:14.082Z",
+      "elapsed_ms": 6878564
+    },
+    "lab-completion-confirmation-20260520": {
+      "work_id": "lab-completion-confirmation-20260520",
+      "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\lab-completion-confirmation.md",
+      "plan_name": "lab-completion-confirmation",
+      "status": "completed",
+      "started_at": "2026-05-20T09:34:50.834Z",
+      "updated_at": "2026-05-20T14:11:56.224Z",
+      "session_ids": [
+        "ses_1bb431a63ffe2IJ0ZWO2GzYyVM"
+      ],
+      "session_origins": {
+        "ses_1bb431a63ffe2IJ0ZWO2GzYyVM": "direct"
+      },
+      "agent": "atlas",
+      "task_sessions": {
+        "todo:3": {
+          "task_key": "todo:3",
+          "task_label": "3",
+          "task_title": "Align stale lab tests with removed animation/safety-gate flow",
+          "session_id": "ses_1bb40ea86ffe7Q9wOi86jvVpV1",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-low",
+          "updated_at": "2026-05-20T09:43:58.288Z",
+          "started_at": "2026-05-20T09:43:58.288Z",
+          "status": "running"
+        },
+        "todo:1": {
+          "task_key": "todo:1",
+          "task_label": "1",
+          "task_title": "Storage completion-date contract",
+          "session_id": "ses_1bb23cf6affeVBjJ4xPOmlp26t",
           "agent": "Sisyphus-Junior",
           "category": "",
-          "updated_at": "2026-05-17T09:08:45.087Z",
-          "started_at": "2026-05-17T09:08:45.087Z",
+          "started_at": "2026-05-20T09:53:33.801Z",
+          "status": "running",
+          "updated_at": "2026-05-20T10:40:32.140Z"
+        },
+        "todo:2": {
+          "task_key": "todo:2",
+          "task_label": "2",
+          "task_title": "Lab modal completion footer",
+          "session_id": "ses_1ba8c8173ffeol6ZE8EHeVDLnp",
+          "agent": "Sisyphus-Junior",
+          "category": "visual-engineering",
+          "started_at": "2026-05-20T12:19:56.268Z",
+          "status": "running",
+          "updated_at": "2026-05-20T12:56:11.971Z"
+        },
+        "todo:4": {
+          "task_key": "todo:4",
+          "task_label": "4",
+          "task_title": "End-to-end lab confirmation verification",
+          "session_id": "ses_1ba88e5f5ffezLDkfsogoUPp9S",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "updated_at": "2026-05-20T13:14:19.223Z",
+          "started_at": "2026-05-20T13:14:19.223Z",
+          "status": "running"
+        },
+        "final-wave:f1": {
+          "task_key": "final-wave:f1",
+          "task_label": "F1",
+          "task_title": "Plan Compliance Audit — oracle",
+          "session_id": "ses_1ba4c1ea5ffeoIBghy35Iph76N",
+          "agent": "oracle",
+          "category": "",
+          "started_at": "2026-05-20T13:39:26.753Z",
+          "status": "running",
+          "updated_at": "2026-05-20T14:06:23.482Z"
+        },
+        "final-wave:f3": {
+          "task_key": "final-wave:f3",
+          "task_label": "F3",
+          "task_title": "Hands-on Playwright QA — unspecified-high",
+          "session_id": "ses_1ba4c1d6bffe487mvRq0Pri18j",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-20T13:40:29.409Z",
+          "status": "running",
+          "updated_at": "2026-05-20T14:07:41.585Z"
+        },
+        "final-wave:f2": {
+          "task_key": "final-wave:f2",
+          "task_label": "F2",
+          "task_title": "Code Quality Review — unspecified-high",
+          "session_id": "ses_1ba4c1dfbffeMpeBN83Iiz2jzc",
+          "agent": "Sisyphus-Junior",
+          "category": "unspecified-high",
+          "started_at": "2026-05-20T13:42:45.883Z",
+          "status": "running",
+          "updated_at": "2026-05-20T14:08:33.650Z"
+        },
+        "final-wave:f4": {
+          "task_key": "final-wave:f4",
+          "task_label": "F4",
+          "task_title": "Scope Fidelity Check — deep",
+          "session_id": "ses_1ba4c1d34ffeZPCc0c3vu3ev1T",
+          "agent": "Sisyphus-Junior",
+          "category": "deep",
+          "updated_at": "2026-05-20T14:08:35.047Z",
+          "started_at": "2026-05-20T14:08:35.047Z",
           "status": "running"
         }
       },
-      "ended_at": "2026-05-17T09:10:24.237Z",
-      "elapsed_ms": 16058182
+      "ended_at": "2026-05-20T14:11:56.224Z",
+      "elapsed_ms": 16625390
     }
   },
-  "ended_at": "2026-05-17T09:10:24.237Z",
-  "elapsed_ms": 16058182
+  "ended_at": null,
+  "elapsed_ms": null
 }

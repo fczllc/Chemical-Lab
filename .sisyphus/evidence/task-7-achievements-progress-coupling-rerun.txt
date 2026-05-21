@@ -1,0 +1,39 @@
+
+Running 11 tests using 2 workers
+
+  鉁?  2 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:17:3 鈥?Achievement progress coupling 鈥?manual review helper extracts a trimmed single curriculum tag (1.3m)
+  鉁?  1 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence (1.2m)
+  鉁?  4 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:122:3 鈥?Achievement progress coupling 鈥?completion button unlocks achievement and syncs progress (23.2s)
+  鉁?  5 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:150:3 鈥?Achievement progress coupling 鈥?completed learning segment persists after reload (23.2s)
+  鉁?  3 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:79:3 鈥?Achievement progress coupling 鈥?manual textbook achievement requires explicit completion (1.5m)
+  鉁?  6 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:203:3 鈥?Achievement progress coupling 鈥?manual topic progress is derived from unlocked achievements (10.5s)
+  鉁?  7 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:242:3 鈥?Achievement progress coupling 鈥?all manual review achievements expose progress rows (11.2s)
+  鉁?  9 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:292:3 鈥?Achievement progress coupling 鈥?all manual review achievement actions carry segment payload (10.5s)
+  鉁?  8 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:279:3 鈥?Achievement progress coupling 鈥?navigation to manual achievement action does not unlock without completion (16.9s)
+  鉁? 10 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:344:3 鈥?Achievement progress coupling 鈥?every achievement card has an operable action (10.3s)
+  鉁? 11 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:393:3 鈥?Achievement progress coupling 鈥?raw completedLearningSegments evidence does not inflate general progress (7.7s)
+
+
+  1) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence 
+
+    TimeoutError: page.reload: Timeout 60000ms exceeded.
+    Call log:
+    [2m  - waiting for navigation until "domcontentloaded"[22m
+    [2m    - navigated to "http://127.0.0.1:4173/"[22m
+
+
+      421 |
+      422 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+    > 423 |   await page.reload({ waitUntil: 'domcontentloaded' });
+          |              ^
+      424 | }
+      425 |
+      426 | async function seedStoredState(page: Page, progressPatch: Record<string, unknown>) {
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:423:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:32:5
+
+    Error Context: test-results\ui-achievements-progress-c-8887c--completed-segment-evidence-chromium\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence 
+  10 passed (3.3m)

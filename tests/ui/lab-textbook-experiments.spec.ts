@@ -3,6 +3,39 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const EVIDENCE_DIR = path.join(process.cwd(), '.sisyphus', 'evidence');
+const STORAGE_KEY = 'element-explorer-kids-state';
+const FIXED_COMPLETION_DATE = '2026-05-20';
+const FIXED_COMPLETION_ISO = `${FIXED_COMPLETION_DATE}T12:00:00`;
+
+const COMPLETION_FIXTURE = {
+  id: 'textbook-fixture-completion-confirmation-exp-001',
+  name: '确认完成实验流程',
+  description: '用于验证实验完成确认按钮和持久化日期。',
+  textbookContent: '学生阅读实验步骤后，点击确认完成实验，系统记录当天日期。',
+  reactants: ['H2O'],
+  products: ['H2O'],
+  equationText: 'H2O → H2O',
+  experimentId: 'textbook-fixture-completion-confirmation-exp-001-experiment',
+  safetyLevel: 'safe',
+  visualDescription: '确认完成后显示完成日期。',
+  steps: ['阅读实验说明。', '点击确认完成实验。'],
+  safetyNotes: ['保持桌面整洁'],
+  curriculumTags: ['grade9-completion-confirmation'],
+  difficulty: '初中',
+  unlockRequirements: { curriculumTags: [], safetyLevels: ['safe'], stageIds: [], minimumLearnedElements: 0, grade: '九年级', chapter: '确认实验' },
+  sourceVolumeId: 'test-fixture',
+  sourceReviewStatus: 'reviewed',
+  sourceReferences: []
+};
+
+const LEGACY_COMPLETION_FIXTURE = {
+  ...COMPLETION_FIXTURE,
+  id: 'textbook-fixture-completion-confirmation-legacy-exp-001',
+  name: '旧版完成记录实验',
+  description: '用于验证缺少日期的旧完成记录回退文案。',
+  textbookContent: '旧版数据只有完成实验 ID，没有完成日期。',
+  experimentId: 'textbook-fixture-completion-confirmation-legacy-exp-001-experiment'
+};
 
 test.describe('Lab textbook experiment content', () => {
   test.describe.configure({ mode: 'serial' });
@@ -289,138 +322,146 @@ test.describe('Lab textbook experiment content', () => {
     });
   });
 
-  test('dangerous reaction safety gate blocks launch without confirmation', async ({ page }) => {
-    await page.evaluate(async () => {
-      const { labExperiments } = await import('/src/data/index.js');
-      const dangerousReaction = {
-        id: 'textbook-fixture-dangerous-exp-001',
-        name: '危险演示实验',
-        description: '这是一个危险级别的演示实验，用于测试安全门控。',
-        textbookContent: '危险演示实验内容。该实验具有危险级别，必须先确认安全守则才能进入模拟视图。',
-        reactants: ['Na', 'H2O'],
-        products: ['NaOH', 'H2'],
-        equationText: '2Na + 2H2O → 2NaOH + H2↑',
-        experimentId: 'textbook-fixture-dangerous-exp-001-experiment',
-        safetyLevel: 'dangerous',
-        visualDescription: '剧烈反应，产生氢气。',
-        steps: ['取一小块钠。', '放入水中观察。'],
-        safetyNotes: ['佩戴护目镜', '远离明火'],
-        curriculumTags: [],
-        difficulty: '初中',
-        unlockRequirements: { curriculumTags: [], safetyLevels: ['dangerous'], stageIds: [], minimumLearnedElements: 0, grade: '九年级', chapter: '实验D-1' },
-        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
-        sourceReviewStatus: 'reviewed',
-        sourceReferences: []
-      };
-      labExperiments.push(dangerousReaction);
+  test('completion confirmation flow records date and preserves legacy fallback', async ({ page, context }) => {
+    const pageErrors: string[] = [];
+    const consoleErrors: string[] = [];
+
+    page.on('pageerror', (error) => {
+      pageErrors.push(error.message);
     });
+
+    page.on('console', (message) => {
+      if (message.type() === 'error') {
+        consoleErrors.push(message.text());
+      }
+    });
+
+    await context.addInitScript((fixedIso) => {
+      const fixedTime = new Date(fixedIso).getTime();
+      const RealDate = Date;
+
+      class FrozenDate extends RealDate {
+        constructor(...args) {
+          if (args.length === 0) {
+            super(fixedTime);
+          } else {
+            super(...args);
+          }
+        }
+
+        static now() {
+          return fixedTime;
+        }
+      }
+
+      FrozenDate.UTC = RealDate.UTC;
+      FrozenDate.parse = RealDate.parse;
+      FrozenDate.prototype = RealDate.prototype;
+      window.Date = FrozenDate;
+    }, FIXED_COMPLETION_ISO);
 
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
+    await injectCompletionFixtures(page);
 
-    const card = page.locator('.lab-item-card', { hasText: '危险演示实验' });
-    await expect(card).toBeVisible({ timeout: 10000 });
-    await card.locator('button[data-reaction-open]').click();
+    await openLabFixture(page, COMPLETION_FIXTURE.id);
+    const modal = page.locator('.lab-detail-modal');
+    await expect(modal).toBeVisible({ timeout: 10000 });
 
-    const detailModal = page.locator('.lab-detail-modal');
-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+    const safetyButton = modal.locator('button[data-lab-open-safety]');
+    await expect(safetyButton).toBeVisible();
+    await expect(safetyButton).toHaveText('安全守则');
 
-    // The start button on detail view should be disabled because safety is not confirmed
-    const startButton = detailModal.locator('button[data-lab-start]');
-    await expect(startButton).toBeVisible();
-    await expect(startButton).toBeDisabled();
+    const confirmButton = modal.locator('button[data-lab-confirm-complete]');
+    await expect(confirmButton).toBeVisible();
+    await expect(confirmButton).toHaveText('确认完成实验');
+    await expect(modal.locator('input[data-safety-confirm]')).toHaveCount(0);
+    await expect(modal).not.toContainText('我已阅读');
+    await expect(modal).not.toContainText('安全确认');
 
-    // Open safety view
-    await detailModal.locator('button[data-lab-open-safety]').click();
+    const buttonVisibleBefore = await confirmButton.isVisible();
+    const oldCheckboxCount = await modal.locator('input[data-safety-confirm]').count();
+    const safetyButtonVisible = await safetyButton.isVisible();
 
-    // In safety view, launch button should also be disabled without confirmation
-    const launchButton = detailModal.locator('button[data-launch-simulation]');
-    await expect(launchButton).toBeVisible();
-    await expect(launchButton).toBeDisabled();
+    await confirmButton.click();
 
-    // Go back to detail and confirm safety
-    await detailModal.locator('button[data-lab-back]').click();
-    const confirmCheckbox = detailModal.locator('input[data-safety-confirm]');
-    await expect(confirmCheckbox).toBeVisible();
-    await confirmCheckbox.check();
-
-    // Now the start button should be enabled
-    await expect(detailModal.locator('button[data-lab-start]')).toBeEnabled();
-
-    // Go to safety view again; launch should now be enabled
-    await detailModal.locator('button[data-lab-open-safety]').click();
-    await expect(detailModal.locator('button[data-launch-simulation]')).toBeEnabled();
-
-    await writeEvidence('task-6-dangerous-safety-gate.json', {
-      detailStartDisabledInitially: true,
-      safetyLaunchDisabledInitially: true,
-      safetyLaunchEnabledAfterConfirm: true
+    const confirmedStatus = modal.locator('[data-testid="lab-completion-confirmed"]');
+    await expect(confirmedStatus).toHaveText(`确认完成：${FIXED_COMPLETION_DATE}`);
+    await expect(modal.locator('button[data-lab-confirm-complete]')).toHaveCount(0);
+    const completedFixtureCard = page.locator('.lab-item-card', { has: page.locator(`button[data-reaction-open="${COMPLETION_FIXTURE.id}"]`) });
+    const completedFixtureBadge = completedFixtureCard.locator('.lab-complete-badge');
+    await expect(completedFixtureBadge).toHaveClass(/is-complete/);
+    await expect(completedFixtureBadge).toHaveAttribute('title', '已完成');
+    const confirmedText = await confirmedStatus.textContent();
+    const cardBadgeCompleteAfterClick = await completedFixtureBadge.evaluate((badge) => {
+      return badge.classList.contains('is-complete') || badge.getAttribute('title') === '已完成';
     });
-  });
+    const stateAfterConfirm = await readCompletionState(page, COMPLETION_FIXTURE.experimentId);
 
-  test('simulation completion shows result view in detail modal', async ({ page }) => {
-    await page.evaluate(async () => {
-      const { labExperiments } = await import('/src/data/index.js');
-      const safeReaction = {
-        id: 'textbook-fixture-safe-simulation-001',
-        name: '快速安全实验',
-        description: '一个安全级别的快速实验，用于测试模拟完成后的结果视图。',
-        textbookContent: '快速安全实验内容。模拟完成后应显示结果视图。',
-        reactants: ['H2', 'O2'],
-        products: ['H2O'],
-        equationText: '2H2 + O2 → 2H2O',
-        experimentId: 'textbook-fixture-safe-simulation-001-experiment',
-        safetyLevel: 'safe',
-        visualDescription: '淡蓝色火焰，生成水。',
-        steps: ['准备氢气和氧气。', '点燃观察。'],
-        safetyNotes: [],
-        curriculumTags: [],
-        difficulty: '初中',
-        unlockRequirements: { curriculumTags: [], safetyLevels: ['safe'], stageIds: [], minimumLearnedElements: 0, grade: '九年级', chapter: '实验S-1' },
-        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
-        sourceReviewStatus: 'reviewed',
-        sourceReferences: []
-      };
-      labExperiments.push(safeReaction);
-    });
+    await modal.locator('button[data-lab-back]').click();
+    await expect(modal).toBeHidden({ timeout: 10000 });
 
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
+    await injectCompletionFixtures(page);
 
-    const card = page.locator('.lab-item-card', { hasText: '快速安全实验' });
-    await expect(card).toBeVisible({ timeout: 10000 });
-    await card.locator('button[data-reaction-open]').click();
+    await openLabFixture(page, COMPLETION_FIXTURE.id);
+    const reloadedModal = page.locator('.lab-detail-modal');
+    await expect(reloadedModal).toBeVisible({ timeout: 10000 });
+    const reloadedStatus = reloadedModal.locator('[data-testid="lab-completion-confirmed"]');
+    await expect(reloadedStatus).toHaveText(`确认完成：${FIXED_COMPLETION_DATE}`);
+    await expect(reloadedModal.locator('button[data-lab-confirm-complete]')).toHaveCount(0);
+    const buttonVisibleAfterReload = await reloadedModal.locator('button[data-lab-confirm-complete]').isVisible().catch(() => false);
+    const persistedDate = await page.evaluate((experimentId) => window.appState.experimentCompletionDates[experimentId] ?? null, COMPLETION_FIXTURE.experimentId);
 
-    const detailModal = page.locator('.lab-detail-modal');
-    await expect(detailModal).toBeVisible({ timeout: 10000 });
+    await reloadedModal.locator('button[data-lab-back]').click();
+    await expect(reloadedModal).toBeHidden({ timeout: 10000 });
 
-    // Click start (goes to safety view first)
-    const startButton = detailModal.locator('button[data-lab-start]');
-    await expect(startButton).toBeVisible();
-    await startButton.click();
+    await seedLegacyCompletedExperiment(page, LEGACY_COMPLETION_FIXTURE.experimentId);
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+    await injectCompletionFixtures(page);
 
-    // From safety view, launch the actual simulation
-    const launchButton = detailModal.locator('button[data-launch-simulation]');
-    await expect(launchButton).toBeVisible();
-    await launchButton.click();
+    await openLabFixture(page, LEGACY_COMPLETION_FIXTURE.id);
+    const legacyModal = page.locator('.lab-detail-modal');
+    await expect(legacyModal).toBeVisible({ timeout: 10000 });
+    const legacyStatus = legacyModal.locator('[data-testid="lab-completion-confirmed"]');
+    await expect(legacyStatus).toHaveText('确认完成：已完成');
+    await expect(legacyModal.locator('button[data-lab-confirm-complete]')).toHaveCount(0);
+    await expect(legacyModal.locator('input[data-safety-confirm]')).toHaveCount(0);
+    await expect(legacyModal).not.toContainText('我已阅读');
+    await expect(legacyModal).not.toContainText('安全确认');
+    const legacyText = await legacyStatus.textContent();
 
-    // Wait for simulation modal to appear
-    const simBackdrop = page.locator('.lab-modal-backdrop');
-    await expect(simBackdrop).toBeVisible({ timeout: 10000 });
+    expect(pageErrors).toEqual([]);
+    expect(consoleErrors).toEqual([]);
 
-    // Wait for simulation modal to disappear (indicates completion)
-    await expect(simBackdrop).toBeHidden({ timeout: 25000 });
-
-    // Wait for simulation to complete and result view to appear in detail modal
-    // The detail modal is recreated after simulation, so re-query
-    const resultModal = page.locator('.lab-detail-modal');
-    await expect(resultModal).toBeVisible({ timeout: 5000 });
-    await expect(resultModal.locator('.hud-kicker', { hasText: 'EXPERIMENT LOGGED' })).toBeVisible({ timeout: 5000 });
-
-    await writeEvidence('task-6-simulation-result-view.json', {
-      resultViewVisible: true
+    await writeEvidence('task-4-lab-confirmation-flow.json', {
+      buttonVisibleBefore,
+      confirmedText,
+      persistedDate,
+      stateAfterConfirm,
+      buttonVisibleAfterReload,
+      legacyText,
+      oldCheckboxCount,
+      safetyButtonVisible,
+      pageErrors,
+      consoleErrors,
+      cardBadgeCompleteAfterClick
     });
   });
+
+    // Dangerous reaction safety gate blocks launch without confirmation - animations removed
+    // The safety confirmation checkbox is now removed, completion is handled in detail modal
+    test('dangerous reaction safety gate blocks launch without confirmation', async ({ page }) => {
+      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+    });
+
+    test('simulation completion shows result view in detail modal', async ({ page }) => {
+      test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
+    });
 });
 
 async function waitForAppReady(page) {
@@ -442,6 +483,68 @@ async function waitForAppReady(page) {
       return await page.locator('.element-cell').count();
     }, { timeout: 25000, intervals: [100, 200, 500, 1000] }).toBeGreaterThanOrEqual(118);
   }
+}
+
+async function injectCompletionFixtures(page) {
+  await page.evaluate(({ completionFixture, legacyFixture }) => {
+    return import('/src/data/index.js').then(({ labExperiments }) => {
+      for (const fixture of [completionFixture, legacyFixture]) {
+        const existingIndex = labExperiments.findIndex((experiment) => experiment.id === fixture.id);
+        if (existingIndex >= 0) {
+          labExperiments.splice(existingIndex, 1, fixture);
+        } else {
+          labExperiments.push(fixture);
+        }
+      }
+
+      if (window.location.hash === '#/lab') {
+        window.dispatchEvent(new CustomEvent('pagechange', { detail: { section: 'lab' } }));
+      }
+    });
+  }, {
+    completionFixture: COMPLETION_FIXTURE,
+    legacyFixture: LEGACY_COMPLETION_FIXTURE
+  });
+}
+
+async function openLabFixture(page, fixtureId: string) {
+  const openButton = page.locator(`button[data-reaction-open="${fixtureId}"]`);
+  await expect(openButton).toBeVisible({ timeout: 10000 });
+  await openButton.scrollIntoViewIfNeeded();
+  await openButton.click();
+}
+
+async function readCompletionState(page, experimentId: string) {
+  return await page.evaluate((id) => {
+    return {
+      completed: window.appState.completedExperiments.has(id),
+      completionDate: window.appState.experimentCompletionDates[id] ?? null,
+      storedEnvelope: JSON.parse(window.localStorage.getItem('element-explorer-kids-state') || 'null')
+    };
+  }, experimentId);
+}
+
+async function seedLegacyCompletedExperiment(page, experimentId: string) {
+  await page.context().addInitScript(({ key, id }) => {
+    const rawEnvelope = window.localStorage.getItem(key);
+    const envelope = rawEnvelope ? JSON.parse(rawEnvelope) : { version: 'v3', data: {} };
+    const data = envelope.data || {};
+    const completedExperiments = Array.isArray(data.completedExperiments)
+      ? [...new Set([...data.completedExperiments, id])]
+      : [id];
+    const experimentCompletionDates = { ...(data.experimentCompletionDates || {}) };
+    delete experimentCompletionDates[id];
+
+    window.localStorage.setItem(key, JSON.stringify({
+      ...envelope,
+      version: 'v3',
+      data: {
+        ...data,
+        completedExperiments,
+        experimentCompletionDates
+      }
+    }));
+  }, { key: STORAGE_KEY, id: experimentId });
 }
 
 async function writeEvidence(fileName: string, payload: unknown) {

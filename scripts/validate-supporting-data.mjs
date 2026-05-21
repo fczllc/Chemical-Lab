@@ -337,6 +337,10 @@ for (const achievement of safeAchievementsData) {
         errors.push(`成就 ${achievement.id} 引用了不存在的游戏 ID：${achievement.condition.gameKey}`);
       }
     }
+
+    if (achievement.condition.type === 'manualReviewAfterPromotion') {
+      validateManualReviewAfterPromotionAchievement(achievement, `成就 ${achievement.id}`);
+    }
   } else {
     errors.push(`成就 ${achievement.id} 的条件格式非法`);
   }
@@ -1156,6 +1160,46 @@ function validateRequiredCurriculumMetadata(record, label) {
   const referenceCount = validateRequiredCurriculumTags(record.curriculumTags, `${label}.curriculumTags`);
   validateDifficulty(record.difficulty, `${label}.difficulty`);
   return referenceCount;
+}
+
+function validateManualReviewAfterPromotionAchievement(achievement, label) {
+  const tags = Array.isArray(achievement.curriculumTags) ? achievement.curriculumTags : [];
+  if (tags.length !== 1) {
+    errors.push(`${label}.curriculumTags 必须恰好包含 1 个 manual learning segment`);
+  } else {
+    validateRequiredText(tags[0], `${label}.curriculumTags[0]`);
+  }
+
+  if (achievement.sourceReviewStatus !== 'reviewed') {
+    errors.push(`${label}.sourceReviewStatus 必须为 reviewed`);
+  }
+
+  if (!Array.isArray(achievement.sourceReferences) || achievement.sourceReferences.length === 0) {
+    errors.push(`${label}.sourceReferences 必须至少包含 1 条完整来源记录`);
+    return;
+  }
+
+  const requiredReferenceFields = [
+    'sourceVolumeId',
+    'volumeId',
+    'sourcePath',
+    'sourceHeading',
+    'lineRange',
+    'sourceHash',
+    'candidateId',
+    'reviewedBy',
+    'reviewedAt',
+    'note'
+  ];
+
+  const hasCompleteReference = achievement.sourceReferences.some((reference) => (
+    isRecord(reference)
+    && requiredReferenceFields.every((fieldName) => typeof reference[fieldName] === 'string' && reference[fieldName].trim())
+  ));
+
+  if (!hasCompleteReference) {
+    errors.push(`${label}.sourceReferences 必须至少包含 1 条完整来源记录：${requiredReferenceFields.join(', ')}`);
+  }
 }
 
 function isReactionGameUsableCandidate(reaction, reactants, products) {

@@ -4,9 +4,11 @@ import { curriculumTags, learningPath, labExperiments as importedLabExperiments 
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
+  getExperimentCompletionDate,
   getExperimentTitleOverride,
   getLearnedElements,
   getSelectedElement,
+  markExperimentCompleted,
   setExperimentTitleOverride
 } from './storage.js';
 import { formulaHTML, equationHTML, mixedProseFormulaHTML, plainChemText } from './chemNotation.js';
@@ -302,10 +304,15 @@ function bindStageEvents(modalContent, activeReaction, isCompleted) {
     updateDetailModalContent(activeReaction, isCompleted);
   });
 
-  const confirmationToggle = modalContent.querySelector('[data-safety-confirm]');
+  const confirmBtn = modalContent.querySelector('[data-lab-confirm-complete]');
 
-  confirmationToggle?.addEventListener('change', () => {
-    safetyConfirmed = confirmationToggle.checked;
+  confirmBtn?.addEventListener('click', () => {
+    if (!activeReaction?.experimentId) return;
+    markExperimentCompleted(activeReaction.experimentId);
+    const freshCompleted = getCompletedExperiments();
+    const freshIsCompleted = freshCompleted.has(activeReaction.experimentId);
+    updateDetailModalContent(activeReaction, freshIsCompleted);
+    renderLabShell();
   });
 
   // Title editing events
@@ -673,12 +680,11 @@ function renderReactionDetail(experiment, isCompleted) {
           <strong>${renderProseContent(experiment.visualDescription)}</strong>
         </div>
       </div>
-      ${DANGEROUS_LEVELS.has(experiment.safetyLevel) ? `
-      <label class="lab-confirm-row">
-        <input type="checkbox" data-safety-confirm ${safetyConfirmed ? 'checked' : ''}>
-        <span>我已了解安全事项，并会按说明观察内容。</span>
-      </label>
-      ` : ''}
+      <div class="lab-completion-footer">
+        ${isCompleted
+          ? `<p class="lab-complete-confirmed" data-testid="lab-completion-confirmed">确认完成：${escapeAttr(getExperimentCompletionDate(experiment.experimentId) ?? '已完成')}</p>`
+          : `<button class="hud-action-btn hud-action-btn-primary lab-complete-confirm-btn" data-lab-confirm-complete>确认完成实验</button>`}
+      </div>
     </div>
   `;
 }

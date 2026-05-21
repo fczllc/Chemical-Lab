@@ -1,0 +1,33 @@
+
+Running 4 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once (13.9s)
+  鉁? 3 [chromium] 鈥?tests\ui\storage-migration.spec.ts:73:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 (23.6s)
+  鉁? 4 [chromium] 鈥?tests\ui\storage-migration.spec.ts:87:3 鈥?Storage migration compatibility 鈥?invalid persisted completedLearningSegments normalize to trimmed valid ids (17.1s)
+  鉁? 1 [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (1.6m)
+
+
+  1) [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+
+    [31mTest timeout of 90000ms exceeded.[39m
+
+    Error: page.reload: Test timeout of 90000ms exceeded.
+    Call log:
+    [2m  - waiting for navigation until "domcontentloaded"[22m
+    [2m    - navigated to "http://127.0.0.1:4173/"[22m
+
+
+      137 |     expect(afterConfirm.storedEnvelope.data.settings).toEqual(SEEDED_SETTINGS);
+      138 |
+    > 139 |     await page.reload({ waitUntil: 'domcontentloaded' });
+          |                ^
+      140 |     await waitForShellReady(page);
+      141 |     await page.getByTestId('settings-btn').click();
+      142 |
+        at D:\Chemical-Laboratory\tests\ui\settings-reset.spec.ts:139:16
+
+    Error Context: test-results\ui-settings-reset-Settings-aff26-hile-clearing-learning-data-chromium\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+  3 passed (1.6m)

@@ -108,7 +108,7 @@ Wave 5: Task 7 (final validators and polish)
 > Implementation + Test = ONE task. Never separate.
 > EVERY task MUST have: Agent Profile + Parallelization + QA Scenarios.
 
-- [ ] 1. Add failing Playwright and validator coverage for achievement-gated manual learning
+- [x] 1. Add failing Playwright and validator coverage for achievement-gated manual learning
 
   **What to do**: Create the test and validator expectations before implementation. Add `tests/ui/achievements-progress-coupling.spec.ts` with tests for: no unlock on navigation, explicit completion unlocks, every card has an action, raw segment evidence alone does not create manual progress. Extend `scripts/validate-supporting-data.mjs` so `manualReviewAfterPromotion` achievements require exactly one non-empty `curriculumTags` value, `sourceReviewStatus === 'reviewed'`, and at least one complete `sourceReferences` entry.
   **Must NOT do**: Do not implement production behavior in this task. Do not weaken existing validators. Do not use brittle selectors based on long generated IDs when a stable `data-testid` or `data-*` selector can be planned.
@@ -151,7 +151,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `test(progress): cover achievement gated learning completion` | Files: [`tests/ui/achievements-progress-coupling.spec.ts`, `scripts/validate-supporting-data.mjs`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 2. Add `completedLearningSegments` storage state and v3 migration
+- [x] 2. Add `completedLearningSegments` storage state and v3 migration
 
   **What to do**: Modify `src/modules/storage.js` to add `completedLearningSegments` to default state, serialization, migration, normalization, state snapshot, read-only `window.appState`, reset behavior, and exports. Change `SCHEMA_VERSION` from `v2` to `v3`. Add APIs: `getCompletedLearningSegments()` and `markLearningSegmentCompleted(segmentId, metadata = {})`. The marker must trim string IDs, reject blank/non-string IDs, be idempotent, append a Chinese-first activity entry, emit `statechange` with field `completedLearningSegments`, and emit event `learningsegmentcompleted` only on actual mutation. For Playwright direct storage API tests, add an explicit test-only hook such as `window.__elementExplorerTestHooks.storage.markLearningSegmentCompleted` in app bootstrap or use dynamic module import from the browser context; do not mutate `window.appState` directly.
   **Must NOT do**: Do not make storage unlock achievements directly. Do not count completed segments as progress here. Do not change `markElementLearned()` or the learned/collected mirroring contract.
@@ -195,7 +195,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `feat(storage): persist completed learning segments` | Files: [`src/modules/storage.js`, `tests/ui/storage-migration.spec.ts`, `tests/ui/settings-reset.spec.ts`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 3. Add achievement card action paths for every condition type
+- [x] 3. Add achievement card action paths for every condition type
 
   **What to do**: Modify `src/modules/achievements.js` so each rendered achievement card includes exactly one accessible action control. Add stable attributes: `data-achievement-id`, `data-achievement-action`, and `data-achievement-condition`. Use delegated click handling from the achievements grid. Map condition types to existing app sections: `learnedElements` → `periodic-table`, `completedExperiments` → `lab`, `quizAttempts`/`quizPerfectScore` → `games` or the app's existing quiz host, `gamePlays`/`gameScore` → `games`, `manualReviewAfterPromotion` → `progress` with a focus event or selected segment state. User-facing copy must be Chinese-first: examples `去学习元素`, `去实验室`, `去答题`, `去游戏`, `去学习`. Add HTML text escaping and attribute escaping helpers, or build action controls via DOM APIs, before inserting `achievement.id`, `condition.type`, `curriculumTags[0]`, `title`, `description`, and `unlockText` into `innerHTML` or attributes.
   **Must NOT do**: Do not unlock achievements directly from card action clicks. Do not expose `manualReviewAfterPromotion` as visible copy. Do not add multiple action buttons per card.
@@ -238,7 +238,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `feat(achievements): add unlock action paths` | Files: [`src/modules/achievements.js`, `src/styles/achievements.css`, `tests/ui/achievements-progress-coupling.spec.ts`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 4. Support `manualReviewAfterPromotion` achievement evaluation
+- [x] 4. Support `manualReviewAfterPromotion` achievement evaluation
 
   **What to do**: Modify `src/modules/achievements.js` so condition evaluation can inspect the full achievement object, not only `achievement.condition`. Change `evaluateAchievements()` to call `matchesCondition(achievement)` or `matchesCondition(achievement.condition, achievement)`. Import `getCompletedLearningSegments()` from storage. Implement manual-review logic: return true only when `achievement.condition.type === 'manualReviewAfterPromotion'`, `achievement.sourceReviewStatus === 'reviewed'`, `achievement.curriculumTags` has exactly one non-empty string, and `getCompletedLearningSegments().has(achievement.curriculumTags[0])`. Export test hooks if needed: `__achievementsTestHooks = { getLearningSegmentIdForAchievement, matchesCondition }`.
   **Must NOT do**: Do not unlock manual achievements based only on `sourceReviewStatus`. Do not treat multiple curriculum tags as “any tag completes”; invalid metadata must not unlock. Do not unlock from storage APIs directly.
@@ -279,7 +279,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `feat(achievements): unlock reviewed learning segments` | Files: [`src/modules/achievements.js`, `tests/ui/achievements-progress-coupling.spec.ts`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 5. Add progress-page manual learning segment UI and achievement-derived progress coupling
+- [x] 5. Add progress-page manual learning segment UI and achievement-derived progress coupling
 
   **What to do**: Modify `src/modules/progress.js` to render lightweight manual learning segment rows/cards for curriculum topics backed by `manualReviewAfterPromotion` achievements. Add imports for `markLearningSegmentCompleted()` and `getCompletedLearningSegments()`. Add helper maps from curriculum tag → manual achievement. In `computeTopicMastery()`, separate manual display completion from stage-path completion: add explicit fields such as `manualAchievementId`, `manualCompleted`, `displayCompleted`, and `stagePathCompleted`. Manual achievement unlock may set `manualCompleted: true` and `displayCompleted: true` for the topic row, but `stagePathCompleted` must remain based only on existing non-manual learned element / quiz / experiment activity completion. Update `computeStageCurriculum()` and `getStageStates()` to use `stagePathCompleted` for `completedCount`, `hasCurriculumCompletion`, stage completion, and stage unlocking. Raw `completedLearningSegments` may control button state but must not mark progress complete. Add delegated button handling for `[data-learning-segment-complete]` that calls `markLearningSegmentCompleted(segmentId)` and then waits for the subsequent `achievementunlocked` or `statechange` evaluation cycle before rendering the segment as progress-complete. Add focus handling from achievement card action to progress page via an event or module-level `focusedLearningSegmentId`. Safely escape or DOM-build all newly rendered source headings, display paths, curriculum tags, line ranges, and source volume IDs.
   **Must NOT do**: Do not create a full textbook reader. Do not count raw segment evidence as progress. Do not automatically call `markLearningSegmentCompleted()` on render.
@@ -328,7 +328,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `feat(progress): complete textbook learning segments` | Files: [`src/modules/progress.js`, `src/styles/achievements.css`, `tests/ui/achievements-progress-coupling.spec.ts`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 6. Harden persistence, reset, and reload behavior for completed learning segments
+- [x] 6. Harden persistence, reset, and reload behavior for completed learning segments
 
   **What to do**: Complete regression coverage for schema `v3`, reload persistence, corrupted/invalid `completedLearningSegments`, and reset semantics. Update fixtures if needed under `tests/fixtures/` so old `v0`/`v1`/`v2` payloads hydrate safely. Ensure debounced save timing is handled in Playwright tests by polling localStorage after completion. Add or update assertions in `settings-reset.spec.ts`, `storage-migration.spec.ts`, and `achievements-progress-coupling.spec.ts`.
   **Must NOT do**: Do not preserve completed learning segments after `resetProgress()` or `resetAll()`. Do not change settings preservation behavior in progress reset. Do not add sleeps where polling is available.
@@ -369,7 +369,7 @@ Wave 5: Task 7 (final validators and polish)
 
   **Commit**: YES | Message: `test(storage): cover v3 migration and reset` | Files: [`tests/ui/storage-migration.spec.ts`, `tests/ui/settings-reset.spec.ts`, `tests/ui/achievements-progress-coupling.spec.ts`, `tests/fixtures/*`] | Evidence produced but NOT staged/committed unless project convention explicitly requires evidence artifacts.
 
-- [ ] 7. Final data validation, style polish, and full safe verification
+- [x] 7. Final data validation, style polish, and full safe verification
 
   **What to do**: Finish any styling needed for achievement action buttons and progress learning segment rows. Ensure Chinese-first copy is polished and no raw internal condition names appear in visible UI. Run data validators and full safe validation. Fix only issues directly caused by this change. Produce final evidence files with command outputs.
   **Must NOT do**: Do not introduce broad visual redesign. Do not rename generated achievement IDs. Do not edit unrelated datasets or files.
@@ -416,7 +416,7 @@ Wave 5: Task 7 (final validators and polish)
 > 4 review agents run in PARALLEL. ALL must APPROVE. Present consolidated results to user and get explicit "okay" before completing.
 > **Do NOT auto-proceed after verification. Wait for user's explicit approval before marking work complete.**
 > **Never mark F1-F4 as checked before getting user's okay.** Rejection or user feedback -> fix -> re-run -> present again -> wait for okay.
-- [ ] F1. Plan Compliance Audit — oracle
+- [x] F1. Plan Compliance Audit — oracle
 
   **Agent Profile**: `oracle` - read-only reasoning audit.
   **Parallelization**: Can Parallel: YES | Final Verification | Blocks: [user approval] | Blocked By: [1, 2, 3, 4, 5, 6, 7]
@@ -434,7 +434,7 @@ Wave 5: Task 7 (final validators and polish)
     Evidence: .sisyphus/evidence/f1-plan-compliance.md
   ```
 
-- [ ] F2. Code Quality Review — unspecified-high
+- [x] F2. Code Quality Review — unspecified-high
 
   **Agent Profile**: `unspecified-high` - code quality and maintainability review.
   **Parallelization**: Can Parallel: YES | Final Verification | Blocks: [user approval] | Blocked By: [1, 2, 3, 4, 5, 6, 7]
@@ -452,7 +452,7 @@ Wave 5: Task 7 (final validators and polish)
     Evidence: .sisyphus/evidence/f2-code-quality.md
   ```
 
-- [ ] F3. Real Manual QA — unspecified-high (+ playwright)
+- [x] F3. Real Manual QA — unspecified-high (+ playwright)
 
   **Agent Profile**: `unspecified-high` with Playwright/browser tooling - hands-on QA.
   **Parallelization**: Can Parallel: YES | Final Verification | Blocks: [user approval] | Blocked By: [1, 2, 3, 4, 5, 6, 7]
@@ -470,7 +470,7 @@ Wave 5: Task 7 (final validators and polish)
     Evidence: .sisyphus/evidence/f3-real-manual-qa.json
   ```
 
-- [ ] F4. Scope Fidelity Check — deep
+- [x] F4. Scope Fidelity Check — deep
 
   **Agent Profile**: `deep` - scope and product-fidelity review.
   **Parallelization**: Can Parallel: YES | Final Verification | Blocks: [user approval] | Blocked By: [1, 2, 3, 4, 5, 6, 7]

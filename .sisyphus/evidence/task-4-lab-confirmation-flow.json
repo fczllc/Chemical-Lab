@@ -1,0 +1,72 @@
+{
+  "buttonVisibleBefore": true,
+  "confirmedText": "确认完成：2026-05-20",
+  "persistedDate": "2026-05-20",
+  "stateAfterConfirm": {
+    "completed": true,
+    "completionDate": "2026-05-20",
+    "storedEnvelope": {
+      "version": "v3",
+      "timestamp": "2026-05-20T14:05:43.943Z",
+      "data": {
+        "currentElement": null,
+        "compareList": [],
+        "learnedElements": [],
+        "collectedElements": [],
+        "quizScores": [],
+        "completedExperiments": [
+          "textbook-fixture-completion-confirmation-exp-001-experiment"
+        ],
+        "completedLearningSegments": [],
+        "experimentTitleOverrides": {},
+        "experimentCompletionDates": {
+          "textbook-fixture-completion-confirmation-exp-001-experiment": "2026-05-20"
+        },
+        "unlockedAchievements": [
+          "achievement-first-experiment"
+        ],
+        "achievementDates": {
+          "achievement-first-experiment": "2026-05-20T14:05:39.081Z"
+        },
+        "gameScores": {},
+        "gamePlays": {},
+        "activityLog": [
+          {
+            "id": "activity-1779285939081-dug4b1",
+            "type": "achievementunlocked",
+            "title": "解锁了新成就",
+            "description": "成就 achievement-first-experiment 已收入成就中心。",
+            "timestamp": "2026-05-20T14:05:39.081Z",
+            "meta": {
+              "achievementId": "achievement-first-experiment",
+              "unlockedAt": "2026-05-20T14:05:39.081Z"
+            }
+          },
+          {
+            "id": "activity-1779285939080-z9xhhn",
+            "type": "experimentcompleted",
+            "title": "完成了一项实验",
+            "description": "实验 textbook-fixture-completion-confirmation-exp-001-experiment 已写入完成记录。",
+            "timestamp": "2026-05-20T14:05:39.080Z",
+            "meta": {
+              "experimentId": "textbook-fixture-completion-confirmation-exp-001-experiment"
+            }
+          }
+        ],
+        "settings": {
+          "performanceMode": "normal",
+          "particleDensity": "medium",
+          "soundEnabled": false,
+          "difficulty": "normal"
+        }
+      }
+    }
+  },
+  "buttonVisibleAfterReload": false,
+  "legacyText": "确认完成：已完成",
+  "oldCheckboxCount": 0,
+  "safetyButtonVisible": true,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "cardBadgeCompleteAfterClick": true
+}

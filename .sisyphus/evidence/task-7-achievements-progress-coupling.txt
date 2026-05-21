@@ -1,0 +1,16 @@
+
+Running 11 tests using 2 workers
+
+  鉁?  1 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:17:3 鈥?Achievement progress coupling 鈥?manual review helper extracts a trimmed single curriculum tag (15.3s)
+  鉁?  2 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence (22.2s)
+  鉁?  3 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:79:3 鈥?Achievement progress coupling 鈥?manual textbook achievement requires explicit completion (57.9s)
+  鉁?  4 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:122:3 鈥?Achievement progress coupling 鈥?completion button unlocks achievement and syncs progress (1.0m)
+  鉁?  6 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:203:3 鈥?Achievement progress coupling 鈥?manual topic progress is derived from unlocked achievements (12.1s)
+  鉁?  5 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:150:3 鈥?Achievement progress coupling 鈥?completed learning segment persists after reload (25.5s)
+  鉁?  7 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:242:3 鈥?Achievement progress coupling 鈥?all manual review achievements expose progress rows (9.8s)
+  鉁?  8 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:279:3 鈥?Achievement progress coupling 鈥?navigation to manual achievement action does not unlock without completion (14.4s)
+  鉁?  9 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:292:3 鈥?Achievement progress coupling 鈥?all manual review achievement actions carry segment payload (9.0s)
+  鉁? 10 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:344:3 鈥?Achievement progress coupling 鈥?every achievement card has an operable action (8.4s)
+  鉁? 11 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:393:3 鈥?Achievement progress coupling 鈥?raw completedLearningSegments evidence does not inflate general progress (6.6s)
+
+  11 passed (2.1m)

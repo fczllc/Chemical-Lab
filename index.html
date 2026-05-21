@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>元素探索者 - Element Explorer</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" as="fetch" href="/animations/d4980_cat360.json" type="application/json" crossorigin>
   <link rel="stylesheet" href="/src/styles/base.css">
   <link rel="stylesheet" href="/src/styles/layout.css">
   <link rel="stylesheet" href="/src/styles/periodic-table.css">
@@ -311,8 +312,8 @@
 
   <!-- 全局加载指示器 -->
   <div id="global-loader" class="global-loader">
-    <div class="loader-spinner"></div>
-    <span class="loader-text">加载中...</span>
+    <div class="loader-lottie" data-loader-lottie aria-hidden="true"></div>
+    <span class="loader-text">打滚加载中...</span>
   </div>
 
   <!-- 设置面板 -->

@@ -1,0 +1,2 @@
+2026-05-20T00:00:00+00:00 - Task 1 implementation: experiment achievements are maintained in both src/data/achievementsData.json and src/data/achievementsData.js; replacing the two-record block with five milestones [1,5,20,50,92] keeps the mirror aligned and removes stale '完成全部 5 个实验' copy.
+2026-05-20T14:56:43.1427342+08:00 - Task 2 implementation: src/modules/progress.js now imports labExperiments from ../data/index.js and derives TOTAL_EXPERIMENTS from labExperiments.length, so the progress denominator follows the canonical 92 lab records instead of the stale hardcoded 5.

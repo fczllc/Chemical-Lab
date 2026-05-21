@@ -1,0 +1,131 @@
+{
+  "VERDICT": "APPROVE",
+  "timestamp": "2026-05-20T02:02:46.9879204Z",
+  "plan": "achievement-progress-unlock-paths",
+  "task": "F3. Real Manual QA",
+  "achievementId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45",
+  "segmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+  "verification": {
+    "focusedTestCommand": "npx playwright test tests/ui/achievements-progress-coupling.spec.ts",
+    "focusedTestResult": "12 passed (1.3m)",
+    "manualServer": "http://127.0.0.1:5173/",
+    "manualRunTimestamp": "2026-05-20T02:01:21.590Z",
+    "manualBrowser": "Playwright MCP new isolated browser context, viewport 1440x900",
+    "consoleMessages": []
+  },
+  "manualFlow": {
+    "freshContextStartedEmpty": true,
+    "before": {
+      "route": "#/achievements",
+      "cardClass": "achievement-card is-locked",
+      "cardStatus": "未解锁",
+      "actionText": "去学习",
+      "actionSegmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+      "actionCondition": "manualReviewAfterPromotion",
+      "rowText": "rj-chemistry-g12-selective-3-organic-2019 · L1-5 化学 rj-chemistry-g12-selective-3-organic-2019 / 化学 / L1-5 课程标签：knowledge-topic-0001-source-section-l1-l5-bd27b23b45 成就：完成“化学”学习草稿 未开始 完成学习",
+      "completionButtonText": "完成学习",
+      "completionButtonDisabled": false,
+      "completedLearningSegments": [],
+      "unlockedAchievements": [],
+      "storedCompletedLearningSegments": [],
+      "storedUnlockedAchievements": [],
+      "visibleCopy": {
+        "containsGoLearn": true,
+        "containsCompletionButtonCopy": true,
+        "containsNotStartedCopy": true,
+        "containsLockedCopy": true,
+        "containsInternalCondition": false
+      }
+    },
+    "afterNavigationOnly": {
+      "route": "#/progress",
+      "cardClass": "achievement-card is-locked",
+      "rowClass": "progress-manual-segment-row is-focused",
+      "rowText": "rj-chemistry-g12-selective-3-organic-2019 · L1-5 化学 rj-chemistry-g12-selective-3-organic-2019 / 化学 / L1-5 课程标签：knowledge-topic-0001-source-section-l1-l5-bd27b23b45 成就：完成“化学”学习草稿 未开始 完成学习",
+      "completionButtonText": "完成学习",
+      "completionButtonDisabled": false,
+      "completedLearningSegments": [],
+      "unlockedAchievements": [],
+      "storedCompletedLearningSegments": [],
+      "storedUnlockedAchievements": [],
+      "visibleCopy": {
+        "containsCompletionButtonCopy": true,
+        "containsNotStartedCopy": true,
+        "containsInternalCondition": false
+      }
+    },
+    "afterExplicitCompletion": {
+      "route": "#/progress",
+      "cardClass": "achievement-card is-unlocked",
+      "rowClass": "progress-manual-segment-row is-complete is-focused",
+      "rowText": "rj-chemistry-g12-selective-3-organic-2019 · L1-5 化学 rj-chemistry-g12-selective-3-organic-2019 / 化学 / L1-5 课程标签：knowledge-topic-0001-source-section-l1-l5-bd27b23b45 成就：完成“化学”学习草稿 已完成 完成学习",
+      "completionButtonText": "完成学习",
+      "completionButtonDisabled": true,
+      "completedLearningSegments": [
+        "knowledge-topic-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "unlockedAchievements": [
+        "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "storedVersion": "v3",
+      "storedCompletedLearningSegments": [
+        "knowledge-topic-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "storedUnlockedAchievements": [
+        "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "activityLogTypes": [
+        "achievementunlocked",
+        "learningsegmentcompleted"
+      ],
+      "visibleCopy": {
+        "containsCompletedCopy": true,
+        "containsCompletionButtonCopy": true,
+        "containsInternalCondition": false
+      }
+    },
+    "afterReturnToAchievements": {
+      "route": "#/achievements",
+      "cardClass": "achievement-card is-unlocked",
+      "cardStatus": "已解锁",
+      "actionText": "去学习",
+      "completedLearningSegments": [
+        "knowledge-topic-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "unlockedAchievements": [
+        "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45"
+      ],
+      "visibleCopy": {
+        "containsGoLearn": true,
+        "containsCompletedCopy": true,
+        "containsInternalCondition": false
+      }
+    }
+  },
+  "checks": {
+    "freshContextStartedEmpty": true,
+    "beforeCardLocked": true,
+    "beforeSegmentAbsent": true,
+    "beforeAchievementAbsent": true,
+    "actionHasExpectedSegment": true,
+    "actionHasManualCondition": true,
+    "actionNavigatedToProgress": true,
+    "navigationDidNotCompleteSegment": true,
+    "navigationDidNotUnlockAchievement": true,
+    "progressRowBeforeNotStarted": true,
+    "completionButtonAvailableBefore": true,
+    "completionAddedSegment": true,
+    "completionUnlockedAchievement": true,
+    "progressRowAfterCompleted": true,
+    "returnedCardUnlocked": true,
+    "chineseFirstCopyPresent": true,
+    "internalConditionHidden": true,
+    "storedSegmentPersisted": true,
+    "storedAchievementPersisted": true
+  },
+  "allChecksPassed": true,
+  "nonBlockingNotes": [
+    "Initial MCP page reused old localStorage; final manual QA used a brand-new browser context for fresh storage isolation.",
+    "The Playwright spec teardown stopped the shared 4173 preview server, so manual QA used an explicitly started Vite dev server at 5173."
+  ]
+}

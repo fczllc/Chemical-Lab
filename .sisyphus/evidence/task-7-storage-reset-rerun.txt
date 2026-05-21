@@ -1,0 +1,9 @@
+
+Running 4 tests using 2 workers
+
+  鉁? 2 [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once (12.0s)
+  鉁? 3 [chromium] 鈥?tests\ui\storage-migration.spec.ts:73:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 (10.9s)
+  鉁? 4 [chromium] 鈥?tests\ui\storage-migration.spec.ts:87:3 鈥?Storage migration compatibility 鈥?invalid persisted completedLearningSegments normalize to trimmed valid ids (9.6s)
+  鉁? 1 [chromium] 鈥?tests\ui\settings-reset.spec.ts:51:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (1.2m)
+
+  4 passed (1.2m)

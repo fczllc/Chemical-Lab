@@ -1,0 +1,4 @@
+valid
+element-explorer-kids@1.0.0 D:\Chemical-Laboratory
+`-- lottie-web@5.13.0
+

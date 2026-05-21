@@ -1,0 +1,39 @@
+{
+  "task": "Add failing Playwright and validator coverage for achievement-gated manual learning",
+  "generatedAt": "2026-05-19T19:18:29.8149550Z",
+  "commands": [
+    {
+      "command": "node scripts/validate-supporting-data.mjs",
+      "exitStatus": 0,
+      "outcome": "passed",
+      "summary": "Validator accepted current data after manualReviewAfterPromotion invariants; output recorded in task-1-supporting-validator.txt."
+    },
+    {
+      "command": "npx playwright test tests/ui/achievements-progress-coupling.spec.ts --grep \"manual textbook achievement requires explicit completion\"",
+      "exitStatus": 1,
+      "outcome": "expected failing test",
+      "failingTest": "Achievement progress coupling › manual textbook achievement requires explicit completion",
+      "failureReason": "Representative manual achievement action exists but does not carry data-learning-segment-id; the test has not yet reached the planned progress row / 完成学习 button assertions."
+    },
+    {
+      "command": "npx playwright test tests/ui/achievements-progress-coupling.spec.ts --grep \"every achievement card has an operable action\"",
+      "exitStatus": 0,
+      "outcome": "passed",
+      "summary": "All rendered achievement cards currently have exactly one button action with a target and label."
+    }
+  ],
+  "coverage": {
+    "representativeAchievementId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45",
+    "representativeSegmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+    "includesNoUnlockOnNavigation": true,
+    "includesExplicitCompletionUnlockPath": true,
+    "includesEveryAchievementCardAction": true,
+    "includesRawCompletedLearningSegmentsNotProgress": true,
+    "includesAllManualReviewAfterPromotionAchievements": true,
+    "manualReviewAfterPromotionCount": 1189
+  },
+  "notes": [
+    "Current production behavior is partially implemented from prior work, so the broad card action grep passed rather than failing.",
+    "Manual completion grep remains red for a valid product gap: action payload lacks the stable segment id required to route to a specific manual learning row."
+  ]
+}

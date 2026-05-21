@@ -1,0 +1,13 @@
+Root Cause:
+The initial implementation inadvertently removed critical storage module imports (`updateSettings`, `getUnlockedAchievements`) and introduced unrelated global test hooks, violating scope and functional requirements. Scope-creep storage imports were also present.
+
+Fix:
+- Restored the required `getUnlockedAchievements` and `updateSettings` imports from `./modules/storage.js`.
+- Removed the `window.__elementExplorerTestHooks` scope-creep additions.
+- Removed unrelated storage imports (`addQuizScore`, `getExperimentCompletionDate`, `markExperimentCompleted`, `markLearningSegmentCompleted`, `unlockAchievement`).
+- Added `loaderAnimation.destroy()` to `disposeApp()` for clean cleanup.
+- Verified that `lottie-web` integration remains intact.
+
+Verification:
+- Build: `npm run build` passed.
+- Tests: `npx playwright test tests/shell/global-loader.spec.ts` passed.
