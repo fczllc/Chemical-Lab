@@ -1,0 +1,72 @@
+Wave 1 Task 2 — Source File List (Diff + Untracked)
+Generated: 2026-05-27T12:00:00Z
+Source: D:\Chemical-Laboratory-worktrees\missing-textbook-learning-cards
+
+=== git diff --name-status (tracked modifications) ===
+M	scripts/textbook/extract-textbook.mjs
+M	scripts/textbook/generate-drafts.mjs
+M	scripts/textbook/promote-topic.mjs
+M	scripts/textbook/validate-batch-contract.mjs
+M	scripts/textbook/validate-promotion-manifest.mjs
+M	scripts/textbook/validate-runtime-integrity.mjs
+M	scripts/validate-lab-data-boundary.mjs
+M	scripts/validate-supporting-data.mjs
+M	src/data/achievementsData.json
+M	src/data/contentMeta.js
+M	src/data/index.js
+M	src/data/learningPath.json
+M	src/data/quizData.json
+M	src/data/reactions.json
+M	src/data/textbookIngestion/runtimeTargetMap.js
+M	src/modules/progress.js
+
+=== git ls-files --others --exclude-standard (untracked files) ===
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/achievement-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/draft-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/experiment-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/game-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/knowledge-topics.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/lab-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/learning-path-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/quiz-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/source-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/story-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/achievement-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/draft-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/experiment-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/game-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/knowledge-topics.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/lab-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/learning-path-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/quiz-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/source-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/story-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/achievement-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/draft-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/experiment-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/game-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/knowledge-topics.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/lab-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/learning-path-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/quiz-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/source-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/story-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/achievement-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/draft-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/experiment-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/game-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/knowledge-topics.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/lab-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/learning-path-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/quiz-candidates.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/source-inventory.json
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/story-candidates.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json
+tests/content/pep-learning-tabs.spec.js

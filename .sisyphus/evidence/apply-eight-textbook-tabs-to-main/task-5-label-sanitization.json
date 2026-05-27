@@ -1,0 +1,37 @@
+{
+  "expectedTabLabels": [
+    "八年级·全册",
+    "九年级·上册",
+    "九年级·下册",
+    "高一/10年级·必修第一册",
+    "高一/10年级·必修第二册",
+    "高二/11年级·选择性必修一·反应原理",
+    "高二/11年级·选择性必修二·物质结构与性质",
+    "高三/12年级·有机基础"
+  ],
+  "pepExactCounts": {
+    "高一/10年级·必修第一册": 213,
+    "高一/10年级·必修第二册": 263,
+    "高二/11年级·选择性必修一·反应原理": 198,
+    "高二/11年级·选择性必修二·物质结构与性质": 146
+  },
+  "bannedTerms": [
+    "pep-chemistry",
+    "人教版",
+    "2019",
+    "2024"
+  ],
+  "checks": {
+    "strictArrayEqualityPresent": true,
+    "noLooseToContainInLabelLoop": true,
+    "exactCountAssertionsPresent": true,
+    "bannedTermNegativeAssertionsPresent": true,
+    "noBannedTermsInExpectedLabels": true,
+    "tabCountAssertionPresent": true,
+    "legacyPositiveCountAssertionPresent": true,
+    "errorFailureAssertionsPresent": true,
+    "allSelectorsPresent": true
+  },
+  "allChecksPassed": true,
+  "timestamp": "2026-05-27T13:49:33.064Z"
+}

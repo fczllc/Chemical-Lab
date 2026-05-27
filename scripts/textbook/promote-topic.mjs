@@ -18,7 +18,11 @@ const knownTextbookBatches = new Map([
   ['rj-chemistry-grade9-2024-vol1', buildTextbookPaths('rj-chemistry-grade9-2024-vol1')],
   ['rj-chemistry-grade9-2024-vol2', buildTextbookPaths('rj-chemistry-grade9-2024-vol2')],
   ['rj-chemistry-g12-selective-3-organic-2019', buildTextbookPaths('rj-chemistry-g12-selective-3-organic-2019')],
-  ['rj-chemistry-grade8-54-2024-full', buildTextbookPaths('rj-chemistry-grade8-54-2024-full')]
+  ['rj-chemistry-grade8-54-2024-full', buildTextbookPaths('rj-chemistry-grade8-54-2024-full')],
+  ['pep-chemistry-g10-required-1', buildTextbookPaths('pep-chemistry-g10-required-1')],
+  ['pep-chemistry-g10-required-2', buildTextbookPaths('pep-chemistry-g10-required-2')],
+  ['pep-chemistry-g11-selective-1', buildTextbookPaths('pep-chemistry-g11-selective-1')],
+  ['pep-chemistry-g11-selective-2', buildTextbookPaths('pep-chemistry-g11-selective-2')]
 ]);
 
 const candidateFiles = new Map([
@@ -205,7 +209,7 @@ async function buildPromotionPlan(manifests, options) {
     const candidatesById = await loadApprovedCandidates(manifestContext.paths.generatedDraftRoot, manifestContext.entries, skipped);
 
     for (const entry of manifestContext.entries) {
-      const targetRuntimeFile = entry.targetRuntimeFile;
+      const targetRuntimeFile = resolvePromotionRuntimeFile(entry);
       const adapter = runtimeAdapters.get(targetRuntimeFile);
       const candidate = candidatesById.get(entry.candidateId);
       const context = { ...manifestContext, candidate, options };
@@ -472,7 +476,7 @@ function adaptReactionRecord(entry, candidate, context) {
   return {
     runtimeId,
     apply(staged) {
-      const reactions = requireArray(staged.payload.reactions, staged.runtimePath, 'reactions');
+      const reactions = recordsForJsonRuntimePath(staged.payload, staged.runtimePath);
       const record = {
         id: runtimeId,
         name: candidate.title,
@@ -588,7 +592,9 @@ function finalizeStagedFile(staged) {
   if (staged.kind === 'json') {
     const records = recordsForJsonRuntimePath(staged.payload, staged.runtimePath);
     sortRuntimeRecords(records);
-    staged.nextText = `${JSON.stringify(staged.payload, null, 2)}\n`;
+    syncJsonRuntimeAliases(staged.payload, staged.runtimePath);
+    const outputPayload = jsonRuntimeOutputPayload(staged.payload, staged.runtimePath, records);
+    staged.nextText = `${JSON.stringify(outputPayload, null, 2)}\n`;
     staged.textbookRecordsAfter = records.filter((record) => isTextbookId(record?.id)).length;
   }
 
@@ -681,10 +687,24 @@ function recordsForJsonRuntimePath(payload, runtimePath) {
     return requireArray(payload.learningPath?.stages, runtimePath, 'learningPath.stages');
   }
   if (runtimePath === 'src/data/reactions.json') {
-    return requireArray(payload.reactions, runtimePath, 'reactions');
+    return requireArray(Array.isArray(payload) ? payload : payload.reactions, runtimePath, 'reactions');
   }
 
   throw new Error(`Unsupported JSON runtime path ${runtimePath}`);
+}
+
+function syncJsonRuntimeAliases(payload, runtimePath) {
+  if (runtimePath === 'src/data/learningPath.json') {
+    payload.stages = requireArray(payload.learningPath?.stages, runtimePath, 'learningPath.stages');
+  }
+}
+
+function jsonRuntimeOutputPayload(payload, runtimePath, records) {
+  if (runtimePath === 'src/data/reactions.json') {
+    return records;
+  }
+
+  return payload;
 }
 
 function upsertTextbookRecord(target, record) {
@@ -766,9 +786,23 @@ function buildReviewedSourceReferences(entry, candidate) {
 }
 
 function ensureEntryTargets(entry, runtimePath) {
-  if (entry.targetRuntimeFile !== runtimePath || !normalizeArray(entry.targetRuntimeFiles).includes(runtimePath)) {
+  const approvedRuntimeFiles = normalizeArray(entry.targetRuntimeFiles);
+  const approvedForRuntimePath = entry.targetRuntimeFile === runtimePath || approvedRuntimeFiles.includes(runtimePath);
+  const approvedLegacyExperimentPath = entry.candidateType === 'experimentCandidate'
+    && runtimePath === 'src/data/reactions.json'
+    && (entry.targetRuntimeFile === 'src/data/labExperiments.json' || approvedRuntimeFiles.includes('src/data/labExperiments.json'));
+
+  if (!approvedForRuntimePath && !approvedLegacyExperimentPath) {
     throw new Error(`Reviewed entry ${entry.entryId} is not approved for ${runtimePath}`);
   }
+}
+
+function resolvePromotionRuntimeFile(entry) {
+  if (entry.candidateType === 'experimentCandidate' && entry.targetRuntimeFile === 'src/data/labExperiments.json') {
+    return 'src/data/reactions.json';
+  }
+
+  return entry.targetRuntimeFile;
 }
 
 function runtimeIdForEntry(entry, textbookId) {
@@ -799,6 +833,8 @@ function difficultyForSource(entry) {
 }
 
 function gradeForSource(entry) {
+  if (entry.sourceVolumeId.includes('g10')) return '高一';
+  if (entry.sourceVolumeId.includes('g11')) return '高二';
   if (entry.sourceVolumeId.includes('g12')) return '高三';
   if (entry.sourceVolumeId.includes('grade9')) return '九年级';
   if (entry.sourceVolumeId.includes('grade8')) return '八年级';

@@ -1,0 +1,1049 @@
+[
+  {
+    "candidateId": "lab-0041-3-l694-l727-cd86f93b32",
+    "title": "3. 电负性",
+    "summary": "3. 电负性 元素相互化合，可理解为原子之间产生化学作用力，形象地叫做化学键，原子中用于形成化学键的电子称为键合电子。电负性的概念是由美国化学家鲍林提出的，用来描述不同元素的原子对键合电子吸引力的大小。电负性越大的原子，对键合电子的吸引力…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "3. 电负性",
+    "sourceLineStart": 694,
+    "sourceLineEnd": 727,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:cd86f93b32b814737f9590178338f12e210e016569625fb00febccbc7f40b3cf",
+    "sourceSectionId": "0041-3-l694-l727-cd86f93b32",
+    "assets": [
+      {
+        "assetId": "0041-3-l694-l727-cd86f93b32-asset-01",
+        "altText": "",
+        "rawReference": "![](images/255b46b24ef287475f77892c58030badf783d11f99d00e639d1175f39221018d.jpg)",
+        "assetPath": "images/255b46b24ef287475f77892c58030badf783d11f99d00e639d1175f39221018d.jpg",
+        "sourceLineNumber": 700,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/255b46b24ef287475f77892c58030badf783d11f99d00e639d1175f39221018d.jpg"
+      },
+      {
+        "assetId": "0041-3-l694-l727-cd86f93b32-asset-02",
+        "altText": "",
+        "rawReference": "![](images/c9b59879286b7cca191c03e0ac73bbf3fad25a3b5ca33113dda3787f1435fbdf.jpg)",
+        "assetPath": "images/c9b59879286b7cca191c03e0ac73bbf3fad25a3b5ca33113dda3787f1435fbdf.jpg",
+        "sourceLineNumber": 709,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/c9b59879286b7cca191c03e0ac73bbf3fad25a3b5ca33113dda3787f1435fbdf.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0047-source-section-l764-l926-68c12b8f45",
+    "title": "稀有气体及其化合物的发现",
+    "summary": "稀有气体及其化合物的发现 1868年，天文学家洛克耶（J. N. Lockyer, 1836—1920）和杨森（P. C. Janssen, 1824—1907）在太阳光谱中发现了一种新元素，定名为氦（Helium）。20多年后，英国化学…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "稀有气体及其化合物的发现",
+    "sourceLineStart": 764,
+    "sourceLineEnd": 926,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:68c12b8f4583caac53c6d2301f47790f7c40cc8db9d9029e267ed7746d56864a",
+    "sourceSectionId": "0047-source-section-l764-l926-68c12b8f45",
+    "assets": [
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-01",
+        "altText": "",
+        "rawReference": "![](images/0dfc27a48f1e0d9c5aa7bbe9bb2f6fdaa887bc8f7410f2067cdde7ce3548ff93.jpg)",
+        "assetPath": "images/0dfc27a48f1e0d9c5aa7bbe9bb2f6fdaa887bc8f7410f2067cdde7ce3548ff93.jpg",
+        "sourceLineNumber": 776,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/0dfc27a48f1e0d9c5aa7bbe9bb2f6fdaa887bc8f7410f2067cdde7ce3548ff93.jpg"
+      },
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-02",
+        "altText": "",
+        "rawReference": "![](images/d087ea6d7faab914e90868d2d3ea72bc115280f4f014f64ebe500cb5456e8ecb.jpg)",
+        "assetPath": "images/d087ea6d7faab914e90868d2d3ea72bc115280f4f014f64ebe500cb5456e8ecb.jpg",
+        "sourceLineNumber": 798,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/d087ea6d7faab914e90868d2d3ea72bc115280f4f014f64ebe500cb5456e8ecb.jpg"
+      },
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-03",
+        "altText": "",
+        "rawReference": "![](images/d2008f06ffddade9a55e2a407749bd7f64ac0ed6523c375706872a062acdb36d.jpg)",
+        "assetPath": "images/d2008f06ffddade9a55e2a407749bd7f64ac0ed6523c375706872a062acdb36d.jpg",
+        "sourceLineNumber": 841,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/d2008f06ffddade9a55e2a407749bd7f64ac0ed6523c375706872a062acdb36d.jpg"
+      },
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-04",
+        "altText": "",
+        "rawReference": "![](images/393d6356864b1deca5c3d1794abbcffac9da60307bbce2079361e9d3cf2e782a.jpg)",
+        "assetPath": "images/393d6356864b1deca5c3d1794abbcffac9da60307bbce2079361e9d3cf2e782a.jpg",
+        "sourceLineNumber": 844,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/393d6356864b1deca5c3d1794abbcffac9da60307bbce2079361e9d3cf2e782a.jpg"
+      },
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-05",
+        "altText": "",
+        "rawReference": "![](images/4a90753ed74c2f372adc98238f12fb365ac1ddf99ea60ce42b00ebd3ca67be0c.jpg)",
+        "assetPath": "images/4a90753ed74c2f372adc98238f12fb365ac1ddf99ea60ce42b00ebd3ca67be0c.jpg",
+        "sourceLineNumber": 847,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/4a90753ed74c2f372adc98238f12fb365ac1ddf99ea60ce42b00ebd3ca67be0c.jpg"
+      },
+      {
+        "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-06",
+        "altText": "",
+        "rawReference": "![](images/05a6e4366f56dba8c1320964a8040a3083017ce4155dc0beb525c723831b1143.jpg)",
+        "assetPath": "images/05a6e4366f56dba8c1320964a8040a3083017ce4155dc0beb525c723831b1143.jpg",
+        "sourceLineNumber": 850,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/05a6e4366f56dba8c1320964a8040a3083017ce4155dc0beb525c723831b1143.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0065-source-section-l1221-l1253-9768a201be",
+    "title": "二、键参数——键能、键长与键角",
+    "summary": "二、键参数——键能、键长与键角 共价键的强弱可用键能来衡量。键能是指气态分子中 $1 \\mathrm{~mol}$ 化学键解离成气态原子所吸收的能量；键能通常是 $298.15 \\mathrm{~K} 、 101 \\mathrm{kPa}…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "二、键参数——键能、键长与键角",
+    "sourceLineStart": 1221,
+    "sourceLineEnd": 1253,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:9768a201be7ab601f7399241761c643310401f3856d21fa541a9db37a6376c2e",
+    "sourceSectionId": "0065-source-section-l1221-l1253-9768a201be",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0075-source-section-l1487-l1513-f25e4d190f",
+    "title": "三、价层电子对互斥模型",
+    "summary": "三、价层电子对互斥模型 $\\mathrm{CO}_{2}$ 和 $\\mathrm{H}_{2} \\mathrm{O}$ 都是三原子分子，为什么 $\\mathrm{CO}_{2}$ 呈直线形而 $\\mathrm{H}_{2} \\mathrm…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "三、价层电子对互斥模型",
+    "sourceLineStart": 1487,
+    "sourceLineEnd": 1513,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:f25e4d190f2b0dcf2efd3b7012d98e06a8138f13e057438cd4dd0ecfa7e2b5fc",
+    "sourceSectionId": "0075-source-section-l1487-l1513-f25e4d190f",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0082-source-section-l1595-l1598-9338101039",
+    "title": "【研究目的】",
+    "summary": "【研究目的】 实物模型可以建立对分子的空间结构的直观认识，通过借助实物搭建分子的空间结构模型的活动，使抽象性极强的分子结构直观化。",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【研究目的】",
+    "sourceLineStart": 1595,
+    "sourceLineEnd": 1598,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:933810103959856a67b7176addbb85148fd24f7dfcdb836969a793a9c7ec7ead",
+    "sourceSectionId": "0082-source-section-l1595-l1598-9338101039",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0103-source-section-l1892-l1904-d10ce22907",
+    "title": "壁虎与范德华力",
+    "summary": "壁虎与范德华力 壁虎为什么能在天花板上爬行自如？这曾是一个困扰科学家一百多年的谜。用电子显微镜可观察到，壁虎的四足覆盖着几十万条纤细的由角蛋白构成的纳米级尺寸的毛。壁虎的足有多大吸力？实验证明，如果在一个分币的面积上布满100万条壁虎足的…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "壁虎与范德华力",
+    "sourceLineStart": 1892,
+    "sourceLineEnd": 1904,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:d10ce2290727415231c2a37370c4b0a01e38b95cf8067f8cda517e597960bf54",
+    "sourceSectionId": "0103-source-section-l1892-l1904-d10ce22907",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0104-2-l1905-l1957-17cfbdb302",
+    "title": "2. 氢键及其对物质性质的影响",
+    "summary": "2. 氢键及其对物质性质的影响 你是否知道，常见物质中，水是熔、沸点较高的液体之一？冰的密度比液态水的小？为了解释水的这些奇特性质，人们提出了氢键的概念。氢键是除范德华力之外的另一种分子间作用力，它是由已经与电负性很大的原子形成共价键的氢…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "2. 氢键及其对物质性质的影响",
+    "sourceLineStart": 1905,
+    "sourceLineEnd": 1957,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:17cfbdb302e2b4ab0fa9dd5e9644c159f82de5abc5bca13f08c6de7db34a8b9d",
+    "sourceSectionId": "0104-2-l1905-l1957-17cfbdb302",
+    "assets": [
+      {
+        "assetId": "0104-2-l1905-l1957-17cfbdb302-asset-01",
+        "altText": "",
+        "rawReference": "![](images/98924014f4a08a30350ba8f1de436be3f429f36a1893d8ea74468148c41a6295.jpg)",
+        "assetPath": "images/98924014f4a08a30350ba8f1de436be3f429f36a1893d8ea74468148c41a6295.jpg",
+        "sourceLineNumber": 1913,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/98924014f4a08a30350ba8f1de436be3f429f36a1893d8ea74468148c41a6295.jpg"
+      },
+      {
+        "assetId": "0104-2-l1905-l1957-17cfbdb302-asset-02",
+        "altText": "",
+        "rawReference": "![](images/b1984cba3945a09ffb431951ee03d4efdb3ee77200d1b4a83747796f7b2559c1.jpg)",
+        "assetPath": "images/b1984cba3945a09ffb431951ee03d4efdb3ee77200d1b4a83747796f7b2559c1.jpg",
+        "sourceLineNumber": 1920,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/b1984cba3945a09ffb431951ee03d4efdb3ee77200d1b4a83747796f7b2559c1.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0107-3-l1978-l2001-26ea911a5b",
+    "title": "3. 溶解性",
+    "summary": "3. 溶解性 物质相互溶解的性质十分复杂，受许多因素影响，如温度、压强等。从分子结构的角度看，存在“相似相溶”的规律。 蔗糖和氨易溶于水，难溶于四氯化碳；而萘和碘却易溶于四氯化碳，难溶于水。如果分析溶质和溶剂的分子结构就可以知道原因了，蔗…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "3. 溶解性",
+    "sourceLineStart": 1978,
+    "sourceLineEnd": 2001,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:26ea911a5bc38e6ae146a8611f9605493fc495a7e396ad60fef0d062498e8065",
+    "sourceSectionId": "0107-3-l1978-l2001-26ea911a5b",
+    "assets": [
+      {
+        "assetId": "0107-3-l1978-l2001-26ea911a5b-asset-01",
+        "altText": "",
+        "rawReference": "![](images/c98845d6d301e9d9c8c8335b436a523dd29b806d83e98f9cf11cff7b5a49e30c.jpg)",
+        "assetPath": "images/c98845d6d301e9d9c8c8335b436a523dd29b806d83e98f9cf11cff7b5a49e30c.jpg",
+        "sourceLineNumber": 1992,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/c98845d6d301e9d9c8c8335b436a523dd29b806d83e98f9cf11cff7b5a49e30c.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0108-source-section-l2002-l2024-6732b57273",
+    "title": "思考与讨论",
+    "summary": "思考与讨论 (1) 比较 $\\mathrm{NH}_{3}$ 和 $\\mathrm{CH}_{4}$ 在水中的溶解度。怎样用 “相似相溶” 规律理解它们的溶解度不同? (2) 为什么在日常生活中用有机溶剂（如乙酸乙酯等）溶解油漆而不用水？…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "思考与讨论",
+    "sourceLineStart": 2002,
+    "sourceLineEnd": 2024,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:6732b57273384d2468e5184edcc261d18c0c958c5053ff7a227bb6a865ecf9a9",
+    "sourceSectionId": "0108-source-section-l2002-l2024-6732b57273",
+    "assets": [
+      {
+        "assetId": "0108-source-section-l2002-l2024-6732b57273-asset-01",
+        "altText": "",
+        "rawReference": "![](images/203e4a9f9db043288c2d787cb51cf31821e94bb944026861407879720f7caf9d.jpg)",
+        "assetPath": "images/203e4a9f9db043288c2d787cb51cf31821e94bb944026861407879720f7caf9d.jpg",
+        "sourceLineNumber": 2012,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/203e4a9f9db043288c2d787cb51cf31821e94bb944026861407879720f7caf9d.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0112-source-section-l2079-l2213-a8d4a5c4c2",
+    "title": "巴斯德与手性",
+    "summary": "巴斯德与手性 2003年夏，全球化学家投票评选了化学史上十项最美的实验。1848年，法国科学家巴斯德（L.Pasteur，1822—1895）用手工在光学显微镜下把左型酒石酸盐晶体和右型酒石酸盐晶体分开的实验被选为十项之首。 巴斯德发现，…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "巴斯德与手性",
+    "sourceLineStart": 2079,
+    "sourceLineEnd": 2213,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:a8d4a5c4c2a6a9d4673d853417c086b9b84e8d34a09baf0f67eeabc379ff9bd4",
+    "sourceSectionId": "0112-source-section-l2079-l2213-a8d4a5c4c2",
+    "assets": [
+      {
+        "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-01",
+        "altText": "",
+        "rawReference": "![](images/3daa41eea898c1b5f0021101515f4f9178b4fa9103ef0c5382aeebe204d34699.jpg)",
+        "assetPath": "images/3daa41eea898c1b5f0021101515f4f9178b4fa9103ef0c5382aeebe204d34699.jpg",
+        "sourceLineNumber": 2087,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/3daa41eea898c1b5f0021101515f4f9178b4fa9103ef0c5382aeebe204d34699.jpg"
+      },
+      {
+        "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-02",
+        "altText": "",
+        "rawReference": "![](images/c0769914e1057c8a71a342c7dc3061a81ea9aaecf5a664f29d3c0de5f73565f0.jpg)",
+        "assetPath": "images/c0769914e1057c8a71a342c7dc3061a81ea9aaecf5a664f29d3c0de5f73565f0.jpg",
+        "sourceLineNumber": 2184,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/c0769914e1057c8a71a342c7dc3061a81ea9aaecf5a664f29d3c0de5f73565f0.jpg"
+      },
+      {
+        "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-03",
+        "altText": "",
+        "rawReference": "![](images/c1c1e94ed78290f98114bddba12ca3c18d734f04f89b641b4834653d970a9afd.jpg)",
+        "assetPath": "images/c1c1e94ed78290f98114bddba12ca3c18d734f04f89b641b4834653d970a9afd.jpg",
+        "sourceLineNumber": 2191,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/c1c1e94ed78290f98114bddba12ca3c18d734f04f89b641b4834653d970a9afd.jpg"
+      },
+      {
+        "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-04",
+        "altText": "",
+        "rawReference": "![](images/e26136e0c7babbd05e55b0d3218197de86748ef3c9cc4b0721956a3bc8f342fb.jpg)",
+        "assetPath": "images/e26136e0c7babbd05e55b0d3218197de86748ef3c9cc4b0721956a3bc8f342fb.jpg",
+        "sourceLineNumber": 2200,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/e26136e0c7babbd05e55b0d3218197de86748ef3c9cc4b0721956a3bc8f342fb.jpg"
+      },
+      {
+        "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-05",
+        "altText": "",
+        "rawReference": "![](images/ba5d1da16c70476f0ada887e5586920fd8995739e0369ba6c8a64e01fafaa423.jpg)",
+        "assetPath": "images/ba5d1da16c70476f0ada887e5586920fd8995739e0369ba6c8a64e01fafaa423.jpg",
+        "sourceLineNumber": 2207,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/ba5d1da16c70476f0ada887e5586920fd8995739e0369ba6c8a64e01fafaa423.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0121-source-section-l2358-l2375-f6d0a86f64",
+    "title": "一、物质的聚集状态",
+    "summary": "一、物质的聚集状态 图3-1 物质三态间的相互转化 20世纪前，人们以为分子是所有化学物质能够保持其性质的最小粒子，物质三态的相互转化（如图3-1）只是分子间距离发生了变化，分子在固态只能振动，在气态能自由移动，在液态则介乎二者之间。 2…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "一、物质的聚集状态",
+    "sourceLineStart": 2358,
+    "sourceLineEnd": 2375,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:f6d0a86f641f2428f6f97c7ab702d5df27822d9c67e438eccc1b4981ebee2c69",
+    "sourceSectionId": "0121-source-section-l2358-l2375-f6d0a86f64",
+    "assets": [
+      {
+        "assetId": "0121-source-section-l2358-l2375-f6d0a86f64-asset-01",
+        "altText": "",
+        "rawReference": "![](images/422683e4439abe56bba3aeef0014a67f877fb4dab50645a3e51995188ab52764.jpg)",
+        "assetPath": "images/422683e4439abe56bba3aeef0014a67f877fb4dab50645a3e51995188ab52764.jpg",
+        "sourceLineNumber": 2360,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/422683e4439abe56bba3aeef0014a67f877fb4dab50645a3e51995188ab52764.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0125-source-section-l2414-l2476-e7e23aa536",
+    "title": "二、晶体与非晶体",
+    "summary": "二、晶体与非晶体 走进化学实验室，你能见到许多固体，如蜡状的白磷（ $\\mathrm{P_4}$ ）、黄色的硫黄（ $\\mathrm{S_8}$ ）、紫黑色的碘（ $\\mathrm{I_2}$ ）和高锰酸钾（ $\\mathrm{KMnO_…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "二、晶体与非晶体",
+    "sourceLineStart": 2414,
+    "sourceLineEnd": 2476,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:e7e23aa536d133c5d662964b8d7d159a4739aa4c67977165572888bca64103ff",
+    "sourceSectionId": "0125-source-section-l2414-l2476-e7e23aa536",
+    "assets": [
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-01",
+        "altText": "",
+        "rawReference": "![](images/2c964c0a8752462a9b5268e088da5c7d81f2a6d4415931a577219a00c2f121bd.jpg)",
+        "assetPath": "images/2c964c0a8752462a9b5268e088da5c7d81f2a6d4415931a577219a00c2f121bd.jpg",
+        "sourceLineNumber": 2434,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/2c964c0a8752462a9b5268e088da5c7d81f2a6d4415931a577219a00c2f121bd.jpg"
+      },
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-02",
+        "altText": "",
+        "rawReference": "![](images/67c930685d031dc49faf5d30b463608409405ec0e12581dc7275cba7e40980df.jpg)",
+        "assetPath": "images/67c930685d031dc49faf5d30b463608409405ec0e12581dc7275cba7e40980df.jpg",
+        "sourceLineNumber": 2437,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/67c930685d031dc49faf5d30b463608409405ec0e12581dc7275cba7e40980df.jpg"
+      },
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-03",
+        "altText": "",
+        "rawReference": "![](images/6bdaa8a27163f619599efbb32c84315f7bcc2e65377c3315741d697bb4aca67d.jpg)",
+        "assetPath": "images/6bdaa8a27163f619599efbb32c84315f7bcc2e65377c3315741d697bb4aca67d.jpg",
+        "sourceLineNumber": 2440,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/6bdaa8a27163f619599efbb32c84315f7bcc2e65377c3315741d697bb4aca67d.jpg"
+      },
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-04",
+        "altText": "",
+        "rawReference": "![](images/6142fa3699b342b664a1164d41fc56d5d3956ff9484d6202cc2cdecfcdb16715.jpg)",
+        "assetPath": "images/6142fa3699b342b664a1164d41fc56d5d3956ff9484d6202cc2cdecfcdb16715.jpg",
+        "sourceLineNumber": 2449,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/6142fa3699b342b664a1164d41fc56d5d3956ff9484d6202cc2cdecfcdb16715.jpg"
+      },
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-05",
+        "altText": "",
+        "rawReference": "![](images/de66caace1b1fd6f8c13cec071ed28812b9cef0d11a7d3640bdfb429fa12e9ed.jpg)",
+        "assetPath": "images/de66caace1b1fd6f8c13cec071ed28812b9cef0d11a7d3640bdfb429fa12e9ed.jpg",
+        "sourceLineNumber": 2456,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/de66caace1b1fd6f8c13cec071ed28812b9cef0d11a7d3640bdfb429fa12e9ed.jpg"
+      },
+      {
+        "assetId": "0125-source-section-l2414-l2476-e7e23aa536-asset-06",
+        "altText": "",
+        "rawReference": "![](images/b39c1b48bfb0ad76683c069080938a9e1e7c13396db3fcac0df7a24ff9873a39.jpg)",
+        "assetPath": "images/b39c1b48bfb0ad76683c069080938a9e1e7c13396db3fcac0df7a24ff9873a39.jpg",
+        "sourceLineNumber": 2463,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/b39c1b48bfb0ad76683c069080938a9e1e7c13396db3fcac0df7a24ff9873a39.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0126-3-1-l2477-l2489-7483a2976e",
+    "title": "【实验3-1】",
+    "summary": "【实验3-1】 （1）用研钵把硫黄粉末研细，放入蒸发皿中，放在三脚架的铁圈上，用酒精灯加热至熔融态，自然冷却结晶后，观察实验现象。 (2) 在一个小烧杯里加入少量碘, 用一个表面皿盖在小烧杯上, 并在表面皿上加少量冷水。把小烧杯放在陶土网…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验3-1】",
+    "sourceLineStart": 2477,
+    "sourceLineEnd": 2489,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:7483a2976e484663f500a64a9508c0b23bec92714a16cce0da81282e90b4d37c",
+    "sourceSectionId": "0126-3-1-l2477-l2489-7483a2976e",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0127-source-section-l2490-l2512-b38bfcd116",
+    "title": "资料卡片",
+    "summary": "资料卡片 制备晶体的三种途径都可制得有重要价值的大晶体。例如，芯片的基质是单晶硅，它是由熔融态硅制备的，俗称“拉单晶”。用于制造激光器的 $\\mathrm{KH}_2\\mathrm{PO}_4$ 大晶体是由水溶液结晶出来的。而可与天然钻石…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "资料卡片",
+    "sourceLineStart": 2490,
+    "sourceLineEnd": 2512,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:b38bfcd116244415163eee1e03dc813def9ab49dbf6c61e08277f2a7fc15318e",
+    "sourceSectionId": "0127-source-section-l2490-l2512-b38bfcd116",
+    "assets": [
+      {
+        "assetId": "0127-source-section-l2490-l2512-b38bfcd116-asset-01",
+        "altText": "",
+        "rawReference": "![](images/1677e5d1a05e4dcb67f3d37fbfa767b03c5fbe29b8118acfc0d9c4e8fddd02a7.jpg)",
+        "assetPath": "images/1677e5d1a05e4dcb67f3d37fbfa767b03c5fbe29b8118acfc0d9c4e8fddd02a7.jpg",
+        "sourceLineNumber": 2496,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/1677e5d1a05e4dcb67f3d37fbfa767b03c5fbe29b8118acfc0d9c4e8fddd02a7.jpg"
+      },
+      {
+        "assetId": "0127-source-section-l2490-l2512-b38bfcd116-asset-02",
+        "altText": "",
+        "rawReference": "![](images/fd5f360616935eff9aabc766ed65e84370b8cf984602eee5df3b7cc724038861.jpg)",
+        "assetPath": "images/fd5f360616935eff9aabc766ed65e84370b8cf984602eee5df3b7cc724038861.jpg",
+        "sourceLineNumber": 2499,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/fd5f360616935eff9aabc766ed65e84370b8cf984602eee5df3b7cc724038861.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0136-source-section-l2599-l2639-221e4b9997",
+    "title": "四、晶体结构的测定",
+    "summary": "四、晶体结构的测定 测定晶体结构最常用的仪器是X射线衍射仪（如图3-12）。在晶体的X射线衍射实验中，当单一波长的X射线通过晶体时，X射线和晶体中的电子相互作用，会在记录仪上产生分立的斑点（如图3-13）或者明锐的衍射峰（如图3-14）。…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "四、晶体结构的测定",
+    "sourceLineStart": 2599,
+    "sourceLineEnd": 2639,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:221e4b999781ec8bc35e61fe92ac8129073512590827c1d7d9fdbfc09f3135fd",
+    "sourceSectionId": "0136-source-section-l2599-l2639-221e4b9997",
+    "assets": [
+      {
+        "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-01",
+        "altText": "",
+        "rawReference": "![](images/1bf89c0eaf36195942bdc21d10d8a784488f64b7d05b8f6fc595efd0dcefa603.jpg)",
+        "assetPath": "images/1bf89c0eaf36195942bdc21d10d8a784488f64b7d05b8f6fc595efd0dcefa603.jpg",
+        "sourceLineNumber": 2612,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/1bf89c0eaf36195942bdc21d10d8a784488f64b7d05b8f6fc595efd0dcefa603.jpg"
+      },
+      {
+        "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-02",
+        "altText": "",
+        "rawReference": "![](images/e2d4249af47a622dbc41dcadf622b5c50dba6f76ab4e2366ddf62ca9f27b6c33.jpg)",
+        "assetPath": "images/e2d4249af47a622dbc41dcadf622b5c50dba6f76ab4e2366ddf62ca9f27b6c33.jpg",
+        "sourceLineNumber": 2623,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/e2d4249af47a622dbc41dcadf622b5c50dba6f76ab4e2366ddf62ca9f27b6c33.jpg"
+      },
+      {
+        "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-03",
+        "altText": "",
+        "rawReference": "![](images/afa3f2f0babe79928d46f6edb62c3537114c2dff08588bbc3435ee404a302369.jpg)",
+        "assetPath": "images/afa3f2f0babe79928d46f6edb62c3537114c2dff08588bbc3435ee404a302369.jpg",
+        "sourceLineNumber": 2630,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/afa3f2f0babe79928d46f6edb62c3537114c2dff08588bbc3435ee404a302369.jpg"
+      },
+      {
+        "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-04",
+        "altText": "",
+        "rawReference": "![](images/893ada1d5094d7e93d610ffd69277cc9dea59a595e73348eb1ddd9446b2f2683.jpg)",
+        "assetPath": "images/893ada1d5094d7e93d610ffd69277cc9dea59a595e73348eb1ddd9446b2f2683.jpg",
+        "sourceLineNumber": 2633,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/893ada1d5094d7e93d610ffd69277cc9dea59a595e73348eb1ddd9446b2f2683.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0137-source-section-l2640-l2729-b2d15b3f80",
+    "title": "练习与应用",
+    "summary": "练习与应用 1.区分晶体和非晶体最可靠的科学方法是（ ）。 A. 测定熔、沸点 B. 观察外形 C. 对固体进行X射线衍射测定 D. 通过比较硬度确定 2. 关于晶体的自范性，下列叙述中，正确的是（ ）。 A. 破损的晶体能够在固态时自动…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "练习与应用",
+    "sourceLineStart": 2640,
+    "sourceLineEnd": 2729,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:b2d15b3f8042bb824bac0cd965bc10e217a8c474754ce2250d60680f7713e6c1",
+    "sourceSectionId": "0137-source-section-l2640-l2729-b2d15b3f80",
+    "assets": [
+      {
+        "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-01",
+        "altText": "",
+        "rawReference": "![](images/3022b370b461388170501fcb57e0a835992ed777eceaa6d1607ec22b85945854.jpg)",
+        "assetPath": "images/3022b370b461388170501fcb57e0a835992ed777eceaa6d1607ec22b85945854.jpg",
+        "sourceLineNumber": 2700,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/3022b370b461388170501fcb57e0a835992ed777eceaa6d1607ec22b85945854.jpg"
+      },
+      {
+        "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-02",
+        "altText": "",
+        "rawReference": "![](images/f4ff08c1e59d69e375ad98614b956ea6d5ef31ed8daf421ef8b4f1ccc5f2cec2.jpg)",
+        "assetPath": "images/f4ff08c1e59d69e375ad98614b956ea6d5ef31ed8daf421ef8b4f1ccc5f2cec2.jpg",
+        "sourceLineNumber": 2707,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/f4ff08c1e59d69e375ad98614b956ea6d5ef31ed8daf421ef8b4f1ccc5f2cec2.jpg"
+      },
+      {
+        "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-03",
+        "altText": "",
+        "rawReference": "![](images/4e58f436f3705e5aff221018b665741fb0357af98130ccf512df77c1acb2e98d.jpg)",
+        "assetPath": "images/4e58f436f3705e5aff221018b665741fb0357af98130ccf512df77c1acb2e98d.jpg",
+        "sourceLineNumber": 2718,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/4e58f436f3705e5aff221018b665741fb0357af98130ccf512df77c1acb2e98d.jpg"
+      },
+      {
+        "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-04",
+        "altText": "",
+        "rawReference": "![](images/7f5855592482df66ad1d084aada1ac25207aa57c652d97aefe0cb4e2735eaa9f.jpg)",
+        "assetPath": "images/7f5855592482df66ad1d084aada1ac25207aa57c652d97aefe0cb4e2735eaa9f.jpg",
+        "sourceLineNumber": 2721,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/7f5855592482df66ad1d084aada1ac25207aa57c652d97aefe0cb4e2735eaa9f.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0142-source-section-l2808-l2818-83e6640d7e",
+    "title": "资料卡片",
+    "summary": "资料卡片 取两块大小相同的干冰，在一块干冰中央挖一个小穴，撒入一些镁粉，用红热的铁棒把镁点燃，将另一块干冰盖上，你会看到镁粉在干冰内继续燃烧，像冰灯中装进一个电灯泡一样，发出 耀眼的白光。（切勿用手接触干冰，以免冻伤！） 这个实验不但证明…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "资料卡片",
+    "sourceLineStart": 2808,
+    "sourceLineEnd": 2818,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:83e6640d7e2ef5c424c0f1694b90264f18ebaabb914223981a20e41c7c35e57e",
+    "sourceSectionId": "0142-source-section-l2808-l2818-83e6640d7e",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0150-1-l2977-l3005-3c80ca411f",
+    "title": "1. 天然金刚石",
+    "summary": "1. 天然金刚石 人类把天然金刚石当作宝石珍藏已有三千余年的历史。经过琢磨的金刚石称为钻石，透光度高。纯净的金刚石无色透明，含杂质则呈蓝、黄、棕、绿、黑等色。 用同位素断代实验证实，所有的天然金刚石至少已有9.9亿岁了，其中许多甚至已达3…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "1. 天然金刚石",
+    "sourceLineStart": 2977,
+    "sourceLineEnd": 3005,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:3c80ca411fa38b576d45b3d8a9012f37be19a0295a021c43db2b9b9f995702ad",
+    "sourceSectionId": "0150-1-l2977-l3005-3c80ca411f",
+    "assets": [
+      {
+        "assetId": "0150-1-l2977-l3005-3c80ca411f-asset-01",
+        "altText": "",
+        "rawReference": "![](images/033e8d670201089d5833881d6fa2e7cafadfc76e35d15ee6ccb5a28b1b62b26d.jpg)",
+        "assetPath": "images/033e8d670201089d5833881d6fa2e7cafadfc76e35d15ee6ccb5a28b1b62b26d.jpg",
+        "sourceLineNumber": 2987,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/033e8d670201089d5833881d6fa2e7cafadfc76e35d15ee6ccb5a28b1b62b26d.jpg"
+      },
+      {
+        "assetId": "0150-1-l2977-l3005-3c80ca411f-asset-02",
+        "altText": "",
+        "rawReference": "![](images/c3845f82d2f0e2e99e867934e8c5bcb1638001112d75e5ea7a7cc98e36f28cc5.jpg)",
+        "assetPath": "images/c3845f82d2f0e2e99e867934e8c5bcb1638001112d75e5ea7a7cc98e36f28cc5.jpg",
+        "sourceLineNumber": 2990,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/c3845f82d2f0e2e99e867934e8c5bcb1638001112d75e5ea7a7cc98e36f28cc5.jpg"
+      },
+      {
+        "assetId": "0150-1-l2977-l3005-3c80ca411f-asset-03",
+        "altText": "",
+        "rawReference": "![](images/37ed8987f8477c66208abaab30fc19c36ea3aacea842902587029f537524eb01.jpg)",
+        "assetPath": "images/37ed8987f8477c66208abaab30fc19c36ea3aacea842902587029f537524eb01.jpg",
+        "sourceLineNumber": 2993,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/37ed8987f8477c66208abaab30fc19c36ea3aacea842902587029f537524eb01.jpg"
+      },
+      {
+        "assetId": "0150-1-l2977-l3005-3c80ca411f-asset-04",
+        "altText": "",
+        "rawReference": "![](images/b9751b2010695e23ff6510d3d329aa84d142746a2e44094084194c3a27090264.jpg)",
+        "assetPath": "images/b9751b2010695e23ff6510d3d329aa84d142746a2e44094084194c3a27090264.jpg",
+        "sourceLineNumber": 2996,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/b9751b2010695e23ff6510d3d329aa84d142746a2e44094084194c3a27090264.jpg"
+      },
+      {
+        "assetId": "0150-1-l2977-l3005-3c80ca411f-asset-05",
+        "altText": "",
+        "rawReference": "![](images/114c99caad1cc06bf8481f1f15269ad3c13cab995d832cbf76c704fe3b400c3f.jpg)",
+        "assetPath": "images/114c99caad1cc06bf8481f1f15269ad3c13cab995d832cbf76c704fe3b400c3f.jpg",
+        "sourceLineNumber": 2999,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/114c99caad1cc06bf8481f1f15269ad3c13cab995d832cbf76c704fe3b400c3f.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0152-1-l3008-l3038-9dbd8aff95",
+    "title": "（1）高压合成",
+    "summary": "（1）高压合成 人工合成金刚石的探索始于19世纪末，直到20世纪50年代，在理论上论证了合成金刚石需要的高压高温条件，才逐渐从实验探索发展成大规模的工业生产。高压合成金刚石的原料是廉价的石墨。用高压釜施加高温 高压并加入金属镍等金属催化剂…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "（1）高压合成",
+    "sourceLineStart": 3008,
+    "sourceLineEnd": 3038,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:9dbd8aff95656a1c629b366c1996c638f936b4b2588b41eebdbf6ef544824d7e",
+    "sourceSectionId": "0152-1-l3008-l3038-9dbd8aff95",
+    "assets": [
+      {
+        "assetId": "0152-1-l3008-l3038-9dbd8aff95-asset-01",
+        "altText": "",
+        "rawReference": "![](images/ba35484d7b835fa9d000ed873d52d06801c1c89faa51934ad4b7c12b8bab7a7f.jpg)",
+        "assetPath": "images/ba35484d7b835fa9d000ed873d52d06801c1c89faa51934ad4b7c12b8bab7a7f.jpg",
+        "sourceLineNumber": 3014,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/ba35484d7b835fa9d000ed873d52d06801c1c89faa51934ad4b7c12b8bab7a7f.jpg"
+      },
+      {
+        "assetId": "0152-1-l3008-l3038-9dbd8aff95-asset-02",
+        "altText": "",
+        "rawReference": "![](images/a1c79072fd155739b0fb00c3e23ea13503e3affedb88d53afbbd856ad1467bfa.jpg)",
+        "assetPath": "images/a1c79072fd155739b0fb00c3e23ea13503e3affedb88d53afbbd856ad1467bfa.jpg",
+        "sourceLineNumber": 3021,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/a1c79072fd155739b0fb00c3e23ea13503e3affedb88d53afbbd856ad1467bfa.jpg"
+      },
+      {
+        "assetId": "0152-1-l3008-l3038-9dbd8aff95-asset-03",
+        "altText": "",
+        "rawReference": "![](images/0f6252f26c9f646613bea4afa3950cd7942db7295ee8beb766bf3323edb4164c.jpg)",
+        "assetPath": "images/0f6252f26c9f646613bea4afa3950cd7942db7295ee8beb766bf3323edb4164c.jpg",
+        "sourceLineNumber": 3028,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/0f6252f26c9f646613bea4afa3950cd7942db7295ee8beb766bf3323edb4164c.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0171-source-section-l3341-l3344-f99ab48357",
+    "title": "【研究目的】",
+    "summary": "【研究目的】 在日常生活中，常见到色彩和外形都很漂亮的晶体。我们可以通过化学实验的方法制备晶体，学习用饱和溶液制备大晶体的方法。",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【研究目的】",
+    "sourceLineStart": 3341,
+    "sourceLineEnd": 3344,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:f99ab48357734c2922c87b1db1f465dab55e1ec65882fd1ef3ea9d02152294c7",
+    "sourceSectionId": "0171-source-section-l3341-l3344-f99ab48357",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0174-2-l3351-l3372-871c5b83de",
+    "title": "2. 制备明矾晶体的实验步骤",
+    "summary": "2. 制备明矾晶体的实验步骤 (1) 在玻璃杯中放入比室温高 $10 \\sim 20^{\\circ} \\mathrm{C}$ 的水, 并加入明矾晶体 $\\left[\\mathrm{KAl}\\left(\\mathrm{SO}_{4}\\rig…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "2. 制备明矾晶体的实验步骤",
+    "sourceLineStart": 3351,
+    "sourceLineEnd": 3372,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:871c5b83de7dc8c309fdfb5510048e5c48761744c3cbde0441329ece34f11247",
+    "sourceSectionId": "0174-2-l3351-l3372-871c5b83de",
+    "assets": [
+      {
+        "assetId": "0174-2-l3351-l3372-871c5b83de-asset-01",
+        "altText": "",
+        "rawReference": "![](images/bc0bdcd630d32b0f9e75f1d507eb4cea5f6c6e9fc9c0a2990dcaa01006aa4fa4.jpg)",
+        "assetPath": "images/bc0bdcd630d32b0f9e75f1d507eb4cea5f6c6e9fc9c0a2990dcaa01006aa4fa4.jpg",
+        "sourceLineNumber": 3365,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/bc0bdcd630d32b0f9e75f1d507eb4cea5f6c6e9fc9c0a2990dcaa01006aa4fa4.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0175-source-section-l3373-l3380-4284541a6f",
+    "title": "【结果与讨论】",
+    "summary": "【结果与讨论】 (1) 你是否得到了完美的明矾晶体? 请描述你制备的明矾晶体颜色和外形。 (2) 在上述实验中, 为什么所用仪器都要用蒸馏水洗净? 为什么晶种一定要悬挂在溶液的中央位置? (3) 在上述实验中, 制备明矾大晶体所需时间较长…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【结果与讨论】",
+    "sourceLineStart": 3373,
+    "sourceLineEnd": 3380,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:4284541a6f3bfe93bf308fd44535655c720250b861372e1e37cd14f9a78a08e3",
+    "sourceSectionId": "0175-source-section-l3373-l3380-4284541a6f",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0180-3-2-l3470-l3524-4b1321501e",
+    "title": "【实验3-2】",
+    "summary": "【实验3-2】 下表中的少量固体溶于足量的水，观察实验现象并填 写表格。 固体 ①CuSO4白色 ②CuCl2·2H2O绿色 ③CuBr2深褐色 ④NaCl白色 ⑤K2SO4白色 ⑥KBr白色 哪些溶液呈天蓝色 实验说明什么离子呈天蓝色，…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验3-2】",
+    "sourceLineStart": 3470,
+    "sourceLineEnd": 3524,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:4b1321501ef5625d5ac6fba253adbe3b1bdee653cd75f2213608534fee25b232",
+    "sourceSectionId": "0180-3-2-l3470-l3524-4b1321501e",
+    "assets": [
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-01",
+        "altText": "",
+        "rawReference": "![](images/e86feaa148001a6b0a91240f8bc68037f227d16e4f8031c01e93ef06be0530aa.jpg)",
+        "assetPath": "images/e86feaa148001a6b0a91240f8bc68037f227d16e4f8031c01e93ef06be0530aa.jpg",
+        "sourceLineNumber": 3483,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/e86feaa148001a6b0a91240f8bc68037f227d16e4f8031c01e93ef06be0530aa.jpg"
+      },
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-02",
+        "altText": "",
+        "rawReference": "![](images/1b77c9fe21e93e17715406e608697312ff876aa81ab32550044c1e59842cb740.jpg)",
+        "assetPath": "images/1b77c9fe21e93e17715406e608697312ff876aa81ab32550044c1e59842cb740.jpg",
+        "sourceLineNumber": 3494,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/1b77c9fe21e93e17715406e608697312ff876aa81ab32550044c1e59842cb740.jpg"
+      },
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-03",
+        "altText": "",
+        "rawReference": "![](images/eb83cf59a2434426a50ac6a01afcbf9ec320a4628253cc6dfb6005f4d9982e42.jpg)",
+        "assetPath": "images/eb83cf59a2434426a50ac6a01afcbf9ec320a4628253cc6dfb6005f4d9982e42.jpg",
+        "sourceLineNumber": 3501,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/eb83cf59a2434426a50ac6a01afcbf9ec320a4628253cc6dfb6005f4d9982e42.jpg"
+      },
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-04",
+        "altText": "",
+        "rawReference": "![](images/3e5e1be221b51c95b472be8940899fee463598d12e501e202376d07c551fe828.jpg)",
+        "assetPath": "images/3e5e1be221b51c95b472be8940899fee463598d12e501e202376d07c551fe828.jpg",
+        "sourceLineNumber": 3508,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/3e5e1be221b51c95b472be8940899fee463598d12e501e202376d07c551fe828.jpg"
+      },
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-05",
+        "altText": "",
+        "rawReference": "![](images/16981f71eace5686e0c6c7e9b1ec0d8c046c816989762c66544c018df661c7d5.jpg)",
+        "assetPath": "images/16981f71eace5686e0c6c7e9b1ec0d8c046c816989762c66544c018df661c7d5.jpg",
+        "sourceLineNumber": 3515,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/16981f71eace5686e0c6c7e9b1ec0d8c046c816989762c66544c018df661c7d5.jpg"
+      },
+      {
+        "assetId": "0180-3-2-l3470-l3524-4b1321501e-asset-06",
+        "altText": "",
+        "rawReference": "![](images/7a25d64aa3e9e3394d88bea2fe47a3192b02d0290dc055df62dec4a3bf728176.jpg)",
+        "assetPath": "images/7a25d64aa3e9e3394d88bea2fe47a3192b02d0290dc055df62dec4a3bf728176.jpg",
+        "sourceLineNumber": 3518,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/7a25d64aa3e9e3394d88bea2fe47a3192b02d0290dc055df62dec4a3bf728176.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0181-3-3-l3525-l3551-5ef86919b7",
+    "title": "【实验3-3】",
+    "summary": "【实验3-3】 向盛有 $4 \\mathrm{~mL} 0.1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{CuSO}_{4}$ 溶液的试管里滴加几滴 $1 \\mathrm{~mol} / \\mathrm{L}$…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验3-3】",
+    "sourceLineStart": 3525,
+    "sourceLineEnd": 3551,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:5ef86919b74c47e0d06d31003b8b1c2d530f95c810c5c9f907e529b391fb7b3e",
+    "sourceSectionId": "0181-3-3-l3525-l3551-5ef86919b7",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0182-3-4-l3552-l3572-a7db0172d1",
+    "title": "【实验3-4】",
+    "summary": "【实验3-4】 向盛有少量 $0.1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{FeCl}_{3}$ 溶液（或任何含 $\\mathrm{Fe}^{3+}$ 的溶液）的试管中滴加 1 滴 $0.1 \\mathrm…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验3-4】",
+    "sourceLineStart": 3552,
+    "sourceLineEnd": 3572,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:a7db0172d13a52f363be513934c73ceef01c2064b2ca3e51d525f77ce56beb04",
+    "sourceSectionId": "0182-3-4-l3552-l3572-a7db0172d1",
+    "assets": [
+      {
+        "assetId": "0182-3-4-l3552-l3572-a7db0172d1-asset-01",
+        "altText": "",
+        "rawReference": "![](images/8454ed872ca2a825cb5eeaf34a33fceb5bbf2aa64c5954f261fcd061f32fc177.jpg)",
+        "assetPath": "images/8454ed872ca2a825cb5eeaf34a33fceb5bbf2aa64c5954f261fcd061f32fc177.jpg",
+        "sourceLineNumber": 3563,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/8454ed872ca2a825cb5eeaf34a33fceb5bbf2aa64c5954f261fcd061f32fc177.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0183-3-5-l3573-l3599-72904356da",
+    "title": "【实验3-5】",
+    "summary": "【实验3-5】 向盛有少量 $0.1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液的试管里滴几滴 $0.1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{AgNO}_{3…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验3-5】",
+    "sourceLineStart": 3573,
+    "sourceLineEnd": 3599,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:72904356dac8a7a1fa9033a0fa425e14abef699b0ce6101a9b237d9b547a058f",
+    "sourceSectionId": "0183-3-5-l3573-l3599-72904356da",
+    "assets": [
+      {
+        "assetId": "0183-3-5-l3573-l3599-72904356da-asset-01",
+        "altText": "",
+        "rawReference": "![](images/b063d9e934c24868689d61f6260f54977c5b2553ccf94c3fad01a379a2c05bd3.jpg)",
+        "assetPath": "images/b063d9e934c24868689d61f6260f54977c5b2553ccf94c3fad01a379a2c05bd3.jpg",
+        "sourceLineNumber": 3580,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/b063d9e934c24868689d61f6260f54977c5b2553ccf94c3fad01a379a2c05bd3.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0186-source-section-l3651-l3688-8d6d74d0db",
+    "title": "练习与应用",
+    "summary": "练习与应用 1. 下列物质中，不能作为配合物的配位体的是（ ）。 A. $\\mathrm{NH}_{3}$ B. $\\mathrm{NH}_{4}^{+}$ C. $\\mathrm{H}_{2} \\mathrm{O}$ D. $\\math…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "练习与应用",
+    "sourceLineStart": 3651,
+    "sourceLineEnd": 3688,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:8d6d74d0db69e1ac9df48beae1b5789bb4bb19fd0c30203aea196071a4ddeb41",
+    "sourceSectionId": "0186-source-section-l3651-l3688-8d6d74d0db",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0188-source-section-l3694-l3697-4ffc60bade",
+    "title": "二、晶体结构的测定",
+    "summary": "二、晶体结构的测定 通过晶体X射线衍射实验，可对晶体结构进行测定，获得其晶胞的类型和大小、原子的种类和数目、分子的空间结构。",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "二、晶体结构的测定",
+    "sourceLineStart": 3694,
+    "sourceLineEnd": 3697,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:4ffc60bade59b70d8fa8a9fad5a2be0b6159b3212ae025059cdb3221a0bad728",
+    "sourceSectionId": "0188-source-section-l3694-l3697-4ffc60bade",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0191-source-section-l3708-l3832-7144d1b254",
+    "title": "复习与提高",
+    "summary": "复习与提高 1. 在单质的晶体中，一定不存在（ ）。 A. 离子键 B. 分子间作用力 C. 共价键 D. 金属离子与自由电子间的作用 2. 下列有关晶体的叙述中，错误的是（ ）。 A. 干冰晶体中, 每个 $\\mathrm{CO}_{2…",
+    "activityType": "inquiryReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "复习与提高",
+    "sourceLineStart": 3708,
+    "sourceLineEnd": 3832,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:7144d1b254ded941cff4f0b495f24a64cc1f28867c258bc471b2b11222cc366c",
+    "sourceSectionId": "0191-source-section-l3708-l3832-7144d1b254",
+    "assets": [
+      {
+        "assetId": "0191-source-section-l3708-l3832-7144d1b254-asset-01",
+        "altText": "",
+        "rawReference": "![](images/4d6754142746bdef98a05655c1f4716167585b945cf0ee4639d160ce53c3abb9.jpg)",
+        "assetPath": "images/4d6754142746bdef98a05655c1f4716167585b945cf0ee4639d160ce53c3abb9.jpg",
+        "sourceLineNumber": 3818,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/images/4d6754142746bdef98a05655c1f4716167585b945cf0ee4639d160ce53c3abb9.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "lab-0194-source-section-l3837-l3842-2f5ce4d76c",
+    "title": "【实验目的】",
+    "summary": "【实验目的】 1. 加深对配合物的认识。 2. 了解配合物的形成。",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 3837,
+    "sourceLineEnd": 3842,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:2f5ce4d76c6ea2fe030e11aca08e979bce2de041281474dab3f3f59ea74cccf2",
+    "sourceSectionId": "0194-source-section-l3837-l3842-2f5ce4d76c",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0195-source-section-l3843-l3848-ad49d54eab",
+    "title": "【实验用品】",
+    "summary": "【实验用品】 试管、胶头滴管。 硫酸铜溶液、氨水、硝酸银溶液、氯化钠溶液、氯化铁溶液、硫氰化钾溶液、 $\\mathrm{K}_3[\\mathrm{Fe}(\\mathrm{CN})_6]$ 溶液、蒸馏水、乙醇。",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 3843,
+    "sourceLineEnd": 3848,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:ad49d54eabf18fe1d6dfc31f7dd2ad7552fb6b6e44ecbc98621128a3eecc17b4",
+    "sourceSectionId": "0195-source-section-l3843-l3848-ad49d54eab",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0196-source-section-l3849-l3852-ec3d552191",
+    "title": "【实验原理】",
+    "summary": "【实验原理】 配合物是由中心原子或离子与一定数目的中性分子或阴离子以配位键结合而形成的一类化合物。中心离子形成配合物后性质不同于原来的金属离子，具有新的化学特性。",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验原理】",
+    "sourceLineStart": 3849,
+    "sourceLineEnd": 3852,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:ec3d55219115e2233281f768a3f5646fd2d233a18786cba886c3cd97786fae8f",
+    "sourceSectionId": "0196-source-section-l3849-l3852-ec3d552191",
+    "assets": []
+  },
+  {
+    "candidateId": "lab-0197-source-section-l3853-l3865-d7ec18ed2f",
+    "title": "【实验步骤】",
+    "summary": "【实验步骤】 1. 简单配合物的形成 序号 实验步骤 实验现象 解释 (1) 向盛有硫酸铜溶液的试管里加入氨水 继续加入氨水 再加入乙醇 (2) 向盛有氯化钠溶液的试管里滴几滴硝酸银溶液 再滴入氨水 2. 简单离子与配离子的区别 实验步骤…",
+    "activityType": "experimentReview",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 3853,
+    "sourceLineEnd": 3865,
+    "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+    "sectionHash": "sha256:d7ec18ed2fd4ee246ed072cbd3667941d617991b70d4656dff3a14603f816c8f",
+    "sourceSectionId": "0197-source-section-l3853-l3865-d7ec18ed2f",
+    "assets": []
+  }
+]

@@ -1,0 +1,40 @@
+ M .sisyphus/boulder.json
+ M .sisyphus/evidence/task-1-storage-completion-date.json
+ M .sisyphus/evidence/task-1-storage-legacy-date.json
+ M .sisyphus/evidence/task-2-storage-migration.json
+ M .sisyphus/evidence/task-6-invalid-segments.json
+ M .sisyphus/evidence/task-6-persistence-reload.json
+ M AGENTS.md
+ M dist/index.html
+ M index.html
+ M src/modules/progress.js
+ M src/styles/achievements.css
+ M src/styles/layout.css
+ M src/styles/responsive.css
+ M tests/ui/achievements-progress-coupling.spec.ts
+ M tests/ui/storage-migration.spec.ts
+?? .codegraph/
+?? .sisyphus/evidence/apply-eight-textbook-tabs-to-main/
+?? .sisyphus/evidence/task-1-final-neutral.json
+?? .sisyphus/evidence/task-1-final-structured.json
+?? .sisyphus/evidence/task-1-known-segment-structured.json
+?? .sisyphus/evidence/task-2-red-test.txt
+?? .sisyphus/evidence/task-2-test-list.txt
+?? .sisyphus/notepads/apply-eight-textbook-tabs-to-main/
+?? .sisyphus/notepads/learning-module-content-first-redesign/
+?? .sisyphus/plans/apply-eight-textbook-tabs-to-main.md
+?? .sisyphus/plans/learning-module-content-first-redesign.md
+?? .sisyphus/plans/missing-textbook-learning-cards.md
+?? .sisyphus/run-continuation/ses_1ad77f46dffeVUpRykDlNvRqkl.json
+?? .sisyphus/run-continuation/ses_1ad7b5696ffec12LqqtxfV3DCk.json
+?? .sisyphus/run-continuation/ses_1ae1b2cb6ffeurkbeXBmoRFeQj.json
+?? .sisyphus/run-continuation/ses_1b08624a8ffeXbkpb7gwHaA2FL.json
+?? .sisyphus/run-continuation/ses_1b0fe9aa1ffesR6zX24py4ZjJe.json
+?? .sisyphus/run-continuation/ses_1b4f4bf74ffe0Ck5PjIs07EPm1.json
+?? .sisyphus/run-continuation/ses_1b65875daffet5lUDdzw9Re5Ka.json
+?? .sisyphus/run-continuation/ses_1b66b8f84ffedy8L98ZdkZYIeV.json
+?? .sisyphus/run-continuation/ses_1b67ccaafffeUYtMldOhMtU3L0.json
+?? .sisyphus/run-continuation/ses_1b67dcd05ffe9t8c2GQEl6MeKX.json
+?? session-ses_1b65.md
+?? tests/content/pep-learning-tabs.spec.ts
+?? tests/ui/learning-content-modal.spec.ts

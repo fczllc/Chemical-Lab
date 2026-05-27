@@ -1,0 +1,45 @@
+Task 4 Static Evidence Report (FINAL - Order Fix)
+==================================================
+
+Date: 2026-05-27
+File: src/modules/progress.js
+
+[PASS] KNOWN_TEXTBOOK_ORDER declared with actual runtime IDs
+[PASS] Actual order matches Definition-of-Done:
+       1. rj-chemistry-grade8-54-2024-full       -> 八年级·全册
+       2. rj-chemistry-grade9-2024-vol1          -> 九年级·上册
+       3. rj-chemistry-grade9-2024-vol2          -> 九年级·下册
+       4. pep-chemistry-g10-required-1           -> 高一/10年级·必修第一册
+       5. pep-chemistry-g10-required-2           -> 高一/10年级·必修第二册
+       6. pep-chemistry-g11-selective-1          -> 高二/11年级·选择性必修一·反应原理
+       7. pep-chemistry-g11-selective-2          -> 高二/11年级·选择性必修二·物质结构与性质
+       8. rj-chemistry-g12-selective-3-organic-2019 -> 高三/12年级·有机基础
+[PASS] All 8 actual data sourceVolumeIds are in KNOWN_TEXTBOOK_ORDER
+[PASS] TEXTBOOK_TAB_LABELS maps all 8 IDs to clean Chinese labels
+[PASS] data-textbook-tab attribute in tab buttons
+[PASS] data-textbook-panel attribute in panel divs
+[PASS] .progress-textbook-tabs CSS class on tab bar
+[PASS] .textbook-panel CSS class on panels
+[PASS] data-testid="learning-card" on cards
+[PASS] renderProgress renders full dashboard (progress-dashboard, progress-stat-grid)
+[PASS] renderProgress renders learning path (progress-learning-path, stage cards, detail)
+[PASS] renderManualLearningSection renders tabs+panels wrapper
+[PASS] bindStageInteractions handles tab clicks (sets activeTextbookId, toggles is-active)
+[PASS] bindStageInteractions preserves lesson modal handlers
+[PASS] No raw pep-chemistry in rendered labels
+[PASS] No 人教版 in labels
+[PASS] No 2019 in labels
+[PASS] No 2024 in labels
+[PASS] rj aliases for backward compat preserved in TEXTBOOK_TAB_LABELS
+[PASS] __progressTestHooks preserved
+[PASS] lsp_diagnostics: 0 errors
+[PASS] npm run build: passes (exit 0)
+
+Order assertion output:
+  Actual sourceVolumeIds in data: [all 8 IDs confirmed present]
+  KNOWN_TEXTBOOK_ORDER: [correct rj+pep order]
+  Expected labels: [八年级·全册 ... 高三/12年级·有机基础]
+  Actual labels:   [八年级·全册 ... 高三/12年级·有机基础]
+  Labels match: true
+
+Total: 24/24 checks passed

@@ -278,6 +278,12631 @@ export const GAME_META = {
 
 export const TEXTBOOK_CHALLENGE_METADATA = [
   {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0002-source-section-l7-l60-82e6234c19-promote-knowledge-topic-0002-source-section-l7-l60-82e6234c19-game-challenge-game-0002-source-section-l7-l60-82e6234c19",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0002-source-section-l7-l60-82e6234c19-promote-knowledge-topic-0002-source-section-l7-l60-82e6234c19-game-challenge-game-0002-source-section-l7-l60-82e6234c19",
+    "title": "教材中设置的主要栏目及说明挑战草稿",
+    "summary": "教材中设置的主要栏目及说明 【实验X-X】 科学史话 针对相关内容设置的实验，可教师演示、边讲边做或学生自己完成 有关化学家、化学史料和化学发现等的拓展性内容 探究 科学·技术·社会 体现探究过程和思路的活动，以实验为主，兼顾其他形式 有…",
+    "curriculumTags": [
+      "knowledge-topic-0002-source-section-l7-l60-82e6234c19"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0002-source-section-l7-l60-82e6234c19-promote-knowledge-topic-0002-source-section-l7-l60-82e6234c19-game-challenge-game-0002-source-section-l7-l60-82e6234c19-review",
+        "label": "教材中设置的主要栏目及说明挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0002-source-section-l7-l60-82e6234c19"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "教材中设置的主要栏目及说明",
+        "lineRange": "7-60",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0002-source-section-l7-l60-82e6234c19",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0002-source-section-l7-l60-82e6234c19-asset-01",
+            "sourceLineNumber": 16
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0002-source-section-l7-l60-82e6234c19-game-challenge-game-0002-source-section-l7-l60-82e6234c19"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-promote-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-game-challenge-game-0014-source-section-l185-l190-f8c2f91c30",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-promote-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-game-challenge-game-0014-source-section-l185-l190-f8c2f91c30",
+    "title": "与实验有关的图标及说明挑战草稿",
+    "summary": "与实验有关的图标及说明 护目镜 进行化学实验需要佩戴护目镜，以保护眼睛 洗手 实验结束后，离开实验室前需用肥皂等清洗双手 用电 实验中会用到电器。禁止湿手操作，实验完毕应及时切断电源 排风 实验中会用到或产生有害气体，或产生烟、雾。应开启…",
+    "curriculumTags": [
+      "knowledge-topic-0014-source-section-l185-l190-f8c2f91c30"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-promote-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-game-challenge-game-0014-source-section-l185-l190-f8c2f91c30-review",
+        "label": "与实验有关的图标及说明挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0014-source-section-l185-l190-f8c2f91c30"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "与实验有关的图标及说明",
+        "lineRange": "185-190",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0014-source-section-l185-l190-f8c2f91c30",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-game-challenge-game-0014-source-section-l185-l190-f8c2f91c30"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0018-source-section-l208-l221-e7313dd125-promote-knowledge-topic-0018-source-section-l208-l221-e7313dd125-game-challenge-game-0018-source-section-l208-l221-e7313dd125",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0018-source-section-l208-l221-e7313dd125-promote-knowledge-topic-0018-source-section-l208-l221-e7313dd125-game-challenge-game-0018-source-section-l208-l221-e7313dd125",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 酸的主要化学性质归纳如下, 请列举反应实例, 完成下表。 酸的主要化学性质 反应实例（写出化学方程式） 酸与活泼金属反应 酸与碱性氧化物反应 酸与碱反应 酸与某些盐反应 (2) 请分别归纳碱和盐这两类物质的主要化学性质…",
+    "curriculumTags": [
+      "knowledge-topic-0018-source-section-l208-l221-e7313dd125"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0018-source-section-l208-l221-e7313dd125-promote-knowledge-topic-0018-source-section-l208-l221-e7313dd125-game-challenge-game-0018-source-section-l208-l221-e7313dd125-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0018-source-section-l208-l221-e7313dd125"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "208-221",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0018-source-section-l208-l221-e7313dd125",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0018-source-section-l208-l221-e7313dd125-game-challenge-game-0018-source-section-l208-l221-e7313dd125"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0020-source-section-l229-l258-8401ab8245-promote-knowledge-topic-0020-source-section-l229-l258-8401ab8245-game-challenge-game-0020-source-section-l229-l258-8401ab8245",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0020-source-section-l229-l258-8401ab8245-promote-knowledge-topic-0020-source-section-l229-l258-8401ab8245-game-challenge-game-0020-source-section-l229-l258-8401ab8245",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 写出下列物质之间转化的化学方程式, 体会由金属单质到盐、非金属单质到盐的转化关系。 $ \\mathrm {C a} \\rightarrow \\mathrm {C a O} \\rightarrow \\mathrm {C…",
+    "curriculumTags": [
+      "knowledge-topic-0020-source-section-l229-l258-8401ab8245"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0020-source-section-l229-l258-8401ab8245-promote-knowledge-topic-0020-source-section-l229-l258-8401ab8245-game-challenge-game-0020-source-section-l229-l258-8401ab8245-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0020-source-section-l229-l258-8401ab8245"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "229-258",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0020-source-section-l229-l258-8401ab8245",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0020-source-section-l229-l258-8401ab8245-asset-01",
+            "sourceLineNumber": 245
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0020-source-section-l229-l258-8401ab8245-game-challenge-game-0020-source-section-l229-l258-8401ab8245"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-promote-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-game-challenge-game-0022-source-section-l261-l275-5cd2d2ea6a",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-promote-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-game-challenge-game-0022-source-section-l261-l275-5cd2d2ea6a",
+    "title": "化学科研工作者挑战草稿",
+    "summary": "化学科研工作者 化学科研工作者是指从事与化学有关的基础研究和应用研究的专业技术人员。其主要工作是：在原子、分子水平上研究物质的组成、结构、性质及相互关系；研究物质转化的规律和控制手段；在此基础上，研究如何实现物质的人工转化，以及如何对生活…",
+    "curriculumTags": [
+      "knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-promote-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-game-challenge-game-0022-source-section-l261-l275-5cd2d2ea6a-review",
+        "label": "化学科研工作者挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "化学科研工作者",
+        "lineRange": "261-275",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0022-source-section-l261-l275-5cd2d2ea6a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-game-challenge-game-0022-source-section-l261-l275-5cd2d2ea6a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0023-source-section-l276-l337-ac091172ff-promote-knowledge-topic-0023-source-section-l276-l337-ac091172ff-game-challenge-game-0023-source-section-l276-l337-ac091172ff",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0023-source-section-l276-l337-ac091172ff-promote-knowledge-topic-0023-source-section-l276-l337-ac091172ff-game-challenge-game-0023-source-section-l276-l337-ac091172ff",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 阅读下列科普短文并填空。 燃料电池是一种化学电池，具有能量转化率高、对环境友好等优点。例如，氢氧燃料电池在工作时，从负极连续通入 $\\mathrm{H}_{2}$ ，从正极连续通入 $\\mathrm{O}_{2}$ ，二…",
+    "curriculumTags": [
+      "knowledge-topic-0023-source-section-l276-l337-ac091172ff"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0023-source-section-l276-l337-ac091172ff-promote-knowledge-topic-0023-source-section-l276-l337-ac091172ff-game-challenge-game-0023-source-section-l276-l337-ac091172ff-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0023-source-section-l276-l337-ac091172ff"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "276-337",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0023-source-section-l276-l337-ac091172ff",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0023-source-section-l276-l337-ac091172ff-game-challenge-game-0023-source-section-l276-l337-ac091172ff"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0027-source-section-l411-l419-0408a89c70-promote-knowledge-topic-0027-source-section-l411-l419-0408a89c70-game-challenge-game-0027-source-section-l411-l419-0408a89c70",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0027-source-section-l411-l419-0408a89c70-promote-knowledge-topic-0027-source-section-l411-l419-0408a89c70-game-challenge-game-0027-source-section-l411-l419-0408a89c70",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 请写出 $\\mathrm{NaOH} 、 \\mathrm{Ca(OH)}_{2} 、 \\mathrm{Ba(OH)}_{2}$ 的电离方程式。 (2) 请结合以上电离方程式, 并参考酸的本质,尝试从电离的角度概括出碱的…",
+    "curriculumTags": [
+      "knowledge-topic-0027-source-section-l411-l419-0408a89c70"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0027-source-section-l411-l419-0408a89c70-promote-knowledge-topic-0027-source-section-l411-l419-0408a89c70-game-challenge-game-0027-source-section-l411-l419-0408a89c70-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0027-source-section-l411-l419-0408a89c70"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "411-419",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0027-source-section-l411-l419-0408a89c70",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0027-source-section-l411-l419-0408a89c70-game-challenge-game-0027-source-section-l411-l419-0408a89c70"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0032-source-section-l478-l612-61a10c875e-promote-knowledge-topic-0032-source-section-l478-l612-61a10c875e-game-challenge-game-0032-source-section-l478-l612-61a10c875e",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0032-source-section-l478-l612-61a10c875e-promote-knowledge-topic-0032-source-section-l478-l612-61a10c875e-game-challenge-game-0032-source-section-l478-l612-61a10c875e",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 完成下表中各反应的化学方程式和离子方程式，思考两种方程式在表示某一类反应时，表达的含义有什么不同，并进行讨论。 反应物 化学方程式 离子方程式 两种方程式的不同 HCI+NaOH HCI+KOH H2SO4+NaOH H2SO…",
+    "curriculumTags": [
+      "knowledge-topic-0032-source-section-l478-l612-61a10c875e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0032-source-section-l478-l612-61a10c875e-promote-knowledge-topic-0032-source-section-l478-l612-61a10c875e-game-challenge-game-0032-source-section-l478-l612-61a10c875e-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0032-source-section-l478-l612-61a10c875e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "478-612",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0032-source-section-l478-l612-61a10c875e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0032-source-section-l478-l612-61a10c875e-asset-01",
+            "sourceLineNumber": 588
+          },
+          {
+            "assetId": "0032-source-section-l478-l612-61a10c875e-asset-02",
+            "sourceLineNumber": 603
+          },
+          {
+            "assetId": "0032-source-section-l478-l612-61a10c875e-asset-03",
+            "sourceLineNumber": 608
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0032-source-section-l478-l612-61a10c875e-game-challenge-game-0032-source-section-l478-l612-61a10c875e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-promote-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-game-challenge-game-0035-source-section-l620-l676-c15b55fc8a",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-promote-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-game-challenge-game-0035-source-section-l620-l676-c15b55fc8a",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 请根据初中学过的氧化反应和还原反应的知识, 分析以下反应, 完成下表。 $ \\begin{array}{l} 2 \\mathrm {C u O} + \\mathrm {C} \\stackrel {\\text {高 温…",
+    "curriculumTags": [
+      "knowledge-topic-0035-source-section-l620-l676-c15b55fc8a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-promote-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-game-challenge-game-0035-source-section-l620-l676-c15b55fc8a-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0035-source-section-l620-l676-c15b55fc8a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "620-676",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0035-source-section-l620-l676-c15b55fc8a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0035-source-section-l620-l676-c15b55fc8a-asset-01",
+            "sourceLineNumber": 642
+          },
+          {
+            "assetId": "0035-source-section-l620-l676-c15b55fc8a-asset-02",
+            "sourceLineNumber": 651
+          },
+          {
+            "assetId": "0035-source-section-l620-l676-c15b55fc8a-asset-03",
+            "sourceLineNumber": 654
+          },
+          {
+            "assetId": "0035-source-section-l620-l676-c15b55fc8a-asset-04",
+            "sourceLineNumber": 663
+          },
+          {
+            "assetId": "0035-source-section-l620-l676-c15b55fc8a-asset-05",
+            "sourceLineNumber": 670
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-game-challenge-game-0035-source-section-l620-l676-c15b55fc8a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-promote-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-game-challenge-game-0038-source-section-l723-l837-4b9f15ca8b",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-promote-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-game-challenge-game-0038-source-section-l723-l837-4b9f15ca8b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 目前, 汽车尾气系统中均安装了催化转化器 (如图 1- 17)。在催化转化器中, 汽车尾气中的 $\\mathrm{CO}$ 和 $\\mathrm{NO}$ 在催化剂的作用下发生反应, 生成 $\\mathrm{CO}_{2}$ …",
+    "curriculumTags": [
+      "knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-promote-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-game-challenge-game-0038-source-section-l723-l837-4b9f15ca8b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "723-837",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0038-source-section-l723-l837-4b9f15ca8b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-game-challenge-game-0038-source-section-l723-l837-4b9f15ca8b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-promote-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-game-challenge-game-0048-source-section-l882-l994-1472cdf47d",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-promote-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-game-challenge-game-0048-source-section-l882-l994-1472cdf47d",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 现有下列4组物质： A. CaO、MgO、 $\\mathrm{CO}_{2}$ 、 $\\mathrm{CuO}$ B. $\\mathrm{H}_{2} 、 \\mathrm{Cl}_{2} 、 \\mathrm{~N}_{2…",
+    "curriculumTags": [
+      "knowledge-topic-0048-source-section-l882-l994-1472cdf47d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-promote-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-game-challenge-game-0048-source-section-l882-l994-1472cdf47d-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0048-source-section-l882-l994-1472cdf47d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "882-994",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0048-source-section-l882-l994-1472cdf47d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0048-source-section-l882-l994-1472cdf47d-asset-01",
+            "sourceLineNumber": 980
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-game-challenge-game-0048-source-section-l882-l994-1472cdf47d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0066-source-section-l1128-l1138-492553879c-promote-knowledge-topic-0066-source-section-l1128-l1138-492553879c-game-challenge-game-0066-source-section-l1128-l1138-492553879c",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0066-source-section-l1128-l1138-492553879c-promote-knowledge-topic-0066-source-section-l1128-l1138-492553879c-game-challenge-game-0066-source-section-l1128-l1138-492553879c",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 回忆前面做过的实验, 描述氧化钠和过氧化钠的颜色、状态。 (2) 氧化钠与水的反应和氧化钙与水的反应类似, 请写出氧化钠与水反应的化学方程式。 从物质分类的角度来看，氧化钠和过氧化钠都属于氧化物。氧化钠与水反应生成氢氧…",
+    "curriculumTags": [
+      "knowledge-topic-0066-source-section-l1128-l1138-492553879c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0066-source-section-l1128-l1138-492553879c-promote-knowledge-topic-0066-source-section-l1128-l1138-492553879c-game-challenge-game-0066-source-section-l1128-l1138-492553879c-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0066-source-section-l1128-l1138-492553879c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1128-1138",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0066-source-section-l1128-l1138-492553879c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0066-source-section-l1128-l1138-492553879c-game-challenge-game-0066-source-section-l1128-l1138-492553879c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-promote-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-game-challenge-game-0073-2-6-l1244-l1262-c0708d9cda",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-promote-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-game-challenge-game-0073-2-6-l1244-l1262-c0708d9cda",
+    "title": "【实验2-6】挑战草稿",
+    "summary": "【实验2-6】 把熔嵌在玻璃棒上的铂丝（或用光洁无锈的铁丝）放在酒精灯（最好用煤气灯）外焰上灼烧，至与原来的火焰颜色相同时为止。用铂丝（或铁丝）蘸取碳酸钠溶液，在外焰上灼烧，观察火焰的颜色。 将铂丝（或铁丝）用盐酸洗净后，在外焰上灼烧至与…",
+    "curriculumTags": [
+      "knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-promote-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-game-challenge-game-0073-2-6-l1244-l1262-c0708d9cda-review",
+        "label": "【实验2-6】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【实验2-6】",
+        "lineRange": "1244-1262",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0073-2-6-l1244-l1262-c0708d9cda",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0073-2-6-l1244-l1262-c0708d9cda-game-challenge-game-0073-2-6-l1244-l1262-c0708d9cda"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-promote-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-game-challenge-game-0077-source-section-l1284-l1291-e1c5a4d765",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-promote-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-game-challenge-game-0077-source-section-l1284-l1291-e1c5a4d765",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 (1) 查阅资料, 了解路布兰制碱法、索尔维制碱法、侯氏制碱法的原理。 (2) 根据所查阅的资料, 分析后一种制碱法与前一种制碱法相比所具有的优势。 (3) 从生态文明建设的角度, 思考侯氏制碱法的意义。",
+    "curriculumTags": [
+      "knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-promote-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-game-challenge-game-0077-source-section-l1284-l1291-e1c5a4d765-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "1284-1291",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0077-source-section-l1284-l1291-e1c5a4d765",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0077-source-section-l1284-l1291-e1c5a4d765-game-challenge-game-0077-source-section-l1284-l1291-e1c5a4d765"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-promote-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-game-challenge-game-0078-source-section-l1292-l1355-3a48494051",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-promote-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-game-challenge-game-0078-source-section-l1292-l1355-3a48494051",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 从科学家对纯碱生产的研究中, 你得到什么启示? (2) 以纯碱的生产为线索，完成研究报告，并与同学讨论。 1. 除去 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 粉末中混有的少量 $\\mat…",
+    "curriculumTags": [
+      "knowledge-topic-0078-source-section-l1292-l1355-3a48494051"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-promote-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-game-challenge-game-0078-source-section-l1292-l1355-3a48494051-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0078-source-section-l1292-l1355-3a48494051"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "1292-1355",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0078-source-section-l1292-l1355-3a48494051",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0078-source-section-l1292-l1355-3a48494051-game-challenge-game-0078-source-section-l1292-l1355-3a48494051"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-promote-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-game-challenge-game-0081-source-section-l1371-l1375-91469b6311",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-promote-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-game-challenge-game-0081-source-section-l1371-l1375-91469b6311",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 从氯气的发现到氯被确认为一种新的元素，时间长达三十多年，其间经历了数位科学家的不懈探索。你从这一史实中得到什么启示？",
+    "curriculumTags": [
+      "knowledge-topic-0081-source-section-l1371-l1375-91469b6311"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-promote-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-game-challenge-game-0081-source-section-l1371-l1375-91469b6311-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0081-source-section-l1371-l1375-91469b6311"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1371-1375",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0081-source-section-l1371-l1375-91469b6311",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0081-source-section-l1371-l1375-91469b6311-game-challenge-game-0081-source-section-l1371-l1375-91469b6311"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-promote-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-game-challenge-game-0087-source-section-l1426-l1429-bba9b33b7d",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-promote-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-game-challenge-game-0087-source-section-l1426-l1429-bba9b33b7d",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 我们以前学过的燃烧反应，都是物质在氧气中的燃烧。通过 $\\mathrm{H}_{2}$ 在 $\\mathrm{Cl}_{2}$ 中的燃烧，你对燃烧的条件及其本质有什么新的认识？",
+    "curriculumTags": [
+      "knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-promote-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-game-challenge-game-0087-source-section-l1426-l1429-bba9b33b7d-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1426-1429",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0087-source-section-l1426-l1429-bba9b33b7d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0087-source-section-l1426-l1429-bba9b33b7d-game-challenge-game-0087-source-section-l1426-l1429-bba9b33b7d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-promote-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-game-challenge-game-0090-source-section-l1471-l1476-77f07ed9a3",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-promote-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-game-challenge-game-0090-source-section-l1471-l1476-77f07ed9a3",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 氯气是一种有毒气体，但控制氯气的用量，使水中余氯的含量达到国家饮用水标准，氯气可用于自来水的杀菌、消毒。使用氯气对自来水消毒时可能产生一些负面影响，因此，人们已开始使用一些新型自来水消毒剂。从中你能得到什么启示？",
+    "curriculumTags": [
+      "knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-promote-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-game-challenge-game-0090-source-section-l1471-l1476-77f07ed9a3-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1471-1476",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0090-source-section-l1471-l1476-77f07ed9a3",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0090-source-section-l1471-l1476-77f07ed9a3-game-challenge-game-0090-source-section-l1471-l1476-77f07ed9a3"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-promote-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-game-challenge-game-0095-source-section-l1575-l1581-4ddc34c912",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-promote-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-game-challenge-game-0095-source-section-l1575-l1581-4ddc34c912",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 观察图2-17所示的装置, 你能说出其中 $\\mathrm{NaOH}$ 溶液的作用吗? (2) 结合初中所学的氧气、二氧化碳等气体的实验室制取方法讨论: 在设计实验室制取气体的装置时, 应考虑哪些方面?",
+    "curriculumTags": [
+      "knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-promote-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-game-challenge-game-0095-source-section-l1575-l1581-4ddc34c912-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1575-1581",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0095-source-section-l1575-l1581-4ddc34c912",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0095-source-section-l1575-l1581-4ddc34c912-game-challenge-game-0095-source-section-l1575-l1581-4ddc34c912"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-promote-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-game-challenge-game-0097-source-section-l1584-l1591-f6f5453831",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-promote-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-game-challenge-game-0097-source-section-l1584-l1591-f6f5453831",
+    "title": "实验室中制取气体装置的设计挑战草稿",
+    "summary": "实验室中制取气体装置的设计 实验室中制取气体的装置包括发生装置和收集装置，根据实际需要，还可增加除杂装置和尾气处理装置等。 选择各部分装置时，应注意：依据反应物的状态和反应条件，选择气体的发生装置；依据气体及其所含杂质的性质，选择除杂装置…",
+    "curriculumTags": [
+      "knowledge-topic-0097-source-section-l1584-l1591-f6f5453831"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-promote-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-game-challenge-game-0097-source-section-l1584-l1591-f6f5453831-review",
+        "label": "实验室中制取气体装置的设计挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0097-source-section-l1584-l1591-f6f5453831"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "实验室中制取气体装置的设计",
+        "lineRange": "1584-1591",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0097-source-section-l1584-l1591-f6f5453831",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0097-source-section-l1584-l1591-f6f5453831-game-challenge-game-0097-source-section-l1584-l1591-f6f5453831"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-promote-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-game-challenge-game-0099-2-9-l1599-l1627-d0b3defae1",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-promote-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-game-challenge-game-0099-2-9-l1599-l1627-d0b3defae1",
+    "title": "【实验2-9】挑战草稿",
+    "summary": "【实验2-9】 在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然后各滴入几滴 $\\mat…",
+    "curriculumTags": [
+      "knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-promote-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-game-challenge-game-0099-2-9-l1599-l1627-d0b3defae1-review",
+        "label": "【实验2-9】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【实验2-9】",
+        "lineRange": "1599-1627",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0099-2-9-l1599-l1627-d0b3defae1",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0099-2-9-l1599-l1627-d0b3defae1-game-challenge-game-0099-2-9-l1599-l1627-d0b3defae1"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-promote-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-game-challenge-game-0101-source-section-l1630-l1712-6c8f549f39",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-promote-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-game-challenge-game-0101-source-section-l1630-l1712-6c8f549f39",
+    "title": "水质检验员挑战草稿",
+    "summary": "水质检验员 水质检验员是指对天然水、工业用水、生活用水等的物理性质、化学性质及生物性质进行检验和评定的专业技术人员。水质检验的目的是考察和研究环境质量、水的污染性或水受污染的程度、水质是否适宜使用，以及水处理过程的效率等。自来水厂，污水处…",
+    "curriculumTags": [
+      "knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-promote-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-game-challenge-game-0101-source-section-l1630-l1712-6c8f549f39-review",
+        "label": "水质检验员挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "水质检验员",
+        "lineRange": "1630-1712",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0101-source-section-l1630-l1712-6c8f549f39",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0101-source-section-l1630-l1712-6c8f549f39-asset-01",
+            "sourceLineNumber": 1657
+          },
+          {
+            "assetId": "0101-source-section-l1630-l1712-6c8f549f39-asset-02",
+            "sourceLineNumber": 1684
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0101-source-section-l1630-l1712-6c8f549f39-game-challenge-game-0101-source-section-l1630-l1712-6c8f549f39"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-promote-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-game-challenge-game-0106-source-section-l1810-l1833-5244326b12",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-promote-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-game-challenge-game-0106-source-section-l1810-l1833-5244326b12",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 在一定条件下， $1\\mathrm{mol}$ 不同物质的体积如下表所示。观察并分析表中的数据，你能得出哪些结论？与同学讨论。 气体 0℃、101kPa时的体积/L 液体 20℃时的体积/cm3 固体 20℃时的体积/cm3 …",
+    "curriculumTags": [
+      "knowledge-topic-0106-source-section-l1810-l1833-5244326b12"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-promote-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-game-challenge-game-0106-source-section-l1810-l1833-5244326b12-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0106-source-section-l1810-l1833-5244326b12"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1810-1833",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0106-source-section-l1810-l1833-5244326b12",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0106-source-section-l1810-l1833-5244326b12-game-challenge-game-0106-source-section-l1810-l1833-5244326b12"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-promote-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-game-challenge-game-0113-source-section-l1959-l2043-65b82a7093",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-promote-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-game-challenge-game-0113-source-section-l1959-l2043-65b82a7093",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 为什么要用蒸馏水洗涤烧杯内壁和玻璃棒 $2 \\sim 3$ 次, 并将洗涤液也都注入容量瓶? (2) 如果将烧杯中的溶液转移到容量瓶时不慎洒到容量瓶外, 最后配成的溶液中溶质的实际浓度比所要求的大了还是小了? (3) …",
+    "curriculumTags": [
+      "knowledge-topic-0113-source-section-l1959-l2043-65b82a7093"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-promote-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-game-challenge-game-0113-source-section-l1959-l2043-65b82a7093-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0113-source-section-l1959-l2043-65b82a7093"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1959-2043",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0113-source-section-l1959-l2043-65b82a7093",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0113-source-section-l1959-l2043-65b82a7093-asset-01",
+            "sourceLineNumber": 2041
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0113-source-section-l1959-l2043-65b82a7093-game-challenge-game-0113-source-section-l1959-l2043-65b82a7093"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-promote-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-game-challenge-game-0118-1-l2070-l2077-7e31aab7af",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-promote-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-game-challenge-game-0118-1-l2070-l2077-7e31aab7af",
+    "title": "（1）分类认识物质的性质。挑战草稿",
+    "summary": "（1）分类认识物质的性质。 请选择钠、过氧化钠、碳酸钠和碳酸氢钠中的一种或几种，列表总结其物理性质、化学性质和用途等。 (2) 基于性质, 认识实验室制取物质的方法, 了解物质的用途。 请以氯气为例进行说明。",
+    "curriculumTags": [
+      "knowledge-topic-0118-1-l2070-l2077-7e31aab7af"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-promote-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-game-challenge-game-0118-1-l2070-l2077-7e31aab7af-review",
+        "label": "（1）分类认识物质的性质。挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0118-1-l2070-l2077-7e31aab7af"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "（1）分类认识物质的性质。",
+        "lineRange": "2070-2077",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0118-1-l2070-l2077-7e31aab7af",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0118-1-l2070-l2077-7e31aab7af-game-challenge-game-0118-1-l2070-l2077-7e31aab7af"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-promote-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-game-challenge-game-0123-source-section-l2105-l2229-b9eed93ebf",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-promote-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-game-challenge-game-0123-source-section-l2105-l2229-b9eed93ebf",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1.下列物质中，既含有氯分子，又含有氯离子的是（ ）。 A. 氯化钠溶液 B. 新制氯水 C. 漂白粉 D. 液氯 2.下列物质中，不能由单质直接化合生成的是（ ）。 A. $\\mathrm{CuCl}_2$ B. $\\mat…",
+    "curriculumTags": [
+      "knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-promote-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-game-challenge-game-0123-source-section-l2105-l2229-b9eed93ebf-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "2105-2229",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0123-source-section-l2105-l2229-b9eed93ebf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0123-source-section-l2105-l2229-b9eed93ebf-asset-01",
+            "sourceLineNumber": 2183
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0123-source-section-l2105-l2229-b9eed93ebf-game-challenge-game-0123-source-section-l2105-l2229-b9eed93ebf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-promote-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-game-challenge-game-0126-source-section-l2234-l2241-de1c4e3525",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-promote-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-game-challenge-game-0126-source-section-l2234-l2241-de1c4e3525",
+    "title": "【实验目的】挑战草稿",
+    "summary": "【实验目的】 1. 练习容量瓶的使用方法。 2. 练习配制一定物质的量浓度的溶液。 3. 加深对物质的量浓度概念的认识。",
+    "curriculumTags": [
+      "knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-promote-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-game-challenge-game-0126-source-section-l2234-l2241-de1c4e3525-review",
+        "label": "【实验目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【实验目的】",
+        "lineRange": "2234-2241",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0126-source-section-l2234-l2241-de1c4e3525",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0126-source-section-l2234-l2241-de1c4e3525-game-challenge-game-0126-source-section-l2234-l2241-de1c4e3525"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-promote-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-game-challenge-game-0129-source-section-l2291-l2294-39baccb883",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-promote-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-game-challenge-game-0129-source-section-l2291-l2294-39baccb883",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 将烧杯中的溶液注入容量瓶以后，为什么要用蒸馏水洗涤烧杯内壁和玻璃棒2~3次，并将洗涤液也都注入容量瓶？",
+    "curriculumTags": [
+      "knowledge-topic-0129-source-section-l2291-l2294-39baccb883"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-promote-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-game-challenge-game-0129-source-section-l2291-l2294-39baccb883-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0129-source-section-l2291-l2294-39baccb883"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "2291-2294",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0129-source-section-l2291-l2294-39baccb883",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0129-source-section-l2291-l2294-39baccb883-game-challenge-game-0129-source-section-l2291-l2294-39baccb883"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-promote-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-game-challenge-game-0134-source-section-l2334-l2354-5a117adaec",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-promote-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-game-challenge-game-0134-source-section-l2334-l2354-5a117adaec",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 我们学习过铁与一些物质的反应，例如，铁与氯气的反应，铁与盐酸的反应，铁与硫酸铜溶液的反应等。在上述三个反应中，铁的化合价的变化有何异同？为什么会有这样的异同？ 在一定条件下，铁作为还原剂能与某些非金属单质、酸和盐溶液反应。铁与…",
+    "curriculumTags": [
+      "knowledge-topic-0134-source-section-l2334-l2354-5a117adaec"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-promote-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-game-challenge-game-0134-source-section-l2334-l2354-5a117adaec-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0134-source-section-l2334-l2354-5a117adaec"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2334-2354",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0134-source-section-l2334-l2354-5a117adaec",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0134-source-section-l2334-l2354-5a117adaec-game-challenge-game-0134-source-section-l2334-l2354-5a117adaec"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-promote-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-game-challenge-game-0136-source-section-l2370-l2389-ed81048040",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-promote-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-game-challenge-game-0136-source-section-l2370-l2389-ed81048040",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 有人设计了如图3-5所示的装置，进行还原铁粉与水蒸气反应的实验。请讨论该装置的实验原理，并根据实验现象，分析可能的生成物。 图3-5 铁粉与水蒸气反应 在这一实验中，红热的铁能与水蒸气发生反应，生成四氧化三铁和氢气。 $ 3…",
+    "curriculumTags": [
+      "knowledge-topic-0136-source-section-l2370-l2389-ed81048040"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-promote-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-game-challenge-game-0136-source-section-l2370-l2389-ed81048040-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0136-source-section-l2370-l2389-ed81048040"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2370-2389",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0136-source-section-l2370-l2389-ed81048040",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0136-source-section-l2370-l2389-ed81048040-asset-01",
+            "sourceLineNumber": 2374
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0136-source-section-l2370-l2389-ed81048040-game-challenge-game-0136-source-section-l2370-l2389-ed81048040"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-promote-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-game-challenge-game-0138-source-section-l2392-l2403-6a4f2d9082",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-promote-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-game-challenge-game-0138-source-section-l2392-l2403-6a4f2d9082",
+    "title": "人体中的铁元素挑战草稿",
+    "summary": "人体中的铁元素 铁在成人体中的含量为 $4 \\sim 5 \\mathrm{~g}$ , 是人体必需微量元素中含量最多的一种。人体内的含铁化合物主要分为两类, 即功能性铁和储存铁。功能性铁参与氧的运输, 其余的铁与一些酶结合, 分布于身体各…",
+    "curriculumTags": [
+      "knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-promote-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-game-challenge-game-0138-source-section-l2392-l2403-6a4f2d9082-review",
+        "label": "人体中的铁元素挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "人体中的铁元素",
+        "lineRange": "2392-2403",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0138-source-section-l2392-l2403-6a4f2d9082",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0138-source-section-l2392-l2403-6a4f2d9082-game-challenge-game-0138-source-section-l2392-l2403-6a4f2d9082"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-promote-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-game-challenge-game-0143-source-section-l2474-l2477-4aeec4c85c",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-promote-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-game-challenge-game-0143-source-section-l2474-l2477-4aeec4c85c",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 由实验3-1可知，白色的 $\\mathrm{Fe(OH)}_2$ 会被溶解在溶液中的氧气氧化。那么，在实验室里，如何得到 $\\mathrm{Fe(OH)}_2$ 呢？",
+    "curriculumTags": [
+      "knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-promote-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-game-challenge-game-0143-source-section-l2474-l2477-4aeec4c85c-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2474-2477",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0143-source-section-l2474-l2477-4aeec4c85c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0143-source-section-l2474-l2477-4aeec4c85c-game-challenge-game-0143-source-section-l2474-l2477-4aeec4c85c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-promote-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-game-challenge-game-0147-source-section-l2529-l2535-23a02e1cf7",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-promote-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-game-challenge-game-0147-source-section-l2529-l2535-23a02e1cf7",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) $\\mathrm{Fe} 、 \\mathrm{FeSO}_{4}$ 和 $\\mathrm{Fe}_{2}(\\mathrm{SO}_{4})_{3}$ 三种物质中, 哪种物质可做氧化剂, 哪种可做还原剂, 哪种既可做氧化…",
+    "curriculumTags": [
+      "knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-promote-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-game-challenge-game-0147-source-section-l2529-l2535-23a02e1cf7-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2529-2535",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0147-source-section-l2529-l2535-23a02e1cf7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0147-source-section-l2529-l2535-23a02e1cf7-game-challenge-game-0147-source-section-l2529-l2535-23a02e1cf7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-promote-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-game-challenge-game-0154-source-section-l2575-l2580-9437a78c8a",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-promote-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-game-challenge-game-0154-source-section-l2575-l2580-9437a78c8a",
+    "title": "【思考与讨论】挑战草稿",
+    "summary": "【思考与讨论】 （1）在上述实验中，发生了什么化学反应，生成的主要产物是什么？请运用氧化还原反应的规律进行分析，并尝试写出反应的化学方程式。 (2) 为使使用后的“腐蚀液”能得到充分利用, 如何处理使用后的“腐蚀液”?",
+    "curriculumTags": [
+      "knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-promote-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-game-challenge-game-0154-source-section-l2575-l2580-9437a78c8a-review",
+        "label": "【思考与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【思考与讨论】",
+        "lineRange": "2575-2580",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0154-source-section-l2575-l2580-9437a78c8a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0154-source-section-l2575-l2580-9437a78c8a-game-challenge-game-0154-source-section-l2575-l2580-9437a78c8a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-promote-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-game-challenge-game-0158-source-section-l2589-l2610-70cd89cda6",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-promote-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-game-challenge-game-0158-source-section-l2589-l2610-70cd89cda6",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 菠菜、芹菜、黑木耳、蛋黄和动物内脏等食品中富含铁元素。请以“菠菜中铁元素的检验”为例（你也可以选择其他食品）进行研究。 (1) 查阅资料。 通过互联网，以“菠菜中铁元素的检验”为关键词搜索相关资料，收集检验菠菜中铁元素的方法…",
+    "curriculumTags": [
+      "knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-promote-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-game-challenge-game-0158-source-section-l2589-l2610-70cd89cda6-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "2589-2610",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0158-source-section-l2589-l2610-70cd89cda6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0158-source-section-l2589-l2610-70cd89cda6-game-challenge-game-0158-source-section-l2589-l2610-70cd89cda6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-promote-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-game-challenge-game-0159-source-section-l2611-l2661-dbe1e622dd",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-promote-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-game-challenge-game-0159-source-section-l2611-l2661-dbe1e622dd",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 你研究的食品是什么? 其中是否含有铁元素? (2) 撰写研究报告，并与同学讨论。 1. 红热的铁与水蒸气反应的化学方程式为__________，该反应中氧化剂是__________（填化学式）。将烧至红热的铁丝伸到…",
+    "curriculumTags": [
+      "knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-promote-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-game-challenge-game-0159-source-section-l2611-l2661-dbe1e622dd-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "2611-2661",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0159-source-section-l2611-l2661-dbe1e622dd",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0159-source-section-l2611-l2661-dbe1e622dd-asset-01",
+            "sourceLineNumber": 2653
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0159-source-section-l2611-l2661-dbe1e622dd-game-challenge-game-0159-source-section-l2611-l2661-dbe1e622dd"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-promote-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-game-challenge-game-0162-source-section-l2711-l2714-e959e5fa3b",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-promote-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-game-challenge-game-0162-source-section-l2711-l2714-e959e5fa3b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 在碳素钢中，由于含碳量不同，高碳钢、中碳钢和低碳钢的性能有很大差异；向碳素钢中加入不同的合金元素，可制得不同性能的合金钢。这对你有什么启示？与同学讨论。",
+    "curriculumTags": [
+      "knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-promote-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-game-challenge-game-0162-source-section-l2711-l2714-e959e5fa3b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2711-2714",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0162-source-section-l2711-l2714-e959e5fa3b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0162-source-section-l2711-l2714-e959e5fa3b-game-challenge-game-0162-source-section-l2711-l2714-e959e5fa3b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-promote-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-game-challenge-game-0165-source-section-l2726-l2736-94de8ae3d5",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-promote-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-game-challenge-game-0165-source-section-l2726-l2736-94de8ae3d5",
+    "title": "测试工程师挑战草稿",
+    "summary": "测试工程师 在一些金属材料研究机构，有一批工程师专门从事金属材料的测试工作。他们运用各类高精度化学检测仪器或化学检测方法，对合金等金属材料或冶炼产品等中的微量、常量杂质元素，以及金属材料中C、H、O、N、S的含量等进行定性和定量分析，以获…",
+    "curriculumTags": [
+      "knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-promote-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-game-challenge-game-0165-source-section-l2726-l2736-94de8ae3d5-review",
+        "label": "测试工程师挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "测试工程师",
+        "lineRange": "2726-2736",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0165-source-section-l2726-l2736-94de8ae3d5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0165-source-section-l2726-l2736-94de8ae3d5-game-challenge-game-0165-source-section-l2726-l2736-94de8ae3d5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-promote-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-game-challenge-game-0171-source-section-l2800-l2817-5daa24490e",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-promote-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-game-challenge-game-0171-source-section-l2800-l2817-5daa24490e",
+    "title": "三、新型合金挑战草稿",
+    "summary": "三、新型合金 近年来，为满足某些尖端技术发展的需要，人们又设计和合成了许多新型合金。例如，氢能是人类未来的理想能源之一，氢能利用存在两大难题：制取和储存。 $\\mathrm{H}_{2}$ 是一种易燃易爆的气体，要利用 $\\mathrm{…",
+    "curriculumTags": [
+      "knowledge-topic-0171-source-section-l2800-l2817-5daa24490e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-promote-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-game-challenge-game-0171-source-section-l2800-l2817-5daa24490e-review",
+        "label": "三、新型合金挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0171-source-section-l2800-l2817-5daa24490e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "三、新型合金",
+        "lineRange": "2800-2817",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0171-source-section-l2800-l2817-5daa24490e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0171-source-section-l2800-l2817-5daa24490e-game-challenge-game-0171-source-section-l2800-l2817-5daa24490e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-promote-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-game-challenge-game-0174-source-section-l2885-l2936-7b9842cb65",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-promote-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-game-challenge-game-0174-source-section-l2885-l2936-7b9842cb65",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 目前用量最大、用途最广的合金是 , 根据其化学成分, 可分为 和 两大类。不锈钢在空气中比较稳定, 不易生锈, 有很强的抗腐蚀能力, 其合金元素主要是 2. $\\mathrm{Al}_{2} \\mathrm{O}_{3}…",
+    "curriculumTags": [
+      "knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-promote-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-game-challenge-game-0174-source-section-l2885-l2936-7b9842cb65-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2885-2936",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0174-source-section-l2885-l2936-7b9842cb65",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0174-source-section-l2885-l2936-7b9842cb65-game-challenge-game-0174-source-section-l2885-l2936-7b9842cb65"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-promote-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-game-challenge-game-0182-source-section-l2967-l3051-84e762e77f",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-promote-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-game-challenge-game-0182-source-section-l2967-l3051-84e762e77f",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 人体血液中如果缺乏亚铁离子，就会造成缺铁性贫血。市场出售的某种麦片中含有微量、颗粒细小的还原铁粉，这些铁粉在人体胃酸（胃酸的主要成分是HCl）作用下转化成亚铁盐。写出该反应的离子方程式：_________________…",
+    "curriculumTags": [
+      "knowledge-topic-0182-source-section-l2967-l3051-84e762e77f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-promote-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-game-challenge-game-0182-source-section-l2967-l3051-84e762e77f-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0182-source-section-l2967-l3051-84e762e77f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "2967-3051",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0182-source-section-l2967-l3051-84e762e77f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0182-source-section-l2967-l3051-84e762e77f-asset-01",
+            "sourceLineNumber": 3027
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0182-source-section-l2967-l3051-84e762e77f-game-challenge-game-0182-source-section-l2967-l3051-84e762e77f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-promote-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-game-challenge-game-0189-source-section-l3104-l3107-eafdb48c85",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-promote-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-game-challenge-game-0189-source-section-l3104-l3107-eafdb48c85",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 以铁屑为原料，如何制备硫酸亚铁晶体？",
+    "curriculumTags": [
+      "knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-promote-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-game-challenge-game-0189-source-section-l3104-l3107-eafdb48c85-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3104-3107",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0189-source-section-l3104-l3107-eafdb48c85",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0189-source-section-l3104-l3107-eafdb48c85-game-challenge-game-0189-source-section-l3104-l3107-eafdb48c85"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-promote-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-game-challenge-game-0196-source-section-l3164-l3181-1d00636a2f",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-promote-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-game-challenge-game-0196-source-section-l3164-l3181-1d00636a2f",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 下表是稀有气体元素原子的电子层排布，从中你能发现什么规律？请思考并讨论下列问题。 核电荷数 元素名称 元素符号 各电子层的电子数 K L M N O P 2 氦 He 2 10 氪 Ne 2 8 18 氩 Ar 2 8 8 3…",
+    "curriculumTags": [
+      "knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-promote-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-game-challenge-game-0196-source-section-l3164-l3181-1d00636a2f-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3164-3181",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0196-source-section-l3164-l3181-1d00636a2f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0196-source-section-l3164-l3181-1d00636a2f-game-challenge-game-0196-source-section-l3164-l3181-1d00636a2f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-promote-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-game-challenge-game-0200-source-section-l3221-l3241-b964cd3d5b",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-promote-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-game-challenge-game-0200-source-section-l3221-l3241-b964cd3d5b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 观察元素周期表，针对下表中的项目进行思考，并与同学讨论，将讨论结果填写在表中。从表中你能发现周期序数与原子核外电子层数有什么关系吗？ 周期序数 起止元素 包括元素种数 核外电子层数 1 H~He 2 1 2 3 4 5 6 7…",
+    "curriculumTags": [
+      "knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-promote-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-game-challenge-game-0200-source-section-l3221-l3241-b964cd3d5b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3221-3241",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0200-source-section-l3221-l3241-b964cd3d5b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0200-source-section-l3221-l3241-b964cd3d5b-asset-01",
+            "sourceLineNumber": 3231
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0200-source-section-l3221-l3241-b964cd3d5b-game-challenge-game-0200-source-section-l3221-l3241-b964cd3d5b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-promote-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-game-challenge-game-0204-source-section-l3274-l3290-cf812aec10",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-promote-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-game-challenge-game-0204-source-section-l3274-l3290-cf812aec10",
+    "title": "科技考古研究人员挑战草稿",
+    "summary": "科技考古研究人员 你可能认为考古人员都是在古墓、遗址用手铲、毛刷等进行发掘工作。其实，在考古工作中经常会用到化学与技术。科技考古就是利用现代科技手段分析古代遗存，再结合考古学方法，探索人类的历史。 在一些与文物、博物馆相关的研究所、高等院…",
+    "curriculumTags": [
+      "knowledge-topic-0204-source-section-l3274-l3290-cf812aec10"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-promote-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-game-challenge-game-0204-source-section-l3274-l3290-cf812aec10-review",
+        "label": "科技考古研究人员挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0204-source-section-l3274-l3290-cf812aec10"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "科技考古研究人员",
+        "lineRange": "3274-3290",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0204-source-section-l3274-l3290-cf812aec10",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0204-source-section-l3274-l3290-cf812aec10-game-challenge-game-0204-source-section-l3274-l3290-cf812aec10"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-promote-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-game-challenge-game-0208-source-section-l3321-l3330-24e61f9dc2",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-promote-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-game-challenge-game-0208-source-section-l3321-l3330-24e61f9dc2",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 填写下表中的信息，并思考和讨论下列问题。 族 元素名称 元素符号 核电荷数 原子结构示意图 最外层电子数 电子层数 原子半径②nm 碱金属元素① 锂 +3 21 0.152 钠 +11 281 0.186 钾 +19 2881…",
+    "curriculumTags": [
+      "knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-promote-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-game-challenge-game-0208-source-section-l3321-l3330-24e61f9dc2-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3321-3330",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0208-source-section-l3321-l3330-24e61f9dc2",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0208-source-section-l3321-l3330-24e61f9dc2-game-challenge-game-0208-source-section-l3321-l3330-24e61f9dc2"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-promote-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-game-challenge-game-0210-source-section-l3333-l3340-7def0ba6d6",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-promote-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-game-challenge-game-0210-source-section-l3333-l3340-7def0ba6d6",
+    "title": "【问题和预测】挑战草稿",
+    "summary": "【问题和预测】 (1) 回忆第二章学过的知识, 钠有哪些化学性质? (2) 结合锂、钠和钾的原子结构特点, 请你预测锂、钾可能具有哪些与钠相似的化学性质。",
+    "curriculumTags": [
+      "knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-promote-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-game-challenge-game-0210-source-section-l3333-l3340-7def0ba6d6-review",
+        "label": "【问题和预测】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【问题和预测】",
+        "lineRange": "3333-3340",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0210-source-section-l3333-l3340-7def0ba6d6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0210-source-section-l3333-l3340-7def0ba6d6-game-challenge-game-0210-source-section-l3333-l3340-7def0ba6d6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-promote-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-game-challenge-game-0213-source-section-l3367-l3415-0ec36e376b",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-promote-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-game-challenge-game-0213-source-section-l3367-l3415-0ec36e376b",
+    "title": "【分析和结论】挑战草稿",
+    "summary": "【分析和结论】 (1) 通过实验、观察, 讨论并总结钠、钾有哪些相似的化学性质, 与你最初根据原子结构特点进行的预测是否一致? (2) 从实验现象比较钾、钠与水反应的难易程度。由此, 你能推断出锂与水反应的难易程度吗? (3) 通过比较碱…",
+    "curriculumTags": [
+      "knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-promote-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-game-challenge-game-0213-source-section-l3367-l3415-0ec36e376b-review",
+        "label": "【分析和结论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【分析和结论】",
+        "lineRange": "3367-3415",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0213-source-section-l3367-l3415-0ec36e376b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0213-source-section-l3367-l3415-0ec36e376b-game-challenge-game-0213-source-section-l3367-l3415-0ec36e376b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-promote-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-game-challenge-game-0217-source-section-l3457-l3484-38c6ca367c",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-promote-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-game-challenge-game-0217-source-section-l3457-l3484-38c6ca367c",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 根据卤素的原子结构, 请你试着推测氟、氯、溴、碘在化学性质上表现出的相似性和递变性。 (2) 根据卤素单质与氢气的反应事实, 讨论随着原子核电荷数的增多, 卤素单质与氢气反应的规律性变化。 (1)与氢气反应的难易程度:…",
+    "curriculumTags": [
+      "knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-promote-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-game-challenge-game-0217-source-section-l3457-l3484-38c6ca367c-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3457-3484",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0217-source-section-l3457-l3484-38c6ca367c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0217-source-section-l3457-l3484-38c6ca367c-asset-01",
+            "sourceLineNumber": 3463
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0217-source-section-l3457-l3484-38c6ca367c-game-challenge-game-0217-source-section-l3457-l3484-38c6ca367c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-promote-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-game-challenge-game-0222-source-section-l3538-l3549-76abe367d4",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-promote-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-game-challenge-game-0222-source-section-l3538-l3549-76abe367d4",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 （1）调查与整理。 ①阅读教科书中的“科学史话——元素周期表的发展”，并通过其他渠道收集相关信息，了解元素周期表发展的几个重要阶段，并认识其中有代表性的元素周期表及其特点。 ②收集形式各异的元素周期表并分类整理，选择其中的2…",
+    "curriculumTags": [
+      "knowledge-topic-0222-source-section-l3538-l3549-76abe367d4"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-promote-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-game-challenge-game-0222-source-section-l3538-l3549-76abe367d4-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0222-source-section-l3538-l3549-76abe367d4"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "3538-3549",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0222-source-section-l3538-l3549-76abe367d4",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0222-source-section-l3538-l3549-76abe367d4-game-challenge-game-0222-source-section-l3538-l3549-76abe367d4"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-promote-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-game-challenge-game-0223-source-section-l3550-l3615-f1ad49b7bf",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-promote-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-game-challenge-game-0223-source-section-l3550-l3615-f1ad49b7bf",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 通过了解元素周期表的发现和发展过程, 你得到什么启示? 以此为基础, 撰写研究报告, 并与同学交流。 (2) 展示自制的元素周期表, 与同学交流。 1. 在 ${}_{3}^{6}\\mathrm{Li}$ 、 ${…",
+    "curriculumTags": [
+      "knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-promote-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-game-challenge-game-0223-source-section-l3550-l3615-f1ad49b7bf-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "3550-3615",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0223-source-section-l3550-l3615-f1ad49b7bf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0223-source-section-l3550-l3615-f1ad49b7bf-game-challenge-game-0223-source-section-l3550-l3615-f1ad49b7bf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-promote-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-game-challenge-game-0227-source-section-l3633-l3649-17dce98027",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-promote-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-game-challenge-game-0227-source-section-l3633-l3649-17dce98027",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 观察表4-5，思考并讨论：随着原子序数的递增，元素原子的核外电子排布、原子半径和化合价各呈现什么规律性的变化？ 原子 序数 电子 层数 最外层 电子数 原子半径的变化 (不考虑稀有气体元素) 最高或最低化合价的变化 1~2 1…",
+    "curriculumTags": [
+      "knowledge-topic-0227-source-section-l3633-l3649-17dce98027"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-promote-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-game-challenge-game-0227-source-section-l3633-l3649-17dce98027-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0227-source-section-l3633-l3649-17dce98027"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3633-3649",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0227-source-section-l3633-l3649-17dce98027",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0227-source-section-l3633-l3649-17dce98027-game-challenge-game-0227-source-section-l3633-l3649-17dce98027"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-promote-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-game-challenge-game-0230-source-section-l3656-l3659-63287fb291",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-promote-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-game-challenge-game-0230-source-section-l3656-l3659-63287fb291",
+    "title": "【问题讨论】挑战草稿",
+    "summary": "【问题讨论】 根据第三周期元素原子的核外电子排布规律，你能推测出该周期元素金属性和非金属性的变化规律吗？",
+    "curriculumTags": [
+      "knowledge-topic-0230-source-section-l3656-l3659-63287fb291"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-promote-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-game-challenge-game-0230-source-section-l3656-l3659-63287fb291-review",
+        "label": "【问题讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0230-source-section-l3656-l3659-63287fb291"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【问题讨论】",
+        "lineRange": "3656-3659",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0230-source-section-l3656-l3659-63287fb291",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0230-source-section-l3656-l3659-63287fb291-game-challenge-game-0230-source-section-l3656-l3659-63287fb291"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-promote-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-game-challenge-game-0237-source-section-l3742-l3798-f866e99026",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-promote-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-game-challenge-game-0237-source-section-l3742-l3798-f866e99026",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 元素周期表的第三周期元素, 从左到右, 原子半径逐渐 ; 元素的金属性逐渐 , 非金属性逐渐 。该周期元素中, 最高价氧化物对应的水化物碱性最强的是 (填元素符号, 下同); 最高价氧化物对应的水化物呈两性的是 ; 最高…",
+    "curriculumTags": [
+      "knowledge-topic-0237-source-section-l3742-l3798-f866e99026"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-promote-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-game-challenge-game-0237-source-section-l3742-l3798-f866e99026-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0237-source-section-l3742-l3798-f866e99026"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3742-3798",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0237-source-section-l3742-l3798-f866e99026",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0237-source-section-l3742-l3798-f866e99026-asset-01",
+            "sourceLineNumber": 3788
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0237-source-section-l3742-l3798-f866e99026-game-challenge-game-0237-source-section-l3742-l3798-f866e99026"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-promote-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-game-challenge-game-0245-source-section-l3893-l3962-f246fb90df",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-promote-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-game-challenge-game-0245-source-section-l3893-l3962-f246fb90df",
+    "title": "分子间作用力挑战草稿",
+    "summary": "分子间作用力 我们知道，分子内相邻的原子之间存在着化学键。实际上，分子之间还存在一种把分子聚集在一起的作用力，叫做分子间作用力。荷兰物理学家范德华（J.D.vanderWaals，1837—1923）最早研究分子间作用力，所以最初也将分子…",
+    "curriculumTags": [
+      "knowledge-topic-0245-source-section-l3893-l3962-f246fb90df"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-promote-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-game-challenge-game-0245-source-section-l3893-l3962-f246fb90df-review",
+        "label": "分子间作用力挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0245-source-section-l3893-l3962-f246fb90df"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "分子间作用力",
+        "lineRange": "3893-3962",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0245-source-section-l3893-l3962-f246fb90df",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0245-source-section-l3893-l3962-f246fb90df-game-challenge-game-0245-source-section-l3893-l3962-f246fb90df"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-promote-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-game-challenge-game-0249-source-section-l3992-l4092-f01b1f3d2d",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-promote-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-game-challenge-game-0249-source-section-l3992-l4092-f01b1f3d2d",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 下表列出了A~R9种元素在周期表中的位置： 周期 族 IA IIA IIIA IVA VA VIA VIIA 0 2 E F 3 A C D G R 4 B H 请回答下列问题。 (1) 这 9 种元素分别为: A , …",
+    "curriculumTags": [
+      "knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-promote-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-game-challenge-game-0249-source-section-l3992-l4092-f01b1f3d2d-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "3992-4092",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0249-source-section-l3992-l4092-f01b1f3d2d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0249-source-section-l3992-l4092-f01b1f3d2d-asset-01",
+            "sourceLineNumber": 4044
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0249-source-section-l3992-l4092-f01b1f3d2d-game-challenge-game-0249-source-section-l3992-l4092-f01b1f3d2d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-promote-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-game-challenge-game-0256-source-section-l4132-l4137-ebe82daa5a",
+    "challengeId": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-promote-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-game-challenge-game-0256-source-section-l4132-l4137-ebe82daa5a",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 实验中所用的氯水为什么要用新制的？ 2. 通过上面的两组实验，你能得出什么结论？你对原子结构与元素性质的关系及元素周期律（表）有什么新的认识？",
+    "curriculumTags": [
+      "knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-1-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-promote-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-game-challenge-game-0256-source-section-l4132-l4137-ebe82daa5a-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-1",
+        "volumeId": "pep-chemistry-g10-required-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "4132-4137",
+        "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+        "candidateId": "game-0256-source-section-l4132-l4137-ebe82daa5a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0256-source-section-l4132-l4137-ebe82daa5a-game-challenge-game-0256-source-section-l4132-l4137-ebe82daa5a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0017-source-section-l195-l203-93584429fb-promote-knowledge-topic-0017-source-section-l195-l203-93584429fb-game-challenge-game-0017-source-section-l195-l203-93584429fb",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0017-source-section-l195-l203-93584429fb-promote-knowledge-topic-0017-source-section-l195-l203-93584429fb-game-challenge-game-0017-source-section-l195-l203-93584429fb",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 硫酸具有酸的哪些共同的性质? 请举例写出相关反应的离子方程式。 (2) 实验室用金属与酸反应制取氢气时, 往往用稀硫酸, 而不用浓硫酸, 这是为什么?",
+    "curriculumTags": [
+      "knowledge-topic-0017-source-section-l195-l203-93584429fb"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0017-source-section-l195-l203-93584429fb-promote-knowledge-topic-0017-source-section-l195-l203-93584429fb-game-challenge-game-0017-source-section-l195-l203-93584429fb-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0017-source-section-l195-l203-93584429fb"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "195-203",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0017-source-section-l195-l203-93584429fb",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0017-source-section-l195-l203-93584429fb-game-challenge-game-0017-source-section-l195-l203-93584429fb"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-promote-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-game-challenge-game-0023-source-section-l242-l251-7ab5de22ad",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-promote-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-game-challenge-game-0023-source-section-l242-l251-7ab5de22ad",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 经溶解、过滤和蒸发操作得到的粗盐中还含有一些可溶性硫酸盐及 $\\mathrm{MgCl}_{2} 、 \\mathrm{CaCl}_{2}$ 等杂质。如果按照下表所示顺序除去它们, 应加入什么试剂? 写出相关反应的离子方…",
+    "curriculumTags": [
+      "knowledge-topic-0023-source-section-l242-l251-7ab5de22ad"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-promote-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-game-challenge-game-0023-source-section-l242-l251-7ab5de22ad-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0023-source-section-l242-l251-7ab5de22ad"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "242-251",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0023-source-section-l242-l251-7ab5de22ad",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0023-source-section-l242-l251-7ab5de22ad-game-challenge-game-0023-source-section-l242-l251-7ab5de22ad"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-promote-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-game-challenge-game-0028-source-section-l278-l289-3b1de89bed",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-promote-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-game-challenge-game-0028-source-section-l278-l289-3b1de89bed",
+    "title": "不同价态含硫物质的转化挑战草稿",
+    "summary": "不同价态含硫物质的转化 （1）下图是人们总结的不同价态硫元素的转化关系，请尽可能多地列举每种价态的硫元素所对应的物质，并根据硫元素化合价的变化，分析各种物质在氧化还原反应中表现氧化性还是还原性。 （2）从上述转化关系中选择你感兴趣的一种或…",
+    "curriculumTags": [
+      "knowledge-topic-0028-source-section-l278-l289-3b1de89bed"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-promote-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-game-challenge-game-0028-source-section-l278-l289-3b1de89bed-review",
+        "label": "不同价态含硫物质的转化挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0028-source-section-l278-l289-3b1de89bed"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "不同价态含硫物质的转化",
+        "lineRange": "278-289",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0028-source-section-l278-l289-3b1de89bed",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0028-source-section-l278-l289-3b1de89bed-asset-01",
+            "sourceLineNumber": 282
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0028-source-section-l278-l289-3b1de89bed-game-challenge-game-0028-source-section-l278-l289-3b1de89bed"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-promote-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-game-challenge-game-0029-source-section-l290-l302-ac881b7fa6",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-promote-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-game-challenge-game-0029-source-section-l290-l302-ac881b7fa6",
+    "title": "提示挑战草稿",
+    "summary": "提示 常用的氧化剂有浓硫酸、 $\\mathrm{Cl}_2$ 、 $\\mathrm{KMnO}_4$ 等，还原剂有金属单质、 $\\mathrm{H}_{2}$ 、 $\\mathrm{Na}_2\\mathrm{S}$ 等。 转化目标(价态变…",
+    "curriculumTags": [
+      "knowledge-topic-0029-source-section-l290-l302-ac881b7fa6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-promote-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-game-challenge-game-0029-source-section-l290-l302-ac881b7fa6-review",
+        "label": "提示挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0029-source-section-l290-l302-ac881b7fa6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "提示",
+        "lineRange": "290-302",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0029-source-section-l290-l302-ac881b7fa6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0029-source-section-l290-l302-ac881b7fa6-game-challenge-game-0029-source-section-l290-l302-ac881b7fa6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0031-source-section-l305-l313-d377ea750f-promote-knowledge-topic-0031-source-section-l305-l313-d377ea750f-game-challenge-game-0031-source-section-l305-l313-d377ea750f",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0031-source-section-l305-l313-d377ea750f-promote-knowledge-topic-0031-source-section-l305-l313-d377ea750f-game-challenge-game-0031-source-section-l305-l313-d377ea750f",
+    "title": "化学实验设计挑战草稿",
+    "summary": "化学实验设计 化学实验设计是指实验者在实施化学实验之前，根据一定的实验目的，运用化学知识与技能，按照一定的实验方法，对实验的原理、试剂、仪器与装置、步骤和方法等所进行的规划。例如，设计“不同价态含硫物质的转化”实验，当确定了要实现的转化关…",
+    "curriculumTags": [
+      "knowledge-topic-0031-source-section-l305-l313-d377ea750f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0031-source-section-l305-l313-d377ea750f-promote-knowledge-topic-0031-source-section-l305-l313-d377ea750f-game-challenge-game-0031-source-section-l305-l313-d377ea750f-review",
+        "label": "化学实验设计挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0031-source-section-l305-l313-d377ea750f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "化学实验设计",
+        "lineRange": "305-313",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0031-source-section-l305-l313-d377ea750f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0031-source-section-l305-l313-d377ea750f-game-challenge-game-0031-source-section-l305-l313-d377ea750f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0033-source-section-l316-l393-e5227fc838-promote-knowledge-topic-0033-source-section-l316-l393-e5227fc838-game-challenge-game-0033-source-section-l316-l393-e5227fc838",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0033-source-section-l316-l393-e5227fc838-promote-knowledge-topic-0033-source-section-l316-l393-e5227fc838-game-challenge-game-0033-source-section-l316-l393-e5227fc838",
+    "title": "化工工程师挑战草稿",
+    "summary": "化工工程师 化工工程师是解决人类在生产、生活等领域面临的化工相关问题的专业技术人才，工作在石油炼制、化肥生产、医药开发和环境治理等领域。其主要工作是依据科学原理，统筹各方面的资源，设计化工生产的工艺流程，并监控生产过程，及时解决生产中遇到…",
+    "curriculumTags": [
+      "knowledge-topic-0033-source-section-l316-l393-e5227fc838"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0033-source-section-l316-l393-e5227fc838-promote-knowledge-topic-0033-source-section-l316-l393-e5227fc838-game-challenge-game-0033-source-section-l316-l393-e5227fc838-review",
+        "label": "化工工程师挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0033-source-section-l316-l393-e5227fc838"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "化工工程师",
+        "lineRange": "316-393",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0033-source-section-l316-l393-e5227fc838",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0033-source-section-l316-l393-e5227fc838-asset-01",
+            "sourceLineNumber": 387
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0033-source-section-l316-l393-e5227fc838-game-challenge-game-0033-source-section-l316-l393-e5227fc838"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0035-source-section-l396-l399-628891522b-promote-knowledge-topic-0035-source-section-l396-l399-628891522b-game-challenge-game-0035-source-section-l396-l399-628891522b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0035-source-section-l396-l399-628891522b-promote-knowledge-topic-0035-source-section-l396-l399-628891522b-game-challenge-game-0035-source-section-l396-l399-628891522b",
+    "title": "氮及其化合物挑战草稿",
+    "summary": "氮及其化合物 氮元素位于元素周期表的第二周期、第VA族。氮原子的最外电子层有5个电子，既不容易得到3个电子，也不容易失去5个电子。因此，氮原子一般通过共用电子对与其他原子相互结合构成物质。在自然界里，氮元素主要以氮分子的形式存在于空气中，…",
+    "curriculumTags": [
+      "knowledge-topic-0035-source-section-l396-l399-628891522b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0035-source-section-l396-l399-628891522b-promote-knowledge-topic-0035-source-section-l396-l399-628891522b-game-challenge-game-0035-source-section-l396-l399-628891522b-review",
+        "label": "氮及其化合物挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0035-source-section-l396-l399-628891522b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "氮及其化合物",
+        "lineRange": "396-399",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0035-source-section-l396-l399-628891522b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0035-source-section-l396-l399-628891522b-game-challenge-game-0035-source-section-l396-l399-628891522b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-promote-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-game-challenge-game-0039-source-section-l451-l458-ffd95bcef3",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-promote-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-game-challenge-game-0039-source-section-l451-l458-ffd95bcef3",
+    "title": "合成氨挑战草稿",
+    "summary": "合成氨 由于氮气的化学性质很不活泼，以氮气和氢气为原料合成氨的工业化生产曾是一个较难的课题。1909年，德国化学家哈伯（F. Haber，1868—1934）经过反复实验研究后发现，在 $500\\sim 600^{\\circ}\\mathr…",
+    "curriculumTags": [
+      "knowledge-topic-0039-source-section-l451-l458-ffd95bcef3"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-promote-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-game-challenge-game-0039-source-section-l451-l458-ffd95bcef3-review",
+        "label": "合成氨挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0039-source-section-l451-l458-ffd95bcef3"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "合成氨",
+        "lineRange": "451-458",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0039-source-section-l451-l458-ffd95bcef3",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0039-source-section-l451-l458-ffd95bcef3-game-challenge-game-0039-source-section-l451-l458-ffd95bcef3"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0042-source-section-l494-l497-3f890274bd-promote-knowledge-topic-0042-source-section-l494-l497-3f890274bd-game-challenge-game-0042-source-section-l494-l497-3f890274bd",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0042-source-section-l494-l497-3f890274bd-promote-knowledge-topic-0042-source-section-l494-l497-3f890274bd-game-challenge-game-0042-source-section-l494-l497-3f890274bd",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 实验5-5中发生了哪些化学反应？如果要将注射器中的NO充分转化，可以采取什么措施？上述实验对工业上生产硝酸有什么启示？",
+    "curriculumTags": [
+      "knowledge-topic-0042-source-section-l494-l497-3f890274bd"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0042-source-section-l494-l497-3f890274bd-promote-knowledge-topic-0042-source-section-l494-l497-3f890274bd-game-challenge-game-0042-source-section-l494-l497-3f890274bd-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0042-source-section-l494-l497-3f890274bd"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "494-497",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0042-source-section-l494-l497-3f890274bd",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0042-source-section-l494-l497-3f890274bd-game-challenge-game-0042-source-section-l494-l497-3f890274bd"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0046-source-section-l567-l577-5e9658b885-promote-knowledge-topic-0046-source-section-l567-l577-5e9658b885-game-challenge-game-0046-source-section-l567-l577-5e9658b885",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0046-source-section-l567-l577-5e9658b885-promote-knowledge-topic-0046-source-section-l567-l577-5e9658b885-game-challenge-game-0046-source-section-l567-l577-5e9658b885",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 图5-13为实验室制取氨的简易装置示意图。请仔细观察实验装置，思考如何检验试管中已收集满氨，如何吸收处理实验中多余的氨。 图5-13 实验室制取氨的简易装置示意图",
+    "curriculumTags": [
+      "knowledge-topic-0046-source-section-l567-l577-5e9658b885"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0046-source-section-l567-l577-5e9658b885-promote-knowledge-topic-0046-source-section-l567-l577-5e9658b885-game-challenge-game-0046-source-section-l567-l577-5e9658b885-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0046-source-section-l567-l577-5e9658b885"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "567-577",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0046-source-section-l567-l577-5e9658b885",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0046-source-section-l567-l577-5e9658b885-asset-01",
+            "sourceLineNumber": 571
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0046-source-section-l567-l577-5e9658b885-game-challenge-game-0046-source-section-l567-l577-5e9658b885"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0052-source-section-l630-l652-257166b05d-promote-knowledge-topic-0052-source-section-l630-l652-257166b05d-game-challenge-game-0052-source-section-l630-l652-257166b05d",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0052-source-section-l630-l652-257166b05d-promote-knowledge-topic-0052-source-section-l630-l652-257166b05d-game-challenge-game-0052-source-section-l630-l652-257166b05d",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 硝酸是重要的化工原料，用于制化肥、农药、炸药、染料等。工业上制硝酸的原理是将氨经过一系列反应得到硝酸，如下图所示： （1）写出每一步反应的化学方程式。 (2) 请分析上述反应中的物质类别和氮元素化合价的变化情况, 以及每一步反…",
+    "curriculumTags": [
+      "knowledge-topic-0052-source-section-l630-l652-257166b05d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0052-source-section-l630-l652-257166b05d-promote-knowledge-topic-0052-source-section-l630-l652-257166b05d-game-challenge-game-0052-source-section-l630-l652-257166b05d-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0052-source-section-l630-l652-257166b05d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "630-652",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0052-source-section-l630-l652-257166b05d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0052-source-section-l630-l652-257166b05d-asset-01",
+            "sourceLineNumber": 634
+          },
+          {
+            "assetId": "0052-source-section-l630-l652-257166b05d-asset-02",
+            "sourceLineNumber": 641
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0052-source-section-l630-l652-257166b05d-game-challenge-game-0052-source-section-l630-l652-257166b05d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0056-source-section-l667-l670-db03678d20-promote-knowledge-topic-0056-source-section-l667-l670-db03678d20-game-challenge-game-0056-source-section-l667-l670-db03678d20",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0056-source-section-l667-l670-db03678d20-promote-knowledge-topic-0056-source-section-l667-l670-db03678d20-game-challenge-game-0056-source-section-l667-l670-db03678d20",
+    "title": "【研究目的】挑战草稿",
+    "summary": "【研究目的】 酸雨对环境危害巨大，人们已经采取多种措施来防治酸雨。通过以下活动了解测定雨水pH的方法，认识酸雨的危害，激发保护环境的紧迫感。",
+    "curriculumTags": [
+      "knowledge-topic-0056-source-section-l667-l670-db03678d20"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0056-source-section-l667-l670-db03678d20-promote-knowledge-topic-0056-source-section-l667-l670-db03678d20-game-challenge-game-0056-source-section-l667-l670-db03678d20-review",
+        "label": "【研究目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0056-source-section-l667-l670-db03678d20"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【研究目的】",
+        "lineRange": "667-670",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0056-source-section-l667-l670-db03678d20",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0056-source-section-l667-l670-db03678d20-game-challenge-game-0056-source-section-l667-l670-db03678d20"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-promote-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-game-challenge-game-0059-2-mathrm-ph-l682-l691-3a79e4ecb3",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-promote-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-game-challenge-game-0059-2-mathrm-ph-l682-l691-3a79e4ecb3",
+    "title": "(2) 测定雨水的 $\\mathrm{pH}$挑战草稿",
+    "summary": "(2) 测定雨水的 $\\mathrm{pH}$ 根据收集的资料，确定测定雨水pH的过程和方法并进行实践，对结果进行分析和讨论。可参考如下过程： ①下雨时用容器直接收集一些雨水作为样品，静置，以蒸馏水或自来水作为参照，观察并比较它们的外观；…",
+    "curriculumTags": [
+      "knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-promote-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-game-challenge-game-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-review",
+        "label": "(2) 测定雨水的 $\\mathrm{pH}$挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "(2) 测定雨水的 $\\mathrm{pH}$",
+        "lineRange": "682-691",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0059-2-mathrm-ph-l682-l691-3a79e4ecb3",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0059-2-mathrm-ph-l682-l691-3a79e4ecb3-game-challenge-game-0059-2-mathrm-ph-l682-l691-3a79e4ecb3"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-promote-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-game-challenge-game-0060-source-section-l692-l775-0feeb22d34",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-promote-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-game-challenge-game-0060-source-section-l692-l775-0feeb22d34",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 通过你测得的数据判断本次降雨是否为酸雨。若是酸雨, 请分析形成酸雨可能的原因, 并提出减轻酸雨危害的建议。 (2) 本次实践活动及结果对你有什么启发? 请撰写研究报告, 并与同学讨论。 1. 下列关于 $\\math…",
+    "curriculumTags": [
+      "knowledge-topic-0060-source-section-l692-l775-0feeb22d34"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-promote-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-game-challenge-game-0060-source-section-l692-l775-0feeb22d34-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0060-source-section-l692-l775-0feeb22d34"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "692-775",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0060-source-section-l692-l775-0feeb22d34",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0060-source-section-l692-l775-0feeb22d34-game-challenge-game-0060-source-section-l692-l775-0feeb22d34"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-promote-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-game-challenge-game-0082-5-l1053-l1056-bf3e44efae",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-promote-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-game-challenge-game-0082-5-l1053-l1056-bf3e44efae",
+    "title": "5. 基于性质认识实验室制取物质的方法挑战草稿",
+    "summary": "5. 基于性质认识实验室制取物质的方法 以氨的实验室制取为例，谈谈在实验室里通过化学方法制取某种物质，通常需要考虑哪些问题。",
+    "curriculumTags": [
+      "knowledge-topic-0082-5-l1053-l1056-bf3e44efae"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-promote-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-game-challenge-game-0082-5-l1053-l1056-bf3e44efae-review",
+        "label": "5. 基于性质认识实验室制取物质的方法挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0082-5-l1053-l1056-bf3e44efae"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "5. 基于性质认识实验室制取物质的方法",
+        "lineRange": "1053-1056",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0082-5-l1053-l1056-bf3e44efae",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0082-5-l1053-l1056-bf3e44efae-game-challenge-game-0082-5-l1053-l1056-bf3e44efae"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-promote-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-game-challenge-game-0084-source-section-l1061-l1171-44f9a35600",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-promote-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-game-challenge-game-0084-source-section-l1061-l1171-44f9a35600",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 能实现下列物质间直接转化的元素是 ( )。 $\\mathrm{O_2}$ 单质 $\\rightarrow$ 氧化物 $\\rightarrow$ 酸（或碱） $\\rightarrow$ 盐 A. Si B. S C. Cu…",
+    "curriculumTags": [
+      "knowledge-topic-0084-source-section-l1061-l1171-44f9a35600"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-promote-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-game-challenge-game-0084-source-section-l1061-l1171-44f9a35600-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0084-source-section-l1061-l1171-44f9a35600"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "1061-1171",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0084-source-section-l1061-l1171-44f9a35600",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0084-source-section-l1061-l1171-44f9a35600-asset-01",
+            "sourceLineNumber": 1113
+          },
+          {
+            "assetId": "0084-source-section-l1061-l1171-44f9a35600-asset-02",
+            "sourceLineNumber": 1124
+          },
+          {
+            "assetId": "0084-source-section-l1061-l1171-44f9a35600-asset-03",
+            "sourceLineNumber": 1145
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0084-source-section-l1061-l1171-44f9a35600-game-challenge-game-0084-source-section-l1061-l1171-44f9a35600"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-promote-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-game-challenge-game-0089-source-section-l1188-l1207-da1861e1ff",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-promote-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-game-challenge-game-0089-source-section-l1188-l1207-da1861e1ff",
+    "title": "【实验步骤】挑战草稿",
+    "summary": "【实验步骤】 1. 用天平称取 $5.0 \\mathrm{~g}$ 粗盐，放入 $100 \\mathrm{~mL}$ 烧杯中，然后加入 $20 \\mathrm{~mL}$ 蒸馏水，用玻璃棒搅拌，使粗盐全部溶解，得到粗盐水。 2. 向粗盐水…",
+    "curriculumTags": [
+      "knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-promote-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-game-challenge-game-0089-source-section-l1188-l1207-da1861e1ff-review",
+        "label": "【实验步骤】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【实验步骤】",
+        "lineRange": "1188-1207",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0089-source-section-l1188-l1207-da1861e1ff",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0089-source-section-l1188-l1207-da1861e1ff-game-challenge-game-0089-source-section-l1188-l1207-da1861e1ff"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-promote-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-game-challenge-game-0090-source-section-l1208-l1215-19c7e50fea",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-promote-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-game-challenge-game-0090-source-section-l1208-l1215-19c7e50fea",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 本实验中加入试剂的顺序是什么？按照其他顺序加入试剂能否达到同样的目的？ 2. 为什么每次所加的试剂都要略微过量？第7步加入盐酸的目的是什么？ 3. 第6步和第7步的操作顺序能否颠倒？为什么？",
+    "curriculumTags": [
+      "knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-promote-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-game-challenge-game-0090-source-section-l1208-l1215-19c7e50fea-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "1208-1215",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0090-source-section-l1208-l1215-19c7e50fea",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0090-source-section-l1208-l1215-19c7e50fea-game-challenge-game-0090-source-section-l1208-l1215-19c7e50fea"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-promote-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-game-challenge-game-0097-source-section-l1250-l1257-52fab8132b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-promote-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-game-challenge-game-0097-source-section-l1250-l1257-52fab8132b",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 在上述实验中，含硫物质中硫元素的价态发生了怎样的变化？ 2. 铁粉与硫粉在空气中混合燃烧时，可能发生哪些化学反应？ 3. 在实验过程中你遇到了哪些问题？你是如何解决的？",
+    "curriculumTags": [
+      "knowledge-topic-0097-source-section-l1250-l1257-52fab8132b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-promote-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-game-challenge-game-0097-source-section-l1250-l1257-52fab8132b-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0097-source-section-l1250-l1257-52fab8132b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "1250-1257",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0097-source-section-l1250-l1257-52fab8132b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0097-source-section-l1250-l1257-52fab8132b-game-challenge-game-0097-source-section-l1250-l1257-52fab8132b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-promote-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-game-challenge-game-0099-source-section-l1260-l1271-eb116ca337",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-promote-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-game-challenge-game-0099-source-section-l1260-l1271-eb116ca337",
+    "title": "化学反应与能量挑战草稿",
+    "summary": "化学反应与能量 化学反应与能量变化 化学反应的速率与限度 现代社会的一切活动都离不开能量，化学反应在发生物质变化的同时伴随有能量变化，是人类获取能量的重要途径。 为了更好地利用化学反应中的物质和能量变化，在化学研究和工业生产中还需要关注化…",
+    "curriculumTags": [
+      "knowledge-topic-0099-source-section-l1260-l1271-eb116ca337"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-promote-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-game-challenge-game-0099-source-section-l1260-l1271-eb116ca337-review",
+        "label": "化学反应与能量挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0099-source-section-l1260-l1271-eb116ca337"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "化学反应与能量",
+        "lineRange": "1260-1271",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0099-source-section-l1260-l1271-eb116ca337",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0099-source-section-l1260-l1271-eb116ca337-game-challenge-game-0099-source-section-l1260-l1271-eb116ca337"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-promote-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-game-challenge-game-0101-source-section-l1274-l1277-9259f490dc",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-promote-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-game-challenge-game-0101-source-section-l1274-l1277-9259f490dc",
+    "title": "化学反应与能量变化挑战草稿",
+    "summary": "化学反应与能量变化 现代社会中，人类的一切活动（从衣食住行到文化娱乐，从社会生产到科学研究等）都离不开能量，而许多能量的利用与化学反应中的能量变化密切相关。从煤、石油和天然气等提供的热能，到各种化学电池提供的电能，都是通过化学反应获得的。",
+    "curriculumTags": [
+      "knowledge-topic-0101-source-section-l1274-l1277-9259f490dc"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-promote-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-game-challenge-game-0101-source-section-l1274-l1277-9259f490dc-review",
+        "label": "化学反应与能量变化挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0101-source-section-l1274-l1277-9259f490dc"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "化学反应与能量变化",
+        "lineRange": "1274-1277",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0101-source-section-l1274-l1277-9259f490dc",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0101-source-section-l1274-l1277-9259f490dc-game-challenge-game-0101-source-section-l1274-l1277-9259f490dc"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0104-6-2-l1296-l1353-197b048060-promote-knowledge-topic-0104-6-2-l1296-l1353-197b048060-game-challenge-game-0104-6-2-l1296-l1353-197b048060",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0104-6-2-l1296-l1353-197b048060-promote-knowledge-topic-0104-6-2-l1296-l1353-197b048060-game-challenge-game-0104-6-2-l1296-l1353-197b048060",
+    "title": "【实验6-2】挑战草稿",
+    "summary": "【实验6-2】 将 $20 \\mathrm{~g} \\mathrm{Ba}(\\mathrm{OH})_{2} \\cdot 8 \\mathrm{H}_{2} \\mathrm{O}$ 晶体研细后与 $10 \\mathrm{~g} \\mathr…",
+    "curriculumTags": [
+      "knowledge-topic-0104-6-2-l1296-l1353-197b048060"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0104-6-2-l1296-l1353-197b048060-promote-knowledge-topic-0104-6-2-l1296-l1353-197b048060-game-challenge-game-0104-6-2-l1296-l1353-197b048060-review",
+        "label": "【实验6-2】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0104-6-2-l1296-l1353-197b048060"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【实验6-2】",
+        "lineRange": "1296-1353",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0104-6-2-l1296-l1353-197b048060",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0104-6-2-l1296-l1353-197b048060-asset-01",
+            "sourceLineNumber": 1333
+          },
+          {
+            "assetId": "0104-6-2-l1296-l1353-197b048060-asset-02",
+            "sourceLineNumber": 1336
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0104-6-2-l1296-l1353-197b048060-game-challenge-game-0104-6-2-l1296-l1353-197b048060"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-promote-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-game-challenge-game-0106-source-section-l1369-l1375-a86804aad6",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-promote-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-game-challenge-game-0106-source-section-l1369-l1375-a86804aad6",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 煤、汽油和柴油等作为燃料大量使用会造成空气污染，但不使用它们又会严重影响现代社会的生产和生活。对此，请从社会不同人群的角度，提出你的想法或建议，并与同学讨论。",
+    "curriculumTags": [
+      "knowledge-topic-0106-source-section-l1369-l1375-a86804aad6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-promote-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-game-challenge-game-0106-source-section-l1369-l1375-a86804aad6-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0106-source-section-l1369-l1375-a86804aad6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1369-1375",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0106-source-section-l1369-l1375-a86804aad6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0106-source-section-l1369-l1375-a86804aad6-game-challenge-game-0106-source-section-l1369-l1375-a86804aad6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-promote-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-game-challenge-game-0118-source-section-l1465-l1520-435ed457a7",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-promote-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-game-challenge-game-0118-source-section-l1465-l1520-435ed457a7",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 (1) 水果电池中, 水果的作用是什么? (2) 通过比较不同材料作电极的简易电池,你是否发现电极材料的选择有一些值得注意的问题? 请与同学交流你的经验。 (3) 在以上实验中, 电池不可或缺的构成部分有哪些? 图6-8 …",
+    "curriculumTags": [
+      "knowledge-topic-0118-source-section-l1465-l1520-435ed457a7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-promote-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-game-challenge-game-0118-source-section-l1465-l1520-435ed457a7-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0118-source-section-l1465-l1520-435ed457a7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "1465-1520",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0118-source-section-l1465-l1520-435ed457a7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0118-source-section-l1465-l1520-435ed457a7-asset-01",
+            "sourceLineNumber": 1487
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0118-source-section-l1465-l1520-435ed457a7-game-challenge-game-0118-source-section-l1465-l1520-435ed457a7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-promote-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-game-challenge-game-0125-source-section-l1559-l1562-96649a104c",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-promote-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-game-challenge-game-0125-source-section-l1559-l1562-96649a104c",
+    "title": "【研究目的】挑战草稿",
+    "summary": "【研究目的】 人们为给汽车提供动力，提高能源利用率，减少环境污染，在不断开发新的车用能源。通过以下活动，从不同角度分析和比较不同燃料和能量转化方式的优劣，体会开发新的车用能源的重要意义。",
+    "curriculumTags": [
+      "knowledge-topic-0125-source-section-l1559-l1562-96649a104c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-promote-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-game-challenge-game-0125-source-section-l1559-l1562-96649a104c-review",
+        "label": "【研究目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0125-source-section-l1559-l1562-96649a104c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【研究目的】",
+        "lineRange": "1559-1562",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0125-source-section-l1559-l1562-96649a104c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0125-source-section-l1559-l1562-96649a104c-game-challenge-game-0125-source-section-l1559-l1562-96649a104c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-promote-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-game-challenge-game-0126-source-section-l1563-l1576-eaafeac3f8",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-promote-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-game-challenge-game-0126-source-section-l1563-l1576-eaafeac3f8",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 （1）汽车发展至今，在能源使用上经历了不同的发展阶段。查阅资料，了解汽车发展的过程和车用能源的种类。 (2) 以氢气、甲烷 $\\left(\\mathrm{CH}_{4}\\right)$ 、辛烷 $\\left(\\mathrm{…",
+    "curriculumTags": [
+      "knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-promote-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-game-challenge-game-0126-source-section-l1563-l1576-eaafeac3f8-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "1563-1576",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0126-source-section-l1563-l1576-eaafeac3f8",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0126-source-section-l1563-l1576-eaafeac3f8-game-challenge-game-0126-source-section-l1563-l1576-eaafeac3f8"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-promote-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-game-challenge-game-0127-source-section-l1577-l1582-39705b5809",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-promote-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-game-challenge-game-0127-source-section-l1577-l1582-39705b5809",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 你最终选择了哪种燃料和哪种能量转化方式? 你在选择时重点考虑了哪些因素? (2) 通过了解车用能源的发展过程, 你得到什么启示? 请与同学讨论。",
+    "curriculumTags": [
+      "knowledge-topic-0127-source-section-l1577-l1582-39705b5809"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-promote-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-game-challenge-game-0127-source-section-l1577-l1582-39705b5809-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0127-source-section-l1577-l1582-39705b5809"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "1577-1582",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0127-source-section-l1577-l1582-39705b5809",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0127-source-section-l1577-l1582-39705b5809-game-challenge-game-0127-source-section-l1577-l1582-39705b5809"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-promote-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-game-challenge-game-0128-source-section-l1583-l1661-e1cfa52b9e",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-promote-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-game-challenge-game-0128-source-section-l1583-l1661-e1cfa52b9e",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 化学反应的本质是有新物质生成，物质的变化是化学反应的基本特征之一。化学反应的另一基本特征是__________，通常表现为__________的释放或吸收。 2. 原电池是一种可将________直接转化为_______…",
+    "curriculumTags": [
+      "knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-promote-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-game-challenge-game-0128-source-section-l1583-l1661-e1cfa52b9e-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "1583-1661",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0128-source-section-l1583-l1661-e1cfa52b9e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0128-source-section-l1583-l1661-e1cfa52b9e-asset-01",
+            "sourceLineNumber": 1629
+          },
+          {
+            "assetId": "0128-source-section-l1583-l1661-e1cfa52b9e-asset-02",
+            "sourceLineNumber": 1632
+          },
+          {
+            "assetId": "0128-source-section-l1583-l1661-e1cfa52b9e-asset-03",
+            "sourceLineNumber": 1639
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0128-source-section-l1583-l1661-e1cfa52b9e-game-challenge-game-0128-source-section-l1583-l1661-e1cfa52b9e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-promote-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-game-challenge-game-0130-source-section-l1664-l1667-c61ef39ad6",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-promote-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-game-challenge-game-0130-source-section-l1664-l1667-c61ef39ad6",
+    "title": "化学反应的速率与限度挑战草稿",
+    "summary": "化学反应的速率与限度 在化学反应的研究和实际应用中，人们除了选择合适的化学反应以实现所期待的物质转化或能量转化，还要关注化学反应进行的快慢和程度，以提高生产效率。",
+    "curriculumTags": [
+      "knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-promote-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-game-challenge-game-0130-source-section-l1664-l1667-c61ef39ad6-review",
+        "label": "化学反应的速率与限度挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "化学反应的速率与限度",
+        "lineRange": "1664-1667",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0130-source-section-l1664-l1667-c61ef39ad6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0130-source-section-l1664-l1667-c61ef39ad6-game-challenge-game-0130-source-section-l1664-l1667-c61ef39ad6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-promote-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-game-challenge-game-0132-source-section-l1675-l1721-280848fd16",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-promote-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-game-challenge-game-0132-source-section-l1675-l1721-280848fd16",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 你了解下图涉及的化学反应进行的快慢吗？反应的快慢程度与我们有什么关系？ 爆炸 牛奶变质 铁桥生锈 溶洞形成 图6-15 快慢差别很大的化学变化 不同的化学反应进行的快慢千差万别，快与慢是相对而言的，是一种定性的比较。在科学研究…",
+    "curriculumTags": [
+      "knowledge-topic-0132-source-section-l1675-l1721-280848fd16"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-promote-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-game-challenge-game-0132-source-section-l1675-l1721-280848fd16-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0132-source-section-l1675-l1721-280848fd16"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1675-1721",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0132-source-section-l1675-l1721-280848fd16",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0132-source-section-l1675-l1721-280848fd16-game-challenge-game-0132-source-section-l1675-l1721-280848fd16"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-promote-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-game-challenge-game-0135-source-section-l1726-l1729-8a2d985a4c",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-promote-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-game-challenge-game-0135-source-section-l1726-l1729-8a2d985a4c",
+    "title": "【问题】挑战草稿",
+    "summary": "【问题】 我们已经知道催化剂可以影响化学反应速率，此外，还有哪些反应条件会影响化学反应的速率？",
+    "curriculumTags": [
+      "knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-promote-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-game-challenge-game-0135-source-section-l1726-l1729-8a2d985a4c-review",
+        "label": "【问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题】",
+        "lineRange": "1726-1729",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0135-source-section-l1726-l1729-8a2d985a4c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0135-source-section-l1726-l1729-8a2d985a4c-game-challenge-game-0135-source-section-l1726-l1729-8a2d985a4c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-promote-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-game-challenge-game-0142-source-section-l1760-l1766-b14457e405",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-promote-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-game-challenge-game-0142-source-section-l1760-l1766-b14457e405",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 影响化学反应速率的因素还可能有哪些？请选择其中一个因素，设计实验验证方案，与同学交流。",
+    "curriculumTags": [
+      "knowledge-topic-0142-source-section-l1760-l1766-b14457e405"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-promote-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-game-challenge-game-0142-source-section-l1760-l1766-b14457e405-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0142-source-section-l1760-l1766-b14457e405"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "1760-1766",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0142-source-section-l1760-l1766-b14457e405",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0142-source-section-l1760-l1766-b14457e405-game-challenge-game-0142-source-section-l1760-l1766-b14457e405"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-promote-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-game-challenge-game-0144-source-section-l1769-l1786-fe35015535",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-promote-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-game-challenge-game-0144-source-section-l1769-l1786-fe35015535",
+    "title": "变量控制挑战草稿",
+    "summary": "变量控制 科学研究中，对于多因素（多变量）的问题，常常采用只改变其中的某一个因素，控制其他因素不变的研究方法，使多因素的问题变成几个单因素的问题，分别加以研究，最后再将几个单因素问题的研究结果加以综合。这种变量控制的方法是科学探究中常用的…",
+    "curriculumTags": [
+      "knowledge-topic-0144-source-section-l1769-l1786-fe35015535"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-promote-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-game-challenge-game-0144-source-section-l1769-l1786-fe35015535-review",
+        "label": "变量控制挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0144-source-section-l1769-l1786-fe35015535"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "变量控制",
+        "lineRange": "1769-1786",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0144-source-section-l1769-l1786-fe35015535",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0144-source-section-l1769-l1786-fe35015535-asset-01",
+            "sourceLineNumber": 1777
+          },
+          {
+            "assetId": "0144-source-section-l1769-l1786-fe35015535-asset-02",
+            "sourceLineNumber": 1780
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0144-source-section-l1769-l1786-fe35015535-game-challenge-game-0144-source-section-l1769-l1786-fe35015535"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-promote-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-game-challenge-game-0145-source-section-l1787-l1798-2229f6e390",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-promote-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-game-challenge-game-0145-source-section-l1787-l1798-2229f6e390",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 下列调控反应速率的措施或实验中, 分别利用或体现了哪些影响反应速率的因素? （1）向炉膛内鼓风，用煤粉代替煤块可以使炉火更旺。 (2) 把食物存放在冰箱里, 在糕点包装内放置除氧剂可以延长食品保质期。 (3) 做化学实验时, …",
+    "curriculumTags": [
+      "knowledge-topic-0145-source-section-l1787-l1798-2229f6e390"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-promote-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-game-challenge-game-0145-source-section-l1787-l1798-2229f6e390-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0145-source-section-l1787-l1798-2229f6e390"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1787-1798",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0145-source-section-l1787-l1798-2229f6e390",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0145-source-section-l1787-l1798-2229f6e390-game-challenge-game-0145-source-section-l1787-l1798-2229f6e390"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-promote-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-game-challenge-game-0146-source-section-l1799-l1813-5d9466b2cc",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-promote-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-game-challenge-game-0146-source-section-l1799-l1813-5d9466b2cc",
+    "title": "神奇的催化剂挑战草稿",
+    "summary": "神奇的催化剂 催化剂是现代化学中关键而神奇的物质之一。据统计，有 $80\\%$ 以上的化工生产过程（如氨、硫酸、硝酸的合成，乙烯、丙烯、苯乙烯的聚合，煤、石油、天然气的综合利用，等等）使用了催化剂，目的是增大反应速率，提高生产效率。在资源…",
+    "curriculumTags": [
+      "knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-promote-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-game-challenge-game-0146-source-section-l1799-l1813-5d9466b2cc-review",
+        "label": "神奇的催化剂挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "神奇的催化剂",
+        "lineRange": "1799-1813",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0146-source-section-l1799-l1813-5d9466b2cc",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0146-source-section-l1799-l1813-5d9466b2cc-game-challenge-game-0146-source-section-l1799-l1813-5d9466b2cc"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-promote-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-game-challenge-game-0147-source-section-l1814-l1832-ad27c55211",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-promote-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-game-challenge-game-0147-source-section-l1814-l1832-ad27c55211",
+    "title": "二、化学反应的限度挑战草稿",
+    "summary": "二、化学反应的限度 化学反应是按照化学方程式中的计量关系进行的，我们正是据此进行有关化学方程式的计算。你是否思考过这样的问题：一个化学反应在实际进行时（如化学实验、化工生产等），反应物是否会按化学方程式中的计量关系完全转变成产物？如果能，…",
+    "curriculumTags": [
+      "knowledge-topic-0147-source-section-l1814-l1832-ad27c55211"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-promote-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-game-challenge-game-0147-source-section-l1814-l1832-ad27c55211-review",
+        "label": "二、化学反应的限度挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0147-source-section-l1814-l1832-ad27c55211"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "二、化学反应的限度",
+        "lineRange": "1814-1832",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0147-source-section-l1814-l1832-ad27c55211",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0147-source-section-l1814-l1832-ad27c55211-asset-01",
+            "sourceLineNumber": 1826
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0147-source-section-l1814-l1832-ad27c55211-game-challenge-game-0147-source-section-l1814-l1832-ad27c55211"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-promote-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-game-challenge-game-0148-source-section-l1833-l1845-1e2f268d85",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-promote-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-game-challenge-game-0148-source-section-l1833-l1845-1e2f268d85",
+    "title": "三、化学反应条件的控制挑战草稿",
+    "summary": "三、化学反应条件的控制 在生产和生活中，人们希望促进有利的化学反应（提高反应速率，提高反应物的转化率即原料的利用率），抑制有害的化学反应（降低反应速率，控制副反应的发生，减少甚至消除有害物质的产生），这就需要进行化学反应条件的控制。 化学…",
+    "curriculumTags": [
+      "knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-promote-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-game-challenge-game-0148-source-section-l1833-l1845-1e2f268d85-review",
+        "label": "三、化学反应条件的控制挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "三、化学反应条件的控制",
+        "lineRange": "1833-1845",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0148-source-section-l1833-l1845-1e2f268d85",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0148-source-section-l1833-l1845-1e2f268d85-game-challenge-game-0148-source-section-l1833-l1845-1e2f268d85"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-promote-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-game-challenge-game-0149-source-section-l1846-l1851-d99842ad6f",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-promote-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-game-challenge-game-0149-source-section-l1846-l1851-d99842ad6f",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 为提高燃料的燃烧效率，应如何调控燃烧反应的条件？（提示：可以从以下几方面考虑，如燃料的状态、空气用量、炉膛材料、烟道废气中热能的利用，等等。）",
+    "curriculumTags": [
+      "knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-promote-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-game-challenge-game-0149-source-section-l1846-l1851-d99842ad6f-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1846-1851",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0149-source-section-l1846-l1851-d99842ad6f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0149-source-section-l1846-l1851-d99842ad6f-game-challenge-game-0149-source-section-l1846-l1851-d99842ad6f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-promote-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-game-challenge-game-0156-source-section-l2006-l2142-d995d98331",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-promote-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-game-challenge-game-0156-source-section-l2006-l2142-d995d98331",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 已知化学能与其他形式的能可以相互转化。请回答下列问题。 （1）化学能与其他形式的能相互转化的途径是 （2）填写下表： 化学反应 能量转化形式 ①CH4+2O2点燃 CO2+2H2O 由____能转化为____能 ②Pb …",
+    "curriculumTags": [
+      "knowledge-topic-0156-source-section-l2006-l2142-d995d98331"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-promote-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-game-challenge-game-0156-source-section-l2006-l2142-d995d98331-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0156-source-section-l2006-l2142-d995d98331"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "2006-2142",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0156-source-section-l2006-l2142-d995d98331",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0156-source-section-l2006-l2142-d995d98331-asset-01",
+            "sourceLineNumber": 2078
+          },
+          {
+            "assetId": "0156-source-section-l2006-l2142-d995d98331-asset-02",
+            "sourceLineNumber": 2129
+          },
+          {
+            "assetId": "0156-source-section-l2006-l2142-d995d98331-asset-03",
+            "sourceLineNumber": 2134
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0156-source-section-l2006-l2142-d995d98331-game-challenge-game-0156-source-section-l2006-l2142-d995d98331"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-promote-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-game-challenge-game-0161-source-section-l2159-l2177-b1014e917c",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-promote-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-game-challenge-game-0161-source-section-l2159-l2177-b1014e917c",
+    "title": "【实验步骤】挑战草稿",
+    "summary": "【实验步骤】 1. 电极材料的实验 (1) 用导线将电流表分别与锌片、铜片相连接, 使锌片与铜片接触, 观察电流表指针是否发生偏转; 用石墨棒代替铜片进行上述实验。解释所观察到的现象。 电极材料 电流表指针是否发生偏转 解释 锌片、铜片 …",
+    "curriculumTags": [
+      "knowledge-topic-0161-source-section-l2159-l2177-b1014e917c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-promote-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-game-challenge-game-0161-source-section-l2159-l2177-b1014e917c-review",
+        "label": "【实验步骤】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0161-source-section-l2159-l2177-b1014e917c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【实验步骤】",
+        "lineRange": "2159-2177",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0161-source-section-l2159-l2177-b1014e917c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0161-source-section-l2159-l2177-b1014e917c-game-challenge-game-0161-source-section-l2159-l2177-b1014e917c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-promote-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-game-challenge-game-0162-source-section-l2178-l2183-8741eb71d7",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-promote-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-game-challenge-game-0162-source-section-l2178-l2183-8741eb71d7",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 根据以上实验，说明原电池的工作原理和构成要素，以及组装原电池的操作注意事项。 2.能否用铁片作为电极代替铜锌原电池中的锌片？为什么？",
+    "curriculumTags": [
+      "knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-promote-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-game-challenge-game-0162-source-section-l2178-l2183-8741eb71d7-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "2178-2183",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0162-source-section-l2178-l2183-8741eb71d7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0162-source-section-l2178-l2183-8741eb71d7-game-challenge-game-0162-source-section-l2178-l2183-8741eb71d7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-promote-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-game-challenge-game-0166-source-section-l2194-l2207-0641dba879",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-promote-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-game-challenge-game-0166-source-section-l2194-l2207-0641dba879",
+    "title": "【实验原理】挑战草稿",
+    "summary": "【实验原理】 1. 硫代硫酸钠与硫酸的反应 硫代硫酸钠与硫酸反应会生成不溶于水的硫： $ \\mathrm {N a} _ {2} \\mathrm {S} _ {2} \\mathrm {O} _ {3} + \\mathrm {H} _ {…",
+    "curriculumTags": [
+      "knowledge-topic-0166-source-section-l2194-l2207-0641dba879"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-promote-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-game-challenge-game-0166-source-section-l2194-l2207-0641dba879-review",
+        "label": "【实验原理】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0166-source-section-l2194-l2207-0641dba879"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【实验原理】",
+        "lineRange": "2194-2207",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0166-source-section-l2194-l2207-0641dba879",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0166-source-section-l2194-l2207-0641dba879-game-challenge-game-0166-source-section-l2194-l2207-0641dba879"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-promote-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-game-challenge-game-0172-source-section-l2236-l2239-6645debaa6",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-promote-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-game-challenge-game-0172-source-section-l2236-l2239-6645debaa6",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 在通常情况下，铁与冷水或热水都不发生反应，但红热的铁与水蒸气则可发生反应，生成 $\\mathrm{Fe}_3\\mathrm{O}_4$ 和 $\\mathrm{H}_2$ 。试从反应条件的角度思考并解释这一事实。",
+    "curriculumTags": [
+      "knowledge-topic-0172-source-section-l2236-l2239-6645debaa6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-promote-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-game-challenge-game-0172-source-section-l2236-l2239-6645debaa6-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0172-source-section-l2236-l2239-6645debaa6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "2236-2239",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0172-source-section-l2236-l2239-6645debaa6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0172-source-section-l2236-l2239-6645debaa6-game-challenge-game-0172-source-section-l2236-l2239-6645debaa6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-promote-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-game-challenge-game-0178-source-section-l2308-l2321-81f08a5a2b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-promote-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-game-challenge-game-0178-source-section-l2308-l2321-81f08a5a2b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 请结合下图显示的4个碳原子相互结合的几种方式，分析以碳为骨架的有机物种类繁多的原因。 图7-3 4个碳原子相互结合的几种方式",
+    "curriculumTags": [
+      "knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-promote-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-game-challenge-game-0178-source-section-l2308-l2321-81f08a5a2b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2308-2321",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0178-source-section-l2308-l2321-81f08a5a2b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0178-source-section-l2308-l2321-81f08a5a2b-asset-01",
+            "sourceLineNumber": 2312
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0178-source-section-l2308-l2321-81f08a5a2b-game-challenge-game-0178-source-section-l2308-l2321-81f08a5a2b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-promote-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-game-challenge-game-0183-source-section-l2372-l2454-9e714eef19",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-promote-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-game-challenge-game-0183-source-section-l2372-l2454-9e714eef19",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 与甲烷结构相似的有机化合物还有很多, 随着分子中碳原子数的增加, 还有乙烷、丙烷、丁烷等一系列有机化合物。请根据碳原子的成键规律和下表提供的信息, 写出丁烷的结构式和乙烷、丙烷、丁烷的分子式, 并由此归纳这类有机化合物…",
+    "curriculumTags": [
+      "knowledge-topic-0183-source-section-l2372-l2454-9e714eef19"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-promote-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-game-challenge-game-0183-source-section-l2372-l2454-9e714eef19-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0183-source-section-l2372-l2454-9e714eef19"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2372-2454",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0183-source-section-l2372-l2454-9e714eef19",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0183-source-section-l2372-l2454-9e714eef19-asset-01",
+            "sourceLineNumber": 2386
+          },
+          {
+            "assetId": "0183-source-section-l2372-l2454-9e714eef19-asset-02",
+            "sourceLineNumber": 2393
+          },
+          {
+            "assetId": "0183-source-section-l2372-l2454-9e714eef19-asset-03",
+            "sourceLineNumber": 2400
+          },
+          {
+            "assetId": "0183-source-section-l2372-l2454-9e714eef19-asset-04",
+            "sourceLineNumber": 2421
+          },
+          {
+            "assetId": "0183-source-section-l2372-l2454-9e714eef19-asset-05",
+            "sourceLineNumber": 2432
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0183-source-section-l2372-l2454-9e714eef19-game-challenge-game-0183-source-section-l2372-l2454-9e714eef19"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-promote-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-game-challenge-game-0185-source-section-l2458-l2464-2edff912f7",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-promote-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-game-challenge-game-0185-source-section-l2458-l2464-2edff912f7",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 天然气、沼气和煤层气的主要成分是甲烷；护肤品、医用软膏中的“凡士林”和蜡烛、蜡笔中的石蜡，其主要成分是含碳原子数较多的烷烃。请结合生活经验和初中化学的有关知识，想一想烷烃可能具有哪些性质。",
+    "curriculumTags": [
+      "knowledge-topic-0185-source-section-l2458-l2464-2edff912f7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-promote-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-game-challenge-game-0185-source-section-l2458-l2464-2edff912f7-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0185-source-section-l2458-l2464-2edff912f7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2458-2464",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0185-source-section-l2458-l2464-2edff912f7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0185-source-section-l2458-l2464-2edff912f7-game-challenge-game-0185-source-section-l2458-l2464-2edff912f7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-promote-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-game-challenge-game-0189-source-section-l2545-l2613-d77b2c96ed",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-promote-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-game-challenge-game-0189-source-section-l2545-l2613-d77b2c96ed",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 在有机化合物中, 碳原子既可以与其他元素的原子形成共价键, 也可以相互成键。两个碳原子之间可以形成的共价键的类型有________、________和________; 多个碳原子可以相互结合, 形成的碳骨架的类型有__…",
+    "curriculumTags": [
+      "knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-promote-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-game-challenge-game-0189-source-section-l2545-l2613-d77b2c96ed-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2545-2613",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0189-source-section-l2545-l2613-d77b2c96ed",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0189-source-section-l2545-l2613-d77b2c96ed-asset-01",
+            "sourceLineNumber": 2609
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0189-source-section-l2545-l2613-d77b2c96ed-game-challenge-game-0189-source-section-l2545-l2613-d77b2c96ed"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-promote-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-game-challenge-game-0204-source-section-l2793-l2802-564ab9ba8b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-promote-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-game-challenge-game-0204-source-section-l2793-l2802-564ab9ba8b",
+    "title": "【活动】挑战草稿",
+    "summary": "【活动】 (1) 根据碳原子的成键规律和甲烷、乙烯、乙炔的结构式, 写出三者的电子式,并讨论其分子中有哪些类型的化学键。 (2) 结合以上分析, 使用分子结构模型 (或橡皮泥、黏土、泡沫塑料、牙签等代用品) 搭建甲烷、乙烯和乙炔分子的球棍…",
+    "curriculumTags": [
+      "knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-promote-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-game-challenge-game-0204-source-section-l2793-l2802-564ab9ba8b-review",
+        "label": "【活动】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【活动】",
+        "lineRange": "2793-2802",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0204-source-section-l2793-l2802-564ab9ba8b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0204-source-section-l2793-l2802-564ab9ba8b-game-challenge-game-0204-source-section-l2793-l2802-564ab9ba8b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-promote-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-game-challenge-game-0205-source-section-l2803-l2810-1d918af1ef",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-promote-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-game-challenge-game-0205-source-section-l2803-l2810-1d918af1ef",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 (1) 比较甲烷和乙烯的化学性质, 分析其与二者的分子结构之间存在哪些联系,与同学讨论。 (2) 乙炔是甲烷或乙烯的同系物吗? 为什么?",
+    "curriculumTags": [
+      "knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-promote-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-game-challenge-game-0205-source-section-l2803-l2810-1d918af1ef-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "2803-2810",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0205-source-section-l2803-l2810-1d918af1ef",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0205-source-section-l2803-l2810-1d918af1ef-game-challenge-game-0205-source-section-l2803-l2810-1d918af1ef"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-promote-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-game-challenge-game-0212-source-section-l2879-l2884-a96450f267",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-promote-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-game-challenge-game-0212-source-section-l2879-l2884-a96450f267",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 请利用图示或表格等形式，对学过的常见材料进行归纳和分类，并注明其性能特点和主要用途。",
+    "curriculumTags": [
+      "knowledge-topic-0212-source-section-l2879-l2884-a96450f267"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-promote-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-game-challenge-game-0212-source-section-l2879-l2884-a96450f267-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0212-source-section-l2879-l2884-a96450f267"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2879-2884",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0212-source-section-l2879-l2884-a96450f267",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0212-source-section-l2879-l2884-a96450f267-game-challenge-game-0212-source-section-l2879-l2884-a96450f267"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-promote-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-game-challenge-game-0229-source-section-l3118-l3123-386aa6d89f",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-promote-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-game-challenge-game-0229-source-section-l3118-l3123-386aa6d89f",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 食醋可以清除水壶中的少量水垢（主要成分是碳酸钙），这是利用了乙酸的什么性质？请写出相关反应的化学方程式。 (2) 如何比较乙酸与碳酸、盐酸的酸性强弱？请查阅资料，与同学讨论，根据生活经验设计实验方案。",
+    "curriculumTags": [
+      "knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-promote-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-game-challenge-game-0229-source-section-l3118-l3123-386aa6d89f-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3118-3123",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0229-source-section-l3118-l3123-386aa6d89f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0229-source-section-l3118-l3123-386aa6d89f-game-challenge-game-0229-source-section-l3118-l3123-386aa6d89f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-promote-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-game-challenge-game-0235-source-section-l3166-l3224-c9d1aca4db",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-promote-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-game-challenge-game-0235-source-section-l3166-l3224-c9d1aca4db",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 从结构上看，烃的衍生物是________分子中的________被________所取代的产物。含有相同官能团的有机物在性质上________，因此我们可以根据有机物分子中________的不同对有机物进行分类。 2. …",
+    "curriculumTags": [
+      "knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-promote-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-game-challenge-game-0235-source-section-l3166-l3224-c9d1aca4db-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3166-3224",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0235-source-section-l3166-l3224-c9d1aca4db",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0235-source-section-l3166-l3224-c9d1aca4db-asset-01",
+            "sourceLineNumber": 3220
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0235-source-section-l3166-l3224-c9d1aca4db-game-challenge-game-0235-source-section-l3166-l3224-c9d1aca4db"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-promote-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-game-challenge-game-0237-source-section-l3227-l3230-e019f78568",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-promote-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-game-challenge-game-0237-source-section-l3227-l3230-e019f78568",
+    "title": "基本营养物质挑战草稿",
+    "summary": "基本营养物质 生命活动需要一系列复杂的化学过程来维持，食物中的营养物质是这些过程的物质和能量基础。我们已经知道，营养物质主要包括糖类、蛋白质、油脂、维生素、无机盐和水。除了水，人们每天摄入量较大的是糖类、蛋白质和油脂这三类有机物，它们既是…",
+    "curriculumTags": [
+      "knowledge-topic-0237-source-section-l3227-l3230-e019f78568"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-promote-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-game-challenge-game-0237-source-section-l3227-l3230-e019f78568-review",
+        "label": "基本营养物质挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0237-source-section-l3227-l3230-e019f78568"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "基本营养物质",
+        "lineRange": "3227-3230",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0237-source-section-l3227-l3230-e019f78568",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0237-source-section-l3227-l3230-e019f78568-game-challenge-game-0237-source-section-l3227-l3230-e019f78568"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-promote-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-game-challenge-game-0240-source-section-l3289-l3292-2187822a6b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-promote-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-game-challenge-game-0240-source-section-l3289-l3292-2187822a6b",
+    "title": "资料卡片挑战草稿",
+    "summary": "资料卡片 糖尿病患者的糖代谢功能紊乱，其血液和尿液中的葡萄糖含量会超出正常范围。测定患者血液或尿液中的葡萄糖含量有助于判断病情，可使用根据葡萄糖特征反应原理制备的试纸进行测试。",
+    "curriculumTags": [
+      "knowledge-topic-0240-source-section-l3289-l3292-2187822a6b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-promote-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-game-challenge-game-0240-source-section-l3289-l3292-2187822a6b-review",
+        "label": "资料卡片挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0240-source-section-l3289-l3292-2187822a6b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "资料卡片",
+        "lineRange": "3289-3292",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0240-source-section-l3289-l3292-2187822a6b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0240-source-section-l3289-l3292-2187822a6b-game-challenge-game-0240-source-section-l3289-l3292-2187822a6b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-promote-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-game-challenge-game-0243-source-section-l3333-l3339-44b867ef6c",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-promote-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-game-challenge-game-0243-source-section-l3333-l3339-44b867ef6c",
+    "title": "信息搜索挑战草稿",
+    "summary": "信息搜索 我国人民很早就掌握了用粮食酿酒和制醋的技术。请查阅资料，了解我国酿酒和制醋的传统方法，并结合生物课中使用糯米自制米酒的实践活动，分析该过程中发生了哪些化学变化。",
+    "curriculumTags": [
+      "knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-promote-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-game-challenge-game-0243-source-section-l3333-l3339-44b867ef6c-review",
+        "label": "信息搜索挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "信息搜索",
+        "lineRange": "3333-3339",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0243-source-section-l3333-l3339-44b867ef6c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0243-source-section-l3333-l3339-44b867ef6c-game-challenge-game-0243-source-section-l3333-l3339-44b867ef6c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-promote-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-game-challenge-game-0244-source-section-l3340-l3361-6ecfa4bbb2",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-promote-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-game-challenge-game-0244-source-section-l3340-l3361-6ecfa4bbb2",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 观察甘氨酸和苯丙氨酸的结构简式，辨认其中的官能团，并说明其结构的共同点。 甘氨酸 苯丙氨酸 蛋白质 protein 氨基酸 amino acid",
+    "curriculumTags": [
+      "knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-promote-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-game-challenge-game-0244-source-section-l3340-l3361-6ecfa4bbb2-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3340-3361",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0244-source-section-l3340-l3361-6ecfa4bbb2",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0244-source-section-l3340-l3361-6ecfa4bbb2-asset-01",
+            "sourceLineNumber": 3344
+          },
+          {
+            "assetId": "0244-source-section-l3340-l3361-6ecfa4bbb2-asset-02",
+            "sourceLineNumber": 3351
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0244-source-section-l3340-l3361-6ecfa4bbb2-game-challenge-game-0244-source-section-l3340-l3361-6ecfa4bbb2"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-promote-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-game-challenge-game-0245-1-20-china-l3362-l3378-caa5387901",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-promote-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-game-challenge-game-0245-1-20-china-l3362-l3378-caa5387901",
+    "title": "1.20中国邮政CHINA挑战草稿",
+    "summary": "1.20中国邮政CHINA 人工合成硅烷牛磺酸酯五十周年（1985） 图7-27 我国为纪念人工全合成结晶牛胰岛素五十周年而发行的邮票 氨基酸分子中都含有氨基（一 $\\mathrm{NH}_2$ ）和羧基。在一定条件下，氨基酸之间能发生聚…",
+    "curriculumTags": [
+      "knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-promote-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-game-challenge-game-0245-1-20-china-l3362-l3378-caa5387901-review",
+        "label": "1.20中国邮政CHINA挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "1.20中国邮政CHINA",
+        "lineRange": "3362-3378",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0245-1-20-china-l3362-l3378-caa5387901",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0245-1-20-china-l3362-l3378-caa5387901-game-challenge-game-0245-1-20-china-l3362-l3378-caa5387901"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-promote-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-game-challenge-game-0247-source-section-l3390-l3399-7c40319026",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-promote-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-game-challenge-game-0247-source-section-l3390-l3399-7c40319026",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 （1）为什么医院里用高温蒸煮、紫外线照射或涂抹医用酒精等方法进行消毒？ （2）在生物实验室里，常用甲醛溶液（俗称福尔马林）保存动物标本。在农业上，可以用硫酸铜、生石灰和水制成波尔多液来防治农作物病害。想一想为什么。 蛋白质在一…",
+    "curriculumTags": [
+      "knowledge-topic-0247-source-section-l3390-l3399-7c40319026"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-promote-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-game-challenge-game-0247-source-section-l3390-l3399-7c40319026-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0247-source-section-l3390-l3399-7c40319026"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3390-3399",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0247-source-section-l3390-l3399-7c40319026",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0247-source-section-l3390-l3399-7c40319026-game-challenge-game-0247-source-section-l3390-l3399-7c40319026"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0253-source-section-l3456-l3461-821293f477-promote-knowledge-topic-0253-source-section-l3456-l3461-821293f477-game-challenge-game-0253-source-section-l3456-l3461-821293f477",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0253-source-section-l3456-l3461-821293f477-promote-knowledge-topic-0253-source-section-l3456-l3461-821293f477-game-challenge-game-0253-source-section-l3456-l3461-821293f477",
+    "title": "营养师挑战草稿",
+    "summary": "营养师 在生活中，面对丰富多样的食品，如何根据个人的身体状况选择更适合的品种？在医院里，如何根据患者的病情制定有针对性的食谱，使患者更好地康复？在运动训练中，如何通过饮食及时补充体力，保证训练效果？遇到这些问题时，营养师会根据食品科学、营…",
+    "curriculumTags": [
+      "knowledge-topic-0253-source-section-l3456-l3461-821293f477"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0253-source-section-l3456-l3461-821293f477-promote-knowledge-topic-0253-source-section-l3456-l3461-821293f477-game-challenge-game-0253-source-section-l3456-l3461-821293f477-review",
+        "label": "营养师挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0253-source-section-l3456-l3461-821293f477"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "营养师",
+        "lineRange": "3456-3461",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0253-source-section-l3456-l3461-821293f477",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0253-source-section-l3456-l3461-821293f477-game-challenge-game-0253-source-section-l3456-l3461-821293f477"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-promote-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-game-challenge-game-0257-source-section-l3470-l3479-2dd9d93b96",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-promote-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-game-challenge-game-0257-source-section-l3470-l3479-2dd9d93b96",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 （1）收集几种食品的包装，根据食品标签中的配料表，指出其中的哪些配料是有机化合物或含有机化合物。选择其中的几种物质，根据本章所学知识，并查阅资料，分析其所属的有机化合物类别和在食品生产中的作用。 （2）请以糕点、糖果和冷饮生…",
+    "curriculumTags": [
+      "knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-promote-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-game-challenge-game-0257-source-section-l3470-l3479-2dd9d93b96-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "3470-3479",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0257-source-section-l3470-l3479-2dd9d93b96",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0257-source-section-l3470-l3479-2dd9d93b96-game-challenge-game-0257-source-section-l3470-l3479-2dd9d93b96"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-promote-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-game-challenge-game-0258-source-section-l3480-l3486-ea7a5c8b42",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-promote-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-game-challenge-game-0258-source-section-l3480-l3486-ea7a5c8b42",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 与同学分享你研究的结果, 并就有机化合物在食品生产中的作用进行交流。 (2) 请从化学的角度, 讨论饮食搭配与人体健康的关系。",
+    "curriculumTags": [
+      "knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-promote-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-game-challenge-game-0258-source-section-l3480-l3486-ea7a5c8b42-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "3480-3486",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0258-source-section-l3480-l3486-ea7a5c8b42",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0258-source-section-l3480-l3486-ea7a5c8b42-game-challenge-game-0258-source-section-l3480-l3486-ea7a5c8b42"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0259-source-section-l3487-l3574-905b725240-promote-knowledge-topic-0259-source-section-l3487-l3574-905b725240-game-challenge-game-0259-source-section-l3487-l3574-905b725240",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0259-source-section-l3487-l3574-905b725240-promote-knowledge-topic-0259-source-section-l3487-l3574-905b725240-game-challenge-game-0259-source-section-l3487-l3574-905b725240",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列关于葡萄糖和蔗糖的叙述错误的是（ ）。 A. 分子式不同 B. 分子结构不同 C. 不是同分异构体, 但属于同系物 D. 蔗糖可以水解生成葡萄糖和果糖 2. 下列关于淀粉和纤维素的叙述正确的是（ ）。 A. 分子式都…",
+    "curriculumTags": [
+      "knowledge-topic-0259-source-section-l3487-l3574-905b725240"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0259-source-section-l3487-l3574-905b725240-promote-knowledge-topic-0259-source-section-l3487-l3574-905b725240-game-challenge-game-0259-source-section-l3487-l3574-905b725240-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0259-source-section-l3487-l3574-905b725240"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3487-3574",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0259-source-section-l3487-l3574-905b725240",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0259-source-section-l3487-l3574-905b725240-game-challenge-game-0259-source-section-l3487-l3574-905b725240"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-promote-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-game-challenge-game-0267-source-section-l3613-l3732-f8aac7824f",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-promote-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-game-challenge-game-0267-source-section-l3613-l3732-f8aac7824f",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 下列叙述正确的是（ ）。 A. 乙烯主要用作植物生长调节剂 B. 糯米中的淀粉水解后就酿成了酒 C. 食用油和白酒都应密封保存 D. 乙酸乙酯可用作食品添加剂 2.下列物质不属于天然有机高分子的是（ ）。 A.纤维素 B…",
+    "curriculumTags": [
+      "knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-promote-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-game-challenge-game-0267-source-section-l3613-l3732-f8aac7824f-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "3613-3732",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0267-source-section-l3613-l3732-f8aac7824f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0267-source-section-l3613-l3732-f8aac7824f-asset-01",
+            "sourceLineNumber": 3693
+          },
+          {
+            "assetId": "0267-source-section-l3613-l3732-f8aac7824f-asset-02",
+            "sourceLineNumber": 3722
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0267-source-section-l3613-l3732-f8aac7824f-game-challenge-game-0267-source-section-l3613-l3732-f8aac7824f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-promote-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-game-challenge-game-0273-source-section-l3757-l3764-a2d5275952",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-promote-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-game-challenge-game-0273-source-section-l3757-l3764-a2d5275952",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 通过以上有机物分子球棍模型的搭建，归纳碳原子的成键特征和各类烃分子中的化学键类型。 2. 根据二氯甲烷的结构式推测其是否有同分异构体，并通过搭建球棍模型进行验证，体会结构式与分子空间结构之间的关系。 3. 分子中含有…",
+    "curriculumTags": [
+      "knowledge-topic-0273-source-section-l3757-l3764-a2d5275952"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-promote-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-game-challenge-game-0273-source-section-l3757-l3764-a2d5275952-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0273-source-section-l3757-l3764-a2d5275952"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3757-3764",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0273-source-section-l3757-l3764-a2d5275952",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0273-source-section-l3757-l3764-a2d5275952-game-challenge-game-0273-source-section-l3757-l3764-a2d5275952"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-promote-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-game-challenge-game-0279-source-section-l3804-l3811-b176f6e10e",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-promote-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-game-challenge-game-0279-source-section-l3804-l3811-b176f6e10e",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 在乙醇氧化生成乙醛的实验中，加热铜丝及将它插入乙醇里的操作为什么要反复进行几次？ 2. 在制取乙酸乙酯的实验中，浓硫酸和饱和 $\\mathrm{Na_2CO_3}$ 溶液各起什么作用？在实验过程中，盛有饱和 $\\ma…",
+    "curriculumTags": [
+      "knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-promote-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-game-challenge-game-0279-source-section-l3804-l3811-b176f6e10e-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3804-3811",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0279-source-section-l3804-l3811-b176f6e10e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0279-source-section-l3804-l3811-b176f6e10e-game-challenge-game-0279-source-section-l3804-l3811-b176f6e10e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-promote-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-game-challenge-game-0285-source-section-l3838-l3843-780f8037da",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-promote-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-game-challenge-game-0285-source-section-l3838-l3843-780f8037da",
+    "title": "自然资源与可持续发展挑战草稿",
+    "summary": "自然资源与可持续发展 自然资源是人类社会发展不可或缺的自然物质基础，包括土地与土壤资源、矿产资源、生物资源、水资源、能源资源、环境资源等，根据其能否再生可以分为可再生资源和不可再生资源。可持续发展的目标是在满足人类需要的同时，强调人类的行…",
+    "curriculumTags": [
+      "knowledge-topic-0285-source-section-l3838-l3843-780f8037da"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-promote-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-game-challenge-game-0285-source-section-l3838-l3843-780f8037da-review",
+        "label": "自然资源与可持续发展挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0285-source-section-l3838-l3843-780f8037da"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "自然资源与可持续发展",
+        "lineRange": "3838-3843",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0285-source-section-l3838-l3843-780f8037da",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0285-source-section-l3838-l3843-780f8037da-game-challenge-game-0285-source-section-l3838-l3843-780f8037da"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-promote-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-game-challenge-game-0287-source-section-l3881-l3898-ca070f23d1",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-promote-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-game-challenge-game-0287-source-section-l3881-l3898-ca070f23d1",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 计算表明，生产 $1 \\mathrm{~mol}$ 铝消耗的电能至少为 $1.8 \\times 10^{6} \\mathrm{~J}$ ，回收铝质饮料罐得到铝与从铝土矿制铝相比，前者的能耗仅为后者的 $3\\% \\sim 5\\%…",
+    "curriculumTags": [
+      "knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-promote-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-game-challenge-game-0287-source-section-l3881-l3898-ca070f23d1-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3881-3898",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0287-source-section-l3881-l3898-ca070f23d1",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0287-source-section-l3881-l3898-ca070f23d1-asset-01",
+            "sourceLineNumber": 3885
+          },
+          {
+            "assetId": "0287-source-section-l3881-l3898-ca070f23d1-asset-02",
+            "sourceLineNumber": 3892
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0287-source-section-l3881-l3898-ca070f23d1-game-challenge-game-0287-source-section-l3881-l3898-ca070f23d1"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-promote-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-game-challenge-game-0291-source-section-l3923-l3940-2d4d8b1554",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-promote-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-game-challenge-game-0291-source-section-l3923-l3940-2d4d8b1554",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 溴及其化合物在医药、农药、染料和阻燃剂等的生产中有广泛应用。目前，人们主要从海水和盐湖水中提取溴。 工业上常用的一种海水提溴技术叫做“吹出法”，其过程主要包括氧化（用氯气氧化海水中的溴离子）、吹出（用空气将生成的溴吹出）、吸收…",
+    "curriculumTags": [
+      "knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-promote-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-game-challenge-game-0291-source-section-l3923-l3940-2d4d8b1554-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3923-3940",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0291-source-section-l3923-l3940-2d4d8b1554",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0291-source-section-l3923-l3940-2d4d8b1554-asset-01",
+            "sourceLineNumber": 3929
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0291-source-section-l3923-l3940-2d4d8b1554-game-challenge-game-0291-source-section-l3923-l3940-2d4d8b1554"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-promote-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-game-challenge-game-0293-source-section-l3945-l3974-15ed426d1d",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-promote-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-game-challenge-game-0293-source-section-l3945-l3974-15ed426d1d",
+    "title": "三、煤、石油和天然气的综合利用挑战草稿",
+    "summary": "三、煤、石油和天然气的综合利用 煤 coal 石油 petroleum 天然气 natural gas 迄今为止，煤、石油和天然气仍是人类使用的主要能源，同时它们也是重要的化工原料。如何实现化石燃料的综合利用，提高利用率，减少化石燃料燃烧…",
+    "curriculumTags": [
+      "knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-promote-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-game-challenge-game-0293-source-section-l3945-l3974-15ed426d1d-review",
+        "label": "三、煤、石油和天然气的综合利用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "三、煤、石油和天然气的综合利用",
+        "lineRange": "3945-3974",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0293-source-section-l3945-l3974-15ed426d1d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0293-source-section-l3945-l3974-15ed426d1d-game-challenge-game-0293-source-section-l3945-l3974-15ed426d1d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-promote-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-game-challenge-game-0297-source-section-l4038-l4119-52ad624bc7",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-promote-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-game-challenge-game-0297-source-section-l4038-l4119-52ad624bc7",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列过程属于物理变化的是（ ）。 A. 煤的干馏 B. 石油分馏 C. 石油裂化 D. 乙烯聚合 2. 完成下列反应的化学方程式，并指明其中的氧化剂和还原剂。 $ \\mathrm {S n O} _ {2} + \\ma…",
+    "curriculumTags": [
+      "knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-promote-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-game-challenge-game-0297-source-section-l4038-l4119-52ad624bc7-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "4038-4119",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0297-source-section-l4038-l4119-52ad624bc7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0297-source-section-l4038-l4119-52ad624bc7-asset-01",
+            "sourceLineNumber": 4074
+          },
+          {
+            "assetId": "0297-source-section-l4038-l4119-52ad624bc7-asset-02",
+            "sourceLineNumber": 4097
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0297-source-section-l4038-l4119-52ad624bc7-game-challenge-game-0297-source-section-l4038-l4119-52ad624bc7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-promote-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-game-challenge-game-0306-source-section-l4190-l4216-42d191e073",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-promote-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-game-challenge-game-0306-source-section-l4190-l4216-42d191e073",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 以“农业生产中是否应该继续施用化肥和农药”为题进行小组辩论。可以参考下列正方和反方的一些观点。 正方观点举例： （1）解决全球快速增长人口的吃饭问题。 （2）与有机肥料和天然农药相比，化肥和有机合成农药用量少、见效快。 （3）…",
+    "curriculumTags": [
+      "knowledge-topic-0306-source-section-l4190-l4216-42d191e073"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-promote-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-game-challenge-game-0306-source-section-l4190-l4216-42d191e073-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0306-source-section-l4190-l4216-42d191e073"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4190-4216",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0306-source-section-l4190-l4216-42d191e073",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0306-source-section-l4190-l4216-42d191e073-asset-01",
+            "sourceLineNumber": 4210
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0306-source-section-l4190-l4216-42d191e073-game-challenge-game-0306-source-section-l4190-l4216-42d191e073"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-promote-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-game-challenge-game-0310-source-section-l4238-l4254-9a15e38a4b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-promote-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-game-challenge-game-0310-source-section-l4238-l4254-9a15e38a4b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 选择一种抗酸药，仔细查阅药品包装和说明书中的信息，如药品名称、成分、性状、功能主治、规格、用法用量、不良反应、禁忌、注意事项、储藏方法、生产日期和有效期等，了解其中有关安全性和有效性的信息，并设计实验方案验证这种抗酸药的有效成…",
+    "curriculumTags": [
+      "knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-promote-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-game-challenge-game-0310-source-section-l4238-l4254-9a15e38a4b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4238-4254",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0310-source-section-l4238-l4254-9a15e38a4b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0310-source-section-l4238-l4254-9a15e38a4b-game-challenge-game-0310-source-section-l4238-l4254-9a15e38a4b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-promote-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-game-challenge-game-0313-source-section-l4311-l4322-3c675653a5",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-promote-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-game-challenge-game-0313-source-section-l4311-l4322-3c675653a5",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 结合图8-16，举例说明食品中含有的食品添加剂。作为一名消费者，你如何看待食品广告中“零添加”“绝不含防腐剂”这样的说法？ 在现代食品工业中，食品添加剂的使用满足了人们对食品多样化的需求，保证了市场供应。目前我国使用的食品添加…",
+    "curriculumTags": [
+      "knowledge-topic-0313-source-section-l4311-l4322-3c675653a5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-promote-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-game-challenge-game-0313-source-section-l4311-l4322-3c675653a5-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0313-source-section-l4311-l4322-3c675653a5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4311-4322",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0313-source-section-l4311-l4322-3c675653a5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0313-source-section-l4311-l4322-3c675653a5-game-challenge-game-0313-source-section-l4311-l4322-3c675653a5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-promote-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-game-challenge-game-0318-source-section-l4366-l4388-98cc395f4b",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-promote-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-game-challenge-game-0318-source-section-l4366-l4388-98cc395f4b",
+    "title": "信息搜索挑战草稿",
+    "summary": "信息搜索 有人认为“食品添加剂是现代食品工业的灵魂”；有人对此不以为然，还举出近年来发生的一些“食品安全事件”作为证据进行反驳。请分别按照上述观点提到的两个主题搜索信息，并对安全使用食品添加剂的注意事项进行归纳和总结。 根据个人不同情况和…",
+    "curriculumTags": [
+      "knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-promote-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-game-challenge-game-0318-source-section-l4366-l4388-98cc395f4b-review",
+        "label": "信息搜索挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "信息搜索",
+        "lineRange": "4366-4388",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0318-source-section-l4366-l4388-98cc395f4b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0318-source-section-l4366-l4388-98cc395f4b-game-challenge-game-0318-source-section-l4366-l4388-98cc395f4b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-promote-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-game-challenge-game-0325-source-section-l4450-l4535-caa31b0f58",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-promote-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-game-challenge-game-0325-source-section-l4450-l4535-caa31b0f58",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 （1）分享制作的豆腐并评判其品质。 (2) 撰写研究报告, 与同学讨论。 1.下列物质不能用作食品添加剂的是（ ）。 A. 氯化镁 B. 亚硝酸钠 C. 山梨酸钾 D. 三聚氰胺 2. 下列有关合理用药的说法中正确的是（ …",
+    "curriculumTags": [
+      "knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-promote-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-game-challenge-game-0325-source-section-l4450-l4535-caa31b0f58-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "4450-4535",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0325-source-section-l4450-l4535-caa31b0f58",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0325-source-section-l4450-l4535-caa31b0f58-game-challenge-game-0325-source-section-l4450-l4535-caa31b0f58"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-promote-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-game-challenge-game-0327-source-section-l4538-l4541-3e958d3048",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-promote-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-game-challenge-game-0327-source-section-l4538-l4541-3e958d3048",
+    "title": "环境保护与绿色化学挑战草稿",
+    "summary": "环境保护与绿色化学 人类和其他生物生存的生物圈与大气圈、水圈和岩石圈不断地进行着物质和能量的交换，共同构成了地球生态系统。通常所说的环境问题，主要是指由于人类不合理地开发和利用自然资源而造成的生态环境破坏，以及工农业生产和人类生活所造成的…",
+    "curriculumTags": [
+      "knowledge-topic-0327-source-section-l4538-l4541-3e958d3048"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-promote-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-game-challenge-game-0327-source-section-l4538-l4541-3e958d3048-review",
+        "label": "环境保护与绿色化学挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0327-source-section-l4538-l4541-3e958d3048"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "环境保护与绿色化学",
+        "lineRange": "4538-4541",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0327-source-section-l4538-l4541-3e958d3048",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0327-source-section-l4538-l4541-3e958d3048-game-challenge-game-0327-source-section-l4538-l4541-3e958d3048"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-promote-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-game-challenge-game-0329-source-section-l4574-l4585-8f3cb9caa9",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-promote-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-game-challenge-game-0329-source-section-l4574-l4585-8f3cb9caa9",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 （1）含硫氧化物和含氮氧化物是形成酸雨的主要物质。工业上常利用它们与一些物质发生反应加以控制、消除和回收利用。请举例说明这些方法所依据的化学反应和反应类型。 （2）含氮、磷元素的大量污水任意排入河流、湖泊和近海水域，会出现水华…",
+    "curriculumTags": [
+      "knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-promote-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-game-challenge-game-0329-source-section-l4574-l4585-8f3cb9caa9-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4574-4585",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0329-source-section-l4574-l4585-8f3cb9caa9",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0329-source-section-l4574-l4585-8f3cb9caa9-game-challenge-game-0329-source-section-l4574-l4585-8f3cb9caa9"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-promote-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-game-challenge-game-0330-source-section-l4586-l4604-2eb7ce8169",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-promote-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-game-challenge-game-0330-source-section-l4586-l4604-2eb7ce8169",
+    "title": "二、绿色化学挑战草稿",
+    "summary": "二、绿色化学 长期以来，科学技术为人类带来了巨大的物质财富，而社会发展却面临着越来越大的环境压力。如何协调资源开发利用与环境保护的关系，实现人类社会的可持续发展？绿色化学的理论和实践为人类解决环境问题提供了全新的思路。 绿色化学也称环境友…",
+    "curriculumTags": [
+      "knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-promote-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-game-challenge-game-0330-source-section-l4586-l4604-2eb7ce8169-review",
+        "label": "二、绿色化学挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "二、绿色化学",
+        "lineRange": "4586-4604",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0330-source-section-l4586-l4604-2eb7ce8169",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0330-source-section-l4586-l4604-2eb7ce8169-asset-01",
+            "sourceLineNumber": 4592
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0330-source-section-l4586-l4604-2eb7ce8169-game-challenge-game-0330-source-section-l4586-l4604-2eb7ce8169"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-promote-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-game-challenge-game-0331-source-section-l4605-l4630-38fd875081",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-promote-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-game-challenge-game-0331-source-section-l4605-l4630-38fd875081",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 以乙烯为原料生产环氧乙烷，过去主要使用的是氯代乙醇法，包括以下两步反应： $ \\begin{array}{l} \\mathrm {C H} _ {2} = \\mathrm {C H} _ {2} + \\mathrm {C l…",
+    "curriculumTags": [
+      "knowledge-topic-0331-source-section-l4605-l4630-38fd875081"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-promote-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-game-challenge-game-0331-source-section-l4605-l4630-38fd875081-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0331-source-section-l4605-l4630-38fd875081"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4605-4630",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0331-source-section-l4605-l4630-38fd875081",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0331-source-section-l4605-l4630-38fd875081-game-challenge-game-0331-source-section-l4605-l4630-38fd875081"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-promote-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-game-challenge-game-0333-source-section-l4633-l4638-1346afac6e",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-promote-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-game-challenge-game-0333-source-section-l4633-l4638-1346afac6e",
+    "title": "人工光合作用挑战草稿",
+    "summary": "人工光合作用 据估计，绿色植物等通过光合作用，每年可合成约 $2 \\times 10^{11} \\mathrm{t}$ 有机物，这种能力着实令人羡慕，也引发了人们模拟这一奇妙的物质和能量转化过程的兴趣。面对日渐枯竭的化石燃料，面对臭氧层被…",
+    "curriculumTags": [
+      "knowledge-topic-0333-source-section-l4633-l4638-1346afac6e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-promote-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-game-challenge-game-0333-source-section-l4633-l4638-1346afac6e-review",
+        "label": "人工光合作用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0333-source-section-l4633-l4638-1346afac6e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "人工光合作用",
+        "lineRange": "4633-4638",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0333-source-section-l4633-l4638-1346afac6e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0333-source-section-l4633-l4638-1346afac6e-game-challenge-game-0333-source-section-l4633-l4638-1346afac6e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-promote-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-game-challenge-game-0334-source-section-l4639-l4650-997f5f22f7",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-promote-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-game-challenge-game-0334-source-section-l4639-l4650-997f5f22f7",
+    "title": "环境保护工程师挑战草稿",
+    "summary": "环境保护工程师 大气、水和土壤与人们的生活息息相关，保护环境是我们的共同责任。环境保护工程师的主要工作是预防和治理环境污染，包括对环境问题的调查研究、分析监测、管理监督和对环境污染的控制与治理等。例如，应用光谱分析、滴定分析等化学分析方法…",
+    "curriculumTags": [
+      "knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-promote-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-game-challenge-game-0334-source-section-l4639-l4650-997f5f22f7-review",
+        "label": "环境保护工程师挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "环境保护工程师",
+        "lineRange": "4639-4650",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0334-source-section-l4639-l4650-997f5f22f7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0334-source-section-l4639-l4650-997f5f22f7-game-challenge-game-0334-source-section-l4639-l4650-997f5f22f7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-promote-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-game-challenge-game-0335-source-section-l4651-l4744-82c4397ee6",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-promote-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-game-challenge-game-0335-source-section-l4651-l4744-82c4397ee6",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1.下列做法值得提倡的是（ ）。 A. 选用回收废纸制造的纸箱 B. 选用一次性筷子、纸杯和塑料袋 C. 将生活垃圾进行分类处理 D. 选乘公共交通工具出行 2.我国酸雨的形成主要是由于（ ）。 A. 森林遭到乱砍滥伐，破坏了…",
+    "curriculumTags": [
+      "knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-promote-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-game-challenge-game-0335-source-section-l4651-l4744-82c4397ee6-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "4651-4744",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0335-source-section-l4651-l4744-82c4397ee6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0335-source-section-l4651-l4744-82c4397ee6-asset-01",
+            "sourceLineNumber": 4723
+          },
+          {
+            "assetId": "0335-source-section-l4651-l4744-82c4397ee6-asset-02",
+            "sourceLineNumber": 4738
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0335-source-section-l4651-l4744-82c4397ee6-game-challenge-game-0335-source-section-l4651-l4744-82c4397ee6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-promote-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-game-challenge-game-0339-source-section-l4768-l4882-7be187fd21",
+    "challengeId": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-promote-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-game-challenge-game-0339-source-section-l4768-l4882-7be187fd21",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 加碘食盐中的碘以碘酸钾（ $\\mathrm{KIO}_3$ ）的形式存在。已知在溶液中 $\\mathrm{IO}_3^-$ 与 $\\Gamma^{-}$ 可发生反应： $ \\mathrm {I O} _ {3} ^ {…",
+    "curriculumTags": [
+      "knowledge-topic-0339-source-section-l4768-l4882-7be187fd21"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g10-required-2-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-promote-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-game-challenge-game-0339-source-section-l4768-l4882-7be187fd21-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0339-source-section-l4768-l4882-7be187fd21"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g10-required-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g10-required-2",
+        "volumeId": "pep-chemistry-g10-required-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "4768-4882",
+        "sourceHash": "sha256:49eca964bd86e1094087de4c775d7ad2e489df3a9651635e41deb6776aabee2c",
+        "candidateId": "game-0339-source-section-l4768-l4882-7be187fd21",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0339-source-section-l4768-l4882-7be187fd21-asset-01",
+            "sourceLineNumber": 4804
+          },
+          {
+            "assetId": "0339-source-section-l4768-l4882-7be187fd21-asset-02",
+            "sourceLineNumber": 4807
+          },
+          {
+            "assetId": "0339-source-section-l4768-l4882-7be187fd21-asset-03",
+            "sourceLineNumber": 4830
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0339-source-section-l4768-l4882-7be187fd21-game-challenge-game-0339-source-section-l4768-l4882-7be187fd21"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-promote-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-game-challenge-game-0001-source-section-l1-l5-d1fd8b7b59",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-promote-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-game-challenge-game-0001-source-section-l1-l5-d1fd8b7b59",
+    "title": "化学挑战草稿",
+    "summary": "化学 选择性必修 1 化学反应原理",
+    "curriculumTags": [
+      "knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-promote-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-game-challenge-game-0001-source-section-l1-l5-d1fd8b7b59-review",
+        "label": "化学挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "化学",
+        "lineRange": "1-5",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0001-source-section-l1-l5-d1fd8b7b59",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0001-source-section-l1-l5-d1fd8b7b59-game-challenge-game-0001-source-section-l1-l5-d1fd8b7b59"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-promote-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-game-challenge-game-0002-source-section-l6-l33-5c29da7cfe",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-promote-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-game-challenge-game-0002-source-section-l6-l33-5c29da7cfe",
+    "title": "引言挑战草稿",
+    "summary": "引言 我们已经学习过很多化学反应，也做过不少化学实验，对于物质及其化学变化有了基本的认识。在此基础上学习《化学反应原理》，将主要讨论一些关于化学反应的普遍性问题。例如，怎样认识和理解化学反应中的能量变化？为什么化学反应有的快而有的慢？反应…",
+    "curriculumTags": [
+      "knowledge-topic-0002-source-section-l6-l33-5c29da7cfe"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-promote-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-game-challenge-game-0002-source-section-l6-l33-5c29da7cfe-review",
+        "label": "引言挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0002-source-section-l6-l33-5c29da7cfe"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "引言",
+        "lineRange": "6-33",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0002-source-section-l6-l33-5c29da7cfe",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0002-source-section-l6-l33-5c29da7cfe-asset-01",
+            "sourceLineNumber": 12
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0002-source-section-l6-l33-5c29da7cfe-game-challenge-game-0002-source-section-l6-l33-5c29da7cfe"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-promote-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-game-challenge-game-0010-source-section-l89-l92-4f5b1c7f1d",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-promote-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-game-challenge-game-0010-source-section-l89-l92-4f5b1c7f1d",
+    "title": "【提出问题】挑战草稿",
+    "summary": "【提出问题】 在测定中和反应的反应热时，应该测量哪些数据？如何根据测得的数据计算反应热？为了提高测定的准确度，应该采取哪些措施？",
+    "curriculumTags": [
+      "knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-promote-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-game-challenge-game-0010-source-section-l89-l92-4f5b1c7f1d-review",
+        "label": "【提出问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【提出问题】",
+        "lineRange": "89-92",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0010-source-section-l89-l92-4f5b1c7f1d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0010-source-section-l89-l92-4f5b1c7f1d-game-challenge-game-0010-source-section-l89-l92-4f5b1c7f1d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-promote-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-game-challenge-game-0013-source-section-l136-l141-ecb3b9ae40",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-promote-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-game-challenge-game-0013-source-section-l136-l141-ecb3b9ae40",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 在上述过程中，提高测定反应热准确度的措施有哪些？ 大量实验测得，在 $25^{\\circ} \\mathrm{C}$ 和 $101 \\mathrm{kPa}$ 下，强酸的稀溶液与强碱的稀溶液发生中和反应生成 $1 \\math…",
+    "curriculumTags": [
+      "knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-promote-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-game-challenge-game-0013-source-section-l136-l141-ecb3b9ae40-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "136-141",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0013-source-section-l136-l141-ecb3b9ae40",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0013-source-section-l136-l141-ecb3b9ae40-game-challenge-game-0013-source-section-l136-l141-ecb3b9ae40"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0014-2-l142-l186-89176a5463-promote-knowledge-topic-0014-2-l142-l186-89176a5463-game-challenge-game-0014-2-l142-l186-89176a5463",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0014-2-l142-l186-89176a5463-promote-knowledge-topic-0014-2-l142-l186-89176a5463-game-challenge-game-0014-2-l142-l186-89176a5463",
+    "title": "2. 反应热与焓变挑战草稿",
+    "summary": "2. 反应热与焓变 化学反应为什么会产生反应热？这是因为化学反应前后体系的内能（符号为 $U$ ）发生了变化。内能是体系内物质的各种能量的总和，受温度、压强和物质的聚集状态等影响。 在科学研究和生产实践中，化学反应通常是在等压条件下进行的…",
+    "curriculumTags": [
+      "knowledge-topic-0014-2-l142-l186-89176a5463"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0014-2-l142-l186-89176a5463-promote-knowledge-topic-0014-2-l142-l186-89176a5463-game-challenge-game-0014-2-l142-l186-89176a5463-review",
+        "label": "2. 反应热与焓变挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0014-2-l142-l186-89176a5463"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "2. 反应热与焓变",
+        "lineRange": "142-186",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0014-2-l142-l186-89176a5463",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0014-2-l142-l186-89176a5463-asset-01",
+            "sourceLineNumber": 166
+          },
+          {
+            "assetId": "0014-2-l142-l186-89176a5463-asset-02",
+            "sourceLineNumber": 175
+          },
+          {
+            "assetId": "0014-2-l142-l186-89176a5463-asset-03",
+            "sourceLineNumber": 178
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0014-2-l142-l186-89176a5463-game-challenge-game-0014-2-l142-l186-89176a5463"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0019-source-section-l299-l312-2269936dbf-promote-knowledge-topic-0019-source-section-l299-l312-2269936dbf-game-challenge-game-0019-source-section-l299-l312-2269936dbf",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0019-source-section-l299-l312-2269936dbf-promote-knowledge-topic-0019-source-section-l299-l312-2269936dbf-game-challenge-game-0019-source-section-l299-l312-2269936dbf",
+    "title": "重要的体内能源——脂肪挑战草稿",
+    "summary": "重要的体内能源——脂肪 说起脂肪，你也许会联想到肥胖、高血脂等。实际上，人体内的脂肪具有重要的生理功能。 脂肪是人体储存能量的重要物质。一般成年人体内储存的脂肪占体重的 $10\\% \\sim 20\\%$ 。当人体因劳动或体育运动消耗大量能…",
+    "curriculumTags": [
+      "knowledge-topic-0019-source-section-l299-l312-2269936dbf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0019-source-section-l299-l312-2269936dbf-promote-knowledge-topic-0019-source-section-l299-l312-2269936dbf-game-challenge-game-0019-source-section-l299-l312-2269936dbf-review",
+        "label": "重要的体内能源——脂肪挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0019-source-section-l299-l312-2269936dbf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "重要的体内能源——脂肪",
+        "lineRange": "299-312",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0019-source-section-l299-l312-2269936dbf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0019-source-section-l299-l312-2269936dbf-game-challenge-game-0019-source-section-l299-l312-2269936dbf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-promote-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-game-challenge-game-0024-source-section-l329-l369-21ecf586bf",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-promote-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-game-challenge-game-0024-source-section-l329-l369-21ecf586bf",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 通过研究, 你得到什么启示? (2) 撰写研究报告，并与同学讨论。 1. 依据事实，写出下列反应的热化学方程式。 (1) $1 \\, \\text{mol} \\, \\text{Cu}(\\text{s})$ 与适量 $…",
+    "curriculumTags": [
+      "knowledge-topic-0024-source-section-l329-l369-21ecf586bf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-promote-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-game-challenge-game-0024-source-section-l329-l369-21ecf586bf-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0024-source-section-l329-l369-21ecf586bf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "329-369",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0024-source-section-l329-l369-21ecf586bf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0024-source-section-l329-l369-21ecf586bf-game-challenge-game-0024-source-section-l329-l369-21ecf586bf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-promote-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-game-challenge-game-0030-source-section-l453-l596-131a8bfeba",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-promote-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-game-challenge-game-0030-source-section-l453-l596-131a8bfeba",
+    "title": "二、反应热的计算挑战草稿",
+    "summary": "二、反应热的计算 在实际应用中，常常需要计算反应热。例如，化工生产中对于化学反应过程中热量的利用、化学反应条件的控制等都涉及反应热的计算问题。 【例题1】黄铁矿（主要成分为 $\\mathrm{FeS}_2$ ）的燃烧是工业上制硫酸时得到 …",
+    "curriculumTags": [
+      "knowledge-topic-0030-source-section-l453-l596-131a8bfeba"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-promote-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-game-challenge-game-0030-source-section-l453-l596-131a8bfeba-review",
+        "label": "二、反应热的计算挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0030-source-section-l453-l596-131a8bfeba"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "二、反应热的计算",
+        "lineRange": "453-596",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0030-source-section-l453-l596-131a8bfeba",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0030-source-section-l453-l596-131a8bfeba-game-challenge-game-0030-source-section-l453-l596-131a8bfeba"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0037-source-section-l725-l736-df036a9b42-promote-knowledge-topic-0037-source-section-l725-l736-df036a9b42-game-challenge-game-0037-source-section-l725-l736-df036a9b42",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0037-source-section-l725-l736-df036a9b42-promote-knowledge-topic-0037-source-section-l725-l736-df036a9b42-game-challenge-game-0037-source-section-l725-l736-df036a9b42",
+    "title": "化学平衡挑战草稿",
+    "summary": "化学平衡 化学反应速率 化学平衡 化学反应的方向 化学反应的调控 研究一个化学反应时，往往需要关注以下两个方面的问题：一是反应的快慢和历程，涉及反应速率和反应机理；二是反应的趋势和限度，涉及反应方向和化学平衡。这两个方面既有区别，又有联系…",
+    "curriculumTags": [
+      "knowledge-topic-0037-source-section-l725-l736-df036a9b42"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0037-source-section-l725-l736-df036a9b42-promote-knowledge-topic-0037-source-section-l725-l736-df036a9b42-game-challenge-game-0037-source-section-l725-l736-df036a9b42-review",
+        "label": "化学平衡挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0037-source-section-l725-l736-df036a9b42"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "化学平衡",
+        "lineRange": "725-736",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0037-source-section-l725-l736-df036a9b42",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0037-source-section-l725-l736-df036a9b42-game-challenge-game-0037-source-section-l725-l736-df036a9b42"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0043-source-section-l790-l793-f71733754a-promote-knowledge-topic-0043-source-section-l790-l793-f71733754a-game-challenge-game-0043-source-section-l790-l793-f71733754a",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0043-source-section-l790-l793-f71733754a-promote-knowledge-topic-0043-source-section-l790-l793-f71733754a-game-challenge-game-0043-source-section-l790-l793-f71733754a",
+    "title": "【提出问题】挑战草稿",
+    "summary": "【提出问题】 浓度、温度、催化剂等因素如何影响化学反应速率？如何测定化学反应速率？",
+    "curriculumTags": [
+      "knowledge-topic-0043-source-section-l790-l793-f71733754a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0043-source-section-l790-l793-f71733754a-promote-knowledge-topic-0043-source-section-l790-l793-f71733754a-game-challenge-game-0043-source-section-l790-l793-f71733754a-review",
+        "label": "【提出问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0043-source-section-l790-l793-f71733754a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【提出问题】",
+        "lineRange": "790-793",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0043-source-section-l790-l793-f71733754a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0043-source-section-l790-l793-f71733754a-game-challenge-game-0043-source-section-l790-l793-f71733754a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0044-i-l794-l807-697e0838f7-promote-knowledge-topic-0044-i-l794-l807-697e0838f7-game-challenge-game-0044-i-l794-l807-697e0838f7",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0044-i-l794-l807-697e0838f7-promote-knowledge-topic-0044-i-l794-l807-697e0838f7-game-challenge-game-0044-i-l794-l807-697e0838f7",
+    "title": "【实验探究Ⅰ】挑战草稿",
+    "summary": "【实验探究Ⅰ】 选择实验用品，设计实验探究影响化学反应速率的因素。 实验用品： 烧杯、试管、量筒、试管架、胶头滴管、温度计、秒表。 0.1 mol/L $\\mathrm{Na}_2\\mathrm{S}_2\\mathrm{O}_3$ 溶液、…",
+    "curriculumTags": [
+      "knowledge-topic-0044-i-l794-l807-697e0838f7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0044-i-l794-l807-697e0838f7-promote-knowledge-topic-0044-i-l794-l807-697e0838f7-game-challenge-game-0044-i-l794-l807-697e0838f7-review",
+        "label": "【实验探究Ⅰ】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0044-i-l794-l807-697e0838f7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【实验探究Ⅰ】",
+        "lineRange": "794-807",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0044-i-l794-l807-697e0838f7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0044-i-l794-l807-697e0838f7-game-challenge-game-0044-i-l794-l807-697e0838f7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-promote-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-game-challenge-game-0046-source-section-l827-l832-92b47f8db8",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-promote-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-game-challenge-game-0046-source-section-l827-l832-92b47f8db8",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 上述实验探究中，你用到了哪些科学方法？ 在一般情况下，当其他条件相同时，增大反应物浓度，化学反应速率增大；降低反应物浓度，化学反应速率减小。升高温度，化学反应速率增大；降低温度，化学反应速率减小。大量实验证明，温度每升高 …",
+    "curriculumTags": [
+      "knowledge-topic-0046-source-section-l827-l832-92b47f8db8"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-promote-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-game-challenge-game-0046-source-section-l827-l832-92b47f8db8-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0046-source-section-l827-l832-92b47f8db8"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "827-832",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0046-source-section-l827-l832-92b47f8db8",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0046-source-section-l827-l832-92b47f8db8-game-challenge-game-0046-source-section-l827-l832-92b47f8db8"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-promote-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-game-challenge-game-0047-source-section-l833-l896-cf4838bb42",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-promote-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-game-challenge-game-0047-source-section-l833-l896-cf4838bb42",
+    "title": "三、活化能挑战草稿",
+    "summary": "三、活化能 如何解释浓度、压强、温度及催化剂等因素对化学反应速率的影响呢？下面通过活化能和简单碰撞理论对这一问题进行讨论。 研究发现，大多数化学反应并不是经过简单碰撞就能完成的，而往往经过多个反应步骤才能实现。例如， $2\\mathrm{…",
+    "curriculumTags": [
+      "knowledge-topic-0047-source-section-l833-l896-cf4838bb42"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-promote-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-game-challenge-game-0047-source-section-l833-l896-cf4838bb42-review",
+        "label": "三、活化能挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0047-source-section-l833-l896-cf4838bb42"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "三、活化能",
+        "lineRange": "833-896",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0047-source-section-l833-l896-cf4838bb42",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0047-source-section-l833-l896-cf4838bb42-asset-01",
+            "sourceLineNumber": 853
+          },
+          {
+            "assetId": "0047-source-section-l833-l896-cf4838bb42-asset-02",
+            "sourceLineNumber": 860
+          },
+          {
+            "assetId": "0047-source-section-l833-l896-cf4838bb42-asset-03",
+            "sourceLineNumber": 867
+          },
+          {
+            "assetId": "0047-source-section-l833-l896-cf4838bb42-asset-04",
+            "sourceLineNumber": 886
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0047-source-section-l833-l896-cf4838bb42-game-challenge-game-0047-source-section-l833-l896-cf4838bb42"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0048-source-section-l897-l923-b54719d774-promote-knowledge-topic-0048-source-section-l897-l923-b54719d774-game-challenge-game-0048-source-section-l897-l923-b54719d774",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0048-source-section-l897-l923-b54719d774-promote-knowledge-topic-0048-source-section-l897-l923-b54719d774-game-challenge-game-0048-source-section-l897-l923-b54719d774",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 请尝试用碰撞理论解释： (1) 当其他条件相同时, 为什么增大反应物的浓度会使化学反应速率增大, 而降低反应物的浓度会使化学反应速率减小? (2) 当其他条件相同时, 为什么升高温度会使化学反应速率增大, 而降低温度会使化学反…",
+    "curriculumTags": [
+      "knowledge-topic-0048-source-section-l897-l923-b54719d774"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0048-source-section-l897-l923-b54719d774-promote-knowledge-topic-0048-source-section-l897-l923-b54719d774-game-challenge-game-0048-source-section-l897-l923-b54719d774-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0048-source-section-l897-l923-b54719d774"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "897-923",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0048-source-section-l897-l923-b54719d774",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0048-source-section-l897-l923-b54719d774-asset-01",
+            "sourceLineNumber": 917
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0048-source-section-l897-l923-b54719d774-game-challenge-game-0048-source-section-l897-l923-b54719d774"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-promote-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-game-challenge-game-0050-source-section-l938-l1021-3bb4a1cc27",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-promote-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-game-challenge-game-0050-source-section-l938-l1021-3bb4a1cc27",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列过程中，化学反应速率的增大对人类有益的是（ ）。 A. 金属的腐蚀 B. 食物的腐败 C. 塑料的老化 D. 氨的合成 2. 下列对化学反应速率增大原因的分析错误的是（ ）。 A. 对有气体参加的化学反应, 增大压强…",
+    "curriculumTags": [
+      "knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-promote-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-game-challenge-game-0050-source-section-l938-l1021-3bb4a1cc27-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "938-1021",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0050-source-section-l938-l1021-3bb4a1cc27",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0050-source-section-l938-l1021-3bb4a1cc27-asset-01",
+            "sourceLineNumber": 988
+          },
+          {
+            "assetId": "0050-source-section-l938-l1021-3bb4a1cc27-asset-02",
+            "sourceLineNumber": 1019
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0050-source-section-l938-l1021-3bb4a1cc27-game-challenge-game-0050-source-section-l938-l1021-3bb4a1cc27"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-promote-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-game-challenge-game-0051-source-section-l1022-l1025-8bd8cb1266",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-promote-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-game-challenge-game-0051-source-section-l1022-l1025-8bd8cb1266",
+    "title": "第二节化学平衡挑战草稿",
+    "summary": "第二节化学平衡 在科学研究和化工生产中，只考虑化学反应速率是不够的。例如，在工业生产中，除了需要考虑使原料尽可能快地转化为产品，还需要考虑使原料尽可能多地转化为产品，这就涉及化学反应进行的限度，即化学平衡问题。",
+    "curriculumTags": [
+      "knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-promote-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-game-challenge-game-0051-source-section-l1022-l1025-8bd8cb1266-review",
+        "label": "第二节化学平衡挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "第二节化学平衡",
+        "lineRange": "1022-1025",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0051-source-section-l1022-l1025-8bd8cb1266",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0051-source-section-l1022-l1025-8bd8cb1266-game-challenge-game-0051-source-section-l1022-l1025-8bd8cb1266"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-promote-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-game-challenge-game-0054-source-section-l1068-l1079-912cf6e3e6",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-promote-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-game-challenge-game-0054-source-section-l1068-l1079-912cf6e3e6",
+    "title": "图像分析挑战草稿",
+    "summary": "图像分析 在分析化学问题时，常会运用反映相关量变化关系的图像。例如，溶解度曲线、物质浓度随时间变化的曲线等。在结合化学反应原理分析图像时，应注意下列几点： (1) 横坐标和纵坐标的含义; （2）曲线的斜率或者趋势； (3) 曲线上的特殊点…",
+    "curriculumTags": [
+      "knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-promote-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-game-challenge-game-0054-source-section-l1068-l1079-912cf6e3e6-review",
+        "label": "图像分析挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "图像分析",
+        "lineRange": "1068-1079",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0054-source-section-l1068-l1079-912cf6e3e6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0054-source-section-l1068-l1079-912cf6e3e6-game-challenge-game-0054-source-section-l1068-l1079-912cf6e3e6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-promote-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-game-challenge-game-0059-source-section-l1230-l1253-6583f31c57",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-promote-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-game-challenge-game-0059-source-section-l1230-l1253-6583f31c57",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 在上述实验中, 化学平衡状态是否发生了变化? 你是如何判断的? （2）反应物或生成物浓度的改变是怎样影响化学平衡状态的？ （3）在一定温度下，当可逆反应达到平衡时，若浓度商增大或减小，化学平衡状态是否会发生变化？如何变…",
+    "curriculumTags": [
+      "knowledge-topic-0059-source-section-l1230-l1253-6583f31c57"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-promote-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-game-challenge-game-0059-source-section-l1230-l1253-6583f31c57-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0059-source-section-l1230-l1253-6583f31c57"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1230-1253",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0059-source-section-l1230-l1253-6583f31c57",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0059-source-section-l1230-l1253-6583f31c57-game-challenge-game-0059-source-section-l1230-l1253-6583f31c57"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-promote-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-game-challenge-game-0062-source-section-l1280-l1289-32e3648803",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-promote-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-game-challenge-game-0062-source-section-l1280-l1289-32e3648803",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 有气体参加的反应可能出现反应后气体体积增大、减小或不变三种情况。请根据这三种情况进行分析: 体系压强增大会使化学平衡状态发生怎样的变化? (2) 对于只有固体或液体参加的反应, 体系压强改变会使化学平衡状态发生变化吗?…",
+    "curriculumTags": [
+      "knowledge-topic-0062-source-section-l1280-l1289-32e3648803"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-promote-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-game-challenge-game-0062-source-section-l1280-l1289-32e3648803-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0062-source-section-l1280-l1289-32e3648803"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1280-1289",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0062-source-section-l1280-l1289-32e3648803",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0062-source-section-l1280-l1289-32e3648803-game-challenge-game-0062-source-section-l1280-l1289-32e3648803"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-promote-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-game-challenge-game-0069-source-section-l1363-l1366-f2d3797568",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-promote-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-game-challenge-game-0069-source-section-l1363-l1366-f2d3797568",
+    "title": "【研究目的】挑战草稿",
+    "summary": "【研究目的】 汽车等交通工具为出行、物流带来了舒适和方便。然而，燃油车排放的尾气中含有大量的有害物质，会对人体健康和环境产生危害。通过本活动，认识反应条件的选择与优化在治理汽车尾气中的重要作用，增强自觉遵守法规、保护生态环境的意识和责任感。",
+    "curriculumTags": [
+      "knowledge-topic-0069-source-section-l1363-l1366-f2d3797568"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-promote-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-game-challenge-game-0069-source-section-l1363-l1366-f2d3797568-review",
+        "label": "【研究目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0069-source-section-l1363-l1366-f2d3797568"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【研究目的】",
+        "lineRange": "1363-1366",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0069-source-section-l1363-l1366-f2d3797568",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0069-source-section-l1363-l1366-f2d3797568-game-challenge-game-0069-source-section-l1363-l1366-f2d3797568"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-promote-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-game-challenge-game-0070-source-section-l1367-l1382-966df6a3e1",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-promote-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-game-challenge-game-0070-source-section-l1367-l1382-966df6a3e1",
+    "title": "【研究任务】挑战草稿",
+    "summary": "【研究任务】 (1) 认识尾气的成分及其危害。 (1)以汽油的成分之一——辛烷 $\\left(\\mathrm{C}_{8} \\mathrm{H}_{18}\\right)$ 为例，分析空气燃油比、温度等因素对燃烧及其尾气排放的影响。 ②查阅…",
+    "curriculumTags": [
+      "knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-promote-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-game-challenge-game-0070-source-section-l1367-l1382-966df6a3e1-review",
+        "label": "【研究任务】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【研究任务】",
+        "lineRange": "1367-1382",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0070-source-section-l1367-l1382-966df6a3e1",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0070-source-section-l1367-l1382-966df6a3e1-game-challenge-game-0070-source-section-l1367-l1382-966df6a3e1"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-promote-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-game-challenge-game-0071-source-section-l1383-l1448-6044fb1278",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-promote-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-game-challenge-game-0071-source-section-l1383-l1448-6044fb1278",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 通过调查和分析, 你得到什么启示? (2) 撰写研究报告，并与同学讨论。 1. 在一定温度下, 反应 $\\mathrm{A}(\\mathrm{g}) + 3 \\mathrm{~B}(\\mathrm{g}) \\rig…",
+    "curriculumTags": [
+      "knowledge-topic-0071-source-section-l1383-l1448-6044fb1278"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-promote-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-game-challenge-game-0071-source-section-l1383-l1448-6044fb1278-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0071-source-section-l1383-l1448-6044fb1278"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "1383-1448",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0071-source-section-l1383-l1448-6044fb1278",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0071-source-section-l1383-l1448-6044fb1278-asset-01",
+            "sourceLineNumber": 1425
+          },
+          {
+            "assetId": "0071-source-section-l1383-l1448-6044fb1278-asset-02",
+            "sourceLineNumber": 1444
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0071-source-section-l1383-l1448-6044fb1278-game-challenge-game-0071-source-section-l1383-l1448-6044fb1278"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-promote-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-game-challenge-game-0073-source-section-l1451-l1512-5c56bbc4c5",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-promote-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-game-challenge-game-0073-source-section-l1451-l1512-5c56bbc4c5",
+    "title": "化学反应的方向挑战草稿",
+    "summary": "化学反应的方向 自然界中有一些过程是自发进行的，而且是有方向性的。例如，水总是自发地从高处流向低处（如图2-9），而相反的过程却不能自发进行。有些化学反应也是自发进行的，而且具有方向性。那么，如何判断化学反应自发进行的方向呢？ 实验发现，…",
+    "curriculumTags": [
+      "knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-promote-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-game-challenge-game-0073-source-section-l1451-l1512-5c56bbc4c5-review",
+        "label": "化学反应的方向挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "化学反应的方向",
+        "lineRange": "1451-1512",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0073-source-section-l1451-l1512-5c56bbc4c5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0073-source-section-l1451-l1512-5c56bbc4c5-asset-01",
+            "sourceLineNumber": 1477
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0073-source-section-l1451-l1512-5c56bbc4c5-game-challenge-game-0073-source-section-l1451-l1512-5c56bbc4c5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-promote-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-game-challenge-game-0076-source-section-l1535-l1568-4ae0867e84",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-promote-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-game-challenge-game-0076-source-section-l1535-l1568-4ae0867e84",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 举出几种日常生活中常见的由于熵增使其过程自发进行的实例。 2. 在下列变化中，体系的熵将发生怎样的变化？ （1）冰熔化 （2）水蒸气冷凝 （3）蔗糖在水中溶解 (4) $\\mathrm{HCl(g)} + \\mathrm…",
+    "curriculumTags": [
+      "knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-promote-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-game-challenge-game-0076-source-section-l1535-l1568-4ae0867e84-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "1535-1568",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0076-source-section-l1535-l1568-4ae0867e84",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0076-source-section-l1535-l1568-4ae0867e84-game-challenge-game-0076-source-section-l1535-l1568-4ae0867e84"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-promote-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-game-challenge-game-0078-source-section-l1571-l1580-c4a3c2e24d",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-promote-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-game-challenge-game-0078-source-section-l1571-l1580-c4a3c2e24d",
+    "title": "化学反应的调控挑战草稿",
+    "summary": "化学反应的调控 我们对化学反应的调控并不陌生。例如，为了灭火，可以采取隔离可燃物、隔绝空气或降低温度等措施；为了延长食物储存时间，可以将它们保存在冰箱中。下面我们以工业合成氨生产条件的选择为例，研究化学反应的调控问题。 工业合成氨是人类科…",
+    "curriculumTags": [
+      "knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-promote-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-game-challenge-game-0078-source-section-l1571-l1580-c4a3c2e24d-review",
+        "label": "化学反应的调控挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "化学反应的调控",
+        "lineRange": "1571-1580",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0078-source-section-l1571-l1580-c4a3c2e24d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0078-source-section-l1571-l1580-c4a3c2e24d-game-challenge-game-0078-source-section-l1571-l1580-c4a3c2e24d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-promote-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-game-challenge-game-0080-1-l1583-l1591-92d4adb9d6",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-promote-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-game-challenge-game-0080-1-l1583-l1591-92d4adb9d6",
+    "title": "（1）原理分析挑战草稿",
+    "summary": "（1）原理分析 根据合成氨反应的特点，应如何选择反应条件，以增大合成氨的反应速率、提高平衡混合物中氨的含量？请填入下表。 对合成氨反应 的影响 影响因素 浓度 温度 压强 催化剂 增大合成氨的 反应速率 提高平衡混合物 中氨的含量",
+    "curriculumTags": [
+      "knowledge-topic-0080-1-l1583-l1591-92d4adb9d6"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-promote-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-game-challenge-game-0080-1-l1583-l1591-92d4adb9d6-review",
+        "label": "（1）原理分析挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0080-1-l1583-l1591-92d4adb9d6"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "（1）原理分析",
+        "lineRange": "1583-1591",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0080-1-l1583-l1591-92d4adb9d6",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0080-1-l1583-l1591-92d4adb9d6-game-challenge-game-0080-1-l1583-l1591-92d4adb9d6"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-promote-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-game-challenge-game-0081-2-l1592-l1605-15fbef0cc9",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-promote-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-game-challenge-game-0081-2-l1592-l1605-15fbef0cc9",
+    "title": "(2) 数据分析挑战草稿",
+    "summary": "(2) 数据分析 表2-2中的实验数据是在不同温度、压强下，平衡混合物中氨的含量的变化情况（初始时氮气和氢气的体积比是1:3）。分析表中数据，结合合成氨反应的特点，讨论应如何选择反应条件，以增大合成氨的反应速率、提高平衡混合物中氨的含量。…",
+    "curriculumTags": [
+      "knowledge-topic-0081-2-l1592-l1605-15fbef0cc9"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-promote-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-game-challenge-game-0081-2-l1592-l1605-15fbef0cc9-review",
+        "label": "(2) 数据分析挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0081-2-l1592-l1605-15fbef0cc9"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "(2) 数据分析",
+        "lineRange": "1592-1605",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0081-2-l1592-l1605-15fbef0cc9",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0081-2-l1592-l1605-15fbef0cc9-game-challenge-game-0081-2-l1592-l1605-15fbef0cc9"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-promote-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-game-challenge-game-0083-2-l1617-l1627-2bfa5065ef",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-promote-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-game-challenge-game-0083-2-l1617-l1627-2bfa5065ef",
+    "title": "2. 温度挑战草稿",
+    "summary": "2. 温度 根据平衡移动原理，合成氨应该采用低温以提高平衡转化率。实验数据也说明了这一点（如图2-12）。但是，温度降低会使化学反应速率减小，达到平衡所需时间变长，这在工业生产中是很不经济的。因此，需要选择一个适宜的温度。目前，在实际生产…",
+    "curriculumTags": [
+      "knowledge-topic-0083-2-l1617-l1627-2bfa5065ef"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-promote-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-game-challenge-game-0083-2-l1617-l1627-2bfa5065ef-review",
+        "label": "2. 温度挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0083-2-l1617-l1627-2bfa5065ef"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "2. 温度",
+        "lineRange": "1617-1627",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0083-2-l1617-l1627-2bfa5065ef",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0083-2-l1617-l1627-2bfa5065ef-asset-01",
+            "sourceLineNumber": 1621
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0083-2-l1617-l1627-2bfa5065ef-game-challenge-game-0083-2-l1617-l1627-2bfa5065ef"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0084-3-l1628-l1646-a6160f177f-promote-knowledge-topic-0084-3-l1628-l1646-a6160f177f-game-challenge-game-0084-3-l1628-l1646-a6160f177f",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0084-3-l1628-l1646-a6160f177f-promote-knowledge-topic-0084-3-l1628-l1646-a6160f177f-game-challenge-game-0084-3-l1628-l1646-a6160f177f",
+    "title": "3. 催化剂挑战草稿",
+    "summary": "3. 催化剂 即使在高温、高压下， $\\mathrm{N}_2$ 和 $\\mathrm{H}_2$ 的化合反应仍然进行得十分缓慢。通常采用加入催化剂的方法，改变反应历程，降低反应的活化能，使反应物在较低温度时能较快地发生反应。目前，合成氨…",
+    "curriculumTags": [
+      "knowledge-topic-0084-3-l1628-l1646-a6160f177f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0084-3-l1628-l1646-a6160f177f-promote-knowledge-topic-0084-3-l1628-l1646-a6160f177f-game-challenge-game-0084-3-l1628-l1646-a6160f177f-review",
+        "label": "3. 催化剂挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0084-3-l1628-l1646-a6160f177f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "3. 催化剂",
+        "lineRange": "1628-1646",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0084-3-l1628-l1646-a6160f177f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0084-3-l1628-l1646-a6160f177f-asset-01",
+            "sourceLineNumber": 1636
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0084-3-l1628-l1646-a6160f177f-game-challenge-game-0084-3-l1628-l1646-a6160f177f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-promote-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-game-challenge-game-0086-source-section-l1649-l1740-193540b3ee",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-promote-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-game-challenge-game-0086-source-section-l1649-l1740-193540b3ee",
+    "title": "合成氨——实验室研究与工业化生产挑战草稿",
+    "summary": "合成氨——实验室研究与工业化生产 氨是最基本的化工原料之一，其人工制备的研究最早要追溯到1898年。当时，德国的弗兰克（A. Frank，1834—1916）等人研究出了氮气与碳化钙（ $\\mathrm{CaC}_2$ ）、水蒸气反应制备…",
+    "curriculumTags": [
+      "knowledge-topic-0086-source-section-l1649-l1740-193540b3ee"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-promote-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-game-challenge-game-0086-source-section-l1649-l1740-193540b3ee-review",
+        "label": "合成氨——实验室研究与工业化生产挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0086-source-section-l1649-l1740-193540b3ee"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "合成氨——实验室研究与工业化生产",
+        "lineRange": "1649-1740",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0086-source-section-l1649-l1740-193540b3ee",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0086-source-section-l1649-l1740-193540b3ee-asset-01",
+            "sourceLineNumber": 1659
+          },
+          {
+            "assetId": "0086-source-section-l1649-l1740-193540b3ee-asset-02",
+            "sourceLineNumber": 1738
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0086-source-section-l1649-l1740-193540b3ee-game-challenge-game-0086-source-section-l1649-l1740-193540b3ee"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-promote-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-game-challenge-game-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-promote-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-game-challenge-game-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52",
+    "title": "1. $\\mathrm{FeCl}_3$ 溶液与KSCN溶液的反应挑战草稿",
+    "summary": "1. $\\mathrm{FeCl}_3$ 溶液与KSCN溶液的反应 (1) 在小烧杯中加入 $10 \\mathrm{~mL}$ 蒸馏水, 再滴入 5 滴 $0.05 \\mathrm{~mol} / \\mathrm{L} \\mathrm{F…",
+    "curriculumTags": [
+      "knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-promote-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-game-challenge-game-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-review",
+        "label": "1. $\\mathrm{FeCl}_3$ 溶液与KSCN溶液的反应挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "1. $\\mathrm{FeCl}_3$ 溶液与KSCN溶液的反应",
+        "lineRange": "1902-1925",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52-game-challenge-game-0096-1-mathrm-fecl-3-kscn-l1902-l1925-a0f5242c52"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-promote-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-game-challenge-game-0098-source-section-l1944-l1951-f79de5a763",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-promote-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-game-challenge-game-0098-source-section-l1944-l1951-f79de5a763",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 在进行浓度、温度对化学平衡影响的实验时，应注意哪些问题？你还能设计出哪些实验证明浓度、温度对化学平衡的影响？ 2. 结合实验内容，尝试归纳影响化学平衡移动的因素。 3. 在对 $\\mathrm{CuCl}_2$ 溶液…",
+    "curriculumTags": [
+      "knowledge-topic-0098-source-section-l1944-l1951-f79de5a763"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-promote-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-game-challenge-game-0098-source-section-l1944-l1951-f79de5a763-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0098-source-section-l1944-l1951-f79de5a763"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "1944-1951",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0098-source-section-l1944-l1951-f79de5a763",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0098-source-section-l1944-l1951-f79de5a763-game-challenge-game-0098-source-section-l1944-l1951-f79de5a763"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-promote-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-game-challenge-game-0101-source-section-l1956-l1968-31807b8f05",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-promote-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-game-challenge-game-0101-source-section-l1956-l1968-31807b8f05",
+    "title": "反应与平衡挑战草稿",
+    "summary": "反应与平衡 电离平衡 - 水的电离和溶液的 $\\mathrm{pH}$ 盐类的水解 沉淀溶解平衡 水溶液广泛存在于生命体及其赖以生存的环境中。许多化学反应都是在水溶液中进行的，其中，酸、碱和盐等电解质在水溶液中发生的离子反应，以及弱电解质…",
+    "curriculumTags": [
+      "knowledge-topic-0101-source-section-l1956-l1968-31807b8f05"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-promote-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-game-challenge-game-0101-source-section-l1956-l1968-31807b8f05-review",
+        "label": "反应与平衡挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0101-source-section-l1956-l1968-31807b8f05"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "反应与平衡",
+        "lineRange": "1956-1968",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0101-source-section-l1956-l1968-31807b8f05",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0101-source-section-l1956-l1968-31807b8f05-game-challenge-game-0101-source-section-l1956-l1968-31807b8f05"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-promote-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-game-challenge-game-0106-source-section-l2017-l2086-138f0248da",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-promote-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-game-challenge-game-0106-source-section-l2017-l2086-138f0248da",
+    "title": "三、电离平衡常数挑战草稿",
+    "summary": "三、电离平衡常数 与其他化学平衡类似，在一定条件下，当弱电解质的电离达到平衡时，溶液里各组分的浓度之间存在一定的关系。对一元弱酸或一元弱碱来说，溶液中弱电解质电离所生成的各种离子浓度的乘积，与溶液中未电离分子的浓度之比是一个常数，这个常数…",
+    "curriculumTags": [
+      "knowledge-topic-0106-source-section-l2017-l2086-138f0248da"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-promote-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-game-challenge-game-0106-source-section-l2017-l2086-138f0248da-review",
+        "label": "三、电离平衡常数挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0106-source-section-l2017-l2086-138f0248da"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "三、电离平衡常数",
+        "lineRange": "2017-2086",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0106-source-section-l2017-l2086-138f0248da",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0106-source-section-l2017-l2086-138f0248da-game-challenge-game-0106-source-section-l2017-l2086-138f0248da"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-promote-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-game-challenge-game-0108-source-section-l2099-l2113-4c4227e141",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-promote-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-game-challenge-game-0108-source-section-l2099-l2113-4c4227e141",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 向两个锥形瓶中各加入 $0.05 \\mathrm{~g}$ 镁条, 塞紧橡胶塞, 然后用注射器分别注入 $2 \\mathrm{~mL} 2 \\mathrm{~mol} / \\mathrm{L}$ 盐酸、 $2 \\mathrm{…",
+    "curriculumTags": [
+      "knowledge-topic-0108-source-section-l2099-l2113-4c4227e141"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-promote-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-game-challenge-game-0108-source-section-l2099-l2113-4c4227e141-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0108-source-section-l2099-l2113-4c4227e141"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2099-2113",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0108-source-section-l2099-l2113-4c4227e141",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0108-source-section-l2099-l2113-4c4227e141-asset-01",
+            "sourceLineNumber": 2107
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0108-source-section-l2099-l2113-4c4227e141-game-challenge-game-0108-source-section-l2099-l2113-4c4227e141"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-promote-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-game-challenge-game-0109-source-section-l2114-l2173-1d2c213481",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-promote-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-game-challenge-game-0109-source-section-l2114-l2173-1d2c213481",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 已知某温度下有如下三个反应： $ \\begin{array}{l} \\mathrm {N a C N} + \\mathrm {H N O} _ {2} = \\mathrm {H C N} + \\mathrm {N a …",
+    "curriculumTags": [
+      "knowledge-topic-0109-source-section-l2114-l2173-1d2c213481"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-promote-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-game-challenge-game-0109-source-section-l2114-l2173-1d2c213481-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0109-source-section-l2114-l2173-1d2c213481"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2114-2173",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0109-source-section-l2114-l2173-1d2c213481",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0109-source-section-l2114-l2173-1d2c213481-game-challenge-game-0109-source-section-l2114-l2173-1d2c213481"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-promote-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-game-challenge-game-0114-source-section-l2232-l2270-b2f148642b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-promote-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-game-challenge-game-0114-source-section-l2232-l2270-b2f148642b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 根据常温时水的电离平衡，运用平衡移动原理分析下列问题。 (1) 酸性溶液中是否存在 $\\mathrm{OH}^{-}$ ？碱性溶液中是否存在 $\\mathrm{H}^{+}$ ？试解释原因。 (2) 比较下列情况中, $c(\\…",
+    "curriculumTags": [
+      "knowledge-topic-0114-source-section-l2232-l2270-b2f148642b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-promote-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-game-challenge-game-0114-source-section-l2232-l2270-b2f148642b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0114-source-section-l2232-l2270-b2f148642b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2232-2270",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0114-source-section-l2232-l2270-b2f148642b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0114-source-section-l2232-l2270-b2f148642b-asset-01",
+            "sourceLineNumber": 2264
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0114-source-section-l2232-l2270-b2f148642b-game-challenge-game-0114-source-section-l2232-l2270-b2f148642b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-promote-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-game-challenge-game-0118-2-ph-l2283-l2303-5d79c65406",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-promote-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-game-challenge-game-0118-2-ph-l2283-l2303-5d79c65406",
+    "title": "2. pH计挑战草稿",
+    "summary": "2. pH计 $\\mathrm{pH}$ 计，又叫酸度计，可用来精密测量溶液的 $\\mathrm{pH}$ ，其量程为 $0 \\sim 14$ 。人们根据生产与生活的需要，研制了多种类型的 $\\mathrm{pH}$ 计，广泛应用于工业、…",
+    "curriculumTags": [
+      "knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-promote-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-game-challenge-game-0118-2-ph-l2283-l2303-5d79c65406-review",
+        "label": "2. pH计挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "2. pH计",
+        "lineRange": "2283-2303",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0118-2-ph-l2283-l2303-5d79c65406",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0118-2-ph-l2283-l2303-5d79c65406-asset-01",
+            "sourceLineNumber": 2287
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0118-2-ph-l2283-l2303-5d79c65406-game-challenge-game-0118-2-ph-l2283-l2303-5d79c65406"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-promote-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-game-challenge-game-0119-source-section-l2304-l2315-dd2b3112be",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-promote-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-game-challenge-game-0119-source-section-l2304-l2315-dd2b3112be",
+    "title": "血液的酸碱平衡挑战草稿",
+    "summary": "血液的酸碱平衡 为了维持正常的生理活动，人体各种体液的 $\\mathrm{pH}$ 都要保持在一定的范围。例如，血液的正常 $\\mathrm{pH}$ 范围是 $7.35\\sim 7.45$ 。大多数体液都要保持一个较小的 $\\mathr…",
+    "curriculumTags": [
+      "knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-promote-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-game-challenge-game-0119-source-section-l2304-l2315-dd2b3112be-review",
+        "label": "血液的酸碱平衡挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "血液的酸碱平衡",
+        "lineRange": "2304-2315",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0119-source-section-l2304-l2315-dd2b3112be",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0119-source-section-l2304-l2315-dd2b3112be-game-challenge-game-0119-source-section-l2304-l2315-dd2b3112be"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-promote-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-game-challenge-game-0125-source-section-l2414-l2467-e50507f14e",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-promote-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-game-challenge-game-0125-source-section-l2414-l2467-e50507f14e",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 在氨水中存在的粒子有________；在氯水中存在的粒子有________。 2. 在下列溶液中, $c(\\mathrm{H}^{+})$ 由小到大的排列顺序是__________（填序号，下同）； $\\mathrm{p…",
+    "curriculumTags": [
+      "knowledge-topic-0125-source-section-l2414-l2467-e50507f14e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-promote-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-game-challenge-game-0125-source-section-l2414-l2467-e50507f14e-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0125-source-section-l2414-l2467-e50507f14e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2414-2467",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0125-source-section-l2414-l2467-e50507f14e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0125-source-section-l2414-l2467-e50507f14e-game-challenge-game-0125-source-section-l2414-l2467-e50507f14e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-promote-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-game-challenge-game-0132-source-section-l2482-l2485-fd87355627",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-promote-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-game-challenge-game-0132-source-section-l2482-l2485-fd87355627",
+    "title": "【提出问题】挑战草稿",
+    "summary": "【提出问题】 酸溶液呈酸性，碱溶液呈碱性。那么，盐溶液的酸碱性如何呢？与盐的类型之间有什么关系？",
+    "curriculumTags": [
+      "knowledge-topic-0132-source-section-l2482-l2485-fd87355627"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-promote-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-game-challenge-game-0132-source-section-l2482-l2485-fd87355627-review",
+        "label": "【提出问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0132-source-section-l2482-l2485-fd87355627"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【提出问题】",
+        "lineRange": "2482-2485",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0132-source-section-l2482-l2485-fd87355627",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0132-source-section-l2482-l2485-fd87355627-game-challenge-game-0132-source-section-l2482-l2485-fd87355627"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-promote-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-game-challenge-game-0133-source-section-l2486-l2493-ddfcf46412",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-promote-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-game-challenge-game-0133-source-section-l2486-l2493-ddfcf46412",
+    "title": "【实验探究】挑战草稿",
+    "summary": "【实验探究】 (1) 选择合适的方法测试下表所列盐溶液的酸碱性。 (2) 根据形成该盐的酸和碱的强弱, 将下表中的盐按强酸强碱盐、强酸弱碱盐、强碱弱酸盐进行分类。 盐 NaCl Na2CO3 NH4Cl KNO3 CH3COONa (NH…",
+    "curriculumTags": [
+      "knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-promote-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-game-challenge-game-0133-source-section-l2486-l2493-ddfcf46412-review",
+        "label": "【实验探究】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【实验探究】",
+        "lineRange": "2486-2493",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0133-source-section-l2486-l2493-ddfcf46412",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0133-source-section-l2486-l2493-ddfcf46412-game-challenge-game-0133-source-section-l2486-l2493-ddfcf46412"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-promote-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-game-challenge-game-0134-source-section-l2494-l2526-282a12683b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-promote-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-game-challenge-game-0134-source-section-l2494-l2526-282a12683b",
+    "title": "【结果和讨论】挑战草稿",
+    "summary": "【结果和讨论】 分析上述实验结果，归纳盐溶液的酸碱性与盐的类型之间的关系。 盐的类型 强酸强碱盐 强酸弱碱盐 强碱弱酸盐 盐溶液的酸碱性 $\\mathrm{NH_4Cl}$ 溶液 NaCl溶液 $\\mathrm{CH}_3\\mathrm{…",
+    "curriculumTags": [
+      "knowledge-topic-0134-source-section-l2494-l2526-282a12683b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-promote-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-game-challenge-game-0134-source-section-l2494-l2526-282a12683b-review",
+        "label": "【结果和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0134-source-section-l2494-l2526-282a12683b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果和讨论】",
+        "lineRange": "2494-2526",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0134-source-section-l2494-l2526-282a12683b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0134-source-section-l2494-l2526-282a12683b-asset-01",
+            "sourceLineNumber": 2500
+          },
+          {
+            "assetId": "0134-source-section-l2494-l2526-282a12683b-asset-02",
+            "sourceLineNumber": 2507
+          },
+          {
+            "assetId": "0134-source-section-l2494-l2526-282a12683b-asset-03",
+            "sourceLineNumber": 2514
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0134-source-section-l2494-l2526-282a12683b-game-challenge-game-0134-source-section-l2494-l2526-282a12683b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-promote-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-game-challenge-game-0136-source-section-l2532-l2566-6cd58fb235",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-promote-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-game-challenge-game-0136-source-section-l2532-l2566-6cd58fb235",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 根据前面的探究结果, 对三类不同的盐溶液 (NaCl溶液、 $\\mathrm{NH}_{4} \\mathrm{Cl}$ 溶液和 $\\mathrm{CH}_{3} \\mathrm{COONa}$ 溶液) 中存在的各种离子, 以及…",
+    "curriculumTags": [
+      "knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-promote-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-game-challenge-game-0136-source-section-l2532-l2566-6cd58fb235-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2532-2566",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0136-source-section-l2532-l2566-6cd58fb235",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0136-source-section-l2532-l2566-6cd58fb235-game-challenge-game-0136-source-section-l2532-l2566-6cd58fb235"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-promote-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-game-challenge-game-0137-source-section-l2567-l2605-22b5b4ba9d",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-promote-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-game-challenge-game-0137-source-section-l2567-l2605-22b5b4ba9d",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 试仿照 $\\mathrm{NH}_{4} \\mathrm{Cl}$ 溶液呈酸性的分析过程, 说明 $\\mathrm{CH}_{3} \\mathrm{COONa}$ 溶液呈碱性的原因。 像 $\\mathrm{NH}_{4} \\m…",
+    "curriculumTags": [
+      "knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-promote-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-game-challenge-game-0137-source-section-l2567-l2605-22b5b4ba9d-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2567-2605",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0137-source-section-l2567-l2605-22b5b4ba9d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0137-source-section-l2567-l2605-22b5b4ba9d-game-challenge-game-0137-source-section-l2567-l2605-22b5b4ba9d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0142-source-section-l2642-l2647-6300709357-promote-knowledge-topic-0142-source-section-l2642-l2647-6300709357-game-challenge-game-0142-source-section-l2642-l2647-6300709357",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0142-source-section-l2642-l2647-6300709357-promote-knowledge-topic-0142-source-section-l2642-l2647-6300709357-game-challenge-game-0142-source-section-l2642-l2647-6300709357",
+    "title": "【提出问题】挑战草稿",
+    "summary": "【提出问题】 (1) $\\mathrm{FeCl}_3$ 溶液呈酸性还是碱性？写出 $\\mathrm{FeCl}_3$ 发生水解的离子方程式。 (2) 从反应条件考虑, 影响 $\\mathrm{FeCl}_{3}$ 水解平衡的因素可能有哪…",
+    "curriculumTags": [
+      "knowledge-topic-0142-source-section-l2642-l2647-6300709357"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0142-source-section-l2642-l2647-6300709357-promote-knowledge-topic-0142-source-section-l2642-l2647-6300709357-game-challenge-game-0142-source-section-l2642-l2647-6300709357-review",
+        "label": "【提出问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0142-source-section-l2642-l2647-6300709357"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【提出问题】",
+        "lineRange": "2642-2647",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0142-source-section-l2642-l2647-6300709357",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0142-source-section-l2642-l2647-6300709357-game-challenge-game-0142-source-section-l2642-l2647-6300709357"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-promote-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-game-challenge-game-0145-source-section-l2665-l2670-ccace7f56c",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-promote-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-game-challenge-game-0145-source-section-l2665-l2670-ccace7f56c",
+    "title": "【结果和讨论】挑战草稿",
+    "summary": "【结果和讨论】 总结温度、浓度对 $\\mathrm{FeCl}_3$ 水解平衡的影响，并与同学讨论。 根据平衡移动原理，温度、浓度等反应条件的改变都会引起水解平衡的移动，从而影响盐类水解的程度。例如，盐类的水解可看作酸碱中和反应的逆反应，…",
+    "curriculumTags": [
+      "knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-promote-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-game-challenge-game-0145-source-section-l2665-l2670-ccace7f56c-review",
+        "label": "【结果和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果和讨论】",
+        "lineRange": "2665-2670",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0145-source-section-l2665-l2670-ccace7f56c",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0145-source-section-l2665-l2670-ccace7f56c-game-challenge-game-0145-source-section-l2665-l2670-ccace7f56c"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-promote-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-game-challenge-game-0146-source-section-l2671-l2687-d1fec386b7",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-promote-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-game-challenge-game-0146-source-section-l2671-l2687-d1fec386b7",
+    "title": "三、盐类水解的应用挑战草稿",
+    "summary": "三、盐类水解的应用 在生活、生产和科学研究中，人们常运用盐类水解的原理来解决实际问题。例如，用 $\\mathrm{Na}_2\\mathrm{CO}_3$ 溶液清洗油污时，加热可以增强去污效果，原因就在于升温可以促进 $\\mathrm{Na…",
+    "curriculumTags": [
+      "knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-promote-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-game-challenge-game-0146-source-section-l2671-l2687-d1fec386b7-review",
+        "label": "三、盐类水解的应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "三、盐类水解的应用",
+        "lineRange": "2671-2687",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0146-source-section-l2671-l2687-d1fec386b7",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0146-source-section-l2671-l2687-d1fec386b7-game-challenge-game-0146-source-section-l2671-l2687-d1fec386b7"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-promote-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-game-challenge-game-0149-source-section-l2726-l2773-4843e33b9f",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-promote-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-game-challenge-game-0149-source-section-l2726-l2773-4843e33b9f",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 明矾 $\\left[\\text { 化学式为 } \\mathrm{KAl}\\left(\\mathrm{SO}_{4}\\right)_{2} \\cdot 12 \\mathrm{H}_{2} \\mathrm{O}\\right…",
+    "curriculumTags": [
+      "knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-promote-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-game-challenge-game-0149-source-section-l2726-l2773-4843e33b9f-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2726-2773",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0149-source-section-l2726-l2773-4843e33b9f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0149-source-section-l2726-l2773-4843e33b9f-game-challenge-game-0149-source-section-l2726-l2773-4843e33b9f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-promote-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-game-challenge-game-0153-source-section-l2789-l2798-5822bbbcdc",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-promote-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-game-challenge-game-0153-source-section-l2789-l2798-5822bbbcdc",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 在初中化学中, 我们曾根据物质溶解度的大小, 将物质分为易溶物、可溶物、微溶物和难溶物。例如, $\\mathrm{AgCl} 、 \\mathrm{BaSO}_{4} 、 \\mathrm{Fe}(\\mathrm{OH})_{3}…",
+    "curriculumTags": [
+      "knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-promote-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-game-challenge-game-0153-source-section-l2789-l2798-5822bbbcdc-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2789-2798",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0153-source-section-l2789-l2798-5822bbbcdc",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0153-source-section-l2789-l2798-5822bbbcdc-game-challenge-game-0153-source-section-l2789-l2798-5822bbbcdc"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-promote-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-game-challenge-game-0154-source-section-l2799-l2844-83f95d0712",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-promote-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-game-challenge-game-0154-source-section-l2799-l2844-83f95d0712",
+    "title": "资料卡片挑战草稿",
+    "summary": "资料卡片 表 3-3 几种电解质的溶解度 (20℃) 化学式 溶解度/g AgCl 1.5×10-4 AgNO3 211 AgBr 8.4×10-6 Ag2SO4 0.786 Ag2S 1.3×10-16 BaCl2 35.7 Ba(OH…",
+    "curriculumTags": [
+      "knowledge-topic-0154-source-section-l2799-l2844-83f95d0712"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-promote-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-game-challenge-game-0154-source-section-l2799-l2844-83f95d0712-review",
+        "label": "资料卡片挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0154-source-section-l2799-l2844-83f95d0712"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "资料卡片",
+        "lineRange": "2799-2844",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0154-source-section-l2799-l2844-83f95d0712",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0154-source-section-l2799-l2844-83f95d0712-game-challenge-game-0154-source-section-l2799-l2844-83f95d0712"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-promote-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-game-challenge-game-0157-source-section-l2860-l2867-c6914f2335",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-promote-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-game-challenge-game-0157-source-section-l2860-l2867-c6914f2335",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 利用生成沉淀分离或除去某种离子，首先要使生成沉淀的反应能够发生；其次希望沉淀反应完成后，溶液中剩余离子的浓度能够尽量小。 (1) 如果要除去某溶液中的 $\\mathrm{SO}_{4}^{2-}$ , 你选择加入钙盐还是钡盐?…",
+    "curriculumTags": [
+      "knowledge-topic-0157-source-section-l2860-l2867-c6914f2335"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-promote-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-game-challenge-game-0157-source-section-l2860-l2867-c6914f2335-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0157-source-section-l2860-l2867-c6914f2335"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2860-2867",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0157-source-section-l2860-l2867-c6914f2335",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0157-source-section-l2860-l2867-c6914f2335-game-challenge-game-0157-source-section-l2860-l2867-c6914f2335"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0158-2-l2868-l2878-37511db908-promote-knowledge-topic-0158-2-l2868-l2878-37511db908-game-challenge-game-0158-2-l2868-l2878-37511db908",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0158-2-l2868-l2878-37511db908-promote-knowledge-topic-0158-2-l2868-l2878-37511db908-game-challenge-game-0158-2-l2868-l2878-37511db908",
+    "title": "2. 沉淀的溶解挑战草稿",
+    "summary": "2. 沉淀的溶解 在实际应用中，常常会遇到需要使难溶物质溶解的问题。根据平衡移动原理，对于在水中难溶的电解质，如果能设法不断地移去平衡体系中的相应离子，使平衡向沉淀溶解的方向移动，就可以使沉淀溶解。例如，难溶于水的 $\\mathrm{Ca…",
+    "curriculumTags": [
+      "knowledge-topic-0158-2-l2868-l2878-37511db908"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0158-2-l2868-l2878-37511db908-promote-knowledge-topic-0158-2-l2868-l2878-37511db908-game-challenge-game-0158-2-l2868-l2878-37511db908-review",
+        "label": "2. 沉淀的溶解挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0158-2-l2868-l2878-37511db908"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "2. 沉淀的溶解",
+        "lineRange": "2868-2878",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0158-2-l2868-l2878-37511db908",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0158-2-l2868-l2878-37511db908-game-challenge-game-0158-2-l2868-l2878-37511db908"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-promote-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-game-challenge-game-0159-source-section-l2879-l2885-3edee62ca0",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-promote-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-game-challenge-game-0159-source-section-l2879-l2885-3edee62ca0",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 （1）写出实验3-3中有关反应的化学方程式。 （2）应用平衡移动原理分析、解释实验3-3中发生的反应。",
+    "curriculumTags": [
+      "knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-promote-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-game-challenge-game-0159-source-section-l2879-l2885-3edee62ca0-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2879-2885",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0159-source-section-l2879-l2885-3edee62ca0",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0159-source-section-l2879-l2885-3edee62ca0-game-challenge-game-0159-source-section-l2879-l2885-3edee62ca0"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-promote-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-game-challenge-game-0170-source-section-l3010-l3060-0fa3fda5b5",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-promote-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-game-challenge-game-0170-source-section-l3010-l3060-0fa3fda5b5",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 通过研究, 你得到什么启示? (2) 撰写研究报告，并与同学讨论。 1. 在一定温度下， $\\mathrm{Mg(OH)}_2$ 在水中的沉淀溶解平衡可用离子方程式表示为________，该平衡的 $K_{\\mat…",
+    "curriculumTags": [
+      "knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-promote-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-game-challenge-game-0170-source-section-l3010-l3060-0fa3fda5b5-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "3010-3060",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0170-source-section-l3010-l3060-0fa3fda5b5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0170-source-section-l3010-l3060-0fa3fda5b5-game-challenge-game-0170-source-section-l3010-l3060-0fa3fda5b5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-promote-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-game-challenge-game-0175-source-section-l3162-l3167-bcea9177a0",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-promote-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-game-challenge-game-0175-source-section-l3162-l3167-bcea9177a0",
+    "title": "【实验目的】挑战草稿",
+    "summary": "【实验目的】 1. 练习中和滴定的实验操作，理解中和滴定的原理，探究酸碱中和反应过程中 $\\mathrm{pH}$ 的变化特点。 2. 通过实验进一步掌握数据分析的方法，体会定量实验在化学研究中的作用。",
+    "curriculumTags": [
+      "knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-promote-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-game-challenge-game-0175-source-section-l3162-l3167-bcea9177a0-review",
+        "label": "【实验目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【实验目的】",
+        "lineRange": "3162-3167",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0175-source-section-l3162-l3167-bcea9177a0",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0175-source-section-l3162-l3167-bcea9177a0-game-challenge-game-0175-source-section-l3162-l3167-bcea9177a0"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-promote-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-game-challenge-game-0182-source-section-l3233-l3244-a32789f628",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-promote-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-game-challenge-game-0182-source-section-l3233-l3244-a32789f628",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 在进行中和滴定时，为什么要用酸（或碱）润洗酸式（或碱式）滴定管2~3次？ 2. 滴定用的锥形瓶是否也要用待测的碱（或酸）润洗？锥形瓶装待测液前是否需要保持干燥？为什么？ 3. 用 $0.1000 \\mathrm{~m…",
+    "curriculumTags": [
+      "knowledge-topic-0182-source-section-l3233-l3244-a32789f628"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-promote-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-game-challenge-game-0182-source-section-l3233-l3244-a32789f628-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0182-source-section-l3233-l3244-a32789f628"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3233-3244",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0182-source-section-l3233-l3244-a32789f628",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0182-source-section-l3233-l3244-a32789f628-game-challenge-game-0182-source-section-l3233-l3244-a32789f628"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-promote-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-game-challenge-game-0188-source-section-l3271-l3278-8ae4ccd6b9",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-promote-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-game-challenge-game-0188-source-section-l3271-l3278-8ae4ccd6b9",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 根据实验结果，说明实验室中应该如何配制 $\\mathrm{FeCl}_3$ 溶液。 2. 写出实验过程中有关化学反应的离子方程式。 3. 举出其他盐类水解应用的例子，并与同学讨论。",
+    "curriculumTags": [
+      "knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-promote-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-game-challenge-game-0188-source-section-l3271-l3278-8ae4ccd6b9-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3271-3278",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0188-source-section-l3271-l3278-8ae4ccd6b9",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0188-source-section-l3271-l3278-8ae4ccd6b9-game-challenge-game-0188-source-section-l3271-l3278-8ae4ccd6b9"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-promote-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-game-challenge-game-0190-source-section-l3281-l3297-13a14e5243",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-promote-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-game-challenge-game-0190-source-section-l3281-l3297-13a14e5243",
+    "title": "化学反应与电能挑战草稿",
+    "summary": "化学反应与电能 原电池 $\\bullet$ 电解池 金属的腐蚀与防护 在化学反应中，化学能与其他形式的能量可以相互转化并遵循能量守恒定律。化学能与电能的直接转化需要通过氧化还原反应在一定的装置中才能实现。原电池是将化学能转化为电能的装置，…",
+    "curriculumTags": [
+      "knowledge-topic-0190-source-section-l3281-l3297-13a14e5243"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-promote-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-game-challenge-game-0190-source-section-l3281-l3297-13a14e5243-review",
+        "label": "化学反应与电能挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0190-source-section-l3281-l3297-13a14e5243"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "化学反应与电能",
+        "lineRange": "3281-3297",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0190-source-section-l3281-l3297-13a14e5243",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0190-source-section-l3281-l3297-13a14e5243-game-challenge-game-0190-source-section-l3281-l3297-13a14e5243"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-promote-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-game-challenge-game-0194-source-section-l3321-l3339-9793b8d23e",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-promote-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-game-challenge-game-0194-source-section-l3321-l3339-9793b8d23e",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 （1）图4-1所示的锌铜原电池工作时，电子在导线中的运动方向是怎样的？阴离子和阳离子在电解质溶液中的运动方向是怎样的？ (2) 锌铜原电池可看作由两个半电池组成, 一个发生氧化反应, 另一个发生还原反应。试分别写出两个电极上的…",
+    "curriculumTags": [
+      "knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-promote-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-game-challenge-game-0194-source-section-l3321-l3339-9793b8d23e-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3321-3339",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0194-source-section-l3321-l3339-9793b8d23e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0194-source-section-l3321-l3339-9793b8d23e-game-challenge-game-0194-source-section-l3321-l3339-9793b8d23e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-promote-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-game-challenge-game-0195-source-section-l3340-l3351-cadacdd21b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-promote-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-game-challenge-game-0195-source-section-l3340-l3351-cadacdd21b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 请结合图4-1绘制反映原电池工作原理的示意图，并与同学交流。示意图要求包括以下内容： （1）注明原电池的组成； (2) 标明氧化反应和还原反应发生的区域; (3) 标明电子的运动方向和阴离子、阳离子的迁移方向。",
+    "curriculumTags": [
+      "knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-promote-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-game-challenge-game-0195-source-section-l3340-l3351-cadacdd21b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3340-3351",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0195-source-section-l3340-l3351-cadacdd21b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0195-source-section-l3340-l3351-cadacdd21b-game-challenge-game-0195-source-section-l3340-l3351-cadacdd21b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-promote-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-game-challenge-game-0198-source-section-l3369-l3374-c798c981c5",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-promote-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-game-challenge-game-0198-source-section-l3369-l3374-c798c981c5",
+    "title": "二、化学电源挑战草稿",
+    "summary": "二、化学电源 化学电源包括一次电池、二次电池和燃料电池等。原电池是各种化学电源的雏形。根据原电池原理设计和生产的种类繁多的化学电源在生活、生产和科研中得到广泛的应用。例如，移动电话、照相机、计算器、遥控器、汽车、卫星等均要使用电池（如图4…",
+    "curriculumTags": [
+      "knowledge-topic-0198-source-section-l3369-l3374-c798c981c5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-promote-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-game-challenge-game-0198-source-section-l3369-l3374-c798c981c5-review",
+        "label": "二、化学电源挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0198-source-section-l3369-l3374-c798c981c5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "二、化学电源",
+        "lineRange": "3369-3374",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0198-source-section-l3369-l3374-c798c981c5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0198-source-section-l3369-l3374-c798c981c5-game-challenge-game-0198-source-section-l3369-l3374-c798c981c5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-promote-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-game-challenge-game-0204-source-section-l3465-l3504-f270a46a42",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-promote-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-game-challenge-game-0204-source-section-l3465-l3504-f270a46a42",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 我们知道电解水可以得到氢气和氧气，这是由电能直接转化为化学能的过程。按照能量转化与守恒的观点推测，氢气与氧气反应由化学能转化为电能的过程也可能实现。这一过程到底能否实现呢？是怎样发生的呢？ 燃料电池 fuel cell 燃料电…",
+    "curriculumTags": [
+      "knowledge-topic-0204-source-section-l3465-l3504-f270a46a42"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-promote-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-game-challenge-game-0204-source-section-l3465-l3504-f270a46a42-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0204-source-section-l3465-l3504-f270a46a42"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3465-3504",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0204-source-section-l3465-l3504-f270a46a42",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0204-source-section-l3465-l3504-f270a46a42-asset-01",
+            "sourceLineNumber": 3475
+          },
+          {
+            "assetId": "0204-source-section-l3465-l3504-f270a46a42-asset-02",
+            "sourceLineNumber": 3478
+          },
+          {
+            "assetId": "0204-source-section-l3465-l3504-f270a46a42-asset-03",
+            "sourceLineNumber": 3491
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0204-source-section-l3465-l3504-f270a46a42-game-challenge-game-0204-source-section-l3465-l3504-f270a46a42"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-promote-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-game-challenge-game-0206-source-section-l3507-l3531-bd9d66abc0",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-promote-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-game-challenge-game-0206-source-section-l3507-l3531-bd9d66abc0",
+    "title": "历史上第一个化学电源挑战草稿",
+    "summary": "历史上第一个化学电源 1789年，意大利生理学家伽法尼（L.Galvani，1737—1798）在一次解剖青蛙时，把铜钩钩着的青蛙腿挂在阳台的铁栏杆上，偶然发现蛙腿每次接触铁栏杆就会抽搐一次。经过研究，伽法尼认为这种肌肉收缩作用是“动物电…",
+    "curriculumTags": [
+      "knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-promote-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-game-challenge-game-0206-source-section-l3507-l3531-bd9d66abc0-review",
+        "label": "历史上第一个化学电源挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "历史上第一个化学电源",
+        "lineRange": "3507-3531",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0206-source-section-l3507-l3531-bd9d66abc0",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0206-source-section-l3507-l3531-bd9d66abc0-asset-01",
+            "sourceLineNumber": 3521
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0206-source-section-l3507-l3531-bd9d66abc0-game-challenge-game-0206-source-section-l3507-l3531-bd9d66abc0"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-promote-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-game-challenge-game-0207-source-section-l3532-l3590-f4280c95dd",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-promote-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-game-challenge-game-0207-source-section-l3532-l3590-f4280c95dd",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 为了验证 a、b、c三种金属的活动性顺序进行如下实验: ①将金属片 a、b 插入稀硫酸中, 用导线将它们与电流表相连, 发现 a 是负极; ②用金属片 b、c 替换 a、b 后重复上述实验, 发现 c 是正极。则 a、b…",
+    "curriculumTags": [
+      "knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-promote-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-game-challenge-game-0207-source-section-l3532-l3590-f4280c95dd-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3532-3590",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0207-source-section-l3532-l3590-f4280c95dd",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0207-source-section-l3532-l3590-f4280c95dd-asset-01",
+            "sourceLineNumber": 3584
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0207-source-section-l3532-l3590-f4280c95dd-game-challenge-game-0207-source-section-l3532-l3590-f4280c95dd"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-promote-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-game-challenge-game-0211-source-section-l3655-l3666-4169bcc569",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-promote-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-game-challenge-game-0211-source-section-l3655-l3666-4169bcc569",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 请结合图4-10Ⅱ绘制反映电解池工作原理的示意图，并与同学交流。示意图要求包括以下内容： （1）注明电解池的组成； （2）标明氧化反应和还原反应发生的区域； (3) 标明电子的运动方向和阴离子、阳离子的迁移方向。",
+    "curriculumTags": [
+      "knowledge-topic-0211-source-section-l3655-l3666-4169bcc569"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-promote-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-game-challenge-game-0211-source-section-l3655-l3666-4169bcc569-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0211-source-section-l3655-l3666-4169bcc569"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3655-3666",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0211-source-section-l3655-l3666-4169bcc569",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0211-source-section-l3655-l3666-4169bcc569-game-challenge-game-0211-source-section-l3655-l3666-4169bcc569"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-promote-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-game-challenge-game-0228-source-section-l3946-l3949-7eeb113404",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-promote-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-game-challenge-game-0228-source-section-l3946-l3949-7eeb113404",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 常用的白铁皮是在薄钢板表面镀上一层锌，罐装食品用的马口铁是在薄钢板表面镀上一层锡。若上述两种钢铁制品的表面出现破损时，请分析并说明白铁皮、马口铁的腐蚀情况。",
+    "curriculumTags": [
+      "knowledge-topic-0228-source-section-l3946-l3949-7eeb113404"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-promote-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-game-challenge-game-0228-source-section-l3946-l3949-7eeb113404-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0228-source-section-l3946-l3949-7eeb113404"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3946-3949",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0228-source-section-l3946-l3949-7eeb113404",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0228-source-section-l3946-l3949-7eeb113404-game-challenge-game-0228-source-section-l3946-l3949-7eeb113404"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-promote-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-game-challenge-game-0234-source-section-l4025-l4030-c18384f6ca",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-promote-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-game-challenge-game-0234-source-section-l4025-l4030-c18384f6ca",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 牺牲阳极法和外加电流法都要采用辅助阳极，将被保护的金属作为阴极。在这两种方法中，辅助阳极发生的电极反应类型是否相同？对于用作辅助阳极的金属的化学性质各有什么要求？ 金属防护的方法还有很多。例如，可以根据不同的设计条件选用不同的…",
+    "curriculumTags": [
+      "knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-promote-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-game-challenge-game-0234-source-section-l4025-l4030-c18384f6ca-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "4025-4030",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0234-source-section-l4025-l4030-c18384f6ca",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0234-source-section-l4025-l4030-c18384f6ca-game-challenge-game-0234-source-section-l4025-l4030-c18384f6ca"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-promote-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-game-challenge-game-0237-source-section-l4035-l4038-324ce692f4",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-promote-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-game-challenge-game-0237-source-section-l4035-l4038-324ce692f4",
+    "title": "【研究目的】挑战草稿",
+    "summary": "【研究目的】 市场上销售的一种暖贴是利用金属的电化学腐蚀原理制作的，它具有发热温和、放热时间长、使用方便和安全等特点。通过收集资料、实验研究和动手制作，了解这种暖贴的发热原理，培养分析和解决实际问题的能力。",
+    "curriculumTags": [
+      "knowledge-topic-0237-source-section-l4035-l4038-324ce692f4"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-promote-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-game-challenge-game-0237-source-section-l4035-l4038-324ce692f4-review",
+        "label": "【研究目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0237-source-section-l4035-l4038-324ce692f4"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【研究目的】",
+        "lineRange": "4035-4038",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0237-source-section-l4035-l4038-324ce692f4",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0237-source-section-l4035-l4038-324ce692f4-game-challenge-game-0237-source-section-l4035-l4038-324ce692f4"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-promote-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-game-challenge-game-0239-source-section-l4057-l4156-0f96caec76",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-promote-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-game-challenge-game-0239-source-section-l4057-l4156-0f96caec76",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 （1）试用制作的暖贴并提出改进的建议。 (2) 撰写研究报告，并与同学讨论。 1. 什么是金属的化学腐蚀？什么是金属的电化学腐蚀？举例说明金属腐蚀的危害。 2. 炒菜用的铸铁锅不用时会因腐蚀而出现红褐色锈斑。请填写下列空白…",
+    "curriculumTags": [
+      "knowledge-topic-0239-source-section-l4057-l4156-0f96caec76"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-promote-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-game-challenge-game-0239-source-section-l4057-l4156-0f96caec76-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0239-source-section-l4057-l4156-0f96caec76"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "4057-4156",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0239-source-section-l4057-l4156-0f96caec76",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-01",
+            "sourceLineNumber": 4086
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-02",
+            "sourceLineNumber": 4093
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-03",
+            "sourceLineNumber": 4100
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-04",
+            "sourceLineNumber": 4107
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-05",
+            "sourceLineNumber": 4116
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-06",
+            "sourceLineNumber": 4123
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-07",
+            "sourceLineNumber": 4130
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-08",
+            "sourceLineNumber": 4137
+          },
+          {
+            "assetId": "0239-source-section-l4057-l4156-0f96caec76-asset-09",
+            "sourceLineNumber": 4154
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0239-source-section-l4057-l4156-0f96caec76-game-challenge-game-0239-source-section-l4057-l4156-0f96caec76"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0242-source-section-l4170-l4277-937121e858-promote-knowledge-topic-0242-source-section-l4170-l4277-937121e858-game-challenge-game-0242-source-section-l4170-l4277-937121e858",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0242-source-section-l4170-l4277-937121e858-promote-knowledge-topic-0242-source-section-l4170-l4277-937121e858-game-challenge-game-0242-source-section-l4170-l4277-937121e858",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 根据反应 $\\mathrm{Zn + Ag_2O = ZnO + 2Ag}$ 设计的锌银纽扣电池如右图所示。请写出该电池正极和负极的电极反应。 2. 一种以铝-空气电池为电源的航标灯，只要把灯放入海水几分钟，就会发出耀眼…",
+    "curriculumTags": [
+      "knowledge-topic-0242-source-section-l4170-l4277-937121e858"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0242-source-section-l4170-l4277-937121e858-promote-knowledge-topic-0242-source-section-l4170-l4277-937121e858-game-challenge-game-0242-source-section-l4170-l4277-937121e858-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0242-source-section-l4170-l4277-937121e858"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "4170-4277",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0242-source-section-l4170-l4277-937121e858",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-01",
+            "sourceLineNumber": 4176
+          },
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-02",
+            "sourceLineNumber": 4211
+          },
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-03",
+            "sourceLineNumber": 4226
+          },
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-04",
+            "sourceLineNumber": 4239
+          },
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-05",
+            "sourceLineNumber": 4262
+          },
+          {
+            "assetId": "0242-source-section-l4170-l4277-937121e858-asset-06",
+            "sourceLineNumber": 4275
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0242-source-section-l4170-l4277-937121e858-game-challenge-game-0242-source-section-l4170-l4277-937121e858"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-promote-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-game-challenge-game-0248-source-section-l4304-l4309-0b2faca743",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-promote-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-game-challenge-game-0248-source-section-l4304-l4309-0b2faca743",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 1. 电镀前，如果将铜片与直流电源的负极相连，铁制镀件与直流电源的正极相连，通电后观察到的现象是什么？阴极和阳极发生的反应分别是什么？ 2. 查阅资料，了解工业生产中提高电镀质量的方法。",
+    "curriculumTags": [
+      "knowledge-topic-0248-source-section-l4304-l4309-0b2faca743"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-promote-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-game-challenge-game-0248-source-section-l4304-l4309-0b2faca743-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0248-source-section-l4304-l4309-0b2faca743"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "4304-4309",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0248-source-section-l4304-l4309-0b2faca743",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0248-source-section-l4304-l4309-0b2faca743-game-challenge-game-0248-source-section-l4304-l4309-0b2faca743"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-promote-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-game-challenge-game-0254-source-section-l4338-l4341-ec859d8748",
+    "challengeId": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-promote-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-game-challenge-game-0254-source-section-l4338-l4341-ec859d8748",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 列表比较氢氧燃料电池的工作原理和电解水的原理。",
+    "curriculumTags": [
+      "knowledge-topic-0254-source-section-l4338-l4341-ec859d8748"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-1-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-promote-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-game-challenge-game-0254-source-section-l4338-l4341-ec859d8748-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0254-source-section-l4338-l4341-ec859d8748"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-1",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-1",
+        "volumeId": "pep-chemistry-g11-selective-1",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "4338-4341",
+        "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+        "candidateId": "game-0254-source-section-l4338-l4341-ec859d8748",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0254-source-section-l4338-l4341-ec859d8748-game-challenge-game-0254-source-section-l4338-l4341-ec859d8748"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-promote-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-game-challenge-game-0001-source-section-l1-l5-983f2e2b0b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-promote-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-game-challenge-game-0001-source-section-l1-l5-983f2e2b0b",
+    "title": "化学挑战草稿",
+    "summary": "化学 选择性必修 2 物质结构与性质",
+    "curriculumTags": [
+      "knowledge-topic-0001-source-section-l1-l5-983f2e2b0b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-promote-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-game-challenge-game-0001-source-section-l1-l5-983f2e2b0b-review",
+        "label": "化学挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0001-source-section-l1-l5-983f2e2b0b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "化学",
+        "lineRange": "1-5",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0001-source-section-l1-l5-983f2e2b0b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0001-source-section-l1-l5-983f2e2b0b-game-challenge-game-0001-source-section-l1-l5-983f2e2b0b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-promote-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-game-challenge-game-0002-source-section-l6-l70-f95ab453ea",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-promote-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-game-challenge-game-0002-source-section-l6-l70-f95ab453ea",
+    "title": "引言挑战草稿",
+    "summary": "引言 化学研究的是构成宏观物体的物质。对物质的研究可以分为物质的组成与结构、物质的性质与变化两个方面。物质的这两个方面是一种什么关系呢？是物质的组成与结构决定了物质的性质与变化，还是物质的性质与变化决定了物质的组成与结构？你可能感到这个问…",
+    "curriculumTags": [
+      "knowledge-topic-0002-source-section-l6-l70-f95ab453ea"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-promote-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-game-challenge-game-0002-source-section-l6-l70-f95ab453ea-review",
+        "label": "引言挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0002-source-section-l6-l70-f95ab453ea"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "引言",
+        "lineRange": "6-70",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0002-source-section-l6-l70-f95ab453ea",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0002-source-section-l6-l70-f95ab453ea-asset-01",
+            "sourceLineNumber": 32
+          },
+          {
+            "assetId": "0002-source-section-l6-l70-f95ab453ea-asset-02",
+            "sourceLineNumber": 39
+          },
+          {
+            "assetId": "0002-source-section-l6-l70-f95ab453ea-asset-03",
+            "sourceLineNumber": 48
+          },
+          {
+            "assetId": "0002-source-section-l6-l70-f95ab453ea-asset-04",
+            "sourceLineNumber": 57
+          },
+          {
+            "assetId": "0002-source-section-l6-l70-f95ab453ea-asset-05",
+            "sourceLineNumber": 60
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0002-source-section-l6-l70-f95ab453ea-game-challenge-game-0002-source-section-l6-l70-f95ab453ea"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-promote-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-game-challenge-game-0007-source-section-l118-l125-a717f9a21d",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-promote-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-game-challenge-game-0007-source-section-l118-l125-a717f9a21d",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 一个能层的能级数与能层序数 (n) 间存在什么关系? 一个能层最多可容纳的电子数与能层序数 (n) 间存在什么关系? （2）以s、p、d、f为符号的能级分别最多可容纳多少个电子？3d、4d、5d能级所能容纳的最多电子数…",
+    "curriculumTags": [
+      "knowledge-topic-0007-source-section-l118-l125-a717f9a21d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-promote-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-game-challenge-game-0007-source-section-l118-l125-a717f9a21d-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0007-source-section-l118-l125-a717f9a21d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "118-125",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0007-source-section-l118-l125-a717f9a21d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0007-source-section-l118-l125-a717f9a21d-game-challenge-game-0007-source-section-l118-l125-a717f9a21d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0010-source-section-l193-l201-f089a98162-promote-knowledge-topic-0010-source-section-l193-l201-f089a98162-game-challenge-game-0010-source-section-l193-l201-f089a98162",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0010-source-section-l193-l201-f089a98162-promote-knowledge-topic-0010-source-section-l193-l201-f089a98162-game-challenge-game-0010-source-section-l193-l201-f089a98162",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 按构造原理写出稀有气体氦、氖、氩、氪、氙、氡和氪的基态原子的最外层电子排布; 除氪外它们的通式是什么? (2) 电子排布式可以简化, 如钠的电子排布式可简化为 $[\\mathrm{Ne}]3\\mathrm{s}^{1}…",
+    "curriculumTags": [
+      "knowledge-topic-0010-source-section-l193-l201-f089a98162"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0010-source-section-l193-l201-f089a98162-promote-knowledge-topic-0010-source-section-l193-l201-f089a98162-game-challenge-game-0010-source-section-l193-l201-f089a98162-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0010-source-section-l193-l201-f089a98162"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "193-201",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0010-source-section-l193-l201-f089a98162",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0010-source-section-l193-l201-f089a98162-game-challenge-game-0010-source-section-l193-l201-f089a98162"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0018-3-l335-l359-2e6ae6b303-promote-knowledge-topic-0018-3-l335-l359-2e6ae6b303-game-challenge-game-0018-3-l335-l359-2e6ae6b303",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0018-3-l335-l359-2e6ae6b303-promote-knowledge-topic-0018-3-l335-l359-2e6ae6b303-game-challenge-game-0018-3-l335-l359-2e6ae6b303",
+    "title": "3. 洪特规则挑战草稿",
+    "summary": "3. 洪特规则 1925年，洪特在诠释复杂原子光谱时，得出了判断基态原子光谱项三条经验规则，后人归并简化成一条：基态原子中，填入简并轨道的电子总是先单独分占，且自旋平行，称为洪特规则。 例如，画出氧的基态原子最外层轨道表示式。如果不考虑洪…",
+    "curriculumTags": [
+      "knowledge-topic-0018-3-l335-l359-2e6ae6b303"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0018-3-l335-l359-2e6ae6b303-promote-knowledge-topic-0018-3-l335-l359-2e6ae6b303-game-challenge-game-0018-3-l335-l359-2e6ae6b303-review",
+        "label": "3. 洪特规则挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0018-3-l335-l359-2e6ae6b303"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "3. 洪特规则",
+        "lineRange": "335-359",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0018-3-l335-l359-2e6ae6b303",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0018-3-l335-l359-2e6ae6b303-game-challenge-game-0018-3-l335-l359-2e6ae6b303"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0019-source-section-l360-l375-ba9144da45-promote-knowledge-topic-0019-source-section-l360-l375-ba9144da45-game-challenge-game-0019-source-section-l360-l375-ba9144da45",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0019-source-section-l360-l375-ba9144da45-promote-knowledge-topic-0019-source-section-l360-l375-ba9144da45-game-challenge-game-0019-source-section-l360-l375-ba9144da45",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 （1）下列轨道表示式中哪个是硼的基态原子？为什么？ A. $\\begin{array}{ccc}\\mathrm{1s} & 2\\mathrm{s} & 2\\mathrm{p}\\\\ \\uparrow \\downarrow & \\…",
+    "curriculumTags": [
+      "knowledge-topic-0019-source-section-l360-l375-ba9144da45"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0019-source-section-l360-l375-ba9144da45-promote-knowledge-topic-0019-source-section-l360-l375-ba9144da45-game-challenge-game-0019-source-section-l360-l375-ba9144da45-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0019-source-section-l360-l375-ba9144da45"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "360-375",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0019-source-section-l360-l375-ba9144da45",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0019-source-section-l360-l375-ba9144da45-game-challenge-game-0019-source-section-l360-l375-ba9144da45"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-promote-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-game-challenge-game-0021-source-section-l387-l500-c12e9135a5",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-promote-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-game-challenge-game-0021-source-section-l387-l500-c12e9135a5",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 为什么基态氦原子的电子排布是 $1 \\mathrm{~s}^{2}$ 而不是 $1 \\mathrm{~s}^{1} 2 \\mathrm{~s}^{1}$ ? (2) 为什么基态氮原子的轨道表示式是 $\\begin{ar…",
+    "curriculumTags": [
+      "knowledge-topic-0021-source-section-l387-l500-c12e9135a5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-promote-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-game-challenge-game-0021-source-section-l387-l500-c12e9135a5-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0021-source-section-l387-l500-c12e9135a5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "387-500",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0021-source-section-l387-l500-c12e9135a5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0021-source-section-l387-l500-c12e9135a5-asset-01",
+            "sourceLineNumber": 447
+          },
+          {
+            "assetId": "0021-source-section-l387-l500-c12e9135a5-asset-02",
+            "sourceLineNumber": 452
+          },
+          {
+            "assetId": "0021-source-section-l387-l500-c12e9135a5-asset-03",
+            "sourceLineNumber": 457
+          },
+          {
+            "assetId": "0021-source-section-l387-l500-c12e9135a5-asset-04",
+            "sourceLineNumber": 462
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0021-source-section-l387-l500-c12e9135a5-game-challenge-game-0021-source-section-l387-l500-c12e9135a5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-promote-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-game-challenge-game-0029-source-section-l570-l581-a9fb62f10b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-promote-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-game-challenge-game-0029-source-section-l570-l581-a9fb62f10b",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 1950年国际纯粹与应用化学联合会（IUPAC）推荐了一张元素周期表，书末的元素周期表就是参照其新版制作的。请问：怎样将图1-17变成书末的元素周期表？ 在书末的元素周期表中，同族元素价层电子数相同，这是同族元素性质相似的结构…",
+    "curriculumTags": [
+      "knowledge-topic-0029-source-section-l570-l581-a9fb62f10b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-promote-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-game-challenge-game-0029-source-section-l570-l581-a9fb62f10b-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0029-source-section-l570-l581-a9fb62f10b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "570-581",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0029-source-section-l570-l581-a9fb62f10b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0029-source-section-l570-l581-a9fb62f10b-game-challenge-game-0029-source-section-l570-l581-a9fb62f10b"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-promote-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-game-challenge-game-0032-source-section-l586-l602-72db8f32f5",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-promote-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-game-challenge-game-0032-source-section-l586-l602-72db8f32f5",
+    "title": "【问题】挑战草稿",
+    "summary": "【问题】 仔细考察书末的元素周期表，你能提出哪些问题？例如： (1) 元素周期表共有几个周期? 每个周期各有多少种元素? 为什么第一周期结尾元素的电子排布跟同族的其他周期元素的不同? （2）元素周期表共有多少个列？各列的价层电子数各为多少…",
+    "curriculumTags": [
+      "knowledge-topic-0032-source-section-l586-l602-72db8f32f5"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-promote-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-game-challenge-game-0032-source-section-l586-l602-72db8f32f5-review",
+        "label": "【问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0032-source-section-l586-l602-72db8f32f5"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【问题】",
+        "lineRange": "586-602",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0032-source-section-l586-l602-72db8f32f5",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0032-source-section-l586-l602-72db8f32f5-asset-01",
+            "sourceLineNumber": 596
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0032-source-section-l586-l602-72db8f32f5-game-challenge-game-0032-source-section-l586-l602-72db8f32f5"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0033-source-section-l603-l606-7fca31619a-promote-knowledge-topic-0033-source-section-l603-l606-7fca31619a-game-challenge-game-0033-source-section-l603-l606-7fca31619a",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0033-source-section-l603-l606-7fca31619a-promote-knowledge-topic-0033-source-section-l603-l606-7fca31619a-game-challenge-game-0033-source-section-l603-l606-7fca31619a",
+    "title": "【解释与整理】挑战草稿",
+    "summary": "【解释与整理】 回答上述问题和你提出的问题，并整理出你对元素周期表的新认识。",
+    "curriculumTags": [
+      "knowledge-topic-0033-source-section-l603-l606-7fca31619a"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0033-source-section-l603-l606-7fca31619a-promote-knowledge-topic-0033-source-section-l603-l606-7fca31619a-game-challenge-game-0033-source-section-l603-l606-7fca31619a-review",
+        "label": "【解释与整理】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0033-source-section-l603-l606-7fca31619a"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【解释与整理】",
+        "lineRange": "603-606",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0033-source-section-l603-l606-7fca31619a",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0033-source-section-l603-l606-7fca31619a-game-challenge-game-0033-source-section-l603-l606-7fca31619a"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-promote-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-game-challenge-game-0034-source-section-l607-l626-1c45b550d1",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-promote-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-game-challenge-game-0034-source-section-l607-l626-1c45b550d1",
+    "title": "【讨论】挑战草稿",
+    "summary": "【讨论】 (1) 为什么副族元素又称为过渡元素? 过渡元素价层电子数跟它们的族序数有什么关系? 写出它们的价层电子排布通式。 （2）按照核外电子排布，可把元素周期表划分成5个区，如图1-19所示。除ds①区外，各区的名称来自按构造原理最后…",
+    "curriculumTags": [
+      "knowledge-topic-0034-source-section-l607-l626-1c45b550d1"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-promote-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-game-challenge-game-0034-source-section-l607-l626-1c45b550d1-review",
+        "label": "【讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0034-source-section-l607-l626-1c45b550d1"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【讨论】",
+        "lineRange": "607-626",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0034-source-section-l607-l626-1c45b550d1",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0034-source-section-l607-l626-1c45b550d1-asset-01",
+            "sourceLineNumber": 613
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0034-source-section-l607-l626-1c45b550d1-game-challenge-game-0034-source-section-l607-l626-1c45b550d1"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-promote-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-game-challenge-game-0035-source-section-l627-l641-9f15ae1031",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-promote-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-game-challenge-game-0035-source-section-l627-l641-9f15ae1031",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 在元素周期表中, 某些主族元素与右下方的主族元素（如图 1-20）的有些性质是相似的（如锂和镁在过量的氧气中燃烧均生成正常氧化物, 而不是过氧化物), 这种相似性被称为对角线规则。 图1-20 体现对角线规则的相关元素 (1)…",
+    "curriculumTags": [
+      "knowledge-topic-0035-source-section-l627-l641-9f15ae1031"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-promote-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-game-challenge-game-0035-source-section-l627-l641-9f15ae1031-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0035-source-section-l627-l641-9f15ae1031"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "627-641",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0035-source-section-l627-l641-9f15ae1031",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0035-source-section-l627-l641-9f15ae1031-asset-01",
+            "sourceLineNumber": 631
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0035-source-section-l627-l641-9f15ae1031-game-challenge-game-0035-source-section-l627-l641-9f15ae1031"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0036-source-section-l642-l645-73a924c127-promote-knowledge-topic-0036-source-section-l642-l645-73a924c127-game-challenge-game-0036-source-section-l642-l645-73a924c127",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0036-source-section-l642-l645-73a924c127-promote-knowledge-topic-0036-source-section-l642-l645-73a924c127-game-challenge-game-0036-source-section-l642-l645-73a924c127",
+    "title": "二、元素周期律挑战草稿",
+    "summary": "二、元素周期律 元素周期律的内涵丰富多样，下面，我们来讨论原子半径、电离能和电负性的周期性变化。",
+    "curriculumTags": [
+      "knowledge-topic-0036-source-section-l642-l645-73a924c127"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0036-source-section-l642-l645-73a924c127-promote-knowledge-topic-0036-source-section-l642-l645-73a924c127-game-challenge-game-0036-source-section-l642-l645-73a924c127-review",
+        "label": "二、元素周期律挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0036-source-section-l642-l645-73a924c127"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "二、元素周期律",
+        "lineRange": "642-645",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0036-source-section-l642-l645-73a924c127",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0036-source-section-l642-l645-73a924c127-game-challenge-game-0036-source-section-l642-l645-73a924c127"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0038-source-section-l659-l662-9528a58e14-promote-knowledge-topic-0038-source-section-l659-l662-9528a58e14-game-challenge-game-0038-source-section-l659-l662-9528a58e14",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0038-source-section-l659-l662-9528a58e14-promote-knowledge-topic-0038-source-section-l659-l662-9528a58e14-game-challenge-game-0038-source-section-l659-l662-9528a58e14",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 元素周期表中的同周期主族元素从左到右，原子半径的变化趋势如何？如何解释这种趋势？元素周期表中的同主族元素从上到下，原子半径的变化趋势如何？如何解释这种趋势？",
+    "curriculumTags": [
+      "knowledge-topic-0038-source-section-l659-l662-9528a58e14"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0038-source-section-l659-l662-9528a58e14-promote-knowledge-topic-0038-source-section-l659-l662-9528a58e14-game-challenge-game-0038-source-section-l659-l662-9528a58e14-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0038-source-section-l659-l662-9528a58e14"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "659-662",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0038-source-section-l659-l662-9528a58e14",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0038-source-section-l659-l662-9528a58e14-game-challenge-game-0038-source-section-l659-l662-9528a58e14"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-promote-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-game-challenge-game-0040-source-section-l684-l693-5f5fcdfefb",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-promote-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-game-challenge-game-0040-source-section-l684-l693-5f5fcdfefb",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 碱金属的电离能与碱金属的活泼性存在什么联系? (2) 下表的数据从上到下是钠、镁、铝逐级失去电子的电离能。 元素 Na Mg Al 电离能(kJ·mol-1) 496 738 578 4562 1451 1817 69…",
+    "curriculumTags": [
+      "knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-promote-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-game-challenge-game-0040-source-section-l684-l693-5f5fcdfefb-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "684-693",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0040-source-section-l684-l693-5f5fcdfefb",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0040-source-section-l684-l693-5f5fcdfefb-game-challenge-game-0040-source-section-l684-l693-5f5fcdfefb"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0041-3-l694-l727-cd86f93b32-promote-knowledge-topic-0041-3-l694-l727-cd86f93b32-game-challenge-game-0041-3-l694-l727-cd86f93b32",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0041-3-l694-l727-cd86f93b32-promote-knowledge-topic-0041-3-l694-l727-cd86f93b32-game-challenge-game-0041-3-l694-l727-cd86f93b32",
+    "title": "3. 电负性挑战草稿",
+    "summary": "3. 电负性 元素相互化合，可理解为原子之间产生化学作用力，形象地叫做化学键，原子中用于形成化学键的电子称为键合电子。电负性的概念是由美国化学家鲍林提出的，用来描述不同元素的原子对键合电子吸引力的大小。电负性越大的原子，对键合电子的吸引力…",
+    "curriculumTags": [
+      "knowledge-topic-0041-3-l694-l727-cd86f93b32"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0041-3-l694-l727-cd86f93b32-promote-knowledge-topic-0041-3-l694-l727-cd86f93b32-game-challenge-game-0041-3-l694-l727-cd86f93b32-review",
+        "label": "3. 电负性挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0041-3-l694-l727-cd86f93b32"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "3. 电负性",
+        "lineRange": "694-727",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0041-3-l694-l727-cd86f93b32",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0041-3-l694-l727-cd86f93b32-asset-01",
+            "sourceLineNumber": 700
+          },
+          {
+            "assetId": "0041-3-l694-l727-cd86f93b32-asset-02",
+            "sourceLineNumber": 709
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0041-3-l694-l727-cd86f93b32-game-challenge-game-0041-3-l694-l727-cd86f93b32"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-promote-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-game-challenge-game-0047-source-section-l764-l926-68c12b8f45",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-promote-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-game-challenge-game-0047-source-section-l764-l926-68c12b8f45",
+    "title": "稀有气体及其化合物的发现挑战草稿",
+    "summary": "稀有气体及其化合物的发现 1868年，天文学家洛克耶（J. N. Lockyer, 1836—1920）和杨森（P. C. Janssen, 1824—1907）在太阳光谱中发现了一种新元素，定名为氦（Helium）。20多年后，英国化学…",
+    "curriculumTags": [
+      "knowledge-topic-0047-source-section-l764-l926-68c12b8f45"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-promote-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-game-challenge-game-0047-source-section-l764-l926-68c12b8f45-review",
+        "label": "稀有气体及其化合物的发现挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0047-source-section-l764-l926-68c12b8f45"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "稀有气体及其化合物的发现",
+        "lineRange": "764-926",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0047-source-section-l764-l926-68c12b8f45",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-01",
+            "sourceLineNumber": 776
+          },
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-02",
+            "sourceLineNumber": 798
+          },
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-03",
+            "sourceLineNumber": 841
+          },
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-04",
+            "sourceLineNumber": 844
+          },
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-05",
+            "sourceLineNumber": 847
+          },
+          {
+            "assetId": "0047-source-section-l764-l926-68c12b8f45-asset-06",
+            "sourceLineNumber": 850
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0047-source-section-l764-l926-68c12b8f45-game-challenge-game-0047-source-section-l764-l926-68c12b8f45"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-promote-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-game-challenge-game-0055-source-section-l960-l1083-b5a79798f0",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-promote-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-game-challenge-game-0055-source-section-l960-l1083-b5a79798f0",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 对于第 VII A 族元素，从上到下，下列关于其性质变化的叙述中，错误的是（）。 A. 原子半径逐渐增大 B. 电负性逐渐减小 C. 第一电离能逐渐减小 D. 氢化物水溶液的酸性逐渐减弱 2.下列说法中，正确的是（ ）。…",
+    "curriculumTags": [
+      "knowledge-topic-0055-source-section-l960-l1083-b5a79798f0"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-promote-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-game-challenge-game-0055-source-section-l960-l1083-b5a79798f0-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0055-source-section-l960-l1083-b5a79798f0"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "960-1083",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0055-source-section-l960-l1083-b5a79798f0",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0055-source-section-l960-l1083-b5a79798f0-game-challenge-game-0055-source-section-l960-l1083-b5a79798f0"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-promote-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-game-challenge-game-0062-source-section-l1173-l1208-11ac136b4d",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-promote-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-game-challenge-game-0062-source-section-l1173-l1208-11ac136b4d",
+    "title": "【问题和预测】挑战草稿",
+    "summary": "【问题和预测】 (1) 观察乙烷、乙烯和乙炔的分子结构, 它们的分子中的共价键分别由几个 $\\sigma$ 键和几个 $\\pi$ 键构成? 乙烷 乙烯 乙炔 (2) 解释乙烯分子中 $\\pi$ 键是如何形成的, 预测乙炔分子中 $\\pi$…",
+    "curriculumTags": [
+      "knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-promote-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-game-challenge-game-0062-source-section-l1173-l1208-11ac136b4d-review",
+        "label": "【问题和预测】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【问题和预测】",
+        "lineRange": "1173-1208",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0062-source-section-l1173-l1208-11ac136b4d",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-01",
+            "sourceLineNumber": 1177
+          },
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-02",
+            "sourceLineNumber": 1180
+          },
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-03",
+            "sourceLineNumber": 1183
+          },
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-04",
+            "sourceLineNumber": 1186
+          },
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-05",
+            "sourceLineNumber": 1193
+          },
+          {
+            "assetId": "0062-source-section-l1173-l1208-11ac136b4d-asset-06",
+            "sourceLineNumber": 1200
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0062-source-section-l1173-l1208-11ac136b4d-game-challenge-game-0062-source-section-l1173-l1208-11ac136b4d"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-promote-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-game-challenge-game-0064-source-section-l1213-l1220-d8c080718f",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-promote-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-game-challenge-game-0064-source-section-l1213-l1220-d8c080718f",
+    "title": "【问题与讨论】挑战草稿",
+    "summary": "【问题与讨论】 钠和氯通过得失电子同样是形成电子对，为什么这对电子不被钠原子和氯原子共用形成共价键而形成离子键呢？你能从元素的电负性差别来理解吗？讨论后请填写下表： 元素 NaCl HCl C O 电负性 电负性之差(绝对值) 结论：当元…",
+    "curriculumTags": [
+      "knowledge-topic-0064-source-section-l1213-l1220-d8c080718f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-promote-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-game-challenge-game-0064-source-section-l1213-l1220-d8c080718f-review",
+        "label": "【问题与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0064-source-section-l1213-l1220-d8c080718f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【问题与讨论】",
+        "lineRange": "1213-1220",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0064-source-section-l1213-l1220-d8c080718f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0064-source-section-l1213-l1220-d8c080718f-game-challenge-game-0064-source-section-l1213-l1220-d8c080718f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-promote-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-game-challenge-game-0066-source-section-l1254-l1265-b235f55878",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-promote-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-game-challenge-game-0066-source-section-l1254-l1265-b235f55878",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 试利用表2-1的数据进行计算, $1 \\mathrm{~mol} \\mathrm{H}_{2}$ 分别与 $1 \\mathrm{~mol} \\mathrm{Cl}_{2} 、 1 \\mathrm{~mol} \\math…",
+    "curriculumTags": [
+      "knowledge-topic-0066-source-section-l1254-l1265-b235f55878"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-promote-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-game-challenge-game-0066-source-section-l1254-l1265-b235f55878-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0066-source-section-l1254-l1265-b235f55878"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1254-1265",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0066-source-section-l1254-l1265-b235f55878",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0066-source-section-l1254-l1265-b235f55878-game-challenge-game-0066-source-section-l1254-l1265-b235f55878"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-promote-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-game-challenge-game-0067-source-section-l1266-l1329-7fbd1febe4",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-promote-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-game-challenge-game-0067-source-section-l1266-l1329-7fbd1febe4",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列关于 $\\sigma$ 键和 $\\pi$ 键的说法中，错误的是（ ）。 A. $\\sigma$ 键的电子云图形是轴对称的, $\\pi$ 键的电子云图形是镜面对称的 B. $\\sigma$ 键是原子轨道 “头碰头” 式…",
+    "curriculumTags": [
+      "knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-promote-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-game-challenge-game-0067-source-section-l1266-l1329-7fbd1febe4-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "1266-1329",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0067-source-section-l1266-l1329-7fbd1febe4",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0067-source-section-l1266-l1329-7fbd1febe4-game-challenge-game-0067-source-section-l1266-l1329-7fbd1febe4"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-promote-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-game-challenge-game-0076-source-section-l1514-l1538-a5ed92bbbd",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-promote-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-game-challenge-game-0076-source-section-l1514-l1538-a5ed92bbbd",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 以 S 和 P 为例, 说明如何根据主族元素在周期表中的位置确定它的价电子数。 (2) 以 N 和 C1 为例, 说明如何根据主族元素在周期表中的位置确定它最多能接受的电子数。 在确定了 $\\sigma$ 键电子对数和…",
+    "curriculumTags": [
+      "knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-promote-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-game-challenge-game-0076-source-section-l1514-l1538-a5ed92bbbd-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1514-1538",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0076-source-section-l1514-l1538-a5ed92bbbd",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0076-source-section-l1514-l1538-a5ed92bbbd-asset-01",
+            "sourceLineNumber": 1524
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0076-source-section-l1514-l1538-a5ed92bbbd-game-challenge-game-0076-source-section-l1514-l1538-a5ed92bbbd"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-promote-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-game-challenge-game-0078-source-section-l1550-l1584-8e9d94f3a3",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-promote-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-game-challenge-game-0078-source-section-l1550-l1584-8e9d94f3a3",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 确定 $\\mathrm{BF}_3$ 、 $\\mathrm{NH_4^+}$ 和 $\\mathrm{SO}_3^{2 - }$ 的VSEPR模型和它们的空间结构，并与同学讨论。 杂化轨道 hybrid orbital 化得到三…",
+    "curriculumTags": [
+      "knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-promote-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-game-challenge-game-0078-source-section-l1550-l1584-8e9d94f3a3-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1550-1584",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0078-source-section-l1550-l1584-8e9d94f3a3",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0078-source-section-l1550-l1584-8e9d94f3a3-asset-01",
+            "sourceLineNumber": 1558
+          },
+          {
+            "assetId": "0078-source-section-l1550-l1584-8e9d94f3a3-asset-02",
+            "sourceLineNumber": 1565
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0078-source-section-l1550-l1584-8e9d94f3a3-game-challenge-game-0078-source-section-l1550-l1584-8e9d94f3a3"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-promote-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-game-challenge-game-0079-source-section-l1585-l1590-d16ff8aadf",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-promote-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-game-challenge-game-0079-source-section-l1585-l1590-d16ff8aadf",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 确定 $\\mathrm{BF}_{3}$ 和 $\\mathrm{H}_{3} \\mathrm{O}^{+}$ 的中心原子的杂化轨道类型，并与同学讨论。",
+    "curriculumTags": [
+      "knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-promote-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-game-challenge-game-0079-source-section-l1585-l1590-d16ff8aadf-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1585-1590",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0079-source-section-l1585-l1590-d16ff8aadf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0079-source-section-l1585-l1590-d16ff8aadf-game-challenge-game-0079-source-section-l1585-l1590-d16ff8aadf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0082-source-section-l1595-l1598-9338101039-promote-knowledge-topic-0082-source-section-l1595-l1598-9338101039-game-challenge-game-0082-source-section-l1595-l1598-9338101039",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0082-source-section-l1595-l1598-9338101039-promote-knowledge-topic-0082-source-section-l1595-l1598-9338101039-game-challenge-game-0082-source-section-l1595-l1598-9338101039",
+    "title": "【研究目的】挑战草稿",
+    "summary": "【研究目的】 实物模型可以建立对分子的空间结构的直观认识，通过借助实物搭建分子的空间结构模型的活动，使抽象性极强的分子结构直观化。",
+    "curriculumTags": [
+      "knowledge-topic-0082-source-section-l1595-l1598-9338101039"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0082-source-section-l1595-l1598-9338101039-promote-knowledge-topic-0082-source-section-l1595-l1598-9338101039-game-challenge-game-0082-source-section-l1595-l1598-9338101039-review",
+        "label": "【研究目的】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0082-source-section-l1595-l1598-9338101039"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【研究目的】",
+        "lineRange": "1595-1598",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0082-source-section-l1595-l1598-9338101039",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0082-source-section-l1595-l1598-9338101039-game-challenge-game-0082-source-section-l1595-l1598-9338101039"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-promote-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-game-challenge-game-0084-source-section-l1605-l1610-6c73b8ab13",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-promote-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-game-challenge-game-0084-source-section-l1605-l1610-6c73b8ab13",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 展示制作的分子空间结构模型, 并与同学交流心得。 (2) 将形状、大小相同的 4 个气球用皮筋扎在一起, 这 4 个气球是一个什么样的状态? 这种状态对你理解甲烷的空间结构有何启示?",
+    "curriculumTags": [
+      "knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-promote-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-game-challenge-game-0084-source-section-l1605-l1610-6c73b8ab13-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "1605-1610",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0084-source-section-l1605-l1610-6c73b8ab13",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0084-source-section-l1605-l1610-6c73b8ab13-game-challenge-game-0084-source-section-l1605-l1610-6c73b8ab13"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-promote-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-game-challenge-game-0085-source-section-l1611-l1698-217ed5edaf",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-promote-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-game-challenge-game-0085-source-section-l1611-l1698-217ed5edaf",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1.下列说法中，正确的是（ ）。 A. 杂化轨道只用于形成 $\\sigma$ 键或用于容纳未参与成键的孤电子对 B. 凡是中心原子采取 $\\mathrm{sp}^{3}$ 杂化的分子, 其空间结构都是正四面体形 C. 凡是 $…",
+    "curriculumTags": [
+      "knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-promote-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-game-challenge-game-0085-source-section-l1611-l1698-217ed5edaf-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "1611-1698",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0085-source-section-l1611-l1698-217ed5edaf",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0085-source-section-l1611-l1698-217ed5edaf-game-challenge-game-0085-source-section-l1611-l1698-217ed5edaf"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-promote-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-game-challenge-game-0090-source-section-l1730-l1748-c08e170535",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-promote-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-game-challenge-game-0090-source-section-l1730-l1748-c08e170535",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 根据图2-18，思考和回答下列问题： (1) 以下双原子分子中, 哪些是极性分子, 哪些是非极性分子? H2 O2 Cl2 HCI (2) $\\mathrm{P}_{4}$ 和 $\\mathrm{C}_{60}$ 是极性分子还…",
+    "curriculumTags": [
+      "knowledge-topic-0090-source-section-l1730-l1748-c08e170535"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-promote-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-game-challenge-game-0090-source-section-l1730-l1748-c08e170535-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0090-source-section-l1730-l1748-c08e170535"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1730-1748",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0090-source-section-l1730-l1748-c08e170535",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0090-source-section-l1730-l1748-c08e170535-game-challenge-game-0090-source-section-l1730-l1748-c08e170535"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-promote-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-game-challenge-game-0096-source-section-l1804-l1816-90ec0b5d5e",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-promote-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-game-challenge-game-0096-source-section-l1804-l1816-90ec0b5d5e",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 你已学过很多物质的化学性质，请举例与同学讨论分子结构对化学性质的影响。 由表2-6可见，三氟乙酸的酸性大于三氯乙酸的，这是由于氟的电负性大于氯的电负性，F—C的极性大于Cl—C的极性，使 $\\mathrm{F}_{3} \\ma…",
+    "curriculumTags": [
+      "knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-promote-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-game-challenge-game-0096-source-section-l1804-l1816-90ec0b5d5e-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1804-1816",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0096-source-section-l1804-l1816-90ec0b5d5e",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0096-source-section-l1804-l1816-90ec0b5d5e-game-challenge-game-0096-source-section-l1804-l1816-90ec0b5d5e"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-promote-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-game-challenge-game-0101-source-section-l1877-l1889-43ebcf59dc",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-promote-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-game-challenge-game-0101-source-section-l1877-l1889-43ebcf59dc",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 怎样解释卤素单质从 $\\mathrm{F}_2$ 到 $\\mathrm{I}_2$ 的熔点和沸点越来越高？ 表 2-8 卤素单质的熔点和沸点 单质 熔点/℃ 沸点/℃ F2 -219.6 -188.1 Cl2 -101 -34…",
+    "curriculumTags": [
+      "knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-promote-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-game-challenge-game-0101-source-section-l1877-l1889-43ebcf59dc-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "1877-1889",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0101-source-section-l1877-l1889-43ebcf59dc",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0101-source-section-l1877-l1889-43ebcf59dc-game-challenge-game-0101-source-section-l1877-l1889-43ebcf59dc"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-promote-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-game-challenge-game-0108-source-section-l2002-l2024-6732b57273",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-promote-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-game-challenge-game-0108-source-section-l2002-l2024-6732b57273",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 比较 $\\mathrm{NH}_{3}$ 和 $\\mathrm{CH}_{4}$ 在水中的溶解度。怎样用 “相似相溶” 规律理解它们的溶解度不同? (2) 为什么在日常生活中用有机溶剂（如乙酸乙酯等）溶解油漆而不用水？…",
+    "curriculumTags": [
+      "knowledge-topic-0108-source-section-l2002-l2024-6732b57273"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-promote-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-game-challenge-game-0108-source-section-l2002-l2024-6732b57273-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0108-source-section-l2002-l2024-6732b57273"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2002-2024",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0108-source-section-l2002-l2024-6732b57273",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0108-source-section-l2002-l2024-6732b57273-asset-01",
+            "sourceLineNumber": 2012
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0108-source-section-l2002-l2024-6732b57273-game-challenge-game-0108-source-section-l2002-l2024-6732b57273"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-promote-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-game-challenge-game-0112-source-section-l2079-l2213-a8d4a5c4c2",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-promote-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-game-challenge-game-0112-source-section-l2079-l2213-a8d4a5c4c2",
+    "title": "巴斯德与手性挑战草稿",
+    "summary": "巴斯德与手性 2003年夏，全球化学家投票评选了化学史上十项最美的实验。1848年，法国科学家巴斯德（L.Pasteur，1822—1895）用手工在光学显微镜下把左型酒石酸盐晶体和右型酒石酸盐晶体分开的实验被选为十项之首。 巴斯德发现，…",
+    "curriculumTags": [
+      "knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-promote-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-game-challenge-game-0112-source-section-l2079-l2213-a8d4a5c4c2-review",
+        "label": "巴斯德与手性挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "巴斯德与手性",
+        "lineRange": "2079-2213",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0112-source-section-l2079-l2213-a8d4a5c4c2",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-01",
+            "sourceLineNumber": 2087
+          },
+          {
+            "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-02",
+            "sourceLineNumber": 2184
+          },
+          {
+            "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-03",
+            "sourceLineNumber": 2191
+          },
+          {
+            "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-04",
+            "sourceLineNumber": 2200
+          },
+          {
+            "assetId": "0112-source-section-l2079-l2213-a8d4a5c4c2-asset-05",
+            "sourceLineNumber": 2207
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0112-source-section-l2079-l2213-a8d4a5c4c2-game-challenge-game-0112-source-section-l2079-l2213-a8d4a5c4c2"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-promote-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-game-challenge-game-0128-source-section-l2513-l2525-93a95b0567",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-promote-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-game-challenge-game-0128-source-section-l2513-l2525-93a95b0567",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 图3-7是某同学找到的一张玻璃结构的示意图,根据这张图判断玻璃是不是晶体。为什么? （2）根据晶体物理性质的各向异性的特点，能鉴别用玻璃仿造的假宝石。请你列举一些可能有效的方法鉴别假宝石。 图3-7 玻璃的结构示意图",
+    "curriculumTags": [
+      "knowledge-topic-0128-source-section-l2513-l2525-93a95b0567"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-promote-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-game-challenge-game-0128-source-section-l2513-l2525-93a95b0567-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0128-source-section-l2513-l2525-93a95b0567"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2513-2525",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0128-source-section-l2513-l2525-93a95b0567",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0128-source-section-l2513-l2525-93a95b0567-asset-01",
+            "sourceLineNumber": 2519
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0128-source-section-l2513-l2525-93a95b0567-game-challenge-game-0128-source-section-l2513-l2525-93a95b0567"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-promote-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-game-challenge-game-0130-source-section-l2567-l2582-f8c62b6080",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-promote-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-game-challenge-game-0130-source-section-l2567-l2582-f8c62b6080",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 晶胞有几套平行棱? 有几套平行面? (2) 图 3-11 依次是金属钠 (Na)、金属锌 (Zn)、碘 (I₂)、金刚石 (C) 晶胞的示意图, 数一数, 它们分别平均含几个原子? 图3-11 钠、锌、碘、金刚石晶胞图",
+    "curriculumTags": [
+      "knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-promote-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-game-challenge-game-0130-source-section-l2567-l2582-f8c62b6080-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2567-2582",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0130-source-section-l2567-l2582-f8c62b6080",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0130-source-section-l2567-l2582-f8c62b6080-asset-01",
+            "sourceLineNumber": 2573
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0130-source-section-l2567-l2582-f8c62b6080-game-challenge-game-0130-source-section-l2567-l2582-f8c62b6080"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-promote-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-game-challenge-game-0133-source-section-l2587-l2590-b90379a255",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-promote-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-game-challenge-game-0133-source-section-l2587-l2590-b90379a255",
+    "title": "【问题】挑战草稿",
+    "summary": "【问题】 我们学习了晶体、非晶体和晶胞等概念。2011年，以色列化学家谢赫特曼（D.Shechtman）因发现准晶获诺贝尔化学奖。那么，什么是准晶呢？",
+    "curriculumTags": [
+      "knowledge-topic-0133-source-section-l2587-l2590-b90379a255"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-promote-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-game-challenge-game-0133-source-section-l2587-l2590-b90379a255-review",
+        "label": "【问题】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0133-source-section-l2587-l2590-b90379a255"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【问题】",
+        "lineRange": "2587-2590",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0133-source-section-l2587-l2590-b90379a255",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0133-source-section-l2587-l2590-b90379a255-game-challenge-game-0133-source-section-l2587-l2590-b90379a255"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0134-source-section-l2591-l2594-c515430474-promote-knowledge-topic-0134-source-section-l2591-l2594-c515430474-game-challenge-game-0134-source-section-l2591-l2594-c515430474",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0134-source-section-l2591-l2594-c515430474-promote-knowledge-topic-0134-source-section-l2591-l2594-c515430474-game-challenge-game-0134-source-section-l2591-l2594-c515430474",
+    "title": "【查阅资料】挑战草稿",
+    "summary": "【查阅资料】 以“准晶”为关键词，利用互联网查阅相关资料，并回答以下问题：什么是准晶？准晶的单晶X射线衍射图有什么明显的不同于传统晶体的特征？准晶是不是晶体？准晶的发现怎样改变了晶体的定义？准晶有晶胞吗？",
+    "curriculumTags": [
+      "knowledge-topic-0134-source-section-l2591-l2594-c515430474"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0134-source-section-l2591-l2594-c515430474-promote-knowledge-topic-0134-source-section-l2591-l2594-c515430474-game-challenge-game-0134-source-section-l2591-l2594-c515430474-review",
+        "label": "【查阅资料】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0134-source-section-l2591-l2594-c515430474"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【查阅资料】",
+        "lineRange": "2591-2594",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0134-source-section-l2591-l2594-c515430474",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0134-source-section-l2591-l2594-c515430474-game-challenge-game-0134-source-section-l2591-l2594-c515430474"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-promote-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-game-challenge-game-0136-source-section-l2599-l2639-221e4b9997",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-promote-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-game-challenge-game-0136-source-section-l2599-l2639-221e4b9997",
+    "title": "四、晶体结构的测定挑战草稿",
+    "summary": "四、晶体结构的测定 测定晶体结构最常用的仪器是X射线衍射仪（如图3-12）。在晶体的X射线衍射实验中，当单一波长的X射线通过晶体时，X射线和晶体中的电子相互作用，会在记录仪上产生分立的斑点（如图3-13）或者明锐的衍射峰（如图3-14）。…",
+    "curriculumTags": [
+      "knowledge-topic-0136-source-section-l2599-l2639-221e4b9997"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-promote-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-game-challenge-game-0136-source-section-l2599-l2639-221e4b9997-review",
+        "label": "四、晶体结构的测定挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0136-source-section-l2599-l2639-221e4b9997"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "四、晶体结构的测定",
+        "lineRange": "2599-2639",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0136-source-section-l2599-l2639-221e4b9997",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-01",
+            "sourceLineNumber": 2612
+          },
+          {
+            "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-02",
+            "sourceLineNumber": 2623
+          },
+          {
+            "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-03",
+            "sourceLineNumber": 2630
+          },
+          {
+            "assetId": "0136-source-section-l2599-l2639-221e4b9997-asset-04",
+            "sourceLineNumber": 2633
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0136-source-section-l2599-l2639-221e4b9997-game-challenge-game-0136-source-section-l2599-l2639-221e4b9997"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-promote-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-game-challenge-game-0137-source-section-l2640-l2729-b2d15b3f80",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-promote-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-game-challenge-game-0137-source-section-l2640-l2729-b2d15b3f80",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1.区分晶体和非晶体最可靠的科学方法是（ ）。 A. 测定熔、沸点 B. 观察外形 C. 对固体进行X射线衍射测定 D. 通过比较硬度确定 2. 关于晶体的自范性，下列叙述中，正确的是（ ）。 A. 破损的晶体能够在固态时自动…",
+    "curriculumTags": [
+      "knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-promote-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-game-challenge-game-0137-source-section-l2640-l2729-b2d15b3f80-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "2640-2729",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0137-source-section-l2640-l2729-b2d15b3f80",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-01",
+            "sourceLineNumber": 2700
+          },
+          {
+            "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-02",
+            "sourceLineNumber": 2707
+          },
+          {
+            "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-03",
+            "sourceLineNumber": 2718
+          },
+          {
+            "assetId": "0137-source-section-l2640-l2729-b2d15b3f80-asset-04",
+            "sourceLineNumber": 2721
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0137-source-section-l2640-l2729-b2d15b3f80-game-challenge-game-0137-source-section-l2640-l2729-b2d15b3f80"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-promote-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-game-challenge-game-0141-source-section-l2801-l2807-75ba8c5ea3",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-promote-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-game-challenge-game-0141-source-section-l2801-l2807-75ba8c5ea3",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 硫化氢和水分子结构相似，但硫化氢晶体中，一个硫化氢分子周围有12个紧邻分子，而冰中一个水分子周围只有4个紧邻分子，这是为什么？",
+    "curriculumTags": [
+      "knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-promote-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-game-challenge-game-0141-source-section-l2801-l2807-75ba8c5ea3-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2801-2807",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0141-source-section-l2801-l2807-75ba8c5ea3",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0141-source-section-l2801-l2807-75ba8c5ea3-game-challenge-game-0141-source-section-l2801-l2807-75ba8c5ea3"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-promote-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-game-challenge-game-0146-source-section-l2943-l2951-fa77418f50",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-promote-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-game-challenge-game-0146-source-section-l2943-l2951-fa77418f50",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 (1) 怎样从原子结构的角度理解金刚石、硅和锗的熔点和硬度依次下降? (2) “具有共价键的晶体叫做共价晶体”, 这种说法对吗? 为什么?",
+    "curriculumTags": [
+      "knowledge-topic-0146-source-section-l2943-l2951-fa77418f50"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-promote-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-game-challenge-game-0146-source-section-l2943-l2951-fa77418f50-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0146-source-section-l2943-l2951-fa77418f50"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "2943-2951",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0146-source-section-l2943-l2951-fa77418f50",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0146-source-section-l2943-l2951-fa77418f50-game-challenge-game-0146-source-section-l2943-l2951-fa77418f50"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-promote-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-game-challenge-game-0154-source-section-l3050-l3131-c2dc06a8b0",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-promote-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-game-challenge-game-0154-source-section-l3050-l3131-c2dc06a8b0",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列说法中，错误的是（ ）。 A. 只含分子的晶体一定是分子晶体 B. 碘晶体升华时破坏了共价键 C. 几乎所有的酸都属于分子晶体 D. 稀有气体中只含原子, 但稀有气体的晶体属于分子晶体 2.下列说法中，正确的是（ ）…",
+    "curriculumTags": [
+      "knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-promote-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-game-challenge-game-0154-source-section-l3050-l3131-c2dc06a8b0-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3050-3131",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0154-source-section-l3050-l3131-c2dc06a8b0",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0154-source-section-l3050-l3131-c2dc06a8b0-game-challenge-game-0154-source-section-l3050-l3131-c2dc06a8b0"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-promote-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-game-challenge-game-0158-source-section-l3166-l3189-7a9128e488",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-promote-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-game-challenge-game-0158-source-section-l3166-l3189-7a9128e488",
+    "title": "二、离子晶体挑战草稿",
+    "summary": "二、离子晶体 离子晶体是由阳离子和阴离子相互作用而形成的晶体。离子晶体种类繁多，结构多样，图3-30给出了NaCl和CsCl两种离子晶体的晶胞。 图3-30 NaCl和CsCl的晶胞 在 $\\mathrm{NaCl}$ 和 $\\mathr…",
+    "curriculumTags": [
+      "knowledge-topic-0158-source-section-l3166-l3189-7a9128e488"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-promote-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-game-challenge-game-0158-source-section-l3166-l3189-7a9128e488-review",
+        "label": "二、离子晶体挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0158-source-section-l3166-l3189-7a9128e488"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "二、离子晶体",
+        "lineRange": "3166-3189",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0158-source-section-l3166-l3189-7a9128e488",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0158-source-section-l3166-l3189-7a9128e488-asset-01",
+            "sourceLineNumber": 3170
+          },
+          {
+            "assetId": "0158-source-section-l3166-l3189-7a9128e488-asset-02",
+            "sourceLineNumber": 3173
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0158-source-section-l3166-l3189-7a9128e488-game-challenge-game-0158-source-section-l3166-l3189-7a9128e488"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-promote-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-game-challenge-game-0159-source-section-l3190-l3197-33b4641125",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-promote-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-game-challenge-game-0159-source-section-l3190-l3197-33b4641125",
+    "title": "思考与讨论挑战草稿",
+    "summary": "思考与讨论 我们知道，金属的熔点差异很大，如钨的熔点为 $3410\\,^{\\circ}\\mathrm{C}$ ，而常温下，汞却是液体。离子晶体的熔点是不是也差异很大呢？请从理化手册或互联网查找下列离子化合物的熔点，并得出结论与同学交流。 …",
+    "curriculumTags": [
+      "knowledge-topic-0159-source-section-l3190-l3197-33b4641125"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-promote-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-game-challenge-game-0159-source-section-l3190-l3197-33b4641125-review",
+        "label": "思考与讨论挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0159-source-section-l3190-l3197-33b4641125"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "思考与讨论",
+        "lineRange": "3190-3197",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0159-source-section-l3190-l3197-33b4641125",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0159-source-section-l3190-l3197-33b4641125-game-challenge-game-0159-source-section-l3190-l3197-33b4641125"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0163-1-l3225-l3242-b2f7478221-promote-knowledge-topic-0163-1-l3225-l3242-b2f7478221-game-challenge-game-0163-1-l3225-l3242-b2f7478221",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0163-1-l3225-l3242-b2f7478221-promote-knowledge-topic-0163-1-l3225-l3242-b2f7478221-game-challenge-game-0163-1-l3225-l3242-b2f7478221",
+    "title": "1. 过渡晶体挑战草稿",
+    "summary": "1. 过渡晶体 我们已经讨论了分子晶体、共价晶体、金属晶体和离子晶体等四类典型晶体。事实上，纯粹的典型晶体是不多的，大多数晶体是它们之间的过渡晶体。 下面仅以离子晶体和共价晶体之间的过渡为例来说明。例如，第三周期前几种元素的氧化物中，化学…",
+    "curriculumTags": [
+      "knowledge-topic-0163-1-l3225-l3242-b2f7478221"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0163-1-l3225-l3242-b2f7478221-promote-knowledge-topic-0163-1-l3225-l3242-b2f7478221-game-challenge-game-0163-1-l3225-l3242-b2f7478221-review",
+        "label": "1. 过渡晶体挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0163-1-l3225-l3242-b2f7478221"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "1. 过渡晶体",
+        "lineRange": "3225-3242",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0163-1-l3225-l3242-b2f7478221",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0163-1-l3225-l3242-b2f7478221-game-challenge-game-0163-1-l3225-l3242-b2f7478221"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-promote-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-game-challenge-game-0175-source-section-l3373-l3380-4284541a6f",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-promote-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-game-challenge-game-0175-source-section-l3373-l3380-4284541a6f",
+    "title": "【结果与讨论】挑战草稿",
+    "summary": "【结果与讨论】 (1) 你是否得到了完美的明矾晶体? 请描述你制备的明矾晶体颜色和外形。 (2) 在上述实验中, 为什么所用仪器都要用蒸馏水洗净? 为什么晶种一定要悬挂在溶液的中央位置? (3) 在上述实验中, 制备明矾大晶体所需时间较长…",
+    "curriculumTags": [
+      "knowledge-topic-0175-source-section-l3373-l3380-4284541a6f"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-promote-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-game-challenge-game-0175-source-section-l3373-l3380-4284541a6f-review",
+        "label": "【结果与讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0175-source-section-l3373-l3380-4284541a6f"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【结果与讨论】",
+        "lineRange": "3373-3380",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0175-source-section-l3373-l3380-4284541a6f",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0175-source-section-l3373-l3380-4284541a6f-game-challenge-game-0175-source-section-l3373-l3380-4284541a6f"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-promote-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-game-challenge-game-0176-source-section-l3381-l3454-af56d4dc06",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-promote-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-game-challenge-game-0176-source-section-l3381-l3454-af56d4dc06",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 金属晶体的形成是因为晶体中存在（ ）。 A. 金属离子间的相互作用 B. 金属原子间的相互作用 C. 金属离子与自由电子间的相互作用 D. 自由电子间的相互作用 2.金属能导电的原因是（ ）。 A. 金属晶体中金属阳离子…",
+    "curriculumTags": [
+      "knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-promote-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-game-challenge-game-0176-source-section-l3381-l3454-af56d4dc06-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3381-3454",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0176-source-section-l3381-l3454-af56d4dc06",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0176-source-section-l3381-l3454-af56d4dc06-asset-01",
+            "sourceLineNumber": 3447
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0176-source-section-l3381-l3454-af56d4dc06-game-challenge-game-0176-source-section-l3381-l3454-af56d4dc06"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-promote-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-game-challenge-game-0186-source-section-l3651-l3688-8d6d74d0db",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-promote-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-game-challenge-game-0186-source-section-l3651-l3688-8d6d74d0db",
+    "title": "练习与应用挑战草稿",
+    "summary": "练习与应用 1. 下列物质中，不能作为配合物的配位体的是（ ）。 A. $\\mathrm{NH}_{3}$ B. $\\mathrm{NH}_{4}^{+}$ C. $\\mathrm{H}_{2} \\mathrm{O}$ D. $\\math…",
+    "curriculumTags": [
+      "knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-promote-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-game-challenge-game-0186-source-section-l3651-l3688-8d6d74d0db-review",
+        "label": "练习与应用挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "练习与应用",
+        "lineRange": "3651-3688",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0186-source-section-l3651-l3688-8d6d74d0db",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0186-source-section-l3651-l3688-8d6d74d0db-game-challenge-game-0186-source-section-l3651-l3688-8d6d74d0db"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-promote-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-game-challenge-game-0191-source-section-l3708-l3832-7144d1b254",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-promote-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-game-challenge-game-0191-source-section-l3708-l3832-7144d1b254",
+    "title": "复习与提高挑战草稿",
+    "summary": "复习与提高 1. 在单质的晶体中，一定不存在（ ）。 A. 离子键 B. 分子间作用力 C. 共价键 D. 金属离子与自由电子间的作用 2. 下列有关晶体的叙述中，错误的是（ ）。 A. 干冰晶体中, 每个 $\\mathrm{CO}_{2…",
+    "curriculumTags": [
+      "knowledge-topic-0191-source-section-l3708-l3832-7144d1b254"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-promote-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-game-challenge-game-0191-source-section-l3708-l3832-7144d1b254-review",
+        "label": "复习与提高挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0191-source-section-l3708-l3832-7144d1b254"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "复习与提高",
+        "lineRange": "3708-3832",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0191-source-section-l3708-l3832-7144d1b254",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "assetReferences": [
+          {
+            "assetId": "0191-source-section-l3708-l3832-7144d1b254-asset-01",
+            "sourceLineNumber": 3818
+          }
+        ],
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0191-source-section-l3708-l3832-7144d1b254-game-challenge-game-0191-source-section-l3708-l3832-7144d1b254"
+      }
+    ]
+  },
+  {
+    "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-promote-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-game-challenge-game-0198-source-section-l3866-l3869-49e494908b",
+    "challengeId": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-promote-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-game-challenge-game-0198-source-section-l3866-l3869-49e494908b",
+    "title": "【问题和讨论】挑战草稿",
+    "summary": "【问题和讨论】 $\\mathrm{K}_3[\\mathrm{Fe}(\\mathrm{CN})_6]$ 在水中可以电离出配离子 $[\\mathrm{Fe}(\\mathrm{CN})_6]^{3-}$ ，该配离子的中心离子、配体是什么？配位数…",
+    "curriculumTags": [
+      "knowledge-topic-0198-source-section-l3866-l3869-49e494908b"
+    ],
+    "challengeGoals": [
+      {
+        "id": "textbook-pep-chemistry-g11-selective-2-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-promote-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-game-challenge-game-0198-source-section-l3866-l3869-49e494908b-review",
+        "label": "【问题和讨论】挑战草稿",
+        "target": 1,
+        "metric": "reviewedTextbookTopic"
+      }
+    ],
+    "scoringThresholds": {
+      "s": 1,
+      "a": 1,
+      "b": 1
+    },
+    "unlockMetadata": {
+      "stageIds": [],
+      "requiresTags": [
+        "knowledge-topic-0198-source-section-l3866-l3869-49e494908b"
+      ],
+      "minimumLearnedElements": 0
+    },
+    "sourceVolumeId": "pep-chemistry-g11-selective-2",
+    "sourceReviewStatus": "reviewed",
+    "sourceReferences": [
+      {
+        "sourceVolumeId": "pep-chemistry-g11-selective-2",
+        "volumeId": "pep-chemistry-g11-selective-2",
+        "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+        "sourceHeading": "【问题和讨论】",
+        "lineRange": "3866-3869",
+        "sourceHash": "sha256:f3921b78a345868c191141c71d49b5f258f1d53596432a9ffd2ab571cc86966a",
+        "candidateId": "game-0198-source-section-l3866-l3869-49e494908b",
+        "reviewedBy": "mechanical-trace-review",
+        "reviewedAt": "2026-05-09T00:00:00.000Z",
+        "note": "Reviewed promotion manifest entry promote-knowledge-topic-0198-source-section-l3866-l3869-49e494908b-game-challenge-game-0198-source-section-l3866-l3869-49e494908b"
+      }
+    ]
+  },
+  {
     "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-game-challenge-game-0001-source-section-l1-l5-bd27b23b45",
     "challengeId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-game-challenge-game-0001-source-section-l1-l5-bd27b23b45",
     "title": "化学挑战草稿",

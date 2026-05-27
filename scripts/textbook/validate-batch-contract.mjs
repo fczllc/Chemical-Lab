@@ -41,6 +41,38 @@ const knownTextbookBatches = new Map([
       expectedSourcePath: 'src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md',
       expectedAssetRoot: 'src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/'
     }
+  ],
+  [
+    'pep-chemistry-g10-required-1',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g10-required-1.json'),
+      expectedSourcePath: 'src/data/textbooks/2019版人教版高中化学必修第1册/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2019版人教版高中化学必修第1册/'
+    }
+  ],
+  [
+    'pep-chemistry-g10-required-2',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g10-required-2.json'),
+      expectedSourcePath: 'src/data/textbooks/2019版人教版高中化学必修第2册/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2019版人教版高中化学必修第2册/'
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-1',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g11-selective-1.json'),
+      expectedSourcePath: 'src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/'
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-2',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g11-selective-2.json'),
+      expectedSourcePath: 'src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md',
+      expectedAssetRoot: 'src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/'
+    }
   ]
 ]);
 

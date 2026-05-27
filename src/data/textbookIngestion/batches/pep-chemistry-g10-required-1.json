@@ -1,0 +1,18 @@
+{
+  "volumeId": "pep-chemistry-g10-required-1",
+  "displayName": "2019版人教版高中化学必修第1册",
+  "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+  "assetRoot": "src/data/textbooks/2019版人教版高中化学必修第1册/",
+  "schemaVersion": 1,
+  "status": "sourceImported",
+  "activeBatchId": "pep-chemistry-g10-required-1-source-imported-2026-05-22",
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+  "allowedStatuses": [
+    "sourceImported",
+    "drafted",
+    "partiallyReviewed",
+    "reviewed",
+    "promoted"
+  ]
+}

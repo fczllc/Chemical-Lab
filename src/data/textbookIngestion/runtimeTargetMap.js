@@ -37,11 +37,11 @@ export const TEXTBOOK_RUNTIME_TARGET_MAP = {
       targetField: 'learningPath.stages'
     },
     {
-      contentType: 'labExperiment',
-      candidateType: 'experimentCandidate',
-      targetRuntimeFile: 'src/data/labExperiments.json',
-      targetField: 'labExperiments'
-    }
+          contentType: 'reaction',
+          candidateType: 'experimentCandidate',
+          targetRuntimeFile: 'src/data/reactions.json',
+          targetField: 'reactions'
+        }
   ],
   unsupportedArtifactTypes: [
     {

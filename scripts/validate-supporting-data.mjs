@@ -1270,7 +1270,8 @@ function isPromotedTextbookRecord(record) {
 }
 
 function isPromotedTextbookVolumeId(volumeId) {
-  return typeof volumeId === 'string' && volumeId.startsWith('rj-chemistry-');
+  return typeof volumeId === 'string'
+    && (volumeId.startsWith('rj-chemistry-') || textbookVolumesById.has(volumeId));
 }
 
 function ensureArray(value, errorMessage) {

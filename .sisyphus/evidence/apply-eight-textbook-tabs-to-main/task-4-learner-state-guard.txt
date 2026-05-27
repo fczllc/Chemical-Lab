@@ -1,0 +1,59 @@
+Task 4 Learner-State Guard Evidence (REPAIRED)
+===============================================
+
+Date: 2026-05-27
+File: src/modules/progress.js
+
+1. storage.js diff: NO CHANGES
+   Command: git diff -- src/modules/storage.js
+   Output: (empty - file unchanged)
+
+2. progress.js diff scope (REPAIRED + ORDER FIX):
+   - Added KNOWN_TEXTBOOK_ORDER constant (8 deterministic IDs in DoD order)
+     * Uses actual runtime IDs: rj- for grade 8/9/12, pep- for g10/g11
+     * Order: rj-grade8, rj-grade9-vol1, rj-grade9-vol2, pep-g10-req1, pep-g10-req2, pep-g11-sel1, pep-g11-sel2, rj-g12-organic
+   - Added TEXTBOOK_TAB_LABELS constant (clean Chinese labels + aliases for both rj and pep)
+   - Modified formatTextbookTabLabel to use TEXTBOOK_TAB_LABELS lookup first
+   - Removed getKnownTextbookLabel (replaced by TEXTBOOK_TAB_LABELS)
+   - Modified getTextbookGroups to sort by KNOWN_TEXTBOOK_ORDER
+   - REPAIRED renderProgress: restored full dashboard + learning path rendering
+     * Computes snapshot, learned, collected, completedExperiments, quizScores, etc.
+     * Renders progress-dashboard, progress-stat-grid, progress-metrics-grid
+     * Renders progress-learning-path with stage cards and stage detail
+     * Calls renderManualLearningSection(unlockedAchievements, completedLearningSegments)
+   - REPAIRED renderManualLearningSection:
+     * Now accepts (unlockedAchievements, completedLearningSegments)
+     * Calls getManualLearningSegments internally
+     * Uses getTextbookGroups for deterministic grouping
+     * Renders .progress-textbook-tabs with data-textbook-tab buttons
+     * Renders .textbook-panel divs with data-textbook-panel
+     * Each panel contains only its textbook's cards via renderLearningCard
+     * Preserves lesson modal rendering per panel
+   - REPAIRED bindStageInteractions:
+     * Added tab click handlers for [data-textbook-tab] buttons
+     * Sets activeTextbookId and toggles .is-active on tabs/panels
+     * Preserves stage-select, learning-card, and lesson-modal handlers
+     * Preserves markLearningSegmentCompleted call semantics
+   - All storage.js imports unchanged
+   - No changes to markLearningSegmentCompleted arguments
+   - No changes to achievement completion semantics
+   - No changes to learned/collected elements logic
+   - No changes to quiz scores handling
+   - No changes to completed experiments logic
+
+3. Learner-state contract verification:
+   - learnedElements: unchanged semantics
+   - collectedElements: unchanged semantics
+   - completedExperiments: unchanged semantics
+   - quizScores: unchanged semantics
+   - unlockedAchievements: unchanged semantics
+   - markLearningSegmentCompleted: called with same arguments
+   - window.appState: not modified
+
+4. No new dependencies added
+5. No data/script files modified
+6. No test files modified
+
+VERDICT: All progress.js changes are limited to textbook tab ordering,
+labeling, grouping, and tab interaction. Full dashboard and learning path
+rendering restored. Zero learner-state persistence changes.

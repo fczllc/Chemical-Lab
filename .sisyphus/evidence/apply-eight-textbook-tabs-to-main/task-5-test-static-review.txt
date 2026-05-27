@@ -1,0 +1,32 @@
+Task 5 Static Review: pep-learning-tabs.spec.js
+===============================================
+
+File: tests/content/pep-learning-tabs.spec.js
+Date: 2026-05-27T13:49:33.062Z
+
+Selector Checks:
+  .progress-textbook-tabs present: true
+  [data-textbook-tab] present: true
+  .textbook-panel present: true
+  [data-testid="learning-card"] present: true
+
+Assertion Checks:
+  Exactly 8 tabs asserted: true
+  STRICT array equality for labels (toEqual): true
+  No loose toContain in label loop: true
+  BANNED_TERMS array defined: true
+  Banned term negative assertion: true
+  PEP_EXACT_COUNTS object defined: true
+  Count 213 present: true
+  Count 263 present: true
+  Count 198 present: true
+  Count 146 present: true
+  Page error empty assertion: true
+  Console error empty assertion: true
+  Clicks every tab (allTabButtons loop): true
+  Legacy tabs positive count (toBeGreaterThan(0)): true
+  nav-progress navigation: true
+  #/progress URL assertion: true
+  No banned terms in expected labels: true
+
+Overall: PASS

@@ -1,0 +1,44 @@
+Wave 1 Task 2 — Forbidden Pattern Check (Re-run on path-only allowlist)
+Generated: 2026-05-27T20:05:00Z
+Allowlist: .sisyphus/evidence/apply-eight-textbook-tabs-to-main/task-2-allowlist.txt
+
+=== LINE COUNT ===
+Total non-empty lines: 65
+
+=== INVALID NON-PATH LINE CHECK ===
+Lines containing non-path metadata (===, Generated:, Source:, Target:, TOTAL, NOTES): 0
+Lines that are empty or whitespace-only: 0
+Invalid non-path line count: 0
+
+=== FORBIDDEN PATTERN CHECK ===
+1. Directory-only entries (trailing /) — NONE FOUND
+2. Glob entries (* or **) — NONE FOUND
+3. Broad root entries (src/ or scripts/ without subpath) — NONE FOUND
+4. Inferred subtrees (directory paths without explicit files) — NONE FOUND
+5. dist/index.html — NOT IN ALLOWLIST
+6. .sisyphus/boulder.json — NOT IN ALLOWLIST
+7. .sisyphus/evidence/* — NOT IN ALLOWLIST
+8. .sisyphus/notepads/* — NOT IN ALLOWLIST
+9. Screenshots (*.png, *.jpg, *.jpeg, *.gif, *.webp) — NONE FOUND
+10. Log files (*.log) — NONE FOUND
+11. Cache files (*.cache, .cache/) — NONE FOUND
+12. Local config (.env, .env.local, .env.*.local) — NONE FOUND
+13. node_modules — NOT IN ALLOWLIST
+14. package-lock.json / yarn.lock / pnpm-lock.yaml — NOT IN ALLOWLIST
+
+=== REQUIRED PATH CHECK ===
+src/modules/progress.js — PRESENT
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json — PRESENT
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json — PRESENT
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json — PRESENT
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json — PRESENT
+tests/content/pep-learning-tabs.spec.js — PRESENT
+
+=== PATH PREFIX CHECK ===
+Lines beginning with scripts/: 6
+Lines beginning with src/: 58
+Lines beginning with tests/: 1
+Lines with unexpected prefix: 0
+
+=== RESULT ===
+PASS — All 65 lines are valid repo-relative file paths. No forbidden patterns detected.

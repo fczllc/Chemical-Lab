@@ -80,7 +80,7 @@ Usage:
 
 Default checks:
   - src/modules/lab.js imports/uses labExperiments as the lab card source instead of reactions.
-  - src/data/textbookIngestion/runtimeTargetMap.js does not map experimentCandidate to src/data/reactions.json.
+  - src/data/textbookIngestion/runtimeTargetMap.js routes reviewed experimentCandidate records to reactions and keeps labCandidate unsupported.
 
 Self-check names:
   lab-imports-reactions  Verify the lab module boundary check rejects reactions as the card source.
@@ -175,26 +175,16 @@ function checkRuntimeTargetMap(source) {
   const supportedDestinationBlocks = extractArrayObjectBlocks(source, 'supportedDestinations');
   const experimentCandidateDestinations = supportedDestinationBlocks.filter((block) => hasPropertyValue(block, 'candidateType', 'experimentCandidate'));
   const labCandidateDestinations = supportedDestinationBlocks.filter((block) => hasPropertyValue(block, 'candidateType', 'labCandidate'));
-  const experimentCandidateMapsToReactions = experimentCandidateDestinations.some((block) => hasPropertyValue(block, 'targetRuntimeFile', 'src/data/reactions.json'));
-  const experimentCandidateMapsToLabExperiments = experimentCandidateDestinations.some((block) => hasPropertyValue(block, 'targetRuntimeFile', 'src/data/labExperiments.json')
-    && hasPropertyValue(block, 'targetField', 'labExperiments'));
+  const experimentCandidateMapsToReactions = experimentCandidateDestinations.some((block) => hasPropertyValue(block, 'targetRuntimeFile', 'src/data/reactions.json')
+    && hasPropertyValue(block, 'targetField', 'reactions'));
   const labCandidateMapsToRuntime = labCandidateDestinations.some((block) => /targetRuntimeFile\s*:/u.test(block));
 
-  if (experimentCandidateMapsToReactions) {
+  if (!experimentCandidateMapsToReactions) {
     return {
       name: 'runtime-target-map-experiment-boundary',
       status: 'fail',
-      message: 'runtimeTargetMap.js must not map experimentCandidate to src/data/reactions.json; lab experiments belong in src/data/labExperiments.json',
-      details: { experimentCandidateMapsToReactions, experimentCandidateMapsToLabExperiments, labCandidateMapsToRuntime }
-    };
-  }
-
-  if (!experimentCandidateMapsToLabExperiments) {
-    return {
-      name: 'runtime-target-map-experiment-boundary',
-      status: 'fail',
-      message: 'runtimeTargetMap.js must map experimentCandidate to src/data/labExperiments.json with targetField labExperiments',
-      details: { experimentCandidateMapsToReactions, experimentCandidateMapsToLabExperiments, labCandidateMapsToRuntime }
+      message: 'runtimeTargetMap.js must map reviewed experimentCandidate records to src/data/reactions.json with targetField reactions',
+      details: { experimentCandidateMapsToReactions, labCandidateMapsToRuntime }
     };
   }
 
@@ -203,15 +193,15 @@ function checkRuntimeTargetMap(source) {
       name: 'runtime-target-map-experiment-boundary',
       status: 'fail',
       message: 'runtimeTargetMap.js must keep generic labCandidate records unsupported unless filtered by explicit experiment rules',
-      details: { experimentCandidateMapsToReactions, experimentCandidateMapsToLabExperiments, labCandidateMapsToRuntime }
+      details: { experimentCandidateMapsToReactions, labCandidateMapsToRuntime }
     };
   }
 
   return {
     name: 'runtime-target-map-experiment-boundary',
     status: 'pass',
-    message: 'runtimeTargetMap.js routes experimentCandidate to labExperiments and keeps generic labCandidate unsupported',
-    details: { experimentCandidateMapsToReactions, experimentCandidateMapsToLabExperiments, labCandidateMapsToRuntime }
+    message: 'runtimeTargetMap.js routes reviewed experimentCandidate records to reactions and keeps generic labCandidate unsupported',
+    details: { experimentCandidateMapsToReactions, labCandidateMapsToRuntime }
   };
 }
 

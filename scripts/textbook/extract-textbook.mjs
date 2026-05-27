@@ -34,6 +34,30 @@ const knownTextbookBatches = new Map([
     }
   ],
   [
+    'pep-chemistry-g10-required-1',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g10-required-1.json')
+    }
+  ],
+  [
+    'pep-chemistry-g10-required-2',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g10-required-2.json')
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-1',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g11-selective-1.json')
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-2',
+    {
+      batchPath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'batches', 'pep-chemistry-g11-selective-2.json')
+    }
+  ],
+  [
     'fixture-missing-book',
     {
       batch: {

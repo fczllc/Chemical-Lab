@@ -1,0 +1,158 @@
+# Task 6 Diff Scope Audit
+Generated: 2026-05-27T22:59:54.2398668+08:00
+Workspace: D:\Chemical-Laboratory
+
+## final git status --short
+COMMAND: & { $env:GIT_MASTER='1'; git status --short }
+OUTPUT:
+ M .sisyphus/boulder.json
+ M .sisyphus/evidence/task-1-storage-completion-date.json
+ M .sisyphus/evidence/task-1-storage-legacy-date.json
+ M .sisyphus/evidence/task-2-storage-migration.json
+ M .sisyphus/evidence/task-6-invalid-segments.json
+ M .sisyphus/evidence/task-6-persistence-reload.json
+ M AGENTS.md
+ M dist/index.html
+ M index.html
+ M scripts/textbook/extract-textbook.mjs
+ M scripts/textbook/generate-drafts.mjs
+ M scripts/textbook/promote-topic.mjs
+ M scripts/textbook/validate-batch-contract.mjs
+ M scripts/textbook/validate-promotion-manifest.mjs
+ M scripts/textbook/validate-runtime-integrity.mjs
+ M scripts/validate-lab-data-boundary.mjs
+ M scripts/validate-supporting-data.mjs
+ M src/data/achievementsData.json
+ M src/data/contentMeta.js
+ M src/data/index.js
+ M src/data/learningPath.json
+ M src/data/quizData.json
+ M src/data/reactions.json
+ M src/data/textbookIngestion/runtimeTargetMap.js
+ M src/modules/progress.js
+ M src/styles/achievements.css
+ M src/styles/layout.css
+ M src/styles/responsive.css
+ M tests/ui/achievements-progress-coupling.spec.ts
+ M tests/ui/storage-migration.spec.ts
+?? .codegraph/
+?? .sisyphus/evidence/apply-eight-textbook-tabs-to-main/
+?? .sisyphus/evidence/task-1-final-neutral.json
+?? .sisyphus/evidence/task-1-final-structured.json
+?? .sisyphus/evidence/task-1-known-segment-structured.json
+?? .sisyphus/evidence/task-2-red-test.txt
+?? .sisyphus/evidence/task-2-test-list.txt
+?? .sisyphus/notepads/apply-eight-textbook-tabs-to-main/
+?? .sisyphus/notepads/learning-module-content-first-redesign/
+?? .sisyphus/plans/apply-eight-textbook-tabs-to-main.md
+?? .sisyphus/plans/learning-module-content-first-redesign.md
+?? .sisyphus/plans/missing-textbook-learning-cards.md
+?? .sisyphus/run-continuation/ses_197311ebbffeeGx80NjJgpMUi9.json
+?? .sisyphus/run-continuation/ses_1ad77f46dffeVUpRykDlNvRqkl.json
+?? .sisyphus/run-continuation/ses_1ad7b5696ffec12LqqtxfV3DCk.json
+?? .sisyphus/run-continuation/ses_1ae1b2cb6ffeurkbeXBmoRFeQj.json
+?? .sisyphus/run-continuation/ses_1b08624a8ffeXbkpb7gwHaA2FL.json
+?? .sisyphus/run-continuation/ses_1b0fe9aa1ffesR6zX24py4ZjJe.json
+?? .sisyphus/run-continuation/ses_1b4f4bf74ffe0Ck5PjIs07EPm1.json
+?? .sisyphus/run-continuation/ses_1b65875daffet5lUDdzw9Re5Ka.json
+?? .sisyphus/run-continuation/ses_1b66b8f84ffedy8L98ZdkZYIeV.json
+?? .sisyphus/run-continuation/ses_1b67ccaafffeUYtMldOhMtU3L0.json
+?? .sisyphus/run-continuation/ses_1b67dcd05ffe9t8c2GQEl6MeKX.json
+?? session-ses_1b65.md
+?? src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json
+?? src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json
+?? src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json
+?? src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json
+?? src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/
+?? src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/
+?? src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/
+?? src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/
+?? src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/
+?? src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/
+?? src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/
+?? src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/
+?? tests/content/pep-learning-tabs.spec.js
+?? tests/content/pep-learning-tabs.spec.ts
+?? tests/ui/learning-content-modal.spec.ts
+EXIT_CODE: 0
+
+## final git diff --stat -- ':!node_modules'
+COMMAND: & { $env:GIT_MASTER='1'; git diff --stat -- ':!node_modules' }
+OUTPUT:
+warning: LF will be replaced by CRLF in .sisyphus/boulder.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sisyphus/evidence/task-1-storage-completion-date.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sisyphus/evidence/task-1-storage-legacy-date.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sisyphus/evidence/task-2-storage-migration.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sisyphus/evidence/task-6-invalid-segments.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .sisyphus/evidence/task-6-persistence-reload.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scripts/textbook/promote-topic.mjs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scripts/textbook/validate-batch-contract.mjs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scripts/textbook/validate-runtime-integrity.mjs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scripts/validate-lab-data-boundary.mjs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scripts/validate-supporting-data.mjs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/data/achievementsData.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/data/learningPath.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/data/quizData.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/data/reactions.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/data/textbookIngestion/runtimeTargetMap.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in tests/ui/achievements-progress-coupling.spec.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in tests/ui/storage-migration.spec.ts.
+The file will have its original line endings in your working directory
+ .sisyphus/boulder.json                             |   345 +-
+ .../evidence/task-1-storage-completion-date.json   |     8 +-
+ .sisyphus/evidence/task-1-storage-legacy-date.json |    10 +-
+ .sisyphus/evidence/task-2-storage-migration.json   |    34 +-
+ .sisyphus/evidence/task-6-invalid-segments.json    |     2 +-
+ .sisyphus/evidence/task-6-persistence-reload.json  |    19 +-
+ AGENTS.md                                          |    64 +
+ dist/index.html                                    |    24 +-
+ index.html                                         |    17 +-
+ scripts/textbook/extract-textbook.mjs              |    24 +
+ scripts/textbook/generate-drafts.mjs               |     6 +-
+ scripts/textbook/promote-topic.mjs                 |    48 +-
+ scripts/textbook/validate-batch-contract.mjs       |    32 +
+ scripts/textbook/validate-promotion-manifest.mjs   |    16 +
+ scripts/textbook/validate-runtime-integrity.mjs    |    14 +-
+ scripts/validate-lab-data-boundary.mjs             |    28 +-
+ scripts/validate-supporting-data.mjs               |     3 +-
+ src/data/achievementsData.json                     | 29454 ++++++
+ src/data/contentMeta.js                            | 12625 +++
+ src/data/index.js                                  |     2 +-
+ src/data/learningPath.json                         | 93298 ++++++++++++++++++-
+ src/data/quizData.json                             | 12750 +++
+ src/data/reactions.json                            | 17991 ++--
+ src/data/textbookIngestion/runtimeTargetMap.js     |    10 +-
+ src/modules/progress.js                            |  1213 +-
+ src/styles/achievements.css                        |   602 +-
+ src/styles/layout.css                              |     2 +-
+ src/styles/responsive.css                          |    14 +-
+ tests/ui/achievements-progress-coupling.spec.ts    |   177 +-
+ tests/ui/storage-migration.spec.ts                 |    28 +-
+ 30 files changed, 161898 insertions(+), 6962 deletions(-)
+EXIT_CODE: 0
+
+## scope comparison
+Task 1 preflight already listed dirty tracked files including AGENTS.md, dist/index.html, index.html, src/modules/progress.js, multiple styles/tests, and untracked .sisyphus evidence/notepad/plan paths.
+Task 2 allowlist contains 65 source/data/script/test paths including src/modules/progress.js and tests/content/pep-learning-tabs.spec.js, but does not include dist/index.html.
+Task 6 repair changed index.html by removing the empty legacy progress-textbook-tabs placeholder that caused duplicate runtime tab containers; index.html was pre-existing dirty in Task 1 preflight.
+Task 6 repair changed tests/content/pep-learning-tabs.spec.js to remove only the visible count badge from label extraction; this path is explicitly allowlisted in Task 2.
+Task 6 generated/updated evidence files under .sisyphus/evidence/apply-eight-textbook-tabs-to-main and notepad findings under .sisyphus/notepads/apply-eight-textbook-tabs-to-main; those directories were already preflight/untracked evidence/notepad paths.
+Playwright generated/updated test-results artifacts during failed and corrected runs; these are command-produced QA artifacts, not source changes.
+DIFF_SCOPE_STATUS: PASS for Task 6 repair scope. Source/test changes are bounded to the pre-existing dirty index.html runtime placeholder and allowlisted tests/content/pep-learning-tabs.spec.js. dist/index.html remains not allowlisted and is reported as pre-existing/build-related dirty state from Task 1; it was not silently restored or discarded.

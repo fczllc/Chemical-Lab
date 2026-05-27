@@ -1,0 +1,18 @@
+{
+  "volumeId": "pep-chemistry-g11-selective-1",
+  "displayName": "2019版人教版高中化学-选择性必修1 化学反应原理",
+  "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+  "assetRoot": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/",
+  "schemaVersion": 1,
+  "status": "sourceImported",
+  "activeBatchId": "pep-chemistry-g11-selective-1-source-imported-2026-05-22",
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "sourceHash": "sha256:282612360a094647dfd5d8b868b924ea45ca604576417103910b6fe19c772cd4",
+  "allowedStatuses": [
+    "sourceImported",
+    "drafted",
+    "partiallyReviewed",
+    "reviewed",
+    "promoted"
+  ]
+}

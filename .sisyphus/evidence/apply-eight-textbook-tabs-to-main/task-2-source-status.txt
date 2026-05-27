@@ -1,0 +1,44 @@
+Wave 1 Task 2 — Source Worktree Diff Inventory
+Generated: 2026-05-27T12:00:00Z
+Source: D:\Chemical-Laboratory-worktrees\missing-textbook-learning-cards
+
+=== git status --short ===
+ M scripts/textbook/extract-textbook.mjs
+ M scripts/textbook/generate-drafts.mjs
+ M scripts/textbook/promote-topic.mjs
+ M scripts/textbook/validate-batch-contract.mjs
+ M scripts/textbook/validate-promotion-manifest.mjs
+ M scripts/textbook/validate-runtime-integrity.mjs
+ M scripts/validate-lab-data-boundary.mjs
+ M scripts/validate-supporting-data.mjs
+ M src/data/achievementsData.json
+ M src/data/contentMeta.js
+ M src/data/index.js
+ M src/data/learningPath.json
+ M src/data/quizData.json
+ M src/data/reactions.json
+ M src/data/textbookIngestion/runtimeTargetMap.js
+ M src/modules/progress.js
+
+=== untracked (selected) ===
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/
+src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/
+src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/
+src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json
+src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json
+tests/content/pep-learning-tabs.spec.js
+
+=== summary ===
+- 15 modified tracked files
+- 4 new batch JSONs (untracked)
+- 4 reviewed promotion-manifest.json files (untracked)
+- 40 generated candidate files across 4 volumes (untracked)
+- 1 new Playwright test (untracked)
+- No CSS changes in src/styles/

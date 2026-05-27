@@ -34,7 +34,7 @@ export const { quizData } = quizDataset;
 export const { learningPath } = learningPathData;
 export const { curriculumTags } = curriculumDataset;
 export { textbookAssetExtractionStatuses, textbookAssetManifest, textbookAssetTypes };
-export const { reactions } = reactionsData;
+export const reactions = Array.isArray(reactionsData) ? reactionsData : reactionsData.reactions;
 export const { labExperiments } = labExperimentsData;
 export const { achievementsData } = achievementsDataset;
 export const { spectralLines } = spectralLinesDataset;

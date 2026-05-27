@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-05-27T23:01:33.6243681+08:00",
+  "workspace": "D:\\Chemical-Laboratory",
+  "sourceEvidence": ".sisyphus/evidence/apply-eight-textbook-tabs-to-main/task-5-learning-tabs-runtime.json",
+  "status": "MANDATORY_TARGETED_PLAYWRIGHT_PASS_AFTER_FIX",
+  "validation": {
+    "individualValidatorsExit0": true,
+    "validateAllSafeExit0": true,
+    "targetedPlaywrightInitialExit": 1,
+    "targetedPlaywrightCorrectedExit": 0,
+    "optionalFullPlaywright": {
+      "attempted": true,
+      "exitCode": 1,
+      "status": "failed broadly before targeted repair; documented as optional broad suite failure, not claimed passing"
+    }
+  },
+  "tabCount": 8,
+  "labelsInOrder": [
+    "八年级·全册",
+    "九年级·上册",
+    "九年级·下册",
+    "高一/10年级·必修第一册",
+    "高一/10年级·必修第二册",
+    "高二/11年级·选择性必修一·反应原理",
+    "高二/11年级·选择性必修二·物质结构与性质",
+    "高三/12年级·有机基础"
+  ],
+  "countsByLabel": {
+    "八年级·全册": 347,
+    "九年级·上册": 340,
+    "九年级·下册": 222,
+    "高一/10年级·必修第一册": 213,
+    "高一/10年级·必修第二册": 263,
+    "高二/11年级·选择性必修一·反应原理": 198,
+    "高二/11年级·选择性必修二·物质结构与性质": 146,
+    "高三/12年级·有机基础": 280
+  },
+  "tabs": [
+    {
+      "label": "八年级·全册",
+      "count": 347,
+      "isPep": false,
+      "expectedPepCount": null,
+      "countCheck": true
+    },
+    {
+      "label": "九年级·上册",
+      "count": 340,
+      "isPep": false,
+      "expectedPepCount": null,
+      "countCheck": true
+    },
+    {
+      "label": "九年级·下册",
+      "count": 222,
+      "isPep": false,
+      "expectedPepCount": null,
+      "countCheck": true
+    },
+    {
+      "label": "高一/10年级·必修第一册",
+      "count": 213,
+      "isPep": true,
+      "expectedPepCount": 213,
+      "countCheck": true
+    },
+    {
+      "label": "高一/10年级·必修第二册",
+      "count": 263,
+      "isPep": true,
+      "expectedPepCount": 263,
+      "countCheck": true
+    },
+    {
+      "label": "高二/11年级·选择性必修一·反应原理",
+      "count": 198,
+      "isPep": true,
+      "expectedPepCount": 198,
+      "countCheck": true
+    },
+    {
+      "label": "高二/11年级·选择性必修二·物质结构与性质",
+      "count": 146,
+      "isPep": true,
+      "expectedPepCount": 146,
+      "countCheck": true
+    },
+    {
+      "label": "高三/12年级·有机基础",
+      "count": 280,
+      "isPep": false,
+      "expectedPepCount": null,
+      "countCheck": true
+    }
+  ],
+  "pepExactCounts": {
+    "高一/10年级·必修第一册": 213,
+    "高一/10年级·必修第二册": 263,
+    "高二/11年级·选择性必修一·反应原理": 198,
+    "高二/11年级·选择性必修二·物质结构与性质": 146
+  },
+  "pepCountChecksPass": true,
+  "legacyCountsPositive": true,
+  "bannedTermChecks": [
+    {
+      "term": "pep-chemistry",
+      "foundInAnyLabel": false
+    },
+    {
+      "term": "人教版",
+      "foundInAnyLabel": false
+    },
+    {
+      "term": "2019",
+      "foundInAnyLabel": false
+    },
+    {
+      "term": "2024",
+      "foundInAnyLabel": false
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "fixes": [
+    "Removed empty legacy progress-textbook-tabs placeholder from index.html.",
+    "Adjusted tests/content/pep-learning-tabs.spec.js label extraction to ignore only .textbook-tab-count while preserving strict exact-label and count assertions."
+  ],
+  "diffScope": "PASS for Task 6 repair scope; see task-6-diff-scope.txt"
+}

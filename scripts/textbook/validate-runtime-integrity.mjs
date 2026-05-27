@@ -12,6 +12,7 @@ const paths = {
   quiz: path.join(dataRoot, 'quizData.json'),
   learningPath: path.join(dataRoot, 'learningPath.json'),
   reactions: path.join(dataRoot, 'reactions.json'),
+  labExperiments: path.join(dataRoot, 'labExperiments.json'),
   achievements: path.join(dataRoot, 'achievementsData.json'),
   curriculum: path.join(dataRoot, 'curriculum.js'),
   contentMeta: path.join(dataRoot, 'contentMeta.js')
@@ -74,17 +75,18 @@ Usage:
 }
 
 async function loadRuntime(errors) {
-  const [elements, quiz, learningPath, reactions, achievements] = await Promise.all([
+  const [elements, quiz, learningPath, reactions, labExperiments, achievements] = await Promise.all([
     readJson(paths.elements, 'elements', errors),
     readJson(paths.quiz, 'quizData', errors),
     readJson(paths.learningPath, 'learningPath', errors),
     readJson(paths.reactions, 'reactions', errors),
+    readJson(paths.labExperiments, 'labExperiments', errors),
     readJson(paths.achievements, 'achievementsData', errors)
   ]);
   const curriculum = await importJs(paths.curriculum, 'curriculum', errors);
   const contentMeta = await importJs(paths.contentMeta, 'contentMeta', errors);
 
-  if (!elements || !quiz || !learningPath || !reactions || !achievements || !curriculum || !contentMeta) {
+  if (!elements || !quiz || !learningPath || !reactions || !labExperiments || !achievements || !curriculum || !contentMeta) {
     return null;
   }
 
@@ -92,7 +94,8 @@ async function loadRuntime(errors) {
     elements: structuredClone(elements.elements ?? []),
     quiz: structuredClone(quiz.quizData ?? []),
     stages: structuredClone(learningPath.learningPath?.stages ?? []),
-    reactions: structuredClone(reactions.reactions ?? []),
+    reactions: structuredClone(Array.isArray(reactions) ? reactions : reactions.reactions ?? []),
+    labExperiments: structuredClone(labExperiments.labExperiments ?? []),
     achievements: structuredClone(achievements.achievementsData ?? []),
     curriculumTags: curriculum.curriculumTags ?? {},
     gameKeys: contentMeta.GAME_KEYS ?? {},
@@ -119,7 +122,10 @@ function validateRuntime(runtime, errors) {
     ...collectLearningPathCurriculumTags(runtime.stages)
   ]);
   const stageIds = new Set(runtime.stages.map((stage) => stage.id));
-  const experimentIds = new Set(runtime.reactions.map((reaction) => reaction.experimentId));
+  const experimentIds = new Set([
+    ...runtime.reactions.map((reaction) => reaction.experimentId),
+    ...runtime.labExperiments.flatMap((experiment) => [experiment.id, experiment.experimentId])
+  ].filter(Boolean));
   const gameIds = new Set(Object.values(runtime.gameKeys));
   const quizTags = new Set(runtime.quiz.flatMap((quiz) => array(quiz.curriculumTags)));
 

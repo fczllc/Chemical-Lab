@@ -16,7 +16,11 @@ const knownTextbookBatches = new Set([
   'rj-chemistry-grade9-2024-vol1',
   'rj-chemistry-grade9-2024-vol2',
   'rj-chemistry-g12-selective-3-organic-2019',
-  'rj-chemistry-grade8-54-2024-full'
+  'rj-chemistry-grade8-54-2024-full',
+  'pep-chemistry-g10-required-1',
+  'pep-chemistry-g10-required-2',
+  'pep-chemistry-g11-selective-1',
+  'pep-chemistry-g11-selective-2'
 ]);
 
 const outputFiles = [

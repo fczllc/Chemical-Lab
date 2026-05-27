@@ -1,0 +1,15 @@
+Task 3 exact PEP count assertion
+workdir=D:\Chemical-Laboratory
+COMMAND: node -e corrected-achievementsData-shape-pep-count-assertion
+SCRIPT: const raw=require('./src/data/achievementsData.json');const data=Array.isArray(raw)?raw:raw.achievementsData;if(!Array.isArray(data)) throw new Error('achievementsData array missing');const expected={'pep-chemistry-g10-required-1':213,'pep-chemistry-g10-required-2':263,'pep-chemistry-g11-selective-1':198,'pep-chemistry-g11-selective-2':146};for(const [id,count] of Object.entries(expected)){const actual=data.filter(a=>a?.condition?.type==='manualReviewAfterPromotion'&&a.sourceReviewStatus==='reviewed'&&(a.sourceVolumeId===id||a.sourceReferences?.some(r=>r.sourceVolumeId===id||r.volumeId===id))).length;if(actual!==count){throw new Error(id+' expected '+count+' got '+actual)}}console.log('pep-counts-ok')
+
+BATCH_EXISTENCE:
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json exists=True
+src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json exists=True
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json exists=True
+src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json exists=True
+BATCH_EXIT_CODE: 0
+
+ASSERTION_OUTPUT:
+pep-counts-ok
+EXIT_CODE: 0

@@ -1,0 +1,2613 @@
+# Task 6 Final Validation Evidence
+Generated: 2026-05-27T22:21:51.7033535+08:00
+Workspace: D:\Chemical-Laboratory
+Note: Earlier capture attempts were superseded because the PowerShell evidence runner used invalid path resolution and then a reserved $Args parameter name. This file records the corrected command invocations below.
+
+## validate textbook assets
+COMMAND: node scripts/validate-textbook-assets.mjs
+START: 2026-05-27T22:21:51.7398323+08:00
+OUTPUT:
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (5 assets checked)
+assetReviewStatus: valid (3 runtime references checked)
+EXIT_CODE: 0
+END: 2026-05-27T22:21:52.6687959+08:00
+
+## validate supporting data
+COMMAND: node scripts/validate-supporting-data.mjs
+START: 2026-05-27T22:21:52.6692970+08:00
+OUTPUT:
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?06 閬撻銆?44 涓弽搴斻€?024 涓垚灏便€?015 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛?28 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?208 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?199 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+EXIT_CODE: 0
+END: 2026-05-27T22:21:53.3972175+08:00
+
+## validate promotion manifest all reviewed
+COMMAND: node scripts/textbook/validate-promotion-manifest.mjs --all-reviewed
+START: 2026-05-27T22:21:53.3976910+08:00
+OUTPUT:
+Promotion manifest valid: all-reviewed
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json entries=1009
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json entries=695
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json entries=767
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json entries=1027
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json entries=833
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json entries=739
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json entries=793
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json entries=436
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-2
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2
+EXIT_CODE: 0
+END: 2026-05-27T22:21:54.3838856+08:00
+
+## promote topic all reviewed dry run json
+COMMAND: node scripts/textbook/promote-topic.mjs --all-reviewed --dry-run --json
+START: 2026-05-27T22:21:54.3842350+08:00
+OUTPUT:
+Textbook promotion: dry-run
+selected reviewed entries: 6299
+planned promoted records: 5886
+skipped reviewed entries: 413
+planned write: src/data/achievementsData.json records=2009 existing=2024 preserved=15 textbookBefore=2009 textbookAfter=2009 changed=true
+planned write: src/data/contentMeta.js records=687 existing=687 preserved=0 textbookBefore=687 textbookAfter=687 changed=false
+planned write: src/data/learningPath.json records=2009 existing=2015 preserved=6 textbookBefore=2009 textbookAfter=2009 changed=false
+planned write: src/data/quizData.json records=880 existing=906 preserved=26 textbookBefore=880 textbookAfter=880 changed=true
+planned write: src/data/reactions.json records=301 existing=244 preserved=0 textbookBefore=244 textbookAfter=428 changed=true
+destination src/data/achievementsData.json: 2009 reviewed records
+destination src/data/contentMeta.js: 687 reviewed records
+destination src/data/reactions.json: 301 reviewed records
+destination src/data/learningPath.json: 2009 reviewed records
+destination src/data/quizData.json: 880 reviewed records
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0002-source-section-l7-l60-82e6234c19-curriculum-topic-knowledge-topic-0002-source-section-l7-l60-82e6234c19 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0004-source-section-l63-l74-105f9964c8-curriculum-topic-knowledge-topic-0004-source-section-l63-l74-105f9964c8 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0006-source-section-l77-l91-d8c78d5c10-curriculum-topic-knowledge-topic-0006-source-section-l77-l91-d8c78d5c10 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0008-1-l94-l129-9ca678fac3-curriculum-topic-knowledge-topic-0008-1-l94-l129-9ca678fac3 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0010-source-section-l132-l141-e2d1b6aeb2-curriculum-topic-knowledge-topic-0010-source-section-l132-l141-e2d1b6aeb2 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0011-2-l142-l149-74ea0c012f-curriculum-topic-knowledge-topic-0011-2-l142-l149-74ea0c012f curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0012-1-1-l150-l182-a0520abc2b-curriculum-topic-knowledge-topic-0012-1-1-l150-l182-a0520abc2b curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30-curriculum-topic-knowledge-topic-0014-source-section-l185-l190-f8c2f91c30 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0015-source-section-l191-l196-454e062922-curriculum-topic-knowledge-topic-0015-source-section-l191-l196-454e062922 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0016-source-section-l197-l200-5c35cb1a6a-curriculum-topic-knowledge-topic-0016-source-section-l197-l200-5c35cb1a6a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0017-1-l201-l207-a740fa800a-curriculum-topic-knowledge-topic-0017-1-l201-l207-a740fa800a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0018-source-section-l208-l221-e7313dd125-curriculum-topic-knowledge-topic-0018-source-section-l208-l221-e7313dd125 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0019-2-l222-l228-c56c65c7a8-curriculum-topic-knowledge-topic-0019-2-l222-l228-c56c65c7a8 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0020-source-section-l229-l258-8401ab8245-curriculum-topic-knowledge-topic-0020-source-section-l229-l258-8401ab8245 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a-curriculum-topic-knowledge-topic-0022-source-section-l261-l275-5cd2d2ea6a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0023-source-section-l276-l337-ac091172ff-curriculum-topic-knowledge-topic-0023-source-section-l276-l337-ac091172ff curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0024-source-section-l338-l341-7a1ac01121-curriculum-topic-knowledge-topic-0024-source-section-l338-l341-7a1ac01121 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0025-source-section-l342-l345-d4265b702a-curriculum-topic-knowledge-topic-0025-source-section-l342-l345-d4265b702a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0026-1-2-l346-l410-2d78a328b9-curriculum-topic-knowledge-topic-0026-1-2-l346-l410-2d78a328b9 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0027-source-section-l411-l419-0408a89c70-curriculum-topic-knowledge-topic-0027-source-section-l411-l419-0408a89c70 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0029-source-section-l422-l427-f41b972e23-curriculum-topic-knowledge-topic-0029-source-section-l422-l427-f41b972e23 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0030-source-section-l428-l434-6f4c864dc8-curriculum-topic-knowledge-topic-0030-source-section-l428-l434-6f4c864dc8 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0031-1-3-l435-l477-723842ca0b-curriculum-topic-knowledge-topic-0031-1-3-l435-l477-723842ca0b curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0032-source-section-l478-l612-61a10c875e-curriculum-topic-knowledge-topic-0032-source-section-l478-l612-61a10c875e curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0033-source-section-l613-l616-f13142048a-curriculum-topic-knowledge-topic-0033-source-section-l613-l616-f13142048a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a-curriculum-topic-knowledge-topic-0035-source-section-l620-l676-c15b55fc8a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0036-source-section-l677-l688-f108be00ae-curriculum-topic-knowledge-topic-0036-source-section-l677-l688-f108be00ae curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0037-source-section-l689-l722-0f8ba1f1ae-curriculum-topic-knowledge-topic-0037-source-section-l689-l722-0f8ba1f1ae curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b-curriculum-topic-knowledge-topic-0038-source-section-l723-l837-4b9f15ca8b curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0039-source-section-l838-l841-97747b2738-curriculum-topic-knowledge-topic-0039-source-section-l838-l841-97747b2738 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0040-source-section-l842-l847-f07bcbd02a-curriculum-topic-knowledge-topic-0040-source-section-l842-l847-f07bcbd02a curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0041-source-section-l848-l854-01ef9f7f8f-curriculum-topic-knowledge-topic-0041-source-section-l848-l854-01ef9f7f8f curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0043-1-l857-l863-16c68908f5-curriculum-topic-knowledge-topic-0043-1-l857-l863-16c68908f5 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0044-2-l864-l869-d7bef5f97f-curriculum-topic-knowledge-topic-0044-2-l864-l869-d7bef5f97f curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0046-1-l872-l876-58290c9d93-curriculum-topic-knowledge-topic-0046-1-l872-l876-58290c9d93 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0048-source-section-l882-l994-1472cdf47d-curriculum-topic-knowledge-topic-0048-source-section-l882-l994-1472cdf47d curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0051-source-section-l999-l1011-3660c83005-curriculum-topic-knowledge-topic-0051-source-section-l999-l1011-3660c83005 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0052-source-section-l1012-l1015-bbbaffafbc-curriculum-topic-knowledge-topic-0052-source-section-l1012-l1015-bbbaffafbc curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0053-source-section-l1016-l1021-96424222f2-curriculum-topic-knowledge-topic-0053-source-section-l1016-l1021-96424222f2 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0054-2-1-l1022-l1028-3d4f0c60b3-curriculum-topic-knowledge-topic-0054-2-1-l1022-l1028-3d4f0c60b3 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0055-source-section-l1029-l1041-e211108204-curriculum-topic-knowledge-topic-0055-source-section-l1029-l1041-e211108204 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0056-source-section-l1042-l1066-d605e33818-curriculum-topic-knowledge-topic-0056-source-section-l1042-l1066-d605e33818 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0057-2-2-l1067-l1082-5230c09917-curriculum-topic-knowledge-topic-0057-2-2-l1067-l1082-5230c09917 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0058-source-section-l1083-l1086-46a0c5c837-curriculum-topic-knowledge-topic-0058-source-section-l1083-l1086-46a0c5c837 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0060-source-section-l1089-l1092-7e5503c142-curriculum-topic-knowledge-topic-0060-source-section-l1089-l1092-7e5503c142 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0061-source-section-l1093-l1102-d4782d870d-curriculum-topic-knowledge-topic-0061-source-section-l1093-l1102-d4782d870d curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0062-source-section-l1103-l1108-e967a8c7ea-curriculum-topic-knowledge-topic-0062-source-section-l1103-l1108-e967a8c7ea curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0063-source-section-l1109-l1120-669872bc46-curriculum-topic-knowledge-topic-0063-source-section-l1109-l1120-669872bc46 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0066-source-section-l1128-l1138-492553879c-curriculum-topic-knowledge-topic-0066-source-section-l1128-l1138-492553879c curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: pep-chemistry-g10-required-1/promote-knowledge-topic-0067-2-3-l1139-l1163-caa7793072-curriculum-topic-knowledge-topic-0067-2-3-l1139-l1163-caa7793072 curriculumTopic -> unsupported candidate type curriculumTopic
+skipped reviewed: 363 more entries omitted from console detail
+unsupported generated: pep-chemistry-g10-required-1/curriculumTopic count=213 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g10-required-1/labCandidate count=73 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g10-required-1/storyCandidate count=44 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g10-required-2/curriculumTopic count=263 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g10-required-2/labCandidate count=106 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g10-required-2/storyCandidate count=87 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-1/curriculumTopic count=198 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-1/labCandidate count=80 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-1/storyCandidate count=34 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-2/curriculumTopic count=146 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-2/labCandidate count=33 reason=not-promotable: unsupported target
+unsupported generated: pep-chemistry-g11-selective-2/storyCandidate count=31 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/curriculumTopic count=280 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/labCandidate count=79 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-g12-selective-3-organic-2019/storyCandidate count=58 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/curriculumTopic count=347 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/labCandidate count=178 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade8-54-2024-full/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/curriculumTopic count=340 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/labCandidate count=172 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol1/storyCandidate count=95 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/curriculumTopic count=222 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/labCandidate count=122 reason=not-promotable: unsupported target
+unsupported generated: rj-chemistry-grade9-2024-vol2/storyCandidate count=87 reason=not-promotable: unsupported target
+dry-run: no runtime or reviewed manifest files written
+PROMOTION_REPORT_JSON {"schemaVersion":1,"mode":"dry-run","selectedReviewedEntries":6299,"totals":{"promoted":5886,"skipped":413,"blocked":3383,"changedFiles":3},"changedFiles":["src/data/achievementsData.json","src/data/quizData.json","src/data/reactions.json"],"textbooks":{"pep-chemistry-g10-required-1":{"blocked":330,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":213,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":57,"selected":0,"skipped":213,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":213,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":102,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":35,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":330,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":620,"selected":833,"skipped":213,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":456,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":263,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":83,"selected":0,"skipped":1,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":263,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":88,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":41,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":456,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":738,"selected":739,"skipped":1,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":312,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":198,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":73,"selected":0,"skipped":198,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":198,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":95,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":312,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":595,"selected":793,"skipped":198,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":210,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":146,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":50,"selected":0,"skipped":1,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":146,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":83,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":10,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":210,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":435,"selected":436,"skipped":1,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":417,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":85,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":91,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":417,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":767,"selected":767,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":620,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":120,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":157,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":56,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":620,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":1027,"selected":1027,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":607,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":119,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":155,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":55,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":607,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":1009,"selected":1009,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":431,"destinations":{"src/data/achievementsData.json":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}},"src/data/contentMeta.js":{"blocked":0,"destinations":{},"promoted":100,"selected":0,"skipped":0,"textbooks":{}},"src/data/learningPath.json":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}},"src/data/quizData.json":{"blocked":0,"destinations":{},"promoted":109,"selected":0,"skipped":0,"textbooks":{}},"src/data/reactions.json":{"blocked":0,"destinations":{},"promoted":42,"selected":0,"skipped":0,"textbooks":{}},"unsupported-generated":{"blocked":431,"destinations":{},"promoted":0,"selected":0,"skipped":0,"textbooks":{}}},"promoted":695,"selected":695,"skipped":0,"textbooks":{}}},"destinations":{"src/data/achievementsData.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":2024,"plannedWrites":2009,"promoted":2009,"selected":0,"skipped":0,"textbookRecordsAfter":2009,"textbookRecordsBefore":2009,"textbooks":{"pep-chemistry-g10-required-1":{"blocked":0,"destinations":{},"promoted":213,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":0,"destinations":{},"promoted":263,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":0,"destinations":{},"promoted":198,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":0,"destinations":{},"promoted":146,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/contentMeta.js":{"blocked":0,"changed":false,"destinations":{},"existingRecords":687,"plannedWrites":687,"promoted":687,"selected":0,"skipped":413,"textbookRecordsAfter":687,"textbookRecordsBefore":687,"textbooks":{"pep-chemistry-g10-required-1":{"blocked":0,"destinations":{},"promoted":57,"selected":0,"skipped":213,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":0,"destinations":{},"promoted":83,"selected":0,"skipped":1,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":0,"destinations":{},"promoted":73,"selected":0,"skipped":198,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":0,"destinations":{},"promoted":50,"selected":0,"skipped":1,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":85,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":120,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":119,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":100,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/learningPath.json":{"blocked":0,"changed":false,"destinations":{},"existingRecords":2015,"plannedWrites":2009,"promoted":2009,"selected":0,"skipped":0,"textbookRecordsAfter":2009,"textbookRecordsBefore":2009,"textbooks":{"pep-chemistry-g10-required-1":{"blocked":0,"destinations":{},"promoted":213,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":0,"destinations":{},"promoted":263,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":0,"destinations":{},"promoted":198,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":0,"destinations":{},"promoted":146,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":280,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":347,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":340,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":222,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/quizData.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":906,"plannedWrites":880,"promoted":880,"selected":0,"skipped":0,"textbookRecordsAfter":880,"textbookRecordsBefore":880,"textbooks":{"pep-chemistry-g10-required-1":{"blocked":0,"destinations":{},"promoted":102,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":0,"destinations":{},"promoted":88,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":0,"destinations":{},"promoted":95,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":0,"destinations":{},"promoted":83,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":91,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":157,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":155,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":109,"selected":0,"skipped":0,"textbooks":{}}}},"src/data/reactions.json":{"blocked":0,"changed":true,"destinations":{},"existingRecords":244,"plannedWrites":301,"promoted":301,"selected":0,"skipped":0,"textbookRecordsAfter":428,"textbookRecordsBefore":244,"textbooks":{"pep-chemistry-g10-required-1":{"blocked":0,"destinations":{},"promoted":35,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g10-required-2":{"blocked":0,"destinations":{},"promoted":41,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-1":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"pep-chemistry-g11-selective-2":{"blocked":0,"destinations":{},"promoted":10,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-g12-selective-3-organic-2019":{"blocked":0,"destinations":{},"promoted":31,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade8-54-2024-full":{"blocked":0,"destinations":{},"promoted":56,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol1":{"blocked":0,"destinations":{},"promoted":55,"selected":0,"skipped":0,"textbooks":{}},"rj-chemistry-grade9-2024-vol2":{"blocked":0,"destinations":{},"promoted":42,"selected":0,"skipped":0,"textbooks":{}}}}}}
+EXIT_CODE: 0
+END: 2026-05-27T22:21:55.7148294+08:00
+
+## validate all safe
+COMMAND: npm run validate:all:safe
+START: 2026-05-27T22:21:55.7153314+08:00
+OUTPUT:
+
+> element-explorer-kids@1.0.0 validate:all:safe
+> npm run validate:elements && npm run validate:supporting && npm run validate:spectral && npm run validate:curriculum && npm run validate:textbook-assets && npm run validate:textbook-runtime-boundary && npm run validate:textbook-workflow -- --all-reviewed && node scripts/audit-business-data-imports.mjs && npm run build
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+鍏冪礌鏁版嵁鏍￠獙閫氳繃锛氬叡 118 涓厓绱狅紝鍘熷瓙搴忔暟涓庣鍙峰潎鍞竴銆?
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?06 閬撻銆?44 涓弽搴斻€?024 涓垚灏便€?015 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛?28 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?208 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?199 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+鍏夎氨绾挎暟鎹牎楠岄€氳繃锛氬叡 118 涓厓绱狅紝娉㈤暱鑼冨洿 380-780 nm銆?
+> element-explorer-kids@1.0.0 validate:curriculum
+> node scripts/validate-curriculum.mjs
+
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid
+
+> element-explorer-kids@1.0.0 validate:textbook-assets
+> node scripts/validate-textbook-assets.mjs
+
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (5 assets checked)
+assetReviewStatus: valid (3 runtime references checked)
+
+> element-explorer-kids@1.0.0 validate:textbook-runtime-boundary
+> node scripts/textbook/validate-runtime-boundary.mjs && node scripts/textbook/validate-runtime-integrity.mjs
+
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/lab-sim/apparatus/alcohol-burner.js
+checked: src/lab-sim/apparatus/beaker.js
+checked: src/lab-sim/apparatus/dropper.js
+checked: src/lab-sim/apparatus/funnel.js
+checked: src/lab-sim/apparatus/gas-jar.js
+checked: src/lab-sim/apparatus/glass-rod.js
+checked: src/lab-sim/apparatus/graduated-cylinder.js
+checked: src/lab-sim/apparatus/index.js
+checked: src/lab-sim/apparatus/interaction.js
+checked: src/lab-sim/apparatus/iron-stand.js
+checked: src/lab-sim/apparatus/metadata.js
+checked: src/lab-sim/apparatus/safety-shield.js
+checked: src/lab-sim/apparatus/test-tube.js
+checked: src/lab-sim/apparatus/thermometer.js
+checked: src/lab-sim/apparatus/tubing.js
+checked: src/lab-sim/experiments/apparatus-recognition.js
+checked: src/lab-sim/experiments/sodium-water.js
+checked: src/lab-sim/parameters/engine.js
+checked: src/lab-sim/parameters/ui.js
+checked: src/lab-sim/phenomena/bubbles.js
+checked: src/lab-sim/phenomena/heat-glow.js
+checked: src/lab-sim/phenomena/surface-motion.js
+checked: src/lab-sim/registry.js
+checked: src/lab-sim/runtime/controls.js
+checked: src/lab-sim/runtime/index.js
+checked: src/lab-sim/runtime/loop.js
+checked: src/lab-sim/runtime/renderer.js
+checked: src/lab-sim/runtime/scene.js
+checked: src/lab-sim/schema.js
+checked: src/lab-sim/substances/gas.js
+checked: src/lab-sim/substances/liquid.js
+checked: src/lab-sim/substances/solid.js
+checked: src/lab-sim/utils/disposal.js
+checked: src/lab-sim/utils/performance.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/gameFeedbackOverlay.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Textbook runtime integrity valid
+warning: Bundle size warning: dist/assets/index-BOupo6PZ.js is 12584 KiB; run npm run build for the current Vite report.
+checked: src/data/elements.json
+checked: src/data/quizData.json
+checked: src/data/learningPath.json
+checked: src/data/reactions.json
+checked: src/data/labExperiments.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+
+> element-explorer-kids@1.0.0 validate:textbook-workflow
+> node scripts/textbook/validate-workflow.mjs --all-reviewed
+
+Running validate:textbook-promotion-manifest
+Promotion manifest valid: all-reviewed
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json entries=1009
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json entries=695
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json entries=767
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json entries=1027
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json entries=833
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json entries=739
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json entries=793
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json entries=436
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-2
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2
+Running validate:textbook-runtime-boundary
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/lab-sim/apparatus/alcohol-burner.js
+checked: src/lab-sim/apparatus/beaker.js
+checked: src/lab-sim/apparatus/dropper.js
+checked: src/lab-sim/apparatus/funnel.js
+checked: src/lab-sim/apparatus/gas-jar.js
+checked: src/lab-sim/apparatus/glass-rod.js
+checked: src/lab-sim/apparatus/graduated-cylinder.js
+checked: src/lab-sim/apparatus/index.js
+checked: src/lab-sim/apparatus/interaction.js
+checked: src/lab-sim/apparatus/iron-stand.js
+checked: src/lab-sim/apparatus/metadata.js
+checked: src/lab-sim/apparatus/safety-shield.js
+checked: src/lab-sim/apparatus/test-tube.js
+checked: src/lab-sim/apparatus/thermometer.js
+checked: src/lab-sim/apparatus/tubing.js
+checked: src/lab-sim/experiments/apparatus-recognition.js
+checked: src/lab-sim/experiments/sodium-water.js
+checked: src/lab-sim/parameters/engine.js
+checked: src/lab-sim/parameters/ui.js
+checked: src/lab-sim/phenomena/bubbles.js
+checked: src/lab-sim/phenomena/heat-glow.js
+checked: src/lab-sim/phenomena/surface-motion.js
+checked: src/lab-sim/registry.js
+checked: src/lab-sim/runtime/controls.js
+checked: src/lab-sim/runtime/index.js
+checked: src/lab-sim/runtime/loop.js
+checked: src/lab-sim/runtime/renderer.js
+checked: src/lab-sim/runtime/scene.js
+checked: src/lab-sim/schema.js
+checked: src/lab-sim/substances/gas.js
+checked: src/lab-sim/substances/liquid.js
+checked: src/lab-sim/substances/solid.js
+checked: src/lab-sim/utils/disposal.js
+checked: src/lab-sim/utils/performance.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/gameFeedbackOverlay.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Running validate:textbook-runtime-integrity
+Textbook runtime integrity valid
+warning: Bundle size warning: dist/assets/index-BOupo6PZ.js is 12584 KiB; run npm run build for the current Vite report.
+checked: src/data/elements.json
+checked: src/data/quizData.json
+checked: src/data/learningPath.json
+checked: src/data/reactions.json
+checked: src/data/labExperiments.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+Textbook workflow valid: all-reviewed
+涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?17 涓叆鍙?妯″潡鏂囦欢銆?
+> element-explorer-kids@1.0.0 build
+> vite build
+
+[36mvite v6.4.2 [32mbuilding for production...[36m[39m
+transforming...
+[32m鉁?[39m 1764 modules transformed.
+node_modules/lottie-web/build/player/lottie.js (14422:32): Use of eval in "node_modules/lottie-web/build/player/lottie.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-gV2CO0n9.woff2        [39m[1m[2m     3.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-CTq5MqoE.woff         [39m[1m[2m     4.42 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-Dl5lxZxV.woff2        [39m[1m[2m     4.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-Dy4dx90m.woff2        [39m[1m[2m     5.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-mCD8mA8B.woff2        [39m[1m[2m     5.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-BF-4gkZK.woff         [39m[1m[2m     5.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-oD1tc_U0.woff         [39m[1m[2m     6.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-C195tn64.woff         [39m[1m[2m     6.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2  [39m[1m[2m     6.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2     [39m[1m[2m     6.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-DgpXs0kz.ttf          [39m[1m[2m     7.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff   [39m[1m[2m     7.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff      [39m[1m[2m     7.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-D3wIWfF6.woff2       [39m[1m[2m     9.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2    [39m[1m[2m    10.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-DWFBv043.ttf          [39m[1m[2m    10.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-D5yQViql.woff        [39m[1m[2m    10.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2      [39m[1m[2m    11.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2         [39m[1m[2m    11.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-B7gKUWhC.ttf          [39m[1m[2m    11.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2     [39m[1m[2m    12.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2       [39m[1m[2m    12.22 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-Dbsnue_I.ttf          [39m[1m[2m    12.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff     [39m[1m[2m    12.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf    [39m[1m[2m    12.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf       [39m[1m[2m    12.37 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff       [39m[1m[2m    13.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-BsDP51OF.woff          [39m[1m[2m    13.30 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2   [39m[1m[2m    13.57 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-DN2j7dab.woff      [39m[1m[2m    14.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-DbIhKOiC.woff        [39m[1m[2m    14.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-C0xS9mPB.woff    [39m[1m[2m    16.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2      [39m[1m[2m    16.40 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-t53AETM-.woff2          [39m[1m[2m    16.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-C5JkGWo-.ttf         [39m[1m[2m    16.65 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2      [39m[1m[2m    16.78 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-NWA7e6Wa.woff2          [39m[1m[2m    16.99 kB[22m[1m[22m
+[2mdist/[22m[32mindex.html                                       [39m[1m[2m    17.54 kB[22m[1m[22m[2m 鈹?gzip:     4.17 kB[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff       [39m[1m[2m    18.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-DA0__PXp.woff           [39m[1m[2m    18.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-SpSLRI95.woff       [39m[1m[2m    19.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf      [39m[1m[2m    19.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-CB_wures.ttf        [39m[1m[2m    19.57 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-BdnERNNW.ttf           [39m[1m[2m    19.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-BMLOBm91.woff           [39m[1m[2m    19.68 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf       [39m[1m[2m    22.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-CFMepnvq.ttf         [39m[1m[2m    24.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-Cx986IdX.woff2            [39m[1m[2m    25.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-B22Nviop.woff2         [39m[1m[2m    26.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf     [39m[1m[2m    27.56 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-BQhdFMY1.woff2          [39m[1m[2m    28.08 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-Jm3AIy58.woff             [39m[1m[2m    29.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-Dr94JaBh.woff          [39m[1m[2m    30.77 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf        [39m[1m[2m    31.20 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-flOr_0UB.ttf            [39m[1m[2m    31.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf        [39m[1m[2m    32.97 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-DMm9YOAa.woff           [39m[1m[2m    33.52 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-3WenGoN9.ttf            [39m[1m[2m    33.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-waoOVXN0.ttf              [39m[1m[2m    51.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-ypZvNtVU.ttf           [39m[1m[2m    53.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-DRggAlZN.ttf            [39m[1m[2m    63.63 kB[22m[1m[22m
+[2mdist/[22m[32massets/cat-sCiXjNOW.jpg                          [39m[1m[2m    87.14 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-BYOb_mMw.css                        [39m[1m[2m   179.56 kB[22m[1m[22m[2m 鈹?gzip:    30.38 kB[22m
+[2mdist/[22m[36massets/index-BOupo6PZ.js                         [39m[1m[33m12,886.44 kB[39m[22m[2m 鈹?gzip: 1,563.31 kB[22m
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32m鉁?built in 9.79s[39m
+EXIT_CODE: 0
+END: 2026-05-27T22:22:14.9041099+08:00
+
+## targeted Playwright pep learning tabs chromium
+COMMAND: npx playwright test tests/content/pep-learning-tabs.spec.js --project=chromium
+START: 2026-05-27T22:23:21.8111237+08:00
+OUTPUT:
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts (27.1s)
+
+
+  1) [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.progress-textbook-tabs')
+    Expected: visible
+    Error: strict mode violation: locator('.progress-textbook-tabs') resolved to 2 elements:
+        1) <div data-testid="textbook-tabs" class="progress-textbook-tabs"></div> aka getByTestId('textbook-tabs')
+        2) <div class="textbook-tab-bar progress-textbook-tabs">鈥?/div> aka getByText('鍏勾绾峰叏鍐?347 涔濆勾绾蜂笂鍐?340 涔濆勾绾蜂笅鍐?)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.progress-textbook-tabs')[22m
+
+
+      87 |     // Wait for the textbook tab bar to render
+      88 |     const tabBar = page.locator('.progress-textbook-tabs');
+    > 89 |     await expect(tabBar).toBeVisible({ timeout: 10000 });
+         |                          ^
+      90 |
+      91 |     // Assert exactly eight tab buttons
+      92 |     const tabs = tabBar.locator('[data-textbook-tab]');
+        at D:\Chemical-Laboratory\tests\content\pep-learning-tabs.spec.js:89:26
+
+    Error Context: test-results\content-pep-learning-tabs--4e22b-els-and-correct-card-counts-chromium\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts
+EXIT_CODE: 1
+END: 2026-05-27T22:23:57.9816488+08:00
+
+## full Playwright suite
+COMMAND: npx playwright test
+START: 2026-05-27T22:25:28.9423588+08:00
+OUTPUT:
+鉁?apparatus metadata exposes Chinese-first copy for all MVP apparatus IDs (12.9185ms)
+鉁?createApparatus returns tagged THREE.Group instances with physical glass and metallic stand materials (33.6156ms)
+鉁?interaction controller tracks hover and selection callbacks for apparatus groups (2.2022ms)
+鉁?schema exposes the required simulation contract constants (0.5248ms)
+鉁?validateSimulationConfig accepts a complete simulation config (1.0701ms)
+鉁?validateSimulationConfig rejects missing required fields and invalid enum values (0.3884ms)
+鉁?registry can register, lookup, list, and clear configs by experimentId (0.5693ms)
+鉁?registry rejects invalid and duplicate simulation configs (0.5446ms)
+
+Running 120 tests using 2 workers
+
+  鉁?   2 [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX (29.7s)
+  鉁?   1 [chromium] 鈥?tests\content\chem-notation.spec.ts:59:3 鈥?KaTeX chemistry notation rendering 鈥?detail panel electron config renders KaTeX (31.7s)
+  鉁?   4 [chromium] 鈥?tests\content\chem-notation.spec.ts:98:3 鈥?KaTeX chemistry notation rendering 鈥?quiz formula-token smoke keeps prose and standalone symbols plain (10.2s)
+  鉁?   3 [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching (28.6s)
+  鉁?   6 [chromium] 鈥?tests\content\chem-notation.spec.ts:138:3 鈥?KaTeX chemistry notation rendering 鈥?periodic table cell symbol stays plain (9.4s)
+  鉁?   5 [chromium] 鈥?tests\content\chem-notation.spec.ts:123:3 鈥?KaTeX chemistry notation rendering 鈥?story electron config renders while story symbols stay plain (34.0s)
+  鉁?   7 [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors (46.7s)
+  鉁?   8 [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow (45.8s)
+  鉁?   9 [chromium] 鈥?tests\content\chem-notation.spec.ts:185:3 鈥?KaTeX chemistry notation rendering 鈥?textbook-grade chemistry notation cases render through KaTeX (81ms)
+  鉁?  11 [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts (25.5s)
+  鉁?  12 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:10:3 鈥?Content Data Smoke 鈥?detail panel opens with element content (21.5s)
+  鉁?  13 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:20:3 鈥?Content Data Smoke 鈥?story flow opens the selected element archive (26.7s)
+  鉁?  14 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element (33.2s)
+  鉁?  10 [chromium] 鈥?tests\content\pep-learning-tabs.spec.ts:32:3 鈥?PEP Learning Tabs 鈥?瀛︿範 page renders eight textbook tabs with non-empty cards (2.1m)
+  鉁?  15 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:44:3 鈥?Content Data Smoke 鈥?quiz flow opens a quick quiz for the selected element (21.2s)
+  鉁?  17 [chromium] 鈥?tests\shell\global-loader.spec.ts:4:3 鈥?Global Loader 鈥?desktop contract: asset 200, DOM, text, size, lifecycle, readiness, no lottie errors (8.4s)
+  鉁?  16 [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:57:3 鈥?Content Data Smoke 鈥?renders the selected element spectrum from real spectral data (20.5s)
+  鉁?  18 [chromium] 鈥?tests\shell\global-loader.spec.ts:41:3 鈥?Global Loader 鈥?mobile contract: 390x844 viewport preserves size and lifecycle (13.8s)
+  鉁?  19 [chromium] 鈥?tests\shell\global-loader.spec.ts:55:3 鈥?Global Loader 鈥?missing asset fallback: route interception 404, triggers fallback, still reaches readiness (8.0s)
+  鉁?  20 [chromium] 鈥?tests\shell\home-shell.spec.ts:10:3 鈥?Homepage Shell Contract 鈥?desktop shell contract - all shell regions visible at 1440x900 (12.6s)
+  鉁?  21 [chromium] 鈥?tests\shell\home-shell.spec.ts:61:3 鈥?Homepage Shell Contract 鈥?settings panel opens and contains performance mode toggle (14.5s)
+  鉁?  23 [chromium] 鈥?tests\shell\home-shell.spec.ts:108:3 鈥?Responsive Layout 鈥?tablet landscape keeps primary navigation visible at 1024x768 (9.1s)
+  鉁?  22 [chromium] 鈥?tests\shell\home-shell.spec.ts:97:3 鈥?Responsive Layout 鈥?desktop layout keeps primary navigation visible at 1366x768 (22.9s)
+  鉁?  25 [chromium] 鈥?tests\shell\home-shell.spec.ts:139:3 鈥?Hash-based Routing 鈥?unknown route falls back to home (13.8s)
+  鉁?  24 [chromium] 鈥?tests\shell\home-shell.spec.ts:119:3 鈥?Responsive Layout 鈥?tablet portrait supports navigation and element details at 768x1024 (28.9s)
+  鉁?  27 [chromium] 鈥?tests\shell\home-shell.spec.ts:188:3 鈥?Device Optimizations 鈥?viewport meta uses standard responsive scaling (7.1s)
+  鉁?  28 [chromium] 鈥?tests\shell\home-shell.spec.ts:196:3 鈥?Performance and Accessibility 鈥?global loader is present and hides after init (9.6s)
+  鉁?  26 [chromium] 鈥?tests\shell\home-shell.spec.ts:154:3 鈥?Hash-based Routing 鈥?hash routes navigate correctly (26.1s)
+  鉁?  29 [chromium] 鈥?tests\shell\home-shell.spec.ts:205:3 鈥?Performance and Accessibility 鈥?focus styles are visible (9.5s)
+  鉁?  30 [chromium] 鈥?tests\shell\home-shell.spec.ts:221:3 鈥?Performance and Accessibility 鈥?keyboard navigation works (5.8s)
+  鉁?  31 [chromium] 鈥?tests\shell\home-shell.spec.ts:242:3 鈥?Bottom Widget Contract 鈥?bottom widget DOM order is compare 鈫?categories 鈫?element-stats 鈫?stats (8.2s)
+  鉁?  32 [chromium] 鈥?tests\shell\home-shell.spec.ts:249:3 鈥?Bottom Widget Contract 鈥?category overview is display-only with no interactive descendants (13.4s)
+  鉁?  34 [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border (3.7s)
+  鉁?  35 [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 (3.2s)
+  鉁?  36 [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars (3.2s)
+  鉁?  33 [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge (20.5s)
+  鉁?  37 [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge (3.2s)
+  鉁?  38 [chromium] 鈥?tests\shell\loader-animation.spec.ts:4:3 鈥?Global Loader Animation 鈥?Lottie animation should advance frames during loading (3.2s)
+  鉁?  39 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:17:3 鈥?Achievement progress coupling 鈥?manual review helper extracts a trimmed single curriculum tag (3.2s)
+  鉁?  40 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence (3.2s)
+  鉁?  41 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:77:3 鈥?Achievement progress coupling 鈥?manual textbook achievement requires explicit completion (3.2s)
+  鉁?  42 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:120:3 鈥?Achievement progress coupling 鈥?modal confirmation unlocks achievement and syncs progress (3.2s)
+  鉁?  43 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:184:3 鈥?Achievement progress coupling 鈥?progress escapes persisted activity text (3.2s)
+  鉁?  44 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:230:3 鈥?Achievement progress coupling 鈥?completed learning segment persists after reload (3.2s)
+  鉁?  45 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:288:3 鈥?Achievement progress coupling 鈥?manual topic progress is derived from unlocked achievements (3.3s)
+  鉁?  46 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:332:3 鈥?Achievement progress coupling 鈥?all manual review achievements expose progress rows (3.2s)
+  鉁?  47 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:369:3 鈥?Achievement progress coupling 鈥?navigation to manual achievement action does not unlock without completion (3.2s)
+  鉁?  48 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:383:3 鈥?Achievement progress coupling 鈥?all manual review achievement cards carry segment id (3.2s)
+  鉁?  49 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:421:3 鈥?Achievement progress coupling 鈥?every achievement card is read-only with no action buttons (3.2s)
+  鉁?  50 [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:457:3 鈥?Achievement progress coupling 鈥?raw completedLearningSegments evidence does not inflate general progress (3.2s)
+  鉁?  51 [chromium] 鈥?tests\ui\achievements-readonly.spec.ts:4:3 鈥?Achievement read-only regression 鈥?achievement cards do not render action buttons (3.2s)
+  鉁?  52 [chromium] 鈥?tests\ui\background-policy.spec.ts:4:3 鈥?Background Policy 鈥?bg canvas stays hidden and shell background stays dark (3.2s)
+  鉁?  53 [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:23:3 鈥?Experiment completion date contract 鈥?markExperimentCompleted persists completion date and prevents duplicates (2.1s)
+  鉁?  54 [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:58:3 鈥?Experiment completion date contract 鈥?legacy experiment completion preserves state without backfilling dates (2.1s)
+  鉁?  55 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload (3.2s)
+  -   57 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:56:3 鈥?experiment detail editable title 鈥?rejects invalid and cancels safely while escaping malicious-looking title
+  -   58 [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:88:3 鈥?experiment detail editable title 鈥?supports keyboard Enter save and Escape cancel
+  鉁?  56 [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports (3.2s)
+  鉁?  59 [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz (3.2s)
+  鉁?  60 [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile (3.2s)
+  鉁?  61 [chromium] 鈥?tests\ui\lab-3d-simulation.spec.ts:23:5 鈥?Lab 3D simulation UI 鈥?apparatus recognition simulation launches and shows equipment (3.2s)
+  -   63 [chromium] 鈥?tests\ui\lab-3d-simulation.spec.ts:27:5 鈥?Lab 3D simulation UI 鈥?sodium-water simulation shows parameter controls
+  鉁?  62 [chromium] 鈥?tests\ui\lab-simulation-fallback.spec.ts:28:3 鈥?Lab simulation fallback 鈥?falls back to Canvas 2D when 3D runtime unavailable (3.2s)
+  鉁?  64 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:57:3 鈥?Lab textbook experiment content 鈥?runtime lab uses explicit textbook experiments (3.2s)
+  -   66 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:92:3 鈥?Lab textbook experiment content 鈥?lab titles are meaningful textbook summaries
+  -   67 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:115:3 鈥?Lab textbook experiment content 鈥?clean state shows locked and unlocked cards
+  -   68 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:133:3 鈥?Lab textbook experiment content 鈥?placeholder text rejection
+  -   69 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:168:3 鈥?Lab textbook experiment content 鈥?card excerpt and detail full content
+  -   70 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:223:3 鈥?Lab textbook experiment content 鈥?static reaction fallback
+  -   71 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:281:3 鈥?Lab textbook experiment content 鈥?ambiguous chemistry hides blank equation rows while showing full content
+  -   72 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:325:3 鈥?Lab textbook experiment content 鈥?completion confirmation flow records date and preserves legacy fallback
+  -   73 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:458:5 鈥?Lab textbook experiment content 鈥?dangerous reaction safety gate blocks launch without confirmation
+  -   74 [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:462:5 鈥?Lab textbook experiment content 鈥?simulation completion shows result view in detail modal
+  鉁?  65 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:8:3 鈥?Learning content modal interaction 鈥?clicking learning card opens modal and does not complete segment (3.2s)
+  鉁?  75 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:40:3 鈥?Learning content modal interaction 鈥?closing modal without confirmation leaves segment uncompleted (3.2s)
+  鉁?  76 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:78:3 鈥?Learning content modal interaction 鈥?modal confirmation completes segment and persists after reload (3.2s)
+  鉁?  77 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:132:3 鈥?Learning content modal interaction 鈥?completed lesson can still open modal and read content (3.2s)
+  鉁?  78 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:160:3 鈥?Learning content modal interaction 鈥?no learning card contains a visible completion button (3.2s)
+  鉁?  79 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:177:3 鈥?Learning content modal interaction 鈥?modal content has distinct sections without undefined or null (3.2s)
+  鉁?  80 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:207:3 鈥?Learning content modal interaction 鈥?modal escapes unsafe metadata instead of rendering executable HTML (3.2s)
+  鉁?  81 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:250:3 鈥?Learning content modal interaction 鈥?long modal content supports internal scroll (3.2s)
+  鉁?  82 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter (3.2s)
+  鉁?  83 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:167:3 鈥?periodic table controls 鈥?multi-select legend chips OR category filters in the grid (3.3s)
+  鉁?  84 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:183:3 鈥?periodic table controls 鈥?deselecting the last category restores the current period-only result set (3.2s)
+  鉁?  85 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:200:3 鈥?periodic table controls 鈥?combines period and category filters with AND semantics (3.2s)
+  鉁?  86 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:210:3 鈥?periodic table controls 鈥?keyboard activation toggles legend chip state and updates filtering (3.2s)
+  鉁?  87 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:223:3 鈥?periodic table controls 鈥?preserves active period and category filters when switching between grid and list views (3.3s)
+  鉁?  88 [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:247:3 鈥?periodic table controls 鈥?keeps tablet portrait table controls usable without phone navigation (3.3s)
+  鉁?  89 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:10:3 鈥?Reaction pairing completion 鈥?completes reaction pairing and persists the score (3.3s)
+  鉁?  90 [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:34:3 鈥?Reaction pairing completion 鈥?rejects incorrect reaction pairing without changing progress (3.2s)
+  鉁?  91 [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors (3.3s)
+  鉁?  92 [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry (3.2s)
+  鉁?  93 [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure (3.2s)
+  鉁?  94 [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome (3.3s)
+  鉁?  95 [chromium] 鈥?tests\ui\settings-reset-rescue.spec.ts:9:3 鈥?settings reset rescue 鈥?clear data resets progress while preserving settings (2.1s)
+  鉁?  96 [chromium] 鈥?tests\ui\settings-reset.spec.ts:52:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data (3.2s)
+  鉁?  97 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:16:3 鈥?Shared game feedback overlay 鈥?helper renders a single non-blocking overlay and removes it after timeout (3.2s)
+  鉁?  98 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:29:3 鈥?Shared game feedback overlay 鈥?drag game shows correct and incorrect overlays (3.2s)
+  鉁?  99 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:43:3 鈥?Shared game feedback overlay 鈥?memory game shows correct and incorrect overlays (3.2s)
+  鉁? 100 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:59:3 鈥?Shared game feedback overlay 鈥?reaction game shows correct and incorrect overlays (3.2s)
+  鉁? 101 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:78:3 鈥?Shared game feedback overlay 鈥?full quiz shows both correct and incorrect overlays (3.2s)
+  鉁? 102 [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:104:3 鈥?Shared game feedback overlay 鈥?quick quiz and collector interactions do not create the shared overlay (3.2s)
+  鉁? 103 [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once (2.2s)
+  鉁? 104 [chromium] 鈥?tests\ui\storage-migration.spec.ts:69:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 (2.2s)
+  鉁? 105 [chromium] 鈥?tests\ui\storage-migration.spec.ts:84:3 鈥?Storage migration compatibility 鈥?experiment completion date uses deterministic local date and persists once (2.1s)
+  鉁? 106 [chromium] 鈥?tests\ui\storage-migration.spec.ts:160:3 鈥?Storage migration compatibility 鈥?experiment completion date migration keeps legacy completions without fabricating dates and drops invalid dates (2.2s)
+  鉁? 107 [chromium] 鈥?tests\ui\storage-migration.spec.ts:184:3 鈥?Storage migration compatibility 鈥?invalid learning segment ids are ignored during migration (2.1s)
+  鉁? 108 [chromium] 鈥?tests\ui\storage-migration.spec.ts:212:3 鈥?Storage migration compatibility 鈥?quiz score writes include learner-state contract fields (2.2s)
+  鉁? 109 [chromium] 鈥?tests\ui\storage-migration.spec.ts:269:3 鈥?Storage migration compatibility 鈥?legacy quiz score fields normalize to learner-state contract fields (2.1s)
+  鉁? 110 [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:15:3 鈥?story media overrides 鈥?starts with no story media overrides (3.3s)
+  鉁? 111 [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:30:3 鈥?story media overrides 鈥?stores a discovery override by atomic number and side (3.2s)
+  鉁? 112 [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:61:3 鈥?story media overrides 鈥?clears only the requested side (3.4s)
+  鉁? 113 [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:94:3 鈥?story media overrides 鈥?drops invalid sides and unsafe src values during migration (3.6s)
+  鉁? 114 [chromium] 鈥?tests\ui\story-media-upload.spec.ts:17:3 鈥?story media upload modal 鈥?story media card opens an upload modal and saves a local image override (3.9s)
+  -  116 [chromium] 鈥?tests\ui\story-media-upload.spec.ts:50:3 鈥?story media upload modal 鈥?story media upload rejects oversized files and missing source
+  -  117 [chromium] 鈥?tests\ui\story-media-upload.spec.ts:68:3 鈥?story media upload modal 鈥?keyboard Enter and Space activate story media card
+  -  118 [chromium] 鈥?tests\ui\story-media-upload.spec.ts:87:3 鈥?story media upload modal 鈥?modal closes via backdrop click and close button
+  -  119 [chromium] 鈥?tests\ui\story-media-upload.spec.ts:106:3 鈥?story media upload modal 鈥?clear local override restores canonical image
+  鉁? 115 [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:10:3 鈥?Visual polish regression 鈥?keeps the final dark-shell contract on key routes (3.7s)
+  鉁? 120 [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:53:3 鈥?Visual polish regression 鈥?keeps the shell understandable when reduced motion is requested (3.7s)
+
+
+  1) [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.lab-equation-card').first()[22m
+
+
+      49 |
+      50 |     const equationCard = page.locator('.lab-equation-card').first();
+    > 51 |     await expect(equationCard).toBeVisible({ timeout: 10000 });
+         |                                ^
+      52 |
+      53 |     // Wait for KaTeX to render asynchronously
+      54 |     await expect(equationCard.locator('.katex')).toBeVisible({ timeout: 10000 });
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:51:32
+
+    Error Context: test-results\content-chem-notation-KaTe-7825c-equation-card-renders-KaTeX-chromium\error-context.md
+
+  2) [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[data-reaction-right="reaction-sodium-water"]')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('[data-reaction-right="reaction-sodium-water"]')[22m
+
+
+      83 |     const productDisplay = sodiumProducts.locator('[data-chem-notation="products"]');
+      84 |
+    > 85 |     await expect(sodiumProducts).toBeVisible({ timeout: 10000 });
+         |                                  ^
+      86 |     await expect(productDisplay.locator('.katex')).toHaveCount(2);
+      87 |     await expectChemMetadata(productDisplay.locator('.chem-notation--formula').nth(0), 'NaOH');
+      88 |     await expectChemMetadata(productDisplay.locator('.chem-notation--formula').nth(1), 'H2');
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:85:34
+
+    Error Context: test-results\content-chem-notation-KaTe-840aa-s-without-changing-matching-chromium\error-context.md
+
+  3) [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('.lab-equation-card').first()[22m
+
+
+      160 |
+      161 |     await page.getByTestId('nav-lab').click();
+    > 162 |     await expect(page.locator('.lab-equation-card').first()).toBeVisible();
+          |                                                              ^
+      163 |
+      164 |     await page.getByTestId('nav-home').click();
+      165 |     await page.getByTestId('element-cell-1').click();
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:162:62
+
+    Error Context: test-results\content-chem-notation-KaTe-049df-ing-no-KaTeX-console-errors-chromium\error-context.md
+
+  4) [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.lab-equation-card .katex').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.lab-equation-card .katex').first()[22m
+
+
+      178 |       await waitForShellReady(page);
+      179 |       await page.getByTestId('nav-lab').click();
+    > 180 |       await expect(page.locator('.lab-equation-card .katex').first()).toBeVisible({ timeout: 10000 });
+          |                                                                       ^
+      181 |       await expectNoHorizontalOverflow(page);
+      182 |     }
+      183 |   });
+        at D:\Chemical-Laboratory\tests\content\chem-notation.spec.ts:180:71
+
+    Error Context: test-results\content-chem-notation-KaTe-3e50a-ion-layouts-do-not-overflow-chromium\error-context.md
+
+  5) [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.progress-textbook-tabs')
+    Expected: visible
+    Error: strict mode violation: locator('.progress-textbook-tabs') resolved to 2 elements:
+        1) <div data-testid="textbook-tabs" class="progress-textbook-tabs"></div> aka getByTestId('textbook-tabs')
+        2) <div class="textbook-tab-bar progress-textbook-tabs">鈥?/div> aka getByText('鍏勾绾峰叏鍐?347 涔濆勾绾蜂笂鍐?340 涔濆勾绾蜂笅鍐?)
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('.progress-textbook-tabs')[22m
+
+
+      87 |     // Wait for the textbook tab bar to render
+      88 |     const tabBar = page.locator('.progress-textbook-tabs');
+    > 89 |     await expect(tabBar).toBeVisible({ timeout: 10000 });
+         |                          ^
+      90 |
+      91 |     // Assert exactly eight tab buttons
+      92 |     const tabs = tabBar.locator('[data-textbook-tab]');
+        at D:\Chemical-Laboratory\tests\content\pep-learning-tabs.spec.js:89:26
+
+    Error Context: test-results\content-pep-learning-tabs--4e22b-els-and-correct-card-counts-chromium\error-context.md
+
+  6) [chromium] 鈥?tests\content\pep-learning-tabs.spec.ts:32:3 鈥?PEP Learning Tabs 鈥?瀛︿範 page renders eight textbook tabs with non-empty cards 
+
+    [31mTest timeout of 120000ms exceeded.[39m
+
+    Error Context: test-results\content-pep-learning-tabs--b0a85-k-tabs-with-non-empty-cards-chromium\error-context.md
+
+  7) [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#lab #lab-stage .lab-stage-shell h3')
+    Expected: not [32m""[39m
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "not toHaveText" with timeout 5000ms[22m
+    [2m  - waiting for locator('#lab #lab-stage .lab-stage-shell h3')[22m
+
+
+      39 |     await expect(page.locator('#lab .lab-toolbar')).toContainText('褰撳墠鑱氱劍锛氭阿锛圚锛?);
+      40 |     await expect(page.locator('#lab .lab-list .lab-item-card').first()).toBeVisible();
+    > 41 |     await expect(page.locator('#lab #lab-stage .lab-stage-shell h3')).not.toHaveText('');
+         |                                                                           ^
+      42 |   });
+      43 |
+      44 |   test('quiz flow opens a quick quiz for the selected element', async ({ page }) => {
+        at D:\Chemical-Laboratory\tests\shell\content-data-smoke.spec.ts:41:75
+
+    Error Context: test-results\shell-content-data-smoke-C-e89a5-nt-for-the-selected-element-chromium\error-context.md
+
+  8) [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('.element-cell').first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 15000ms[22m
+    [2m  - waiting for locator('.element-cell').first()[22m
+
+
+      72 |   await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
+      73 |   await expect(page.getByTestId('detail-panel')).toBeVisible({ timeout: 15000 });
+    > 74 |   await expect(page.locator('.element-cell').first()).toBeVisible({ timeout: 15000 });
+         |                                                       ^
+      75 |   await expect.poll(async () => {
+      76 |     return await page.evaluate(() => {
+      77 |       const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
+        at waitForShellReady (D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:74:55)
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:239:5
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-6b1f0-d-no-old-CTA-or-count-badge-chromium\error-context.md
+
+  9) [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      236 |   test.beforeEach(async ({ page }) => {
+      237 |     await page.setViewportSize({ width: 1366, height: 768 });
+    > 238 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      239 |     await waitForShellReady(page);
+      240 |   });
+      241 |
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:238:16
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-95203-nsparent-with-no-top-border-chromium\error-context.md
+
+  10) [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      236 |   test.beforeEach(async ({ page }) => {
+      237 |     await page.setViewportSize({ width: 1366, height: 768 });
+    > 238 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      239 |     await waitForShellReady(page);
+      240 |   });
+      241 |
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:238:16
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-a67cd-rtical-overflow-at-1366x768-chromium\error-context.md
+
+  11) [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      236 |   test.beforeEach(async ({ page }) => {
+      237 |     await page.setViewportSize({ width: 1366, height: 768 });
+    > 238 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      239 |     await waitForShellReady(page);
+      240 |   });
+      241 |
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:238:16
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-61fde-de-without-panel-scrollbars-chromium\error-context.md
+
+  12) [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      236 |   test.beforeEach(async ({ page }) => {
+      237 |     await page.setViewportSize({ width: 1366, height: 768 });
+    > 238 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      239 |     await waitForShellReady(page);
+      240 |   });
+      241 |
+        at D:\Chemical-Laboratory\tests\shell\home-shell.spec.ts:238:16
+
+    Error Context: test-results\shell-home-shell-Bottom-Wi-76e20-not-restore-old-count-badge-chromium\error-context.md
+
+  13) [chromium] 鈥?tests\shell\loader-animation.spec.ts:4:3 鈥?Global Loader Animation 鈥?Lottie animation should advance frames during loading 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "load"[22m
+
+
+      3 | test.describe('Global Loader Animation', () => {
+      4 |   test('Lottie animation should advance frames during loading', async ({ page }) => {
+    > 5 |     await page.goto('/');
+        |                ^
+      6 |     
+      7 |     const loaderLottie = page.locator('[data-loader-lottie]');
+      8 |     await expect(loaderLottie).toBeAttached();
+        at D:\Chemical-Laboratory\tests\shell\loader-animation.spec.ts:5:16
+
+    Error Context: test-results\shell-loader-animation-Glo-eebda-vance-frames-during-loading-chromium\error-context.md
+
+  14) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:17:3 鈥?Achievement progress coupling 鈥?manual review helper extracts a trimmed single curriculum tag 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:18:11
+
+    Error Context: test-results\ui-achievements-progress-c-5923a-immed-single-curriculum-tag-chromium\error-context.md
+
+  15) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:32:11
+
+    Error Context: test-results\ui-achievements-progress-c-8887c--completed-segment-evidence-chromium\error-context.md
+
+  16) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:77:3 鈥?Achievement progress coupling 鈥?manual textbook achievement requires explicit completion 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:78:11
+
+    Error Context: test-results\ui-achievements-progress-c-b0fd2-equires-explicit-completion-chromium\error-context.md
+
+  17) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:120:3 鈥?Achievement progress coupling 鈥?modal confirmation unlocks achievement and syncs progress 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:121:11
+
+    Error Context: test-results\ui-achievements-progress-c-c5459-ievement-and-syncs-progress-chromium\error-context.md
+
+  18) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:184:3 鈥?Achievement progress coupling 鈥?progress escapes persisted activity text 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      197 |     });
+      198 |
+    > 199 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      200 |     await waitForShellReady(page);
+      201 |     await page.getByTestId('nav-progress').click();
+      202 |
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:199:16
+
+    Error Context: test-results\ui-achievements-progress-c-96ab4-pes-persisted-activity-text-chromium\error-context.md
+
+  19) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:230:3 鈥?Achievement progress coupling 鈥?completed learning segment persists after reload 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      229 |
+      230 |   test('completed learning segment persists after reload', async ({ page }) => {
+    > 231 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      232 |     await waitForShellReady(page);
+      233 |
+      234 |     await page.getByTestId('nav-achievements').click();
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:231:16
+
+    Error Context: test-results\ui-achievements-progress-c-4b24d-gment-persists-after-reload-chromium\error-context.md
+
+  20) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:288:3 鈥?Achievement progress coupling 鈥?manual topic progress is derived from unlocked achievements 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      291 |     });
+      292 |
+    > 293 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      294 |     await waitForShellReady(page);
+      295 |     await page.getByTestId('nav-progress').click();
+      296 |
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:293:16
+
+    Error Context: test-results\ui-achievements-progress-c-8594a--from-unlocked-achievements-chromium\error-context.md
+
+  21) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:332:3 鈥?Achievement progress coupling 鈥?all manual review achievements expose progress rows 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:333:11
+
+    Error Context: test-results\ui-achievements-progress-c-25792-ements-expose-progress-rows-chromium\error-context.md
+
+  22) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:369:3 鈥?Achievement progress coupling 鈥?navigation to manual achievement action does not unlock without completion 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:370:11
+
+    Error Context: test-results\ui-achievements-progress-c-6ffc4-t-unlock-without-completion-chromium\error-context.md
+
+  23) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:383:3 鈥?Achievement progress coupling 鈥?all manual review achievement cards carry segment id 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:384:11
+
+    Error Context: test-results\ui-achievements-progress-c-87d5f-ment-cards-carry-segment-id-chromium\error-context.md
+
+  24) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:421:3 鈥?Achievement progress coupling 鈥?every achievement card is read-only with no action buttons 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      479 |
+      480 | async function resetApp(page: Page) {
+    > 481 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      482 |   await page.evaluate(() => {
+      483 |     window.localStorage.clear();
+      484 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:481:14)
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:422:11
+
+    Error Context: test-results\ui-achievements-progress-c-910ad-only-with-no-action-buttons-chromium\error-context.md
+
+  25) [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:457:3 鈥?Achievement progress coupling 鈥?raw completedLearningSegments evidence does not inflate general progress 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      460 |     });
+      461 |
+    > 462 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      463 |     await waitForShellReady(page);
+      464 |     await page.getByTestId('nav-progress').click();
+      465 |
+        at D:\Chemical-Laboratory\tests\ui\achievements-progress-coupling.spec.ts:462:16
+
+    Error Context: test-results\ui-achievements-progress-c-0c0e9-ot-inflate-general-progress-chromium\error-context.md
+
+  26) [chromium] 鈥?tests\ui\achievements-readonly.spec.ts:4:3 鈥?Achievement read-only regression 鈥?achievement cards do not render action buttons 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      3 | test.describe('Achievement read-only regression', () => {
+      4 |   test('achievement cards do not render action buttons', async ({ page }) => {
+    > 5 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+        |                ^
+      6 |     await page.waitForFunction(() => {
+      7 |       const loader = document.getElementById('global-loader');
+      8 |       return loader?.classList.contains('hidden');
+        at D:\Chemical-Laboratory\tests\ui\achievements-readonly.spec.ts:5:16
+
+    Error Context: test-results\ui-achievements-readonly-A-70faa-o-not-render-action-buttons-chromium\error-context.md
+
+  27) [chromium] 鈥?tests\ui\background-policy.spec.ts:4:3 鈥?Background Policy 鈥?bg canvas stays hidden and shell background stays dark 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      4 |   test('bg canvas stays hidden and shell background stays dark', async ({ page }) => {
+      5 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 6 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+        |                ^
+      7 |     await waitForShellReady(page);
+      8 |
+      9 |     const bgCanvas = page.locator('#bg-canvas');
+        at D:\Chemical-Laboratory\tests\ui\background-policy.spec.ts:6:16
+
+    Error Context: test-results\ui-background-policy-Backg-b5116-shell-background-stays-dark-chromium\error-context.md
+
+  28) [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:23:3 鈥?Experiment completion date contract 鈥?markExperimentCompleted persists completion date and prevents duplicates 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      24 |     const context = await browser.newContext();
+      25 |     const page = await context.newPage();
+    > 26 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      27 |     await waitForAppReady(page);
+      28 |
+      29 |     // Freeze date to test YYYY-MM-DD
+        at D:\Chemical-Laboratory\tests\ui\experiment-completion-date.spec.ts:26:16
+
+    Error Context: test-results\ui-experiment-completion-d-102b0-ate-and-prevents-duplicates-chromium\error-context.md
+
+  29) [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:58:3 鈥?Experiment completion date contract 鈥?legacy experiment completion preserves state without backfilling dates 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      71 |
+      72 |     const page = await context.newPage();
+    > 73 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      74 |     await waitForAppReady(page);
+      75 |
+      76 |     const result = await page.evaluate((key) => {
+        at D:\Chemical-Laboratory\tests\ui\experiment-completion-date.spec.ts:73:16
+
+    Error Context: test-results\ui-experiment-completion-d-25d45-e-without-backfilling-dates-chromium\error-context.md
+
+  30) [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      21 |   test.beforeEach(async ({ page }) => {
+      22 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 23 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      24 |     await waitForAppReady(page);
+      25 |     await clearStoredState(page);
+      26 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\experiment-title-edit.spec.ts:23:16
+
+    Error Context: test-results\ui-experiment-title-edit-e-d607c-s-custom-title-after-reload-chromium\error-context.md
+
+  31) [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports 鈥?desktop 1280x720 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      82 | async function openGames(page: Page, viewport: { width: number; height: number }) {
+      83 |   await page.setViewportSize(viewport);
+    > 84 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |              ^
+      85 |   await waitForShellReady(page);
+      86 |   await page.getByTestId('nav-games').click();
+      87 |
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:84:14)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:24:9
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:23:7
+
+    Error Context: test-results\ui-games-layout-Games-layo-9d368--separated-across-viewports-chromium\error-context.md
+
+  32) [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      82 | async function openGames(page: Page, viewport: { width: number; height: number }) {
+      83 |   await page.setViewportSize(viewport);
+    > 84 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |              ^
+      85 |   await waitForShellReady(page);
+      86 |   await page.getByTestId('nav-games').click();
+      87 |
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:84:14)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:42:5
+
+    Error Context: test-results\ui-games-layout-Games-layo-1570d-s-a-20-question-unique-quiz-chromium\error-context.md
+
+  33) [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      82 | async function openGames(page: Page, viewport: { width: number; height: number }) {
+      83 |   await page.setViewportSize(viewport);
+    > 84 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |              ^
+      85 |   await waitForShellReady(page);
+      86 |   await page.getByTestId('nav-games').click();
+      87 |
+        at openGames (D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:84:14)
+        at D:\Chemical-Laboratory\tests\ui\games-layout.spec.ts:73:5
+
+    Error Context: test-results\ui-games-layout-Games-layo-e74b7-frame-on-desktop-and-mobile-chromium\error-context.md
+
+  34) [chromium] 鈥?tests\ui\lab-3d-simulation.spec.ts:23:5 鈥?Lab 3D simulation UI 鈥?apparatus recognition simulation launches and shows equipment 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      11 |   test.beforeEach(async ({ page }) => {
+      12 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 13 |     await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+         |                ^
+      14 |     await page.evaluate(() => {
+      15 |       window.localStorage.clear();
+      16 |       window.sessionStorage.clear();
+        at D:\Chemical-Laboratory\tests\ui\lab-3d-simulation.spec.ts:13:16
+
+    Error Context: test-results\ui-lab-3d-simulation-Lab-3-b319f-aunches-and-shows-equipment-chromium\error-context.md
+
+  35) [chromium] 鈥?tests\ui\lab-simulation-fallback.spec.ts:28:3 鈥?Lab simulation fallback 鈥?falls back to Canvas 2D when 3D runtime unavailable 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      17 |
+      18 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 19 |     await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+         |                ^
+      20 |     await page.evaluate(() => {
+      21 |       window.localStorage.clear();
+      22 |       window.sessionStorage.clear();
+        at D:\Chemical-Laboratory\tests\ui\lab-simulation-fallback.spec.ts:19:16
+
+    Error Context: test-results\ui-lab-simulation-fallback-99391-when-3D-runtime-unavailable-chromium\error-context.md
+
+  36) [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:57:3 鈥?Lab textbook experiment content 鈥?runtime lab uses explicit textbook experiments 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      45 |     await page.setViewportSize({ width: 1440, height: 900 });
+      46 |     // Navigate to the app first to set the origin, then clear storage
+    > 47 |     await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+         |                ^
+      48 |     await page.evaluate(() => {
+      49 |       window.localStorage.clear();
+      50 |       window.sessionStorage.clear();
+        at D:\Chemical-Laboratory\tests\ui\lab-textbook-experiments.spec.ts:47:16
+
+    Error Context: test-results\ui-lab-textbook-experiment-2a884-plicit-textbook-experiments-chromium\error-context.md
+
+  37) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:8:3 鈥?Learning content modal interaction 鈥?clicking learning card opens modal and does not complete segment 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:9:11
+
+    Error Context: test-results\ui-learning-content-modal--ff743-d-does-not-complete-segment-chromium\error-context.md
+
+  38) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:40:3 鈥?Learning content modal interaction 鈥?closing modal without confirmation leaves segment uncompleted 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:41:11
+
+    Error Context: test-results\ui-learning-content-modal--c86cd--leaves-segment-uncompleted-chromium\error-context.md
+
+  39) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:78:3 鈥?Learning content modal interaction 鈥?modal confirmation completes segment and persists after reload 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:79:11
+
+    Error Context: test-results\ui-learning-content-modal--8e781-t-and-persists-after-reload-chromium\error-context.md
+
+  40) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:132:3 鈥?Learning content modal interaction 鈥?completed lesson can still open modal and read content 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      135 |     });
+      136 |
+    > 137 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      138 |     await waitForShellReady(page);
+      139 |     await page.getByTestId('nav-progress').click();
+      140 |
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:137:16
+
+    Error Context: test-results\ui-learning-content-modal--d48e5-open-modal-and-read-content-chromium\error-context.md
+
+  41) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:160:3 鈥?Learning content modal interaction 鈥?no learning card contains a visible completion button 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:161:11
+
+    Error Context: test-results\ui-learning-content-modal--5d9e5-a-visible-completion-button-chromium\error-context.md
+
+  42) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:177:3 鈥?Learning content modal interaction 鈥?modal content has distinct sections without undefined or null 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:178:11
+
+    Error Context: test-results\ui-learning-content-modal--6450b-s-without-undefined-or-null-chromium\error-context.md
+
+  43) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:207:3 鈥?Learning content modal interaction 鈥?modal escapes unsafe metadata instead of rendering executable HTML 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      220 |     });
+      221 |
+    > 222 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      223 |     await waitForShellReady(page);
+      224 |     await page.getByTestId('nav-progress').click();
+      225 |
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:222:16
+
+    Error Context: test-results\ui-learning-content-modal--398cf-f-rendering-executable-HTML-chromium\error-context.md
+
+  44) [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:250:3 鈥?Learning content modal interaction 鈥?long modal content supports internal scroll 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      277 |
+      278 | async function resetApp(page: Page) {
+    > 279 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      280 |   await page.evaluate(() => {
+      281 |     window.localStorage.clear();
+      282 |     window.sessionStorage.clear();
+        at resetApp (D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:279:14)
+        at D:\Chemical-Laboratory\tests\ui\learning-content-modal.spec.ts:251:11
+
+    Error Context: test-results\ui-learning-content-modal--4faf8-nt-supports-internal-scroll-chromium\error-context.md
+
+  45) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-5ec88-nd-beside-the-period-filter-chromium\error-context.md
+
+  46) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:167:3 鈥?periodic table controls 鈥?multi-select legend chips OR category filters in the grid 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-dada1-ategory-filters-in-the-grid-chromium\error-context.md
+
+  47) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:183:3 鈥?periodic table controls 鈥?deselecting the last category restores the current period-only result set 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-a60e9-rent-period-only-result-set-chromium\error-context.md
+
+  48) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:200:3 鈥?periodic table controls 鈥?combines period and category filters with AND semantics 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-1c4b0--filters-with-AND-semantics-chromium\error-context.md
+
+  49) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:210:3 鈥?periodic table controls 鈥?keyboard activation toggles legend chip state and updates filtering 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-7ebe4-state-and-updates-filtering-chromium\error-context.md
+
+  50) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:223:3 鈥?periodic table controls 鈥?preserves active period and category filters when switching between grid and list views 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-01616-between-grid-and-list-views-chromium\error-context.md
+
+  51) [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:247:3 鈥?periodic table controls 鈥?keeps tablet portrait table controls usable without phone navigation 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      116 |
+      117 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 118 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      119 |     await waitForShellReady(page);
+      120 |   });
+      121 |
+        at D:\Chemical-Laboratory\tests\ui\periodic-table-controls.spec.ts:118:16
+
+    Error Context: test-results\ui-periodic-table-controls-7d4bd-le-without-phone-navigation-chromium\error-context.md
+
+  52) [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:10:3 鈥?Reaction pairing completion 鈥?completes reaction pairing and persists the score 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      60 |   await page.setViewportSize({ width: 1440, height: 900 });
+      61 |   // Clear storage on the app origin, then reload so the app initializes with a clean slate
+    > 62 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |              ^
+      63 |   await page.evaluate(() => {
+      64 |     window.localStorage.clear();
+      65 |     window.sessionStorage.clear();
+        at openReactionGame (D:\Chemical-Laboratory\tests\ui\reaction-game-completion.spec.ts:62:14)
+        at D:\Chemical-Laboratory\tests\ui\reaction-game-completion.spec.ts:11:5
+
+    Error Context: test-results\ui-reaction-game-completio-5be0b-ring-and-persists-the-score-chromium\error-context.md
+
+  53) [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:34:3 鈥?Reaction pairing completion 鈥?rejects incorrect reaction pairing without changing progress 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      60 |   await page.setViewportSize({ width: 1440, height: 900 });
+      61 |   // Clear storage on the app origin, then reload so the app initializes with a clean slate
+    > 62 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |              ^
+      63 |   await page.evaluate(() => {
+      64 |     window.localStorage.clear();
+      65 |     window.sessionStorage.clear();
+        at openReactionGame (D:\Chemical-Laboratory\tests\ui\reaction-game-completion.spec.ts:62:14)
+        at D:\Chemical-Laboratory\tests\ui\reaction-game-completion.spec.ts:35:5
+
+    Error Context: test-results\ui-reaction-game-completio-38a6a-g-without-changing-progress-chromium\error-context.md
+
+  54) [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      43 |   test.beforeEach(async ({ page }) => {
+      44 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 45 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      46 |     await waitForShellReady(page);
+      47 |   });
+      48 |
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:45:16
+
+    Error Context: test-results\ui-route-shells-Route-shel-e43b3--render-their-shell-anchors-chromium\error-context.md
+
+  55) [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      43 |   test.beforeEach(async ({ page }) => {
+      44 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 45 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      46 |     await waitForShellReady(page);
+      47 |   });
+      48 |
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:45:16
+
+    Error Context: test-results\ui-route-shells-Route-shel-92662-ithout-top-navigation-entry-chromium\error-context.md
+
+  56) [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      43 |   test.beforeEach(async ({ page }) => {
+      44 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 45 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      46 |     await waitForShellReady(page);
+      47 |   });
+      48 |
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:45:16
+
+    Error Context: test-results\ui-route-shells-Route-shel-84d88-nt-with-fallback-disclosure-chromium\error-context.md
+
+  57) [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      43 |   test.beforeEach(async ({ page }) => {
+      44 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 45 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      46 |     await waitForShellReady(page);
+      47 |   });
+      48 |
+        at D:\Chemical-Laboratory\tests\ui\route-shells.spec.ts:45:16
+
+    Error Context: test-results\ui-route-shells-Route-shel-b492b-isible-without-phone-chrome-chromium\error-context.md
+
+  58) [chromium] 鈥?tests\ui\settings-reset-rescue.spec.ts:9:3 鈥?settings reset rescue 鈥?clear data resets progress while preserving settings 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      35 |
+      36 |     const page = await context.newPage();
+    > 37 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      38 |     await waitForShellReady(page);
+      39 |
+      40 |     await expect(page.getByTestId('settings-btn')).toBeVisible();
+        at D:\Chemical-Laboratory\tests\ui\settings-reset-rescue.spec.ts:37:16
+
+    Error Context: test-results\ui-settings-reset-rescue-s-e9a60-s-while-preserving-settings-chromium\error-context.md
+
+  59) [chromium] 鈥?tests\ui\settings-reset.spec.ts:52:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      52 |   test('shows requested settings layout and preserves settings while clearing learning data', async ({ page }) => {
+      53 |     await seedStoredState(page);
+    > 54 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      55 |     await page.evaluate(({ key, value }) => {
+      56 |       window.localStorage.setItem(key, JSON.stringify(value));
+      57 |     }, {
+        at D:\Chemical-Laboratory\tests\ui\settings-reset.spec.ts:54:16
+
+    Error Context: test-results\ui-settings-reset-Settings-aff26-hile-clearing-learning-data-chromium\error-context.md
+
+  60) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:16:3 鈥?Shared game feedback overlay 鈥?helper renders a single non-blocking overlay and removes it after timeout 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:17:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-e6ccb-nd-removes-it-after-timeout-chromium\error-context.md
+
+  61) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:29:3 鈥?Shared game feedback overlay 鈥?drag game shows correct and incorrect overlays 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at openGames (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:138:3)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:30:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-4633b-rect-and-incorrect-overlays-chromium\error-context.md
+
+  62) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:43:3 鈥?Shared game feedback overlay 鈥?memory game shows correct and incorrect overlays 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at openGames (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:138:3)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:44:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-38f53-rect-and-incorrect-overlays-chromium\error-context.md
+
+  63) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:59:3 鈥?Shared game feedback overlay 鈥?reaction game shows correct and incorrect overlays 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at openGames (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:138:3)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:60:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-09bd0-rect-and-incorrect-overlays-chromium\error-context.md
+
+  64) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:78:3 鈥?Shared game feedback overlay 鈥?full quiz shows both correct and incorrect overlays 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at openGames (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:138:3)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:79:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-4b964-rect-and-incorrect-overlays-chromium\error-context.md
+
+  65) [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:104:3 鈥?Shared game feedback overlay 鈥?quick quiz and collector interactions do not create the shared overlay 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      131 | async function openApp(page: Page) {
+      132 |   await page.setViewportSize({ width: 1440, height: 900 });
+    > 133 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      134 |   await waitForAppReady(page);
+      135 | }
+      136 |
+        at openApp (D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:133:14)
+        at D:\Chemical-Laboratory\tests\ui\shared-game-feedback-overlay.spec.ts:105:5
+
+    Error Context: test-results\ui-shared-game-feedback-ov-51fca-t-create-the-shared-overlay-chromium\error-context.md
+
+  66) [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      13 |     const page = await context.newPage();
+      14 |
+    > 15 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      16 |     await page.evaluate(({ key, value }) => {
+      17 |       window.localStorage.setItem(key, JSON.stringify(value));
+      18 |     }, { key: STORAGE_KEY, value: await readFixture('storage-legacy-state.json') });
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:15:16
+
+    Error Context: test-results\ui-storage-migration-Stora-2850b--the-completed-segment-once-chromium\error-context.md
+
+  67) [chromium] 鈥?tests\ui\storage-migration.spec.ts:69:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      324 |
+      325 |   const page = await context.newPage();
+    > 326 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      327 |   await waitForAppReady(page);
+      328 |
+      329 |   const result = await readStorageState(page);
+        at runSeededStorageCase (D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:326:14)
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:72:20
+
+    Error Context: test-results\ui-storage-migration-Stora-d9690-rvives-schema-upgrade-to-v3-chromium\error-context.md
+
+  68) [chromium] 鈥?tests\ui\storage-migration.spec.ts:84:3 鈥?Storage migration compatibility 鈥?experiment completion date uses deterministic local date and persists once 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      106 |
+      107 |     const page = await context.newPage();
+    > 108 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      109 |     await waitForAppReady(page);
+      110 |
+      111 |     const mutationResult = await page.evaluate(async (key) => {
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:108:16
+
+    Error Context: test-results\ui-storage-migration-Stora-e619a-ocal-date-and-persists-once-chromium\error-context.md
+
+  69) [chromium] 鈥?tests\ui\storage-migration.spec.ts:160:3 鈥?Storage migration compatibility 鈥?experiment completion date migration keeps legacy completions without fabricating dates and drops invalid dates 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      324 |
+      325 |   const page = await context.newPage();
+    > 326 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      327 |   await waitForAppReady(page);
+      328 |
+      329 |   const result = await readStorageState(page);
+        at runSeededStorageCase (D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:326:14)
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:161:20
+
+    Error Context: test-results\ui-storage-migration-Stora-79ddb-tes-and-drops-invalid-dates-chromium\error-context.md
+
+  70) [chromium] 鈥?tests\ui\storage-migration.spec.ts:184:3 鈥?Storage migration compatibility 鈥?invalid learning segment ids are ignored during migration 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      324 |
+      325 |   const page = await context.newPage();
+    > 326 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      327 |   await waitForAppReady(page);
+      328 |
+      329 |   const result = await readStorageState(page);
+        at runSeededStorageCase (D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:326:14)
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:185:20
+
+    Error Context: test-results\ui-storage-migration-Stora-ddb6a-re-ignored-during-migration-chromium\error-context.md
+
+  71) [chromium] 鈥?tests\ui\storage-migration.spec.ts:212:3 鈥?Storage migration compatibility 鈥?quiz score writes include learner-state contract fields 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      214 |     const page = await context.newPage();
+      215 |
+    > 216 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |                ^
+      217 |     await waitForAppReady(page);
+      218 |
+      219 |     const result = await page.evaluate(async (key) => {
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:216:16
+
+    Error Context: test-results\ui-storage-migration-Stora-73bfb-arner-state-contract-fields-chromium\error-context.md
+
+  72) [chromium] 鈥?tests\ui\storage-migration.spec.ts:269:3 鈥?Storage migration compatibility 鈥?legacy quiz score fields normalize to learner-state contract fields 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      324 |
+      325 |   const page = await context.newPage();
+    > 326 |   await page.goto('/', { waitUntil: 'domcontentloaded' });
+          |              ^
+      327 |   await waitForAppReady(page);
+      328 |
+      329 |   const result = await readStorageState(page);
+        at runSeededStorageCase (D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:326:14)
+        at D:\Chemical-Laboratory\tests\ui\storage-migration.spec.ts:270:20
+
+    Error Context: test-results\ui-storage-migration-Stora-e5e95-arner-state-contract-fields-chromium\error-context.md
+
+  73) [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:15:3 鈥?story media overrides 鈥?starts with no story media overrides 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+       6 |   test.beforeEach(async ({ page }) => {
+       7 |     await page.setViewportSize({ width: 1440, height: 900 });
+    >  8 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+       9 |     await waitForAppReady(page);
+      10 |     await clearStoredState(page);
+      11 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\story-media-overrides.spec.ts:8:16
+
+    Error Context: test-results\ui-story-media-overrides-s-896ff-th-no-story-media-overrides-chromium\error-context.md
+
+  74) [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:30:3 鈥?story media overrides 鈥?stores a discovery override by atomic number and side 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+       6 |   test.beforeEach(async ({ page }) => {
+       7 |     await page.setViewportSize({ width: 1440, height: 900 });
+    >  8 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+       9 |     await waitForAppReady(page);
+      10 |     await clearStoredState(page);
+      11 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\story-media-overrides.spec.ts:8:16
+
+    Error Context: test-results\ui-story-media-overrides-s-9d60c-e-by-atomic-number-and-side-chromium\error-context.md
+
+  75) [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:61:3 鈥?story media overrides 鈥?clears only the requested side 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+       6 |   test.beforeEach(async ({ page }) => {
+       7 |     await page.setViewportSize({ width: 1440, height: 900 });
+    >  8 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+       9 |     await waitForAppReady(page);
+      10 |     await clearStoredState(page);
+      11 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\story-media-overrides.spec.ts:8:16
+
+    Error Context: test-results\ui-story-media-overrides-s-a5c1a-ars-only-the-requested-side-chromium\error-context.md
+
+  76) [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:94:3 鈥?story media overrides 鈥?drops invalid sides and unsafe src values during migration 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+       6 |   test.beforeEach(async ({ page }) => {
+       7 |     await page.setViewportSize({ width: 1440, height: 900 });
+    >  8 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+       9 |     await waitForAppReady(page);
+      10 |     await clearStoredState(page);
+      11 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\story-media-overrides.spec.ts:8:16
+
+    Error Context: test-results\ui-story-media-overrides-s-cccc5-src-values-during-migration-chromium\error-context.md
+
+  77) [chromium] 鈥?tests\ui\story-media-upload.spec.ts:17:3 鈥?story media upload modal 鈥?story media card opens an upload modal and saves a local image override 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+       8 |   test.beforeEach(async ({ page }) => {
+       9 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 10 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+         |                ^
+      11 |     await waitForAppReady(page);
+      12 |     await clearStoredState(page);
+      13 |     await page.reload({ waitUntil: 'domcontentloaded' });
+        at D:\Chemical-Laboratory\tests\ui\story-media-upload.spec.ts:10:16
+
+    Error Context: test-results\ui-story-media-upload-stor-427d6-aves-a-local-image-override-chromium\error-context.md
+
+  78) [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:10:3 鈥?Visual polish regression 鈥?keeps the final dark-shell contract on key routes 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      4 |   test.beforeEach(async ({ page }) => {
+      5 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 6 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+        |                ^
+      7 |     await waitForShellReady(page);
+      8 |   });
+      9 |
+        at D:\Chemical-Laboratory\tests\ui\visual-polish-regression.spec.ts:6:16
+
+    Error Context: test-results\ui-visual-polish-regressio-5773f-hell-contract-on-key-routes-chromium\error-context.md
+
+  79) [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:53:3 鈥?Visual polish regression 鈥?keeps the shell understandable when reduced motion is requested 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/
+    Call log:
+    [2m  - navigating to "http://127.0.0.1:4173/", waiting until "domcontentloaded"[22m
+
+
+      4 |   test.beforeEach(async ({ page }) => {
+      5 |     await page.setViewportSize({ width: 1440, height: 900 });
+    > 6 |     await page.goto('/', { waitUntil: 'domcontentloaded' });
+        |                ^
+      7 |     await waitForShellReady(page);
+      8 |   });
+      9 |
+        at D:\Chemical-Laboratory\tests\ui\visual-polish-regression.spec.ts:6:16
+
+    Error Context: test-results\ui-visual-polish-regressio-86ebb-reduced-motion-is-requested-chromium\error-context.md
+
+  79 failed
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:43:3 鈥?KaTeX chemistry notation rendering 鈥?lab equation card renders KaTeX 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:73:3 鈥?KaTeX chemistry notation rendering 鈥?reaction game renders multi-product formula labels without changing matching 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:148:3 鈥?KaTeX chemistry notation rendering 鈥?no KaTeX console errors 
+    [chromium] 鈥?tests\content\chem-notation.spec.ts:171:3 鈥?KaTeX chemistry notation rendering 鈥?desktop and mobile notation layouts do not overflow 
+    [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts 
+    [chromium] 鈥?tests\content\pep-learning-tabs.spec.ts:32:3 鈥?PEP Learning Tabs 鈥?瀛︿範 page renders eight textbook tabs with non-empty cards 
+    [chromium] 鈥?tests\shell\content-data-smoke.spec.ts:33:3 鈥?Content Data Smoke 鈥?lab flow opens related experiment content for the selected element 
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:262:3 鈥?Bottom Widget Contract 鈥?compare preview has top-right 瀵规瘮 action and no old CTA or count badge 
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:286:3 鈥?Bottom Widget Contract 鈥?bottom widgets are transparent with no top border 
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:307:3 鈥?Bottom Widget Contract 鈥?no vertical overflow at 1366x768 
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:314:3 鈥?Bottom Widget Contract 鈥?compare modal fits three elements side-by-side without panel scrollbars 
+    [chromium] 鈥?tests\shell\home-shell.spec.ts:354:3 鈥?Bottom Widget Contract 鈥?compare state edge case does not restore old count badge 
+    [chromium] 鈥?tests\shell\loader-animation.spec.ts:4:3 鈥?Global Loader Animation 鈥?Lottie animation should advance frames during loading 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:17:3 鈥?Achievement progress coupling 鈥?manual review helper extracts a trimmed single curriculum tag 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:31:3 鈥?Achievement progress coupling 鈥?manual review condition rejects invalid metadata and unlocks from completed segment evidence 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:77:3 鈥?Achievement progress coupling 鈥?manual textbook achievement requires explicit completion 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:120:3 鈥?Achievement progress coupling 鈥?modal confirmation unlocks achievement and syncs progress 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:184:3 鈥?Achievement progress coupling 鈥?progress escapes persisted activity text 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:230:3 鈥?Achievement progress coupling 鈥?completed learning segment persists after reload 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:288:3 鈥?Achievement progress coupling 鈥?manual topic progress is derived from unlocked achievements 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:332:3 鈥?Achievement progress coupling 鈥?all manual review achievements expose progress rows 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:369:3 鈥?Achievement progress coupling 鈥?navigation to manual achievement action does not unlock without completion 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:383:3 鈥?Achievement progress coupling 鈥?all manual review achievement cards carry segment id 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:421:3 鈥?Achievement progress coupling 鈥?every achievement card is read-only with no action buttons 
+    [chromium] 鈥?tests\ui\achievements-progress-coupling.spec.ts:457:3 鈥?Achievement progress coupling 鈥?raw completedLearningSegments evidence does not inflate general progress 
+    [chromium] 鈥?tests\ui\achievements-readonly.spec.ts:4:3 鈥?Achievement read-only regression 鈥?achievement cards do not render action buttons 
+    [chromium] 鈥?tests\ui\background-policy.spec.ts:4:3 鈥?Background Policy 鈥?bg canvas stays hidden and shell background stays dark 
+    [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:23:3 鈥?Experiment completion date contract 鈥?markExperimentCompleted persists completion date and prevents duplicates 
+    [chromium] 鈥?tests\ui\experiment-completion-date.spec.ts:58:3 鈥?Experiment completion date contract 鈥?legacy experiment completion preserves state without backfilling dates 
+    [chromium] 鈥?tests\ui\experiment-title-edit.spec.ts:31:3 鈥?experiment detail editable title 鈥?saves and persists custom title after reload 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:21:3 鈥?Games layout contract 鈥?landing layout keeps primary games and support cards separated across viewports 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:41:3 鈥?Games layout contract 鈥?full quiz support card stays unique and opens a 20-question unique quiz 
+    [chromium] 鈥?tests\ui\games-layout.spec.ts:72:3 鈥?Games layout contract 鈥?each mini-game launches the shared active-game frame on desktop and mobile 
+    [chromium] 鈥?tests\ui\lab-3d-simulation.spec.ts:23:5 鈥?Lab 3D simulation UI 鈥?apparatus recognition simulation launches and shows equipment 
+    [chromium] 鈥?tests\ui\lab-simulation-fallback.spec.ts:28:3 鈥?Lab simulation fallback 鈥?falls back to Canvas 2D when 3D runtime unavailable 
+    [chromium] 鈥?tests\ui\lab-textbook-experiments.spec.ts:57:3 鈥?Lab textbook experiment content 鈥?runtime lab uses explicit textbook experiments 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:8:3 鈥?Learning content modal interaction 鈥?clicking learning card opens modal and does not complete segment 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:40:3 鈥?Learning content modal interaction 鈥?closing modal without confirmation leaves segment uncompleted 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:78:3 鈥?Learning content modal interaction 鈥?modal confirmation completes segment and persists after reload 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:132:3 鈥?Learning content modal interaction 鈥?completed lesson can still open modal and read content 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:160:3 鈥?Learning content modal interaction 鈥?no learning card contains a visible completion button 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:177:3 鈥?Learning content modal interaction 鈥?modal content has distinct sections without undefined or null 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:207:3 鈥?Learning content modal interaction 鈥?modal escapes unsafe metadata instead of rendering executable HTML 
+    [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:250:3 鈥?Learning content modal interaction 鈥?long modal content supports internal scroll 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:127:3 鈥?periodic table controls 鈥?keeps removed controls absent and positions the legend beside the period filter 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:167:3 鈥?periodic table controls 鈥?multi-select legend chips OR category filters in the grid 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:183:3 鈥?periodic table controls 鈥?deselecting the last category restores the current period-only result set 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:200:3 鈥?periodic table controls 鈥?combines period and category filters with AND semantics 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:210:3 鈥?periodic table controls 鈥?keyboard activation toggles legend chip state and updates filtering 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:223:3 鈥?periodic table controls 鈥?preserves active period and category filters when switching between grid and list views 
+    [chromium] 鈥?tests\ui\periodic-table-controls.spec.ts:247:3 鈥?periodic table controls 鈥?keeps tablet portrait table controls usable without phone navigation 
+    [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:10:3 鈥?Reaction pairing completion 鈥?completes reaction pairing and persists the score 
+    [chromium] 鈥?tests\ui\reaction-game-completion.spec.ts:34:3 鈥?Reaction pairing completion 鈥?rejects incorrect reaction pairing without changing progress 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:49:3 鈥?Route shell rendering sanity 鈥?hash routes activate and render their shell anchors 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:64:3 鈥?Route shell rendering sanity 鈥?direct compare route renders compare shell without top navigation entry 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:73:3 鈥?Route shell rendering sanity 鈥?story route renders media cards for the selected element with fallback disclosure 
+    [chromium] 鈥?tests\ui\route-shells.spec.ts:86:3 鈥?Route shell rendering sanity 鈥?tablet portrait routes keep primary navigation visible without phone chrome 
+    [chromium] 鈥?tests\ui\settings-reset-rescue.spec.ts:9:3 鈥?settings reset rescue 鈥?clear data resets progress while preserving settings 
+    [chromium] 鈥?tests\ui\settings-reset.spec.ts:52:3 鈥?Settings data reset flow 鈥?shows requested settings layout and preserves settings while clearing learning data 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:16:3 鈥?Shared game feedback overlay 鈥?helper renders a single non-blocking overlay and removes it after timeout 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:29:3 鈥?Shared game feedback overlay 鈥?drag game shows correct and incorrect overlays 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:43:3 鈥?Shared game feedback overlay 鈥?memory game shows correct and incorrect overlays 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:59:3 鈥?Shared game feedback overlay 鈥?reaction game shows correct and incorrect overlays 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:78:3 鈥?Shared game feedback overlay 鈥?full quiz shows both correct and incorrect overlays 
+    [chromium] 鈥?tests\ui\shared-game-feedback-overlay.spec.ts:104:3 鈥?Shared game feedback overlay 鈥?quick quiz and collector interactions do not create the shared overlay 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:11:3 鈥?Storage migration compatibility 鈥?markLearningSegmentCompleted trims ids and persists the completed segment once 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:69:3 鈥?Storage migration compatibility 鈥?old localStorage state survives schema upgrade to v3 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:84:3 鈥?Storage migration compatibility 鈥?experiment completion date uses deterministic local date and persists once 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:160:3 鈥?Storage migration compatibility 鈥?experiment completion date migration keeps legacy completions without fabricating dates and drops invalid dates 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:184:3 鈥?Storage migration compatibility 鈥?invalid learning segment ids are ignored during migration 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:212:3 鈥?Storage migration compatibility 鈥?quiz score writes include learner-state contract fields 
+    [chromium] 鈥?tests\ui\storage-migration.spec.ts:269:3 鈥?Storage migration compatibility 鈥?legacy quiz score fields normalize to learner-state contract fields 
+    [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:15:3 鈥?story media overrides 鈥?starts with no story media overrides 
+    [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:30:3 鈥?story media overrides 鈥?stores a discovery override by atomic number and side 
+    [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:61:3 鈥?story media overrides 鈥?clears only the requested side 
+    [chromium] 鈥?tests\ui\story-media-overrides.spec.ts:94:3 鈥?story media overrides 鈥?drops invalid sides and unsafe src values during migration 
+    [chromium] 鈥?tests\ui\story-media-upload.spec.ts:17:3 鈥?story media upload modal 鈥?story media card opens an upload modal and saves a local image override 
+    [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:10:3 鈥?Visual polish regression 鈥?keeps the final dark-shell contract on key routes 
+    [chromium] 鈥?tests\ui\visual-polish-regression.spec.ts:53:3 鈥?Visual polish regression 鈥?keeps the shell understandable when reduced motion is requested 
+  16 did not run
+  25 passed (9.1m)
+EXIT_CODE: 1
+END: 2026-05-27T22:34:40.9425236+08:00
+
+## root cause and fix for targeted Playwright strict-mode failure
+ROOT_CAUSE: index.html rendered an empty legacy progress tab placeholder with class progress-textbook-tabs and data-testid textbook-tabs before the populated tab bar from src/modules/progress.js renderManualLearningSection. Playwright strict mode saw two progress-textbook-tabs nodes.
+FIX: Removed only the empty legacy placeholder from index.html; kept the populated runtime tab bar and strict test assertions unchanged.
+DIAGNOSTICS: lsp_diagnostics index.html reported pre-existing Biome lint/a11y/useButtonType errors on unchanged buttons; no syntax error from the placeholder removal.
+
+## corrected targeted Playwright pep learning tabs chromium after placeholder removal
+COMMAND: npx playwright test tests/content/pep-learning-tabs.spec.js --project=chromium
+START: 2026-05-27T22:51:47.9914167+08:00
+OUTPUT:
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts (24.4s)
+
+
+  1) [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 8[39m
+    [31m+ Received  + 8[39m
+
+    [2m  Array [[22m
+    [32m-   "鍏勾绾峰叏鍐?,[39m
+    [32m-   "涔濆勾绾蜂笂鍐?,[39m
+    [32m-   "涔濆勾绾蜂笅鍐?,[39m
+    [32m-   "楂樹竴/10骞寸骇路蹇呬慨绗竴鍐?,[39m
+    [32m-   "楂樹竴/10骞寸骇路蹇呬慨绗簩鍐?,[39m
+    [32m-   "楂樹簩/11骞寸骇路閫夋嫨鎬у繀淇竴路鍙嶅簲鍘熺悊",[39m
+    [32m-   "楂樹簩/11骞寸骇路閫夋嫨鎬у繀淇簩路鐗╄川缁撴瀯涓庢€ц川",[39m
+    [32m-   "楂樹笁/12骞寸骇路鏈夋満鍩虹",[39m
+    [31m+   "鍏勾绾峰叏鍐?347",[39m
+    [31m+   "涔濆勾绾蜂笂鍐?340",[39m
+    [31m+   "涔濆勾绾蜂笅鍐?222",[39m
+    [31m+   "楂樹竴/10骞寸骇路蹇呬慨绗竴鍐?213",[39m
+    [31m+   "楂樹竴/10骞寸骇路蹇呬慨绗簩鍐?263",[39m
+    [31m+   "楂樹簩/11骞寸骇路閫夋嫨鎬у繀淇竴路鍙嶅簲鍘熺悊 198",[39m
+    [31m+   "楂樹簩/11骞寸骇路閫夋嫨鎬у繀淇簩路鐗╄川缁撴瀯涓庢€ц川 146",[39m
+    [31m+   "楂樹笁/12骞寸骇路鏈夋満鍩虹 280",[39m
+    [2m  ][22m
+
+       99 |
+      100 |     // Assert exact label order and text via strict array equality
+    > 101 |     expect(cleanLabels).toEqual(EXPECTED_TAB_LABELS);
+          |                         ^
+      102 |
+      103 |     // Assert each tab label does not contain banned terms
+      104 |     for (const label of cleanLabels) {
+        at D:\Chemical-Laboratory\tests\content\pep-learning-tabs.spec.js:101:25
+
+    Error Context: test-results\content-pep-learning-tabs--4e22b-els-and-correct-card-counts-chromium\error-context.md
+
+  1 failed
+    [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts
+EXIT_CODE: 1
+END: 2026-05-27T22:52:19.6354879+08:00
+
+## second fix for targeted Playwright label extraction after count badges
+ROOT_CAUSE: after removing the duplicate placeholder, strict label equality still failed because allTextContents on each tab button included the visible textbook-tab-count badge text.
+FIX: Updated tests/content/pep-learning-tabs.spec.js to clone each tab button, remove only .textbook-tab-count from the clone, and compare the remaining label text with EXPECTED_TAB_LABELS. Exact order/labels, exact PEP counts, positive card counts, and page/console error assertions remain.
+DIAGNOSTICS: lsp_diagnostics tests/content/pep-learning-tabs.spec.js reported no diagnostics. lsp_diagnostics index.html still reports pre-existing Biome lint/a11y/useButtonType errors on unchanged buttons.
+
+## corrected targeted Playwright pep learning tabs chromium after label extraction fix
+COMMAND: npx playwright test tests/content/pep-learning-tabs.spec.js --project=chromium
+START: 2026-05-27T22:54:23.4044146+08:00
+OUTPUT:
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\content\pep-learning-tabs.spec.js:70:3 鈥?PEP Learning Tabs 鈥?renders exactly eight textbook tabs with clean Chinese labels and correct card counts (22.2s)
+
+  1 passed (25.3s)
+EXIT_CODE: 0
+END: 2026-05-27T22:54:50.9923766+08:00
+
+## post-fix validate all safe
+COMMAND: npm run validate:all:safe
+START: 2026-05-27T22:55:55.8929629+08:00
+OUTPUT:
+
+> element-explorer-kids@1.0.0 validate:all:safe
+> npm run validate:elements && npm run validate:supporting && npm run validate:spectral && npm run validate:curriculum && npm run validate:textbook-assets && npm run validate:textbook-runtime-boundary && npm run validate:textbook-workflow -- --all-reviewed && node scripts/audit-business-data-imports.mjs && npm run build
+
+
+> element-explorer-kids@1.0.0 validate:elements
+> node scripts/validate-elements.mjs
+
+鍏冪礌鏁版嵁鏍￠獙閫氳繃锛氬叡 118 涓厓绱狅紝鍘熷瓙搴忔暟涓庣鍙峰潎鍞竴銆?
+> element-explorer-kids@1.0.0 validate:supporting
+> node scripts/validate-supporting-data.mjs
+
+鏀寔鏁版嵁鏍￠獙閫氳繃锛?06 閬撻銆?44 涓弽搴斻€?024 涓垚灏便€?015 涓涔犻樁娈点€?鍙嶅簲閰嶅娓告垙鍐呭鏍￠獙閫氳繃锛?28 涓彲鐢ㄥ弽搴斻€?璇剧▼寮曠敤鏍￠獙閫氳繃锛? 涓彲鐢ㄦ爣绛俱€? 涓毦搴︽。銆?208 涓敮鎸佹暟鎹紩鐢ㄣ€?鏁欐潗鏉ユ簮瀹℃牳鏍￠獙閫氳繃锛?199 涓?reviewed source references銆?娓告垙鍏冩暟鎹牎楠岄€氳繃锛歞rag, memory, reaction, collector銆?
+> element-explorer-kids@1.0.0 validate:spectral
+> node scripts/validate-spectral-lines.mjs
+
+鍏夎氨绾挎暟鎹牎楠岄€氳繃锛氬叡 118 涓厓绱狅紝娉㈤暱鑼冨洿 380-780 nm銆?
+> element-explorer-kids@1.0.0 validate:curriculum
+> node scripts/validate-curriculum.mjs
+
+curriculumTags: valid
+difficultyBands: valid
+prerequisites: acyclic
+experimentUnlocks: valid
+gameChallengeRules: valid
+
+> element-explorer-kids@1.0.0 validate:textbook-assets
+> node scripts/validate-textbook-assets.mjs
+
+markdownImages: valid (1134 links checked)
+manifestImagePaths: valid (5 assets checked)
+assetReviewStatus: valid (3 runtime references checked)
+
+> element-explorer-kids@1.0.0 validate:textbook-runtime-boundary
+> node scripts/textbook/validate-runtime-boundary.mjs && node scripts/textbook/validate-runtime-integrity.mjs
+
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/lab-sim/apparatus/alcohol-burner.js
+checked: src/lab-sim/apparatus/beaker.js
+checked: src/lab-sim/apparatus/dropper.js
+checked: src/lab-sim/apparatus/funnel.js
+checked: src/lab-sim/apparatus/gas-jar.js
+checked: src/lab-sim/apparatus/glass-rod.js
+checked: src/lab-sim/apparatus/graduated-cylinder.js
+checked: src/lab-sim/apparatus/index.js
+checked: src/lab-sim/apparatus/interaction.js
+checked: src/lab-sim/apparatus/iron-stand.js
+checked: src/lab-sim/apparatus/metadata.js
+checked: src/lab-sim/apparatus/safety-shield.js
+checked: src/lab-sim/apparatus/test-tube.js
+checked: src/lab-sim/apparatus/thermometer.js
+checked: src/lab-sim/apparatus/tubing.js
+checked: src/lab-sim/experiments/apparatus-recognition.js
+checked: src/lab-sim/experiments/sodium-water.js
+checked: src/lab-sim/parameters/engine.js
+checked: src/lab-sim/parameters/ui.js
+checked: src/lab-sim/phenomena/bubbles.js
+checked: src/lab-sim/phenomena/heat-glow.js
+checked: src/lab-sim/phenomena/surface-motion.js
+checked: src/lab-sim/registry.js
+checked: src/lab-sim/runtime/controls.js
+checked: src/lab-sim/runtime/index.js
+checked: src/lab-sim/runtime/loop.js
+checked: src/lab-sim/runtime/renderer.js
+checked: src/lab-sim/runtime/scene.js
+checked: src/lab-sim/schema.js
+checked: src/lab-sim/substances/gas.js
+checked: src/lab-sim/substances/liquid.js
+checked: src/lab-sim/substances/solid.js
+checked: src/lab-sim/utils/disposal.js
+checked: src/lab-sim/utils/performance.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/gameFeedbackOverlay.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Textbook runtime integrity valid
+checked: src/data/elements.json
+checked: src/data/quizData.json
+checked: src/data/learningPath.json
+warning: Bundle size warning: dist/assets/index-BOupo6PZ.js is 12584 KiB; run npm run build for the current Vite report.
+checked: src/data/reactions.json
+checked: src/data/labExperiments.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+
+> element-explorer-kids@1.0.0 validate:textbook-workflow
+> node scripts/textbook/validate-workflow.mjs --all-reviewed
+
+Running validate:textbook-promotion-manifest
+Promotion manifest valid: all-reviewed
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json entries=1009
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json entries=695
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json entries=767
+reviewed non-empty: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json entries=1027
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json entries=833
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json entries=739
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json entries=793
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json entries=436
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade9-2024-vol2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-g12-selective-3-organic-2019/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019
+checked: src/data/textbookIngestion/reviewed/rj-chemistry-grade8-54-2024-full/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-2
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g11-selective-2/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2
+Running validate:textbook-runtime-boundary
+Textbook runtime boundary valid
+checked: src/data/achievementsData.js
+checked: src/data/contentMeta.js
+checked: src/data/curriculum.js
+checked: src/data/elements.js
+checked: src/data/index.js
+checked: src/data/learningPath.js
+checked: src/data/quizData.js
+checked: src/data/reactions.js
+checked: src/data/textbookAssets.js
+checked: src/data/textbookPilotContent.js
+checked: src/lab-sim/apparatus/alcohol-burner.js
+checked: src/lab-sim/apparatus/beaker.js
+checked: src/lab-sim/apparatus/dropper.js
+checked: src/lab-sim/apparatus/funnel.js
+checked: src/lab-sim/apparatus/gas-jar.js
+checked: src/lab-sim/apparatus/glass-rod.js
+checked: src/lab-sim/apparatus/graduated-cylinder.js
+checked: src/lab-sim/apparatus/index.js
+checked: src/lab-sim/apparatus/interaction.js
+checked: src/lab-sim/apparatus/iron-stand.js
+checked: src/lab-sim/apparatus/metadata.js
+checked: src/lab-sim/apparatus/safety-shield.js
+checked: src/lab-sim/apparatus/test-tube.js
+checked: src/lab-sim/apparatus/thermometer.js
+checked: src/lab-sim/apparatus/tubing.js
+checked: src/lab-sim/experiments/apparatus-recognition.js
+checked: src/lab-sim/experiments/sodium-water.js
+checked: src/lab-sim/parameters/engine.js
+checked: src/lab-sim/parameters/ui.js
+checked: src/lab-sim/phenomena/bubbles.js
+checked: src/lab-sim/phenomena/heat-glow.js
+checked: src/lab-sim/phenomena/surface-motion.js
+checked: src/lab-sim/registry.js
+checked: src/lab-sim/runtime/controls.js
+checked: src/lab-sim/runtime/index.js
+checked: src/lab-sim/runtime/loop.js
+checked: src/lab-sim/runtime/renderer.js
+checked: src/lab-sim/runtime/scene.js
+checked: src/lab-sim/schema.js
+checked: src/lab-sim/substances/gas.js
+checked: src/lab-sim/substances/liquid.js
+checked: src/lab-sim/substances/solid.js
+checked: src/lab-sim/utils/disposal.js
+checked: src/lab-sim/utils/performance.js
+checked: src/main.js
+checked: src/modules/achievements.js
+checked: src/modules/chemNotation.js
+checked: src/modules/compare.js
+checked: src/modules/detailPanel.js
+checked: src/modules/filters.js
+checked: src/modules/gameFeedbackOverlay.js
+checked: src/modules/games.js
+checked: src/modules/homeModules.js
+checked: src/modules/lab.js
+checked: src/modules/progress.js
+checked: src/modules/quiz.js
+checked: src/modules/renderTable.js
+checked: src/modules/router.js
+checked: src/modules/storage.js
+checked: src/modules/storyMode.js
+checked: src/modules/timeline.js
+checked: src/three/electronModel.js
+checked: src/three/elementEnergy.js
+checked: src/three/particles.js
+checked: src/three/scene.js
+checked: src/data/reactions.json
+checked: src/data/textbookIngestion/generated
+checked: src/data/textbookIngestion/reviewed
+Running validate:textbook-runtime-integrity
+Textbook runtime integrity valid
+checked: src/data/elements.json
+warning: Bundle size warning: dist/assets/index-BOupo6PZ.js is 12584 KiB; run npm run build for the current Vite report.
+checked: src/data/quizData.json
+checked: src/data/learningPath.json
+checked: src/data/reactions.json
+checked: src/data/labExperiments.json
+checked: src/data/achievementsData.json
+checked: src/data/curriculum.js
+checked: src/data/contentMeta.js
+Textbook workflow valid: all-reviewed
+涓氬姟妯″潡鏁版嵁瀵煎叆瀹¤閫氳繃锛氬凡妫€鏌?17 涓叆鍙?妯″潡鏂囦欢銆?
+> element-explorer-kids@1.0.0 build
+> vite build
+
+[36mvite v6.4.2 [32mbuilding for production...[36m[39m
+transforming...
+[32m鉁?[39m 1764 modules transformed.
+node_modules/lottie-web/build/player/lottie.js (14422:32): Use of eval in "node_modules/lottie-web/build/player/lottie.js" is strongly discouraged as it poses security risks and may cause issues with minification.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-gV2CO0n9.woff2        [39m[1m[2m     3.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-CTq5MqoE.woff         [39m[1m[2m     4.42 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-Dl5lxZxV.woff2        [39m[1m[2m     4.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-Dy4dx90m.woff2        [39m[1m[2m     5.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-mCD8mA8B.woff2        [39m[1m[2m     5.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-BF-4gkZK.woff         [39m[1m[2m     5.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-oD1tc_U0.woff         [39m[1m[2m     6.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-C195tn64.woff         [39m[1m[2m     6.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2  [39m[1m[2m     6.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2     [39m[1m[2m     6.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size3-Regular-DgpXs0kz.ttf          [39m[1m[2m     7.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff   [39m[1m[2m     7.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff      [39m[1m[2m     7.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-D3wIWfF6.woff2       [39m[1m[2m     9.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2    [39m[1m[2m    10.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size4-Regular-DWFBv043.ttf          [39m[1m[2m    10.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-D5yQViql.woff        [39m[1m[2m    10.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2      [39m[1m[2m    11.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2         [39m[1m[2m    11.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size2-Regular-B7gKUWhC.ttf          [39m[1m[2m    11.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2     [39m[1m[2m    12.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2       [39m[1m[2m    12.22 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Size1-Regular-Dbsnue_I.ttf          [39m[1m[2m    12.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff     [39m[1m[2m    12.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf    [39m[1m[2m    12.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf       [39m[1m[2m    12.37 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff       [39m[1m[2m    13.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-BsDP51OF.woff          [39m[1m[2m    13.30 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2   [39m[1m[2m    13.57 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-DN2j7dab.woff      [39m[1m[2m    14.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-DbIhKOiC.woff        [39m[1m[2m    14.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-C0xS9mPB.woff    [39m[1m[2m    16.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2      [39m[1m[2m    16.40 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-t53AETM-.woff2          [39m[1m[2m    16.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Script-Regular-C5JkGWo-.ttf         [39m[1m[2m    16.65 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2      [39m[1m[2m    16.78 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-NWA7e6Wa.woff2          [39m[1m[2m    16.99 kB[22m[1m[22m
+[2mdist/[22m[32mindex.html                                       [39m[1m[2m    17.46 kB[22m[1m[22m[2m 鈹?gzip:     4.15 kB[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff       [39m[1m[2m    18.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-DA0__PXp.woff           [39m[1m[2m    18.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-SpSLRI95.woff       [39m[1m[2m    19.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf      [39m[1m[2m    19.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Regular-CB_wures.ttf        [39m[1m[2m    19.57 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Fraktur-Bold-BdnERNNW.ttf           [39m[1m[2m    19.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-BMLOBm91.woff           [39m[1m[2m    19.68 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf       [39m[1m[2m    22.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_SansSerif-Bold-CFMepnvq.ttf         [39m[1m[2m    24.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-Cx986IdX.woff2            [39m[1m[2m    25.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-B22Nviop.woff2         [39m[1m[2m    26.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf     [39m[1m[2m    27.56 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-BQhdFMY1.woff2          [39m[1m[2m    28.08 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-Jm3AIy58.woff             [39m[1m[2m    29.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-Dr94JaBh.woff          [39m[1m[2m    30.77 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf        [39m[1m[2m    31.20 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Math-Italic-flOr_0UB.ttf            [39m[1m[2m    31.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf        [39m[1m[2m    32.97 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-DMm9YOAa.woff           [39m[1m[2m    33.52 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Italic-3WenGoN9.ttf            [39m[1m[2m    33.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Bold-waoOVXN0.ttf              [39m[1m[2m    51.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_Main-Regular-ypZvNtVU.ttf           [39m[1m[2m    53.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/KaTeX_AMS-Regular-DRggAlZN.ttf            [39m[1m[2m    63.63 kB[22m[1m[22m
+[2mdist/[22m[32massets/cat-sCiXjNOW.jpg                          [39m[1m[2m    87.14 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-BYOb_mMw.css                        [39m[1m[2m   179.56 kB[22m[1m[22m[2m 鈹?gzip:    30.38 kB[22m
+[2mdist/[22m[36massets/index-BOupo6PZ.js                         [39m[1m[33m12,886.44 kB[39m[22m[2m 鈹?gzip: 1,563.31 kB[22m
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32m鉁?built in 8.75s[39m
+EXIT_CODE: 0
+END: 2026-05-27T22:56:13.4591608+08:00

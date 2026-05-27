@@ -1,0 +1,1186 @@
+[
+  {
+    "candidateId": "experiment-0012-1-1-l150-l182-a0520abc2b",
+    "title": "观察制得的 $\\mathrm{Fe(OH)}_{3}",
+    "summary": "【实验1-1】 取两个 $100 \\mathrm{~mL}$ 小烧杯, 分别加入 $40 \\mathrm{~mL}$ 蒸馏水和 $40 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液。将烧杯中的蒸馏水加热至沸腾, 向沸水中逐滴加入 $5 \\sim 6$ 滴 $\\mathrm{FeCl}_{3}$ 饱和溶液。继续煮沸至液体呈红褐色, 停止加热。观察制得的 $\\mathrm{Fe(OH)}_{3}$ 胶体。",
+    "description": "【实验1-1】 取两个 $100 \\mathrm{~mL}$ 小烧杯, 分别加入 $40 \\mathrm{~mL}$ 蒸馏水和 $40 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液。将烧杯中的蒸馏水加热至沸腾, 向沸水中逐滴加入 $5 \\sim 6$ 滴 $\\mathrm{FeCl}_{3}$ 饱和溶液。继续煮沸至液体呈红褐色, 停止加热。观察制得的 $\\mathrm{Fe(OH)}_{3}$ 胶体。",
+    "textbookContent": "【实验1-1】 取两个 $100 \\mathrm{~mL}$ 小烧杯, 分别加入 $40 \\mathrm{~mL}$ 蒸馏水和 $40 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液。将烧杯中的蒸馏水加热至沸腾, 向沸水中逐滴加入 $5 \\sim 6$ 滴 $\\mathrm{FeCl}_{3}$ 饱和溶液。继续煮沸至液体呈红褐色, 停止加热。观察制得的 $\\mathrm{Fe(OH)}_{3}$ 胶体。 把盛有 $\\mathrm{CuSO}_4$ 溶液和 $\\mathrm{Fe(OH)}_3$ 胶体的烧杯置于暗处，分别用红色激光笔照射烧杯中的液体，在与光束垂直的方向进行观察，并记录现象。 $\\mathrm{CuSO_4}$ 溶液 $\\mathrm{Fe(OH)_3}$ 胶体 图1-5 光束通过溶液和胶体时的现象 当光束通过 $\\mathrm{Fe(OH)}_{3}$ 胶体时，可以看到一条光亮的“通路”，而光束通过 $\\mathrm{CuSO}_{4}$ 溶液时，则看不到此现象。这条光亮的“通路”是由于胶体粒子对光线散射（光波偏离原来方向而分散传播）形成的，叫做丁达尔效应。丁达尔效应可被用来区分胶体和溶液。 丁达尔效应在日常生活中随处可见。例如，当日光从窗隙射入暗室，或者光线透过树叶间的缝隙射入密林中时，都可以观察到丁达尔效应；放电影时，放映机到银幕间光柱的形成也是因为丁达尔效应。 图1-6 树林中的丁达尔效应",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "将烧杯中的蒸馏水加热至沸腾, 向沸水中逐滴加入 $5 \\sim 6$ 滴 $\\mathrm{FeCl}_{3}$ 饱和溶液。",
+      "继续煮沸至液体呈红褐色, 停止加热。"
+    ],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "观察制得的 $\\mathrm{Fe(OH)}_{3}$ 胶体。",
+      "把盛有 $\\mathrm{CuSO}_4$ 溶液和 $\\mathrm{Fe(OH)}_3$ 胶体的烧杯置于暗处，分别用红色激光笔照射烧杯中的液体，在与光束垂直的方向进行观察，并记录现象。",
+      "$\\mathrm{CuSO_4}$ 溶液 $\\mathrm{Fe(OH)_3}$ 胶体 图1-5 光束通过溶液和胶体时的现象 当光束通过 $\\mathrm{Fe(OH)}_{3}$ 胶体时，可以看到一条光亮的“通路”，而光束通过 $\\mathrm{CuSO}_{4}$ 溶液时，则看不到此现象。",
+      "例如，当日光从窗隙射入暗室，或者光线透过树叶间的缝隙射入密林中时，都可以观察到丁达尔效应；放电影时，放映机到银幕间光柱的形成也是因为丁达尔效应。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验1-1】",
+    "sourceLineStart": 150,
+    "sourceLineEnd": 182,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:a0520abc2be3baa90b41f5a934e8ec506f24489de03c4bf27af24cac94330aab",
+    "sourceSectionId": "0012-1-1-l150-l182-a0520abc2b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0014-source-section-l185-l190-f8c2f91c30",
+    "title": "与实验有关的图标及说明",
+    "summary": "与实验有关的图标及说明 护目镜 进行化学实验需要佩戴护目镜，以保护眼睛 洗手 实验结束后，离开实验室前需用肥皂等清洗双手 用电 实验中会用到电器。",
+    "description": "与实验有关的图标及说明 护目镜 进行化学实验需要佩戴护目镜，以保护眼睛 洗手 实验结束后，离开实验室前需用肥皂等清洗双手 用电 实验中会用到电器。",
+    "textbookContent": "与实验有关的图标及说明 护目镜 进行化学实验需要佩戴护目镜，以保护眼睛 洗手 实验结束后，离开实验室前需用肥皂等清洗双手 用电 实验中会用到电器。禁止湿手操作，实验完毕应及时切断电源 排风 实验中会用到或产生有害气体，或产生烟、雾。应开启排风管道或排风扇 热烫 实验中会遇到加热操作，或用到温度较高的仪器。应选择合适的工具进行操作，避免直接触碰 明火 实验中会用到明火。要正确使用火源，并束好长发、系紧宽松衣物 锐器 实验中会用到锋利物品。应按照实验操作使用，避免锐器指向自己或他人，防止扎伤或割伤 丁达尔效应 Tyndall effect",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "与实验有关的图标及说明 护目镜 进行化学实验需要佩戴护目镜，以保护眼睛 洗手 实验结束后，离开实验室前需用肥皂等清洗双手 用电 实验中会用到电器。",
+      "禁止湿手操作，实验完毕应及时切断电源 排风 实验中会用到或产生有害气体，或产生烟、雾。",
+      "应开启排风管道或排风扇 热烫 实验中会遇到加热操作，或用到温度较高的仪器。",
+      "应选择合适的工具进行操作，避免直接触碰 明火 实验中会用到明火。"
+    ],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "与实验有关的图标及说明",
+    "sourceLineStart": 185,
+    "sourceLineEnd": 190,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:f8c2f91c30e78aa77f5dc92277a2a1ff54cdcf89a540e46f407ad417b957ee26",
+    "sourceSectionId": "0014-source-section-l185-l190-f8c2f91c30",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0026-1-2-l346-l410-2d78a328b9",
+    "title": "观察记录现象",
+    "summary": "【实验1-2】 在三个烧杯中分别加入干燥的 $\\mathrm{NaCl}$ 固体、 $\\mathrm{KNO}_{3}$ 固体和蒸馏水, 如图 1-9 所示连接装置, 将石墨电极依次放入三个烧杯中, 分别接通电源, 观察并记录现象。",
+    "description": "【实验1-2】 在三个烧杯中分别加入干燥的 $\\mathrm{NaCl}$ 固体、 $\\mathrm{KNO}_{3}$ 固体和蒸馏水, 如图 1-9 所示连接装置, 将石墨电极依次放入三个烧杯中, 分别接通电源, 观察并记录现象。",
+    "textbookContent": "【实验1-2】 在三个烧杯中分别加入干燥的 $\\mathrm{NaCl}$ 固体、 $\\mathrm{KNO}_{3}$ 固体和蒸馏水, 如图 1-9 所示连接装置, 将石墨电极依次放入三个烧杯中, 分别接通电源, 观察并记录现象。 取上述烧杯中的 $\\mathrm{NaCl}$ 固体、 $\\mathrm{KNO}_3$ 固体各少许，分别加入另外两个盛有蒸馏水的烧杯中，用玻璃棒搅拌，使固体完全溶解形成溶液。如图1-9所示，将石墨电极依次放入 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{KNO}_3$ 溶液中，分别接通电源，观察并记录现象。 实验表明，干燥的NaCl固体、 $\\mathrm{KNO}_3$ 固体都不导电，蒸馏水也不导电①。但是，NaCl溶液、 $\\mathrm{KNO}_3$ 溶液却都能够导电。 结合初中做过的物质导电性实验，我们知道盐酸、NaOH溶液、NaCl溶液等都能导电。不仅如此，如果将NaCl、 $\\mathrm{KNO}_{3} 、 \\mathrm{NaOH}$ 等固体分别加热至熔化, 它们也都能导电。这种在水溶液里或熔融状态下能够导电的化合物叫做电解质。 $\\mathrm{HCl} 、 \\mathrm{H}_{2} \\mathrm{SO}_{4} 、 \\mathrm{NaOH} 、 \\mathrm{Ca(OH)}_{2} 、 \\mathrm{NaCl} 、 \\mathrm{KNO}_{3}$ 等都是电解质。 人的手上常会沾有 $\\mathrm{NaCl}$ （汗液的成分之一），有时也会沾有其他电解质，当遇到水时，形成电解质溶液。电解质溶液能够导电，因此，湿手直接接触电源时容易发生触电事故。 为什么 $\\mathrm{NaCl}$ 、 $\\mathrm{KNO}_3$ 等电解质，在干燥时不导电，而溶于水或熔化后却能导电呢？ 我们知道，电流是由带电荷的粒子按一定方向移动而形成的。因此，能导电的物质必须具有能自由移动的、带电荷的粒子。电解质的水溶液（或熔化而成的液体）能够导电，说明在这些水溶液（或液体）中，存在着能自由移动的、带电荷的粒子。 例如，NaCl固体中含有带正电荷的钠离子（ $\\mathrm{Na}^{+}$ ）和带负电荷的氯离子（ $\\mathrm{Cl}^{-}$ ），由于带相反电荷的离子间的相互作用， $\\mathrm{Na}^{+}$ 和 $\\mathrm{Cl}^{-}$ 按一定规则紧密地排列着。这些离子不能自由移动，因而干燥的NaCl固体不导电（如图1-10）。 当将NaCl固体加入水中时，在水分子的作用下， $\\mathrm{Na}^{+}$ 和 $\\mathrm{Cl}^{-}$ 脱离NaCl固体的表面，进入水中，形成能够自由移动的水合钠离子和水合氯离子（如图1-11）。 电解质 electrolyte 图1-10 干燥的NaCl固体不导电 图1-11 NaCl固体在水中的溶解和形成水合离子示意图 当在 $\\mathrm{NaCl}$ 溶液中插入电极并接通电源时，带正电荷的水合钠离子向与电源负极相连的电极移动，带负电荷的水合氯离子向与电源正极相连的电极移动，因而 $\\mathrm{NaCl}$ 溶液能够导电（如图1-12左）。 当NaCl固体受热熔化时，离子的运动随温度升高而加快，克服了离子间的相互作用，产生了能够自由移动的 $\\mathrm{Na}^{+}$ 和 $\\mathrm{Cl}^{-}$ ，因而NaCl在熔融状态时也能导电（如图1-12右）。 图1-12 NaCl导电示意图 电离 ionization 电解质溶于水或受热熔化时，形成自由移动的离子的过程叫做电离。电解质的电离可以用电离方程式表示（为简便起见，一般仍用离子符号表示水合离子）。例如： $$ \\begin{array}{l} \\mathrm {N a C l} = \\mathrm {N a} ^ {+} + \\mathrm {C l} ^ {-} \\\\ \\mathrm {K N O} _ {3} = \\mathrm {K} ^ {+} + \\mathrm {N O} _ {3} ^ {-} \\\\ \\mathrm {H C l} = \\mathrm {H} ^ {+} + \\mathrm {C l} ^ {-} \\\\ \\mathrm {H} _ {2} \\mathrm {S O} _ {4} = 2 \\mathrm {H} ^ {+} + \\mathrm {S O} _ {4} ^ {2 -} \\\\ \\mathrm {H N O} _ {3} = \\mathrm {H} ^ {+} + \\mathrm {N O} _ {3} ^ {-} \\\\ \\end{array} $$ 可以看出，HCl、 $\\mathrm{H}_2\\mathrm{SO}_4$ 和 $\\mathrm{HNO}_3$ 在水溶液中都能电离出 $\\mathrm{H}^+$ ，因此，我们可以从电离的角度认识酸的本质。即电离时生成的阳离子全部是氢离子（ $\\mathrm{H}^+$ ）①的化合物叫做酸。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "不仅如此，如果将NaCl、 $\\mathrm{KNO}_{3} 、 \\mathrm{NaOH}$ 等固体分别加热至熔化, 它们也都能导电。"
+    ],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验1-2】 在三个烧杯中分别加入干燥的 $\\mathrm{NaCl}$ 固体、 $\\mathrm{KNO}_{3}$ 固体和蒸馏水, 如图 1-9 所示连接装置, 将石墨电极依次放入三个烧杯中, 分别接通电源, 观察并记录现象。",
+      "如图1-9所示，将石墨电极依次放入 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{KNO}_3$ 溶液中，分别接通电源，观察并记录现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验1-2】",
+    "sourceLineStart": 346,
+    "sourceLineEnd": 410,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:2d78a328b93a4cd98ecea3302eabe2950d58c053e1ab30184e4013014bc470d5",
+    "sourceSectionId": "0026-1-2-l346-l410-2d78a328b9",
+    "assets": [
+      {
+        "assetId": "0026-1-2-l346-l410-2d78a328b9-asset-01",
+        "altText": "",
+        "rawReference": "![](images/a4c088f1de008b7cda580288d20ebc1b096f87313a58c0ab0950bcee393bc701.jpg)",
+        "assetPath": "images/a4c088f1de008b7cda580288d20ebc1b096f87313a58c0ab0950bcee393bc701.jpg",
+        "sourceLineNumber": 370,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/a4c088f1de008b7cda580288d20ebc1b096f87313a58c0ab0950bcee393bc701.jpg"
+      },
+      {
+        "assetId": "0026-1-2-l346-l410-2d78a328b9-asset-02",
+        "altText": "",
+        "rawReference": "![](images/0becce016cc33cc758b3a6fe7f9c206f756490ea062f4aab48f037470ee97758.jpg)",
+        "assetPath": "images/0becce016cc33cc758b3a6fe7f9c206f756490ea062f4aab48f037470ee97758.jpg",
+        "sourceLineNumber": 377,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/0becce016cc33cc758b3a6fe7f9c206f756490ea062f4aab48f037470ee97758.jpg"
+      },
+      {
+        "assetId": "0026-1-2-l346-l410-2d78a328b9-asset-03",
+        "altText": "",
+        "rawReference": "![](images/8f087536e2fe3c8d5d02ef60da804d9c55c6bf8e7c0d7c2f127acbbba00bd857.jpg)",
+        "assetPath": "images/8f087536e2fe3c8d5d02ef60da804d9c55c6bf8e7c0d7c2f127acbbba00bd857.jpg",
+        "sourceLineNumber": 388,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/8f087536e2fe3c8d5d02ef60da804d9c55c6bf8e7c0d7c2f127acbbba00bd857.jpg"
+      },
+      {
+        "assetId": "0026-1-2-l346-l410-2d78a328b9-asset-04",
+        "altText": "",
+        "rawReference": "![](images/b701011b7d755fbc4b3de0f16e1643d86c33a8189ec0334d60d286026be899c8.jpg)",
+        "assetPath": "images/b701011b7d755fbc4b3de0f16e1643d86c33a8189ec0334d60d286026be899c8.jpg",
+        "sourceLineNumber": 391,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/b701011b7d755fbc4b3de0f16e1643d86c33a8189ec0334d60d286026be899c8.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0031-1-3-l435-l477-723842ca0b",
+    "title": "观察并分析",
+    "summary": "【实验1-3】 向盛有 $2 \\mathrm{~mL} \\mathrm{Na}_{2} \\mathrm{SO}_{4}$ 稀溶液的试管中加入 $2 \\mathrm{~mL} \\mathrm{BaCl}_{2}$ 稀溶液（二者恰好完全反应），观察现象并分析。",
+    "description": "【实验1-3】 向盛有 $2 \\mathrm{~mL} \\mathrm{Na}_{2} \\mathrm{SO}_{4}$ 稀溶液的试管中加入 $2 \\mathrm{~mL} \\mathrm{BaCl}_{2}$ 稀溶液（二者恰好完全反应），观察现象并分析。",
+    "textbookContent": "【实验1-3】 向盛有 $2 \\mathrm{~mL} \\mathrm{Na}_{2} \\mathrm{SO}_{4}$ 稀溶液的试管中加入 $2 \\mathrm{~mL} \\mathrm{BaCl}_{2}$ 稀溶液（二者恰好完全反应），观察现象并分析。 Na2SO4和BaCl2的电离方程式 混合前两种溶液中的离子 混合后溶液中的离子 通过上述现象和分析，我们可以得出这样的结论：当 $\\mathrm{Na}_2\\mathrm{SO}_4$ 稀溶液与 $\\mathrm{BaCl}_2$ 稀溶液混合时， $\\mathrm{Na}^+$ 、 $\\mathrm{Cl}^-$ 都没有发生化学反应；而 $\\mathrm{SO}_4^{2-}$ 与 $\\mathrm{Ba}^{2+}$ 发生了化学反应，生成难溶的 $\\mathrm{BaSO}_4$ 白色沉淀。也就是说，对于化学反应： $$ \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} + \\mathrm {B a C l} _ {2} = 2 \\mathrm {N a C l} + \\mathrm {B a S O} _ {4} \\downarrow $$ 从微观角度看，其实质是： $$ \\mathrm {B a} ^ {2 +} + \\mathrm {S O} _ {4} ^ {2 -} = \\mathrm {B a S O} _ {4} \\downarrow $$ 电解质在溶液中的反应实质上是离子之间的反应，这样的反应属于离子反应。用实际参加反应的离子符号来表示反应的式子叫做离子方程式。 离子方程式的书写一般按以下步骤（以 $\\mathrm{Na}_2\\mathrm{SO}_4$ 溶液与 $\\mathrm{BaCl}_2$ 溶液的反应为例）： (1) 写出反应的化学方程式: $$ \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} + \\mathrm {B a C l} _ {2} = 2 \\mathrm {N a C l} + \\mathrm {B a S O} _ {4} \\downarrow $$ (2) 把易溶于水且易电离的物质（如强酸、强碱和大部分可溶性盐）写成离子形式，难溶的物质、气体和水等仍用化学式表示。上述化学方程式可改写成： $$ 2 \\mathrm {N a} ^ {+} + \\mathrm {S O} _ {4} ^ {2 -} + \\mathrm {B a} ^ {2 +} + 2 \\mathrm {C l} ^ {-} = 2 \\mathrm {N a} ^ {+} + 2 \\mathrm {C l} ^ {-} + \\mathrm {B a S O} _ {4} \\downarrow $$ （3）删去方程式两边不参加反应的离子，并将方程式化为最简： $$ \\mathrm {B a} ^ {2 +} + \\mathrm {S O} _ {4} ^ {2 -} = \\mathrm {B a S O} _ {4} \\downarrow $$ （4）检查离子方程式两边各元素的原子个数和电荷总数是否相等。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "【实验1-3】 向盛有 $2 \\mathrm{~mL} \\mathrm{Na}_{2} \\mathrm{SO}_{4}$ 稀溶液的试管中加入 $2 \\mathrm{~mL} \\mathrm{BaCl}_{2}$ 稀溶液（二者恰好完全反应），观察现象并分析。",
+      "Na2SO4和BaCl2的电离方程式 混合前两种溶液中的离子 混合后溶液中的离子 通过上述现象和分析，我们可以得出这样的结论：当 $\\mathrm{Na}_2\\mathrm{SO}_4$ 稀溶液与 $\\mathrm{BaCl}_2$ 稀溶液混合时， $\\mathrm{Na}^+$ 、 $\\mathrm{Cl}^-$ 都没有发生化学反应；而 $\\mathrm{SO}_4^{2-}$ 与 $\\mathrm{Ba}^{2+}$ 发生了化学反应，生成难溶的 $\\mathrm{BaSO}_4$ 白色沉淀。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验1-3】",
+    "sourceLineStart": 435,
+    "sourceLineEnd": 477,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:723842ca0bc085e44bf24c8415427a0297470a6af50c770e8543ddabc29f3b81",
+    "sourceSectionId": "0031-1-3-l435-l477-723842ca0b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0054-2-1-l1022-l1028-3d4f0c60b3",
+    "title": "观察钠的光泽和颜色",
+    "summary": "【实验2-1】 用镊子取一小块钠，用滤纸吸干表面的煤油后，用刀切去一端的外皮，观察钠的光泽和颜色，并注意新切开的钠的表面所发生的变化。",
+    "description": "【实验2-1】 用镊子取一小块钠，用滤纸吸干表面的煤油后，用刀切去一端的外皮，观察钠的光泽和颜色，并注意新切开的钠的表面所发生的变化。",
+    "textbookContent": "【实验2-1】 用镊子取一小块钠，用滤纸吸干表面的煤油后，用刀切去一端的外皮，观察钠的光泽和颜色，并注意新切开的钠的表面所发生的变化。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [
+      "【实验2-1】 用镊子取一小块钠，用滤纸吸干表面的煤油后，用刀切去一端的外皮，观察钠的光泽和颜色，并注意新切开的钠的表面所发生的变化。"
+    ],
+    "materials": [
+      "镊子"
+    ],
+    "observations": [
+      "【实验2-1】 用镊子取一小块钠，用滤纸吸干表面的煤油后，用刀切去一端的外皮，观察钠的光泽和颜色，并注意新切开的钠的表面所发生的变化。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-1】",
+    "sourceLineStart": 1022,
+    "sourceLineEnd": 1028,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:3d4f0c60b32a5ed5ddcf5fbb3ca0859165862b1f5e1759105f2e5b4f4d047aff",
+    "sourceSectionId": "0054-2-1-l1022-l1028-3d4f0c60b3",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0057-2-2-l1067-l1082-5230c09917",
+    "title": "将一个干燥的坩埚加热，同时切取一块绿豆",
+    "summary": "【实验2-2】 将一个干燥的坩埚加热，同时切取一块绿豆大的钠，迅速投到热坩埚中。继续加热坩埚片刻，待钠熔化后立即撤掉酒精灯，观察现象。图2-3 钠在空气中燃烧 可以看到，钠受热后先熔化，然后与氧气剧烈反应，发出黄色火焰，生成一种淡黄色固体。",
+    "description": "【实验2-2】 将一个干燥的坩埚加热，同时切取一块绿豆大的钠，迅速投到热坩埚中。继续加热坩埚片刻，待钠熔化后立即撤掉酒精灯，观察现象。图2-3 钠在空气中燃烧 可以看到，钠受热后先熔化，然后与氧气剧烈反应，发出黄色火焰，生成一种淡黄色固体。",
+    "textbookContent": "【实验2-2】 将一个干燥的坩埚加热，同时切取一块绿豆大的钠，迅速投到热坩埚中。继续加热坩埚片刻，待钠熔化后立即撤掉酒精灯，观察现象。 图2-3 钠在空气中燃烧 可以看到，钠受热后先熔化，然后与氧气剧烈反应，发出黄色火焰，生成一种淡黄色固体。这种淡黄色固体是过氧化钠 $\\left(\\mathrm{Na}_{2} \\mathrm{O}_{2}\\right)$ 。 $$ 2 \\mathrm {N a} + \\mathrm {O} _ {2} \\xlongequal {\\triangle} \\mathrm {N a} _ {2} \\mathrm {O} _ {2} $$ 钠除了能与氧气、氯气等非金属单质直接化合，还能与水发生反应。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "【实验2-2】 将一个干燥的坩埚加热，同时切取一块绿豆大的钠，迅速投到热坩埚中。",
+      "继续加热坩埚片刻，待钠熔化后立即撤掉酒精灯，观察现象。"
+    ],
+    "materials": [
+      "酒精灯",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "继续加热坩埚片刻，待钠熔化后立即撤掉酒精灯，观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-2】",
+    "sourceLineStart": 1067,
+    "sourceLineEnd": 1082,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:5230c09917cc4fcfdb949feee0620a314f1f1edf552f237f1979168e6ec23be1",
+    "sourceSectionId": "0057-2-2-l1067-l1082-5230c09917",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0061-source-section-l1093-l1102-d4782d870d",
+    "title": "在烧杯中加入一些水，滴入几滴酚酞溶液，然",
+    "summary": "【实验】 在烧杯中加入一些水，滴入几滴酚酞溶液，然后把一块绿豆大的钠放入水中。 图2-4 钠与水反应 从钠在水中的位置、钠的形状的变化、溶液颜色的变化等方面观察和描述实验现象。分析实验现象，你能得出哪些结论？",
+    "description": "【实验】 在烧杯中加入一些水，滴入几滴酚酞溶液，然后把一块绿豆大的钠放入水中。 图2-4 钠与水反应 从钠在水中的位置、钠的形状的变化、溶液颜色的变化等方面观察和描述实验现象。分析实验现象，你能得出哪些结论？",
+    "textbookContent": "【实验】 在烧杯中加入一些水，滴入几滴酚酞溶液，然后把一块绿豆大的钠放入水中。 图2-4 钠与水反应 从钠在水中的位置、钠的形状的变化、溶液颜色的变化等方面观察和描述实验现象。分析实验现象，你能得出哪些结论？",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "图2-4 钠与水反应 从钠在水中的位置、钠的形状的变化、溶液颜色的变化等方面观察和描述实验现象。",
+      "分析实验现象，你能得出哪些结论？"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 1093,
+    "sourceLineEnd": 1102,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:d4782d870dc4f2d5b3c4cda2948dc85049050120cb660150a1cbe7be1bc12f6c",
+    "sourceSectionId": "0061-source-section-l1093-l1102-d4782d870d",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0067-2-3-l1139-l1163-caa7793072",
+    "title": "检验生成的气体",
+    "summary": "【实验2-3】 将 $1 \\sim 2 \\mathrm{~mL}$ 水滴入盛有 $1 \\sim 2 \\mathrm{~g}$ 过氧化钠固体的试管中,立即把带火星的木条伸入试管中, 检验生成的气体。用手轻轻触摸试管外壁, 有什么感觉?用 $\\mathrm{pH}$ 试纸检验溶液的酸碱性。",
+    "description": "【实验2-3】 将 $1 \\sim 2 \\mathrm{~mL}$ 水滴入盛有 $1 \\sim 2 \\mathrm{~g}$ 过氧化钠固体的试管中,立即把带火星的木条伸入试管中, 检验生成的气体。用手轻轻触摸试管外壁, 有什么感觉?用 $\\mathrm{pH}$ 试纸检验溶液的酸碱性。",
+    "textbookContent": "【实验2-3】 将 $1 \\sim 2 \\mathrm{~mL}$ 水滴入盛有 $1 \\sim 2 \\mathrm{~g}$ 过氧化钠固体的试管中,立即把带火星的木条伸入试管中, 检验生成的气体。用手轻轻触摸试管外壁, 有什么感觉? 用 $\\mathrm{pH}$ 试纸检验溶液的酸碱性。 图2-5 过氧化钠与水反应 过氧化钠与水反应生成氢氧化钠和氧气: $$ 2 \\mathrm {N a} _ {2} \\mathrm {O} _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O} = 4 \\mathrm {N a O H} + \\mathrm {O} _ {2} \\uparrow $$ 过氧化钠还能与二氧化碳反应生成碳酸钠和氧气: $$ 2 \\mathrm {N a} _ {2} \\mathrm {O} _ {2} + 2 \\mathrm {C O} _ {2} = 2 \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} + \\mathrm {O} _ {2} $$ 因此，过氧化钠可在呼吸面具或潜水艇中作为氧气的来源。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "氢氧化钠",
+      "碳酸钠",
+      "氧气"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-3】",
+    "sourceLineStart": 1139,
+    "sourceLineEnd": 1163,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:caa77930729765ed8600fbde64bc0adc156234999221d2b588dc429e55093fff",
+    "sourceSectionId": "0067-2-3-l1139-l1163-caa7793072",
+    "assets": [
+      {
+        "assetId": "0067-2-3-l1139-l1163-caa7793072-asset-01",
+        "altText": "",
+        "rawReference": "![](images/565f47bf0d352b7dde5ec3ae488525ab2ea5eb0e25ccb812cd18aaacd77765f2.jpg)",
+        "assetPath": "images/565f47bf0d352b7dde5ec3ae488525ab2ea5eb0e25ccb812cd18aaacd77765f2.jpg",
+        "sourceLineNumber": 1143,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/565f47bf0d352b7dde5ec3ae488525ab2ea5eb0e25ccb812cd18aaacd77765f2.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0069-2-4-l1191-l1204-b9615ddb02",
+    "title": "在两支试管中分别加入少量 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ (各约 $1 \\mathrm{~g}$ ), 完成下",
+    "summary": "【实验2-4】 在两支试管中分别加入少量 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ (各约 $1 \\mathrm{~g}$ ), 完成下列实验, 并将实验现象和相应的结论填入下表。",
+    "description": "【实验2-4】 在两支试管中分别加入少量 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ (各约 $1 \\mathrm{~g}$ ), 完成下列实验, 并将实验现象和相应的结论填入下表。",
+    "textbookContent": "【实验2-4】 在两支试管中分别加入少量 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ (各约 $1 \\mathrm{~g}$ ), 完成下列实验, 并将实验现象和相应的结论填入下表。 盐 Na2CO3 NaHCO3 (1)观察Na2CO3和NaHCO3的外观并进行描述 (2)向以上两支试管中分别滴入几滴水,振荡,观察现象;将温度计分别插入其中,温度计的示数有何变化 (3)继续向(2)的试管中分别加入5mL水,用力振荡,有何现象 (4)分别向(3)所得溶液中滴入1~2滴酚酞溶液,有何现象 初步结论 碳酸钠是白色粉末，碳酸氢钠是细小的白色晶体。实验表明，向碳酸钠中加入少量水后，碳酸钠结块变成晶体，并伴随着放热现象。向碳酸氢钠中加入少量水后，碳酸氢钠能溶解，并伴随着吸热现象。碳酸钠和碳酸氢钠的溶液均显碱性，可用作食用碱或工业用碱。 碳酸钠粉末遇水生成含有结晶水的碳酸钠晶体——水合碳酸钠（ $\\mathrm{Na}_2\\mathrm{CO}_3 \\cdot x\\mathrm{H}_2\\mathrm{O}$ ）①。碳酸钠晶体在干燥空气里逐渐失去结晶水变成碳酸钠粉末。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验2-4】 在两支试管中分别加入少量 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ (各约 $1 \\mathrm{~g}$ ), 完成下列实验, 并将实验现象和相应的结论填入下表。",
+      "盐 Na2CO3 NaHCO3 (1)观察Na2CO3和NaHCO3的外观并进行描述 (2)向以上两支试管中分别滴入几滴水,振荡,观察现象;将温度计分别插入其中,温度计的示数有何变化 (3)继续向(2)的试管中分别加入5mL水,用力振荡,有何现象 (4)分别向(3)所得溶液中滴入1~2滴酚酞溶液,有何现象 初步结论 碳酸钠是白色粉末，碳酸氢钠是细小的白色晶体。",
+      "实验表明，向碳酸钠中加入少量水后，碳酸钠结块变成晶体，并伴随着放热现象。",
+      "向碳酸氢钠中加入少量水后，碳酸氢钠能溶解，并伴随着吸热现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-4】",
+    "sourceLineStart": 1191,
+    "sourceLineEnd": 1204,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:b9615ddb0291590d799cf2fa75e9f492dc1f6d5f4205f63ac26138d461168081",
+    "sourceSectionId": "0069-2-4-l1191-l1204-b9615ddb02",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0070-2-5-l1205-l1222-97d002741f",
+    "title": "如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热",
+    "summary": "【实验2-5】 如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热稳定性。 碳酸钠很稳定，受热不易发生分解；碳酸氢钠不稳定，受热容易分解。 $$ 2 \\mathrm {N a H C O} _ {3} \\xlongequal {\\triangle} \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} + \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {C O} _ {2} \\uparrow $$ 我们可以利用加热的方法来鉴别碳酸钠和碳酸氢钠。 图2-7 加热 $\\mathrm{NaHCO_3}$ 或 $\\mathrm{Na}_2\\mathrm{CO}_3$",
+    "description": "【实验2-5】 如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热稳定性。 碳酸钠很稳定，受热不易发生分解；碳酸氢钠不稳定，受热容易分解。 $$ 2 \\mathrm {N a H C O} _ {3} \\xlongequal {\\triangle} \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} + \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {C O} _ {2} \\uparrow $$ 我们可以利用加热的方法来鉴别碳酸钠和碳酸氢钠。 图2-7 加热 $\\mathrm{NaHCO_3}$ 或 $\\mathrm{Na}_2\\mathrm{CO}_3$",
+    "textbookContent": "【实验2-5】 如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热稳定性。 碳酸钠很稳定，受热不易发生分解；碳酸氢钠不稳定，受热容易分解。 $$ 2 \\mathrm {N a H C O} _ {3} \\xlongequal {\\triangle} \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} + \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {C O} _ {2} \\uparrow $$ 我们可以利用加热的方法来鉴别碳酸钠和碳酸氢钠。 图2-7 加热 $\\mathrm{NaHCO_3}$ 或 $\\mathrm{Na}_2\\mathrm{CO}_3$",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "【实验2-5】 如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热稳定性。",
+      "$$ 2 \\mathrm {N a H C O} _ {3} \\xlongequal {\\triangle} \\mathrm {N a} _ {2} \\mathrm {C O} _ {3} + \\mathrm {H} _ {2} \\mathrm {O} + \\mathrm {C O} _ {2} \\uparrow $$ 我们可以利用加热的方法来鉴别碳酸钠和碳酸氢钠。",
+      "图2-7 加热 $\\mathrm{NaHCO_3}$ 或 $\\mathrm{Na}_2\\mathrm{CO}_3$"
+    ],
+    "materials": [
+      "碳酸钠"
+    ],
+    "observations": [
+      "【实验2-5】 如图2-7所示，分别加热 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ ，观察现象，比较 $\\mathrm{Na}_{2}\\mathrm{CO}_{3}$ 和 $\\mathrm{NaHCO}_{3}$ 的热稳定性。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-5】",
+    "sourceLineStart": 1205,
+    "sourceLineEnd": 1222,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:97d002741ffef6e59af582fb5890f1d16cbbb0a7881cc7adf3a795e7c39800c1",
+    "sourceSectionId": "0070-2-5-l1205-l1222-97d002741f",
+    "assets": [
+      {
+        "assetId": "0070-2-5-l1205-l1222-97d002741f-asset-01",
+        "altText": "",
+        "rawReference": "![](images/4548517becfda499aaa0e476b2077adc969a5f7c08832427736a011576f06d1b.jpg)",
+        "assetPath": "images/4548517becfda499aaa0e476b2077adc969a5f7c08832427736a011576f06d1b.jpg",
+        "sourceLineNumber": 1216,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/4548517becfda499aaa0e476b2077adc969a5f7c08832427736a011576f06d1b.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0073-2-6-l1244-l1262-c0708d9cda",
+    "title": "观察火焰的颜色",
+    "summary": "【实验2-6】 把熔嵌在玻璃棒上的铂丝（或用光洁无锈的铁丝）放在酒精灯（最好用煤气灯）外焰上灼烧，至与原来的火焰颜色相同时为止。用铂丝（或铁丝）蘸取碳酸钠溶液，在外焰上灼烧，观察火焰的颜色。",
+    "description": "【实验2-6】 把熔嵌在玻璃棒上的铂丝（或用光洁无锈的铁丝）放在酒精灯（最好用煤气灯）外焰上灼烧，至与原来的火焰颜色相同时为止。用铂丝（或铁丝）蘸取碳酸钠溶液，在外焰上灼烧，观察火焰的颜色。",
+    "textbookContent": "【实验2-6】 把熔嵌在玻璃棒上的铂丝（或用光洁无锈的铁丝）放在酒精灯（最好用煤气灯）外焰上灼烧，至与原来的火焰颜色相同时为止。用铂丝（或铁丝）蘸取碳酸钠溶液，在外焰上灼烧，观察火焰的颜色。 将铂丝（或铁丝）用盐酸洗净后，在外焰上灼烧至与原来的火焰颜色相同时，再蘸取碳酸钾溶液做同样的实验，此时要透过蓝色钴玻璃观察火焰的颜色。 根据火焰呈现的特征颜色，可以判断试样所含的金属元素，化学上把这样的定性分析操作称为焰色试验。 焰色试验 flame test 图2-9 金属的焰色试验",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "酒精灯",
+      "玻璃棒",
+      "盐酸",
+      "碳酸钠",
+      "铁丝"
+    ],
+    "observations": [
+      "用铂丝（或铁丝）蘸取碳酸钠溶液，在外焰上灼烧，观察火焰的颜色。",
+      "将铂丝（或铁丝）用盐酸洗净后，在外焰上灼烧至与原来的火焰颜色相同时，再蘸取碳酸钾溶液做同样的实验，此时要透过蓝色钴玻璃观察火焰的颜色。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-6】",
+    "sourceLineStart": 1244,
+    "sourceLineEnd": 1262,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:c0708d9cda3f8d954ac7230edae017f35b5e333c961d6db9ee23ef54e5ceb035",
+    "sourceSectionId": "0073-2-6-l1244-l1262-c0708d9cda",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0086-2-7-l1410-l1425-f1f5b09890",
+    "title": "氢气燃烧",
+    "summary": "【实验2-7】 在空气中点燃氢气，然后把导管缓慢伸入盛满氯气的集气瓶中，观察现象。 可以看到，纯净的 $\\mathrm{H}_{2}$ 在 $\\mathrm{Cl}_{2}$ 中安静地燃烧，发出苍白色火焰。反应生成的气体是 $\\mathrm{HCl}$ ，它在空气中与水蒸气结合，呈现雾状。 $$ \\mathrm {H} _ {2} + \\mathrm {C l} _ {2} \\stackrel {\\text {点 燃}} {=} 2 \\mathrm {H C l} $$ HCl气体溶于水，就成为我们常用的盐酸。",
+    "description": "【实验2-7】 在空气中点燃氢气，然后把导管缓慢伸入盛满氯气的集气瓶中，观察现象。 可以看到，纯净的 $\\mathrm{H}_{2}$ 在 $\\mathrm{Cl}_{2}$ 中安静地燃烧，发出苍白色火焰。反应生成的气体是 $\\mathrm{HCl}$ ，它在空气中与水蒸气结合，呈现雾状。 $$ \\mathrm {H} _ {2} + \\mathrm {C l} _ {2} \\stackrel {\\text {点 燃}} {=} 2 \\mathrm {H C l} $$ HCl气体溶于水，就成为我们常用的盐酸。",
+    "textbookContent": "【实验2-7】 在空气中点燃氢气，然后把导管缓慢伸入盛满氯气的集气瓶中，观察现象。 可以看到，纯净的 $\\mathrm{H}_{2}$ 在 $\\mathrm{Cl}_{2}$ 中安静地燃烧，发出苍白色火焰。反应生成的气体是 $\\mathrm{HCl}$ ，它在空气中与水蒸气结合，呈现雾状。 $$ \\mathrm {H} _ {2} + \\mathrm {C l} _ {2} \\stackrel {\\text {点 燃}} {=} 2 \\mathrm {H C l} $$ HCl气体溶于水，就成为我们常用的盐酸。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "集气瓶",
+      "导管",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验2-7】 在空气中点燃氢气，然后把导管缓慢伸入盛满氯气的集气瓶中，观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-7】",
+    "sourceLineStart": 1410,
+    "sourceLineEnd": 1425,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:f1f5b098905ef4b27348eb924e0e270d52341bc13efd6a8e61514f13e2d9333f",
+    "sourceSectionId": "0086-2-7-l1410-l1425-f1f5b09890",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0091-2-8-l1477-l1496-4eebdaf5d7",
+    "title": "(1) 取干燥的和湿润的有色纸条 (或布条) 各一条",
+    "summary": "【实验2-8】 (1) 取干燥的和湿润的有色纸条 (或布条) 各一条,分别放入两个盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。(2) 将有色鲜花放入盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。",
+    "description": "【实验2-8】 (1) 取干燥的和湿润的有色纸条 (或布条) 各一条,分别放入两个盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。(2) 将有色鲜花放入盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。",
+    "textbookContent": "【实验2-8】 (1) 取干燥的和湿润的有色纸条 (或布条) 各一条,分别放入两个盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。 (2) 将有色鲜花放入盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。 图2-14 干燥的氯气使有色鲜花变色 次氯酸的强氧化性还能使某些染料和有机色素褪色，因此，次氯酸可用作棉、麻和纸张的漂白剂。 次氯酸是很弱的酸，只存在于水溶液中。次氯酸不稳定，在光照下容易分解放出氧气： $$ 2 \\mathrm {H C l O} \\xlongequal {\\text {光 照}} 2 \\mathrm {H C l} + \\mathrm {O} _ {2} \\uparrow $$",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "玻璃片",
+      "集气瓶",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "【实验2-8】 (1) 取干燥的和湿润的有色纸条 (或布条) 各一条,分别放入两个盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。",
+      "(2) 将有色鲜花放入盛有干燥氯气的集气瓶中, 盖上玻璃片, 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-8】",
+    "sourceLineStart": 1477,
+    "sourceLineEnd": 1496,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:4eebdaf5d784a8e222b6dd3518309edbaa235834814ff75db7154ce41f5cca1d",
+    "sourceSectionId": "0091-2-8-l1477-l1496-4eebdaf5d7",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0093-source-section-l1524-l1563-7ed768ad38",
+    "title": "验证次氯酸光照分解产物的数字化实验",
+    "summary": "验证次氯酸光照分解产物的数字化实验 数字化实验将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如pH、温度、压强、电导率等）变化的数据并记录和呈现，通过软件对数据进行分析，获得实验结论。",
+    "description": "验证次氯酸光照分解产物的数字化实验 数字化实验将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如pH、温度、压强、电导率等）变化的数据并记录和呈现，通过软件对数据进行分析，获得实验结论。",
+    "textbookContent": "验证次氯酸光照分解产物的数字化实验 数字化实验将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如pH、温度、压强、电导率等）变化的数据并记录和呈现，通过软件对数据进行分析，获得实验结论。也就是说，数字化实验是利用传感器和信息处理终端进行实验数据的采集与分析。 验证次氯酸光照分解的产物可以设计成数字化实验。实验步骤如下：（1）将 $\\mathrm{pH}$ 传感器、 氯离子传感器、氧气传感器分别与数据采集器、计算机连接；（2）将三种传感器分别插入盛有氯水的广口瓶中；（3）用强光照射氯水，同时开始采集数据。此实验可以测定光照过程中氯水的pH、氯水中氯离子的浓度、广口瓶中氧气的体积分数这三者的变化，并通过计算机的数据处理功能将这些变化显示在计算机屏幕上（如图2-16）。通过对数据进行分析，最终可验证次氯酸光照分解的产物。 (1) (2） (3） 图2-16 光照过程中氯水的 $\\mathrm{pH}$ 、氯水中氯离子的浓度、广口瓶中氧气的体积分数的变化 图2-17 实验室中制取氯气的装置示意图",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "验证次氯酸光照分解产物的数字化实验 数字化实验将传感器、数据采集器和计算机依次相连，采集实验过程中各种物理量（如pH、温度、压强、电导率等）变化的数据并记录和呈现，通过软件对数据进行分析，获得实验结论。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "验证次氯酸光照分解产物的数字化实验",
+    "sourceLineStart": 1524,
+    "sourceLineEnd": 1563,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:7ed768ad3864637d0dd668509f242b562388fba2675986a6b8b42c60a6eedbc0",
+    "sourceSectionId": "0093-source-section-l1524-l1563-7ed768ad38",
+    "assets": [
+      {
+        "assetId": "0093-source-section-l1524-l1563-7ed768ad38-asset-01",
+        "altText": "",
+        "rawReference": "![](images/75734cf7c87705bd3ddaaa3c0c47bf6dc3a3498f0950d51122d27c065153793b.jpg)",
+        "assetPath": "images/75734cf7c87705bd3ddaaa3c0c47bf6dc3a3498f0950d51122d27c065153793b.jpg",
+        "sourceLineNumber": 1532,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/75734cf7c87705bd3ddaaa3c0c47bf6dc3a3498f0950d51122d27c065153793b.jpg"
+      },
+      {
+        "assetId": "0093-source-section-l1524-l1563-7ed768ad38-asset-02",
+        "altText": "",
+        "rawReference": "![](images/be44836bf09fd4f8b2d2ce5e92ca3a677ab0b7849bc0fca710bd4a7a478fcf59.jpg)",
+        "assetPath": "images/be44836bf09fd4f8b2d2ce5e92ca3a677ab0b7849bc0fca710bd4a7a478fcf59.jpg",
+        "sourceLineNumber": 1539,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/be44836bf09fd4f8b2d2ce5e92ca3a677ab0b7849bc0fca710bd4a7a478fcf59.jpg"
+      },
+      {
+        "assetId": "0093-source-section-l1524-l1563-7ed768ad38-asset-03",
+        "altText": "",
+        "rawReference": "![](images/bd975cd24e59488681afe4b08663d69723e632c50e8695c7b6f6493ba7564473.jpg)",
+        "assetPath": "images/bd975cd24e59488681afe4b08663d69723e632c50e8695c7b6f6493ba7564473.jpg",
+        "sourceLineNumber": 1546,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/bd975cd24e59488681afe4b08663d69723e632c50e8695c7b6f6493ba7564473.jpg"
+      },
+      {
+        "assetId": "0093-source-section-l1524-l1563-7ed768ad38-asset-04",
+        "altText": "",
+        "rawReference": "![](images/1afe75afe5fe5bdb3989b38140f7a3bfb230a7833c5e7034b33b5d0026b25290.jpg)",
+        "assetPath": "images/1afe75afe5fe5bdb3989b38140f7a3bfb230a7833c5e7034b33b5d0026b25290.jpg",
+        "sourceLineNumber": 1557,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/1afe75afe5fe5bdb3989b38140f7a3bfb230a7833c5e7034b33b5d0026b25290.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0094-source-section-l1564-l1574-dba06c6477",
+    "title": "二、氯气的实验室制法",
+    "summary": "二、氯气的实验室制法 舍勒发现氯气的方法至今还是实验室中制取氯气的主要方法之一。 在实验室中，通常用浓盐酸与二氧化锰反应来制取氯气，装置如图2-17所示。反应的化学方程式如下： $$ \\mathrm {M n O} _ {2} + 4 \\mathrm {H C l} (\\text {浓}) \\xlongequal {\\triangle} \\mathrm {M n C l} _ {2} + \\mathrm {C l} _ {2} \\uparrow + 2 \\mathrm {H} _ {2} \\mathrm {O} $$",
+    "description": "二、氯气的实验室制法 舍勒发现氯气的方法至今还是实验室中制取氯气的主要方法之一。 在实验室中，通常用浓盐酸与二氧化锰反应来制取氯气，装置如图2-17所示。反应的化学方程式如下： $$ \\mathrm {M n O} _ {2} + 4 \\mathrm {H C l} (\\text {浓}) \\xlongequal {\\triangle} \\mathrm {M n C l} _ {2} + \\mathrm {C l} _ {2} \\uparrow + 2 \\mathrm {H} _ {2} \\mathrm {O} $$",
+    "textbookContent": "二、氯气的实验室制法 舍勒发现氯气的方法至今还是实验室中制取氯气的主要方法之一。 在实验室中，通常用浓盐酸与二氧化锰反应来制取氯气，装置如图2-17所示。反应的化学方程式如下： $$ \\mathrm {M n O} _ {2} + 4 \\mathrm {H C l} (\\text {浓}) \\xlongequal {\\triangle} \\mathrm {M n C l} _ {2} + \\mathrm {C l} _ {2} \\uparrow + 2 \\mathrm {H} _ {2} \\mathrm {O} $$",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "盐酸",
+      "二氧化锰"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "二、氯气的实验室制法",
+    "sourceLineStart": 1564,
+    "sourceLineEnd": 1574,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:dba06c6477b891d2e24c370548009582a3d46194d7887c13caf5cc941e383d44",
+    "sourceSectionId": "0094-source-section-l1564-l1574-dba06c6477",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0097-source-section-l1584-l1591-f6f5453831",
+    "title": "实验室中制取气体装置的设计",
+    "summary": "实验室中制取气体装置的设计 实验室中制取气体的装置包括发生装置和收集装置，根据实际需要，还可增加除杂装置和尾气处理装置等。",
+    "description": "实验室中制取气体装置的设计 实验室中制取气体的装置包括发生装置和收集装置，根据实际需要，还可增加除杂装置和尾气处理装置等。",
+    "textbookContent": "实验室中制取气体装置的设计 实验室中制取气体的装置包括发生装置和收集装置，根据实际需要，还可增加除杂装置和尾气处理装置等。 选择各部分装置时，应注意：依据反应物的状态和反应条件，选择气体的发生装置；依据气体及其所含杂质的性质，选择除杂装置；依据气体的密度、气体在水中的溶解性，以及是否与水反应，选择收集装置；依据气体的性质，选择尾气处理装置。 装置的连接顺序一般为：发生装置 $\\rightarrow$ 除杂装置（如需要） $\\rightarrow$ 收集装置 $\\rightarrow$ 尾气处理装置（如需要）。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [
+      "选择各部分装置时，应注意：依据反应物的状态和反应条件，选择气体的发生装置；依据气体及其所含杂质的性质，选择除杂装置；依据气体的密度、气体在水中的溶解性，以及是否与水反应，选择收集装置；依据气体的性质，选择尾气处理装置。"
+    ],
+    "materials": [
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "实验室中制取气体装置的设计",
+    "sourceLineStart": 1584,
+    "sourceLineEnd": 1591,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:f6f54538313d0f8a9d80251293a3347c9a48bbc45a790fa18f6efaacb9623fb3",
+    "sourceSectionId": "0097-source-section-l1584-l1591-f6f5453831",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0099-2-9-l1599-l1627-d0b3defae1",
+    "title": "在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然",
+    "summary": "【实验2-9】 在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然后各滴入几滴 $\\mathrm{AgNO}_{3}$ 溶液, 观察现象。再分别加入少量稀硝酸, 观察现象。可以看到，滴入 $\\mathrm{AgNO}_3$ 溶液后，三支试管中都有白色沉淀生成。",
+    "description": "【实验2-9】 在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然后各滴入几滴 $\\mathrm{AgNO}_{3}$ 溶液, 观察现象。再分别加入少量稀硝酸, 观察现象。可以看到，滴入 $\\mathrm{AgNO}_3$ 溶液后，三支试管中都有白色沉淀生成。",
+    "textbookContent": "【实验2-9】 在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然后各滴入几滴 $\\mathrm{AgNO}_{3}$ 溶液, 观察现象。再分别加入少量稀硝酸, 观察现象。 可以看到，滴入 $\\mathrm{AgNO}_3$ 溶液后，三支试管中都有白色沉淀生成。前两支试管中的白色沉淀不溶于稀硝酸，这是 $\\mathrm{AgCl}$ 沉淀；第三支试管中的沉淀溶于稀硝酸，这是 $\\mathrm{Ag}_2\\mathrm{CO}_3$ 沉淀。前两支试管中发生的离子反应是相同的，可 用同一个离子方程式表示： $$ \\mathrm {C l} ^ {-} + \\mathrm {A g} ^ {+} = \\mathrm {A g C l} \\downarrow $$ 第三支试管中发生的离子反应是: $$ \\mathrm {C O} _ {3} ^ {2 -} + 2 \\mathrm {A g} ^ {+} = \\mathrm {A g} _ {2} \\mathrm {C O} _ {3} \\downarrow $$ $\\mathrm{Ag}_{2} \\mathrm{CO}_{3}$ 可溶于稀硝酸: $$ \\mathrm {A g} _ {2} \\mathrm {C O} _ {3} + 2 \\mathrm {H} ^ {+} = 2 \\mathrm {A g} ^ {+} + \\mathrm {C O} _ {2} \\uparrow + \\mathrm {H} _ {2} \\mathrm {O} $$ 显然，如果溶液中存在 $\\mathrm{CO}_{3}^{2-}$ 时，用 $\\mathrm{AgNO}_{3}$ 溶液检验 $\\mathrm{Cl}^{-}$ 的实验就会受到干扰。因此，在用 $\\mathrm{AgNO}_{3}$ 溶液检验 $\\mathrm{Cl}^{-}$ 时，一般先在被检测的溶液中滴入适量稀硝酸，使其酸化，以排除 $\\mathrm{CO}_{3}^{2-}$ 等的干扰，然后滴入 $\\mathrm{AgNO}_{3}$ 溶液，如产生白色沉淀，则可判断该溶液中含有 $\\mathrm{Cl}^{-}$ 。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "盐酸"
+    ],
+    "observations": [
+      "【实验2-9】 在三支试管中分别加入 $2 \\sim 3 \\mathrm{~mL}$ 稀盐酸、 $\\mathrm{NaCl}$ 溶液、 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 溶液, 然后各滴入几滴 $\\mathrm{AgNO}_{3}$ 溶液, 观察现象。",
+      "再分别加入少量稀硝酸, 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-9】",
+    "sourceLineStart": 1599,
+    "sourceLineEnd": 1627,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:d0b3defae1a7dc87c6d75d77da322203f9d27dfe05d41d64af63b47945b40cc1",
+    "sourceSectionId": "0099-2-9-l1599-l1627-d0b3defae1",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0112-2-10-l1923-l1958-ca34e245c1",
+    "title": "配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液",
+    "summary": "【实验2-10】 配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液。(1) 计算需要 $\\mathrm{NaCl}$ 固体的质量: g。(2) 根据计算结果, 称量 $\\mathrm{NaCl}$ 固体①。(3) 将称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 加入适量蒸馏水, 用玻璃棒搅拌, 使 $\\mathrm{NaCl}$ 固体全部溶解。",
+    "description": "【实验2-10】 配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液。(1) 计算需要 $\\mathrm{NaCl}$ 固体的质量: g。(2) 根据计算结果, 称量 $\\mathrm{NaCl}$ 固体①。(3) 将称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 加入适量蒸馏水, 用玻璃棒搅拌, 使 $\\mathrm{NaCl}$ 固体全部溶解。",
+    "textbookContent": "【实验2-10】 配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液。 (1) 计算需要 $\\mathrm{NaCl}$ 固体的质量: g。 (2) 根据计算结果, 称量 $\\mathrm{NaCl}$ 固体①。 (3) 将称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 加入适量蒸馏水, 用玻璃棒搅拌, 使 $\\mathrm{NaCl}$ 固体全部溶解。 (4) 将烧杯中的溶液沿玻璃棒注入 $100 \\mathrm{~mL}$ 容量瓶（如图 2-25），并用少量蒸馏水洗涤烧杯内壁和玻璃棒 2~3 次，将洗涤液也都注入容量瓶。轻轻摇动容量瓶，使溶液混合均匀。 (5) 将蒸馏水注入容量瓶, 当液面离容量瓶颈部的刻度线 $1 \\sim 2 \\mathrm{~cm}$ 时, 改用胶头滴管滴加蒸馏水至溶液的凹液面与刻度线相切。盖好瓶塞, 反复上下颠倒, 摇匀。 (6) 将配制好的溶液倒入试剂瓶中，并贴好标签。 图2-25 向容量瓶中转移溶液 图2-26 配制一定物质的量浓度的NaCl溶液过程示意图",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "胶头滴管",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验2-10】",
+    "sourceLineStart": 1923,
+    "sourceLineEnd": 1958,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:ca34e245c17e8c068b550e310ed8ed1301c061f08e1e3abe7e492a0807e4750c",
+    "sourceSectionId": "0112-2-10-l1923-l1958-ca34e245c1",
+    "assets": [
+      {
+        "assetId": "0112-2-10-l1923-l1958-ca34e245c1-asset-01",
+        "altText": "",
+        "rawReference": "![](images/0f82ea2bce1b9bccbf45877b6f932cbc4ef7cb04fd4b28dda62ab6bd6d1870ed.jpg)",
+        "assetPath": "images/0f82ea2bce1b9bccbf45877b6f932cbc4ef7cb04fd4b28dda62ab6bd6d1870ed.jpg",
+        "sourceLineNumber": 1943,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/0f82ea2bce1b9bccbf45877b6f932cbc4ef7cb04fd4b28dda62ab6bd6d1870ed.jpg"
+      },
+      {
+        "assetId": "0112-2-10-l1923-l1958-ca34e245c1-asset-02",
+        "altText": "",
+        "rawReference": "![](images/c166d77be7e77fab89a8297bbf0c66838a21a612c36d973bff1f9dc09c0e16d0.jpg)",
+        "assetPath": "images/c166d77be7e77fab89a8297bbf0c66838a21a612c36d973bff1f9dc09c0e16d0.jpg",
+        "sourceLineNumber": 1950,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/c166d77be7e77fab89a8297bbf0c66838a21a612c36d973bff1f9dc09c0e16d0.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0126-source-section-l2234-l2241-de1c4e3525",
+    "title": "1. 练习容量瓶的使用方法",
+    "summary": "【实验目的】 1. 练习容量瓶的使用方法。 2. 练习配制一定物质的量浓度的溶液。 3. 加深对物质的量浓度概念的认识。",
+    "description": "【实验目的】 1. 练习容量瓶的使用方法。 2. 练习配制一定物质的量浓度的溶液。 3. 加深对物质的量浓度概念的认识。",
+    "textbookContent": "【实验目的】 1. 练习容量瓶的使用方法。 2. 练习配制一定物质的量浓度的溶液。 3. 加深对物质的量浓度概念的认识。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 2234,
+    "sourceLineEnd": 2241,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:de1c4e3525467e1f90888b91f59a8a4f28c0cb51315f6142a1e672606023252e",
+    "sourceSectionId": "0126-source-section-l2234-l2241-de1c4e3525",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0127-source-section-l2242-l2245-5bbfb9c619",
+    "title": "烧杯、容量瓶（100 mL）、胶头滴管、量筒、玻璃棒、药匙、滤纸",
+    "summary": "【实验用品】 烧杯、容量瓶（100 mL）、胶头滴管、量筒、玻璃棒、药匙、滤纸、天平。 NaCl、蒸馏水。",
+    "description": "【实验用品】 烧杯、容量瓶（100 mL）、胶头滴管、量筒、玻璃棒、药匙、滤纸、天平。 NaCl、蒸馏水。",
+    "textbookContent": "【实验用品】 烧杯、容量瓶（100 mL）、胶头滴管、量筒、玻璃棒、药匙、滤纸、天平。 NaCl、蒸馏水。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "量筒",
+      "胶头滴管",
+      "药匙",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 2242,
+    "sourceLineEnd": 2245,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:5bbfb9c61933a133dd1bd38ef7cef2712dffad4b1d945ad1d311a1beaaf7b566",
+    "sourceSectionId": "0127-source-section-l2242-l2245-5bbfb9c619",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0128-source-section-l2246-l2290-9e76ec93f1",
+    "title": "1. 配制 $100 \\mathrm{~mL} 1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液 (1) 计算溶质的质量",
+    "summary": "【实验步骤】 1. 配制 $100 \\mathrm{~mL} 1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液 (1) 计算溶质的质量。计算配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{L}$ NaCl溶液所需NaCl固体的质量。（2）称量。在天平上称量出所需质量的NaCl固体。（3）配制溶液。把称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 再向烧杯中加入 $40 \\mathrm{~mL}$ 蒸馏水, 用玻璃棒搅拌, 使 NaCl固体完全溶解。",
+    "description": "【实验步骤】 1. 配制 $100 \\mathrm{~mL} 1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液 (1) 计算溶质的质量。计算配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{L}$ NaCl溶液所需NaCl固体的质量。（2）称量。在天平上称量出所需质量的NaCl固体。（3）配制溶液。把称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 再向烧杯中加入 $40 \\mathrm{~mL}$ 蒸馏水, 用玻璃棒搅拌, 使 NaCl固体完全溶解。",
+    "textbookContent": "【实验步骤】 1. 配制 $100 \\mathrm{~mL} 1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液 (1) 计算溶质的质量。 计算配制 $100\\mathrm{mL}1.00\\mathrm{mol} / \\mathrm{L}$ NaCl溶液所需NaCl固体的质量。 （2）称量。 在天平上称量出所需质量的NaCl固体。 （3）配制溶液。 把称好的 $\\mathrm{NaCl}$ 固体放入烧杯中, 再向烧杯中加入 $40 \\mathrm{~mL}$ 蒸馏水, 用玻璃棒搅拌, 使 NaCl固体完全溶解。 将烧杯中的溶液沿玻璃棒注入 $100 \\mathrm{~mL}$ 容量瓶, 用少量蒸馏水洗涤烧杯内壁和玻璃棒 $2 \\sim 3$ 次, 并将洗涤液也都注入容量瓶。轻轻摇动容量瓶, 使溶液混合均匀。 继续向容量瓶中加入蒸馏水，直到液面在刻度线以下 $1 \\sim 2 \\mathrm{~cm}$ 时，改用胶头滴管滴加蒸馏水，至液面与刻度线相切。盖好容量瓶瓶塞，反复上下颠倒，摇匀。 (4) 将配制好的溶液倒入试剂瓶中, 贴好标签。 2. 用 $1.00 \\mathrm{~mol} / \\mathrm{L}$ NaCl溶液配制 $100 \\mathrm{~mL} 0.50 \\mathrm{~mol} / \\mathrm{L}$ NaCl溶液 (1) 计算所需 $1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液的体积。 计算配制 $100\\mathrm{mL}0.50\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液所需 $1.00\\mathrm{mol} / \\mathrm{LNaCl}$ 溶液的体积。 （2）量取 $1.00\\mathrm{mol / LNaCl}$ 溶液的体积。 用量筒①量取所需体积的 $1.00 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液并注入烧杯中。 （3）配制溶液。 向盛有 $1.00 \\mathrm{~mol} / \\mathrm{L}$ NaCl 溶液的烧杯中加入 $20 \\mathrm{~mL}$ 蒸馏水，用玻璃棒慢慢搅动，使其混合均匀。 将烧杯中的溶液沿玻璃棒注入容量瓶。用少量蒸馏水洗涤烧杯内壁和玻璃棒2~3次，并将洗涤液也都注入容量瓶。 继续向容量瓶中加入蒸馏水，直到液面在刻度线以下 $1\\sim 2\\mathrm{cm}$ 时，改用胶头滴管滴加蒸馏水，至液面与刻度线相切。盖好容量瓶瓶塞，反复上下颠倒，摇匀。 (4) 将配制好的 $100 \\mathrm{~mL} 0.50 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaCl}$ 溶液倒入指定的容器中。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "玻璃棒",
+      "量筒",
+      "胶头滴管",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 2246,
+    "sourceLineEnd": 2290,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:9e76ec93f1bf7404ea07840ad2ea4f5bda54e57d27e7bb95b100052596f3c4df",
+    "sourceSectionId": "0128-source-section-l2246-l2290-9e76ec93f1",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0142-3-1-l2430-l2473-28553d7ea4",
+    "title": "观察描述发生的现象",
+    "summary": "【实验3-1】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeSO}_4$ 溶液, 然后各滴入 $\\mathrm{NaOH}$ 溶液。观察并描述发生的现象。$\\mathrm{Fe(OH)_3}$ $\\mathrm{Fe(OH)_2}$ 图3-8 $\\mathrm{Fe(OH)_3}$ 和 $\\mathrm{Fe(OH)_2}$ 的生成 氢氧化铁 iron(Ⅲ) hydroxide 氢氧化亚铁 iron(II) hydroxide 为什么在 $\\mathrm{FeSO_4}$ 溶液中加入NaOH溶液时，生成的白色絮状沉淀迅速变成灰绿色，过一段时间后还会有红褐色物质生成呢？",
+    "description": "【实验3-1】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeSO}_4$ 溶液, 然后各滴入 $\\mathrm{NaOH}$ 溶液。观察并描述发生的现象。$\\mathrm{Fe(OH)_3}$ $\\mathrm{Fe(OH)_2}$ 图3-8 $\\mathrm{Fe(OH)_3}$ 和 $\\mathrm{Fe(OH)_2}$ 的生成 氢氧化铁 iron(Ⅲ) hydroxide 氢氧化亚铁 iron(II) hydroxide 为什么在 $\\mathrm{FeSO_4}$ 溶液中加入NaOH溶液时，生成的白色絮状沉淀迅速变成灰绿色，过一段时间后还会有红褐色物质生成呢？",
+    "textbookContent": "【实验3-1】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeSO}_4$ 溶液, 然后各滴入 $\\mathrm{NaOH}$ 溶液。观察并描述发生的现象。 $\\mathrm{Fe(OH)_3}$ $\\mathrm{Fe(OH)_2}$ 图3-8 $\\mathrm{Fe(OH)_3}$ 和 $\\mathrm{Fe(OH)_2}$ 的生成 氢氧化铁 iron(Ⅲ) hydroxide 氢氧化亚铁 iron(II) hydroxide 为什么在 $\\mathrm{FeSO_4}$ 溶液中加入NaOH溶液时，生成的白色絮状沉淀迅速变成灰绿色，过一段时间后还会有红褐色物质生成呢？这是因为白色的氢氧化亚铁 $\\left[\\mathrm{Fe(OH)}_{2}\\right]$ 被溶解在溶液中的氧气氧化成了红褐色的氢氧化铁 $\\left[\\mathrm{Fe(OH)}_{3}\\right]$ ，反应的化学方程式分别为： $$ \\begin{array}{l} \\mathrm {F e S O} _ {4} + 2 \\mathrm {N a O H} = \\mathrm {F e} (\\mathrm {O H}) _ {2} \\downarrow + \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} \\\\ 4 \\mathrm {F e} (\\mathrm {O H}) _ {2} + \\mathrm {O} _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O} = 4 \\mathrm {F e} (\\mathrm {O H}) _ {3} \\\\ \\end{array} $$ 加热 $\\mathrm{Fe}(\\mathrm{OH})_{3}$ 时, 它能失去水生成红棕色的 $\\mathrm{Fe}_{2} \\mathrm{O}_{3}$ 粉末。 $$ 2 \\mathrm {F e} (\\mathrm {O H}) _ {3} \\xlongequal {\\triangle} \\mathrm {F e} _ {2} \\mathrm {O} _ {3} + 3 \\mathrm {H} _ {2} \\mathrm {O} $$ $\\mathrm{Fe}(\\mathrm{OH})_{2}$ 和 $\\mathrm{Fe}(\\mathrm{OH})_{3}$ 都是不溶性碱，它们都能与酸发生反应。",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [
+      "这是因为白色的氢氧化亚铁 $\\left[\\mathrm{Fe(OH)}_{2}\\right]$ 被溶解在溶液中的氧气氧化成了红褐色的氢氧化铁 $\\left[\\mathrm{Fe(OH)}_{3}\\right]$ ，反应的化学方程式分别为： $$ \\begin{array}{l} \\mathrm {F e S O} _ {4} + 2 \\mathrm {N a O H} = \\mathrm {F e} (\\mathrm {O H}) _ {2} \\downarrow + \\mathrm {N a} _ {2} \\mathrm {S O} _ {4} \\\\ 4 \\mathrm {F e} (\\mathrm {O H}) _ {2} + \\mathrm {O} _ {2} + 2 \\mathrm {H} _ {2} \\mathrm {O} = 4 \\mathrm {F e} (\\mathrm {O H}) _ {3} \\\\ \\end{array} $$ 加热 $\\mathrm{Fe}(\\mathrm{OH})_{3}$ 时, 它能失去水生成红棕色的 $\\mathrm{Fe}_{2} \\mathrm{O}_{3}$ 粉末。"
+    ],
+    "materials": [
+      "试管",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "观察并描述发生的现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验3-1】",
+    "sourceLineStart": 2430,
+    "sourceLineEnd": 2473,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:28553d7ea4dd3cf5c0556e442cee7f60ad6080c81de55c1d7b1b5f591d1cc6c3",
+    "sourceSectionId": "0142-3-1-l2430-l2473-28553d7ea4",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0145-3-2-l2485-l2500-6d99eb4e15",
+    "title": "观察记录现象",
+    "summary": "【实验3-2】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeCl}_2$ 溶液，各滴入几滴KSCN溶液。观察并记录现象。 图3-9 向 $\\mathrm{FeCl}_3$ 溶液中滴入KSCN溶液（左），向 $\\mathrm{FeCl}_2$ 溶液中滴入KSCN溶液（右） 可以看到，含有 $\\mathrm{Fe}^{3+}$ 的盐溶液遇到KSCN溶液时变成红色，我们可以利用这一反应检验 $\\mathrm{Fe}^{3+}$ 的存在。",
+    "description": "【实验3-2】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeCl}_2$ 溶液，各滴入几滴KSCN溶液。观察并记录现象。 图3-9 向 $\\mathrm{FeCl}_3$ 溶液中滴入KSCN溶液（左），向 $\\mathrm{FeCl}_2$ 溶液中滴入KSCN溶液（右） 可以看到，含有 $\\mathrm{Fe}^{3+}$ 的盐溶液遇到KSCN溶液时变成红色，我们可以利用这一反应检验 $\\mathrm{Fe}^{3+}$ 的存在。",
+    "textbookContent": "【实验3-2】 在两支试管中分别加入少量的 $\\mathrm{FeCl}_3$ 溶液和 $\\mathrm{FeCl}_2$ 溶液，各滴入几滴KSCN溶液。观察并记录现象。 图3-9 向 $\\mathrm{FeCl}_3$ 溶液中滴入KSCN溶液（左），向 $\\mathrm{FeCl}_2$ 溶液中滴入KSCN溶液（右） 可以看到，含有 $\\mathrm{Fe}^{3+}$ 的盐溶液遇到KSCN溶液时变成红色，我们可以利用这一反应检验 $\\mathrm{Fe}^{3+}$ 的存在。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管"
+    ],
+    "observations": [
+      "观察并记录现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验3-2】",
+    "sourceLineStart": 2485,
+    "sourceLineEnd": 2500,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:6d99eb4e1504586162a66bc523aac91c3680f9cefcbe569c4b81ee601ba2ee9e",
+    "sourceSectionId": "0145-3-2-l2485-l2500-6d99eb4e15",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0146-3-3-l2501-l2528-094b137f77",
+    "title": "观察记录现象",
+    "summary": "【实验3-3】 在盛有 $2 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 溶液的试管中加入过量铁粉, 振荡试管。充分反应后, 滴入几滴KSCN溶液 (如图 3-10左), 观察并记录现象。把上层清液倒入另一支试管中, 再滴入几滴氯水 (如图 3-10右), 又发生了什么变化?",
+    "description": "【实验3-3】 在盛有 $2 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 溶液的试管中加入过量铁粉, 振荡试管。充分反应后, 滴入几滴KSCN溶液 (如图 3-10左), 观察并记录现象。把上层清液倒入另一支试管中, 再滴入几滴氯水 (如图 3-10右), 又发生了什么变化?",
+    "textbookContent": "【实验3-3】 在盛有 $2 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 溶液的试管中加入过量铁粉, 振荡试管。充分反应后, 滴入几滴KSCN溶液 (如图 3-10左), 观察并记录现象。把上层清液倒入另一支试管中, 再滴入几滴氯水 (如图 3-10右), 又发生了什么变化? 图3-10 $\\mathrm{Fe}^{3+}$ 被还原（左）， $\\mathrm{Fe}^{2+}$ 被氧化（右） 在上述实验中， $\\mathrm{FeCl}_3$ 溶液中的 $\\mathrm{Fe}^{3+}$ 被铁粉还原成 $\\mathrm{Fe}^{2+}$ ， $\\mathrm{Fe}^{2+}$ 又被 $\\mathrm{Cl}_2$ 氧化成 $\\mathrm{Fe}^{3+}$ ，反应的离子方程式分别为： $$ 2 F e ^ {3 +} + F e = 3 F e ^ {2 +} $$ $$ 2 \\mathrm {F e} ^ {2 +} + \\mathrm {C l} _ {2} = 2 \\mathrm {F e} ^ {3 +} + 2 \\mathrm {C l} ^ {-} $$ 铁盐遇到较强的还原剂会被还原成亚铁盐，亚铁盐在较强的氧化剂作用下会被氧化成铁盐，即 $\\mathrm{Fe}^{3+}$ 和 $\\mathrm{Fe}^{2+}$ 在一定条件下是可以相互转化的： $$ \\mathrm {F e} ^ {3 +} \\xrightarrow [ \\text {氧 化 剂} ]{\\text {还 原 剂}} \\mathrm {F e} ^ {2 +} $$",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "充分反应后, 滴入几滴KSCN溶液 (如图 3-10左), 观察并记录现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验3-3】",
+    "sourceLineStart": 2501,
+    "sourceLineEnd": 2528,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:094b137f77300e670576403293f332056d45e878ac97e70c513f3b7891444921",
+    "sourceSectionId": "0146-3-3-l2501-l2528-094b137f77",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0153-source-section-l2571-l2574-b56e456261",
+    "title": "观察现象",
+    "summary": "【实验】 取一小块覆铜板，用油性笔在覆铜板上画上设计好的图案，然后浸入盛有 $\\mathrm{FeCl}_3$ 溶液的小烧杯中。过一段时间后，取出覆铜板并用水清洗干净。观察实验现象，并展示制作的图案。",
+    "description": "【实验】 取一小块覆铜板，用油性笔在覆铜板上画上设计好的图案，然后浸入盛有 $\\mathrm{FeCl}_3$ 溶液的小烧杯中。过一段时间后，取出覆铜板并用水清洗干净。观察实验现象，并展示制作的图案。",
+    "textbookContent": "【实验】 取一小块覆铜板，用油性笔在覆铜板上画上设计好的图案，然后浸入盛有 $\\mathrm{FeCl}_3$ 溶液的小烧杯中。过一段时间后，取出覆铜板并用水清洗干净。观察实验现象，并展示制作的图案。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "烧杯",
+      "水"
+    ],
+    "observations": [
+      "观察实验现象，并展示制作的图案。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验】",
+    "sourceLineStart": 2571,
+    "sourceLineEnd": 2574,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:b56e4562616a6538ba3579cb6b3b6d3373de3bfb1efd49ffd9c76aa2500246a4",
+    "sourceSectionId": "0153-source-section-l2571-l2574-b56e456261",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0170-3-5-l2771-l2799-f60987a42b",
+    "title": "氢气燃烧",
+    "summary": "【实验3-5】 在两支试管中分别加入少量的 $\\mathrm{NaOH}$ 溶液，然后向其中一支试管中放入一小块铝片，向另一支试管中放入用砂纸仔细打磨过（除去表面的氧化膜）的一小块铝片。观察现象。过一段时间后，将点燃的木条分别放在两支试管口，你观察到什么现象？",
+    "description": "【实验3-5】 在两支试管中分别加入少量的 $\\mathrm{NaOH}$ 溶液，然后向其中一支试管中放入一小块铝片，向另一支试管中放入用砂纸仔细打磨过（除去表面的氧化膜）的一小块铝片。观察现象。过一段时间后，将点燃的木条分别放在两支试管口，你观察到什么现象？",
+    "textbookContent": "【实验3-5】 在两支试管中分别加入少量的 $\\mathrm{NaOH}$ 溶液，然后向其中一支试管中放入一小块铝片，向另一支试管中放入用砂纸仔细打磨过（除去表面的氧化膜）的一小块铝片。观察现象。过一段时间后，将点燃的木条分别放在两支试管口，你观察到什么现象？ 可以看到，放入打磨过铝片的试管中立即产生气泡；而放入未打磨的铝片的试管中开始没有气泡，一段时间后才产生气泡。两支试管中均放出一种可燃性气体——氢气。铝、氧化铝与 $\\mathrm{NaOH}$ 溶液反应的化学方程式分别为①： $$ 2 \\mathrm {A l} + 2 \\mathrm {N a O H} + 2 \\mathrm {H} _ {2} \\mathrm {O} = 2 \\mathrm {N a A l O} _ {2} + 3 \\mathrm {H} _ {2} \\uparrow $$ 偏铝酸钠 $$ \\mathrm {A l} _ {2} \\mathrm {O} _ {3} + 2 \\mathrm {N a O H} = 2 \\mathrm {N a A l O} _ {2} + \\mathrm {H} _ {2} \\mathrm {O} $$ 像 $\\mathrm{Al}_{2} \\mathrm{O}_{3}$ 这类既能与酸反应生成盐和水, 又能与碱反应生成盐和水的氧化物, 叫做两性氧化物。 由于 $\\mathrm{Al}$ 和 $\\mathrm{Al}_{2} \\mathrm{O}_{3}$ 均能与酸、碱反应, 因此铝制餐具不宜用来蒸煮或长时间存放酸性或碱性食物。 纯铝的硬度和强度较小，不适合制造机器零件等。向铝中加入少量的合金元素，如 $\\mathrm{Cu}$ 、 $\\mathrm{Mg}$ 、Si、 $\\mathrm{Mn}$ 、Zn及稀土元素等，可制成铝合金。铝合金是目前用途广泛的合金之一。例如，硬铝（一种铝合金）中含 $\\mathrm{Cu}4\\%$ 、 $\\mathrm{Mg}0.5\\%$ 、 $\\mathrm{Mn}0.5\\%$ 、 $\\mathrm{Si}0.7\\%$ ，它的密度小、强度高，具有较强的抗腐蚀能力，是制造飞机和宇宙飞船的理想材料。 图3-18 硬铝常用于制造飞机的外壳",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "例如，硬铝（一种铝合金）中含 $\\mathrm{Cu}4\\%$ 、 $\\mathrm{Mg}0.5\\%$ 、 $\\mathrm{Mn}0.5\\%$ 、 $\\mathrm{Si}0.7\\%$ ，它的密度小、强度高，具有较强的抗腐蚀能力，是制造飞机和宇宙飞船的理想材料。"
+    ],
+    "materials": [
+      "试管",
+      "水"
+    ],
+    "observations": [
+      "观察现象。",
+      "过一段时间后，将点燃的木条分别放在两支试管口，你观察到什么现象？"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验3-5】",
+    "sourceLineStart": 2771,
+    "sourceLineEnd": 2799,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:f60987a42bd665ca74cfa9a9f89925c96c048ba46ce570d4e0f707fee839403c",
+    "sourceSectionId": "0170-3-5-l2771-l2799-f60987a42b",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0185-source-section-l3056-l3063-39f75a7ef1",
+    "title": "1. 认识铁及其化合物的重要化学性质",
+    "summary": "【实验目的】 1. 认识铁及其化合物的重要化学性质。 2. 学会铁离子的检验方法。 3. 认识可通过氧化还原反应实现含有不同价态同种元素的物质间的相互转化。",
+    "description": "【实验目的】 1. 认识铁及其化合物的重要化学性质。 2. 学会铁离子的检验方法。 3. 认识可通过氧化还原反应实现含有不同价态同种元素的物质间的相互转化。",
+    "textbookContent": "【实验目的】 1. 认识铁及其化合物的重要化学性质。 2. 学会铁离子的检验方法。 3. 认识可通过氧化还原反应实现含有不同价态同种元素的物质间的相互转化。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 3056,
+    "sourceLineEnd": 3063,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:39f75a7ef155114e8b98cf52c77fa20b96de2866081321606be672f5abbcb7a0",
+    "sourceSectionId": "0185-source-section-l3056-l3063-39f75a7ef1",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0186-source-section-l3064-l3069-0460720c13",
+    "title": "试管、胶头滴管、药匙、镊子",
+    "summary": "【实验用品】 试管、胶头滴管、药匙、镊子。 $\\mathrm{CuSO}_{4}$ 溶液、 $\\mathrm{FeCl}_{3}$ 稀溶液、 $\\mathrm{FeCl}_{2}$ 溶液、 $\\mathrm{FeSO}_{4}$ 溶液、酸性 $\\mathrm{KMnO}_{4}$ 溶液、KSCN溶液、KI溶液、淀粉溶液、蒸馏水、锌片、铜片、铁粉、铁丝。",
+    "description": "【实验用品】 试管、胶头滴管、药匙、镊子。 $\\mathrm{CuSO}_{4}$ 溶液、 $\\mathrm{FeCl}_{3}$ 稀溶液、 $\\mathrm{FeCl}_{2}$ 溶液、 $\\mathrm{FeSO}_{4}$ 溶液、酸性 $\\mathrm{KMnO}_{4}$ 溶液、KSCN溶液、KI溶液、淀粉溶液、蒸馏水、锌片、铜片、铁粉、铁丝。",
+    "textbookContent": "【实验用品】 试管、胶头滴管、药匙、镊子。 $\\mathrm{CuSO}_{4}$ 溶液、 $\\mathrm{FeCl}_{3}$ 稀溶液、 $\\mathrm{FeCl}_{2}$ 溶液、 $\\mathrm{FeSO}_{4}$ 溶液、酸性 $\\mathrm{KMnO}_{4}$ 溶液、KSCN溶液、KI溶液、淀粉溶液、蒸馏水、锌片、铜片、铁粉、铁丝。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "胶头滴管",
+      "药匙",
+      "镊子",
+      "水",
+      "铁丝"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 3064,
+    "sourceLineEnd": 3069,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:0460720c13539a94b0995beace6ebd96724dbb7a27796f64e6e067f171085e1f",
+    "sourceSectionId": "0186-source-section-l3064-l3069-0460720c13",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0187-source-section-l3070-l3087-d54f290d14",
+    "title": "观察并加以解释",
+    "summary": "【实验步骤】 1. 铁及其化合物的性质 （1）铁单质的还原性 在一支试管中加入 $2 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液，再将一段铁丝放入 $\\mathrm{CuSO}_{4}$ 溶液中。过一会儿，取出铁丝，观察现象并加以解释。(2) 铁盐的氧化性 (1)取 $3 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 稀溶液加入试管中, 加入几小块铜片, 振荡, 过一会儿, 观察现象。",
+    "description": "【实验步骤】 1. 铁及其化合物的性质 （1）铁单质的还原性 在一支试管中加入 $2 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液，再将一段铁丝放入 $\\mathrm{CuSO}_{4}$ 溶液中。过一会儿，取出铁丝，观察现象并加以解释。(2) 铁盐的氧化性 (1)取 $3 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 稀溶液加入试管中, 加入几小块铜片, 振荡, 过一会儿, 观察现象。",
+    "textbookContent": "【实验步骤】 1. 铁及其化合物的性质 （1）铁单质的还原性 在一支试管中加入 $2 \\mathrm{~mL} \\mathrm{CuSO}_{4}$ 溶液，再将一段铁丝放入 $\\mathrm{CuSO}_{4}$ 溶液中。过一会儿，取出铁丝，观察现象并加以解释。 (2) 铁盐的氧化性 (1)取 $3 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 稀溶液加入试管中, 加入几小块铜片, 振荡, 过一会儿, 观察现象。 (2)在一支盛有 $3 \\mathrm{~mL}$ 水的试管中滴加几滴 $\\mathrm{FeCl}_{3}$ 稀溶液, 再滴加 3 滴 KI 溶液, 观察现象。然后向溶液中滴加 2 滴淀粉溶液, 观察现象。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "铁丝"
+    ],
+    "observations": [
+      "过一会儿，取出铁丝，观察现象并加以解释。",
+      "(2) 铁盐的氧化性 (1)取 $3 \\mathrm{~mL} \\mathrm{FeCl}_{3}$ 稀溶液加入试管中, 加入几小块铜片, 振荡, 过一会儿, 观察现象。",
+      "(2)在一支盛有 $3 \\mathrm{~mL}$ 水的试管中滴加几滴 $\\mathrm{FeCl}_{3}$ 稀溶液, 再滴加 3 滴 KI 溶液, 观察现象。",
+      "然后向溶液中滴加 2 滴淀粉溶液, 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验步骤】",
+    "sourceLineStart": 3070,
+    "sourceLineEnd": 3087,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:d54f290d14a06e02f2022e093b5ad59288fba1b674da96e301a73b03c12e142c",
+    "sourceSectionId": "0187-source-section-l3070-l3087-d54f290d14",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0212-source-section-l3345-l3366-388eec99f0",
+    "title": "【实验和观察】",
+    "summary": "【实验和观察】 回忆钠与氧气、水反应的实验现象，并观察下列实验（由教师演示）。(1) 将干燥的坩埚加热, 同时切取一块绿豆大的钾, 用镊子夹取并迅速投到热坩埚中 (如图 4-8)。继续加热片刻, 待钾熔化后立即撤掉酒精灯, 观察现象。",
+    "description": "【实验和观察】 回忆钠与氧气、水反应的实验现象，并观察下列实验（由教师演示）。(1) 将干燥的坩埚加热, 同时切取一块绿豆大的钾, 用镊子夹取并迅速投到热坩埚中 (如图 4-8)。继续加热片刻, 待钾熔化后立即撤掉酒精灯, 观察现象。",
+    "textbookContent": "【实验和观察】 回忆钠与氧气、水反应的实验现象，并观察下列实验（由教师演示）。 (1) 将干燥的坩埚加热, 同时切取一块绿豆大的钾, 用镊子夹取并迅速投到热坩埚中 (如图 4-8)。继续加热片刻, 待钾熔化后立即撤掉酒精灯, 观察现象。 (2) 在烧杯中加入一些水, 滴入几滴酚酞溶液。切取一块绿豆大的钾, 用镊子夹取并投入水中 (如图 4-9), 观察现象。 图4-8 钾在空气中燃烧 图4-9 钾与水反应",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "(1) 将干燥的坩埚加热, 同时切取一块绿豆大的钾, 用镊子夹取并迅速投到热坩埚中 (如图 4-8)。",
+      "继续加热片刻, 待钾熔化后立即撤掉酒精灯, 观察现象。"
+    ],
+    "materials": [
+      "烧杯",
+      "酒精灯",
+      "镊子",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "【实验和观察】 回忆钠与氧气、水反应的实验现象，并观察下列实验（由教师演示）。",
+      "继续加热片刻, 待钾熔化后立即撤掉酒精灯, 观察现象。",
+      "切取一块绿豆大的钾, 用镊子夹取并投入水中 (如图 4-9), 观察现象。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验和观察】",
+    "sourceLineStart": 3345,
+    "sourceLineEnd": 3366,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:388eec99f05d9d3e3abde1a5189ca0f3a2f3786927487bf42630bf35283cd65d",
+    "sourceSectionId": "0212-source-section-l3345-l3366-388eec99f0",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0218-4-1-l3485-l3529-89d8c38f43",
+    "title": "观察溶液的颜色变化",
+    "summary": "【实验4-1】 分别向盛有 $4 \\mathrm{~mL} \\mathrm{KBr}$ 溶液和 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的两支试管中加入 $1 \\mathrm{~mL}$ 氯水, 振荡, 观察溶液的颜色变化, 并与氯水的颜色进行比较。写出反应的化学方程式。向盛有 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的试管中加入 $1 \\mathrm{~mL}$ 溴水, 振荡,观察溶液的颜色变化, 并与溴水的颜色进行比较。写出反应的化学方程式。",
+    "description": "【实验4-1】 分别向盛有 $4 \\mathrm{~mL} \\mathrm{KBr}$ 溶液和 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的两支试管中加入 $1 \\mathrm{~mL}$ 氯水, 振荡, 观察溶液的颜色变化, 并与氯水的颜色进行比较。写出反应的化学方程式。向盛有 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的试管中加入 $1 \\mathrm{~mL}$ 溴水, 振荡,观察溶液的颜色变化, 并与溴水的颜色进行比较。写出反应的化学方程式。",
+    "textbookContent": "【实验4-1】 分别向盛有 $4 \\mathrm{~mL} \\mathrm{KBr}$ 溶液和 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的两支试管中加入 $1 \\mathrm{~mL}$ 氯水, 振荡, 观察溶液的颜色变化, 并与氯水的颜色进行比较。写出反应的化学方程式。 向盛有 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的试管中加入 $1 \\mathrm{~mL}$ 溴水, 振荡,观察溶液的颜色变化, 并与溴水的颜色进行比较。写出反应的化学方程式。 KBr溶液 + 氯水 KI溶液 + 氯水 图4-12 向KI溶液中加入溴水 图4-11 分别向KBr溶液和KI溶液中加入氯水 随着核电荷数的增加，卤素单质的氧化性强弱顺序为： 通过比较和分析碱金属单质与氧气、水的反应，以及卤素单质与氢气的反应、卤素单质间的置换反应，我们可以看出，元素的性质与原子结构有密切的关系，主要与原子核外电子的排布，特别是最外层电子数有关。原子结构相似的一族元素，它们在化学性质上表现出相似性和递变性。 在元素周期表中，同主族元素从上到下原子核外电子层数依次增多，原子半径逐渐增大，失电子能力逐渐增强，得电子能力逐渐减弱。所以，金属性逐渐增强，非金属性逐渐减弱。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "水",
+      "氧气"
+    ],
+    "observations": [
+      "【实验4-1】 分别向盛有 $4 \\mathrm{~mL} \\mathrm{KBr}$ 溶液和 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的两支试管中加入 $1 \\mathrm{~mL}$ 氯水, 振荡, 观察溶液的颜色变化, 并与氯水的颜色进行比较。",
+      "向盛有 $4 \\mathrm{~mL} \\mathrm{KI}$ 溶液的试管中加入 $1 \\mathrm{~mL}$ 溴水, 振荡,观察溶液的颜色变化, 并与溴水的颜色进行比较。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验4-1】",
+    "sourceLineStart": 3485,
+    "sourceLineEnd": 3529,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:89d8c38f43fe94e8804adcd567ec48f90122e1e9443cc1df89b1a4aa277873da",
+    "sourceSectionId": "0218-4-1-l3485-l3529-89d8c38f43",
+    "assets": [
+      {
+        "assetId": "0218-4-1-l3485-l3529-89d8c38f43-asset-01",
+        "altText": "",
+        "rawReference": "![](images/fdc25b5da4a64459eb968010999ae8f5c076f0956e1b973213f5c96f62362b3f.jpg)",
+        "assetPath": "images/fdc25b5da4a64459eb968010999ae8f5c076f0956e1b973213f5c96f62362b3f.jpg",
+        "sourceLineNumber": 3523,
+        "isLocalTextbookAsset": true,
+        "projectRelativePath": "src/data/textbooks/2019版人教版高中化学必修第1册/images/fdc25b5da4a64459eb968010999ae8f5c076f0956e1b973213f5c96f62362b3f.jpg"
+      }
+    ]
+  },
+  {
+    "candidateId": "experiment-0231-source-section-l3660-l3667-4b8bec9e8f",
+    "title": "【实验比较】",
+    "summary": "【实验比较】 (1) 取一小段镁条, 用砂纸除去表面的氧化膜, 放到试管中。向试管中加入 $2 \\mathrm{~mL}$ 水, 并滴入2滴酚酞溶液, 观察现象。过一会儿, 加热试管至液体沸腾, 观察现象。与钠和水的反应相比, 镁和水的反应难易程度如何?生成了什么物质?",
+    "description": "【实验比较】 (1) 取一小段镁条, 用砂纸除去表面的氧化膜, 放到试管中。向试管中加入 $2 \\mathrm{~mL}$ 水, 并滴入2滴酚酞溶液, 观察现象。过一会儿, 加热试管至液体沸腾, 观察现象。与钠和水的反应相比, 镁和水的反应难易程度如何?生成了什么物质?",
+    "textbookContent": "【实验比较】 (1) 取一小段镁条, 用砂纸除去表面的氧化膜, 放到试管中。向试管中加入 $2 \\mathrm{~mL}$ 水, 并滴入2滴酚酞溶液, 观察现象。过一会儿, 加热试管至液体沸腾, 观察现象。与钠和水的反应相比, 镁和水的反应难易程度如何? 生成了什么物质? (2) 向试管中加入 $2 \\mathrm{~mL} 1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{AlCl}_{3}$ 溶液, 然后滴加氨水, 直到不再产生白色絮状 $\\mathrm{Al(OH)}_{3}$ 沉淀为止。将 $\\mathrm{Al(OH)}_{3}$ 沉淀分装在两支试管中, 向一支试管中滴加 $2 \\mathrm{~mol} / \\mathrm{L}$ 盐酸, 向另一支试管中滴加 $2 \\mathrm{~mol} / \\mathrm{L} \\mathrm{NaOH}$ 溶液。边滴加边振荡, 观察现象。 用 $2 \\mathrm{~mL} 1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{MgCl}_{2}$ 溶液代替 $\\mathrm{AlCl}_{3}$ 溶液做上述实验，观察现象，并进行比较。",
+    "animationStatus": "deferred",
+    "hazardLevel": "high",
+    "safetyNotes": [
+      "过一会儿, 加热试管至液体沸腾, 观察现象。"
+    ],
+    "materials": [
+      "试管",
+      "水",
+      "盐酸"
+    ],
+    "observations": [
+      "向试管中加入 $2 \\mathrm{~mL}$ 水, 并滴入2滴酚酞溶液, 观察现象。",
+      "过一会儿, 加热试管至液体沸腾, 观察现象。",
+      "边滴加边振荡, 观察现象。",
+      "用 $2 \\mathrm{~mL} 1 \\mathrm{~mol} / \\mathrm{L} \\mathrm{MgCl}_{2}$ 溶液代替 $\\mathrm{AlCl}_{3}$ 溶液做上述实验，观察现象，并进行比较。"
+    ],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验比较】",
+    "sourceLineStart": 3660,
+    "sourceLineEnd": 3667,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:4b8bec9e8f505b91e24a34cc28ed68067167c91b7d66c87e9279506aadb977b3",
+    "sourceSectionId": "0231-source-section-l3660-l3667-4b8bec9e8f",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0252-source-section-l4097-l4102-5dcaa5fdf1",
+    "title": "1. 加深对同周期、同主族元素性质递变规律的",
+    "summary": "【实验目的】 1. 加深对同周期、同主族元素性质递变规律的认识。 2. 体会元素周期表和元素周期律在学习元素化合物知识中的重要作用。",
+    "description": "【实验目的】 1. 加深对同周期、同主族元素性质递变规律的认识。 2. 体会元素周期表和元素周期律在学习元素化合物知识中的重要作用。",
+    "textbookContent": "【实验目的】 1. 加深对同周期、同主族元素性质递变规律的认识。 2. 体会元素周期表和元素周期律在学习元素化合物知识中的重要作用。",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验目的】",
+    "sourceLineStart": 4097,
+    "sourceLineEnd": 4102,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:5dcaa5fdf1d175d8c000048b333c659752ef675436dc03948eaa8cea30b198c0",
+    "sourceSectionId": "0252-source-section-l4097-l4102-5dcaa5fdf1",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0253-source-section-l4103-l4108-35b326c7df",
+    "title": "试管、试管夹、试管架、量筒、胶头滴管、酒精灯、白",
+    "summary": "【实验用品】 试管、试管夹、试管架、量筒、胶头滴管、酒精灯、白色点滴板、镊子、砂纸、火柴。 镁条、新制的氯水、溴水、NaBr溶液、NaI溶液、 $\\mathrm{MgCl}_2$ 溶液、 $\\mathrm{AlCl}_3$ 溶液、 $1 \\, \\mathrm{mol/L}$ NaOH溶液、酚酞溶液。",
+    "description": "【实验用品】 试管、试管夹、试管架、量筒、胶头滴管、酒精灯、白色点滴板、镊子、砂纸、火柴。 镁条、新制的氯水、溴水、NaBr溶液、NaI溶液、 $\\mathrm{MgCl}_2$ 溶液、 $\\mathrm{AlCl}_3$ 溶液、 $1 \\, \\mathrm{mol/L}$ NaOH溶液、酚酞溶液。",
+    "textbookContent": "【实验用品】 试管、试管夹、试管架、量筒、胶头滴管、酒精灯、白色点滴板、镊子、砂纸、火柴。 镁条、新制的氯水、溴水、NaBr溶液、NaI溶液、 $\\mathrm{MgCl}_2$ 溶液、 $\\mathrm{AlCl}_3$ 溶液、 $1 \\, \\mathrm{mol/L}$ NaOH溶液、酚酞溶液。",
+    "animationStatus": "deferred",
+    "hazardLevel": "medium",
+    "safetyNotes": [],
+    "materials": [
+      "试管",
+      "酒精灯",
+      "量筒",
+      "胶头滴管",
+      "镊子",
+      "火柴",
+      "水"
+    ],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "【实验用品】",
+    "sourceLineStart": 4103,
+    "sourceLineEnd": 4108,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:35b326c7df3e8b609b51b368ff824b807c9a60c2dd366c3067f89b8370a7a409",
+    "sourceSectionId": "0253-source-section-l4103-l4108-35b326c7df",
+    "assets": []
+  },
+  {
+    "candidateId": "experiment-0258-source-section-l4140-l4141-4abfab4abc",
+    "title": "实验室突发事件的应对措施和常见废弃物的处理方法",
+    "summary": "实验室突发事件的应对措施和常见废弃物的处理方法",
+    "description": "实验室突发事件的应对措施和常见废弃物的处理方法",
+    "textbookContent": "实验室突发事件的应对措施和常见废弃物的处理方法",
+    "animationStatus": "deferred",
+    "hazardLevel": "low",
+    "safetyNotes": [],
+    "materials": [],
+    "observations": [],
+    "deferredReason": "Runtime use is deferred until a human reviewer confirms safety, materials, observations, and animation requirements.",
+    "reviewStatus": "needsReview",
+    "runtimeEligible": false,
+    "sourceVolumeId": "pep-chemistry-g10-required-1",
+    "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+    "sourceHeading": "实验室突发事件的应对措施和常见废弃物的处理方法",
+    "sourceLineStart": 4140,
+    "sourceLineEnd": 4141,
+    "sourceHash": "sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d",
+    "sectionHash": "sha256:4abfab4abc6d3a94fafb62356dd73fc739eeea40cce03f1ab55fd993f09ef2b0",
+    "sourceSectionId": "0258-source-section-l4140-l4141-4abfab4abc",
+    "assets": []
+  }
+]

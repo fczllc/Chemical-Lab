@@ -23,6 +23,22 @@ const knownTextbookBatches = new Map([
   [
     'rj-chemistry-grade8-54-2024-full',
     buildTextbookPaths('rj-chemistry-grade8-54-2024-full')
+  ],
+  [
+    'pep-chemistry-g10-required-1',
+    buildTextbookPaths('pep-chemistry-g10-required-1')
+  ],
+  [
+    'pep-chemistry-g10-required-2',
+    buildTextbookPaths('pep-chemistry-g10-required-2')
+  ],
+  [
+    'pep-chemistry-g11-selective-1',
+    buildTextbookPaths('pep-chemistry-g11-selective-1')
+  ],
+  [
+    'pep-chemistry-g11-selective-2',
+    buildTextbookPaths('pep-chemistry-g11-selective-2')
   ]
 ]);
 

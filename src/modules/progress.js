@@ -1,7 +1,15 @@
 /** ===== 学习进度模块 ===== */
 import { EXPERIMENT_LABELS, FEATURE_LABELS, GAME_LABELS } from '../data/contentMeta.js';
-import { achievementsData, curriculumTags, elements, labExperiments, quizData, reactions } from '../data/index.js';
-import { learningPath } from '../data/index.js';
+import {
+  achievementsData,
+  curriculumTags,
+  elements,
+  labExperiments,
+  learningPath,
+  quizData,
+  reactions,
+  textbookAssetManifest
+} from '../data/index.js';
 import {
   getAchievementDates,
   getActivityLog,
@@ -24,6 +32,8 @@ let selectedStageId = learningPath.stages[0]?.id || null;
 let celebrationMessage = '';
 let celebrationTimer = null;
 let focusedLearningSegmentId = null;
+let activeLearningSegmentId = null;
+let activeTextbookId = null;
 
 /** Build a map of curriculum tag -> canonical metadata for label lookups */
 const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
@@ -86,8 +96,307 @@ export const __progressTestHooks = {
   computeTopicMastery,
   computeStageCurriculum,
   getStageStates,
-  getManualLearningSegments
+  getManualLearningSegments,
+  getLearningSegmentStatus,
+  buildLearningSegmentSummary,
+  buildLearningSegmentDetailSections
 };
+
+function getManualLearningSegments(unlockedAchievements = new Set(), completedLearningSegments = new Set()) {
+  return MANUAL_LEARNING_ACHIEVEMENTS.map(({ achievement, segmentId }) => {
+    const reference = achievement.sourceReferences?.[0] || {};
+    const statusInfo = getLearningSegmentStatus(achievement, segmentId, unlockedAchievements, completedLearningSegments);
+    const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
+
+    return {
+      segmentId,
+      achievementId: achievement.id,
+      title: reference.sourceHeading || achievement.title || segmentId,
+      sourceVolumeId,
+      lineRange: reference.lineRange || '',
+      sourceHeading: reference.sourceHeading || '',
+      displayPath: formatSourceReference(reference, sourceVolumeId),
+      status: statusInfo.status,
+      summary: buildLearningSegmentSummary(achievement, reference, segmentId),
+      detailSections: buildLearningSegmentDetailSections(achievement, reference, segmentId),
+      asset: findTextbookAssetForReference(reference),
+      achievement,
+      reference
+    };
+  });
+}
+
+function getLearningSegmentStatus(achievement, segmentId, unlockedAchievements = new Set(), completedLearningSegments = new Set()) {
+  const isCompleted = unlockedAchievements.has(achievement.id);
+  const isRawCompleted = completedLearningSegments.has(segmentId);
+  return {
+    isCompleted,
+    isRawCompleted,
+    status: isCompleted || isRawCompleted ? 'completed' : 'not-started'
+  };
+}
+
+function buildLearningSegmentSummary(achievement, reference, segmentId) {
+  const description = normalizeText(achievement.description);
+  if (description) {
+    return description;
+  }
+
+  const summaryParts = compactTextValues([
+    achievement.title,
+    reference.sourceHeading,
+    segmentId
+  ]);
+  return summaryParts[0]
+    ? `已记录学习目标元数据：${summaryParts[0]}`
+    : '暂无已审核的学习目标元数据。';
+}
+
+function buildLearningSegmentDetailSections(achievement, reference, segmentId) {
+  const asset = findTextbookAssetForReference(reference);
+  const reviewedAsset = asset?.extractionStatus === 'reviewed' ? asset : null;
+
+  return [
+    buildDetailSection('source', '章节来源', buildSourceBlocks(achievement, reference)),
+    buildDetailSection('summary', '本节要学什么', buildLearningGoalBlocks(achievement, reference, segmentId)),
+    buildDetailSection('content', '教材内容', buildTextbookContentBlocks(reviewedAsset)),
+    buildDetailSection('key-points', '关键知识点', buildKeyPointBlocks(achievement)),
+    buildDetailSection('materials', '相关资料', buildRelatedMaterialBlocks(asset, reviewedAsset)),
+    buildDetailSection('confirm', '学习确认', buildLearningConfirmationBlocks(achievement, segmentId))
+  ];
+}
+
+function normalizeText(value) {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
+function compactTextValues(values) {
+  return (values || []).map(normalizeText).filter(Boolean);
+}
+
+function paragraphBlock(text) {
+  const normalized = normalizeText(text);
+  return normalized ? { type: 'paragraph', text: normalized } : null;
+}
+
+function listBlock(items) {
+  const normalizedItems = compactTextValues(items);
+  return normalizedItems.length ? { type: 'list', items: normalizedItems } : null;
+}
+
+function assetBlock(asset) {
+  const label = normalizeText(asset?.nearbyHeading);
+  return label ? { type: 'asset', label } : null;
+}
+
+function buildDetailSection(id, title, blocks) {
+  return {
+    id,
+    title,
+    blocks: (blocks || []).filter(Boolean)
+  };
+}
+
+function findTextbookVolume(volumeId) {
+  const normalizedVolumeId = normalizeText(volumeId);
+  if (!normalizedVolumeId) return null;
+  return textbookAssetManifest.volumes.find((volume) => volume.volumeId === normalizedVolumeId) || null;
+}
+
+function buildSourceBlocks(achievement, reference) {
+  const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
+  const volume = findTextbookVolume(sourceVolumeId);
+  const sourceDetails = compactTextValues([
+    reference.sourceHeading ? `章节：${reference.sourceHeading}` : '',
+    sourceVolumeId ? `卷册 ID：${sourceVolumeId}` : '',
+    volume?.displayName ? `卷册：${volume.displayName}` : '',
+    volume?.sourceVolume ? `教材册别：${volume.sourceVolume}` : '',
+    volume?.publisher ? `出版社：${volume.publisher}` : '',
+    volume?.edition ? `版本：${volume.edition}` : '',
+    reference.lineRange ? `行号：L${reference.lineRange}` : '',
+    reference.sourceHash ? `来源哈希：${reference.sourceHash}` : '',
+    reference.note ? `来源备注：${reference.note}` : '',
+    reference.reviewNote ? `审核备注：${reference.reviewNote}` : ''
+  ]);
+
+  return [
+    sourceDetails.length
+      ? paragraphBlock(`已记录教材来源信息：${sourceDetails.join('；')}`)
+      : paragraphBlock('暂无已审核的教材来源元数据。')
+  ];
+}
+
+function buildLearningGoalBlocks(achievement, reference, segmentId) {
+  const blocks = [
+    paragraphBlock(achievement.description),
+    paragraphBlock(achievement.title ? `关联成就：${achievement.title}` : ''),
+    listBlock(compactTextValues([
+      segmentId ? `学习片段：${segmentId}` : '',
+      reference.sourceHeading ? `来源章节：${reference.sourceHeading}` : '',
+      ...compactTextValues(achievement.curriculumTags).map((tag) => `课程标签：${tag}`)
+    ]))
+  ];
+
+  return blocks.some(Boolean)
+    ? blocks
+    : [paragraphBlock('暂无已审核的学习目标元数据。')];
+}
+
+function buildTextbookContentBlocks(reviewedAsset) {
+  const blocks = reviewedAsset ? [
+    paragraphBlock(reviewedAsset.nearbyHeading ? `相邻标题：${reviewedAsset.nearbyHeading}` : ''),
+    paragraphBlock(reviewedAsset.diagramSummary ? `图示摘要：${reviewedAsset.diagramSummary}` : ''),
+    paragraphBlock(reviewedAsset.extractedFormulaText ? `已审核公式文本：${reviewedAsset.extractedFormulaText}` : ''),
+    paragraphBlock(reviewedAsset.sourceNotes ? `来源记录：${reviewedAsset.sourceNotes}` : '')
+  ] : [];
+
+  return blocks.some(Boolean)
+    ? blocks
+    : [paragraphBlock('暂无已审核的结构化正文。')];
+}
+
+function buildKeyPointBlocks(achievement) {
+  const keyPointBlock = listBlock(achievement.keyPoints);
+  return keyPointBlock
+    ? [keyPointBlock]
+    : [paragraphBlock('暂无已审核的关键知识点元数据。')];
+}
+
+function buildRelatedMaterialBlocks(asset, reviewedAsset) {
+  if (reviewedAsset) {
+    return [
+      assetBlock(reviewedAsset),
+      paragraphBlock(reviewedAsset.assetType ? `资料类型：${reviewedAsset.assetType}` : ''),
+      paragraphBlock(reviewedAsset.sourceVolume ? `来源册别：${reviewedAsset.sourceVolume}` : ''),
+      paragraphBlock(reviewedAsset.sourceNotes ? `来源记录：${reviewedAsset.sourceNotes}` : '')
+    ];
+  }
+
+  if (asset) {
+    return [
+      paragraphBlock(`暂无已审核的相关资料。已记录资料审核状态：${asset.extractionStatus || '未标注'}`)
+    ];
+  }
+
+  return [paragraphBlock('暂无已审核的相关资料。')];
+}
+
+function buildLearningConfirmationBlocks(achievement, segmentId) {
+  const confirmationItems = compactTextValues([
+    segmentId ? `学习片段：${segmentId}` : '',
+    achievement.title ? `关联成就：${achievement.title}` : '',
+    ...compactTextValues(achievement.curriculumTags).map((tag) => `课程标签：${tag}`)
+  ]);
+
+  return confirmationItems.length
+    ? [listBlock(confirmationItems)]
+    : [paragraphBlock('暂无已审核的学习确认元数据。')];
+}
+
+function findTextbookAssetForReference(reference) {
+  if (!reference.assetReferences?.length) return null;
+  const assetId = reference.assetReferences[0].assetId;
+  const volumeId = reference.sourceVolumeId || reference.volumeId;
+  return textbookAssetManifest.assets.find(a => a.id === assetId && a.volumeId === volumeId) || null;
+}
+
+function formatSourceReference(reference, sourceVolumeId) {
+  return [sourceVolumeId, reference.sourceHeading, reference.lineRange ? `L${reference.lineRange}` : ''].filter(Boolean).join(' / ');
+}
+
+/** Known textbook sourceVolumeIds in deterministic display order.
+ *  Uses actual runtime IDs from achievementsData.json:
+ *  rj- for legacy grade 8/9/12, pep- for new g10/g11.
+ */
+const KNOWN_TEXTBOOK_ORDER = [
+  'rj-chemistry-grade8-54-2024-full',
+  'rj-chemistry-grade9-2024-vol1',
+  'rj-chemistry-grade9-2024-vol2',
+  'pep-chemistry-g10-required-1',
+  'pep-chemistry-g10-required-2',
+  'pep-chemistry-g11-selective-1',
+  'pep-chemistry-g11-selective-2',
+  'rj-chemistry-g12-selective-3-organic-2019'
+];
+
+/** Map raw sourceVolumeId to clean Chinese tab label */
+const TEXTBOOK_TAB_LABELS = {
+  'pep-chemistry-grade8-2024-full': '八年级·全册',
+  'pep-chemistry-grade9-2024-vol1': '九年级·上册',
+  'pep-chemistry-grade9-2024-vol2': '九年级·下册',
+  'pep-chemistry-g10-required-1': '高一/10年级·必修第一册',
+  'pep-chemistry-g10-required-2': '高一/10年级·必修第二册',
+  'pep-chemistry-g11-selective-1': '高二/11年级·选择性必修一·反应原理',
+  'pep-chemistry-g11-selective-2': '高二/11年级·选择性必修二·物质结构与性质',
+  'pep-chemistry-g12-selective-3-organic': '高三/12年级·有机基础',
+  // Backward-compatible aliases for legacy rj- prefixed data
+  'rj-chemistry-grade8-54-2024-full': '八年级·全册',
+  'rj-chemistry-grade9-2024-vol1': '九年级·上册',
+  'rj-chemistry-grade9-2024-vol2': '九年级·下册',
+  'rj-chemistry-g12-selective-3-organic-2019': '高三/12年级·有机基础'
+};
+
+function formatTextbookTabLabel(sourceVolumeId) {
+  const label = TEXTBOOK_TAB_LABELS[sourceVolumeId];
+  if (label) {
+    return label;
+  }
+  const id = String(sourceVolumeId || '').trim();
+  if (!id) {
+    return '未标注教材';
+  }
+
+  const parts = id.split('-');
+  const publisher = parts[0] === 'rj' || parts[0] === 'pep' ? '' : parts[0] || '教材';
+  const gradeToken = parts.find((part) => /^g\d+$/i.test(part));
+  const gradeNumber = gradeToken ? Number(gradeToken.slice(1)) : null;
+  const gradeLabel = getGradeLabel(gradeNumber);
+  const selectiveIndex = parts.findIndex((part) => part === 'selective');
+  const selectiveLabel = selectiveIndex >= 0 && parts[selectiveIndex + 1]
+    ? `选择性必修${toChineseNumber(parts[selectiveIndex + 1])}`
+    : '';
+  const requiredIndex = parts.findIndex((part) => part === 'required');
+  const requiredLabel = requiredIndex >= 0 && parts[requiredIndex + 1]
+    ? `必修${toChineseNumber(parts[requiredIndex + 1])}`
+    : '';
+  const subjectLabel = getSubjectLabel(id);
+
+  return [publisher, gradeLabel, [selectiveLabel || requiredLabel, subjectLabel].filter(Boolean).join(' ')]
+    .filter(Boolean)
+    .join('·');
+}
+
+function formatTextbookVolumeLabel(volume) {
+  const publisher = volume.publisher === '人民教育出版社' || volume.displayName?.includes('人教版') ? '人教版' : volume.publisher || '';
+  const gradeMatch = volume.volumeId.match(/g(\d+)/i) || volume.sourceVolume?.match(/(\d+)年级/);
+  const gradeLabel = getGradeLabel(gradeMatch ? Number(gradeMatch[1]) : null);
+  const sourceVolume = String(volume.sourceVolume || volume.displayName || '')
+    .replace(/^高中化学/, '')
+    .replace(/^九年级化学/, '九年级')
+    .replace(/^八年级化学/, '八年级')
+    .replace(/第(\d)册/g, (_, number) => `第${toChineseNumber(number)}册`)
+    .trim();
+
+  return [publisher, gradeLabel, sourceVolume].filter(Boolean).join('·');
+}
+
+function getGradeLabel(gradeNumber) {
+  if (gradeNumber === 12) return '高三/12年级';
+  if (gradeNumber === 11) return '高二/11年级';
+  if (gradeNumber === 10) return '高一/10年级';
+  return gradeNumber ? `${gradeNumber}年级` : '';
+}
+
+function getSubjectLabel(id) {
+  if (id.includes('organic')) return '有机化学基础';
+  if (id.includes('reaction')) return '化学反应原理';
+  if (id.includes('structure')) return '物质结构与性质';
+  return '';
+}
+
+function toChineseNumber(value) {
+  return ({ '1': '一', '2': '二', '3': '三', '4': '四', '5': '五' })[String(value)] || String(value);
+}
 
 function extractAtomicNumbersFromFormula(value) {
   if (typeof value !== 'string') {
@@ -376,6 +685,32 @@ function renderProgress() {
   bindStageInteractions();
 }
 
+function getTextbookGroups(manualSegments) {
+  const groupMap = new Map();
+  manualSegments.forEach((segment) => {
+    const sourceVolumeId = segment.sourceVolumeId || 'unknown';
+    if (!groupMap.has(sourceVolumeId)) {
+      groupMap.set(sourceVolumeId, {
+        sourceVolumeId,
+        label: formatTextbookTabLabel(sourceVolumeId),
+        total: 0,
+        completed: 0
+      });
+    }
+    const group = groupMap.get(sourceVolumeId);
+    group.total += 1;
+    if (segment.status === 'completed') {
+      group.completed += 1;
+    }
+  });
+
+  const knownOrder = KNOWN_TEXTBOOK_ORDER.filter((id) => groupMap.has(id));
+  const unknownOrder = [...groupMap.keys()].filter((id) => !KNOWN_TEXTBOOK_ORDER.includes(id));
+  const orderedIds = [...knownOrder, ...unknownOrder];
+
+  return orderedIds.map((id) => groupMap.get(id));
+}
+
 function bindStageInteractions() {
   document.querySelectorAll('[data-stage-select]').forEach((button) => {
     button.addEventListener('click', () => {
@@ -384,16 +719,77 @@ function bindStageInteractions() {
     });
   });
 
-  document.querySelectorAll('[data-learning-segment-complete]').forEach((button) => {
+  document.querySelectorAll('[data-textbook-tab]').forEach((button) => {
     button.addEventListener('click', () => {
-      const segmentId = button.dataset.learningSegmentComplete || '';
-      const achievementId = button.dataset.manualAchievementId || '';
-      markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-manual-segment' });
-      focusedLearningSegmentId = segmentId;
+      const tabId = button.dataset.textbookTab || '';
+      activeTextbookId = tabId;
+      document.querySelectorAll('[data-textbook-tab]').forEach((btn) => btn.classList.toggle('is-active', btn.dataset.textbookTab === tabId));
+      document.querySelectorAll('[data-textbook-panel]').forEach((panel) => panel.classList.toggle('is-active', panel.dataset.textbookPanel === tabId));
     });
   });
 
+  document.querySelectorAll('[data-testid="learning-card"]').forEach((card) => {
+    const openCard = () => {
+      const segmentId = card.dataset.learningSegmentId || '';
+      activeLearningSegmentId = segmentId;
+      focusedLearningSegmentId = segmentId;
+      renderProgress();
+    };
+    card.addEventListener('click', openCard);
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openCard();
+      }
+    });
+  });
+
+  const modal = document.querySelector('[data-testid="lesson-modal"]');
+  if (modal) {
+    const closeButton = modal.querySelector('[data-testid="lesson-modal-close"]');
+    if (closeButton) {
+      closeButton.addEventListener('click', closeLessonModal);
+    }
+
+    const confirmButton = modal.querySelector('[data-testid="confirm-learning"]');
+    if (confirmButton) {
+      confirmButton.addEventListener('click', () => {
+        const segmentId = modal.dataset.learningSegmentId || '';
+        const achievementId = confirmButton.dataset.manualAchievementId || '';
+        markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-learning-modal' });
+        focusedLearningSegmentId = segmentId;
+        // Keep modal open so tests can observe the updated status before any close.
+        // Re-render to refresh the modal content (status label, disabled confirm).
+        renderProgress();
+      });
+    }
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeLessonModal();
+      }
+    });
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeLessonModal();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    modal.__lessonModalKeydownHandler = onKeyDown;
+  }
+
   focusLearningSegmentRow();
+}
+
+function closeLessonModal() {
+  activeLearningSegmentId = null;
+  const modal = document.querySelector('[data-testid="lesson-modal"]');
+  if (modal && modal.__lessonModalKeydownHandler) {
+    document.removeEventListener('keydown', modal.__lessonModalKeydownHandler);
+    delete modal.__lessonModalKeydownHandler;
+  }
+  renderProgress();
 }
 
 function readAchievementActionFocus() {
@@ -449,9 +845,19 @@ function focusLearningSegmentRow() {
 
   row.classList.add('is-focused');
   row.scrollIntoView({ block: 'center', behavior: 'smooth' });
-  const button = row.querySelector('[data-learning-segment-complete]');
-  if (button instanceof HTMLElement && !button.disabled) {
-    button.focus({ preventScroll: true });
+
+  const modal = document.querySelector('[data-testid="lesson-modal"]');
+  if (modal) {
+    const closeButton = modal.querySelector('[data-testid="lesson-modal-close"]');
+    if (closeButton instanceof HTMLElement) {
+      closeButton.focus({ preventScroll: true });
+    }
+    return;
+  }
+
+  const card = row.closest('[data-testid="learning-card"]');
+  if (card instanceof HTMLElement) {
+    card.focus({ preventScroll: true });
   }
 }
 
@@ -578,20 +984,37 @@ function renderStageDetail(stage, snapshot) {
     </article>
   `;
 }
-
-function getManualLearningSegments() {
-  return MANUAL_LEARNING_ACHIEVEMENTS.map(({ achievement, segmentId }) => ({
-    achievement,
-    segmentId,
-    reference: achievement.sourceReferences?.[0] || {}
-  }));
-}
-
 function renderManualLearningSection(unlockedAchievements, completedLearningSegments) {
-  const manualSegments = getManualLearningSegments();
+  const manualSegments = getManualLearningSegments(unlockedAchievements, completedLearningSegments);
   if (!manualSegments.length) {
     return '';
   }
+
+  const groups = getTextbookGroups(manualSegments);
+  const activeGroupId = activeTextbookId || groups[0]?.sourceVolumeId || '';
+
+  const tabsHtml = groups.map((group) => `
+    <button type="button" class="textbook-tab ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-tab="${escapeHtmlAttr(group.sourceVolumeId)}">
+      ${escapeHtml(group.label)}
+      <span class="textbook-tab-count">${group.total}</span>
+    </button>
+  `).join('');
+
+  const panelsHtml = groups.map((group) => {
+    const groupSegments = manualSegments.filter((segment) => segment.sourceVolumeId === group.sourceVolumeId);
+    const activeSegment = activeLearningSegmentId
+      ? groupSegments.find((s) => s.segmentId === activeLearningSegmentId) || null
+      : null;
+
+    return `
+      <div class="textbook-panel ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-panel="${escapeHtmlAttr(group.sourceVolumeId)}">
+        <div class="progress-manual-segment-list">
+          ${groupSegments.map((segment) => renderLearningCard(segment)).join('')}
+        </div>
+        ${activeSegment ? renderLessonModal(activeSegment) : ''}
+      </div>
+    `;
+  }).join('');
 
   return `
     <div class="progress-manual-learning-panel progress-detail-card">
@@ -602,51 +1025,119 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
         </div>
         <span>${manualSegments.length} 个片段</span>
       </div>
-      <div class="progress-manual-segment-list">
-        ${manualSegments.map(({ achievement, segmentId, reference }) => renderManualLearningSegmentRow({
-    achievement,
-    segmentId,
-    reference,
-    unlockedAchievements,
-    completedLearningSegments
-  })).join('')}
+      <div class="textbook-tab-bar progress-textbook-tabs">
+        ${tabsHtml}
+      </div>
+      <div class="textbook-panels">
+        ${panelsHtml}
       </div>
     </div>
   `;
 }
 
-function renderManualLearningSegmentRow({ achievement, segmentId, reference, unlockedAchievements, completedLearningSegments }) {
-  const displayCompleted = unlockedAchievements.has(achievement.id);
-  const rawSegmentCompleted = completedLearningSegments.has(segmentId);
-  const statusText = displayCompleted ? '已完成' : rawSegmentCompleted ? '待同步' : '未开始';
-  const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
-  const lineRange = reference.lineRange ? `L${reference.lineRange}` : '未标注行号';
-  const sourceHeading = reference.sourceHeading || achievement.title || segmentId;
-  const displayPath = buildManualDisplayPath(achievement, segmentId);
-  const rowClasses = [
-    'progress-manual-segment-row',
-    displayCompleted ? 'is-complete' : '',
-    rawSegmentCompleted && !displayCompleted ? 'has-raw-evidence' : '',
+function renderLearningCard(segment) {
+  const { segmentId, achievementId, title, displayPath, status } = segment;
+  const isCompleted = status === 'completed';
+  const statusText = isCompleted ? '已学习' : '未学习';
+  const cardClasses = [
+    'progress-learning-card',
+    isCompleted ? 'is-complete' : '',
     focusedLearningSegmentId === segmentId ? 'is-focused' : ''
   ].filter(Boolean).join(' ');
 
   return `
-    <article class="${rowClasses}" data-learning-segment-id="${escapeHtmlAttr(segmentId)}" data-manual-achievement-id="${escapeHtmlAttr(achievement.id)}">
-      <div class="progress-manual-segment-copy">
-        <p class="hud-kicker">${escapeHtml(sourceVolumeId || '教材片段')} · ${escapeHtml(lineRange)}</p>
-        <h5>${escapeHtml(sourceHeading)}</h5>
+    <article class="${cardClasses}"
+      data-testid="learning-card"
+      data-learning-segment-id="${escapeHtmlAttr(segmentId)}"
+      data-manual-achievement-id="${escapeHtmlAttr(achievementId)}"
+      data-learning-card-open="true"
+      tabindex="0"
+      role="button"
+      aria-label="打开学习内容：${escapeHtmlAttr(title)}">
+      <div class="progress-learning-card-copy">
+        <h5>${escapeHtml(title)}</h5>
         <p>${escapeHtml(displayPath)}</p>
-        <div class="progress-manual-segment-meta">
-          <span>课程标签：${escapeHtml(segmentId)}</span>
-          <span>成就：${escapeHtml(achievement.title)}</span>
-        </div>
       </div>
-      <div class="progress-manual-segment-action">
-        <span class="progress-manual-segment-status"><i data-lucide="${displayCompleted ? 'check-circle-2' : rawSegmentCompleted ? 'refresh-cw' : 'circle'}"></i> ${statusText}</span>
-        <button type="button" data-learning-segment-complete="${escapeHtmlAttr(segmentId)}" data-manual-achievement-id="${escapeHtmlAttr(achievement.id)}" ${rawSegmentCompleted ? 'disabled' : ''}>完成学习</button>
+      <div class="progress-learning-card-meta">
+        <span data-testid="learning-card-status">${statusText}</span>
       </div>
     </article>
   `;
+}
+
+function renderLessonModal(segment) {
+  const { segmentId, achievementId, title, status, detailSections } = segment;
+  const isCompleted = status === 'completed';
+  const isRawCompleted = status === 'pending';
+
+  return `
+    <div class="lesson-modal-overlay" data-testid="lesson-modal" role="dialog" aria-modal="true" data-learning-segment-id="${escapeHtmlAttr(segmentId)}">
+      <div class="lesson-modal-shell">
+        <div class="lesson-modal-header">
+          <h4>${escapeHtml(title)}</h4>
+          <button type="button" data-testid="lesson-modal-close" aria-label="关闭">✕</button>
+        </div>
+        <div class="lesson-modal-body" data-testid="lesson-modal-body" style="overflow-y:auto;">
+          ${detailSections.map((section) => renderLessonModalSection(section)).join('')}
+        </div>
+        <div class="lesson-modal-footer">
+          ${!isCompleted && !isRawCompleted ? `<button type="button" data-testid="confirm-learning" data-manual-achievement-id="${escapeHtmlAttr(achievementId)}">确认学习</button>` : '<span class="lesson-modal-completed-label">已学习</span>'}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLessonModalSection(section) {
+  if (!section || !section.blocks || !section.blocks.length) {
+    return '';
+  }
+
+  const blocksHtml = section.blocks.map((block) => renderLessonModalBlock(block)).join('');
+  if (!blocksHtml) {
+    return '';
+  }
+
+  return `
+    <section class="lesson-modal-section">
+      <h5>${escapeHtml(section.title)}</h5>
+      ${blocksHtml}
+    </section>
+  `;
+}
+
+function renderLessonModalBlock(block) {
+  if (!block) {
+    return '';
+  }
+
+  if (block.type === 'paragraph') {
+    const text = normalizeText(block.text);
+    return text ? `<p>${escapeHtml(text)}</p>` : '';
+  }
+
+  if (block.type === 'list') {
+    const items = Array.isArray(block.items) ? compactTextValues(block.items) : [];
+    return items.length
+      ? `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      : '';
+  }
+
+  if (block.type === 'source') {
+    const label = normalizeText(block.label);
+    const text = normalizeText(block.text);
+    if (!label && !text) return '';
+    return `<div class="lesson-modal-source-block"><strong>${escapeHtml(label || '')}</strong><p>${escapeHtml(text || '')}</p></div>`;
+  }
+
+  if (block.type === 'asset') {
+    const label = normalizeText(block.label);
+    const text = normalizeText(block.text);
+    if (!label && !text) return '';
+    return `<div class="lesson-modal-asset-block"><strong>${escapeHtml(label || '')}</strong><p>${escapeHtml(text || '')}</p></div>`;
+  }
+
+  return '';
 }
 
 function renderElementChip(atomicNumber, element, learned) {
