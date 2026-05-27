@@ -10,7 +10,7 @@
   "hookDate": "2026-05-20",
   "activityLog": [
     {
-      "id": "activity-1779249600000-r84zma",
+      "id": "activity-1779249600000-87gjrk",
       "type": "achievementunlocked",
       "title": "解锁了新成就",
       "description": "成就 achievement-first-experiment 已收入成就中心。",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "activity-1779249600000-8d8d04",
+      "id": "activity-1779249600000-owf38c",
       "type": "experimentcompleted",
       "title": "完成了一项实验",
       "description": "实验 water-cycle 已写入完成记录。",
@@ -58,7 +58,7 @@
       "gamePlays": {},
       "activityLog": [
         {
-          "id": "activity-1779249600000-r84zma",
+          "id": "activity-1779249600000-87gjrk",
           "type": "achievementunlocked",
           "title": "解锁了新成就",
           "description": "成就 achievement-first-experiment 已收入成就中心。",
@@ -69,7 +69,7 @@
           }
         },
         {
-          "id": "activity-1779249600000-8d8d04",
+          "id": "activity-1779249600000-owf38c",
           "type": "experimentcompleted",
           "title": "完成了一项实验",
           "description": "实验 water-cycle 已写入完成记录。",

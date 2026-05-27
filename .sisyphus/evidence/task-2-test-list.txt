@@ -1,0 +1,16 @@
+Test list captured on 2026-05-21 20:18:49
+
+Command: npx playwright test tests/ui/learning-content-modal.spec.ts --list
+Exit code: 0
+
+Tests listed:
+1. clicking learning card opens modal and does not complete segment
+2. closing modal without confirmation leaves segment uncompleted
+3. modal confirmation completes segment and persists after reload
+4. completed lesson can still open modal and read content
+5. no learning card contains a visible completion button
+6. modal content has distinct sections without undefined or null
+7. modal escapes unsafe metadata instead of rendering executable HTML
+8. long modal content supports internal scroll
+
+Total: 8 tests in 1 file

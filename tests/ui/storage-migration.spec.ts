@@ -16,18 +16,14 @@ test.describe('Storage migration compatibility', () => {
     await page.evaluate(({ key, value }) => {
       window.localStorage.setItem(key, JSON.stringify(value));
     }, { key: STORAGE_KEY, value: await readFixture('storage-legacy-state.json') });
-    await page.evaluate(() => {
-      window.__elementExplorerTestHooks?.storage?.reloadProgress?.();
-    });
     await waitForAppReady(page);
-    await page.waitForFunction(() => typeof window.__elementExplorerTestHooks?.storage?.markLearningSegmentCompleted === 'function');
 
-    const result = await page.evaluate(({ segmentId }) => {
-      const hook = window.__elementExplorerTestHooks?.storage?.markLearningSegmentCompleted;
+    const result = await page.evaluate(async ({ segmentId }) => {
+      const storage = await import('/src/modules/storage.js');
 
       return {
-        firstResult: hook(segmentId, { source: 'storage-migration-test' }),
-        secondResult: hook(segmentId, { source: 'storage-migration-test' })
+        firstResult: storage.markLearningSegmentCompleted(segmentId, { source: 'storage-migration-test' }),
+        secondResult: storage.markLearningSegmentCompleted(segmentId, { source: 'storage-migration-test' })
       };
     }, { segmentId: '  knowledge-topic-0001-source-section-l1-l5-bd27b23b45  ' });
 
@@ -111,21 +107,19 @@ test.describe('Storage migration compatibility', () => {
     const page = await context.newPage();
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
-    await page.waitForFunction(() => typeof window.__elementExplorerTestHooks?.storage?.markExperimentCompleted === 'function');
 
-    const mutationResult = await page.evaluate((key) => {
+    const mutationResult = await page.evaluate(async (key) => {
       const experimentId = 'water-cycle';
-      const hook = window.__elementExplorerTestHooks.storage.markExperimentCompleted;
-      const getDateHook = window.__elementExplorerTestHooks.storage.getExperimentCompletionDate;
-      const firstResult = hook(experimentId);
-      const secondResult = hook(experimentId);
+      const storage = await import('/src/modules/storage.js');
+      const firstResult = storage.markExperimentCompleted(experimentId);
+      const secondResult = storage.markExperimentCompleted(experimentId);
 
       return {
         firstResult,
         secondResult,
         completedExperiments: Array.from(window.appState.completedExperiments),
         completionDates: { ...window.appState.experimentCompletionDates },
-        hookDate: getDateHook(experimentId),
+        hookDate: storage.getExperimentCompletionDate(experimentId),
         activityLog: window.appState.activityLog.map((entry) => ({ ...entry, meta: { ...entry.meta } }))
       };
     }, STORAGE_KEY);
@@ -221,10 +215,10 @@ test.describe('Storage migration compatibility', () => {
 
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
-    await page.waitForFunction(() => typeof window.__elementExplorerTestHooks?.storage?.addQuizScore === 'function');
 
     const result = await page.evaluate(async (key) => {
-      window.__elementExplorerTestHooks?.storage?.addQuizScore?.({
+      const storage = await import('/src/modules/storage.js');
+      storage.addQuizScore({
         mode: 'quick',
         score: 4,
         total: 5,

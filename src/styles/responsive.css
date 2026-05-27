@@ -167,6 +167,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
+  .progress-manual-segment-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .story-hero {
     grid-template-columns: 1fr;
   }
@@ -297,6 +301,10 @@
 
   .story-nav-row .hud-action-btn {
     flex: 1 1 132px;
+  }
+
+  .progress-manual-segment-list {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>元素探索者 - Element Explorer</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script type="module" crossorigin src="/assets/index-DJw0iyp9.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-D3Foq9M9.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" as="fetch" href="/animations/d4980_cat360.json" type="application/json" crossorigin>
+  <script type="module" crossorigin src="/assets/index-BOupo6PZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BYOb_mMw.css">
 </head>
 <body>
   <!-- Three.js 背景画布 -->
@@ -31,6 +32,10 @@
         <span class="nav-icon"><i data-lucide="gamepad-2"></i></span>
         <span>游戏</span>
       </button>
+      <button class="nav-btn" data-section="progress" data-testid="nav-progress">
+        <span class="nav-icon"><i data-lucide="graduation-cap"></i></span>
+        <span>学习</span>
+      </button>
       <button class="nav-btn" data-section="lab" data-testid="nav-lab">
         <span class="nav-icon"><i data-lucide="flask-conical"></i></span>
         <span>实验室</span>
@@ -38,10 +43,6 @@
       <button class="nav-btn" data-section="achievements" data-testid="nav-achievements">
         <span class="nav-icon"><i data-lucide="trophy"></i></span>
         <span>成就</span>
-      </button>
-      <button class="nav-btn" data-section="progress" data-testid="nav-progress">
-        <span class="nav-icon"><i data-lucide="bar-chart-3"></i></span>
-        <span>进度</span>
       </button>
       <button class="nav-btn" data-section="story" data-testid="nav-story">
         <span class="nav-icon"><i data-lucide="book-open"></i></span>
@@ -209,7 +210,6 @@
 
         <!-- 学习进度 -->
         <section id="progress" class="page-section">
-          <h2>学习进度</h2>
           <div class="progress-path"></div>
         </section>
 

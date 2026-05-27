@@ -1,0 +1,13 @@
+RED test run captured on 2026-05-21 20:18:27
+
+Result: FAIL - Expected, modal/card selectors do not exist in current legacy UI
+
+Key failures:
+- [data-testid='learning-card'] selector not found (0 matches)
+- [data-testid='lesson-modal'] selector not found
+- Shell ready timeout on some tests due to page reload issues
+
+Tests defined: 8
+Tests failing: 6+ (expected RED)
+
+This confirms the test contract is correctly specified for Task 3 implementation.

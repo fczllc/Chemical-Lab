@@ -9,7 +9,7 @@
   },
   "storedEnvelope": {
     "version": "v3",
-    "timestamp": "2026-05-20T08:00:52.872Z",
+    "timestamp": "2026-05-22T09:06:43.220Z",
     "data": {
       "currentElement": null,
       "compareList": [],
@@ -21,36 +21,37 @@
         "knowledge-topic-0001-source-section-l1-l5-bd27b23b45"
       ],
       "experimentTitleOverrides": {},
+      "experimentCompletionDates": {},
       "unlockedAchievements": [
         "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45"
       ],
       "achievementDates": {
-        "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45": "2026-05-20T08:00:42.377Z"
+        "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45": "2026-05-22T09:06:38.601Z"
       },
       "gameScores": {},
       "gamePlays": {},
       "activityLog": [
         {
-          "id": "activity-1779264042377-bmbjr9",
+          "id": "activity-1779440798601-mqyhdn",
           "type": "achievementunlocked",
           "title": "解锁了新成就",
           "description": "成就 textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45 已收入成就中心。",
-          "timestamp": "2026-05-20T08:00:42.377Z",
+          "timestamp": "2026-05-22T09:06:38.601Z",
           "meta": {
             "achievementId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45",
-            "unlockedAt": "2026-05-20T08:00:42.377Z"
+            "unlockedAt": "2026-05-22T09:06:38.601Z"
           }
         },
         {
-          "id": "activity-1779264042376-n67mhk",
+          "id": "activity-1779440798600-cemdmu",
           "type": "learningsegmentcompleted",
           "title": "完成了一个学习环节",
           "description": "学习环节 knowledge-topic-0001-source-section-l1-l5-bd27b23b45 已完成。",
-          "timestamp": "2026-05-20T08:00:42.376Z",
+          "timestamp": "2026-05-22T09:06:38.600Z",
           "meta": {
             "segmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
             "achievementId": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45",
-            "source": "progress-manual-segment"
+            "source": "progress-learning-modal"
           }
         }
       ],
@@ -64,5 +65,5 @@
   },
   "segmentPersisted": true,
   "achievementPersisted": true,
-  "rowText": "rj-chemistry-g12-selective-3-organic-2019 · L1-5 化学 rj-chemistry-g12-selective-3-organic-2019 / 化学 / L1-5 课程标签：knowledge-topic-0001-source-section-l1-l5-bd27b23b45 成就：化学 已完成 完成学习"
+  "cardText": "化学 rj-chemistry-g12-selective-3-organic-2019 / 化学 / L1-5 已学习"
 }

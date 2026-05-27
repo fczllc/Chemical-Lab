@@ -192,7 +192,7 @@
 
 .page-section.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none; /* must clear transform so fixed overlays inside anchor to viewport */
   pointer-events: auto;
   position: relative;
 }
