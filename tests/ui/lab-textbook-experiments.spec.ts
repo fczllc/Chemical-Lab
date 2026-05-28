@@ -360,6 +360,30 @@ test.describe('Lab textbook experiment content', () => {
       window.Date = FrozenDate;
     }, FIXED_COMPLETION_ISO);
 
+    await page.evaluate((fixedIso) => {
+      const fixedTime = new Date(fixedIso).getTime();
+      const RealDate = Date;
+
+      class FrozenDate extends RealDate {
+        constructor(...args) {
+          if (args.length === 0) {
+            super(fixedTime);
+          } else {
+            super(...args);
+          }
+        }
+
+        static now() {
+          return fixedTime;
+        }
+      }
+
+      FrozenDate.UTC = RealDate.UTC;
+      FrozenDate.parse = RealDate.parse;
+      FrozenDate.prototype = RealDate.prototype;
+      window.Date = FrozenDate;
+    }, FIXED_COMPLETION_ISO);
+
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
     await injectCompletionFixtures(page);

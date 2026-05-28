@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 
 const STORAGE_KEY = 'element-explorer-kids-state';
 const MANUAL_SEGMENT_ID = 'knowledge-topic-0001-source-section-l1-l5-bd27b23b45';
@@ -13,10 +13,11 @@ test.describe('Learning content modal interaction', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
 
-    const statusBefore = await card.locator('[data-testid="learning-card-status"]').textContent();
-    expect(statusBefore?.trim()).toBe('未学习');
+    const statusBefore = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
+    expect(statusBefore?.trim()).toBe('');
 
     const completedBefore = await page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
@@ -33,8 +34,8 @@ test.describe('Learning content modal interaction', () => {
     ), MANUAL_SEGMENT_ID);
     expect(completedAfterOpen).toBe(false);
 
-    const statusAfterOpen = await card.locator('[data-testid="learning-card-status"]').textContent();
-    expect(statusAfterOpen?.trim()).toBe('未学习');
+    const statusAfterOpen = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
+    expect(statusAfterOpen?.trim()).toBe('');
   });
 
   test('closing modal without confirmation leaves segment uncompleted', async ({ page }) => {
@@ -45,6 +46,7 @@ test.describe('Learning content modal interaction', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     await card.click();
 
@@ -60,8 +62,8 @@ test.describe('Learning content modal interaction', () => {
     ), MANUAL_SEGMENT_ID);
     expect(completedAfterClose).toBe(false);
 
-    const statusAfterClose = await card.locator('[data-testid="learning-card-status"]').textContent();
-    expect(statusAfterClose?.trim()).toBe('未学习');
+    const statusAfterClose = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
+    expect(statusAfterClose?.trim()).toBe('');
 
     // Reopen and close via Escape
     await card.click();
@@ -83,6 +85,7 @@ test.describe('Learning content modal interaction', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     await card.click();
 
@@ -91,14 +94,21 @@ test.describe('Learning content modal interaction', () => {
 
     const confirmButton = modal.locator('[data-testid="confirm-learning"]');
     await expect(confirmButton).toBeVisible();
+    const confirmText = await confirmButton.textContent();
+    expect(confirmText?.trim()).toBe('确定已学习');
+
+    const date = await getTodayLocalDateInBrowser(page);
+    expect(date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     await confirmButton.click();
 
     await expect.poll(async () => page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
     ), MANUAL_SEGMENT_ID), { timeout: 10000 }).toBe(true);
 
+    await expect.poll(async () => getStoredLearningDate(page, MANUAL_SEGMENT_ID), { timeout: 10000 }).toBe(date);
+
     const statusAfterConfirm = await card.locator('[data-testid="learning-card-status"]').textContent();
-    expect(statusAfterConfirm?.trim()).toBe('已学习');
+    expect(statusAfterConfirm?.trim()).toBe(`学习确认：${date}`);
 
     // Wait for debounced save to flush before reloading
     await expect.poll(async () => {
@@ -107,7 +117,8 @@ test.describe('Learning content modal interaction', () => {
       try {
         const envelope = JSON.parse(raw);
         return Array.isArray(envelope?.data?.completedLearningSegments)
-          && envelope.data.completedLearningSegments.includes(MANUAL_SEGMENT_ID);
+          && envelope.data.completedLearningSegments.includes(MANUAL_SEGMENT_ID)
+          && envelope.data.learningSegmentCompletionDates?.[MANUAL_SEGMENT_ID] === date;
       } catch {
         return false;
       }
@@ -119,9 +130,10 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
 
     const reloadedCard = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, reloadedCard);
     await expect(reloadedCard).toBeVisible();
     const statusAfterReload = await reloadedCard.locator('[data-testid="learning-card-status"]').textContent();
-    expect(statusAfterReload?.trim()).toBe('已学习');
+    expect(statusAfterReload?.trim()).toBe(`学习确认：${date}`);
 
     const persistedCompleted = await page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
@@ -131,7 +143,10 @@ test.describe('Learning content modal interaction', () => {
 
   test('completed lesson can still open modal and read content', async ({ page }) => {
     await seedStoredState(page, {
-      completedLearningSegments: [MANUAL_SEGMENT_ID]
+      completedLearningSegments: [MANUAL_SEGMENT_ID],
+      learningSegmentCompletionDates: {
+        [MANUAL_SEGMENT_ID]: '2026-05-01'
+      }
     });
 
     await page.goto('/', { waitUntil: 'domcontentloaded' });
@@ -139,9 +154,10 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     const status = await card.locator('[data-testid="learning-card-status"]').textContent();
-    expect(status?.trim()).toBe('已学习');
+    expect(status?.trim()).toBe('学习确认：2026-05-01');
 
     await card.click();
 
@@ -155,6 +171,37 @@ test.describe('Learning content modal interaction', () => {
     expect(bodyText?.length).toBeGreaterThan(0);
     expect(bodyText).not.toContain('undefined');
     expect(bodyText).not.toContain('null');
+
+    const footer = modal.locator('.lesson-modal-footer');
+    const footerText = await footer.textContent();
+    expect(footerText?.trim()).toBe('已学习：2026-05-01');
+    await expect(modal.locator('[data-testid="confirm-learning"]')).toHaveCount(0);
+  });
+
+  test('legacy completed lesson without stored date shows date pending', async ({ page }) => {
+    await seedStoredState(page, {
+      completedLearningSegments: [MANUAL_SEGMENT_ID]
+    });
+
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await waitForShellReady(page);
+    await page.getByTestId('nav-progress').click();
+
+    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
+    await expect(card).toBeVisible();
+    const status = await card.locator('[data-testid="learning-card-status"]').textContent();
+    expect(status?.trim()).toBe('学习确认：日期待补充');
+
+    await card.click();
+
+    const modal = page.locator('[data-testid="lesson-modal"]');
+    await expect(modal).toBeVisible();
+
+    const footer = modal.locator('.lesson-modal-footer');
+    const footerText = await footer.textContent();
+    expect(footerText?.trim()).toBe('已学习：日期待补充');
+    await expect(modal.locator('[data-testid="confirm-learning"]')).toHaveCount(0);
   });
 
   test('no learning card contains a visible completion button', async ({ page }) => {
@@ -182,6 +229,7 @@ test.describe('Learning content modal interaction', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     await card.click();
 
@@ -224,6 +272,7 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     await card.click();
 
@@ -255,6 +304,7 @@ test.describe('Learning content modal interaction', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
+    await showLearningCard(page, card);
     await expect(card).toBeVisible();
     await card.click();
 
@@ -298,6 +348,8 @@ async function seedStoredState(page: Page, progressPatch: Record<string, unknown
         quizScores: [],
         completedExperiments: [],
         completedLearningSegments: [],
+        learningSegmentCompletionDates: {},
+        experimentCompletionDates: {},
         experimentTitleOverrides: {},
         unlockedAchievements: [],
         achievementDates: {},
@@ -314,6 +366,41 @@ async function seedStoredState(page: Page, progressPatch: Record<string, unknown
       }
     }));
   }, { key: STORAGE_KEY, patch: progressPatch });
+}
+
+async function getTodayLocalDateInBrowser(page: Page) {
+  return await page.evaluate(() => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  });
+}
+
+async function getStoredLearningDate(page: Page, segmentId: string) {
+  return await page.evaluate((id) => (
+    window.appState.learningSegmentCompletionDates?.[id] ?? null
+  ), segmentId);
+}
+
+async function showLearningCard(page: Page, card: Locator) {
+  await expect(card).toBeAttached({ timeout: 15000 });
+  const panelId = await card.evaluate((element) => (
+    element.closest('[data-textbook-panel]')?.getAttribute('data-textbook-panel') || ''
+  ));
+  if (!panelId) {
+    return;
+  }
+
+  const tab = page.locator(`[data-textbook-tab="${escapeCssAttribute(panelId)}"]`);
+  if (await tab.count()) {
+    await tab.first().click();
+  }
+}
+
+function escapeCssAttribute(value: string) {
+  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
 async function waitForShellReady(page: Page) {

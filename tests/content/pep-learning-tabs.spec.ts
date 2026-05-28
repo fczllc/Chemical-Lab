@@ -52,7 +52,20 @@ test.describe('PEP Learning Tabs', () => {
     await expect(page).toHaveURL(/#\/progress$/);
 
     // Wait for progress page to render
-    await expect(page.locator('#progress')).toBeVisible({ timeout: 10000 });
+    const progressPanel = page.locator('#progress');
+    await expect(progressPanel).toBeVisible({ timeout: 10000 });
+    await expect(progressPanel).toContainText('教材复习确认');
+    await expect(progressPanel).not.toContainText('五阶段学习路径');
+    await expect(progressPanel).not.toContainText('初级探索者');
+    await expect(page.locator('#progress [data-stage-select]')).toHaveCount(0);
+    await expect(page.locator('#progress .progress-stage-card')).toHaveCount(0);
+    await expect(page.locator('#progress .progress-stage-detail')).toHaveCount(0);
+    await expect(page.locator('#progress .progress-learning-path')).toHaveCount(0);
+
+    const oldRewardCopyTerms = ['解锁 0 个游戏', '项功能', '个实验', '需要元素'];
+    for (const term of oldRewardCopyTerms) {
+      await expect(progressPanel, `Progress page should not contain old stage copy "${term}"`).not.toContainText(term);
+    }
 
     // Find textbook tabs using both plan and real selectors
     const tabSelectors = [
@@ -108,6 +121,7 @@ test.describe('PEP Learning Tabs', () => {
 
     const clickedLabels = [];
     const visibleCardCounts = {};
+    const removedExperimentCardTitles = ['【实验1-1】', '【实验2-1】', '【实验】', '【实验目的】', '【实验用品】', '【实验步骤】'];
 
     for (const targetLabel of targetLabels) {
       // Find tab button with this label
@@ -163,25 +177,25 @@ test.describe('PEP Learning Tabs', () => {
       let usedCardSelector = '';
 
       for (const cardSelector of cardSelectors) {
-        const cards = page.locator(cardSelector);
-        const count = await cards.count();
-        if (count > 0) {
-          // Count only visible cards
-          let visibleCount = 0;
-          for (let i = 0; i < count; i++) {
-            const isVisible = await cards.nth(i).isVisible().catch(() => false);
-            if (isVisible) visibleCount++;
-          }
-          if (visibleCount > 0) {
-            visibleCards = visibleCount;
-            usedCardSelector = cardSelector;
-            break;
-          }
+        const visibleCount = await page.locator(`${cardSelector}:visible`).count();
+        if (visibleCount > 0) {
+          visibleCards = visibleCount;
+          usedCardSelector = cardSelector;
+          break;
         }
       }
 
       expect(visibleCards, `Active panel for "${targetLabel}" should have at least 1 visible learning card`).toBeGreaterThan(0);
       visibleCardCounts[targetLabel] = visibleCards;
+
+      const visibleCardTitles = (await page.locator(`#progress ${usedCardSelector}:visible h5`).allTextContents())
+        .map((title) => title.trim())
+        .filter(Boolean);
+      const experimentStyleTitles = visibleCardTitles.filter((title) => /^【实验/.test(title));
+      expect(experimentStyleTitles, `Active panel for "${targetLabel}" should not show experiment learning cards`).toEqual([]);
+      for (const removedTitle of removedExperimentCardTitles) {
+        expect(visibleCardTitles, `Active panel for "${targetLabel}" should not include experiment card title "${removedTitle}"`).not.toContain(removedTitle);
+      }
 
       // Refresh tab buttons after click (DOM may have changed)
       if (usedSelector === '[data-textbook-tab]') {
@@ -195,6 +209,14 @@ test.describe('PEP Learning Tabs', () => {
     expect(consoleErrors, 'Should have no console errors').toEqual([]);
     expect(pageErrors, 'Should have no page errors').toEqual([]);
 
+    const progressText = await progressPanel.textContent() || '';
+    const removedStageSelectorCount = await page.locator('#progress [data-stage-select]').count();
+    const removedStageCardCount = await page.locator('#progress .progress-stage-card').count();
+    const removedStageDetailCount = await page.locator('#progress .progress-stage-detail').count();
+    const hasFiveStageText = progressText.includes('五阶段学习路径');
+    const hasJuniorExplorerText = progressText.includes('初级探索者');
+    const hasOldRewardCopy = oldRewardCopyTerms.some((term) => progressText.includes(term));
+
     // Write evidence JSON
     await writeEvidence('task-10-learning-tabs.json', {
       tabCount: tabButtons.length,
@@ -202,6 +224,12 @@ test.describe('PEP Learning Tabs', () => {
       clickedLabels,
       visibleCardCounts,
       bannedTermBooleans,
+      removedStageSelectorCount,
+      removedStageCardCount,
+      removedStageDetailCount,
+      hasFiveStageText,
+      hasJuniorExplorerText,
+      hasOldRewardCopy,
       consoleErrorCount: consoleErrors.length,
       pageErrorCount: pageErrors.length,
       consoleErrors,

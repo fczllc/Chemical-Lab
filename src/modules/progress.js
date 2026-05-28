@@ -11,16 +11,8 @@ import {
   textbookAssetManifest
 } from '../data/index.js';
 import {
-  getAchievementDates,
-  getActivityLog,
-  getCollectedElements,
-  getCompletedExperiments,
   getCompletedLearningSegments,
-  getGamePlayCounts,
-  getGameScores,
-  getLearnedElements,
-  getQuizScores,
-  getStateSnapshot,
+  getLearningSegmentCompletionDates,
   getUnlockedAchievements,
   markLearningSegmentCompleted
 } from './storage.js';
@@ -113,7 +105,7 @@ export const __progressTestHooks = {
   buildLearningSegmentDetailSections
 };
 
-function getManualLearningSegments(unlockedAchievements = new Set(), completedLearningSegments = new Set()) {
+function getManualLearningSegments(unlockedAchievements = new Set(), completedLearningSegments = new Set(), learningSegmentCompletionDates = {}) {
   return MANUAL_LEARNING_ACHIEVEMENTS.map(({ achievement, segmentId }) => {
     const reference = achievement.sourceReferences?.[0] || {};
     const statusInfo = getLearningSegmentStatus(achievement, segmentId, unlockedAchievements, completedLearningSegments);
@@ -132,9 +124,34 @@ function getManualLearningSegments(unlockedAchievements = new Set(), completedLe
       detailSections: buildLearningSegmentDetailSections(achievement, reference, segmentId),
       asset: findTextbookAssetForReference(reference),
       achievement,
-      reference
+      reference,
+      completionDate: learningSegmentCompletionDates[segmentId] || ''
     };
+  }).filter((segment) => {
+    if (isExperimentLearningSegment(segment)) {
+      return false;
+    }
+
+    const id = String(segment.sourceVolumeId || '').trim();
+    return id.length > 0;
   });
+}
+
+function isExperimentLearningSegment(segment) {
+  return [
+    segment?.sourceHeading,
+    segment?.title,
+    segment?.reference?.sourceHeading
+  ].some(isExperimentLearningHeading);
+}
+
+function isExperimentLearningHeading(value) {
+  const heading = normalizeText(value);
+  return /^【实验/.test(heading) || [
+    '实验目的',
+    '实验用品',
+    '实验步骤'
+  ].includes(heading);
 }
 
 function getLearningSegmentStatus(achievement, segmentId, unlockedAchievements = new Set(), completedLearningSegments = new Set()) {
@@ -312,7 +329,7 @@ function findTextbookAssetForReference(reference) {
 }
 
 function formatSourceReference(reference, sourceVolumeId) {
-  return [sourceVolumeId, reference.sourceHeading, reference.lineRange ? `L${reference.lineRange}` : ''].filter(Boolean).join(' / ');
+  return reference.lineRange ? `L${reference.lineRange}` : '';
 }
 
 /** Known textbook sourceVolumeIds in deterministic display order.
@@ -575,53 +592,13 @@ function renderProgress() {
 
   readAchievementActionFocus();
 
-  const snapshot = getStateSnapshot();
-  const learned = getLearnedElements();
-  const collected = getCollectedElements();
-  const completedExperiments = getCompletedExperiments();
   const unlockedAchievements = getUnlockedAchievements();
   const completedLearningSegments = getCompletedLearningSegments();
-  const unlockDates = getAchievementDates();
-  const quizScores = getQuizScores();
-  const activityLog = getActivityLog();
-  const gameScores = getGameScores();
-  const gamePlays = getGamePlayCounts();
-  const pathStages = learningPath?.stages || [];
-  const stageStates = getStageStates(pathStages, learned, completedExperiments, quizScores, unlockedAchievements, completedLearningSegments);
-  const currentStage = stageStates.find((stage) => stage.status === 'current')
-    || [...stageStates].reverse().find((stage) => stage.status === 'complete')
-    || stageStates[0]
-    || null;
-  const selectedStage = stageStates.find((stage) => stage.id === selectedStageId) || currentStage;
-  const overallPercent = Math.round((learned.size / TOTAL_ELEMENTS) * 100) || 0;
-  const averageQuiz = quizScores.length
-    ? Math.round(quizScores.reduce((sum, item) => sum + Number(item.accuracy || 0), 0) / quizScores.length)
-    : 0;
-  const bestQuiz = quizScores.reduce((max, item) => Math.max(max, Number(item.accuracy || 0)), 0);
-  const experimentPercent = Math.round((completedExperiments.size / TOTAL_EXPERIMENTS) * 100) || 0;
-  const achievementPercent = achievementsData.length
-    ? Math.round((unlockedAchievements.size / achievementsData.length) * 100)
-    : 0;
+  const learningSegmentCompletionDates = getLearningSegmentCompletionDates();
 
-  container.innerHTML = `
-    ${renderManualLearningSection(unlockedAchievements, completedLearningSegments)}
+  container.innerHTML = renderManualLearningSection(unlockedAchievements, completedLearningSegments, learningSegmentCompletionDates);
 
-    <section class="progress-learning-path hud-shell">
-      <div class="progress-learning-header">
-        <div>
-          <p class="hud-kicker">GUIDED LEARNING PATH</p>
-          <h3>五阶段学习路径</h3>
-        </div>
-        <span>${currentStage ? `当前：${currentStage.name}` : '等待开始'}</span>
-      </div>
-      <div class="progress-stage-list">
-        ${stageStates.map((stage) => renderStageCard(stage, learned.size)).join('')}
-      </div>
-      ${selectedStage ? renderStageDetail(selectedStage, snapshot) : ''}
-    </section>
-  `;
-
-  bindStageInteractions();
+  bindLearningInteractions();
 }
 
 function getTextbookGroups(manualSegments) {
@@ -650,14 +627,7 @@ function getTextbookGroups(manualSegments) {
   return orderedIds.map((id) => groupMap.get(id));
 }
 
-function bindStageInteractions() {
-  document.querySelectorAll('[data-stage-select]').forEach((button) => {
-    button.addEventListener('click', () => {
-      selectedStageId = button.dataset.stageSelect;
-      renderProgress();
-    });
-  });
-
+function bindLearningInteractions() {
   document.querySelectorAll('[data-textbook-tab]').forEach((button) => {
     button.addEventListener('click', () => {
       const tabId = button.dataset.textbookTab || '';
@@ -927,10 +897,26 @@ function renderStageDetail(stage, snapshot) {
     </article>
   `;
 }
-function renderManualLearningSection(unlockedAchievements, completedLearningSegments) {
-  const manualSegments = getManualLearningSegments(unlockedAchievements, completedLearningSegments);
+function renderManualLearningSection(unlockedAchievements, completedLearningSegments, learningSegmentCompletionDates) {
+  const manualSegments = getManualLearningSegments(unlockedAchievements, completedLearningSegments, learningSegmentCompletionDates);
   if (!manualSegments.length) {
-    return '';
+    return `
+      <div class="progress-manual-learning-panel progress-detail-card">
+        <div class="progress-panel-heading">
+          <div>
+            <p class="hud-kicker">TEXTBOOK REVIEW</p>
+            <h4>教材复习确认</h4>
+          </div>
+        </div>
+        <div class="progress-manual-segment-list">
+          <div class="progress-learning-card is-empty" data-testid="learning-empty-fallback">
+            <div class="progress-learning-card-copy">
+              <p>暂无教材复习内容</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   const groups = getTextbookGroups(manualSegments);
@@ -939,7 +925,7 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
   const tabsHtml = groups.map((group) => `
     <button type="button" class="textbook-tab ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-tab="${escapeHtmlAttr(group.sourceVolumeId)}">
       <span class="textbook-tab-label">${renderTextbookTabLabel(group.label)}</span>
-      <span class="textbook-tab-progress">${group.completed}/${group.total}</span>
+      <span class="textbook-tab-progress">${group.total}</span>
     </button>
   `).join('');
 
@@ -963,8 +949,8 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
     <div class="progress-manual-learning-panel progress-detail-card">
       <div class="progress-panel-heading">
         <div>
-          <p class="hud-kicker">TEXTBOOK MICRO-LESSONS</p>
-          <h4>教材片段学习</h4>
+          <p class="hud-kicker">TEXTBOOK REVIEW</p>
+          <h4>教材复习确认</h4>
         </div>
         <span>${manualSegments.length} 个片段</span>
       </div>
@@ -979,9 +965,14 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
 }
 
 function renderLearningCard(segment) {
-  const { segmentId, achievementId, title, displayPath, status } = segment;
+  const { segmentId, achievementId, title, displayPath, status, completionDate } = segment;
   const isCompleted = status === 'completed';
-  const statusText = isCompleted ? '已学习' : '未学习';
+  let statusText;
+  if (isCompleted) {
+    statusText = completionDate ? `学习确认：${completionDate}` : '学习确认：日期待补充';
+  } else {
+    statusText = '';
+  }
   const cardClasses = [
     'progress-learning-card',
     isCompleted ? 'is-complete' : '',
@@ -1001,17 +992,20 @@ function renderLearningCard(segment) {
         <h5>${escapeHtml(title)}</h5>
         <p>${escapeHtml(displayPath)}</p>
       </div>
-      <div class="progress-learning-card-meta">
+      ${statusText ? `<div class="progress-learning-card-meta">
         <span data-testid="learning-card-status">${statusText}</span>
-      </div>
+      </div>` : ''}
     </article>
   `;
 }
 
 function renderLessonModal(segment) {
-  const { segmentId, achievementId, title, status, detailSections } = segment;
+  const { segmentId, achievementId, title, status, detailSections, completionDate } = segment;
   const isCompleted = status === 'completed';
-  const isRawCompleted = status === 'pending';
+
+  const footerHtml = isCompleted
+    ? `<span class="lesson-modal-completed-label">已学习${completionDate ? `：${escapeHtml(completionDate)}` : '：日期待补充'}</span>`
+    : `<button type="button" data-testid="confirm-learning" data-manual-achievement-id="${escapeHtmlAttr(achievementId)}">确定已学习</button>`;
 
   return `
     <div class="lesson-modal-overlay" data-testid="lesson-modal" role="dialog" aria-modal="true" data-learning-segment-id="${escapeHtmlAttr(segmentId)}">
@@ -1024,7 +1018,7 @@ function renderLessonModal(segment) {
           ${detailSections.map((section) => renderLessonModalSection(section)).join('')}
         </div>
         <div class="lesson-modal-footer">
-          ${!isCompleted && !isRawCompleted ? `<button type="button" data-testid="confirm-learning" data-manual-achievement-id="${escapeHtmlAttr(achievementId)}">确认学习</button>` : '<span class="lesson-modal-completed-label">已学习</span>'}
+          ${footerHtml}
         </div>
       </div>
     </div>

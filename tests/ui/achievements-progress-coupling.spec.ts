@@ -90,15 +90,15 @@ test.describe('Achievement progress coupling', () => {
     await expect(page).toHaveURL(/#\/progress$/);
     await expectAchievementLocked(page, MANUAL_ACHIEVEMENT_ID);
 
-    const learningCard = getLearningCard(page, MANUAL_SEGMENT_ID);
+    const learningCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(learningCard).toBeVisible();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '未学习');
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '');
     await expect(learningCard.locator('button')).toHaveCount(0);
 
     await page.reload({ waitUntil: 'domcontentloaded' });
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '未学习');
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '');
     await expectAchievementLocked(page, MANUAL_ACHIEVEMENT_ID);
 
     const rawStateBeforeCompletion = await page.evaluate(() => Array.from(window.appState.completedLearningSegments));
@@ -114,7 +114,7 @@ test.describe('Achievement progress coupling', () => {
       window.appState.unlockedAchievements.has(achievementId)
     ), MANUAL_ACHIEVEMENT_ID), { timeout: 10000 }).toBe(true);
 
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '已学习');
+    await expectLearningCardConfirmed(page, MANUAL_SEGMENT_ID);
   });
 
   test('modal confirmation unlocks achievement and syncs progress', async ({ page }) => {
@@ -132,7 +132,8 @@ test.describe('Achievement progress coupling', () => {
         segmentCompleted: window.appState.completedLearningSegments.has(segmentId),
         achievementUnlocked: window.appState.unlockedAchievements.has(achievementId),
         storedCompletedSegments: storedEnvelope?.data?.completedLearningSegments || [],
-        storedUnlockedAchievements: storedEnvelope?.data?.unlockedAchievements || []
+        storedUnlockedAchievements: storedEnvelope?.data?.unlockedAchievements || [],
+        storedLearningSegmentCompletionDates: storedEnvelope?.data?.learningSegmentCompletionDates || {}
       };
     }, { key: STORAGE_KEY, achievementId: MANUAL_ACHIEVEMENT_ID, segmentId: MANUAL_SEGMENT_ID });
 
@@ -140,10 +141,9 @@ test.describe('Achievement progress coupling', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const learningCard = getLearningCard(page, MANUAL_SEGMENT_ID);
+    const learningCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(learningCard).toBeVisible();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '未学习');
-
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '');
     await confirmLearningViaModal(page, MANUAL_SEGMENT_ID, MANUAL_ACHIEVEMENT_ID);
 
     await expect.poll(async () => page.evaluate(({ achievementId, segmentId }) => ({
@@ -154,7 +154,7 @@ test.describe('Achievement progress coupling', () => {
       achievementUnlocked: true
     });
 
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '已学习');
+    await expectLearningCardConfirmed(page, MANUAL_SEGMENT_ID);
 
     await page.getByTestId('nav-achievements').click();
     await expect(page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`)).toHaveClass(/is-unlocked/);
@@ -169,7 +169,8 @@ test.describe('Achievement progress coupling', () => {
         segmentCompleted: window.appState.completedLearningSegments.has(segmentId),
         achievementUnlocked: window.appState.unlockedAchievements.has(achievementId),
         storedCompletedSegments: storedEnvelope?.data?.completedLearningSegments || [],
-        storedUnlockedAchievements: storedEnvelope?.data?.unlockedAchievements || []
+        storedUnlockedAchievements: storedEnvelope?.data?.unlockedAchievements || [],
+        storedLearningSegmentCompletionDates: storedEnvelope?.data?.learningSegmentCompletionDates || {}
       };
     }, { key: STORAGE_KEY, achievementId: MANUAL_ACHIEVEMENT_ID, segmentId: MANUAL_SEGMENT_ID });
 
@@ -181,7 +182,7 @@ test.describe('Achievement progress coupling', () => {
     });
   });
 
-  test('progress escapes persisted activity text', async ({ page }) => {
+  test('learning page does not render persisted activity feed', async ({ page }) => {
     const unsafeTitle = '<img data-progress-title-xss src=x onerror="window.__progressActivityTitleXss = true">';
     const unsafeDescription = '<svg data-progress-description-xss onload="window.__progressActivityDescriptionXss = true"></svg>';
 
@@ -200,19 +201,15 @@ test.describe('Achievement progress coupling', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const activity = page.locator('.activity-item').first();
-    await expect(activity).toBeVisible();
+    await expect(page.locator('#progress .activity-item')).toHaveCount(0);
 
     const safety = await page.evaluate(() => {
-      const item = document.querySelector('.activity-item');
       return {
         injectedTitleNodes: document.querySelectorAll('[data-progress-title-xss]').length,
         injectedDescriptionNodes: document.querySelectorAll('[data-progress-description-xss]').length,
         injectedTimestampNodes: document.querySelectorAll('[data-progress-timestamp-xss]').length,
         titleHandlerRan: Boolean((window as any).__progressActivityTitleXss),
-        descriptionHandlerRan: Boolean((window as any).__progressActivityDescriptionXss),
-        html: item?.innerHTML || '',
-        text: item?.textContent || ''
+        descriptionHandlerRan: Boolean((window as any).__progressActivityDescriptionXss)
       };
     });
 
@@ -221,10 +218,6 @@ test.describe('Achievement progress coupling', () => {
     expect(safety.injectedTimestampNodes).toBe(0);
     expect(safety.titleHandlerRan).toBe(false);
     expect(safety.descriptionHandlerRan).toBe(false);
-    expect(safety.text).toContain(unsafeTitle);
-    expect(safety.text).toContain(unsafeDescription);
-    expect(safety.html).toContain('&lt;img');
-    expect(safety.html).toContain('&lt;svg');
   });
 
   test('completed learning segment persists after reload', async ({ page }) => {
@@ -236,9 +229,11 @@ test.describe('Achievement progress coupling', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const learningCard = getLearningCard(page, MANUAL_SEGMENT_ID);
+    const learningCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(learningCard).toBeVisible();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '未学习');
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '');
+
+    const beforeEvidence = await readStorageEvidence(page, MANUAL_SEGMENT_ID, MANUAL_ACHIEVEMENT_ID);
 
     await confirmLearningViaModal(page, MANUAL_SEGMENT_ID, MANUAL_ACHIEVEMENT_ID);
 
@@ -246,14 +241,15 @@ test.describe('Achievement progress coupling', () => {
     expect(storedAfterCompletion.version).toBe('v3');
     expect(storedAfterCompletion.data.completedLearningSegments).toContain(MANUAL_SEGMENT_ID);
     expect(storedAfterCompletion.data.unlockedAchievements).toContain(MANUAL_ACHIEVEMENT_ID);
+    expect(storedAfterCompletion.data.learningSegmentCompletionDates[MANUAL_SEGMENT_ID]).toMatch(/^\d{4}-\d{2}-\d{2}$/);
 
     await page.reload({ waitUntil: 'domcontentloaded' });
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const reloadedCard = getLearningCard(page, MANUAL_SEGMENT_ID);
+    const reloadedCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(reloadedCard).toBeVisible();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '已学习');
+    await expectLearningCardConfirmed(page, MANUAL_SEGMENT_ID);
     await reloadedCard.click();
     const reloadedModal = page.locator('[data-testid="lesson-modal"]');
     await expect(reloadedModal).toBeVisible();
@@ -266,23 +262,16 @@ test.describe('Achievement progress coupling', () => {
     await page.getByTestId('nav-achievements').click();
     await expect(page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`)).toHaveClass(/is-unlocked/);
 
-    const evidence = await page.evaluate(({ key, segmentId, achievementId }) => {
-      const rawEnvelope = window.localStorage.getItem(key);
-      const storedEnvelope = rawEnvelope ? JSON.parse(rawEnvelope) : null;
-      const card = document.querySelector(`#progress [data-testid="learning-card"][data-learning-segment-id="${CSS.escape(segmentId)}"]`);
-      return {
-        appState: {
-          completedLearningSegments: Array.from(window.appState.completedLearningSegments),
-          unlockedAchievements: Array.from(window.appState.unlockedAchievements)
-        },
-        storedEnvelope,
-        segmentPersisted: storedEnvelope?.data?.completedLearningSegments?.includes(segmentId) ?? false,
-        achievementPersisted: storedEnvelope?.data?.unlockedAchievements?.includes(achievementId) ?? false,
-        cardText: card?.textContent?.replace(/\s+/g, ' ').trim() || ''
-      };
-    }, { key: STORAGE_KEY, segmentId: MANUAL_SEGMENT_ID, achievementId: MANUAL_ACHIEVEMENT_ID });
+    const afterReloadEvidence = await readStorageEvidence(page, MANUAL_SEGMENT_ID, MANUAL_ACHIEVEMENT_ID);
 
-    await writeEvidence('task-6-persistence-reload.json', evidence);
+    await writeEvidence('task-6-persistence-reload.json', {
+      before: beforeEvidence,
+      afterCompletion: {
+        storedEnvelope: storedAfterCompletion,
+        storedLearningSegmentCompletionDates: storedAfterCompletion.data.learningSegmentCompletionDates || {}
+      },
+      afterReload: afterReloadEvidence
+    });
   });
 
   test('manual topic progress is derived from unlocked achievements', async ({ page }) => {
@@ -294,9 +283,9 @@ test.describe('Achievement progress coupling', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const learningCard = getLearningCard(page, MANUAL_SEGMENT_ID);
+    const learningCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(learningCard).toBeVisible();
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '已学习');
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '学习确认：日期待补充');
     await expect.poll(async () => page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
     ), MANUAL_SEGMENT_ID), { timeout: 10000 }).toBe(true);
@@ -317,7 +306,8 @@ test.describe('Achievement progress coupling', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '已学习');
+    await showLearningCard(page, MANUAL_SEGMENT_ID);
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '学习确认：日期待补充');
 
     const unlockedProgress = await readManualProgressSnapshot(page, MANUAL_SEGMENT_ID);
     expect(unlockedProgress).toMatchObject({
@@ -349,8 +339,20 @@ test.describe('Achievement progress coupling', () => {
           continue;
         }
 
-        if (status !== '未学习' && status !== '已学习') {
-          invalid.push(`${manual.id}: invalid learning status ${status || '<empty>'}`);
+        const status = card?.querySelector('[data-testid=\"learning-card-status\"]')?.textContent?.trim() || '';
+
+        if (!card) {
+          invalid.push(`${manual.id}: missing learning card ${manual.segmentId}`);
+          continue;
+        }
+
+        if (
+          status !== ''
+          && status !== '未学习'
+          && status !== '学习确认：日期待补充'
+          && !/^学习确认：\\d{4}-\\d{2}-\\d{2}$/.test(status)
+        ) {
+          invalid.push(`${manual.id}: invalid learning status ${status}`);
         }
       }
 
@@ -472,8 +474,11 @@ test.describe('Achievement progress coupling', () => {
     expect(state.completedLearningSegments).toEqual([MANUAL_SEGMENT_ID]);
     expect(state.learnedElements).toEqual([]);
     expect(state.collectedElements).toEqual([]);
-    await expect(page.locator('.progress-ring')).toContainText('0%');
-    await expect(page.locator('.progress-ring')).toContainText('0 / 118');
+    await expect(page.locator('#progress .progress-ring')).toHaveCount(0);
+    await expect(page.locator('#progress')).not.toContainText('0 / 118');
+    await expect(page.locator('#progress')).not.toContainText('0%');
+    await showLearningCard(page, MANUAL_SEGMENT_ID);
+    await expectLearningCardStatus(page, MANUAL_SEGMENT_ID, '学习确认：日期待补充');
   });
 });
 
@@ -500,6 +505,7 @@ async function seedStoredState(page: Page, progressPatch: Record<string, unknown
         quizScores: [],
         completedExperiments: [],
         completedLearningSegments: [],
+        learningSegmentCompletionDates: {},
         experimentTitleOverrides: {},
         unlockedAchievements: [],
         achievementDates: {},
@@ -539,15 +545,38 @@ function getLearningCard(page: Page, segmentId: string) {
   return page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
 }
 
-async function expectLearningCardStatus(page: Page, segmentId: string, expectedStatus: '未学习' | '已学习') {
-  const status = getLearningCard(page, segmentId).locator('[data-testid="learning-card-status"]');
+async function showLearningCard(page: Page, segmentId: string) {
+  const card = getLearningCard(page, segmentId);
+  const sourceVolumeId = await card.evaluate((element) => (
+    element.closest('[data-textbook-panel]')?.getAttribute('data-textbook-panel') || ''
+  ));
+
+  if (sourceVolumeId) {
+    const tab = page.locator(`[data-textbook-tab="${sourceVolumeId}"]`);
+    if (await tab.count()) {
+      await tab.click();
+    }
+  }
+
+  return card;
+}
+
+async function expectLearningCardStatus(page: Page, segmentId: string, expectedStatus: '' | '学习确认：日期待补充') {
+  const status = getLearningCard(page, segmentId).locator('[data-testid=\"learning-card-status\"]');
   await expect(status).toHaveText(expectedStatus);
 }
 
+async function expectLearningCardConfirmed(page: Page, segmentId: string) {
+  const status = getLearningCard(page, segmentId).locator('[data-testid="learning-card-status"]');
+  await expect(status).toHaveText(/^学习确认：\d{4}-\d{2}-\d{2}$/);
+  const text = (await status.textContent())?.trim() || '';
+  return text.replace('学习确认：', '');
+}
+
 async function confirmLearningViaModal(page: Page, segmentId: string, achievementId: string) {
-  const card = getLearningCard(page, segmentId);
+  const card = await showLearningCard(page, segmentId);
   await expect(card).toBeVisible();
-  await expect(card.locator('[data-testid="learning-card-status"]')).toHaveText('未学习');
+  await expect(card.locator('[data-testid=\"learning-card-status\"]')).toHaveText('');
 
   await card.click();
 
@@ -578,6 +607,7 @@ async function writeStoredState(page: Page, progressPatch: Record<string, unknow
         quizScores: [],
         completedExperiments: [],
         completedLearningSegments: [],
+        learningSegmentCompletionDates: {},
         experimentTitleOverrides: {},
         unlockedAchievements: [],
         achievementDates: {},
@@ -642,6 +672,25 @@ async function readManualProgressSnapshot(page: Page, segmentId: string) {
   }, segmentId);
 }
 
+async function readStorageEvidence(page: Page, segmentId: string, achievementId: string) {
+  return page.evaluate(({ key, segmentId: targetSegmentId, achievementId: targetAchievementId }) => {
+    const rawEnvelope = window.localStorage.getItem(key);
+    const storedEnvelope = rawEnvelope ? JSON.parse(rawEnvelope) : null;
+    const card = document.querySelector(`#progress [data-testid="learning-card"][data-learning-segment-id="${CSS.escape(targetSegmentId)}"]`);
+    return {
+      appState: {
+        completedLearningSegments: Array.from(window.appState.completedLearningSegments),
+        unlockedAchievements: Array.from(window.appState.unlockedAchievements)
+      },
+      storedEnvelope,
+      segmentPersisted: storedEnvelope?.data?.completedLearningSegments?.includes(targetSegmentId) ?? false,
+      achievementPersisted: storedEnvelope?.data?.unlockedAchievements?.includes(targetAchievementId) ?? false,
+      storedLearningSegmentCompletionDates: storedEnvelope?.data?.learningSegmentCompletionDates || {},
+      cardText: card?.textContent?.replace(/\s+/g, ' ').trim() || ''
+    };
+  }, { key: STORAGE_KEY, segmentId, achievementId });
+}
+
 async function waitForStoredSegment(page: Page, segmentId: string, achievementId: string) {
   await expect.poll(async () => page.evaluate(({ key, segmentId: targetSegmentId, achievementId: targetAchievementId }) => {
     const rawEnvelope = window.localStorage.getItem(key);
@@ -652,12 +701,16 @@ async function waitForStoredSegment(page: Page, segmentId: string, achievementId
     const envelope = JSON.parse(rawEnvelope);
     const completedSegments = envelope?.data?.completedLearningSegments;
     const unlockedAchievements = envelope?.data?.unlockedAchievements;
+    const completionDates = envelope?.data?.learningSegmentCompletionDates;
     if (
       envelope?.version !== 'v3'
       || !Array.isArray(completedSegments)
       || !Array.isArray(unlockedAchievements)
+      || typeof completionDates !== 'object'
+      || completionDates === null
       || !completedSegments.includes(targetSegmentId)
       || !unlockedAchievements.includes(targetAchievementId)
+      || !/^\d{4}-\d{2}-\d{2}$/.test(completionDates[targetSegmentId] || '')
     ) {
       return false;
     }
