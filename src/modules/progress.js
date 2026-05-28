@@ -83,6 +83,17 @@ function escapeHtmlAttr(value) {
   return escapeHtml(value);
 }
 
+function renderTextbookTabLabel(label) {
+  const parts = String(label ?? '').split('·');
+  if (parts.length < 2) {
+    return `<span class="textbook-tab-line">${escapeHtml(label)}</span>`;
+  }
+  return parts.map((part, index) => {
+    const cls = index === 1 ? 'textbook-tab-line is-emphasis' : 'textbook-tab-line';
+    return `<span class="${cls}">${escapeHtml(part)}</span>`;
+  }).join('');
+}
+
 function isQuizCompleted(quizId, quizScores) {
   return quizScores.some((score) => (
     score.id === quizId
@@ -593,78 +604,7 @@ function renderProgress() {
     : 0;
 
   container.innerHTML = `
-    <section class="progress-dashboard hud-shell">
-      <div class="progress-dashboard-header">
-        <div>
-          <p class="hud-kicker">LEARNING DOSSIER</p>
-          <h3>学习路径与成长仪表板</h3>
-          <p class="progress-dashboard-copy">从已学习元素、实验、测验到游戏表现，这里会同步展示你的完整学习轨迹。</p>
-        </div>
-        <div class="progress-ring" style="--progress:${overallPercent}%">
-          <div>
-            <strong>${overallPercent}%</strong>
-            <span>${learned.size} / ${TOTAL_ELEMENTS}</span>
-          </div>
-        </div>
-      </div>
-
-      ${celebrationMessage ? `<div class="stage-celebration-banner"><i data-lucide="party-popper"></i> ${celebrationMessage}</div>` : ''}
-
-      <div class="progress-stat-grid">
-        <article class="progress-stat-card"><span>总体进度</span><strong>${learned.size}/${TOTAL_ELEMENTS}</strong><small>已学习元素总数</small></article>
-        <article class="progress-stat-card"><span>当前阶段</span><strong>${currentStage?.name || '尚未开始'}</strong><small>${currentStage ? `目标 ${currentStage.requiredCount} 个元素` : '等待开始'}</small></article>
-        <article class="progress-stat-card"><span>实验进度</span><strong>${completedExperiments.size}/${TOTAL_EXPERIMENTS}</strong><small>${experimentPercent}% 完成</small></article>
-        <article class="progress-stat-card"><span>成就进度</span><strong>${unlockedAchievements.size}/${achievementsData.length}</strong><small>${achievementPercent}% 完成</small></article>
-        <article class="progress-stat-card"><span>平均测验分</span><strong>${averageQuiz}%</strong><small>最高 ${bestQuiz}% · 共 ${quizScores.length} 次</small></article>
-        <article class="progress-stat-card"><span>已收藏元素</span><strong>${collected.size}</strong><small>收藏墙同步扩展中</small></article>
-      </div>
-
-      <div class="progress-metrics-grid">
-        <article class="progress-metric-panel">
-          <div class="progress-panel-heading">
-            <h4>近期学习活动</h4>
-            <span>实时更新</span>
-          </div>
-          <div class="progress-activity-list">
-            ${renderActivityList(activityLog, snapshot, unlockDates)}
-          </div>
-        </article>
-
-        <article class="progress-metric-panel">
-          <div class="progress-panel-heading">
-            <h4>测验统计</h4>
-            <span>${quizScores.length} 次记录</span>
-          </div>
-          ${renderMetricBars([
-            { label: '平均分', value: averageQuiz },
-            { label: '最高分', value: bestQuiz },
-            { label: '完成率', value: Math.min(100, quizScores.length * 10) }
-          ], '%')}
-        </article>
-
-        <article class="progress-metric-panel">
-          <div class="progress-panel-heading">
-            <h4>游戏统计</h4>
-            <span>最高分与次数</span>
-          </div>
-          <div class="game-stat-list">
-            ${renderGameStats(gameScores, gamePlays)}
-          </div>
-        </article>
-
-        <article class="progress-metric-panel">
-          <div class="progress-panel-heading">
-            <h4>实验与成就</h4>
-            <span>阶段同步联动</span>
-          </div>
-          ${renderMetricBars([
-            { label: '实验完成', value: experimentPercent },
-            { label: '成就解锁', value: achievementPercent },
-            { label: '收藏完成', value: Math.round((collected.size / TOTAL_ELEMENTS) * 100) || 0 }
-          ], '%')}
-        </article>
-      </div>
-    </section>
+    ${renderManualLearningSection(unlockedAchievements, completedLearningSegments)}
 
     <section class="progress-learning-path hud-shell">
       <div class="progress-learning-header">
@@ -678,7 +618,6 @@ function renderProgress() {
         ${stageStates.map((stage) => renderStageCard(stage, learned.size)).join('')}
       </div>
       ${selectedStage ? renderStageDetail(selectedStage, snapshot) : ''}
-      ${renderManualLearningSection(unlockedAchievements, completedLearningSegments)}
     </section>
   `;
 
@@ -724,7 +663,11 @@ function bindStageInteractions() {
       const tabId = button.dataset.textbookTab || '';
       activeTextbookId = tabId;
       document.querySelectorAll('[data-textbook-tab]').forEach((btn) => btn.classList.toggle('is-active', btn.dataset.textbookTab === tabId));
-      document.querySelectorAll('[data-textbook-panel]').forEach((panel) => panel.classList.toggle('is-active', panel.dataset.textbookPanel === tabId));
+      document.querySelectorAll('[data-textbook-panel]').forEach((panel) => {
+        const isActive = panel.dataset.textbookPanel === tabId;
+        panel.classList.toggle('is-active', isActive);
+        panel.hidden = !isActive;
+      });
     });
   });
 
@@ -995,8 +938,8 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
 
   const tabsHtml = groups.map((group) => `
     <button type="button" class="textbook-tab ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-tab="${escapeHtmlAttr(group.sourceVolumeId)}">
-      ${escapeHtml(group.label)}
-      <span class="textbook-tab-count">${group.total}</span>
+      <span class="textbook-tab-label">${renderTextbookTabLabel(group.label)}</span>
+      <span class="textbook-tab-progress">${group.completed}/${group.total}</span>
     </button>
   `).join('');
 
@@ -1007,7 +950,7 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
       : null;
 
     return `
-      <div class="textbook-panel ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-panel="${escapeHtmlAttr(group.sourceVolumeId)}">
+      <div class="textbook-panel ${group.sourceVolumeId === activeGroupId ? 'is-active' : ''}" data-textbook-panel="${escapeHtmlAttr(group.sourceVolumeId)}" ${group.sourceVolumeId !== activeGroupId ? 'hidden' : ''}>
         <div class="progress-manual-segment-list">
           ${groupSegments.map((segment) => renderLearningCard(segment)).join('')}
         </div>

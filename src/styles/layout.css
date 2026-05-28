@@ -2329,3 +2329,86 @@
   outline: 2px solid var(--neon-cyan);
   outline-offset: 3px;
 }
+
+/* ===== Textbook tabs (学习 page) ===== */
+.textbook-tab-bar.progress-textbook-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-bottom: 18px;
+}
+
+.textbook-tab {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 78px;
+  padding: 14px 16px;
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  color: var(--text-secondary);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal);
+}
+
+.textbook-tab:hover,
+.textbook-tab:focus-visible {
+  border-color: rgba(0, 240, 255, 0.35);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.1), 0 16px 36px rgba(2, 6, 23, 0.26);
+  outline: none;
+}
+
+.textbook-tab.is-active {
+  border-color: rgba(0, 240, 255, 0.54);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(8, 47, 73, 0.48));
+  box-shadow: inset 0 0 0 1px rgba(0, 240, 255, 0.12), 0 18px 46px rgba(2, 6, 23, 0.3);
+}
+
+.textbook-tab-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.textbook-tab-line {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.textbook-tab-line.is-emphasis {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.textbook-tab-progress {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: rgba(226, 232, 240, 0.72);
+  text-align: right;
+}
+
+/* Active tab uses stronger colors */
+.textbook-tab.is-active .textbook-tab-line {
+  color: var(--text-secondary);
+}
+
+.textbook-tab.is-active .textbook-tab-line.is-emphasis {
+  color: #f8fbff;
+}
+
+.textbook-tab.is-active .textbook-tab-progress {
+  color: var(--neon-cyan);
+}
