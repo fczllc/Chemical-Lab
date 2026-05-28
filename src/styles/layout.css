@@ -2344,7 +2344,7 @@
   flex: 1 1 0;
   min-width: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
   min-height: 78px;
@@ -2395,7 +2395,7 @@
 .textbook-tab-progress {
   flex-shrink: 0;
   font-family: var(--font-display);
-  font-size: 1.08rem;
+  font-size: 0.78rem;
   color: rgba(226, 232, 240, 0.72);
   text-align: right;
 }

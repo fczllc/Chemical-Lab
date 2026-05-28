@@ -208,11 +208,11 @@ body:has(#progress.active) .detail-panel.docked {
 }
 
 .progress-learning-card {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 14px;
-  min-height: 150px;
-  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 104px;
+  padding: 14px;
   border-radius: 5px;
   background: rgba(15, 23, 42, 0.82);
   border: 1px solid rgba(148, 163, 184, 0.14);
@@ -240,7 +240,7 @@ body:has(#progress.active) .detail-panel.docked {
 .progress-learning-card-copy {
   display: grid;
   align-content: start;
-  gap: 10px;
+  gap: 6px;
   min-width: 0;
 }
 
@@ -262,22 +262,26 @@ body:has(#progress.active) .detail-panel.docked {
 
 .progress-learning-card-meta {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: auto;
+  width: 100%;
+  text-align: left;
 }
 
 .progress-learning-card-meta span {
-  padding: 4px 10px;
-  border-radius: 5px;
+  display: block;
   color: var(--text-secondary);
   font-size: 0.78rem;
-  background: rgba(148, 163, 184, 0.12);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
 }
 
 .progress-learning-card.is-complete .progress-learning-card-meta span {
-  color: #d1fae5;
-  background: rgba(16, 185, 129, 0.16);
-  border-color: rgba(16, 185, 129, 0.24);
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
 }
 
 .achievement-card-body {
@@ -499,10 +503,9 @@ body:has(#progress.active) .detail-panel.docked {
 
 /* ===== Learning cards (display-only lesson entries) ===== */
 .progress-learning-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  align-items: center;
   padding: 14px;
   border-radius: 5px;
   background: rgba(2, 6, 23, 0.42);
@@ -539,10 +542,18 @@ body:has(#progress.active) .detail-panel.docked {
   background: rgba(20, 83, 45, 0.18);
 }
 
-.progress-learning-card-copy,
-.progress-learning-card-meta {
+.progress-learning-card-copy {
   display: grid;
   gap: 8px;
+}
+
+.progress-learning-card-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: auto;
+  width: 100%;
+  text-align: left;
 }
 
 .progress-learning-card-copy h5 {
@@ -558,24 +569,18 @@ body:has(#progress.active) .detail-panel.docked {
   margin: 0;
 }
 
-.progress-learning-card-meta {
-  justify-items: end;
-}
-
 .progress-learning-card-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: rgba(148, 163, 184, 0.1);
-  color: #e2f3ff;
-  font-size: 0.82rem;
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
 }
 
 .progress-learning-card.is-complete .progress-learning-card-meta span {
-  background: rgba(34, 197, 94, 0.14);
-  color: #d8ffe7;
+  background: transparent;
+  color: var(--text-secondary);
 }
 
 /* ===== Lesson modal ===== */
@@ -783,12 +788,11 @@ body:has(#progress.active) .detail-panel.docked {
 /* ===== Responsive: mobile learning cards and modal ===== */
 @media (max-width: 560px) {
   .progress-learning-card {
-    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .progress-learning-card-meta {
-    justify-items: start;
+    justify-content: flex-start;
   }
 
   .lesson-modal-shell {
