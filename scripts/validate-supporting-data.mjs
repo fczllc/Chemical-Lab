@@ -7,6 +7,7 @@ import {
   elements,
   labExperiments,
   learningPath,
+  learningSegmentTextbookContent,
   quizData,
   reactions,
   textbookAssetManifest
@@ -91,7 +92,10 @@ const selfCheckModes = new Set([
   'missing-allotropes-reviewed-source',
   'reused-carbon-existing-id',
   'allotropes-active-carbon-source-contamination',
-  'allotropes-draft-runtime-leak'
+  'allotropes-draft-runtime-leak',
+  'missing-learning-segment-textbook-content',
+  'empty-learning-segment-textbook-content',
+  'invalid-learning-segment-textbook-content-block'
 ]);
 const selfCheckInvalid = parseSelfCheckMode(process.argv.slice(2));
 const errors = [];
@@ -423,9 +427,10 @@ for (const [gameId, gameMeta] of Object.entries(safeGameMeta ?? {})) {
 
 validateSupportingTopicConfigs(selfCheckInvalid);
 validateRuntimeSourceImportBoundary();
+validateLearningSegmentTextbookContentLinkage(selfCheckInvalid);
 
 if (selfCheckInvalid) {
-  const strictSelfCheckModes = new Set(['missing-allotropes-reviewed-source', 'reused-carbon-existing-id', 'allotropes-active-carbon-source-contamination', 'allotropes-draft-runtime-leak']);
+  const strictSelfCheckModes = new Set(['missing-allotropes-reviewed-source', 'reused-carbon-existing-id', 'allotropes-active-carbon-source-contamination', 'allotropes-draft-runtime-leak', 'missing-learning-segment-textbook-content', 'empty-learning-segment-textbook-content', 'invalid-learning-segment-textbook-content-block']);
   if (errors.length === 0) {
     console.error(`支持数据非法夹具自检失败：${selfCheckInvalid} 未被拒绝`);
     process.exit(1);
@@ -501,24 +506,25 @@ function validateC60ReviewedSource(record, label, options = {}) {
 
 function parseSelfCheckMode(args) {
   if (args.includes('--help') || args.includes('-h')) {
-    console.log(`Supporting data validator / 支持数据校验器
-
-Usage:
-  node scripts/validate-supporting-data.mjs [--self-check-invalid <mode>]
-
-Invalid fixture modes:
-  ${[...selfCheckModes].join('|')}`);
+    console.log(`Supporting data validator / 支持数据校验器\n\nUsage:\n  node scripts/validate-supporting-data.mjs [--self-check=<mode>]\n\nInvalid fixture modes:\n  ${[...selfCheckModes].join('|')}`);
     process.exit(0);
   }
 
-  const selfCheckIndex = args.indexOf('--self-check-invalid');
-  if (selfCheckIndex === -1) {
+  const selfCheckArg = args.find(arg => arg.startsWith('--self-check=') || arg === '--self-check' || arg === '--self-check-invalid');
+  if (!selfCheckArg) {
     return null;
   }
 
-  const mode = args[selfCheckIndex + 1];
+  let mode;
+  if (selfCheckArg.startsWith('--self-check=')) {
+    mode = selfCheckArg.split('=')[1];
+  } else {
+    const index = args.indexOf(selfCheckArg);
+    mode = args[index + 1];
+  }
+
   if (!selfCheckModes.has(mode)) {
-    throw new Error(`--self-check-invalid must be one of: ${[...selfCheckModes].join(', ')}`);
+    throw new Error(`--self-check must be one of: ${[...selfCheckModes].join(', ')}`);
   }
 
   return mode;
@@ -1295,6 +1301,112 @@ function ensureObject(value, errorMessage) {
 function isRecord(value) {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
+
+function validateLearningSegmentTextbookContentLinkage(mode) {
+  const learningAchievements = safeAchievementsData.filter(a =>
+    a.category === 'learning' &&
+    a.condition?.type === 'manualReviewAfterPromotion' &&
+    a.sourceReviewStatus === 'reviewed' &&
+    Array.isArray(a.sourceReferences) &&
+    a.sourceReferences.length > 0 &&
+    a.sourceReferences[0].lineRange
+  );
+
+  const contentRecords = structuredClone(learningSegmentTextbookContent);
+  const contentMapByVolumeCandidate = new Map();
+  const contentMapByVolumeSection = new Map();
+  const contentMapByVolumeLineRange = new Map();
+  const segmentIds = new Set();
+
+  for (const record of contentRecords) {
+    if (mode === 'missing-learning-segment-textbook-content' && record.segmentId === 'knowledge-topic-0004-source-section-l63-l74-105f9964c8') continue;
+
+    if (mode === 'empty-learning-segment-textbook-content' && record.segmentId === 'knowledge-topic-0004-source-section-l63-l74-105f9964c8') {
+      record.blocks = [];
+    } else if (mode === 'invalid-learning-segment-textbook-content-block' && record.segmentId === 'knowledge-topic-0004-source-section-l63-l74-105f9964c8') {
+      record.blocks = [{ type: 'raw-html', text: '<img onerror="window.bad=true">' }];
+    }
+
+    if (record.segmentId) {
+      if (segmentIds.has(record.segmentId)) errors.push(`重复的 segmentId: ${record.segmentId}`);
+      segmentIds.add(record.segmentId);
+    }
+
+    const volCand = `${record.sourceVolumeId}:${record.candidateId || ''}`;
+    const volSect = `${record.sourceVolumeId}:${record.sourceSectionId || ''}`;
+    const volLine = `${record.sourceVolumeId}:${record.lineRange}`;
+
+    if (record.candidateId) {
+      if (contentMapByVolumeCandidate.has(volCand)) errors.push(`重复的 sourceVolumeId+candidateId: ${volCand}`);
+      contentMapByVolumeCandidate.set(volCand, record);
+    }
+    
+    if (record.sourceSectionId) {
+      if (contentMapByVolumeSection.has(volSect)) errors.push(`重复的 sourceVolumeId+sourceSectionId: ${volSect}`);
+      contentMapByVolumeSection.set(volSect, record);
+    }
+
+    if (!contentMapByVolumeLineRange.has(volLine)) contentMapByVolumeLineRange.set(volLine, []);
+    contentMapByVolumeLineRange.get(volLine).push(record);
+  }
+
+  for (const achievement of learningAchievements) {
+    const tags = achievement.curriculumTags;
+    if (!Array.isArray(tags) || tags.filter(t => t).length !== 1) {
+      errors.push(`成就 ${achievement.id} 必须恰好包含 1 个 non-empty segmentId`);
+      continue;
+    }
+    const segmentId = tags[0];
+
+    const ref = achievement.sourceReferences[0];
+    const vol = achievement.sourceVolumeId || ref.sourceVolumeId || ref.volumeId || '';
+    const cand = ref.candidateId || '';
+    const sect = cand.startsWith('achievement-') ? cand.slice('achievement-'.length) : '';
+    const range = ref.lineRange;
+
+    let record = contentMapByVolumeCandidate.get(`${vol}:${cand}`) ||
+                 contentMapByVolumeSection.get(`${vol}:${sect}`) ||
+                 null;
+
+    if (!record && contentMapByVolumeLineRange.has(`${vol}:${range}`)) {
+      const records = contentMapByVolumeLineRange.get(`${vol}:${range}`);
+      if (records.length === 1) record = records[0];
+      else errors.push(`成就 ${achievement.id} 使用 lineRange fallback 存在歧义: ${vol}:${range}`);
+    }
+
+    if (!record) {
+      errors.push(`成就 ${achievement.id} 缺失 textbook content 记录 (segmentId: ${segmentId})`);
+      continue;
+    }
+
+    if (!Array.isArray(record.blocks) || record.blocks.length === 0) {
+      errors.push(`成就 ${achievement.id} textbook content 记录 blocks 为空 (segmentId: ${segmentId})`);
+    }
+
+    for (const block of record.blocks) {
+      if (!['heading', 'paragraph', 'list'].includes(block.type)) {
+        errors.push(`成就 ${achievement.id} 包含非法 block type: ${block.type}`);
+      }
+      if (block.type === 'heading' || block.type === 'paragraph') {
+        if (typeof block.text !== 'string' || !block.text.trim()) {
+           errors.push(`成就 ${achievement.id} 包含 empty text 在 block type ${block.type}`);
+        }
+      }
+      if (block.type === 'list') {
+        if (!Array.isArray(block.items) || block.items.some(i => typeof i !== 'string' || !i.trim())) {
+          errors.push(`成就 ${achievement.id} list block 包含 empty items`);
+        }
+      }
+    }
+
+    if (record.sourceVolumeId !== vol) errors.push(`成就 ${achievement.id} sourceVolumeId mismatch`);
+    if (cand && record.candidateId !== cand) errors.push(`成就 ${achievement.id} candidateId mismatch`);
+    if (range && record.lineRange !== range) errors.push(`成就 ${achievement.id} lineRange mismatch`);
+    if (!record.textbookName?.trim() || !record.rangeLabel?.trim()) errors.push(`成就 ${achievement.id} missing textbookName/rangeLabel`);
+  }
+}
+
+
 
 function validateRuntimeSourceImportBoundary() {
   const srcRoot = path.resolve(process.cwd(), 'src');

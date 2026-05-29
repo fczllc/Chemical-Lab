@@ -12,6 +12,7 @@ import reactionsData from './reactions.json' with { type: 'json' };
 import labExperimentsData from './labExperiments.json' with { type: 'json' };
 import spectralLinesDataset from './spectralLines.json' with { type: 'json' };
 import storyMediaData from './storyMedia/media.json' with { type: 'json' };
+import { learningSegmentTextbookContent } from './learningSegmentTextbookContent.js';
 
 // Stable element-level shape for UI consumers
 export const storyMedia = storyMediaData.elements.map((el) => ({
@@ -33,7 +34,7 @@ export const {
 export const { quizData } = quizDataset;
 export const { learningPath } = learningPathData;
 export const { curriculumTags } = curriculumDataset;
-export { textbookAssetExtractionStatuses, textbookAssetManifest, textbookAssetTypes };
+export { textbookAssetExtractionStatuses, textbookAssetManifest, textbookAssetTypes, learningSegmentTextbookContent };
 export const reactions = Array.isArray(reactionsData) ? reactionsData : reactionsData.reactions;
 export const { labExperiments } = labExperimentsData;
 export const { achievementsData } = achievementsDataset;
