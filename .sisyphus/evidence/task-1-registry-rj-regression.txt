@@ -1,0 +1,35 @@
+=== Task 1 RJ Regression Evidence ===
+Generated: 2026-05-28
+
+---
+1. INVALID ID BOUNDARY (NEGATIVE CASE)
+Command: node scripts/textbook/extract-textbook.mjs --textbook does-not-exist
+Output:
+Unknown textbook batch: does-not-exist
+Exit code: 1
+Analysis: CORRECT. Fails with "Unknown textbook batch" as expected for unrecognized IDs.
+
+---
+2. EXISTING RJ ID BOUNDARY (POSITIVE CASE)
+Command: node scripts/textbook/extract-textbook.mjs --textbook rj-chemistry-grade9-2024-vol1
+Output:
+Extracted sections: 419
+Referenced assets: 142
+Wrote: src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/source-inventory.json
+Exit code: 0
+Analysis: CORRECT. Existing rj ID is recognized and extraction succeeds. Does NOT fail with "Unknown textbook batch".
+
+---
+3. REGISTRY INTEGRITY CHECK
+All four scripts contain all 8 expected IDs:
+- rj-chemistry-grade9-2024-vol1
+- rj-chemistry-grade9-2024-vol2
+- rj-chemistry-g12-selective-3-organic-2019
+- rj-chemistry-grade8-54-2024-full
+- pep-chemistry-g10-required-1
+- pep-chemistry-g10-required-2
+- pep-chemistry-g11-selective-1
+- pep-chemistry-g11-selective-2
+
+Fixture entry "fixture-missing-book" remains present in extract-textbook.mjs.
+All existing rj-* entries and their order are preserved.

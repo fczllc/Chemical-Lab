@@ -1,0 +1,7 @@
+{
+  "scenario": "Duplicate completion does not overwrite date",
+  "segmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+  "duplicateCallResult": false,
+  "dateUnchanged": true,
+  "timestamp": "2026-05-28T03:49:50.388Z"
+}

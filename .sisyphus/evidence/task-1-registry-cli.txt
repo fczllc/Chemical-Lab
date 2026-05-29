@@ -1,0 +1,101 @@
+=== Task 1 Registry Verification Evidence ===
+Generated: 2026-05-28
+
+---
+1. REGISTRY PRESENCE CHECK
+Command: node -e "const fs=require('fs');const files=['scripts/textbook/extract-textbook.mjs','scripts/textbook/generate-drafts.mjs','scripts/textbook/promote-topic.mjs','scripts/textbook/validate-promotion-manifest.mjs'];const ids=['rj-chemistry-grade9-2024-vol1','rj-chemistry-grade9-2024-vol2','rj-chemistry-g12-selective-3-organic-2019','rj-chemistry-grade8-54-2024-full','pep-chemistry-g10-required-1','pep-chemistry-g10-required-2','pep-chemistry-g11-selective-1','pep-chemistry-g11-selective-2'];for(const file of files){const text=fs.readFileSync(file,'utf8');for(const id of ids){if(!text.includes(id)){throw new Error(file+' missing '+id)}}}console.log('registry-ok')"
+Output:
+registry-ok
+
+---
+2. CLI HELP OUTPUTS
+
+a) extract-textbook.mjs --help
+Textbook source extractor / 教材来源切片提取器
+Usage:
+  node scripts/textbook/extract-textbook.mjs --textbook <volumeId>
+Options:
+  --textbook <volumeId>                Extract one known textbook source inventory.
+  --help                              Show this help.
+
+b) generate-drafts.mjs --help
+Textbook draft generator / 教材草稿候选生成器
+Usage:
+  node scripts/textbook/generate-drafts.mjs --textbook <volumeId>
+Options:
+  --textbook <volumeId>                Generate conservative draft candidates from source-inventory.json.
+  --help                              Show this help.
+
+c) promote-topic.mjs --help
+Reviewed textbook promotion / 已审核教材推广器
+Usage:
+  node scripts/textbook/promote-topic.mjs --textbook <volumeId> [--topic <curriculumTagId>] [--dry-run]
+  node scripts/textbook/promote-topic.mjs --all-reviewed [--dry-run]
+Options:
+  --textbook <volumeId>                Promote reviewed entries for one known textbook.
+  --topic <curriculumTagId>            Limit promotion to one reviewed curriculum topic.
+  --all-reviewed                       Promote every known reviewed manifest.
+  --dry-run                            Print planned writes without mutating runtime or reviewed files.
+  --json                               Also print a machine-readable promotion report.
+  --simulate-write-failure             Validate and stage, then fail before writing for rollback QA.
+  --help                               Show this help.
+
+d) validate-promotion-manifest.mjs --help
+Reviewed promotion manifest validator / 已审核推广清单校验器
+Usage:
+  node scripts/textbook/validate-promotion-manifest.mjs --textbook <volumeId>
+  node scripts/textbook/validate-promotion-manifest.mjs --all-reviewed
+  node scripts/textbook/validate-promotion-manifest.mjs --fixture <fixtureName>
+Options:
+  --textbook <volumeId>                Validate reviewed promotion manifest for a known textbook.
+  --all-reviewed                       Validate every known reviewed promotion manifest and cross-manifest IDs.
+  --fixture <fixtureName>              Validate a promotion manifest fixture by stable fixture name.
+  --help                              Show this help.
+
+---
+3. NEW PEP ID CLI BOUNDARY
+Command: node scripts/textbook/extract-textbook.mjs --textbook pep-chemistry-g10-required-1
+Output:
+Batch sourceHash does not match source book: sha256:d1847e5506734b7bc0e3fdc2b9138e967f2f250cff5fbe422c79ae3443765b9d
+Exit code: 1
+Analysis: FAILS because batch JSON cannot be read/parsed (sourceHash mismatch), NOT because of "Unknown textbook batch". This confirms the pep ID is recognized in the registry.
+
+---
+4. GENERATE-DRAFTS WITH PEP ID
+Command: node scripts/textbook/generate-drafts.mjs --textbook pep-chemistry-g10-required-1
+Output:
+Wrote knowledge-topics.json: 213
+Wrote quiz-candidates.json: 102
+Wrote experiment-candidates.json: 35
+Wrote lab-candidates.json: 73
+Wrote game-candidates.json: 57
+Wrote story-candidates.json: 44
+Wrote achievement-candidates.json: 213
+Wrote learning-path-candidates.json: 213
+Wrote draft-inventory.json: 737
+Exit code: 0
+Analysis: SUCCESS. The pep ID is recognized and draft generation works.
+
+---
+5. PROMOTE-TOPIC WITH PEP ID (DRY-RUN)
+Command: node scripts/textbook/promote-topic.mjs --textbook pep-chemistry-g10-required-1 --dry-run
+Output:
+Textbook promotion: dry-run
+selected reviewed entries: 833
+planned promoted records: 620
+skipped reviewed entries: 213
+[... staged file details ...]
+dry-run: no runtime or reviewed manifest files written
+Exit code: 0
+Analysis: SUCCESS. The pep ID is recognized and promotion planning works.
+
+---
+6. VALIDATE-PROMOTION-MANIFEST WITH PEP ID
+Command: node scripts/textbook/validate-promotion-manifest.mjs --textbook pep-chemistry-g10-required-1
+Output:
+Promotion manifest valid: pep-chemistry-g10-required-1
+reviewed non-empty: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json entries=833
+checked: src/data/textbookIngestion/reviewed/pep-chemistry-g10-required-1/promotion-manifest.json
+checked: src/data/textbookIngestion/generated/pep-chemistry-g10-required-1
+Exit code: 0
+Analysis: SUCCESS. The pep ID is recognized and manifest validation passes.

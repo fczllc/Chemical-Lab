@@ -1,0 +1,9 @@
+{
+  "scenario": "First modal confirmation stores local date",
+  "segmentId": "knowledge-topic-0001-source-section-l1-l5-bd27b23b45",
+  "firstCallResult": true,
+  "segmentPresent": true,
+  "dateMatchesRegex": true,
+  "dateValue": "2026-05-28",
+  "timestamp": "2026-05-28T03:49:50.385Z"
+}
