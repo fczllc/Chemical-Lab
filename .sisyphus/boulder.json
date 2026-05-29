@@ -1,18 +1,18 @@
 {
-  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\apply-eight-textbook-tabs-to-main.md",
-  "started_at": "2026-05-27T09:40:49.169Z",
+  "active_plan": "D:\\Chemical-Laboratory\\.sisyphus\\plans\\learning-card-modal-textbook-content.md",
+  "started_at": "2026-05-28T14:22:11.822Z",
   "session_ids": [
-    "ses_197311ebbffeeGx80NjJgpMUi9"
+    "ses_1910926caffe5KG9bTDCsKq78W"
   ],
   "session_origins": {
-    "ses_197311ebbffeeGx80NjJgpMUi9": "direct"
+    "ses_1910926caffe5KG9bTDCsKq78W": "direct"
   },
-  "plan_name": "apply-eight-textbook-tabs-to-main",
+  "plan_name": "learning-card-modal-textbook-content",
   "agent": "atlas",
   "task_sessions": {},
-  "active_work_id": "apply-eight-textbook-tabs-to-main-20260527",
+  "active_work_id": "learning-card-modal-textbook-content-20260528",
   "status": "active",
-  "updated_at": "2026-05-27T09:40:49.169Z",
+  "updated_at": "2026-05-28T14:22:11.822Z",
   "schema_version": 2,
   "works": {},
   "ended_at": null,

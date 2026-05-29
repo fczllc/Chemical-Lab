@@ -46,3 +46,5 @@
 ## 2026-05-10 Task 9 boilerplate experiment headings
 - `isVagueExperimentHeading()` now treats generic section labels as vague, including `【实验目的】`, `【实验用品】`, `【实验步骤】`, `【实验与记录】`, `【实验与分析】`, and malformed open-bracket variants like `【实验9-8’`.
 - Regenerating all textbook drafts and repromoting reviewed runtime data removed every runtime reaction name beginning with `【实验`; only meaningful titles remain.
+
+- 2026-05-28: In Playwright tests with a beforeEach navigation, context.addInitScript only affects future documents. If a Date mock is installed inside a test after beforeEach, also apply it to the current page with page.evaluate before triggering module code that calls new Date().
