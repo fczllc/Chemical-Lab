@@ -1,0 +1,19 @@
+=== git rev-parse --short HEAD ===
+f840fc5
+
+=== git log --oneline -3 ===
+f840fc5 feat(textbook): add PEP learning tabs
+e827e48 浼樺寲妯″潡鍐呭銆佹洿鎹㈠姞杞藉姩鐢荤瓑
+4d97219 chore(app): capture current workspace state
+
+=== git status --short ===
+?? .codegraph/
+?? .sisyphus/drafts/extend-pep-content-to-lab-games-reactions.md
+?? .sisyphus/evidence/task-1-registry-cli.txt
+?? .sisyphus/evidence/task-1-registry-rj-regression.txt
+?? .sisyphus/evidence/undo-last-workspace-commit/
+?? .sisyphus/notepads/missing-textbook-learning-cards/
+?? .sisyphus/plans/rollback-to-pep-learning-tabs.md
+?? .sisyphus/plans/undo-last-workspace-commit.md
+?? .sisyphus/run-continuation/ses_19470ed06ffeExeqOFBZfAwteI.json
+?? .sisyphus/run-continuation/ses_1947bb5cdffefJOGrliDJVgGp0.json

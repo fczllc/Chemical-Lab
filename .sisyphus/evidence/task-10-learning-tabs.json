@@ -1,0 +1,42 @@
+{
+  "tabCount": 8,
+  "tabLabels": [
+    "八年级全册\n      307",
+    "九年级上册\n      301",
+    "九年级下册\n      184",
+    "高一/10年级必修第一册\n      183",
+    "高一/10年级必修第二册\n      225",
+    "高二/11年级选择性必修一反应原理\n      168",
+    "高二/11年级选择性必修二物质结构与性质\n      137",
+    "高三/12年级有机基础\n      253"
+  ],
+  "clickedLabels": [
+    "高一/10年级·必修第一册",
+    "高一/10年级·必修第二册",
+    "高二/11年级·选择性必修一·反应原理",
+    "高二/11年级·选择性必修二·物质结构与性质"
+  ],
+  "visibleCardCounts": {
+    "高一/10年级·必修第一册": 183,
+    "高一/10年级·必修第二册": 225,
+    "高二/11年级·选择性必修一·反应原理": 168,
+    "高二/11年级·选择性必修二·物质结构与性质": 137
+  },
+  "bannedTermBooleans": {
+    "2019": false,
+    "2024": false,
+    "pep-chemistry": false,
+    "人教版": false
+  },
+  "removedStageSelectorCount": 0,
+  "removedStageCardCount": 0,
+  "removedStageDetailCount": 0,
+  "hasFiveStageText": false,
+  "hasJuniorExplorerText": false,
+  "hasOldRewardCopy": false,
+  "consoleErrorCount": 0,
+  "pageErrorCount": 0,
+  "consoleErrors": [],
+  "pageErrors": [],
+  "timestamp": "2026-05-29T05:53:38.612Z"
+}

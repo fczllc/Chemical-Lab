@@ -1,0 +1,16 @@
+ M .sisyphus/boulder.json
+ D .sisyphus/plans/apply-eight-textbook-tabs-to-main.md
+ M .sisyphus/plans/missing-textbook-learning-cards.md
+ M .sisyphus/run-continuation/ses_197311ebbffeeGx80NjJgpMUi9.json
+ M src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json
+ M src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json
+ M src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json
+ M src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json
+?? .sisyphus/drafts/extend-pep-content-to-lab-games-reactions.md
+?? .sisyphus/evidence/task-1-registry-cli.txt
+?? .sisyphus/evidence/task-1-registry-rj-regression.txt
+?? .sisyphus/notepads/missing-textbook-learning-cards/
+?? .sisyphus/plans/rollback-to-pep-learning-tabs.md
+?? .sisyphus/plans/undo-last-workspace-commit.md
+?? .sisyphus/run-continuation/ses_19470ed06ffeExeqOFBZfAwteI.json
+?? .sisyphus/run-continuation/ses_1947bb5cdffefJOGrliDJVgGp0.json

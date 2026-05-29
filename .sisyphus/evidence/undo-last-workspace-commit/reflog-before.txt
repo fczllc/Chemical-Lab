@@ -1,0 +1,8 @@
+1337746 HEAD@{2026-05-28 00:01:36 +0800}: commit: chore(workspace): commit remaining changes
+f840fc5 HEAD@{2026-05-27 23:57:40 +0800}: commit: feat(textbook): add PEP learning tabs
+e827e48 HEAD@{2026-05-21 15:23:38 +0800}: commit: 优化模块内容、更换加载动画等
+4d97219 HEAD@{2026-05-20 02:38:49 +0800}: commit: chore(app): capture current workspace state
+e6ba49f HEAD@{2026-05-20 02:29:31 +0800}: commit: chore(lab-sim): remove canceled simulation remnants
+ac38130 HEAD@{2026-05-18 03:42:39 +0800}: merge feature/3d-lab-simulation-foundation: Merge made by the 'recursive' strategy.
+4515400 HEAD@{2026-05-18 03:39:45 +0800}: merge feature/3d-lab-simulation-foundation: Merge made by the 'recursive' strategy.
+306a6c8 HEAD@{2026-05-18 00:53:51 +0800}: reset: moving to HEAD
