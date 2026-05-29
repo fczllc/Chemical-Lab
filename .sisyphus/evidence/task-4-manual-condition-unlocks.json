@@ -7,7 +7,8 @@
     "segmentCompleted": false,
     "achievementUnlocked": false,
     "storedCompletedSegments": [],
-    "storedUnlockedAchievements": []
+    "storedUnlockedAchievements": [],
+    "storedLearningSegmentCompletionDates": {}
   },
   "after": {
     "route": "#/achievements",
@@ -19,6 +20,9 @@
     ],
     "storedUnlockedAchievements": [
       "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45"
-    ]
+    ],
+    "storedLearningSegmentCompletionDates": {
+      "knowledge-topic-0001-source-section-l1-l5-bd27b23b45": "2026-05-28"
+    }
   }
 }

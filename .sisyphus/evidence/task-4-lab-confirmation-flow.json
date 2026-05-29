@@ -7,7 +7,7 @@
     "completionDate": "2026-05-20",
     "storedEnvelope": {
       "version": "v3",
-      "timestamp": "2026-05-20T14:05:43.943Z",
+      "timestamp": "2026-05-20T04:00:00.000Z",
       "data": {
         "currentElement": null,
         "compareList": [],
@@ -18,6 +18,7 @@
           "textbook-fixture-completion-confirmation-exp-001-experiment"
         ],
         "completedLearningSegments": [],
+        "learningSegmentCompletionDates": {},
         "experimentTitleOverrides": {},
         "experimentCompletionDates": {
           "textbook-fixture-completion-confirmation-exp-001-experiment": "2026-05-20"
@@ -26,28 +27,28 @@
           "achievement-first-experiment"
         ],
         "achievementDates": {
-          "achievement-first-experiment": "2026-05-20T14:05:39.081Z"
+          "achievement-first-experiment": "2026-05-20T04:00:00.000Z"
         },
         "gameScores": {},
         "gamePlays": {},
         "activityLog": [
           {
-            "id": "activity-1779285939081-dug4b1",
+            "id": "activity-1779249600000-8nwca3",
             "type": "achievementunlocked",
             "title": "解锁了新成就",
             "description": "成就 achievement-first-experiment 已收入成就中心。",
-            "timestamp": "2026-05-20T14:05:39.081Z",
+            "timestamp": "2026-05-20T04:00:00.000Z",
             "meta": {
               "achievementId": "achievement-first-experiment",
-              "unlockedAt": "2026-05-20T14:05:39.081Z"
+              "unlockedAt": "2026-05-20T04:00:00.000Z"
             }
           },
           {
-            "id": "activity-1779285939080-z9xhhn",
+            "id": "activity-1779249600000-xavluh",
             "type": "experimentcompleted",
             "title": "完成了一项实验",
             "description": "实验 textbook-fixture-completion-confirmation-exp-001-experiment 已写入完成记录。",
-            "timestamp": "2026-05-20T14:05:39.080Z",
+            "timestamp": "2026-05-20T04:00:00.000Z",
             "meta": {
               "experimentId": "textbook-fixture-completion-confirmation-exp-001-experiment"
             }

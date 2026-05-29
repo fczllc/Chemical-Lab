@@ -1,104 +1,97 @@
-# F4 Scope Fidelity Check — Deep Review
+# F4 Scope Fidelity Check — learning-module-textbook-confirmation
 
-## Reviewer
-Final Verification Wave F4 — Scope Fidelity Check (deep)
-
-## Date
-2026-05-20
-
-## Scope
-Independently assess whether implementation stayed inside scope and faithfully solved the user's Chinese requirements without introducing a full textbook reader, backend, role system, unrelated UI redesign, or generated achievement ID renames.
-
-> **Note**: The previous `.sisyphus/evidence/f4-scope-fidelity.md` contained stale content from the `experiment-dedup-safety` plan (dated 2026-05-17). This file replaces it with the current review for `achievement-progress-unlock-paths`.
+**Plan reviewed:** `.sisyphus/plans/learning-module-textbook-confirmation.md`  
+**Evidence date:** 2026-05-28  
+**Reviewer:** F4 deep-review agent  
 
 ---
 
-## Original Requirements Mapping (Plan Lines 15-24)
+## 1. Original User Requirements Mapping
 
-### Bullet 1: 成就和进度两个模块有关联；没达成成就，就不会有进度
-**Status: PASS**
-- Evidence: `src/modules/progress.js:144-145` — `manualCompleted` is derived from `unlockedAchievements.has(manualAchievement.id)`, not from raw `completedLearningSegments`.
-- Evidence: `src/modules/progress.js:155` — `displayCompleted = stagePathCompleted || manualCompleted`; manual topic completion requires the matching achievement unlock.
-- Evidence: F3 manual flow (`f3-real-manual-qa.json`): before explicit completion, progress row shows `未开始`; after `完成学习` click and achievement unlock, row shows `已完成`.
-- Raw segment evidence alone does not show `已完成`: `f3-real-manual-qa.json` `afterNavigationOnly` shows row still `未开始` with empty `completedLearningSegments`.
-
-### Bullet 2: 成就里的所有卡片都必须有能解锁的操作途径
-**Status: PASS**
-- Evidence: `src/modules/achievements.js:314-316` — every rendered card with a routable condition gets exactly one `<button data-achievement-action="...">`.
-- Evidence: `tests/ui/achievements-progress-coupling.spec.ts` test `every achievement card has an operable action` audits all `achievementsData.length` cards and asserts one visible, enabled button per card.
-- Evidence: `getAchievementActionTarget()` (`achievements.js:239-261`) maps all current condition types to router sections; no card is left without a target when a condition exists.
-- Manual cards map to `progress` section; learned/experiment/quiz/game cards map to `periodic-table`, `lab`, `games`.
-
-### Bullet 3: 方案 B 采用“用户完成对应教材片段学习后解锁”
-**Status: PASS**
-- Evidence: `src/modules/progress.js:618-650` — `renderManualLearningSegmentRow()` renders a `完成学习` button for each manual segment.
-- Evidence: `src/modules/progress.js:387-394` — clicking the button calls `markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-manual-segment' })`.
-- Evidence: `src/modules/achievements.js:141-145` — `matchesCondition()` requires `sourceReviewStatus === 'reviewed'`, exactly one non-empty curriculum tag, and matching completed segment evidence.
-- Evidence: `src/modules/achievements.js:107-111` — startup evaluation skips `manualReviewAfterPromotion` to prevent auto-unlock on page load.
-
-### Bullet 4: 教材片段必须点击 `完成学习` 按钮确认，打开页面不自动完成
-**Status: PASS**
-- Evidence: `tests/ui/achievements-progress-coupling.spec.ts` test `manual textbook achievement requires explicit completion` asserts: card action click → progress page → row visible with `未开始` → reload → still `未开始` → button click → `已完成`.
-- Evidence: `src/modules/progress.js:412-415` — `readAchievementActionFocus()` only sets `focusedLearningSegmentId` for row highlighting; it does not call `markLearningSegmentCompleted()`.
-- Evidence: F3 evidence `afterNavigationOnly` confirms navigation alone leaves segment uncompleted and achievement locked.
+| Original Requirement (Chinese) | Implemented Behavior | Evidence |
+|---|---|---|
+| 教材 Tab 下的教材卡片不应包含实验卡片，实验属于"实验室" | `getManualLearningSegments` filters by `sourceVolumeId.trim().length > 0`; no experiment cards appear under `#progress` | `progress.js:139-142` |
+| "学习"页不应包含五阶段学习路径、前六个元素学习项或"初级探索者" | `renderProgress()` no longer renders `.progress-learning-path`, stage cards, or stage detail; heading is `教材复习确认` | `progress.js:575-588`, diff shows removal of stage rendering block |
+| 被动统计、进度、解锁、元素数量、探索者等级等应属于"成就"，不属于"学习" | No `.progress-ring`, `0 / 118`, `0%`, activity feed, or achievement summary on `#progress`; tests assert counts are 0 / text absent | `pep-learning-tabs.spec.ts:58-68`, `achievements-progress-coupling.spec.ts:467-472` |
+| 学习必须有交互确认：卡片点击打开弹窗；弹窗有"确定已学习"按钮；确认后记录状态和时间 | Card click opens modal (no completion); modal footer has `确定已学习` button; `markLearningSegmentCompleted` writes date | `learning-content-modal.spec.ts:8-39`, `storage.js:929-962` |
+| 卡片右下角显示 `未学习` / `学习确认：YYYY-MM-DD` | `renderLearningCard` sets status text exactly per state | `progress.js:955-988` |
+| 当前只处理学习模块；成就页、实验室、学习流/路径的后续迁移明确不在本计划范围内 | No changes to `achievements.js`, `lab.js`, or `learningPath.json`; future migration not implemented | git diff confirms |
 
 ---
 
-## Scope Guardrails Verification (Plan Must NOT Have)
+## 2. Scope Guardrails Verification
 
-| Guardrail | Status | Evidence |
-|-----------|--------|----------|
-| MUST NOT auto-complete on navigation, scroll, visibility, or page open | PASS | `readAchievementActionFocus()` only highlights; `evaluateAchievements({ includeManualReview: false })` on init skips manual unlocks |
-| MUST NOT build a full textbook reader | PASS | Progress page renders lightweight segment rows with metadata and a button; no markdown rendering, no page-turning, no text content display beyond heading/line-range |
-| MUST NOT build reviewer workflow, user roles, backend API, or content editor | PASS | No reviewer UI, no role checks, no fetch to external API, no editor surface added |
-| MUST NOT relock or delete existing unlocked achievements during migration | PASS | `migratePersistedEnvelope()` preserves `unlockedAchievements` arrays; no deletion logic |
-| MUST NOT change unrelated story/media/lab/game UI behavior | PASS | Diff shows zero changes in `src/modules/storyMode.js`, `src/modules/lab.js`, `src/modules/games.js`, `src/games/`, `src/lab/` |
-| MUST NOT leave `manualReviewAfterPromotion` as visible user-facing copy | PASS | `getAchievementUnlockText()` returns `完成对应教材片段学习`; action label is `去学习`; F3 scan confirms `internalConditionHidden: true` |
-| MUST NOT rename generated achievement IDs | PASS | All achievement IDs remain unchanged in `achievementsData.json`; only rendering and evaluation logic changed |
-| MUST NOT introduce broad unrelated UI redesign | PASS | CSS changes are additive (`.progress-manual-segment-row`, `.achievement-action-btn`) within existing `achievements.css`; no global style overhaul |
+### 2.1 Learning module is active textbook confirmation only
+- **PASS.** `#/progress` now renders only `renderManualLearningSection(...)`. The only interactive confirmation path is the modal `确定已学习` button. No passive auto-completion exists.
+- `renderProgress()` reads only `unlockedAchievements`, `completedLearningSegments`, and `learningSegmentCompletionDates` — no quiz scores, no experiment counts, no element counts.
 
----
+### 2.2 Passive/statistical content removed from learning, not migrated
+- **PASS.** Removed from `#progress`:
+  - `五阶段学习路径` section (`progress-learning-path`)
+  - Stage cards (`progress-stage-card`) and detail (`progress-stage-detail`)
+  - Activity feed (`activity-item`) — test explicitly asserts count 0
+  - Progress rings, `0 / 118`, `0%`
+  - Old reward copy (`解锁 0 个游戏`, `项功能`, `个实验`, `需要元素`)
+- Tests confirm these selectors/texts are absent on `#progress`.
+- **Not migrated** to achievements page in this plan — achievement page remains untouched.
 
-## AGENTS Learner-State Contract Verification
+### 2.3 Experiments remain lab-owned
+- **PASS.** `src/modules/lab.js` has **zero diff** in this plan. Lab regression test `tests/ui/lab-textbook-experiments.spec.ts` passes (8 passed, 2 skipped). No experiment cards or experiment counts appear on the learning page.
 
-| Rule | Status | Evidence |
-|------|--------|----------|
-| `learnedElements` adds on first detail-panel open | PASS | `markElementLearned()` unchanged; still mirrors to `collectedElements` |
-| `collectedElements` mirrors `learnedElements` automatically | PASS | `markElementLearned()` line 798 adds to both sets; `ensureCollectedMatchesLearned()` guards on hydration |
-| `completedExperiments` remains experiment-result driven | PASS | No changes to `markExperimentCompleted()` contract |
-| `quizScores` appends with `score`, `total`, `percentage`, `sourceElement`, `timestamp` | PASS | `normalizeQuizScore()` now emits all five fields; legacy aliases (`accuracy`, `relatedElement`, `completedAt`) preserved for existing consumers |
-| `unlockedAchievements` derived from canonical event handlers | PASS | `unlockAchievement()` is the only mutation path; `evaluateAchievements()` calls it; no scattered UI logic unlocks |
-| State persisted via versioned localStorage with corruption recovery | PASS | `SCHEMA_VERSION = 'v3'`; `migratePersistedEnvelope()` handles v0/v1/v2/v3; `normalizeLearningSegmentIds()` trims/filters invalid values |
+### 2.4 `src/data/learningPath.json` not deleted, reshaped, or used as hidden non-textbook UI source
+- **PASS.** `learningPath.json` is **unchanged** in git diff. The learning page does not iterate `learningPath.stages` for rendering; it only uses `achievementsData` + `textbookAssetManifest` to build manual segments filtered by `sourceVolumeId`.
+- `learningPath.stages` is still referenced in `progress.js` only for:
+  - `selectedStageId` default (harmless, not rendered)
+  - `handleStateReset` (harmless)
+  - `maybeCelebrateStageProgress` (called on `learnedElements` change, but `renderProgress` no longer renders stages)
+  - `selectStageForLearningSegment` / `readAchievementActionFocus` (achievement navigation compatibility)
 
----
+### 2.5 Passive/statistical content not reintroduced under new names
+- **PASS.** No new progress bars, percentages, counts, badges, levels, or unlock summaries were added to `#progress`. The only count visible is `${manualSegments.length} 个片段` (active content count, not passive progress) and `共 ${group.total} 节` (neutral section count per tab).
 
-## Chinese-First UX Verification
+### 2.6 UI remains Chinese-first and children-learning appropriate
+- **PASS.** All user-facing copy on `#progress` is Chinese-first: `教材复习确认`, `未学习`, `学习确认：YYYY-MM-DD`, `学习确认：日期待补充`, `确定已学习`, `暂无教材复习内容`. No broad unrelated redesign.
 
-| Surface | Visible Copy | Evidence |
-|---------|-------------|----------|
-| Achievement action buttons | `去学习元素`, `去实验室`, `去答题`, `去游戏`, `去学习` | `achievements.js:269-285` |
-| Manual unlock condition text | `完成对应教材片段学习` | `achievements.js:288-293` |
-| Progress segment status | `未开始`, `待同步`, `已完成` | `progress.js:621` |
-| Progress completion button | `完成学习` | `progress.js:646` |
-| Achievement card status | `已解锁` / `未解锁` | `achievements.js:337` |
-| No raw `manualReviewAfterPromotion` in rendered body | Confirmed absent | F3 `visibleCopy.containsInternalCondition: false` |
-
----
-
-## Unrelated Changes Assessment
-
-The git diff includes files outside the plan's direct scope, but all are either pre-existing or plan-adjacent:
-- `dist/index.html` — generated build churn, not product scope
-- `.sisyphus/plans/achievement-progress-unlock-paths.md` — plan file changed by workflow (not by this review)
-- `.sisyphus/evidence/*` — evidence artifacts from task execution
-- `.sisyphus/boulder.json` — workflow state
-
-No unrelated product behavior changes are present.
+### 2.7 Compatibility: existing completed segments remain valid; missing legacy dates show `日期待补充`
+- **PASS.**
+  - `completedLearningSegments` Set compatibility retained.
+  - Old v0/v1/v2 envelopes get empty `learningSegmentCompletionDates: {}`.
+  - v3 envelopes with `completedLearningSegments` but no dates hydrate correctly; cards show `学习确认：日期待补充`.
+  - Test `legacy completed lesson without stored date shows date pending` passes.
 
 ---
 
-## Final Verdict
+## 3. Risks and Residual Observations
+
+| Risk | Severity | Mitigation / Status |
+|---|---|---|
+| `learningPath.stages` still imported and referenced in `progress.js` for helper functions and test hooks, though not rendered. Could confuse future readers. | Low | The references are harmless (no rendering). Plan explicitly says "leave existing helper functions in place to avoid broad refactors." Acceptable. |
+| `lab-textbook-experiments.spec.ts` has a flaky date-freezing issue (noted in notepad: frozen Date init script added after `beforeEach` has already loaded app). One test run recorded real current date instead of fixed date. | Low | This is a **pre-existing test infrastructure issue**, not caused by this plan. The lab spec was explicitly left unchanged per task constraint. The test passes on rerun. |
+| `renderActivityList` and `renderMetricBars` remain in `progress.js` as dead code (no longer called by `renderProgress`). | Low | Plan says "unused cleanup is optional only if no tests or imports break." Not a scope deviation. |
+
+---
+
+## 4. Test and Evidence Summary
+
+| Test File | Result | Relevant Evidence |
+|---|---|---|
+| `tests/ui/learning-content-modal.spec.ts` | **PASS** (all tests pass on rerun; 1 flaky connection-refused failure unrelated to code) | Modal confirmation, date persistence, reload, legacy fallback, XSS, scroll |
+| `tests/content/pep-learning-tabs.spec.ts` | **PASS** | 8 tabs, removed stage selectors/text, non-empty cards |
+| `tests/ui/achievements-progress-coupling.spec.ts` | **PASS** | Achievement unlock after modal, date-aware card footer, activity feed absence, raw segment does not inflate progress |
+| `tests/ui/lab-textbook-experiments.spec.ts` | **PASS** (8 passed, 2 skipped) | Lab ownership unchanged, no `lab.js` modifications |
+| `npm run build` | **PASS** (exit 0) | Production build succeeds |
+| `npm run validate:all:safe` | **PASS** | All data validators, runtime boundary, textbook workflow, and build pass |
+
+---
+
+## 5. Verdict
+
+All original user requirements are mapped to implemented behavior. Scope guardrails are satisfied:
+- Learning page is **active textbook confirmation only**.
+- Passive/statistical content is **removed, not migrated**.
+- Experiments remain **lab-owned** (`lab.js` untouched).
+- `learningPath.json` is **preserved** and not reshaped.
+- UI remains **Chinese-first** with no broad redesign.
+- Legacy compatibility and missing-date fallback work correctly.
 
 **VERDICT: APPROVE**
-
-All four original Chinese requirement bullets are faithfully implemented. Scope guardrails are fully respected. No scope creep, backend, role system, textbook reader, unrelated UI redesign, or achievement ID renames are present. The implementation is lightweight, Chinese-first, and preserves all AGENTS learner-state hard rules.
