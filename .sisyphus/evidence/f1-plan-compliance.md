@@ -1,37 +1,54 @@
-# F1 Plan Compliance Audit
+# F1 Plan Compliance Audit — learning-module-textbook-confirmation
 
-VERDICT: APPROVE
+Reviewed plan: `.sisyphus/plans/learning-module-textbook-confirmation.md`
 
 ## Scope Reviewed
-- Plan: `.sisyphus/plans/achievement-progress-unlock-paths.md`
-- Contract: `AGENTS.md` learner-state rules
-- Implementation: `src/modules/storage.js`, `src/modules/achievements.js`, `src/modules/progress.js`, `src/main.js`, `scripts/validate-supporting-data.mjs`
-- Tests/evidence: `tests/ui/achievements-progress-coupling.spec.ts`, `tests/ui/storage-migration.spec.ts`, `tests/ui/settings-reset.spec.ts`, Task 1-7 evidence, and `.sisyphus/evidence/f2-code-quality.md`
+- Read the active plan and notepads under `.sisyphus/notepads/learning-module-textbook-confirmation/`.
+- Inspected `git diff --stat`, `git status --short`, and focused diffs for `src/modules/storage.js`, `src/modules/progress.js`, changed Playwright specs, `dist/index.html`, `src/modules/lab.js`, and `src/data/learningPath.json`.
+- Read changed source/spec files relevant to this plan.
+- Ran LSP diagnostics for `src/modules/storage.js`, `src/modules/progress.js`, `tests/ui/learning-content-modal.spec.ts`, `tests/content/pep-learning-tabs.spec.ts`, `tests/ui/achievements-progress-coupling.spec.ts`, and `tests/ui/lab-textbook-experiments.spec.ts`; all returned "No diagnostics found".
 
-## Compliance Evidence
-- Storage satisfies the v3 learner-state requirement: `SCHEMA_VERSION = 'v3'`; default/snapshot/serialization include `completedLearningSegments`; migration normalizes legacy and v3 payloads; `getCompletedLearningSegments()` returns a defensive Set; `markLearningSegmentCompleted()` trims IDs, rejects invalid/duplicate IDs, writes one activity, emits `completedLearningSegments`/`learningsegmentcompleted`, and reset flows clear the field.
-- Existing AGENTS learner-state contract remains intact: `markElementLearned()` still mirrors `learnedElements` to `collectedElements`; `completedExperiments` remains experiment-result driven; quiz score writes/normalization now include `score`, `total`, `percentage`, `sourceElement`, and `timestamp`; achievements remain derived through storage events and `unlockAchievement()`.
-- Achievement cards have one user action path: `renderAchievementCard()` emits exactly one `[data-achievement-action]` button when a condition has a route, with `data-achievement-id`, `data-achievement-condition`, and manual `data-learning-segment-id`; tests audit all rendered achievement cards and all manual action payloads.
-- Manual achievement conditions are properly gated: `matchesCondition(achievement)` requires `manualReviewAfterPromotion`, `sourceReviewStatus === 'reviewed'`, exactly one non-empty curriculum tag from `getLearningSegmentIdForAchievement()`, and matching `getCompletedLearningSegments()` evidence. Startup evaluation intentionally skips manual review achievements, so persisted raw segment evidence cannot auto-unlock them on page load.
-- Progress manual rows require explicit `完成学习`: `renderManualLearningSegmentRow()` shows a completion button; click handling calls `markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-manual-segment' })`; navigation/focus payloads only select/focus rows and do not complete or unlock.
-- Raw `completedLearningSegments` is not visible manual progress by itself: progress computes `rawSegmentCompleted` separately from `manualCompleted`; `displayCompleted` requires either non-manual `stagePathCompleted` or the matching unlocked achievement; Task 5 evidence records raw-only status as `待同步`, `displayCompleted: false`, and `stageCompletedCountAfterManualUnlock: 0` until the achievement is unlocked.
-- Stage-path completion remains non-manual: `computeStageCurriculum().completedCount` counts only `topic.stagePathCompleted`; `getStageStates()` uses that non-manual completed count for curriculum completion/stage unlocking, so manual-only achievement completion does not advance the five-stage path.
-- UI copy hides the internal condition name: manual unlock text renders as `完成对应教材片段学习`; action copy is Chinese-first (`去学习`, `完成学习`, `已完成`, `未解锁`); Task 7 UI copy evidence reports `manualReviewAfterPromotion` absent from visible achievements/progress text.
-- Supporting-data validator enforces manual invariants: `validateManualReviewAfterPromotionAchievement()` requires exactly one curriculum tag, reviewed source status, and at least one complete source reference record.
+## Findings
 
-## Prior F1 Concerns
-- Task 4 before/after unlock evidence is repaired: `.sisyphus/evidence/task-4-manual-condition-unlocks.json` records the representative card locked before completion with no segment/achievement persisted, and unlocked after completion with both the segment and achievement persisted.
-- `quizScores` learner-state contract is repaired: `normalizeQuizScore()` and `addQuizScore()` emit/persist `score`, `total`, `percentage`, `sourceElement`, and `timestamp`; `storage-migration.spec.ts` covers both new writes and legacy normalization.
-- Plan-file diff is workflow state, not a product defect: read-only `git diff --stat` shows `.sisyphus/plans/achievement-progress-unlock-paths.md` changed along with evidence/workflow files, but this audit did not modify plan checkboxes and does not reject `.sisyphus` workflow churn unless it hides product incompleteness.
+### Storage Contract
+- `src/modules/storage.js` adds `learningSegmentCompletionDates: {}` to default state and snapshots while keeping `completedLearningSegments` as a `Set` exposed/persisted as an array.
+- `getLearningSegmentCompletionDates()` is exported and returns a shallow object copy.
+- `markLearningSegmentCompleted(segmentId, metadata = {})` validates/trims the id, returns `false` for duplicate/empty completions before mutation, stores a first local `YYYY-MM-DD` date, and includes `completedDate` in activity/state-change detail.
+- Existing task evidence confirms first completion stored `2026-05-28` and duplicate completion returned `false` without changing the date.
 
-## Verification Reviewed
-- Fresh Atlas continuation evidence accepted as required by the task: `npx playwright test tests/ui/achievements-progress-coupling.spec.ts` passed 12/12; `npx playwright test tests/ui/storage-migration.spec.ts tests/ui/settings-reset.spec.ts` passed 6/6; `node scripts/validate-supporting-data.mjs` passed; `npm run validate:all:safe` passed with Vite build success and only the known bundle-size warning; LSP diagnostics were clean for changed JS/TS files.
-- Local read-only audit evidence in this session: `lsp_diagnostics` reported no errors for `src/modules/storage.js`, `src/modules/achievements.js`, `src/modules/progress.js`, `src/main.js`, and `scripts/validate-supporting-data.mjs`; `cmd /c "set GIT_MASTER=1&& git diff --stat"` was inspected without staging/committing/resetting.
-- F2 code-quality review exists at `.sisyphus/evidence/f2-code-quality.md` with `VERDICT: APPROVE`; it also confirms the activity-log escaping reject fix, quiz score contract repair, manual progress gating, data-driven manual coverage, and clean diagnostics.
+### Learning Page Rendering Contract
+- `src/modules/progress.js` `renderProgress()` now targets `#progress .progress-path`, calls `readAchievementActionFocus()`, reads only `unlockedAchievements`, `completedLearningSegments`, and `learningSegmentCompletionDates` for render, and sets `container.innerHTML` to `renderManualLearningSection(...)` followed by `bindLearningInteractions()`.
+- `getManualLearningSegments(...)` accepts `learningSegmentCompletionDates`, adds `completionDate`, and filters to non-empty textbook `sourceVolumeId`.
+- The visible learning section renders `教材复习确认`, 8 textbook tabs, neutral tab counts `共 N 节`, textbook cards, modal content, and empty fallback `暂无教材复习内容`.
+- Stage helper functions remain in the file for test hooks, but the focused render path does not render the old five-stage path. A grep/read audit shows old stage selectors/classes remain only inside unused helper templates, not in `renderProgress()` output.
+
+### Card and Modal Contract
+- `renderLearningCard(segment)` renders card status as `未学习`, `学习确认：YYYY-MM-DD`, or `学习确认：日期待补充`; cards keep `role="button"`/`tabindex="0"` and do not contain buttons.
+- `renderLessonModal(segment)` renders the only confirmation action as `data-testid="confirm-learning"` with text `确定已学习` for incomplete segments.
+- Completed modal state renders `已学习：YYYY-MM-DD` or `已学习：日期待补充` and no confirm button.
+- The confirm handler calls `markLearningSegmentCompleted(segmentId, { achievementId, source: 'progress-learning-modal' })`, keeps focus/modal state, and re-renders instead of closing the modal.
+
+### Tests and Evidence Coverage
+- `tests/ui/learning-content-modal.spec.ts` covers card-open-without-completion, close/Escape no completion, modal-only `确定已学习`, appState/localStorage date persistence, reload persistence, dated completed modal, legacy `日期待补充`, no card buttons, modal sections, XSS safety, and scroll.
+- `tests/content/pep-learning-tabs.spec.ts` asserts `教材复习确认`, exactly 8 tabs, visible cards, and absence of `五阶段学习路径`, `初级探索者`, `[data-stage-select]`, `.progress-stage-card`, `.progress-stage-detail`, `.progress-learning-path`, and old reward copy. Evidence reports `tabCount: 8`, zero removed stage selectors/cards/details, and false old-text booleans.
+- `tests/ui/achievements-progress-coupling.spec.ts` covers explicit modal completion, date-aware card status, stored `learningSegmentCompletionDates`, achievement unlock coupling, activity feed absence under `#progress`, raw legacy completion fallback, no passive `.progress-ring`, and read-only achievement cards.
+- `tests/ui/lab-textbook-experiments.spec.ts` was changed only to repair test Date freezing for lab regression; no `src/modules/lab.js` source edit exists in the focused diff.
+
+### Scope Boundaries and Churn
+- Focused diff for `src/modules/lab.js` and `src/data/learningPath.json` produced no source changes.
+- `dist/index.html` has generated asset-hash churn and is still modified. This is not part of the plan deliverables and should be reverted or otherwise classified before final integration, but it is generated build output rather than source behavior.
+- `git diff --stat` and `git status --short` show additional unrelated/stale workspace changes outside this plan, including `.sisyphus/boulder.json`, old evidence/notepad files, `dist/index.html`, and untracked plans/notepads. These are outside the requested plan implementation and must not be confused with approval of final workspace cleanliness.
+- `tests/ui/lab-textbook-experiments.spec.ts` is modified despite the plan preference to leave it unchanged unless failing; the notepad records it previously failed because Date freezing happened too late, and the focused diff is limited to test setup, not lab source or behavior.
 
 ## Blocking Issues
-- None.
+- None for implementation compliance with `learning-module-textbook-confirmation` guardrails.
 
-## Non-blocking Notes
-- Older Task 7 rerun text files in `.sisyphus/evidence/` show timeout/helper failures from before the final continuation fixes; they are superseded by the required fresh Atlas continuation evidence and current implementation/evidence reviewed above.
-- `dist/index.html` appears in the diff as generated build churn and is not treated as product scope for this audit.
+## Verification Commands/Evidence Read
+- `git diff --stat`: showed plan-source/test changes plus generated/unrelated churn; no `src/modules/lab.js` or `src/data/learningPath.json` change.
+- `git diff -- src/modules/storage.js`: confirmed additive date map and first-confirmation behavior.
+- `git diff -- src/modules/progress.js`: confirmed learning page render simplification and modal/card status changes.
+- `git diff -- tests/content/pep-learning-tabs.spec.ts tests/ui/learning-content-modal.spec.ts tests/ui/achievements-progress-coupling.spec.ts tests/ui/lab-textbook-experiments.spec.ts`: confirmed planned test coverage and lab test-only Date-freeze adjustment.
+- LSP diagnostics on required source/spec files: no diagnostics found.
+- Existing evidence read: `task-1-learning-date-storage.json`, `task-1-duplicate-date-preserved.json`, `task-10-learning-tabs.json`, `task-4-manual-condition-unlocks.json`, `task-6-persistence-reload.json`, and `task-4-lab-confirmation-flow.json`.
+
+VERDICT: APPROVE

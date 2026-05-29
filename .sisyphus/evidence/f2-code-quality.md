@@ -1,35 +1,81 @@
-# F2 Code Quality Review
-
-VERDICT: APPROVE
+# F2 Code Quality Review — learning-module-textbook-confirmation
 
 ## Scope Reviewed
+
+Active plan reviewed: `learning-module-textbook-confirmation`.
+
+Read and reviewed required context:
+- `.sisyphus/plans/learning-module-textbook-confirmation.md`
+- Previous `.sisyphus/evidence/f2-code-quality.md` rejection
+- `.sisyphus/notepads/learning-module-textbook-confirmation/learnings.md`
+- `.sisyphus/notepads/learning-module-textbook-confirmation/issues.md`
+- `.sisyphus/notepads/learning-module-textbook-confirmation/problems.md`
+- `.sisyphus/notepads/learning-module-textbook-confirmation/decisions.md`
+
+Read and reviewed changed source/spec files:
 - `src/modules/storage.js`
-- `src/modules/achievements.js`
 - `src/modules/progress.js`
-- `src/main.js`
-- `src/styles/achievements.css`
-- `scripts/validate-supporting-data.mjs`
+- `tests/ui/learning-content-modal.spec.ts`
+- `tests/content/pep-learning-tabs.spec.ts`
 - `tests/ui/achievements-progress-coupling.spec.ts`
-- `tests/ui/storage-migration.spec.ts`
-- `tests/ui/settings-reset.spec.ts`
+- `tests/ui/lab-textbook-experiments.spec.ts`
 
-## Evidence
-- Prior F2 reject is fixed: `src/modules/progress.js` `renderActivityList()` escapes `entry.title`, resolved description, and `formatDate(entry.timestamp)` before interpolation into the progress `innerHTML` render path.
-- Regression coverage exists in `tests/ui/achievements-progress-coupling.spec.ts` via `progress escapes persisted activity text`, including injected title `<img>`, description `<svg>`, and timestamp `<time>` payloads, with assertions that injected nodes/handlers do not appear/run and escaped text remains visible.
-- Storage v3 migration/normalization preserves raw `completedLearningSegments`, trims/deduplicates valid segment ids, and `markLearningSegmentCompleted()` is idempotent: invalid/duplicate ids return `false`; the first valid completion records one segment and one activity.
-- Quiz scores are normalized to the learner-state contract (`score`, `total`, `percentage`, `sourceElement`, `timestamp`) while preserving legacy consumer aliases (`accuracy`, `relatedElement`, `completedAt`).
-- Achievement action rendering has one action per card, uses escaped data/text attributes, stores only navigation focus metadata, and does not unlock achievements directly from navigation.
-- Manual progress rows require explicit completion click; raw segment evidence only creates a `待同步` state and does not inflate element/general/stage-path progress. Visible manual completion is derived from the unlocked achievement.
-- Validator additions enforce manual achievement invariants: exactly one curriculum tag, reviewed source status, and a complete reviewed source reference record.
-- Test coverage is data-driven for all manual achievements for progress rows and action payloads, plus representative explicit-completion, persistence/reload, raw-evidence, and no-navigation-unlock flows.
+Diff evidence inspected:
+- `git diff --stat`
+- `git diff -- src/modules/progress.js`
+- `git diff -- src/modules/storage.js`
+- `git diff -- tests/ui/learning-content-modal.spec.ts`
+- `git diff -- tests/content/pep-learning-tabs.spec.ts`
+- `git diff -- tests/ui/achievements-progress-coupling.spec.ts`
+- `git diff -- tests/ui/lab-textbook-experiments.spec.ts`
 
-## Verification Reviewed
-- Fresh local review: `GIT_MASTER=1 git diff --stat` inspected the broad diff; focused read-only diffs were inspected for the listed product/test files.
-- Fresh local grep: no `TODO`, `FIXME`, `HACK`, `xxx`, `as any`, `@ts-ignore`, `console.log`, or visible `manualReviewAfterPromotion` leakage in `src` modules/tests; canonical data still contains the condition/unlock metadata by design, and rendering maps manual unlock copy to Chinese-first text.
-- Fresh local grep: `innerHTML` use remains in module render paths; reviewed changed surfaces use local escaping for dynamic persisted/data-derived strings relevant to this plan.
-- Fresh local LSP diagnostics: no errors for `storage.js`, `achievements.js`, `progress.js`, `main.js`, `validate-supporting-data.mjs`, `achievements-progress-coupling.spec.ts`, `storage-migration.spec.ts`, and `settings-reset.spec.ts`.
-- Atlas verification context accepted as provided: full coupling spec 12 passed; storage/reset specs 6 passed; supporting-data validator exit 0; `npm run validate:all:safe` exit 0; LSP diagnostics clean; unsafe-pattern grep clean.
+## Quality Checks
+
+- `lsp_diagnostics` reported no diagnostics for all reviewed changed source/spec files:
+  - `src/modules/progress.js`: no diagnostics found
+  - `src/modules/storage.js`: no diagnostics found
+  - `tests/ui/learning-content-modal.spec.ts`: no diagnostics found
+  - `tests/content/pep-learning-tabs.spec.ts`: no diagnostics found
+  - `tests/ui/achievements-progress-coupling.spec.ts`: no diagnostics found
+  - `tests/ui/lab-textbook-experiments.spec.ts`: no diagnostics found
+- `src/modules/progress.js` import block now imports exactly the four storage APIs required by the current manual textbook flow:
+  - `getCompletedLearningSegments`
+  - `getLearningSegmentCompletionDates`
+  - `getUnlockedAchievements`
+  - `markLearningSegmentCompleted`
+- `renderProgress()` still calls `getUnlockedAchievements()`, `getCompletedLearningSegments()`, and `getLearningSegmentCompletionDates()` before rendering `renderManualLearningSection(...)`; the modal confirmation path still calls `markLearningSegmentCompleted(...)` from `bindLearningInteractions()`.
+- The old stage/dashboard storage imports rejected in the previous F2 review are absent from the current `src/modules/progress.js` import block: `getAchievementDates`, `getActivityLog`, `getCollectedElements`, `getCompletedExperiments`, `getGamePlayCounts`, `getGameScores`, `getQuizScores`, and `getStateSnapshot` are no longer imported.
+- Focused `git diff -- src/modules/progress.js` shows the source behavior change remains the planned learning-page simplification plus the post-rejection import cleanup; after the F2 reject, the repair is limited to removing stale imports while preserving the still-used `getLearningSegmentCompletionDates` and `getUnlockedAchievements` imports.
+- `storage.js` review remains acceptable: learning confirmation dates are additive, normalized with local `YYYY-MM-DD` validation, serialized/hydrated/snapshotted, exposed by `getLearningSegmentCompletionDates()`, and written only on first `markLearningSegmentCompleted()` success.
+- `progress.js` review remains acceptable: the rendered `#/progress` entry path is the textbook review confirmation page, card status uses `未学习`, `学习确认：YYYY-MM-DD`, or `学习确认：日期待补充`, and the modal confirmation copy is Chinese-first (`确定已学习`, `已学习：...`).
+- Escaping review remains acceptable: the changed manual learning card/modal rendering paths use `escapeHtml()` and `escapeHtmlAttr()` for dynamic IDs, titles, display paths, dates, section titles, paragraphs, list items, source blocks, and asset labels.
+- Test review remains acceptable: updated specs use stable route/data-test selectors for the learning modal, textbook tabs, achievement coupling, persistence, XSS absence checks, and lab regression coverage. The lab spec adds a local `Date` freeze before the lab navigation in the affected test and does not modify lab source behavior.
+
+## Prior Rejection Resolution
+
+The prior F2 blocking issue is resolved.
+
+- Previous rejection: `src/modules/progress.js` imported stale storage APIs from the removed stage/dashboard rendering path.
+- Current import block: only `getCompletedLearningSegments`, `getLearningSegmentCompletionDates`, `getUnlockedAchievements`, and `markLearningSegmentCompleted` are imported from `./storage.js`.
+- Used imports are not missing:
+  - `renderProgress()` uses `getUnlockedAchievements`, `getCompletedLearningSegments`, and `getLearningSegmentCompletionDates`.
+  - `bindLearningInteractions()` uses `markLearningSegmentCompleted` for the `确定已学习` modal action.
+- No source behavior was changed beyond the import cleanup after the F2 rejection; the current focused `progress.js` diff matches the planned learning-page simplification and the repaired storage import set.
 
 ## Findings
-- Blocking findings: none.
-- Non-blocking: duplicated escaping helpers remain in `achievements.js`/`progress.js`, but this is consistent with local module style and not a correctness blocker for this scope.
+
+- No blocking unused-import issue remains in `src/modules/progress.js`.
+- No over-broad refactor blocker identified in the reviewed source diffs. Legacy helper functions still exist for exported test hooks and surgical reuse, but they are not called by the current `renderProgress()` page entry path and are not a blocker.
+- No brittle selector blocker identified in the reviewed tests; selectors are scoped to `#progress`, stable `data-testid`, route assertions, or existing lab selectors.
+- No duplicated date-logic blocker beyond acceptable surgical reuse. `normalizeLearningSegmentCompletionDates()` intentionally mirrors `normalizeExperimentCompletionDates()`, and local `YYYY-MM-DD` formatting continues to use `formatLocalDateYYYYMMDD()`.
+- No escaping regression identified in the changed learning card/modal rendering paths.
+- No Chinese-first copy consistency blocker identified; user-facing learning confirmation copy remains Chinese-first.
+- `git diff --stat` still shows unrelated changed/generated files outside this F2 review list, including other evidence files, `.sisyphus/boulder.json`, `dist/index.html`, and a separate notepad. Those were not modified or reviewed as source quality blockers for this current-plan F2 rerun.
+
+## Blocking Issues
+
+None.
+
+## Verdict
+
+VERDICT: APPROVE
