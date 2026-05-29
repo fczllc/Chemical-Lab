@@ -1,0 +1,15 @@
+
+Running 10 tests using 2 workers
+
+  鉁?  1 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:26:3 鈥?Learning content modal interaction 鈥?clicking learning card opens modal and does not complete segment (22.3s)
+  鉁?  2 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:58:3 鈥?Learning content modal interaction 鈥?closing modal without confirmation leaves segment uncompleted (26.3s)
+  鉁?  4 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:154:3 鈥?Learning content modal interaction 鈥?completed lesson can still open modal and read content (12.5s)
+  鉁?  5 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:190:3 鈥?Learning content modal interaction 鈥?legacy completed lesson without stored date shows date pending (18.9s)
+  鉁?  3 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:94:3 鈥?Learning content modal interaction 鈥?modal confirmation completes segment and persists after reload (38.4s)
+  鉁?  7 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:231:3 鈥?Learning content modal interaction 鈥?modal body shows exact source and textbook content sections without internal metadata (14.0s)
+  鉁?  6 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:215:3 鈥?Learning content modal interaction 鈥?no learning card contains a visible completion button (23.2s)
+  鉁?  8 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:255:3 鈥?Learning content modal interaction 鈥?modal textbook content renders formula prose with KaTeX (42.7s)
+  鉁?  9 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:272:3 鈥?Learning content modal interaction 鈥?modal escapes unsafe metadata instead of rendering executable HTML (40.8s)
+  鉁? 10 [chromium] 鈥?tests\ui\learning-content-modal.spec.ts:315:3 鈥?Learning content modal interaction 鈥?long modal content supports internal scroll (42.2s)
+
+  10 passed (2.7m)

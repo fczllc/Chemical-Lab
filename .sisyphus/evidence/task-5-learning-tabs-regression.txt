@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  鉁? 1 [chromium] 鈥?tests\content\pep-learning-tabs.spec.ts:32:3 鈥?PEP Learning Tabs 鈥?瀛︿範 page renders eight textbook tabs with non-empty cards (19.3s)
+
+  1 passed (22.1s)
