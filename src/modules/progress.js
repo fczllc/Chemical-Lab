@@ -1,5 +1,6 @@
 /** ===== 学习进度模块 ===== */
 import { EXPERIMENT_LABELS, FEATURE_LABELS, GAME_LABELS } from '../data/contentMeta.js';
+import { mixedProseFormulaHTML } from './chemNotation.js';
 import {
   achievementsData,
   curriculumTags,
@@ -8,7 +9,8 @@ import {
   learningPath,
   quizData,
   reactions,
-  textbookAssetManifest
+  textbookAssetManifest,
+  learningSegmentTextbookContent
 } from '../data/index.js';
 import {
   getCompletedLearningSegments,
@@ -31,6 +33,49 @@ let activeTextbookId = null;
 const CURRICULUM_TAG_MAP = new Map(Object.entries(curriculumTags || {}));
 
 const ELEMENT_BY_SYMBOL = new Map((elements || []).map((element) => [element.symbol, element]));
+
+/** Textbook content lookup indexes */
+const LEARNING_CONTENT_BY_SEGMENT_ID = new Map(
+  (learningSegmentTextbookContent || []).map((c) => [c.segmentId, c])
+);
+const LEARNING_CONTENT_BY_VOLUME_AND_CANDIDATE = new Map(
+  (learningSegmentTextbookContent || []).map((c) => [`${c.sourceVolumeId}::${c.candidateId}`, c])
+);
+const LEARNING_CONTENT_BY_VOLUME_AND_SECTION = new Map(
+  (learningSegmentTextbookContent || []).map((c) => [`${c.sourceVolumeId}::${c.sourceSectionId}`, c])
+);
+const LEARNING_CONTENT_BY_VOLUME_AND_LINE_RANGE = new Map();
+(learningSegmentTextbookContent || []).forEach((c) => {
+  const key = `${c.sourceVolumeId}::${c.lineRange}`;
+  if (!LEARNING_CONTENT_BY_VOLUME_AND_LINE_RANGE.has(key)) {
+    LEARNING_CONTENT_BY_VOLUME_AND_LINE_RANGE.set(key, []);
+  }
+  LEARNING_CONTENT_BY_VOLUME_AND_LINE_RANGE.get(key).push(c);
+});
+
+function findLearningSegmentTextbookContent(achievement, reference, segmentId) {
+  const volumeId = normalizeText(achievement?.sourceVolumeId || reference?.sourceVolumeId || reference?.volumeId);
+  const candidateId = normalizeText(reference?.candidateId);
+  const lineRange = normalizeText(reference?.lineRange);
+  const sourceSectionId = candidateId && candidateId.startsWith('achievement-') 
+    ? candidateId.slice('achievement-'.length) 
+    : '';
+
+  if (volumeId && candidateId && LEARNING_CONTENT_BY_VOLUME_AND_CANDIDATE.has(`${volumeId}::${candidateId}`)) {
+    return LEARNING_CONTENT_BY_VOLUME_AND_CANDIDATE.get(`${volumeId}::${candidateId}`);
+  }
+
+  if (volumeId && sourceSectionId && LEARNING_CONTENT_BY_VOLUME_AND_SECTION.has(`${volumeId}::${sourceSectionId}`)) {
+    return LEARNING_CONTENT_BY_VOLUME_AND_SECTION.get(`${volumeId}::${sourceSectionId}`);
+  }
+
+  if (volumeId && lineRange) {
+    const list = LEARNING_CONTENT_BY_VOLUME_AND_LINE_RANGE.get(`${volumeId}::${lineRange}`) || [];
+    if (list.length === 1) return list[0];
+  }
+
+  return null;
+}
 
 const MANUAL_LEARNING_ACHIEVEMENTS = (achievementsData || [])
   .map((achievement) => ({
@@ -110,6 +155,7 @@ function getManualLearningSegments(unlockedAchievements = new Set(), completedLe
     const reference = achievement.sourceReferences?.[0] || {};
     const statusInfo = getLearningSegmentStatus(achievement, segmentId, unlockedAchievements, completedLearningSegments);
     const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
+    const textbookContent = findLearningSegmentTextbookContent(achievement, reference, segmentId);
 
     return {
       segmentId,
@@ -121,11 +167,12 @@ function getManualLearningSegments(unlockedAchievements = new Set(), completedLe
       displayPath: formatSourceReference(reference, sourceVolumeId),
       status: statusInfo.status,
       summary: buildLearningSegmentSummary(achievement, reference, segmentId),
-      detailSections: buildLearningSegmentDetailSections(achievement, reference, segmentId),
+      detailSections: buildLearningSegmentDetailSections(achievement, reference, segmentId, textbookContent),
       asset: findTextbookAssetForReference(reference),
       achievement,
       reference,
-      completionDate: learningSegmentCompletionDates[segmentId] || ''
+      completionDate: learningSegmentCompletionDates[segmentId] || '',
+      textbookContent
     };
   }).filter((segment) => {
     if (isExperimentLearningSegment(segment)) {
@@ -180,17 +227,10 @@ function buildLearningSegmentSummary(achievement, reference, segmentId) {
     : '暂无已审核的学习目标元数据。';
 }
 
-function buildLearningSegmentDetailSections(achievement, reference, segmentId) {
-  const asset = findTextbookAssetForReference(reference);
-  const reviewedAsset = asset?.extractionStatus === 'reviewed' ? asset : null;
-
+function buildLearningSegmentDetailSections(achievement, reference, segmentId, textbookContent) {
   return [
-    buildDetailSection('source', '章节来源', buildSourceBlocks(achievement, reference)),
-    buildDetailSection('summary', '本节要学什么', buildLearningGoalBlocks(achievement, reference, segmentId)),
-    buildDetailSection('content', '教材内容', buildTextbookContentBlocks(reviewedAsset)),
-    buildDetailSection('key-points', '关键知识点', buildKeyPointBlocks(achievement)),
-    buildDetailSection('materials', '相关资料', buildRelatedMaterialBlocks(asset, reviewedAsset)),
-    buildDetailSection('confirm', '学习确认', buildLearningConfirmationBlocks(achievement, segmentId))
+    buildDetailSection('source', '章节来源', buildSourceBlocks(achievement, reference, textbookContent)),
+    buildDetailSection('content', '教材内容', buildTextbookContentBlocks(textbookContent))
   ];
 }
 
@@ -231,27 +271,46 @@ function findTextbookVolume(volumeId) {
   return textbookAssetManifest.volumes.find((volume) => volume.volumeId === normalizedVolumeId) || null;
 }
 
-function buildSourceBlocks(achievement, reference) {
-  const sourceVolumeId = achievement.sourceVolumeId || reference.sourceVolumeId || reference.volumeId || '';
-  const volume = findTextbookVolume(sourceVolumeId);
-  const sourceDetails = compactTextValues([
-    reference.sourceHeading ? `章节：${reference.sourceHeading}` : '',
-    sourceVolumeId ? `卷册 ID：${sourceVolumeId}` : '',
-    volume?.displayName ? `卷册：${volume.displayName}` : '',
-    volume?.sourceVolume ? `教材册别：${volume.sourceVolume}` : '',
-    volume?.publisher ? `出版社：${volume.publisher}` : '',
-    volume?.edition ? `版本：${volume.edition}` : '',
-    reference.lineRange ? `行号：L${reference.lineRange}` : '',
-    reference.sourceHash ? `来源哈希：${reference.sourceHash}` : '',
-    reference.note ? `来源备注：${reference.note}` : '',
-    reference.reviewNote ? `审核备注：${reference.reviewNote}` : ''
-  ]);
+function buildSourceBlocks(achievement, reference, textbookContent) {
+  const textbookName = textbookContent?.textbookName || '';
+  const rangeLabel = textbookContent?.rangeLabel || '';
+  const sourceHeading = reference.sourceHeading || '';
 
-  return [
-    sourceDetails.length
-      ? paragraphBlock(`已记录教材来源信息：${sourceDetails.join('；')}`)
-      : paragraphBlock('暂无已审核的教材来源元数据。')
-  ];
+  if (textbookName) {
+    const rangeText = rangeLabel ? `；范围：${rangeLabel}` : '';
+    return [paragraphBlock(`教材：${textbookName}${rangeText}`)];
+  }
+
+  if (sourceHeading) {
+    return [paragraphBlock(`章节：${sourceHeading}`)];
+  }
+
+  return [paragraphBlock('暂无已审核的教材来源元数据。')];
+}
+
+function buildTextbookContentBlocks(textbookContent) {
+  if (!textbookContent || !Array.isArray(textbookContent.blocks) || textbookContent.blocks.length === 0) {
+    return [paragraphBlock('未找到该学习卡片对应的教材正文，请运行数据校验修复来源映射。')];
+  }
+
+  return textbookContent.blocks
+    .filter(block => ['heading', 'paragraph', 'list', 'table'].includes(block.type))
+    .map(block => {
+      if (block.type === 'heading') return { ...block, type: 'heading' };
+      if (block.type === 'paragraph') return { ...block, type: 'paragraph' };
+      if (block.type === 'list') return { ...block, type: 'list' };
+      if (block.type === 'table') {
+        const rows = Array.isArray(block.rows)
+          ? block.rows
+              .filter(Array.isArray)
+              .map((row) => row.map(normalizeText))
+              .filter((row) => row.some(Boolean))
+          : [];
+        return rows.length ? { type: 'table', rows } : null;
+      }
+      return null;
+    })
+    .filter(Boolean);
 }
 
 function buildLearningGoalBlocks(achievement, reference, segmentId) {
@@ -268,19 +327,6 @@ function buildLearningGoalBlocks(achievement, reference, segmentId) {
   return blocks.some(Boolean)
     ? blocks
     : [paragraphBlock('暂无已审核的学习目标元数据。')];
-}
-
-function buildTextbookContentBlocks(reviewedAsset) {
-  const blocks = reviewedAsset ? [
-    paragraphBlock(reviewedAsset.nearbyHeading ? `相邻标题：${reviewedAsset.nearbyHeading}` : ''),
-    paragraphBlock(reviewedAsset.diagramSummary ? `图示摘要：${reviewedAsset.diagramSummary}` : ''),
-    paragraphBlock(reviewedAsset.extractedFormulaText ? `已审核公式文本：${reviewedAsset.extractedFormulaText}` : ''),
-    paragraphBlock(reviewedAsset.sourceNotes ? `来源记录：${reviewedAsset.sourceNotes}` : '')
-  ] : [];
-
-  return blocks.some(Boolean)
-    ? blocks
-    : [paragraphBlock('暂无已审核的结构化正文。')];
 }
 
 function buildKeyPointBlocks(achievement) {
@@ -1050,14 +1096,24 @@ function renderLessonModalBlock(block) {
 
   if (block.type === 'paragraph') {
     const text = normalizeText(block.text);
-    return text ? `<p>${escapeHtml(text)}</p>` : '';
+    return text ? `<p>${mixedProseFormulaHTML(text)}</p>` : '';
+  }
+
+  if (block.type === 'heading') {
+    const text = normalizeText(block.text);
+    return text ? `<h6 class="lesson-modal-content-heading">${mixedProseFormulaHTML(text)}</h6>` : '';
   }
 
   if (block.type === 'list') {
-    const items = Array.isArray(block.items) ? compactTextValues(block.items) : [];
+    const items = Array.isArray(block.items) ? block.items.map(normalizeText).filter(Boolean) : [];
+    const tag = block.style === 'ordered' ? 'ol' : 'ul';
     return items.length
-      ? `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+      ? `<${tag}>${items.map((item) => `<li>${mixedProseFormulaHTML(item)}</li>`).join('')}</${tag}>`
       : '';
+  }
+
+  if (block.type === 'table') {
+    return renderLessonModalTable(block);
   }
 
   if (block.type === 'source') {
@@ -1075,6 +1131,27 @@ function renderLessonModalBlock(block) {
   }
 
   return '';
+}
+
+function renderLessonModalTable(block) {
+  const rows = Array.isArray(block.rows)
+    ? block.rows
+        .filter(Array.isArray)
+        .map((row) => row.map(normalizeText))
+        .filter((row) => row.some(Boolean))
+    : [];
+
+  if (!rows.length) {
+    return '';
+  }
+
+  const [headerRow, ...bodyRows] = rows;
+  const headerHtml = headerRow.map((cell) => `<th>${mixedProseFormulaHTML(cell)}</th>`).join('');
+  const bodyHtml = bodyRows.map((row) => (
+    `<tr>${row.map((cell) => `<td>${mixedProseFormulaHTML(cell)}</td>`).join('')}</tr>`
+  )).join('');
+
+  return `<div class="lesson-modal-table-wrap"><table class="lesson-modal-table"><thead><tr>${headerHtml}</tr></thead>${bodyHtml ? `<tbody>${bodyHtml}</tbody>` : ''}</table></div>`;
 }
 
 function renderElementChip(atomicNumber, element, learned) {

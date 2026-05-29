@@ -310,12 +310,16 @@ function renderMixedMathToken(token, options) {
     body = token.slice(1, -1);
   }
 
-  const latex = equationToLatex(body) || formulaToLatex(body) || body.replace(/\\\\/g, '\\');
+  const latex = normalizeMixedMathLatex(body);
   try {
     return katex.renderToString(latex, safeKatexOptions({ ...options, displayMode }));
   } catch {
     return escapeHTML(token);
   }
+}
+
+function normalizeMixedMathLatex(body) {
+  return equationToLatex(body) || formulaToLatex(body) || body.trim();
 }
 
 function renderToElement(category, value, element, converter, options) {

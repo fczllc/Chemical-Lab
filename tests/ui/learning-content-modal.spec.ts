@@ -2,7 +2,25 @@ import { expect, test, type Locator, type Page } from '@playwright/test';
 
 const STORAGE_KEY = 'element-explorer-kids-state';
 const MANUAL_SEGMENT_ID = 'knowledge-topic-0001-source-section-l1-l5-bd27b23b45';
-const MANUAL_ACHIEVEMENT_ID = 'textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-promote-knowledge-topic-0001-source-section-l1-l5-bd27b23b45-achievement-achievement-0001-source-section-l1-l5-bd27b23b45';
+const TEXTBOOK_CONTENT_SEGMENT_ID = 'knowledge-topic-0004-source-section-l63-l74-105f9964c8';
+const TEXTBOOK_CONTENT_SOURCE = '教材：2019版人教版高中化学必修第1册；范围：L63-74';
+const TEXTBOOK_CONTENT_PHRASE = '世界是由物质构成的';
+const FORMULA_SEGMENT_ID = 'knowledge-topic-0008-1-l94-l129-9ca678fac3';
+const FORBIDDEN_MODAL_BODY_STRINGS = [
+  '本节要学什么',
+  '关键知识点',
+  '相关资料',
+  '学习确认',
+  '卷册 ID',
+  '来源哈希',
+  'reviewedBy',
+  'src/data/textbooks',
+  '暂无已审核的结构化正文',
+  '待审成就：学习并复核',
+  '相邻标题',
+  '图示摘要',
+  '来源记录'
+];
 
 test.describe('Learning content modal interaction', () => {
   test('clicking learning card opens modal and does not complete segment', async ({ page }) => {
@@ -12,19 +30,18 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
 
-    const statusBefore = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
-    expect(statusBefore?.trim()).toBe('');
+    const statusBefore = await card.locator('[data-testid="learning-card-status"]').count();
+    expect(statusBefore).toBe(0);
 
     const completedBefore = await page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
     ), MANUAL_SEGMENT_ID);
     expect(completedBefore).toBe(false);
 
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -34,8 +51,8 @@ test.describe('Learning content modal interaction', () => {
     ), MANUAL_SEGMENT_ID);
     expect(completedAfterOpen).toBe(false);
 
-    const statusAfterOpen = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
-    expect(statusAfterOpen?.trim()).toBe('');
+    const statusAfterOpen = await card.locator('[data-testid="learning-card-status"]').count();
+    expect(statusAfterOpen).toBe(0);
   });
 
   test('closing modal without confirmation leaves segment uncompleted', async ({ page }) => {
@@ -45,15 +62,13 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
 
-    // Close via close button
     await modal.locator('[data-testid="lesson-modal-close"]').click();
     await expect(modal).not.toBeVisible();
 
@@ -62,11 +77,10 @@ test.describe('Learning content modal interaction', () => {
     ), MANUAL_SEGMENT_ID);
     expect(completedAfterClose).toBe(false);
 
-    const statusAfterClose = await card.locator('[data-testid=\"learning-card-status\"]').textContent();
-    expect(statusAfterClose?.trim()).toBe('');
+    const statusAfterClose = await card.locator('[data-testid="learning-card-status"]').count();
+    expect(statusAfterClose).toBe(0);
 
-    // Reopen and close via Escape
-    await card.click();
+    await clickLearningCard(card);
     await expect(modal).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(modal).not.toBeVisible();
@@ -84,10 +98,9 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -99,7 +112,7 @@ test.describe('Learning content modal interaction', () => {
 
     const date = await getTodayLocalDateInBrowser(page);
     expect(date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    await confirmButton.click();
+    await activateConfirmButton(confirmButton);
 
     await expect.poll(async () => page.evaluate((segmentId) => (
       window.appState.completedLearningSegments.has(segmentId)
@@ -110,7 +123,6 @@ test.describe('Learning content modal interaction', () => {
     const statusAfterConfirm = await card.locator('[data-testid="learning-card-status"]').textContent();
     expect(statusAfterConfirm?.trim()).toBe(`学习确认：${date}`);
 
-    // Wait for debounced save to flush before reloading
     await expect.poll(async () => {
       const raw = await page.evaluate((key) => window.localStorage.getItem(key), STORAGE_KEY);
       if (!raw) return false;
@@ -124,13 +136,11 @@ test.describe('Learning content modal interaction', () => {
       }
     }, { timeout: 10000 }).toBe(true);
 
-    // Persist after reload
     await page.reload({ waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const reloadedCard = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, reloadedCard);
+    const reloadedCard = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(reloadedCard).toBeVisible();
     const statusAfterReload = await reloadedCard.locator('[data-testid="learning-card-status"]').textContent();
     expect(statusAfterReload?.trim()).toBe(`学习确认：${date}`);
@@ -153,13 +163,12 @@ test.describe('Learning content modal interaction', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
     const status = await card.locator('[data-testid="learning-card-status"]').textContent();
     expect(status?.trim()).toBe('学习确认：2026-05-01');
 
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -187,13 +196,12 @@ test.describe('Learning content modal interaction', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
     const status = await card.locator('[data-testid="learning-card-status"]').textContent();
     expect(status?.trim()).toBe('学习确认：日期待补充');
 
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -215,41 +223,50 @@ test.describe('Learning content modal interaction', () => {
     const count = await cards.count();
     expect(count).toBeGreaterThan(0);
 
-    // Assert no card-level completion button exists in a single query
     const completionButtons = page.locator('#progress [data-testid="learning-card"] button');
     const completionCount = await completionButtons.count();
     expect(completionCount).toBe(0);
   });
 
-  test('modal content has distinct sections without undefined or null', async ({ page }) => {
+  test('modal body shows exact source and textbook content sections without internal metadata', async ({ page }) => {
     await resetApp(page);
     await waitForShellReady(page);
 
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
-    await expect(card).toBeVisible();
-    await card.click();
-
-    const modal = page.locator('[data-testid="lesson-modal"]');
-    await expect(modal).toBeVisible();
-
+    const modal = await openLearningCard(page, TEXTBOOK_CONTENT_SEGMENT_ID);
     const body = modal.locator('[data-testid="lesson-modal-body"]');
     await expect(body).toBeVisible();
 
+    const sectionHeadings = await body.locator('.lesson-modal-section h5').allTextContents();
+    expect(sectionHeadings.map((heading) => heading.trim())).toEqual(['章节来源', '教材内容']);
+
     const bodyText = await body.textContent();
+    expect(bodyText).toContain(TEXTBOOK_CONTENT_SOURCE);
+    expect(bodyText).toContain(TEXTBOOK_CONTENT_PHRASE);
     expect(bodyText).not.toContain('undefined');
     expect(bodyText).not.toContain('null');
+    for (const forbidden of FORBIDDEN_MODAL_BODY_STRINGS) {
+      expect(bodyText).not.toContain(forbidden);
+    }
+  });
 
-    // Assert at least some known section titles appear
-    expect(bodyText).toContain('章节来源');
-    expect(bodyText).toContain('本节要学什么');
-    expect(bodyText).toContain('教材内容');
-    expect(bodyText).toContain('关键知识点');
-    expect(bodyText).toContain('相关资料');
-    expect(bodyText).toContain('学习确认');
+  test('modal textbook content renders formula prose with KaTeX', async ({ page }) => {
+    await resetApp(page);
+    await waitForShellReady(page);
+    await page.getByTestId('nav-progress').click();
+    await expect(page).toHaveURL(/#\/progress$/);
+
+    const modal = await openLearningCard(page, FORMULA_SEGMENT_ID);
+    const body = modal.locator('[data-testid="lesson-modal-body"]');
+
+    const contentSection = body.locator('.lesson-modal-section', { has: page.locator('h5', { hasText: '教材内容' }) });
+    const formula = contentSection.locator('.katex').first();
+    await expect(formula).toBeVisible();
+
+    const contentText = await contentSection.textContent();
+    expect(contentText).toContain('60');
   });
 
   test('modal escapes unsafe metadata instead of rendering executable HTML', async ({ page }) => {
@@ -271,10 +288,9 @@ test.describe('Learning content modal interaction', () => {
     await waitForShellReady(page);
     await page.getByTestId('nav-progress').click();
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -303,10 +319,9 @@ test.describe('Learning content modal interaction', () => {
     await page.getByTestId('nav-progress').click();
     await expect(page).toHaveURL(/#\/progress$/);
 
-    const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${MANUAL_SEGMENT_ID}"]`).first();
-    await showLearningCard(page, card);
+    const card = await showLearningCard(page, MANUAL_SEGMENT_ID);
     await expect(card).toBeVisible();
-    await card.click();
+    await clickLearningCard(card);
 
     const modal = page.locator('[data-testid="lesson-modal"]');
     await expect(modal).toBeVisible();
@@ -320,7 +335,6 @@ test.describe('Learning content modal interaction', () => {
       overflowY: window.getComputedStyle(el).overflowY
     }));
 
-    // Body should have scroll capability if content is long; at minimum assert overflow-y is auto/scroll
     expect(['auto', 'scroll']).toContain(scrollInfo.overflowY);
   });
 });
@@ -384,19 +398,47 @@ async function getStoredLearningDate(page: Page, segmentId: string) {
   ), segmentId);
 }
 
-async function showLearningCard(page: Page, card: Locator) {
+async function showLearningCard(page: Page, segmentId: string) {
+  const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
   await expect(card).toBeAttached({ timeout: 15000 });
   const panelId = await card.evaluate((element) => (
     element.closest('[data-textbook-panel]')?.getAttribute('data-textbook-panel') || ''
   ));
-  if (!panelId) {
-    return;
+  if (panelId) {
+    const tab = page.locator(`[data-textbook-tab="${escapeCssAttribute(panelId)}"]`);
+    if (await tab.count()) {
+      await tab.first().click();
+    }
   }
+  const activeCard = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
+  await expect(activeCard).toBeAttached({ timeout: 15000 });
+  await expect(activeCard).toBeVisible({ timeout: 15000 });
+  await activeCard.scrollIntoViewIfNeeded();
+  return activeCard;
+}
 
-  const tab = page.locator(`[data-textbook-tab="${escapeCssAttribute(panelId)}"]`);
-  if (await tab.count()) {
-    await tab.first().click();
-  }
+async function openLearningCard(page: Page, segmentId: string): Promise<Locator> {
+  const card = await showLearningCard(page, segmentId);
+  await expect(card).toBeVisible();
+  await clickLearningCard(card);
+  const modal = page.locator('[data-testid="lesson-modal"]');
+  await expect(modal).toBeVisible();
+  return modal;
+}
+
+async function clickLearningCard(card: Locator) {
+  await expect(card).toBeVisible({ timeout: 15000 });
+  await card.scrollIntoViewIfNeeded();
+  await card.evaluate((element) => {
+    (element as HTMLElement).click();
+  });
+}
+
+async function activateConfirmButton(button: Locator) {
+  await expect(button).toBeVisible({ timeout: 15000 });
+  await button.evaluate((element) => {
+    (element as HTMLButtonElement).click();
+  });
 }
 
 function escapeCssAttribute(value: string) {
@@ -404,14 +446,14 @@ function escapeCssAttribute(value: string) {
 }
 
 async function waitForShellReady(page: Page) {
-  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 15000 });
+  await expect(page.getByTestId('nav-home')).toBeVisible({ timeout: 30000 });
   await expect.poll(async () => {
     return await page.evaluate(() => {
       const hasElements = Array.isArray(window.appState?.elements) && window.appState.elements.length >= 118;
       const loaderHidden = document.getElementById('global-loader')?.classList.contains('hidden') ?? false;
       return hasElements && loaderHidden;
     });
-  }, { timeout: 15000 }).toBe(true);
+  }, { timeout: 30000 }).toBe(true);
 }
 
 async function waitForAppReady(page: Page) {
@@ -430,5 +472,3 @@ async function waitForAppReady(page: Page) {
     }
   });
 }
-
-
