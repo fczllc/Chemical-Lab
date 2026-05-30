@@ -1,0 +1,1193 @@
+{
+  "checkedAt": "2026-05-30T10:54:02.114Z",
+  "totalQuizRecords": 493,
+  "runtimeEligibleQuestionCount": 493,
+  "explicitVagueFragmentCount": 0,
+  "blockingFindings": [],
+  "reviewQueue": [
+    {
+      "id": "quiz-3",
+      "field": "explanation",
+      "text": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
+    },
+    {
+      "id": "quiz-18",
+      "field": "explanation",
+      "text": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
+    },
+    {
+      "id": "quiz-c60-structure-source",
+      "field": "question",
+      "text": "教材图6-4说明，C60 的分子结构和什么相似？"
+    },
+    {
+      "id": "quiz-c60-structure-source",
+      "field": "explanation",
+      "text": "教材图6-4说明 C60 的分子结构和足球相似。"
+    },
+    {
+      "id": "quiz-c60-carbon-allotrope",
+      "field": "question",
+      "text": "教材介绍 C60 时，把它归入哪一类碳物质？"
+    },
+    {
+      "id": "quiz-c60-reviewed-formula-application",
+      "field": "question",
+      "text": "根据教材正文，每个 C60 分子由多少个碳原子构成？"
+    },
+    {
+      "id": "quiz-c60-reviewed-formula-application",
+      "field": "explanation",
+      "text": "教材正文说明，每个 C60 分子是由60个碳原子构成的。"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-2",
+      "field": "explanation",
+      "text": "石墨能让电路中的灯泡发光，说明石墨具有导电性，这也是它能用作电极材料的原因之一。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-promote-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-quiz-quiz-0011-source-section-l89-l106-6badbce1f7",
+      "field": "question",
+      "text": "给有机化合物分类时，教材提醒我们优先观察哪两个方面？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b",
+      "field": "question",
+      "text": "下列哪种生活材料常可由乙烯作为基础原料制得？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9",
+      "field": "explanation",
+      "text": "答案是“戊糖、碱基和磷酸”。核苷酸像三块积木：戊糖、碱基和磷酸。其他组合属于油脂、有机反应或金属材料，不是核苷酸组成。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2",
+      "field": "explanation",
+      "text": "答案是“增塑剂等小分子可能迁移到食品中”。软质PVC常加入增塑剂等助剂，小分子可能迁移，食品接触要特别谨慎。其他说法不符合材料安全问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb",
+      "field": "explanation",
+      "text": "答案是“顺式和反式空间结构不同”。顺式和反式就像同样零件朝向不同，会影响材料性质。它们都属于含碳高分子，不是盐和水的差别。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85",
+      "field": "question",
+      "text": "高吸水性树脂相比普通吸水材料，最突出的特点是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "question",
+      "text": "从海水淡化材料可以看出，化学在解决社会问题中常发挥什么作用？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "options[0]",
+      "text": "设计功能材料帮助解决资源与环境问题"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "explanation",
+      "text": "答案是“设计功能材料帮助解决资源与环境问题”。化学能设计膜材料等功能材料，为淡水资源和环境问题提供工具。它不是只命名，也不能脱离工程或让问题自动消失。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0022-source-section-l276-l284-8a17c88cb4-promote-knowledge-topic-0022-source-section-l276-l284-8a17c88cb4-quiz-quiz-0022-source-section-l276-l284-8a17c88cb4",
+      "field": "question",
+      "text": "围绕教材片段中的反应物分子分裂后原子重新组合成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0044-source-section-l639-l644-7ae6d3d8a8-promote-knowledge-topic-0044-source-section-l639-l644-7ae6d3d8a8-quiz-quiz-0044-source-section-l639-l644-7ae6d3d8a8",
+      "field": "question",
+      "text": "根据教材“探究”（639-644）中关于蜡烛燃烧时火焰分为三层相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0059-source-section-l953-l978-1eb4da4839-promote-knowledge-topic-0059-source-section-l953-l978-1eb4da4839-quiz-quiz-0059-source-section-l953-l978-1eb4da4839",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0065-source-section-l1048-l1061-71b3522176-promote-knowledge-topic-0065-source-section-l1048-l1061-71b3522176-quiz-quiz-0065-source-section-l1048-l1061-71b3522176",
+      "field": "question",
+      "text": "学习教材片段后，怎样从分子角度区分化学变化和物理变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0070-source-section-l1107-l1117-a518bcb454-promote-knowledge-topic-0070-source-section-l1107-l1117-a518bcb454-quiz-quiz-0070-source-section-l1107-l1117-a518bcb454",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0081-source-section-l1284-l1297-93dc656591-promote-knowledge-topic-0081-source-section-l1284-l1297-93dc656591-quiz-quiz-0081-source-section-l1284-l1297-93dc656591",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0083-source-section-l1311-l1335-0d04643d68-promote-knowledge-topic-0083-source-section-l1311-l1335-0d04643d68-quiz-quiz-0083-source-section-l1311-l1335-0d04643d68",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0085-source-section-l1345-l1356-32980ba4e1-promote-knowledge-topic-0085-source-section-l1345-l1356-32980ba4e1-quiz-quiz-0085-source-section-l1345-l1356-32980ba4e1",
+      "field": "question",
+      "text": "根据教材“练习与应用”（1345-1356）中关于氧气是一种无色、无臭的气体相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0086-source-section-l1357-l1410-7d5da67802-promote-knowledge-topic-0086-source-section-l1357-l1410-7d5da67802-quiz-quiz-0086-source-section-l1357-l1410-7d5da67802",
+      "field": "question",
+      "text": "围绕教材片段中的氢氧化钙吸收二氧化碳生成碳酸钙相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0132-source-section-l1860-l1863-3546ebe477-promote-knowledge-topic-0132-source-section-l1860-l1863-3546ebe477-quiz-quiz-0132-source-section-l1860-l1863-3546ebe477",
+      "field": "question",
+      "text": "根据教材“分子和原子”（1860-1863）中关于分子是保持物质化学性质的最小粒子相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0142-source-section-l2021-l2034-957eaeb4ad-promote-knowledge-topic-0142-source-section-l2021-l2034-957eaeb4ad-quiz-quiz-0142-source-section-l2021-l2034-957eaeb4ad",
+      "field": "question",
+      "text": "围绕教材片段中的反应物分子分裂后原子重新组合成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-promote-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-quiz-quiz-0166-source-section-l2413-l2469-3673a8fdf6",
+      "field": "question",
+      "text": "围绕教材片段中的变化判断，哪一项最能说明发生了化学变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0168-source-section-l2472-l2480-a5cbbbb777-promote-knowledge-topic-0168-source-section-l2472-l2480-a5cbbbb777-quiz-quiz-0168-source-section-l2472-l2480-a5cbbbb777",
+      "field": "question",
+      "text": "根据教材“元素”（2472-2480）中关于元素只讲种类，不讲个数相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0201-source-section-l2946-l2958-247f51b17c-promote-knowledge-topic-0201-source-section-l2946-l2958-247f51b17c-quiz-quiz-0201-source-section-l2946-l2958-247f51b17c",
+      "field": "question",
+      "text": "围绕教材片段中的天然气燃烧时甲烷分子和氧分子生成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0224-source-section-l3340-l3363-a83c923c2c-promote-knowledge-topic-0224-source-section-l3340-l3363-a83c923c2c-quiz-quiz-0224-source-section-l3340-l3363-a83c923c2c",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0226-source-section-l3395-l3433-5e6e23ae6b-promote-knowledge-topic-0226-source-section-l3395-l3433-5e6e23ae6b-quiz-quiz-0226-source-section-l3395-l3433-5e6e23ae6b",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0227-source-section-l3434-l3439-7c016cba91-promote-knowledge-topic-0227-source-section-l3434-l3439-7c016cba91-quiz-quiz-0227-source-section-l3434-l3439-7c016cba91",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0239-source-section-l3596-l3699-41be8a4e53-promote-knowledge-topic-0239-source-section-l3596-l3699-41be8a4e53-quiz-quiz-0239-source-section-l3596-l3699-41be8a4e53",
+      "field": "question",
+      "text": "根据教材“复习与提高”（3596-3699）中关于水是由氢元素和氧元素组成的相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0267-source-section-l3905-l3918-aead255042-promote-knowledge-topic-0267-source-section-l3905-l3918-aead255042-quiz-quiz-0267-source-section-l3905-l3918-aead255042",
+      "field": "question",
+      "text": "围绕教材片段中的变化判断，哪一项最能说明发生了化学变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0268-source-section-l3919-l3936-483b5c2a7b-promote-knowledge-topic-0268-source-section-l3919-l3936-483b5c2a7b-quiz-quiz-0268-source-section-l3919-l3936-483b5c2a7b",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0276-source-section-l4080-l4095-8beccabe14-promote-knowledge-topic-0276-source-section-l4080-l4095-8beccabe14-quiz-quiz-0276-source-section-l4080-l4095-8beccabe14",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-promote-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-quiz-quiz-0292-source-section-l4406-l4411-14045a14fa",
+      "field": "options[0]",
+      "text": "直接购买材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0304-source-section-l4576-l4579-e1d2194cab-promote-knowledge-topic-0304-source-section-l4576-l4579-e1d2194cab-quiz-quiz-0304-source-section-l4576-l4579-e1d2194cab",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0333-source-section-l5139-l5142-2a63c5fc9f-promote-knowledge-topic-0333-source-section-l5139-l5142-2a63c5fc9f-quiz-quiz-0333-source-section-l5139-l5142-2a63c5fc9f",
+      "field": "question",
+      "text": "学习教材片段后，怎样从分子角度区分化学变化和物理变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0340-source-section-l5257-l5283-f250fc4be6-promote-knowledge-topic-0340-source-section-l5257-l5283-f250fc4be6-quiz-quiz-0340-source-section-l5257-l5283-f250fc4be6",
+      "field": "question",
+      "text": "围绕教材片段中的天然气燃烧时甲烷分子和氧分子生成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0382-source-section-l5749-l5771-c3c46b6c2a-promote-knowledge-topic-0382-source-section-l5749-l5771-c3c46b6c2a-quiz-quiz-0382-source-section-l5749-l5771-c3c46b6c2a",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0394-source-section-l5927-l5934-2acf0f01aa-promote-knowledge-topic-0394-source-section-l5927-l5934-2acf0f01aa-quiz-quiz-0394-source-section-l5927-l5934-2acf0f01aa",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0395-source-section-l5935-l5954-af502f1e8d-promote-knowledge-topic-0395-source-section-l5935-l5954-af502f1e8d-quiz-quiz-0395-source-section-l5935-l5954-af502f1e8d",
+      "field": "question",
+      "text": "根据教材“三、化学反应中的能量变化”（5935-5954）中关于化学反应伴随着能量变化相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0412-source-section-l6209-l6228-df9241fb3f-promote-knowledge-topic-0412-source-section-l6209-l6228-df9241fb3f-quiz-quiz-0412-source-section-l6209-l6228-df9241fb3f",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0005-source-section-l23-l26-6ca6a9239d-promote-knowledge-topic-0005-source-section-l23-l26-6ca6a9239d-quiz-quiz-0005-source-section-l23-l26-6ca6a9239d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0010-source-section-l89-l113-9197900129-promote-knowledge-topic-0010-source-section-l89-l113-9197900129-quiz-quiz-0010-source-section-l89-l113-9197900129",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0075-2-4-l1012-l1025-49058e2e88-promote-knowledge-topic-0075-2-4-l1012-l1025-49058e2e88-quiz-quiz-0075-2-4-l1012-l1025-49058e2e88",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-promote-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-quiz-quiz-0076-source-section-l1026-l1048-3e5478b1c7",
+      "field": "explanation",
+      "text": "教材指出这些反应都是物质与氧气发生的反应，属于氧化反应；其中两种或多种物质生成一种物质的反应属于化合反应。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0089-source-section-l1185-l1200-c96766809c-promote-knowledge-topic-0089-source-section-l1185-l1200-c96766809c-quiz-quiz-0089-source-section-l1185-l1200-c96766809c",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0102-source-section-l1317-l1355-0d8e8ef3e7-promote-knowledge-topic-0102-source-section-l1317-l1355-0d8e8ef3e7-quiz-quiz-0102-source-section-l1317-l1355-0d8e8ef3e7",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0107-1-l1371-l1391-29671f030d-promote-knowledge-topic-0107-1-l1371-l1391-29671f030d-quiz-quiz-0107-1-l1371-l1391-29671f030d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-promote-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-quiz-quiz-0176-source-section-l2185-l2195-3ce31f3d3e",
+      "field": "explanation",
+      "text": "教材指出水与生命、日常生活和工农业生产密切相关，并引出水资源利用和天然水净化问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0210-source-section-l2598-l2623-defca983e4-promote-knowledge-topic-0210-source-section-l2598-l2623-defca983e4-quiz-quiz-0210-source-section-l2598-l2623-defca983e4",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0228-source-section-l2884-l2894-87f857afb9-promote-knowledge-topic-0228-source-section-l2884-l2894-87f857afb9-quiz-quiz-0228-source-section-l2884-l2894-87f857afb9",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-promote-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-quiz-quiz-0251-source-section-l3055-l3069-85b94ec8b9",
+      "field": "explanation",
+      "text": "教材指出化学反应是原子重新组合生成新物质的过程，反应前后原子种类、数目和质量不变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-promote-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-quiz-quiz-0253-source-section-l3072-l3079-df771f9564",
+      "field": "explanation",
+      "text": "教材说明质量守恒思想经历从朴素观点到定量实验验证的发展，拉瓦锡等人的实验提供了重要依据。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-promote-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-quiz-quiz-0290-source-section-l3543-l3550-3bf6fa7832",
+      "field": "explanation",
+      "text": "教材指出常温下碳单质化学性质不活泼，受日光、空气和水影响也不容易变化。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0354-source-section-l4382-l4419-d87edb8f2e-promote-knowledge-topic-0354-source-section-l4382-l4419-d87edb8f2e-quiz-quiz-0354-source-section-l4382-l4419-d87edb8f2e",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-promote-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-quiz-quiz-0407-source-section-l5112-l5115-70b1ac3583",
+      "field": "explanation",
+      "text": "教材指出不同地区家用燃料不同，要求关注燃料变迁、原因、影响以及使用注意事项。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "question",
+      "text": "读完“金属材料”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "options[0]",
+      "text": "金属材料 图8-1金属材料的使用历史悠久 三星堆遗址出土的青铜大面具,距今已有3000余…"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "explanation",
+      "text": "考点提示：金属材料 图8-1金属材料的使用历史悠久 三星堆遗址出土的青铜大面具,距今已有3000余"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-promote-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-quiz-quiz-0004-source-section-l24-l50-5c2b2b9bb1",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-quiz-quiz-0007-source-section-l66-l75-002391f54e",
+      "field": "explanation",
+      "text": "答案是“铁的硬度和强度更适合承受切割、敲打等用途”。选择材料要看性质和用途。铁比铝更硬、更适合做受力工具，而铝较软。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "options[3]",
+      "text": "合金的熔点常低于组成它的纯金属，可按用途选择材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "explanation",
+      "text": "答案是“合金的熔点常低于组成它的纯金属，可按用途选择材料”。表中焊锡、伍德合金的熔点比相关纯金属低，说明合金组成改变会带来性能改变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-promote-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-quiz-quiz-0015-source-section-l188-l233-e5a968cc18",
+      "field": "explanation",
+      "text": "答案是“用品需要的强度、密度、熔点、耐腐蚀性等性能”。材料选择要让性质服务用途，例如飞机材料要轻而强，炊具要导热好。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-promote-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-quiz-quiz-0018-source-section-l240-l249-03fe6e1c85",
+      "field": "explanation",
+      "text": "答案是“铝表面会生成致密的氧化铝薄膜，阻止继续氧化”。教材指出铝在空气中与氧气反应生成致密的氧化铝保护膜。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-promote-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-quiz-quiz-0025-source-section-l287-l304-1f91ca7368",
+      "field": "question",
+      "text": "读完“【分析与结论】 (1)哪些金属能与稀…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-promote-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-quiz-quiz-0025-source-section-l287-l304-1f91ca7368",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0028-source-section-l311-l320-f297bf4c4d-promote-knowledge-topic-0028-source-section-l311-l320-f297bf4c4d-quiz-quiz-0028-source-section-l311-l320-f297bf4c4d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0030-source-section-l349-l376-3be41caef6-promote-knowledge-topic-0030-source-section-l349-l376-3be41caef6-quiz-quiz-0030-source-section-l349-l376-3be41caef6",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0033-source-section-l388-l401-6ae3113539-promote-knowledge-topic-0033-source-section-l388-l401-6ae3113539-quiz-quiz-0033-source-section-l388-l401-6ae3113539",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-promote-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-quiz-quiz-0039-source-section-l538-l541-3612c3a3a4",
+      "field": "options[2]",
+      "text": "只使用最贵的金属材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0052-source-section-l630-l643-41dfd6992a-promote-knowledge-topic-0052-source-section-l630-l643-41dfd6992a-quiz-quiz-0052-source-section-l630-l643-41dfd6992a",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "question",
+      "text": "与“A.不锈钢属于金属材料 B.合金与纯…”相关的教材信息，哪一项最准确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "options[0]",
+      "text": "不锈钢属于金属材料 B.合金与纯金属性能不同是因为组成发生了改变 C.钛和钛合金的抗腐蚀…"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "explanation",
+      "text": "考点提示：不锈钢属于金属材料 B.合金与纯金属性能不同是因为组成发生了改变 C.钛和钛合金的抗腐蚀"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0064-source-section-l829-l834-5827d310a9-promote-knowledge-topic-0064-source-section-l829-l834-5827d310a9-quiz-quiz-0064-source-section-l829-l834-5827d310a9",
+      "field": "question",
+      "text": "读完“【问题与交流】 1.归纳常见金属的主…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0064-source-section-l829-l834-5827d310a9-promote-knowledge-topic-0064-source-section-l829-l834-5827d310a9-quiz-quiz-0064-source-section-l829-l834-5827d310a9",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0066-source-section-l837-l840-6375fdca9d-promote-knowledge-topic-0066-source-section-l837-l840-6375fdca9d-quiz-quiz-0066-source-section-l837-l840-6375fdca9d",
+      "field": "question",
+      "text": "读完“垃圾的分类与回收利用”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-promote-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-quiz-quiz-0071-source-section-l855-l864-7d1ea2e375",
+      "field": "question",
+      "text": "读完“任务三了解垃圾的回收利用”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-promote-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-quiz-quiz-0071-source-section-l855-l864-7d1ea2e375",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0092-source-section-l1163-l1177-979015e717-promote-knowledge-topic-0092-source-section-l1163-l1177-979015e717-quiz-quiz-0092-source-section-l1163-l1177-979015e717",
+      "field": "explanation",
+      "text": "教材说明海水经储水池、蒸发池和结晶池，水分蒸发到一定程度后食盐晶体逐渐析出。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0107-source-section-l1319-l1375-aaebd0b2d7-promote-knowledge-topic-0107-source-section-l1319-l1375-aaebd0b2d7-quiz-quiz-0107-source-section-l1319-l1375-aaebd0b2d7",
+      "field": "question",
+      "text": "读完“练习与应用 1.下列关于饱和溶液的说…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-promote-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-quiz-quiz-0109-source-section-l1378-l1388-8f3c12a397",
+      "field": "question",
+      "text": "读完“溶质的质量分数”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-promote-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-quiz-quiz-0109-source-section-l1378-l1388-8f3c12a397",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0110-9-7-l1389-l1406-22c4d0c162-promote-knowledge-topic-0110-9-7-l1389-l1406-22c4d0c162-quiz-quiz-0110-9-7-l1389-l1406-22c4d0c162",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0116-source-section-l1491-l1544-ef0f9c6fd4-promote-knowledge-topic-0116-source-section-l1491-l1544-ef0f9c6fd4-quiz-quiz-0116-source-section-l1491-l1544-ef0f9c6fd4",
+      "field": "question",
+      "text": "读完“练习与应用 1.下列对质量分数为 的…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0146-source-section-l1850-l1864-08876681ea-promote-knowledge-topic-0146-source-section-l1850-l1864-08876681ea-quiz-quiz-0146-source-section-l1850-l1864-08876681ea",
+      "field": "question",
+      "text": "读完“溶液的酸碱性”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0149-ph-l1888-l1905-62315486eb-promote-knowledge-topic-0149-ph-l1888-l1905-62315486eb-quiz-quiz-0149-ph-l1888-l1905-62315486eb",
+      "field": "explanation",
+      "text": "教材说明酸碱度常用pH表示，常见范围通常为0到14，测定pH的简便方法是使用pH试纸。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0152-source-section-l1913-l1939-5a6fdba665-promote-knowledge-topic-0152-source-section-l1913-l1939-5a6fdba665-quiz-quiz-0152-source-section-l1913-l1939-5a6fdba665",
+      "field": "question",
+      "text": "读完“酸碱指示剂的发现”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0188-source-section-l2361-l2366-f73902ee87-promote-knowledge-topic-0188-source-section-l2361-l2366-f73902ee87-quiz-quiz-0188-source-section-l2361-l2366-f73902ee87",
+      "field": "question",
+      "text": "读完“认识物质性质的一般思路和方法”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0195-source-section-l2501-l2507-9a39b42419-promote-knowledge-topic-0195-source-section-l2501-l2507-9a39b42419-quiz-quiz-0195-source-section-l2501-l2507-9a39b42419",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0197-source-section-l2520-l2557-a6502da3ef-promote-knowledge-topic-0197-source-section-l2520-l2557-a6502da3ef-quiz-quiz-0197-source-section-l2520-l2557-a6502da3ef",
+      "field": "question",
+      "text": "读完“二、碳酸钠、碳酸氢钠和碳酸钙”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0202-source-section-l2619-l2630-c566afc7f0-promote-knowledge-topic-0202-source-section-l2619-l2630-c566afc7f0-quiz-quiz-0202-source-section-l2619-l2630-c566afc7f0",
+      "field": "question",
+      "text": "读完“(2)碳酸钠、碳酸钙等含碳酸根离子的…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0213-source-section-l2748-l2757-b99f7db63f-promote-knowledge-topic-0213-source-section-l2748-l2757-b99f7db63f-quiz-quiz-0213-source-section-l2748-l2757-b99f7db63f",
+      "field": "question",
+      "text": "读完“三、了解认识物质性质的思路与方法”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0215-source-section-l2770-l2830-f3d3007fbd-promote-knowledge-topic-0215-source-section-l2770-l2830-f3d3007fbd-quiz-quiz-0215-source-section-l2770-l2830-f3d3007fbd",
+      "field": "question",
+      "text": "读完“洗手液a 蒸馏水 洗手液d√ √3 …”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0238-source-section-l2991-l3008-b608739989-promote-knowledge-topic-0238-source-section-l2991-l3008-b608739989-quiz-quiz-0238-source-section-l2991-l3008-b608739989",
+      "field": "explanation",
+      "text": "答案是“水、糖类、蛋白质、油脂、无机盐和维生素”。教材指出食物成分主要包括这六类营养物质。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "options[1]",
+      "text": "帮助认识物质组成和转化，开发材料、能源并减少污染"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "explanation",
+      "text": "答案是“帮助认识物质组成和转化，开发材料、能源并减少污染”。化学能为资源合理开发、环境保护和新材料新能源提供支持。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "options[2]",
+      "text": "分析组成，并通过物理或化学变化获得材料和能源"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "explanation",
+      "text": "答案是“分析组成，并通过物理或化学变化获得材料和能源”。化学方法可把天然物质转化为新的材料和能源。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "question",
+      "text": "制定废弃材料处理方案时，燃烧区分纤维实验带来的启发是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "options[1]",
+      "text": "要根据材料组成和性质分类处理、回收或安全处置"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "explanation",
+      "text": "答案是“要根据材料组成和性质分类处理、回收或安全处置”。材料的组成和性质会影响回收利用方式和环境影响。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-promote-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-quiz-quiz-0262-source-section-l3288-l3309-b9dc27a58c",
+      "field": "explanation",
+      "text": "答案是“识别塑料种类和成分，再分类回收利用”。不同塑料材料性质不同，分类识别有助于资源化和减少危害。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-promote-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-quiz-quiz-0266-source-section-l3326-l3372-324d669c8f",
+      "field": "explanation",
+      "text": "答案是“光照资源、土地条件、输电维护、生态和水资源影响”。光伏项目涉及能源、地理、材料和生态等多方面因素。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "question",
+      "text": "交流未来宇航产品设计思路时，材料和能源选择应优先考虑什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "options[2]",
+      "text": "只选择最重材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "explanation",
+      "text": "答案是“性能、安全、可靠性和可持续发展”。航天设计需要根据环境和任务需求选择合适材料与能源。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-colloid-range-001",
+      "field": "explanation",
+      "text": "答案是“胶体”。教材说明，分散质粒子的直径为 1～100 nm 的分散系是胶体。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-dispersed-substance-002",
+      "field": "explanation",
+      "text": "答案是“分散质”。教材说明，分散系中被分散成粒子的物质叫做分散质。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-solution-particle-range-003",
+      "field": "explanation",
+      "text": "答案是“溶液”。教材说明，分散质粒子的直径小于 1 nm 的是溶液。"
+    }
+  ],
+  "allowedSourceMentions": [],
+  "remediatedRecords": [],
+  "unclassifiedSourceAnchors": [
+    {
+      "id": "quiz-3",
+      "field": "explanation",
+      "text": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
+    },
+    {
+      "id": "quiz-18",
+      "field": "explanation",
+      "text": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
+    },
+    {
+      "id": "quiz-c60-structure-source",
+      "field": "question",
+      "text": "教材图6-4说明，C60 的分子结构和什么相似？"
+    },
+    {
+      "id": "quiz-c60-structure-source",
+      "field": "explanation",
+      "text": "教材图6-4说明 C60 的分子结构和足球相似。"
+    },
+    {
+      "id": "quiz-c60-carbon-allotrope",
+      "field": "question",
+      "text": "教材介绍 C60 时，把它归入哪一类碳物质？"
+    },
+    {
+      "id": "quiz-c60-reviewed-formula-application",
+      "field": "question",
+      "text": "根据教材正文，每个 C60 分子由多少个碳原子构成？"
+    },
+    {
+      "id": "quiz-c60-reviewed-formula-application",
+      "field": "explanation",
+      "text": "教材正文说明，每个 C60 分子是由60个碳原子构成的。"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-2",
+      "field": "explanation",
+      "text": "石墨能让电路中的灯泡发光，说明石墨具有导电性，这也是它能用作电极材料的原因之一。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-promote-knowledge-topic-0011-source-section-l89-l106-6badbce1f7-quiz-quiz-0011-source-section-l89-l106-6badbce1f7",
+      "field": "question",
+      "text": "给有机化合物分类时，教材提醒我们优先观察哪两个方面？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b",
+      "field": "question",
+      "text": "下列哪种生活材料常可由乙烯作为基础原料制得？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9",
+      "field": "explanation",
+      "text": "答案是“戊糖、碱基和磷酸”。核苷酸像三块积木：戊糖、碱基和磷酸。其他组合属于油脂、有机反应或金属材料，不是核苷酸组成。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2",
+      "field": "explanation",
+      "text": "答案是“增塑剂等小分子可能迁移到食品中”。软质PVC常加入增塑剂等助剂，小分子可能迁移，食品接触要特别谨慎。其他说法不符合材料安全问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb",
+      "field": "explanation",
+      "text": "答案是“顺式和反式空间结构不同”。顺式和反式就像同样零件朝向不同，会影响材料性质。它们都属于含碳高分子，不是盐和水的差别。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85",
+      "field": "question",
+      "text": "高吸水性树脂相比普通吸水材料，最突出的特点是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "question",
+      "text": "从海水淡化材料可以看出，化学在解决社会问题中常发挥什么作用？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "options[0]",
+      "text": "设计功能材料帮助解决资源与环境问题"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "explanation",
+      "text": "答案是“设计功能材料帮助解决资源与环境问题”。化学能设计膜材料等功能材料，为淡水资源和环境问题提供工具。它不是只命名，也不能脱离工程或让问题自动消失。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0022-source-section-l276-l284-8a17c88cb4-promote-knowledge-topic-0022-source-section-l276-l284-8a17c88cb4-quiz-quiz-0022-source-section-l276-l284-8a17c88cb4",
+      "field": "question",
+      "text": "围绕教材片段中的反应物分子分裂后原子重新组合成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0044-source-section-l639-l644-7ae6d3d8a8-promote-knowledge-topic-0044-source-section-l639-l644-7ae6d3d8a8-quiz-quiz-0044-source-section-l639-l644-7ae6d3d8a8",
+      "field": "question",
+      "text": "根据教材“探究”（639-644）中关于蜡烛燃烧时火焰分为三层相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0059-source-section-l953-l978-1eb4da4839-promote-knowledge-topic-0059-source-section-l953-l978-1eb4da4839-quiz-quiz-0059-source-section-l953-l978-1eb4da4839",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0065-source-section-l1048-l1061-71b3522176-promote-knowledge-topic-0065-source-section-l1048-l1061-71b3522176-quiz-quiz-0065-source-section-l1048-l1061-71b3522176",
+      "field": "question",
+      "text": "学习教材片段后，怎样从分子角度区分化学变化和物理变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0070-source-section-l1107-l1117-a518bcb454-promote-knowledge-topic-0070-source-section-l1107-l1117-a518bcb454-quiz-quiz-0070-source-section-l1107-l1117-a518bcb454",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0081-source-section-l1284-l1297-93dc656591-promote-knowledge-topic-0081-source-section-l1284-l1297-93dc656591-quiz-quiz-0081-source-section-l1284-l1297-93dc656591",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0083-source-section-l1311-l1335-0d04643d68-promote-knowledge-topic-0083-source-section-l1311-l1335-0d04643d68-quiz-quiz-0083-source-section-l1311-l1335-0d04643d68",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0085-source-section-l1345-l1356-32980ba4e1-promote-knowledge-topic-0085-source-section-l1345-l1356-32980ba4e1-quiz-quiz-0085-source-section-l1345-l1356-32980ba4e1",
+      "field": "question",
+      "text": "根据教材“练习与应用”（1345-1356）中关于氧气是一种无色、无臭的气体相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0086-source-section-l1357-l1410-7d5da67802-promote-knowledge-topic-0086-source-section-l1357-l1410-7d5da67802-quiz-quiz-0086-source-section-l1357-l1410-7d5da67802",
+      "field": "question",
+      "text": "围绕教材片段中的氢氧化钙吸收二氧化碳生成碳酸钙相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0132-source-section-l1860-l1863-3546ebe477-promote-knowledge-topic-0132-source-section-l1860-l1863-3546ebe477-quiz-quiz-0132-source-section-l1860-l1863-3546ebe477",
+      "field": "question",
+      "text": "根据教材“分子和原子”（1860-1863）中关于分子是保持物质化学性质的最小粒子相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0142-source-section-l2021-l2034-957eaeb4ad-promote-knowledge-topic-0142-source-section-l2021-l2034-957eaeb4ad-quiz-quiz-0142-source-section-l2021-l2034-957eaeb4ad",
+      "field": "question",
+      "text": "围绕教材片段中的反应物分子分裂后原子重新组合成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-promote-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-quiz-quiz-0166-source-section-l2413-l2469-3673a8fdf6",
+      "field": "question",
+      "text": "围绕教材片段中的变化判断，哪一项最能说明发生了化学变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0168-source-section-l2472-l2480-a5cbbbb777-promote-knowledge-topic-0168-source-section-l2472-l2480-a5cbbbb777-quiz-quiz-0168-source-section-l2472-l2480-a5cbbbb777",
+      "field": "question",
+      "text": "根据教材“元素”（2472-2480）中关于元素只讲种类，不讲个数相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0201-source-section-l2946-l2958-247f51b17c-promote-knowledge-topic-0201-source-section-l2946-l2958-247f51b17c-quiz-quiz-0201-source-section-l2946-l2958-247f51b17c",
+      "field": "question",
+      "text": "围绕教材片段中的天然气燃烧时甲烷分子和氧分子生成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0224-source-section-l3340-l3363-a83c923c2c-promote-knowledge-topic-0224-source-section-l3340-l3363-a83c923c2c-quiz-quiz-0224-source-section-l3340-l3363-a83c923c2c",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0226-source-section-l3395-l3433-5e6e23ae6b-promote-knowledge-topic-0226-source-section-l3395-l3433-5e6e23ae6b-quiz-quiz-0226-source-section-l3395-l3433-5e6e23ae6b",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0227-source-section-l3434-l3439-7c016cba91-promote-knowledge-topic-0227-source-section-l3434-l3439-7c016cba91-quiz-quiz-0227-source-section-l3434-l3439-7c016cba91",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0239-source-section-l3596-l3699-41be8a4e53-promote-knowledge-topic-0239-source-section-l3596-l3699-41be8a4e53-quiz-quiz-0239-source-section-l3596-l3699-41be8a4e53",
+      "field": "question",
+      "text": "根据教材“复习与提高”（3596-3699）中关于水是由氢元素和氧元素组成的相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0267-source-section-l3905-l3918-aead255042-promote-knowledge-topic-0267-source-section-l3905-l3918-aead255042-quiz-quiz-0267-source-section-l3905-l3918-aead255042",
+      "field": "question",
+      "text": "围绕教材片段中的变化判断，哪一项最能说明发生了化学变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0268-source-section-l3919-l3936-483b5c2a7b-promote-knowledge-topic-0268-source-section-l3919-l3936-483b5c2a7b-quiz-quiz-0268-source-section-l3919-l3936-483b5c2a7b",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0276-source-section-l4080-l4095-8beccabe14-promote-knowledge-topic-0276-source-section-l4080-l4095-8beccabe14-quiz-quiz-0276-source-section-l4080-l4095-8beccabe14",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-promote-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-quiz-quiz-0292-source-section-l4406-l4411-14045a14fa",
+      "field": "options[0]",
+      "text": "直接购买材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0304-source-section-l4576-l4579-e1d2194cab-promote-knowledge-topic-0304-source-section-l4576-l4579-e1d2194cab-quiz-quiz-0304-source-section-l4576-l4579-e1d2194cab",
+      "field": "question",
+      "text": "围绕教材片段中的微观解释，化学反应里分子层面最关键的改变是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0333-source-section-l5139-l5142-2a63c5fc9f-promote-knowledge-topic-0333-source-section-l5139-l5142-2a63c5fc9f-quiz-quiz-0333-source-section-l5139-l5142-2a63c5fc9f",
+      "field": "question",
+      "text": "学习教材片段后，怎样从分子角度区分化学变化和物理变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0340-source-section-l5257-l5283-f250fc4be6-promote-knowledge-topic-0340-source-section-l5257-l5283-f250fc4be6-quiz-quiz-0340-source-section-l5257-l5283-f250fc4be6",
+      "field": "question",
+      "text": "围绕教材片段中的天然气燃烧时甲烷分子和氧分子生成新分子相关知识，哪一项表述正确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0382-source-section-l5749-l5771-c3c46b6c2a-promote-knowledge-topic-0382-source-section-l5749-l5771-c3c46b6c2a-quiz-quiz-0382-source-section-l5749-l5771-c3c46b6c2a",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0394-source-section-l5927-l5934-2acf0f01aa-promote-knowledge-topic-0394-source-section-l5927-l5934-2acf0f01aa-quiz-quiz-0394-source-section-l5927-l5934-2acf0f01aa",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0395-source-section-l5935-l5954-af502f1e8d-promote-knowledge-topic-0395-source-section-l5935-l5954-af502f1e8d-quiz-quiz-0395-source-section-l5935-l5954-af502f1e8d",
+      "field": "question",
+      "text": "根据教材“三、化学反应中的能量变化”（5935-5954）中关于化学反应伴随着能量变化相关知识的内容，正确选项是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0412-source-section-l6209-l6228-df9241fb3f-promote-knowledge-topic-0412-source-section-l6209-l6228-df9241fb3f-quiz-quiz-0412-source-section-l6209-l6228-df9241fb3f",
+      "field": "question",
+      "text": "从教材片段的微观角度看，哪一项描述了化学反应中的粒子变化？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0005-source-section-l23-l26-6ca6a9239d-promote-knowledge-topic-0005-source-section-l23-l26-6ca6a9239d-quiz-quiz-0005-source-section-l23-l26-6ca6a9239d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0010-source-section-l89-l113-9197900129-promote-knowledge-topic-0010-source-section-l89-l113-9197900129-quiz-quiz-0010-source-section-l89-l113-9197900129",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0075-2-4-l1012-l1025-49058e2e88-promote-knowledge-topic-0075-2-4-l1012-l1025-49058e2e88-quiz-quiz-0075-2-4-l1012-l1025-49058e2e88",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-promote-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-quiz-quiz-0076-source-section-l1026-l1048-3e5478b1c7",
+      "field": "explanation",
+      "text": "教材指出这些反应都是物质与氧气发生的反应，属于氧化反应；其中两种或多种物质生成一种物质的反应属于化合反应。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0089-source-section-l1185-l1200-c96766809c-promote-knowledge-topic-0089-source-section-l1185-l1200-c96766809c-quiz-quiz-0089-source-section-l1185-l1200-c96766809c",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0102-source-section-l1317-l1355-0d8e8ef3e7-promote-knowledge-topic-0102-source-section-l1317-l1355-0d8e8ef3e7-quiz-quiz-0102-source-section-l1317-l1355-0d8e8ef3e7",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0107-1-l1371-l1391-29671f030d-promote-knowledge-topic-0107-1-l1371-l1391-29671f030d-quiz-quiz-0107-1-l1371-l1391-29671f030d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-promote-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-quiz-quiz-0176-source-section-l2185-l2195-3ce31f3d3e",
+      "field": "explanation",
+      "text": "教材指出水与生命、日常生活和工农业生产密切相关，并引出水资源利用和天然水净化问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0210-source-section-l2598-l2623-defca983e4-promote-knowledge-topic-0210-source-section-l2598-l2623-defca983e4-quiz-quiz-0210-source-section-l2598-l2623-defca983e4",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0228-source-section-l2884-l2894-87f857afb9-promote-knowledge-topic-0228-source-section-l2884-l2894-87f857afb9-quiz-quiz-0228-source-section-l2884-l2894-87f857afb9",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-promote-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-quiz-quiz-0251-source-section-l3055-l3069-85b94ec8b9",
+      "field": "explanation",
+      "text": "教材指出化学反应是原子重新组合生成新物质的过程，反应前后原子种类、数目和质量不变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-promote-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-quiz-quiz-0253-source-section-l3072-l3079-df771f9564",
+      "field": "explanation",
+      "text": "教材说明质量守恒思想经历从朴素观点到定量实验验证的发展，拉瓦锡等人的实验提供了重要依据。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-promote-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-quiz-quiz-0290-source-section-l3543-l3550-3bf6fa7832",
+      "field": "explanation",
+      "text": "教材指出常温下碳单质化学性质不活泼，受日光、空气和水影响也不容易变化。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0354-source-section-l4382-l4419-d87edb8f2e-promote-knowledge-topic-0354-source-section-l4382-l4419-d87edb8f2e-quiz-quiz-0354-source-section-l4382-l4419-d87edb8f2e",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-promote-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-quiz-quiz-0407-source-section-l5112-l5115-70b1ac3583",
+      "field": "explanation",
+      "text": "教材指出不同地区家用燃料不同，要求关注燃料变迁、原因、影响以及使用注意事项。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "question",
+      "text": "读完“金属材料”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "options[0]",
+      "text": "金属材料 图8-1金属材料的使用历史悠久 三星堆遗址出土的青铜大面具,距今已有3000余…"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-promote-knowledge-topic-0003-source-section-l7-l23-f3f92114ed-quiz-quiz-0003-source-section-l7-l23-f3f92114ed",
+      "field": "explanation",
+      "text": "考点提示：金属材料 图8-1金属材料的使用历史悠久 三星堆遗址出土的青铜大面具,距今已有3000余"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-promote-knowledge-topic-0004-source-section-l24-l50-5c2b2b9bb1-quiz-quiz-0004-source-section-l24-l50-5c2b2b9bb1",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-quiz-quiz-0007-source-section-l66-l75-002391f54e",
+      "field": "explanation",
+      "text": "答案是“铁的硬度和强度更适合承受切割、敲打等用途”。选择材料要看性质和用途。铁比铝更硬、更适合做受力工具，而铝较软。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "options[3]",
+      "text": "合金的熔点常低于组成它的纯金属，可按用途选择材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "explanation",
+      "text": "答案是“合金的熔点常低于组成它的纯金属，可按用途选择材料”。表中焊锡、伍德合金的熔点比相关纯金属低，说明合金组成改变会带来性能改变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-promote-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-quiz-quiz-0015-source-section-l188-l233-e5a968cc18",
+      "field": "explanation",
+      "text": "答案是“用品需要的强度、密度、熔点、耐腐蚀性等性能”。材料选择要让性质服务用途，例如飞机材料要轻而强，炊具要导热好。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-promote-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-quiz-quiz-0018-source-section-l240-l249-03fe6e1c85",
+      "field": "explanation",
+      "text": "答案是“铝表面会生成致密的氧化铝薄膜，阻止继续氧化”。教材指出铝在空气中与氧气反应生成致密的氧化铝保护膜。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-promote-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-quiz-quiz-0025-source-section-l287-l304-1f91ca7368",
+      "field": "question",
+      "text": "读完“【分析与结论】 (1)哪些金属能与稀…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-promote-knowledge-topic-0025-source-section-l287-l304-1f91ca7368-quiz-quiz-0025-source-section-l287-l304-1f91ca7368",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0028-source-section-l311-l320-f297bf4c4d-promote-knowledge-topic-0028-source-section-l311-l320-f297bf4c4d-quiz-quiz-0028-source-section-l311-l320-f297bf4c4d",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0030-source-section-l349-l376-3be41caef6-promote-knowledge-topic-0030-source-section-l349-l376-3be41caef6-quiz-quiz-0030-source-section-l349-l376-3be41caef6",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0033-source-section-l388-l401-6ae3113539-promote-knowledge-topic-0033-source-section-l388-l401-6ae3113539-quiz-quiz-0033-source-section-l388-l401-6ae3113539",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-promote-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-quiz-quiz-0039-source-section-l538-l541-3612c3a3a4",
+      "field": "options[2]",
+      "text": "只使用最贵的金属材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0052-source-section-l630-l643-41dfd6992a-promote-knowledge-topic-0052-source-section-l630-l643-41dfd6992a-quiz-quiz-0052-source-section-l630-l643-41dfd6992a",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "question",
+      "text": "与“A.不锈钢属于金属材料 B.合金与纯…”相关的教材信息，哪一项最准确？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "options[0]",
+      "text": "不锈钢属于金属材料 B.合金与纯金属性能不同是因为组成发生了改变 C.钛和钛合金的抗腐蚀…"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0058-source-section-l715-l787-03de848681-promote-knowledge-topic-0058-source-section-l715-l787-03de848681-quiz-quiz-0058-source-section-l715-l787-03de848681",
+      "field": "explanation",
+      "text": "考点提示：不锈钢属于金属材料 B.合金与纯金属性能不同是因为组成发生了改变 C.钛和钛合金的抗腐蚀"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0064-source-section-l829-l834-5827d310a9-promote-knowledge-topic-0064-source-section-l829-l834-5827d310a9-quiz-quiz-0064-source-section-l829-l834-5827d310a9",
+      "field": "question",
+      "text": "读完“【问题与交流】 1.归纳常见金属的主…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0064-source-section-l829-l834-5827d310a9-promote-knowledge-topic-0064-source-section-l829-l834-5827d310a9-quiz-quiz-0064-source-section-l829-l834-5827d310a9",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0066-source-section-l837-l840-6375fdca9d-promote-knowledge-topic-0066-source-section-l837-l840-6375fdca9d-quiz-quiz-0066-source-section-l837-l840-6375fdca9d",
+      "field": "question",
+      "text": "读完“垃圾的分类与回收利用”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-promote-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-quiz-quiz-0071-source-section-l855-l864-7d1ea2e375",
+      "field": "question",
+      "text": "读完“任务三了解垃圾的回收利用”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-promote-knowledge-topic-0071-source-section-l855-l864-7d1ea2e375-quiz-quiz-0071-source-section-l855-l864-7d1ea2e375",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0092-source-section-l1163-l1177-979015e717-promote-knowledge-topic-0092-source-section-l1163-l1177-979015e717-quiz-quiz-0092-source-section-l1163-l1177-979015e717",
+      "field": "explanation",
+      "text": "教材说明海水经储水池、蒸发池和结晶池，水分蒸发到一定程度后食盐晶体逐渐析出。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0107-source-section-l1319-l1375-aaebd0b2d7-promote-knowledge-topic-0107-source-section-l1319-l1375-aaebd0b2d7-quiz-quiz-0107-source-section-l1319-l1375-aaebd0b2d7",
+      "field": "question",
+      "text": "读完“练习与应用 1.下列关于饱和溶液的说…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-promote-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-quiz-quiz-0109-source-section-l1378-l1388-8f3c12a397",
+      "field": "question",
+      "text": "读完“溶质的质量分数”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-promote-knowledge-topic-0109-source-section-l1378-l1388-8f3c12a397-quiz-quiz-0109-source-section-l1378-l1388-8f3c12a397",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0110-9-7-l1389-l1406-22c4d0c162-promote-knowledge-topic-0110-9-7-l1389-l1406-22c4d0c162-quiz-quiz-0110-9-7-l1389-l1406-22c4d0c162",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0116-source-section-l1491-l1544-ef0f9c6fd4-promote-knowledge-topic-0116-source-section-l1491-l1544-ef0f9c6fd4-quiz-quiz-0116-source-section-l1491-l1544-ef0f9c6fd4",
+      "field": "question",
+      "text": "读完“练习与应用 1.下列对质量分数为 的…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0146-source-section-l1850-l1864-08876681ea-promote-knowledge-topic-0146-source-section-l1850-l1864-08876681ea-quiz-quiz-0146-source-section-l1850-l1864-08876681ea",
+      "field": "question",
+      "text": "读完“溶液的酸碱性”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0149-ph-l1888-l1905-62315486eb-promote-knowledge-topic-0149-ph-l1888-l1905-62315486eb-quiz-quiz-0149-ph-l1888-l1905-62315486eb",
+      "field": "explanation",
+      "text": "教材说明酸碱度常用pH表示，常见范围通常为0到14，测定pH的简便方法是使用pH试纸。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0152-source-section-l1913-l1939-5a6fdba665-promote-knowledge-topic-0152-source-section-l1913-l1939-5a6fdba665-quiz-quiz-0152-source-section-l1913-l1939-5a6fdba665",
+      "field": "question",
+      "text": "读完“酸碱指示剂的发现”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0188-source-section-l2361-l2366-f73902ee87-promote-knowledge-topic-0188-source-section-l2361-l2366-f73902ee87-quiz-quiz-0188-source-section-l2361-l2366-f73902ee87",
+      "field": "question",
+      "text": "读完“认识物质性质的一般思路和方法”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0195-source-section-l2501-l2507-9a39b42419-promote-knowledge-topic-0195-source-section-l2501-l2507-9a39b42419-quiz-quiz-0195-source-section-l2501-l2507-9a39b42419",
+      "field": "options[1]",
+      "text": "所有金属材料都不能导电，也不能加工成器具"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0197-source-section-l2520-l2557-a6502da3ef-promote-knowledge-topic-0197-source-section-l2520-l2557-a6502da3ef-quiz-quiz-0197-source-section-l2520-l2557-a6502da3ef",
+      "field": "question",
+      "text": "读完“二、碳酸钠、碳酸氢钠和碳酸钙”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0202-source-section-l2619-l2630-c566afc7f0-promote-knowledge-topic-0202-source-section-l2619-l2630-c566afc7f0-quiz-quiz-0202-source-section-l2619-l2630-c566afc7f0",
+      "field": "question",
+      "text": "读完“(2)碳酸钠、碳酸钙等含碳酸根离子的…”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0213-source-section-l2748-l2757-b99f7db63f-promote-knowledge-topic-0213-source-section-l2748-l2757-b99f7db63f-quiz-quiz-0213-source-section-l2748-l2757-b99f7db63f",
+      "field": "question",
+      "text": "读完“三、了解认识物质性质的思路与方法”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0215-source-section-l2770-l2830-f3d3007fbd-promote-knowledge-topic-0215-source-section-l2770-l2830-f3d3007fbd-quiz-quiz-0215-source-section-l2770-l2830-f3d3007fbd",
+      "field": "question",
+      "text": "读完“洗手液a 蒸馏水 洗手液d√ √3 …”片段后，可以形成哪项认识？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0238-source-section-l2991-l3008-b608739989-promote-knowledge-topic-0238-source-section-l2991-l3008-b608739989-quiz-quiz-0238-source-section-l2991-l3008-b608739989",
+      "field": "explanation",
+      "text": "答案是“水、糖类、蛋白质、油脂、无机盐和维生素”。教材指出食物成分主要包括这六类营养物质。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "options[1]",
+      "text": "帮助认识物质组成和转化，开发材料、能源并减少污染"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "explanation",
+      "text": "答案是“帮助认识物质组成和转化，开发材料、能源并减少污染”。化学能为资源合理开发、环境保护和新材料新能源提供支持。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "options[2]",
+      "text": "分析组成，并通过物理或化学变化获得材料和能源"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "explanation",
+      "text": "答案是“分析组成，并通过物理或化学变化获得材料和能源”。化学方法可把天然物质转化为新的材料和能源。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "question",
+      "text": "制定废弃材料处理方案时，燃烧区分纤维实验带来的启发是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "options[1]",
+      "text": "要根据材料组成和性质分类处理、回收或安全处置"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "explanation",
+      "text": "答案是“要根据材料组成和性质分类处理、回收或安全处置”。材料的组成和性质会影响回收利用方式和环境影响。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-promote-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-quiz-quiz-0262-source-section-l3288-l3309-b9dc27a58c",
+      "field": "explanation",
+      "text": "答案是“识别塑料种类和成分，再分类回收利用”。不同塑料材料性质不同，分类识别有助于资源化和减少危害。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-promote-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-quiz-quiz-0266-source-section-l3326-l3372-324d669c8f",
+      "field": "explanation",
+      "text": "答案是“光照资源、土地条件、输电维护、生态和水资源影响”。光伏项目涉及能源、地理、材料和生态等多方面因素。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "question",
+      "text": "交流未来宇航产品设计思路时，材料和能源选择应优先考虑什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "options[2]",
+      "text": "只选择最重材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "explanation",
+      "text": "答案是“性能、安全、可靠性和可持续发展”。航天设计需要根据环境和任务需求选择合适材料与能源。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-colloid-range-001",
+      "field": "explanation",
+      "text": "答案是“胶体”。教材说明，分散质粒子的直径为 1～100 nm 的分散系是胶体。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-dispersed-substance-002",
+      "field": "explanation",
+      "text": "答案是“分散质”。教材说明，分散系中被分散成粒子的物质叫做分散质。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-solution-particle-range-003",
+      "field": "explanation",
+      "text": "答案是“溶液”。教材说明，分散质粒子的直径小于 1 nm 的是溶液。"
+    }
+  ]
+}
