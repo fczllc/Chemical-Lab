@@ -1,0 +1,433 @@
+{
+  "checkedAt": "2026-05-30T14:57:07.750Z",
+  "totalQuizRecords": 461,
+  "runtimeEligibleQuestionCount": 461,
+  "explicitVagueFragmentCount": 0,
+  "blockingFindings": [],
+  "reviewQueue": [
+    {
+      "id": "quiz-3",
+      "field": "explanation",
+      "text": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
+    },
+    {
+      "id": "quiz-18",
+      "field": "explanation",
+      "text": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-2",
+      "field": "explanation",
+      "text": "石墨能让电路中的灯泡发光，说明石墨具有导电性，这也是它能用作电极材料的原因之一。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b",
+      "field": "question",
+      "text": "下列哪种生活材料常可由乙烯作为基础原料制得？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9",
+      "field": "explanation",
+      "text": "答案是“戊糖、碱基和磷酸”。核苷酸像三块积木：戊糖、碱基和磷酸。其他组合属于油脂、有机反应或金属材料，不是核苷酸组成。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2",
+      "field": "explanation",
+      "text": "答案是“增塑剂等小分子可能迁移到食品中”。软质PVC常加入增塑剂等助剂，小分子可能迁移，食品接触要特别谨慎。其他说法不符合材料安全问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb",
+      "field": "explanation",
+      "text": "答案是“顺式和反式空间结构不同”。顺式和反式就像同样零件朝向不同，会影响材料性质。它们都属于含碳高分子，不是盐和水的差别。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85",
+      "field": "question",
+      "text": "高吸水性树脂相比普通吸水材料，最突出的特点是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "question",
+      "text": "从海水淡化材料可以看出，化学在解决社会问题中常发挥什么作用？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "options[0]",
+      "text": "设计功能材料帮助解决资源与环境问题"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "explanation",
+      "text": "答案是“设计功能材料帮助解决资源与环境问题”。化学能设计膜材料等功能材料，为淡水资源和环境问题提供工具。它不是只命名，也不能脱离工程或让问题自动消失。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-promote-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-quiz-quiz-0292-source-section-l4406-l4411-14045a14fa",
+      "field": "options[0]",
+      "text": "直接购买材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-promote-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-quiz-quiz-0076-source-section-l1026-l1048-3e5478b1c7",
+      "field": "explanation",
+      "text": "教材指出这些反应都是物质与氧气发生的反应，属于氧化反应；其中两种或多种物质生成一种物质的反应属于化合反应。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-promote-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-quiz-quiz-0176-source-section-l2185-l2195-3ce31f3d3e",
+      "field": "explanation",
+      "text": "教材指出水与生命、日常生活和工农业生产密切相关，并引出水资源利用和天然水净化问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-promote-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-quiz-quiz-0251-source-section-l3055-l3069-85b94ec8b9",
+      "field": "explanation",
+      "text": "教材指出化学反应是原子重新组合生成新物质的过程，反应前后原子种类、数目和质量不变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-promote-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-quiz-quiz-0253-source-section-l3072-l3079-df771f9564",
+      "field": "explanation",
+      "text": "教材说明质量守恒思想经历从朴素观点到定量实验验证的发展，拉瓦锡等人的实验提供了重要依据。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-promote-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-quiz-quiz-0290-source-section-l3543-l3550-3bf6fa7832",
+      "field": "explanation",
+      "text": "教材指出常温下碳单质化学性质不活泼，受日光、空气和水影响也不容易变化。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-promote-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-quiz-quiz-0407-source-section-l5112-l5115-70b1ac3583",
+      "field": "explanation",
+      "text": "教材指出不同地区家用燃料不同，要求关注燃料变迁、原因、影响以及使用注意事项。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-quiz-quiz-0007-source-section-l66-l75-002391f54e",
+      "field": "explanation",
+      "text": "答案是“铁的硬度和强度更适合承受切割、敲打等用途”。选择材料要看性质和用途。铁比铝更硬、更适合做受力工具，而铝较软。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "options[3]",
+      "text": "合金的熔点常低于组成它的纯金属，可按用途选择材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "explanation",
+      "text": "答案是“合金的熔点常低于组成它的纯金属，可按用途选择材料”。表中焊锡、伍德合金的熔点比相关纯金属低，说明合金组成改变会带来性能改变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-promote-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-quiz-quiz-0015-source-section-l188-l233-e5a968cc18",
+      "field": "explanation",
+      "text": "答案是“用品需要的强度、密度、熔点、耐腐蚀性等性能”。材料选择要让性质服务用途，例如飞机材料要轻而强，炊具要导热好。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-promote-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-quiz-quiz-0018-source-section-l240-l249-03fe6e1c85",
+      "field": "explanation",
+      "text": "答案是“铝表面会生成致密的氧化铝薄膜，阻止继续氧化”。教材指出铝在空气中与氧气反应生成致密的氧化铝保护膜。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-promote-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-quiz-quiz-0039-source-section-l538-l541-3612c3a3a4",
+      "field": "options[2]",
+      "text": "只使用最贵的金属材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0092-source-section-l1163-l1177-979015e717-promote-knowledge-topic-0092-source-section-l1163-l1177-979015e717-quiz-quiz-0092-source-section-l1163-l1177-979015e717",
+      "field": "explanation",
+      "text": "教材说明海水经储水池、蒸发池和结晶池，水分蒸发到一定程度后食盐晶体逐渐析出。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0149-ph-l1888-l1905-62315486eb-promote-knowledge-topic-0149-ph-l1888-l1905-62315486eb-quiz-quiz-0149-ph-l1888-l1905-62315486eb",
+      "field": "explanation",
+      "text": "教材说明酸碱度常用pH表示，常见范围通常为0到14，测定pH的简便方法是使用pH试纸。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0238-source-section-l2991-l3008-b608739989-promote-knowledge-topic-0238-source-section-l2991-l3008-b608739989-quiz-quiz-0238-source-section-l2991-l3008-b608739989",
+      "field": "explanation",
+      "text": "答案是“水、糖类、蛋白质、油脂、无机盐和维生素”。教材指出食物成分主要包括这六类营养物质。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "options[1]",
+      "text": "帮助认识物质组成和转化，开发材料、能源并减少污染"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "explanation",
+      "text": "答案是“帮助认识物质组成和转化，开发材料、能源并减少污染”。化学能为资源合理开发、环境保护和新材料新能源提供支持。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "options[2]",
+      "text": "分析组成，并通过物理或化学变化获得材料和能源"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "explanation",
+      "text": "答案是“分析组成，并通过物理或化学变化获得材料和能源”。化学方法可把天然物质转化为新的材料和能源。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "question",
+      "text": "制定废弃材料处理方案时，燃烧区分纤维实验带来的启发是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "options[1]",
+      "text": "要根据材料组成和性质分类处理、回收或安全处置"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "explanation",
+      "text": "答案是“要根据材料组成和性质分类处理、回收或安全处置”。材料的组成和性质会影响回收利用方式和环境影响。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-promote-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-quiz-quiz-0262-source-section-l3288-l3309-b9dc27a58c",
+      "field": "explanation",
+      "text": "答案是“识别塑料种类和成分，再分类回收利用”。不同塑料材料性质不同，分类识别有助于资源化和减少危害。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-promote-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-quiz-quiz-0266-source-section-l3326-l3372-324d669c8f",
+      "field": "explanation",
+      "text": "答案是“光照资源、土地条件、输电维护、生态和水资源影响”。光伏项目涉及能源、地理、材料和生态等多方面因素。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "question",
+      "text": "交流未来宇航产品设计思路时，材料和能源选择应优先考虑什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "options[2]",
+      "text": "只选择最重材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "explanation",
+      "text": "答案是“性能、安全、可靠性和可持续发展”。航天设计需要根据环境和任务需求选择合适材料与能源。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-colloid-range-001",
+      "field": "explanation",
+      "text": "答案是“胶体”。教材说明，分散质粒子的直径为 1～100 nm 的分散系是胶体。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-dispersed-substance-002",
+      "field": "explanation",
+      "text": "答案是“分散质”。教材说明，分散系中被分散成粒子的物质叫做分散质。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-solution-particle-range-003",
+      "field": "explanation",
+      "text": "答案是“溶液”。教材说明，分散质粒子的直径小于 1 nm 的是溶液。"
+    }
+  ],
+  "allowedSourceMentions": [
+    {
+      "id": "quiz-3",
+      "field": "explanation",
+      "text": "硅是半导体材料的重要成员，常用于电脑芯片、太阳能板和许多电子设备中。"
+    },
+    {
+      "id": "quiz-18",
+      "field": "explanation",
+      "text": "钕属于镧系元素，这一类元素常用于磁体、显示材料和高科技设备中。"
+    },
+    {
+      "id": "quiz-carbon-allotropes-comparison-2",
+      "field": "explanation",
+      "text": "石墨能让电路中的灯泡发光，说明石墨具有导电性，这也是它能用作电极材料的原因之一。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-promote-knowledge-topic-0082-source-section-l1432-l1439-18e906ad8b-quiz-quiz-0082-source-section-l1432-l1439-18e906ad8b",
+      "field": "question",
+      "text": "下列哪种生活材料常可由乙烯作为基础原料制得？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-promote-knowledge-topic-0290-source-section-l4653-l4671-feb28e8fb9-quiz-quiz-0290-source-section-l4653-l4671-feb28e8fb9",
+      "field": "explanation",
+      "text": "答案是“戊糖、碱基和磷酸”。核苷酸像三块积木：戊糖、碱基和磷酸。其他组合属于油脂、有机反应或金属材料，不是核苷酸组成。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-promote-knowledge-topic-0324-source-section-l5123-l5128-7b2d7c7ef2-quiz-quiz-0324-source-section-l5123-l5128-7b2d7c7ef2",
+      "field": "explanation",
+      "text": "答案是“增塑剂等小分子可能迁移到食品中”。软质PVC常加入增塑剂等助剂，小分子可能迁移，食品接触要特别谨慎。其他说法不符合材料安全问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-promote-knowledge-topic-0340-source-section-l5400-l5403-3bf04585eb-quiz-quiz-0340-source-section-l5400-l5403-3bf04585eb",
+      "field": "explanation",
+      "text": "答案是“顺式和反式空间结构不同”。顺式和反式就像同样零件朝向不同，会影响材料性质。它们都属于含碳高分子，不是盐和水的差别。"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-promote-knowledge-topic-0346-source-section-l5456-l5459-5b3d208f85-quiz-quiz-0346-source-section-l5456-l5459-5b3d208f85",
+      "field": "question",
+      "text": "高吸水性树脂相比普通吸水材料，最突出的特点是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "question",
+      "text": "从海水淡化材料可以看出，化学在解决社会问题中常发挥什么作用？"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "options[0]",
+      "text": "设计功能材料帮助解决资源与环境问题"
+    },
+    {
+      "id": "textbook-rj-chemistry-g12-selective-3-organic-2019-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-promote-knowledge-topic-0354-source-section-l5513-l5588-35348ed78c-quiz-quiz-0354-source-section-l5513-l5588-35348ed78c",
+      "field": "explanation",
+      "text": "答案是“设计功能材料帮助解决资源与环境问题”。化学能设计膜材料等功能材料，为淡水资源和环境问题提供工具。它不是只命名，也不能脱离工程或让问题自动消失。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-promote-knowledge-topic-0292-source-section-l4406-l4411-14045a14fa-quiz-quiz-0292-source-section-l4406-l4411-14045a14fa",
+      "field": "options[0]",
+      "text": "直接购买材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-promote-knowledge-topic-0076-source-section-l1026-l1048-3e5478b1c7-quiz-quiz-0076-source-section-l1026-l1048-3e5478b1c7",
+      "field": "explanation",
+      "text": "教材指出这些反应都是物质与氧气发生的反应，属于氧化反应；其中两种或多种物质生成一种物质的反应属于化合反应。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-promote-knowledge-topic-0176-source-section-l2185-l2195-3ce31f3d3e-quiz-quiz-0176-source-section-l2185-l2195-3ce31f3d3e",
+      "field": "explanation",
+      "text": "教材指出水与生命、日常生活和工农业生产密切相关，并引出水资源利用和天然水净化问题。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-promote-knowledge-topic-0251-source-section-l3055-l3069-85b94ec8b9-quiz-quiz-0251-source-section-l3055-l3069-85b94ec8b9",
+      "field": "explanation",
+      "text": "教材指出化学反应是原子重新组合生成新物质的过程，反应前后原子种类、数目和质量不变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-promote-knowledge-topic-0253-source-section-l3072-l3079-df771f9564-quiz-quiz-0253-source-section-l3072-l3079-df771f9564",
+      "field": "explanation",
+      "text": "教材说明质量守恒思想经历从朴素观点到定量实验验证的发展，拉瓦锡等人的实验提供了重要依据。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-promote-knowledge-topic-0290-source-section-l3543-l3550-3bf6fa7832-quiz-quiz-0290-source-section-l3543-l3550-3bf6fa7832",
+      "field": "explanation",
+      "text": "教材指出常温下碳单质化学性质不活泼，受日光、空气和水影响也不容易变化。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol1-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-promote-knowledge-topic-0407-source-section-l5112-l5115-70b1ac3583-quiz-quiz-0407-source-section-l5112-l5115-70b1ac3583",
+      "field": "explanation",
+      "text": "教材指出不同地区家用燃料不同，要求关注燃料变迁、原因、影响以及使用注意事项。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0007-source-section-l66-l75-002391f54e-promote-knowledge-topic-0007-source-section-l66-l75-002391f54e-quiz-quiz-0007-source-section-l66-l75-002391f54e",
+      "field": "explanation",
+      "text": "答案是“铁的硬度和强度更适合承受切割、敲打等用途”。选择材料要看性质和用途。铁比铝更硬、更适合做受力工具，而铝较软。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "options[3]",
+      "text": "合金的熔点常低于组成它的纯金属，可按用途选择材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0010-source-section-l99-l162-edcd46135a-promote-knowledge-topic-0010-source-section-l99-l162-edcd46135a-quiz-quiz-0010-source-section-l99-l162-edcd46135a",
+      "field": "explanation",
+      "text": "答案是“合金的熔点常低于组成它的纯金属，可按用途选择材料”。表中焊锡、伍德合金的熔点比相关纯金属低，说明合金组成改变会带来性能改变。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-promote-knowledge-topic-0015-source-section-l188-l233-e5a968cc18-quiz-quiz-0015-source-section-l188-l233-e5a968cc18",
+      "field": "explanation",
+      "text": "答案是“用品需要的强度、密度、熔点、耐腐蚀性等性能”。材料选择要让性质服务用途，例如飞机材料要轻而强，炊具要导热好。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-promote-knowledge-topic-0018-source-section-l240-l249-03fe6e1c85-quiz-quiz-0018-source-section-l240-l249-03fe6e1c85",
+      "field": "explanation",
+      "text": "答案是“铝表面会生成致密的氧化铝薄膜，阻止继续氧化”。教材指出铝在空气中与氧气反应生成致密的氧化铝保护膜。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-promote-knowledge-topic-0039-source-section-l538-l541-3612c3a3a4-quiz-quiz-0039-source-section-l538-l541-3612c3a3a4",
+      "field": "options[2]",
+      "text": "只使用最贵的金属材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0092-source-section-l1163-l1177-979015e717-promote-knowledge-topic-0092-source-section-l1163-l1177-979015e717-quiz-quiz-0092-source-section-l1163-l1177-979015e717",
+      "field": "explanation",
+      "text": "教材说明海水经储水池、蒸发池和结晶池，水分蒸发到一定程度后食盐晶体逐渐析出。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0149-ph-l1888-l1905-62315486eb-promote-knowledge-topic-0149-ph-l1888-l1905-62315486eb-quiz-quiz-0149-ph-l1888-l1905-62315486eb",
+      "field": "explanation",
+      "text": "教材说明酸碱度常用pH表示，常见范围通常为0到14，测定pH的简便方法是使用pH试纸。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0238-source-section-l2991-l3008-b608739989-promote-knowledge-topic-0238-source-section-l2991-l3008-b608739989-quiz-quiz-0238-source-section-l2991-l3008-b608739989",
+      "field": "explanation",
+      "text": "答案是“水、糖类、蛋白质、油脂、无机盐和维生素”。教材指出食物成分主要包括这六类营养物质。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "options[1]",
+      "text": "帮助认识物质组成和转化，开发材料、能源并减少污染"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-promote-knowledge-topic-0250-source-section-l3154-l3157-41606c5602-quiz-quiz-0250-source-section-l3154-l3157-41606c5602",
+      "field": "explanation",
+      "text": "答案是“帮助认识物质组成和转化，开发材料、能源并减少污染”。化学能为资源合理开发、环境保护和新材料新能源提供支持。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "options[2]",
+      "text": "分析组成，并通过物理或化学变化获得材料和能源"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-promote-knowledge-topic-0251-source-section-l3158-l3163-3b6cf637e5-quiz-quiz-0251-source-section-l3158-l3163-3b6cf637e5",
+      "field": "explanation",
+      "text": "答案是“分析组成，并通过物理或化学变化获得材料和能源”。化学方法可把天然物质转化为新的材料和能源。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "question",
+      "text": "制定废弃材料处理方案时，燃烧区分纤维实验带来的启发是什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "options[1]",
+      "text": "要根据材料组成和性质分类处理、回收或安全处置"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-promote-knowledge-topic-0261-source-section-l3269-l3287-15964f814d-quiz-quiz-0261-source-section-l3269-l3287-15964f814d",
+      "field": "explanation",
+      "text": "答案是“要根据材料组成和性质分类处理、回收或安全处置”。材料的组成和性质会影响回收利用方式和环境影响。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-promote-knowledge-topic-0262-source-section-l3288-l3309-b9dc27a58c-quiz-quiz-0262-source-section-l3288-l3309-b9dc27a58c",
+      "field": "explanation",
+      "text": "答案是“识别塑料种类和成分，再分类回收利用”。不同塑料材料性质不同，分类识别有助于资源化和减少危害。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-promote-knowledge-topic-0266-source-section-l3326-l3372-324d669c8f-quiz-quiz-0266-source-section-l3326-l3372-324d669c8f",
+      "field": "explanation",
+      "text": "答案是“光照资源、土地条件、输电维护、生态和水资源影响”。光伏项目涉及能源、地理、材料和生态等多方面因素。"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "question",
+      "text": "交流未来宇航产品设计思路时，材料和能源选择应优先考虑什么？"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "options[2]",
+      "text": "只选择最重材料"
+    },
+    {
+      "id": "textbook-rj-chemistry-grade9-2024-vol2-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-promote-knowledge-topic-0279-source-section-l3484-l3491-66309a4961-quiz-quiz-0279-source-section-l3484-l3491-66309a4961",
+      "field": "explanation",
+      "text": "答案是“性能、安全、可靠性和可持续发展”。航天设计需要根据环境和任务需求选择合适材料与能源。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-colloid-range-001",
+      "field": "explanation",
+      "text": "答案是“胶体”。教材说明，分散质粒子的直径为 1～100 nm 的分散系是胶体。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-dispersed-substance-002",
+      "field": "explanation",
+      "text": "答案是“分散质”。教材说明，分散系中被分散成粒子的物质叫做分散质。"
+    },
+    {
+      "id": "textbook-mined-pep-chemistry-g10-required-1-dispersions-solution-particle-range-003",
+      "field": "explanation",
+      "text": "答案是“溶液”。教材说明，分散质粒子的直径小于 1 nm 的是溶液。"
+    }
+  ],
+  "remediatedRecords": [],
+  "unclassifiedSourceAnchors": []
+}

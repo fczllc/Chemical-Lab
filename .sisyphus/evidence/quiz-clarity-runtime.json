@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-05-30T13:44:11.451Z",
+  "source": "tests/ui/full-quiz-clarity.spec.ts",
+  "fullQuiz": {
+    "badge": "20题完整挑战",
+    "scoreboardRound1": "第 1 / 20 题",
+    "scoreboardRound2": "第 2 / 20 题",
+    "round1": {
+      "questionText": "从原子重新组合的角度看，化学变化区别于物理变化的表现是什么？",
+      "optionTexts": [
+        "只说明物质外形发生改变",
+        "表示分子不能再分成原子",
+        "说明化学变化不涉及原子",
+        "化学变化中分子种类改变"
+      ],
+      "feedbackText": "这题答错了，正确答案是 化学变化中分子种类改变。",
+      "explanationText": "答案是\"化学变化中分子种类改变\"。化学变化的实质是分子分裂成原子，原子重新组合成新分子，所以分子种类改变，但原子种类不变。",
+      "matchedId": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0175-source-section-l2581-l2586-017ee771f9-promote-knowledge-topic-0175-source-section-l2581-l2586-017ee771f9-quiz-quiz-0175-source-section-l2581-l2586-017ee771f9"
+    },
+    "round2": {
+      "questionText": "哪一项最能说明发生了化学变化？",
+      "optionTexts": [
+        "空气被吸入肺部",
+        "呼吸作用把有机物转化为二氧化碳和水",
+        "胸廓体积发生变化",
+        "气体通过鼻腔"
+      ],
+      "matchedId": "textbook-rj-chemistry-grade8-54-2024-full-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-promote-knowledge-topic-0166-source-section-l2413-l2469-3673a8fdf6-quiz-quiz-0166-source-section-l2413-l2469-3673a8fdf6"
+    }
+  },
+  "bannedPatternAssertions": {
+    "passed": true,
+    "checkedFields": [
+      "round1.questionText",
+      "round1.optionTexts",
+      "round1.feedbackText",
+      "round1.explanationText",
+      "round2.questionText",
+      "round2.optionTexts"
+    ]
+  },
+  "quickQuiz": {
+    "badge": "5题快速挑战",
+    "scoreboardRound1": "第 1 / 5 题",
+    "round1": {
+      "questionText": "元素符号 H 代表哪种元素？",
+      "optionTexts": [
+        "氦",
+        "氢",
+        "汞",
+        "铪"
+      ],
+      "feedbackText": "这题答错了，正确答案是 氢。",
+      "explanationText": "H 是氢元素的符号。氢是元素周期表中的第一个元素，也是宇宙中非常常见的元素。",
+      "matchedId": "quiz-2"
+    }
+  },
+  "bannedPatternAssertionsQuick": {
+    "passed": true,
+    "checkedFields": [
+      "round1.questionText",
+      "round1.optionTexts",
+      "round1.feedbackText",
+      "round1.explanationText"
+    ]
+  },
+  "combinedCheckedAt": "2026-05-30T13:44:29.993Z"
+}
