@@ -109,7 +109,10 @@ function parseMarkdownToBlocks(markdown) {
               .map((row) => row.map((cell) => String(cell ?? '').trim()))
               .filter((row) => row.some(Boolean))
           : [];
-        if (rows.length > 0) blocks.push({ type, rows });
+        const items = rows
+          .map((row) => row.filter(Boolean).join(' / '))
+          .filter(Boolean);
+        if (items.length > 0) blocks.push({ type: 'list', style: 'unordered', items });
     }
   };
 
@@ -238,16 +241,10 @@ function validateRecords(records) {
     if (!Array.isArray(r.blocks) || r.blocks.length === 0) throw new Error('Empty blocks');
     for (const b of r.blocks) {
       if (typeof b !== 'object') throw new Error('Block not object');
-      if (!['heading', 'paragraph', 'list', 'table'].includes(b.type)) throw new Error('Bad block type: ' + b.type);
+      if (!['heading', 'paragraph', 'list'].includes(b.type)) throw new Error('Bad block type: ' + b.type);
       if (b.type === 'heading') { if (b.level < 1 || b.level > 4 || !b.text) throw new Error('Bad heading'); }
       else if (b.type === 'paragraph') { if (!b.text) throw new Error('Bad paragraph'); }
       else if (b.type === 'list') { if (!['ordered', 'unordered'].includes(b.style) || !b.items.length) throw new Error('Bad list'); }
-      else if (b.type === 'table') {
-        if (!Array.isArray(b.rows) || !b.rows.length) throw new Error('Bad table');
-        for (const row of b.rows) {
-          if (!Array.isArray(row) || !row.length || row.some((cell) => typeof cell !== 'string')) throw new Error('Bad table row');
-        }
-      }
       const str = JSON.stringify(b);
       if (str.includes('![](') || str.includes('images/')) throw new Error('Leaked images');
     }

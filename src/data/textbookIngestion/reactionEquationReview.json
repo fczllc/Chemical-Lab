@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "manifestKind": "reactionEquationReview",
-  "candidateSourceReport": ".sisyphus/evidence/task-1-extraction-report.json",
-  "candidateCount": 638,
+  "candidateSourceReport": ".sisyphus/evidence/task-2-reaction-candidates.json",
+  "candidateCount": 637,
   "reviewStatus": "reviewed-complete",
   "generatedAt": "2026-05-13T00:00:00.000Z",
   "description": "Review manifest for reaction equation candidates extracted from textbook markdown. Each entry maps a stable candidateId to an include or exclude decision. This manifest is an ingestion artifact; it must not be imported by runtime app code.",
@@ -3270,7 +3270,10 @@
         "CH3CH2ONa",
         "H2"
       ],
-      "normalizedEquation": "2CH3CH2OH + 2Na → 2CH3CH2ONa + H2"
+      "normalizedEquation": "2CH3CH2OH + 2Na → 2CH3CH2ONa + H2",
+      "sourceRefs": [
+        "reaction-equation-2019-3-l161-l163-7bb771c5d7da"
+      ]
     },
     {
       "candidateId": "reaction-equation-2019-2-l3040-l3042-55c7e286c4c0",
@@ -3909,19 +3912,32 @@
       "reason": "Ionic, charged, electron, or half-reaction notation is not supported by the formula pairing game."
     },
     {
-      "candidateId": "reaction-equation-2019-3-l161-l163-ca70e762e085",
-      "decision": "exclude_not_reaction",
-      "reason": "Candidate is a mathematical, thermodynamic, property, or explanatory expression rather than a standalone chemical reaction equation."
+      "candidateId": "reaction-equation-2019-3-l161-l163-7bb771c5d7da",
+      "decision": "exclude_duplicate",
+      "reason": "Duplicate normalized equation of reaction-equation-2019-2-l3028-l3030-bc1cba831e98; current Task 2 extraction narrowed the same textbook display equation and source reference is merged into the canonical include."
     },
     {
-      "candidateId": "reaction-equation-2019-3-l167-l169-08c79c64add7",
-      "decision": "exclude_unsupported_notation",
-      "reason": "Structural, mechanism, chain, or game-model notation cannot be represented as a simple reactant/product pairing."
-    },
-    {
-      "candidateId": "reaction-equation-2019-3-l168-l499-f16da37d0b17",
-      "decision": "exclude_unsupported_notation",
-      "reason": "Structural, mechanism, chain, or game-model notation cannot be represented as a simple reactant/product pairing."
+      "candidateId": "reaction-equation-2019-3-l167-l169-ff65dc4c088a",
+      "decision": "include",
+      "name": "CH3CH2OH + HBr --△--> CH3CH2Br + H2O 反应",
+      "description": "教材已审核反应：CH3CH2OH + HBr --△--> CH3CH2Br + H2O",
+      "curriculumTags": [
+        "反应配对",
+        "高中化学",
+        "化学方程式",
+        "教材"
+      ],
+      "difficulty": "高中基础",
+      "reactants": [
+        "CH3CH2OH",
+        "HBr"
+      ],
+      "products": [
+        "CH3CH2Br",
+        "H2O"
+      ],
+      "normalizedEquation": "CH3CH2OH + HBr --△--> CH3CH2Br + H2O",
+      "notes": "Reviewed override for parser-limited unsupported-latex candidate after Task 2 narrowed the old structural extraction to a standalone display equation."
     },
     {
       "candidateId": "reaction-equation-2019-3-l1723-l1723-75ce618c26aa",

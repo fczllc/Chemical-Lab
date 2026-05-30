@@ -2,11 +2,9 @@
 import { GAME_KEYS, GAME_META } from '../data/contentMeta.js';
 import { reactions } from '../data/index.js';
 import { formulaHTML } from './chemNotation.js';
-import { navigateTo } from './router.js';
 import {
-  getCollectedElements,
   getGameScores,
-  getLearnedElements,
+  getQuizScores,
   updateGameScore
 } from './storage.js';
 import { showGameRuleFeedback } from './gameFeedbackOverlay.js';
@@ -31,8 +29,7 @@ const viewState = {
   attempts: {
     [GAME_KEYS.drag]: 0,
     [GAME_KEYS.memory]: 0,
-    [GAME_KEYS.reaction]: 0,
-    [GAME_KEYS.collector]: 0
+    [GAME_KEYS.reaction]: 0
   },
   recentScores: {},
   feedback: ''
@@ -47,24 +44,6 @@ export function initGames(elements = []) {
   const gameArea = document.getElementById('game-area');
   if (!gamesSection || !cards?.length || !gameArea) {
     return;
-  }
-
-  // 绑定 support-area 中 collector 卡片的事件
-  const collectorCard = gamesSection.querySelector('[data-testid="games-support-area"] .game-card--collector');
-  if (collectorCard) {
-    const button = collectorCard.querySelector('.play-btn');
-    if (button) {
-      collectorCard.addEventListener('click', (event) => {
-        if (event.target.closest('.play-btn')) {
-          return;
-        }
-        launchGame('collector');
-      });
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        launchGame('collector');
-      });
-    }
   }
 
   cards.forEach((card) => {
@@ -119,9 +98,6 @@ function handleStateChange(event) {
   const field = event.detail?.field;
   if (field === 'learnedElements' || field === 'collectedElements') {
     renderGamesHub();
-    if (activeSession?.type === 'collector') {
-      renderCollectorGame();
-    }
   }
 }
 
@@ -138,6 +114,7 @@ function handleKeydown(event) {
 }
 
 function renderGamesHub() {
+  ensureGamesLandingStructure();
   renderGameCards();
 
   const gameArea = document.getElementById('game-area');
@@ -145,29 +122,44 @@ function renderGamesHub() {
     return;
   }
 
-  const totals = Object.keys(GAME_KEYS).map((key) => getCardStats(GAME_KEYS[key]));
-  const topScore = Math.max(...totals.map((item) => item.bestScore), 0);
-  const totalAttempts = totals.reduce((sum, item) => sum + item.attempts, 0);
-  const learnedCount = getLearnedElements().size;
-  const progressPercent = getCollectorPercent();
-
   gameArea.className = 'game-area game-area-idle hud-shell';
-  gameArea.innerHTML = `
-    <div class="games-overview-stats">
-      <div class="quiz-stat-card"><span>当前最高分</span><strong>${topScore}</strong></div>
-      <div class="quiz-stat-card"><span>本次会话次数</span><strong>${totalAttempts}</strong></div>
-      <div class="quiz-stat-card"><span>已学习元素</span><strong>${learnedCount}/118</strong></div>
-      <div class="quiz-stat-card"><span>收藏完成率</span><strong>${progressPercent}%</strong></div>
-    </div>
-  `;
+  gameArea.innerHTML = '';
+}
 
+function ensureGamesLandingStructure() {
+  const gamesSection = document.getElementById('games');
+  const primaryGrid = gamesSection?.querySelector('[data-testid="games-primary-grid"]');
+  const gameArea = document.getElementById('game-area');
+  if (!gamesSection || !primaryGrid || !gameArea) {
+    return;
+  }
 
+  let supportArea = gamesSection.querySelector('[data-testid="games-support-area"]');
+  if (!supportArea) {
+    supportArea = document.createElement('div');
+    supportArea.className = 'games-support-area';
+    supportArea.dataset.testid = 'games-support-area';
+    gamesSection.insertBefore(supportArea, gameArea);
+  }
 }
 
 function renderGameCards() {
   document.querySelectorAll('#games [data-testid="games-primary-grid"] .game-card').forEach((card) => {
     const gameName = card.dataset.game;
     if (gameName === 'full-quiz') {
+      const bestScore = Number(getGameScores('quiz-full') || 0);
+      const quizHistory = getQuizScores();
+      card.innerHTML = `
+        <p class="game-card-kicker">QUIZ CHALLENGE</p>
+        <h3>完整测验挑战</h3>
+        <p>一次回答 20 道题，立即获得反馈、解析、评级和错题回顾。</p>
+        <div class="game-card-stats">
+          <span>最高分 <strong>${bestScore}</strong></span>
+          <span>最近分 <strong>${quizHistory.length > 0 ? quizHistory[quizHistory.length - 1].score : 0}</strong></span>
+          <span>测验次数 <strong>${quizHistory.length}</strong></span>
+        </div>
+        <button class="play-btn">开始完整测验</button>
+      `;
       return;
     }
     const meta = GAME_META[gameName];
@@ -177,8 +169,6 @@ function renderGameCards() {
 
     const gameKey = GAME_KEYS[gameName];
     const stats = getCardStats(gameKey);
-    const buttonLabel = gameName === 'collector' ? '查看收藏' : '开始游戏';
-
     card.innerHTML = `
       <p class="game-card-kicker">${meta.kicker}</p>
       <h3>${meta.title}</h3>
@@ -188,7 +178,7 @@ function renderGameCards() {
         <span>最近分 <strong>${stats.recentScore}</strong></span>
         <span>游戏次数 <strong>${stats.attempts}</strong></span>
       </div>
-      <button class="play-btn">${buttonLabel}</button>
+      <button class="play-btn">开始游戏</button>
     `;
   });
 
@@ -205,29 +195,6 @@ function renderGameCards() {
       }
     });
   });
-
-  // 渲染 support-area 中的 collector 卡片
-  const collectorCard = document.querySelector('#games [data-testid="games-support-area"] .game-card--collector');
-  if (collectorCard) {
-    const meta = GAME_META.collector;
-    const gameKey = GAME_KEYS.collector;
-    const stats = getCardStats(gameKey);
-    collectorCard.innerHTML = `
-      <p class="hud-kicker">${meta.kicker}</p>
-      <h3>${meta.title}</h3>
-      <p>${meta.description}</p>
-      <div class="game-card-stats">
-        <span>最高分 <strong>${stats.bestScore}</strong></span>
-        <span>最近分 <strong>${stats.recentScore}</strong></span>
-        <span>游戏次数 <strong>${stats.attempts}</strong></span>
-      </div>
-      <button class="play-btn">查看收藏</button>
-    `;
-    collectorCard.querySelector('.play-btn')?.addEventListener('click', (event) => {
-      event.stopPropagation();
-      launchGame('collector');
-    });
-  }
 }
 
 function getCardStats(gameKey) {
@@ -268,7 +235,7 @@ function launchGame(gameName) {
     return;
   }
 
-  startCollectorGame();
+  // full-quiz is handled via CustomEvent, not launchGame
 }
 
 function startDragGame() {
@@ -1069,96 +1036,6 @@ function formatReactionInsight(description) {
     : `${firstSentence}。`;
 }
 
-function startCollectorGame() {
-  const score = getCollectorPercent();
-  activeSession = {
-    id: createSessionId(),
-    type: 'collector',
-    score,
-    feedback: '亮起的元素代表你已经学习过，灰色元素表示还有新知识等你解锁。'
-  };
-  recordGameResult(GAME_KEYS.collector, score, { keepSession: true });
-  renderCollectorGame();
-}
-
-function renderCollectorGame() {
-  if (!activeSession || activeSession.type !== 'collector') {
-    return;
-  }
-
-  const learned = getLearnedElements();
-  const collected = getCollectedElements();
-  const score = getCollectorPercent();
-  const nextReward = REWARD_TIERS.find((value) => learned.size < value) ?? 118;
-  const rewardMarkup = REWARD_TIERS.map((tier) => {
-    const unlocked = learned.size >= tier;
-    return `
-      <div class="collector-reward ${unlocked ? 'is-unlocked' : ''}">
-        <strong>${tier}</strong>
-        <span>${unlocked ? '已解锁奖励' : `再学 ${tier - learned.size} 个`}</span>
-      </div>
-    `;
-  }).join('');
-
-  const wallMarkup = allElements.map((element) => {
-    const unlocked = learned.has(element.atomicNumber);
-    return `
-      <button class="collector-cell ${unlocked ? 'is-unlocked' : 'is-locked'}" data-collector-atomic="${element.atomicNumber}">
-        <small>${element.atomicNumber}</small>
-        <strong>${element.symbol}</strong>
-        <span>${element.chineseName}</span>
-      </button>
-    `;
-  }).join('');
-
-  const gameArea = ensureGameOverlay();
-  gameArea.innerHTML = buildGameFrame({
-    title: GAME_META.collector.title,
-    kicker: GAME_META.collector.kicker,
-    summary: `距离下一档奖励还差 ${Math.max(nextReward - learned.size, 0)} 个已学习元素。`,
-    stats: [
-      { label: '学习进度', value: `${learned.size}/118` },
-      { label: '收集率', value: `${score}%` },
-      { label: '已收集', value: collected.size },
-      { label: '奖励阶段', value: `${REWARD_TIERS.filter((tier) => learned.size >= tier).length}/${REWARD_TIERS.length}` }
-    ],
-    body: `
-      <div class="game-feedback info">${activeSession.feedback}</div>
-      <div class="collector-dashboard">
-        <div class="collector-progress-ring" style="--collector-progress:${score}%;">
-          <div class="collector-progress-fill"></div>
-          <div class="collector-progress-center"><strong>${score}%</strong><span>完成率</span></div>
-        </div>
-        <div class="collector-side-panel">
-          <h4>收集奖励</h4>
-          <div class="collector-rewards">${rewardMarkup}</div>
-          <div class="collector-prompt" id="collector-prompt">点击灰色元素会提示你“去学习此元素”。</div>
-        </div>
-      </div>
-      <div class="collector-wall">${wallMarkup}</div>
-    `
-  });
-
-  bindOverlayActions();
-  document.querySelectorAll('[data-collector-atomic]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const atomicNumber = Number(button.dataset.collectorAtomic);
-      const element = allElements.find((item) => item.atomicNumber === atomicNumber);
-      const prompt = document.getElementById('collector-prompt');
-      if (!element || !prompt) {
-        return;
-      }
-
-      if (learned.has(atomicNumber)) {
-        prompt.textContent = `${element.chineseName} 已经点亮，继续去主页查看更多知识吧。`;
-        return;
-      }
-
-      prompt.textContent = `去学习此元素：${element.chineseName}（${element.symbol}）。从主页周期表进入详情即可解锁。`;
-    });
-  });
-}
-
 function recordGameResult(gameKey, score, options = {}) {
   const bestScore = Math.max(Number(getGameScores(gameKey) ?? 0), Number(score));
   updateGameScore(gameKey, bestScore);
@@ -1293,10 +1170,6 @@ function resolveFeedbackTone(message = '') {
     return 'error';
   }
   return 'info';
-}
-
-function getCollectorPercent() {
-  return Math.round((getLearnedElements().size / 118) * 100);
 }
 
 function getScoreRating(score, [sThreshold, aThreshold, bThreshold]) {

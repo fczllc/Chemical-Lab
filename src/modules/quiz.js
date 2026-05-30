@@ -16,6 +16,7 @@ const QUICK_QUIZ_COUNT = 5;
 const FULL_QUIZ_COUNT = 20;
 const FULL_QUIZ_GAME_KEY = 'quiz-full';
 const FORMULA_TOKEN_PATTERN = /(^|[^A-Za-z0-9])((?:\d+)?(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*)(?:(?:[A-Z][a-z]?\d*|\([A-Z][A-Za-z0-9]*\)\d*|\[[A-Z][A-Za-z0-9]*\]\d*|[·.])*)[↑↓]?)(?=$|[^A-Za-z0-9])/g;
+const PLACEHOLDER_PATTERN = /待审|待复核|TODO|请补充|待填写|补全标准答案|设计一道待审题目|placeholder/i;
 const CURRICULUM_SCOPE_FIELDS = ['grade', 'chapter', 'topic'];
 
 let quizSession = createEmptySession();
@@ -490,24 +491,10 @@ function renderGamesHub() {
     return;
   }
 
-  const existingCard = primaryGrid.querySelector('[data-game="full-quiz"]');
-  document.querySelectorAll('[data-game="full-quiz"]').forEach((quizCard) => {
-    if (quizCard !== existingCard) {
-      quizCard.remove();
-    }
-  });
-
-  let card = existingCard;
+  const card = primaryGrid.querySelector('[data-game="full-quiz"]');
   if (!card) {
-    card = document.createElement('div');
-    card.className = 'game-card game-card--quiz';
-    card.dataset.game = 'full-quiz';
-    card.dataset.testid = 'full-quiz-primary-card';
-    primaryGrid.append(card);
+    return;
   }
-
-  card.dataset.testid = 'full-quiz-primary-card';
-  card.classList.add('game-card', 'game-card--quiz');
 
   const bestScore = getBestScoreValue();
   const quizHistory = getQuizScores();
@@ -533,7 +520,7 @@ function createSession({ mode, element }) {
   const currentSection = getCurrentSection();
   const currentSelection = getSelectedElement();
   const questions = (mode === 'full'
-    ? shuffleArray([...quizData]).slice(0, FULL_QUIZ_COUNT)
+    ? getFullQuizQuestions()
     : getQuickQuizQuestions(element)).map((question) => ({
       ...question,
       curriculumMetadata: getQuizCurriculumMetadata(question)
@@ -558,6 +545,33 @@ function createSession({ mode, element }) {
     returnSection: currentSection,
     returnAtomicNumber: currentSelection?.atomicNumber ?? element?.atomicNumber ?? null
   };
+}
+
+function getFullQuizQuestions() {
+  const seenQuestionText = new Set();
+  return shuffleArray([...quizData]).filter((question) => {
+    if (!isRuntimeQuizQuestion(question)) {
+      return false;
+    }
+
+    const questionText = String(question.question || '').trim();
+    if (!questionText || seenQuestionText.has(questionText)) {
+      return false;
+    }
+
+    seenQuestionText.add(questionText);
+    return true;
+  }).slice(0, FULL_QUIZ_COUNT);
+}
+
+function isRuntimeQuizQuestion(question) {
+  if (!Array.isArray(question.options) || question.options.length < 4) {
+    return false;
+  }
+
+  return [question.question, question.explanation, ...question.options].every((value) => (
+    typeof value !== 'string' || !PLACEHOLDER_PATTERN.test(value)
+  ));
 }
 
 function getQuickQuizQuestions(element) {

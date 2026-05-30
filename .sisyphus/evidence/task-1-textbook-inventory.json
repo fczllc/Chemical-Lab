@@ -1,0 +1,76 @@
+{
+  "volumes": [
+    {
+      "volumeId": "pep-chemistry-g10-required-1",
+      "displayName": "2019版人教版高中化学必修第1册",
+      "batchPath": "src/data/textbookIngestion/batches/pep-chemistry-g10-required-1.json",
+      "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/pep-chemistry-g10-required-1/coverage-matrix.json",
+      "newlyAddedForThisRequest": false
+    },
+    {
+      "volumeId": "pep-chemistry-g10-required-2",
+      "displayName": "2019版人教版高中化学必修第2册",
+      "batchPath": "src/data/textbookIngestion/batches/pep-chemistry-g10-required-2.json",
+      "sourcePath": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/pep-chemistry-g10-required-2/coverage-matrix.json",
+      "newlyAddedForThisRequest": false
+    },
+    {
+      "volumeId": "pep-chemistry-g11-selective-1",
+      "displayName": "2019版人教版高中化学-选择性必修1 化学反应原理",
+      "batchPath": "src/data/textbookIngestion/batches/pep-chemistry-g11-selective-1.json",
+      "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/pep-chemistry-g11-selective-1/coverage-matrix.json",
+      "newlyAddedForThisRequest": false
+    },
+    {
+      "volumeId": "pep-chemistry-g11-selective-2",
+      "displayName": "2019版人教版高中化学-选择性必修2 物质结构与性质",
+      "batchPath": "src/data/textbookIngestion/batches/pep-chemistry-g11-selective-2.json",
+      "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/pep-chemistry-g11-selective-2/coverage-matrix.json",
+      "newlyAddedForThisRequest": false
+    },
+    {
+      "volumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "displayName": "2019版人教版高中化学选择性必修3 有机化学基础",
+      "batchPath": "src/data/textbookIngestion/batches/rj-chemistry-g12-selective-3-organic-2019.json",
+      "sourcePath": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/rj-chemistry-g12-selective-3-organic-2019/coverage-matrix.json",
+      "newlyAddedForThisRequest": true
+    },
+    {
+      "volumeId": "rj-chemistry-grade8-54-2024-full",
+      "displayName": "2024版人教版（五·四学制）八年级化学全一册",
+      "batchPath": "src/data/textbookIngestion/batches/rj-chemistry-grade8-54-2024-full.json",
+      "sourcePath": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/rj-chemistry-grade8-54-2024-full/coverage-matrix.json",
+      "newlyAddedForThisRequest": true
+    },
+    {
+      "volumeId": "rj-chemistry-grade9-2024-vol1",
+      "displayName": "2024版人教版九年级化学上册",
+      "batchPath": "src/data/textbookIngestion/batches/rj-chemistry-grade9-2024-vol1.json",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol1/coverage-matrix.json",
+      "newlyAddedForThisRequest": true
+    },
+    {
+      "volumeId": "rj-chemistry-grade9-2024-vol2",
+      "displayName": "2024版人教版九年级化学下册",
+      "batchPath": "src/data/textbookIngestion/batches/rj-chemistry-grade9-2024-vol2.json",
+      "sourcePath": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+      "bookExists": true,
+      "coverageMatrixPath": "src/data/textbookIngestion/generated/rj-chemistry-grade9-2024-vol2/coverage-matrix.json",
+      "newlyAddedForThisRequest": true
+    }
+  ]
+}

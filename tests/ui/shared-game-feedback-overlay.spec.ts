@@ -101,7 +101,7 @@ test.describe('Shared game feedback overlay', () => {
     expect([...outcomes].sort()).toEqual(['correct', 'incorrect']);
   });
 
-  test('quick quiz and collector interactions do not create the shared overlay', async ({ page }) => {
+  test('quick quiz interaction does not create the shared overlay', async ({ page }) => {
     await openApp(page);
     await page.evaluate(() => {
       window.dispatchEvent(new CustomEvent('startquiz'));
@@ -115,16 +115,6 @@ test.describe('Shared game feedback overlay', () => {
 
     await modal.locator('[data-quiz-close]').click();
     await expect(modal).not.toHaveClass(/show/);
-
-    await openGames(page);
-    await page
-      .locator('[data-testid="games-support-area"] [data-game="collector"] .play-btn, [data-testid="games-support-area"] .game-card--collector .play-btn')
-      .first()
-      .click();
-    await expect(page.locator('[data-collector-atomic]').first()).toBeVisible();
-    await page.locator('[data-collector-atomic]').first().click();
-    await expect(page.locator('#collector-prompt')).toContainText(/去学习此元素|已经点亮/);
-    await expect(page.locator(OVERLAY_SELECTOR)).toHaveCount(0);
   });
 });
 

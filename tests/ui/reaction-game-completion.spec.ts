@@ -1,15 +1,18 @@
 import { expect, test, type Page } from '@playwright/test';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const STORAGE_KEY = 'element-explorer-kids-state';
 const EVIDENCE_DIR = path.join(process.cwd(), '.sisyphus', 'evidence');
 const COMPLETION_SCREENSHOT = path.join(EVIDENCE_DIR, 'task-5-reaction-completion.png');
+const REACTION_TEXTBOOK_EVIDENCE = 'task-9-reaction-textbook-runtime.json';
+const REACTIONS_DATA_PATH = path.join(process.cwd(), 'src', 'data', 'reactions.json');
 
 test.describe('Reaction pairing completion', () => {
   test('completes reaction pairing and persists the score', async ({ page }) => {
     await openReactionGame(page);
 
+    await assertVisibleReactionsUseReviewedTextbookRecords(page);
     const completedIds = await completeVisibleReactionPairs(page);
 
     await expect(activeGameStage(page).locator('.hud-shell-header h3')).toHaveText('反应配对完成');
@@ -164,6 +167,60 @@ async function readReactionScore(page: Page) {
       storedScore: Number(storedScores['game-reaction'] ?? 0)
     };
   }, STORAGE_KEY);
+}
+
+async function assertVisibleReactionsUseReviewedTextbookRecords(page: Page) {
+  const visibleReactionIds = await getVisibleReactionIds(page);
+  expect(visibleReactionIds.length).toBeGreaterThan(0);
+
+  const sourceData = JSON.parse(await readFile(REACTIONS_DATA_PATH, 'utf8'));
+  const sourceReactions = Array.isArray(sourceData) ? sourceData : sourceData.reactions;
+  const sourceById = new Map(sourceReactions.map((reaction) => [reaction.id, reaction]));
+
+  const verifiedRecords = visibleReactionIds.map((reactionId) => {
+    const sourceRecord = sourceById.get(reactionId);
+    expect(sourceRecord).toBeTruthy();
+    expect(sourceRecord.sourceKind).toBe('textbook');
+    expect(sourceRecord.sourceReviewStatus).toBe('reviewed');
+    return {
+      id: sourceRecord.id,
+      name: sourceRecord.name,
+      sourceKind: sourceRecord.sourceKind,
+      sourceReviewStatus: sourceRecord.sourceReviewStatus,
+      reactants: sourceRecord.reactants,
+      products: sourceRecord.products,
+      sourceReferenceCount: Array.isArray(sourceRecord.sourceReferences) ? sourceRecord.sourceReferences.length : 0,
+      sourceJsonSourceKind: sourceRecord.sourceKind,
+      sourceJsonReviewStatus: sourceRecord.sourceReviewStatus
+    };
+  });
+
+  await writeEvidence(REACTION_TEXTBOOK_EVIDENCE, {
+    checkedAt: new Date().toISOString(),
+    source: 'tests/ui/reaction-game-completion.spec.ts',
+    sourceJsonPath: 'src/data/reactions.json',
+    visibleReactionIds,
+    visibleReactionCount: visibleReactionIds.length,
+    sourceJsonReactionCount: sourceReactions.length,
+    verifiedRecords
+  });
+}
+
+async function getVisibleReactionIds(page: Page) {
+  return await reactionBoard(page).locator('[data-reaction-id]').evaluateAll((buttons) => (
+    buttons
+      .map((button) => button.getAttribute('data-reaction-id'))
+      .filter((id): id is string => Boolean(id))
+  ));
+}
+
+async function writeEvidence(fileName: string, payload: unknown) {
+  await mkdir(EVIDENCE_DIR, { recursive: true });
+  await writeFile(
+    path.join(EVIDENCE_DIR, fileName),
+    `${JSON.stringify(payload, null, 2)}\n`,
+    'utf8'
+  );
 }
 
 function reactionSelector(attributeName: 'data-reaction-id' | 'data-reaction-product', value: string) {

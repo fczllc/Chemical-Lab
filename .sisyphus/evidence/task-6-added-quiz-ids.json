@@ -1,0 +1,150 @@
+{
+  "quizIds": [
+    "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-functional-groups-001",
+    "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-isomerism-002",
+    "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-recrystallization-003",
+    "textbook-generated-rj-chemistry-grade8-54-2024-full-change-types-001",
+    "textbook-generated-rj-chemistry-grade8-54-2024-full-observation-002",
+    "textbook-generated-rj-chemistry-grade8-54-2024-full-properties-003",
+    "textbook-generated-rj-chemistry-grade9-2024-vol1-observation-001",
+    "textbook-generated-rj-chemistry-grade9-2024-vol1-reagent-safety-002",
+    "textbook-generated-rj-chemistry-grade9-2024-vol1-liquid-pouring-003",
+    "textbook-generated-rj-chemistry-grade9-2024-vol2-metal-properties-001",
+    "textbook-generated-rj-chemistry-grade9-2024-vol2-aluminum-oxide-film-002",
+    "textbook-generated-rj-chemistry-grade9-2024-vol2-metal-acid-hydrogen-003"
+  ],
+  "items": [
+    {
+      "id": "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-functional-groups-001",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "sourceBasis": "官能团可用于辨识有机化合物类别，并帮助推测可能性质。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+          "candidateId": "quiz-0011-source-section-l89-l106-6badbce1f7"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-isomerism-002",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "sourceBasis": "正戊烷、异戊烷和新戊烷同为 C5H12，但结构不同，是同分异构体。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+          "candidateId": "quiz-0019-source-section-l197-l244-8a7b6e1bba"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-g12-selective-3-organic-2019-recrystallization-003",
+      "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+      "sourceBasis": "重结晶提纯苯甲酸时，教材讨论加热溶解和趁热过滤等关键操作目的。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-g12-selective-3-organic-2019",
+          "candidateId": "quiz-0035-source-section-l455-l464-a1f3062016"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade8-54-2024-full-change-types-001",
+      "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+      "sourceBasis": "教材用水的状态变化、钢铁生锈和燃烧，引导比较物理变化与化学变化的本质区别。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+          "candidateId": "quiz-0011-source-section-l141-l147-f3c37e5ec7"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade8-54-2024-full-observation-002",
+      "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+      "sourceBasis": "教材要求实验观察全面细致，并用语言和文字客观、全面、准确描述实验现象。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+          "candidateId": "quiz-0016-source-section-l208-l230-48b342241b"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade8-54-2024-full-properties-003",
+      "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+      "sourceBasis": "教材让学生描述氧气和二氧化碳的性质，并尝试区分物理性质和化学性质。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade8-54-2024-full",
+          "candidateId": "quiz-0022-source-section-l276-l284-8a17c88cb4"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol1-observation-001",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourceBasis": "教材要求实验现象记录关注实验前后颜色、状态、气味等变化，并客观准确描述。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "candidateId": "quiz-0010-source-section-l89-l113-9197900129"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol1-reagent-safety-002",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourceBasis": "教材列明实验室试剂取用规则，强调不能手触、不能凑闻、不得品尝，并按规定用量取用。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "candidateId": "quiz-0022-source-section-l232-l261-5e8ce3d1a0"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol1-liquid-pouring-003",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+      "sourceBasis": "教材候选内容要求解释液体倾倒时标签朝手心、瓶塞倒放、瓶口紧挨试管口等操作原因。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol1",
+          "candidateId": "quiz-0024-source-section-l274-l297-87efa13284"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol2-metal-properties-001",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+      "sourceBasis": "教材以铁丝、铝丝和铜丝可以导电、可以弯曲为例，说明金属物理性质与用途有关。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+          "candidateId": "quiz-0004-source-section-l24-l50-5c2b2b9bb1"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol2-aluminum-oxide-film-002",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+      "sourceBasis": "教材说明铝在空气中与氧气反应，表面生成致密的氧化铝保护膜。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+          "candidateId": "quiz-0018-source-section-l240-l249-03fe6e1c85"
+        }
+      ]
+    },
+    {
+      "id": "textbook-generated-rj-chemistry-grade9-2024-vol2-metal-acid-hydrogen-003",
+      "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+      "sourceBasis": "教材实验要求金属与稀盐酸反应后，用燃着木条在试管口判断生成的气体。",
+      "sourceReferences": [
+        {
+          "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+          "candidateId": "quiz-0024-source-section-l266-l286-517ea0fb81"
+        }
+      ]
+    }
+  ]
+}

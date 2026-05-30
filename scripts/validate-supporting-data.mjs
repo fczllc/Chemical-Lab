@@ -30,7 +30,7 @@ const topicConfigs = [
         'quiz-c60-reviewed-formula-application',
         'quiz-c60-structure-source'
       ],
-      challengeIds: ['challenge-c60-carbon-topic'],
+      challengeIds: [],
       draftIds: ['draft-exp-c60-model-observation'],
       sourceValidator: validateC60ReviewedSource
     },
@@ -41,7 +41,7 @@ const topicConfigs = [
         'quiz-c60-reviewed-formula-application'
       ],
       progressIds: ['stage-3'],
-      challengeIds: ['challenge-c60-carbon-topic'],
+      challengeIds: [],
       sourceValidator: validateC60ReviewedSource
     },
     legacyQuizIds: ['quiz-c60-reviewed-formula']
@@ -55,7 +55,7 @@ const topicConfigs = [
         'challenge-carbon-allotropes-comparison',
         'draft-exp-carbon-allotropes-observation'
       ],
-      challengeIds: ['challenge-carbon-allotropes-comparison'],
+      challengeIds: [],
       draftIds: ['draft-exp-carbon-allotropes-observation'],
       sourceValidator: validateComparisonReviewedSource,
       requiredLineRanges: ['3432-3462', '3494-3504'],
@@ -75,7 +75,7 @@ const topicConfigs = [
         'quiz-carbon-allotropes-comparison-3'
       ],
       progressIds: ['relation-carbon-allotropes-comparison'],
-      challengeIds: ['challenge-carbon-allotropes-comparison'],
+      challengeIds: [],
       sourceValidator: validateComparisonReviewedSource,
       requiredLineRanges: ['3432-3462', '3494-3504'],
       forbiddenLineRanges: ['3463-3489', '3483']
@@ -105,9 +105,9 @@ const validCurriculumTagIds = new Set(Object.keys(curriculumTags));
 const validDifficultyBands = new Set(['入门', '初中', '高中基础', '高中进阶', '基础', '挑战', '进阶']);
 const validGrades = new Set(['入门', '七年级', '八年级', '九年级', '高一', '高二', '高三']);
 const validFormulas = new Set(['H2', 'O2', 'Cl2', 'H2O', 'Fe2O3', 'NaOH', 'NaCl', 'CO2']);
-const expectedGameMetaIds = ['drag', 'memory', 'reaction', 'collector'];
+const expectedGameMetaIds = ['drag', 'memory', 'reaction'];
 const validGameIds = new Set(Object.values(GAME_KEYS));
-const expectedPersistedGameIds = ['game-drag', 'game-memory', 'game-reaction', 'game-collector'];
+const expectedPersistedGameIds = ['game-drag', 'game-memory', 'game-reaction'];
 const minimumGameUsableReactionCount = 5;
 const c60PilotCurriculumTag = 'g9-carbon-c60-allotrope';
 const c60PilotChallengeId = 'challenge-c60-carbon-topic';

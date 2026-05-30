@@ -332,14 +332,7 @@ test.describe('Achievement progress coupling', () => {
 
       for (const manual of manuals) {
         const card = document.querySelector(`#progress [data-testid="learning-card"][data-learning-segment-id="${CSS.escape(manual.segmentId)}"]`);
-        const status = card?.querySelector('[data-testid="learning-card-status"]')?.textContent?.trim();
-
-        if (!card) {
-          invalid.push(`${manual.id}: missing learning card ${manual.segmentId}`);
-          continue;
-        }
-
-        const status = card?.querySelector('[data-testid=\"learning-card-status\"]')?.textContent?.trim() || '';
+        const status = card?.querySelector('[data-testid="learning-card-status"]')?.textContent?.trim() || '';
 
         if (!card) {
           invalid.push(`${manual.id}: missing learning card ${manual.segmentId}`);

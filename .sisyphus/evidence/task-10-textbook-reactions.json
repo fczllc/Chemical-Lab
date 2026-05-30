@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "validator": "scripts/textbook/validate-reaction-extraction.mjs",
+  "manifest": "src/data/textbookIngestion/reactionEquationReview.json",
+  "extractor": "scripts/textbook/extract-reaction-equations.mjs",
+  "status": "pass",
+  "counters": {
+    "candidateCount": 637,
+    "reviewedCandidates": 637,
+    "includedCandidates": 128,
+    "excludedCandidates": 509,
+    "duplicateCandidates": 41,
+    "staleManifestCandidates": 0,
+    "duplicateReviewCandidates": 0,
+    "invalidDecisionCandidates": 0,
+    "exclusionsMissingReason": 0,
+    "duplicateIncludedEquations": 0,
+    "missingExplicitEquations": 0,
+    "unreviewedCandidates": 0,
+    "unaccountedCandidates": 0
+  },
+  "schemaErrors": [],
+  "coverageErrors": [],
+  "warnings": [],
+  "perTextbook": [
+    {
+      "sourceFile": "src/data/textbooks/2019版人教版高中化学-选择性必修1 化学反应原理/book.md",
+      "detected": 248,
+      "included": 29,
+      "excluded": 219,
+      "duplicate": 10
+    },
+    {
+      "sourceFile": "src/data/textbooks/2019版人教版高中化学-选择性必修2 物质结构与性质/book.md",
+      "detected": 9,
+      "included": 2,
+      "excluded": 7,
+      "duplicate": 0
+    },
+    {
+      "sourceFile": "src/data/textbooks/2019版人教版高中化学-选择性必修3 有机化学基础/book.md",
+      "detected": 75,
+      "included": 9,
+      "excluded": 66,
+      "duplicate": 1
+    },
+    {
+      "sourceFile": "src/data/textbooks/2019版人教版高中化学必修第1册/book.md",
+      "detected": 111,
+      "included": 34,
+      "excluded": 77,
+      "duplicate": 5
+    },
+    {
+      "sourceFile": "src/data/textbooks/2019版人教版高中化学必修第2册/book.md",
+      "detected": 87,
+      "included": 22,
+      "excluded": 65,
+      "duplicate": 3
+    },
+    {
+      "sourceFile": "src/data/textbooks/2024版人教版（五·四学制）八年级化学全一册/book.md",
+      "detected": 50,
+      "included": 19,
+      "excluded": 31,
+      "duplicate": 7
+    },
+    {
+      "sourceFile": "src/data/textbooks/2024版人教版九年级化学上册/book.md",
+      "detected": 32,
+      "included": 1,
+      "excluded": 31,
+      "duplicate": 12
+    },
+    {
+      "sourceFile": "src/data/textbooks/2024版人教版九年级化学下册/book.md",
+      "detected": 25,
+      "included": 12,
+      "excluded": 13,
+      "duplicate": 3
+    }
+  ],
+  "details": {
+    "unreviewedCandidates": [],
+    "staleManifestIds": [],
+    "duplicateReviewIds": [],
+    "invalidDecisionIds": [],
+    "exclusionsMissingReason": [],
+    "includeWithoutUsableOutput": [],
+    "duplicateIncludedEquations": []
+  },
+  "extractorCandidateCount": 637
+}

@@ -28,6 +28,23 @@ const ACHIEVEMENT_RARITY_LABELS = {
   legendary: '传说'
 };
 
+const LUCIDE_ICONS = new Set([
+  'book-open', 'flask-conical', 'clipboard-check', 'gamepad-2', 'chart-column', 'award',
+  'sparkles', 'compass', 'folder-open', 'crown', 'shield', 'microscope', 'trophy', 'brain', 'zap', 'gem'
+]);
+
+function isLucideIcon(icon) {
+  return LUCIDE_ICONS.has(icon);
+}
+
+function renderIcon(icon) {
+  const safeIcon = escapeHtmlAttr(icon || 'award');
+  if (isLucideIcon(icon)) {
+    return `<i data-lucide="${safeIcon}"></i>`;
+  }
+  return `<span class="achievement-emoji-icon">${safeIcon}</span>`;
+}
+
 let isBound = false;
 
 export function initAchievements() {
@@ -190,15 +207,15 @@ function renderCategorySection(category, achievements, unlockedIds, unlockDates)
   const unlockedCount = achievements.filter((achievement) => unlockedIds.has(achievement.id)).length;
 
   return `
-    <section class="achievement-category-block hud-shell">
-      <div class="achievement-category-header">
+    <section class=\"achievement-category-block hud-shell\">
+      <div class=\"achievement-category-header\">
         <div>
-          <p class="hud-kicker"><i data-lucide="${meta.icon}"></i> ${meta.label}</p>
+          <p class=\"hud-kicker\">${renderIcon(meta.icon)} ${meta.label}</p>
           <h3>${meta.label}</h3>
         </div>
         <strong>${unlockedCount}/${achievements.length}</strong>
       </div>
-      <div class="achievement-category-grid">
+      <div class=\"achievement-category-grid\">
         ${achievements.map((achievement) => renderAchievementCard(achievement, unlockedIds, unlockDates)).join('')}
       </div>
     </section>
@@ -230,15 +247,15 @@ function renderAchievementCard(achievement, unlockedIds, unlockDates) {
 
   return `
     <article ${articleAttrs}>
-      <div class="achievement-card-top">
-        <span class="achievement-icon"><i data-lucide="${escapeHtmlAttr(achievement.icon || 'award')}"></i></span>
-        <span class="achievement-rarity">${escapeHtmlAttr(formatRarity(achievement.rarity))}</span>
+      <div class=\"achievement-card-top\">
+        <span class=\"achievement-icon\">${renderIcon(achievement.icon || 'award')}</span>
+        <span class=\"achievement-rarity\">${escapeHtmlAttr(formatRarity(achievement.rarity))}</span>
       </div>
-      <div class="achievement-card-body">
+      <div class=\"achievement-card-body\">
         <h4>${escapeHtmlAttr(achievement.title)}</h4>
         <p>${escapeHtmlAttr(achievement.description)}</p>
       </div>
-      <dl class="achievement-meta-list">
+      <dl class=\"achievement-meta-list\">
         <div><dt>解锁条件</dt><dd>${escapeHtmlAttr(getAchievementUnlockText(achievement))}</dd></div>
         <div><dt>状态</dt><dd>${unlocked ? '已解锁' : '未解锁'}</dd></div>
         <div><dt>解锁日期</dt><dd>${unlocked ? formatDate(unlockDate) : '等待达成'}</dd></div>
@@ -298,8 +315,7 @@ function showAchievementPopup(achievement) {
 
   const popupIcon = popup.querySelector('.popup-icon');
   if (popupIcon) {
-    const popupIconName = escapeHtmlAttr(achievement.icon || 'award');
-    popupIcon.innerHTML = `<i data-lucide="${popupIconName}"></i>`;
+    popupIcon.innerHTML = renderIcon(achievement.icon || 'award');
   }
   popup.querySelector('.popup-title').textContent = achievement.title;
   popup.querySelector('.popup-desc').textContent = `${achievement.description} · ${getAchievementUnlockText(achievement)}`;

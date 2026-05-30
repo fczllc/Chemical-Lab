@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-05-30T08:30:41.036Z",
+  "source": "tests/ui/reaction-game-completion.spec.ts",
+  "sourceJsonPath": "src/data/reactions.json",
+  "visibleReactionIds": [
+    "textbook-reaction-ba28a97aa4a67593",
+    "textbook-reaction-174635956f89f11b",
+    "textbook-reaction-4e76fe99ca911ee7",
+    "textbook-reaction-6458a37fb07c59fa",
+    "textbook-reaction-f23a529913b79e41"
+  ],
+  "visibleReactionCount": 5,
+  "sourceJsonReactionCount": 128,
+  "verifiedRecords": [
+    {
+      "id": "textbook-reaction-ba28a97aa4a67593",
+      "name": "Cl2 + 2NaOH = NaCl + NaClO + H2O 反应",
+      "sourceKind": "textbook",
+      "sourceReviewStatus": "reviewed",
+      "reactants": [
+        "Cl2",
+        "NaOH"
+      ],
+      "products": [
+        "NaCl",
+        "NaClO",
+        "H2O"
+      ],
+      "sourceReferenceCount": 1,
+      "sourceJsonSourceKind": "textbook",
+      "sourceJsonReviewStatus": "reviewed"
+    },
+    {
+      "id": "textbook-reaction-174635956f89f11b",
+      "name": "CH4 + H2O = CO + 3H2 反应",
+      "sourceKind": "textbook",
+      "sourceReviewStatus": "reviewed",
+      "reactants": [
+        "CH4",
+        "H2O"
+      ],
+      "products": [
+        "CO",
+        "H2"
+      ],
+      "sourceReferenceCount": 1,
+      "sourceJsonSourceKind": "textbook",
+      "sourceJsonReviewStatus": "reviewed"
+    },
+    {
+      "id": "textbook-reaction-4e76fe99ca911ee7",
+      "name": "CO + H2O = CO2 + H2 反应",
+      "sourceKind": "textbook",
+      "sourceReviewStatus": "reviewed",
+      "reactants": [
+        "CO",
+        "H2O"
+      ],
+      "products": [
+        "CO2",
+        "H2"
+      ],
+      "sourceReferenceCount": 1,
+      "sourceJsonSourceKind": "textbook",
+      "sourceJsonReviewStatus": "reviewed"
+    },
+    {
+      "id": "textbook-reaction-6458a37fb07c59fa",
+      "name": "S + 2Cu = Cu2S 反应",
+      "sourceKind": "textbook",
+      "sourceReviewStatus": "reviewed",
+      "reactants": [
+        "S",
+        "Cu"
+      ],
+      "products": [
+        "Cu2S"
+      ],
+      "sourceReferenceCount": 1,
+      "sourceJsonSourceKind": "textbook",
+      "sourceJsonReviewStatus": "reviewed"
+    },
+    {
+      "id": "textbook-reaction-f23a529913b79e41",
+      "name": "N2 + 3Mg --点燃--> Mg3N2 反应",
+      "sourceKind": "textbook",
+      "sourceReviewStatus": "reviewed",
+      "reactants": [
+        "N2",
+        "Mg"
+      ],
+      "products": [
+        "Mg3N2"
+      ],
+      "sourceReferenceCount": 1,
+      "sourceJsonSourceKind": "textbook",
+      "sourceJsonReviewStatus": "reviewed"
+    }
+  ]
+}

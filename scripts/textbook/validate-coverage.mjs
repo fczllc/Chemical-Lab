@@ -50,6 +50,30 @@ const knownTextbookBatches = new Map([
     {
       coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'rj-chemistry-grade8-54-2024-full', 'coverage-matrix.json')
     }
+  ],
+  [
+    'pep-chemistry-g10-required-1',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'pep-chemistry-g10-required-1', 'coverage-matrix.json')
+    }
+  ],
+  [
+    'pep-chemistry-g10-required-2',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'pep-chemistry-g10-required-2', 'coverage-matrix.json')
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-1',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'pep-chemistry-g11-selective-1', 'coverage-matrix.json')
+    }
+  ],
+  [
+    'pep-chemistry-g11-selective-2',
+    {
+      coveragePath: path.join(projectRoot, 'src', 'data', 'textbookIngestion', 'generated', 'pep-chemistry-g11-selective-2', 'coverage-matrix.json')
+    }
   ]
 ]);
 

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-05-29T17:39:36.269Z",
+  "source": "tests/ui/full-quiz-textbook-content.spec.ts",
+  "deterministicShuffle": {
+    "firstSwapIndex": 917,
+    "quizDataLength": 918,
+    "purpose": "Place a Task 6 quizData entry into the first full-quiz slot before app shuffle completes."
+  },
+  "task6QuizIdCount": 12,
+  "renderedQuestion": {
+    "id": "textbook-generated-rj-chemistry-grade9-2024-vol2-metal-acid-hydrogen-003",
+    "question": "把燃着的木条放在金属与稀盐酸反应后的试管口，主要是为了检验哪种气体？",
+    "sourceVolumeId": "rj-chemistry-grade9-2024-vol2",
+    "sourceReviewStatus": "reviewed",
+    "generationSource": ".sisyphus/evidence/task-4-quiz-source-audit.json",
+    "optionTexts": [
+      "A\n      氢气",
+      "B\n      氧气",
+      "C\n      二氧化碳",
+      "D\n      氮气"
+    ],
+    "sourceReferenceCount": 1
+  },
+  "progression": {
+    "answeredFirstQuestion": true,
+    "nextButtonEnabled": true,
+    "advancedToQuestionText": "第 2 / 20 题"
+  }
+}

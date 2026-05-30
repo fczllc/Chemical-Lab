@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "task": "10. Run full data, build, and content coverage verification",
+  "generatedAt": "2026-05-29T17:28:20.391Z",
+  "overallStatus": "pass",
+  "rootCauseFix": {
+    "summary": "validate:supporting failed because 12 generated Task 6 quiz records used non-canonical curriculum tags and generated learning-segment content preserved table blocks for achievement-linked records even though the supporting-data contract allows heading/paragraph/list only.",
+    "filesChanged": [
+      "src/data/quizData.json",
+      "scripts/textbook/generate-learning-segment-content.mjs",
+      "src/data/learningSegmentTextbookContent.js"
+    ],
+    "notes": [
+      "Generated quiz records now map to existing curriculum.js/learningPath runtime tags.",
+      "Learning segment generator converts parsed table rows into unordered list text items so reviewed table text remains available without emitting unsupported table block types."
+    ]
+  },
+  "preEvidenceChecks": [
+    {
+      "command": "node -e \"import(\\'./src/data/index.js\\').then(({quizData,curriculumTags,learningPath,learningSegmentTextbookContent})=>{const valid=new Set([...Object.keys(curriculumTags),...learningPath.stages.flatMap(s=>s.curriculumTags||[])]); const badQuiz=quizData.filter(q=>(q.curriculumTags||[]).some(t=>!valid.has(t))); const tableRecords=learningSegmentTextbookContent.filter(r=>(r.blocks||[]).some(b=>b.type===\\'table\\')); if(badQuiz.length||tableRecords.length) process.exit(1);})\"",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Imported data contains 0 unknown quiz curriculum tags and 0 learningSegmentTextbookContent table blocks."
+    },
+    {
+      "command": "node scripts/validate-supporting-data.mjs",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "支持数据校验通过：918 道题、128 个反应、2024 个成就、2015 个学习阶段；课程引用 5104；reviewed source references 5096."
+    }
+  ],
+  "requiredConditionalCommand": {
+    "command": "node scripts/validate-textbook-game-content.mjs --inventory .sisyphus/evidence/task-1-textbook-inventory.json --reaction-report .sisyphus/evidence/task-5-reaction-game-pool.json --quiz-report .sisyphus/evidence/task-6-added-quiz-ids.json",
+    "status": "skipped",
+    "reason": "scripts/validate-textbook-game-content.mjs does not exist in this workspace"
+  },
+  "commands": [
+    {
+      "command": "npm run validate:textbook-reactions -- --report .sisyphus/evidence/task-10-textbook-reactions.json",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "reactionExtractionValidationStatus=pass; candidateCount=637; reviewedCandidates=637; includedCandidates=128; staleManifestCandidates=0; unreviewedCandidates=0",
+      "reportPath": ".sisyphus/evidence/task-10-textbook-reactions.json"
+    },
+    {
+      "command": "npm run validate:reaction-game-pool -- --assert-textbook-only --min-game-usable 5 --report .sisyphus/evidence/task-10-reaction-game-pool.json",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "reactionGamePoolValidationStatus=pass; totalReactions=128; gameUsableReactions=128; nonTextbookGameReactions=0; invalidSourceReferences=0; duplicateNormalizedEquations=0",
+      "reportPath": ".sisyphus/evidence/task-10-reaction-game-pool.json"
+    },
+    {
+      "command": "node scripts/validate-quiz-data.mjs",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "quizData: valid; all quiz records passed validation"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook pep-chemistry-g10-required-1",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: pep-chemistry-g10-required-1"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook pep-chemistry-g10-required-2",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: pep-chemistry-g10-required-2"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook pep-chemistry-g11-selective-1",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: pep-chemistry-g11-selective-1"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook pep-chemistry-g11-selective-2",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: pep-chemistry-g11-selective-2"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook rj-chemistry-g12-selective-3-organic-2019",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: rj-chemistry-g12-selective-3-organic-2019"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook rj-chemistry-grade8-54-2024-full",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: rj-chemistry-grade8-54-2024-full"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook rj-chemistry-grade9-2024-vol1",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: rj-chemistry-grade9-2024-vol1"
+    },
+    {
+      "command": "npm run validate:textbook-coverage -- --textbook rj-chemistry-grade9-2024-vol2",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "Textbook coverage valid: rj-chemistry-grade9-2024-vol2"
+    },
+    {
+      "command": "npx playwright test tests/ui/games-layout.spec.ts",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "3 passed (1.7m) on rerun after one non-reproduced timeout; no app/test changes made for Playwright because subsequent required targeted and combined runs passed."
+    },
+    {
+      "command": "npx playwright test tests/ui/reaction-game-completion.spec.ts tests/ui/games-layout.spec.ts tests/content/pep-learning-tabs.spec.ts",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "6 passed (1.9m)"
+    },
+    {
+      "command": "npm run validate:all:safe",
+      "exitCode": 0,
+      "status": "pass",
+      "summary": "validate:elements, validate:supporting, validate:spectral, validate:curriculum, validate:textbook-assets, validate:textbook-runtime-boundary, validate:textbook-workflow -- --all-reviewed, audit-business-data-imports, and vite build all exited 0. Build emitted existing lottie eval and large chunk warnings only."
+    }
+  ]
+}

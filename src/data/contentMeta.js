@@ -114,8 +114,7 @@ export const LAB_SAFETY_THEME = {
 export const GAME_KEYS = {
   drag: 'game-drag',
   memory: 'game-memory',
-  reaction: 'game-reaction',
-  collector: 'game-collector'
+  reaction: 'game-reaction'
 };
 
 export const GAME_META = {
@@ -170,110 +169,7 @@ export const GAME_META = {
       unlockMetadata: { stageIds: ['stage-4'], requiresTags: ['g10-redox-valence-change'], minimumLearnedElements: 80 }
     }
   },
-  collector: {
-    title: '元素收集',
-    kicker: 'COLLECTION VAULT',
-    description: '查看已学习元素的收集墙、完成率和阶段奖励，了解下一步学习目标。',
-    curriculumTags: ['intro-element-symbols'],
-    difficulty: '入门',
-    challengeMetadata: {
-      challengeId: 'challenge-c60-carbon-topic',
-      curriculumTags: ['g9-carbon-c60-allotrope'],
-      challengeGoals: [
-        { id: 'complete-c60-quiz-set', label: '完成 C60 / 碳单质主题测验记录', target: 3, metric: 'c60QuestionIds' },
-        { id: 'recognize-c60-source', label: '识别 C60 的碳单质与足球状结构来源', target: 1, metric: 'reviewedC60Topic' }
-      ],
-      scoringThresholds: { s: 90, a: 60, b: 30 },
-      unlockMetadata: { stageIds: ['stage-3'], requiresTags: ['g9-carbon-c60-allotrope'], minimumLearnedElements: 50 },
-      sourceReviewStatus: 'reviewed',
-      sourceReferences: [
-        {
-          volumeId: 'pep-chemistry-g9-2024',
-          sourcePath: 'src/data/textbooks/2024版人教版九年级化学上册/book.md',
-          lineRange: '3494-3504',
-          assetId: 'pep-g9-2024-up-figure-6-4-c60-formula',
-          note: 'C60 游戏挑战仅作为 collector 元数据，依据九年级上册第3494-3504行与图6-4已审核来源。'
-        }
-      ]
-    },
-    comparisonChallengeMetadata: {
-        challengeId: 'challenge-carbon-allotropes-comparison',
-        curriculumTags: ['g9-carbon-allotropes-comparison'],
-        challengeGoals: [
-          {
-            id: 'complete-comparison-quiz-set',
-            label: '完成碳单质比较主题测验记录',
-            target: 3,
-            metric: 'comparisonQuestionIds'
-          },
-          {
-            id: 'recognize-graphite-conductivity',
-            label: '识别石墨导电性与用途之间的关系',
-            target: 1,
-            metric: 'reviewedGraphiteProperty'
-          }
-        ],
-        scoringThresholds: {
-          s: 90,
-          a: 60,
-          b: 30
-        },
-        unlockMetadata: {
-          stageIds: ['stage-3'],
-          requiresTags: ['intro-element-symbols', 'g9-carbon-allotropes-comparison'],
-          minimumLearnedElements: 50
-        },
-        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
-        sourceReviewStatus: 'reviewed',
-        sourceReferences: [
-          {
-            sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
-            volumeId: 'pep-chemistry-g9-2024',
-            sourcePath: 'src/data/textbooks/2024版人教版九年级化学上册/book.md',
-            sourceHeading: '练习与应用',
-            lineRange: '3432-3462',
-            sourceHash: 'sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901',
-            candidateId: 'game-0295-source-section-l3610-l3664-d45787521d',
-            reviewedBy: 'textbook-reviewer',
-            reviewedAt: '2026-05-08T00:00:00.000Z',
-            assetReferences: [
-              {
-                assetId: '0295-source-section-l3610-l3664-d45787521d-asset-01',
-                sourceLineNumber: 3651
-              },
-              {
-                assetId: '0295-source-section-l3610-l3664-d45787521d-asset-02',
-                sourceLineNumber: 3654
-              }
-            ],
-            note: 'Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-game'
-          },
-          {
-            sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
-            volumeId: 'pep-chemistry-g9-2024',
-            sourcePath: 'src/data/textbooks/2024版人教版九年级化学上册/book.md',
-            sourceHeading: '练习与应用',
-            lineRange: '3494-3504',
-            sourceHash: 'sha256:05fc966e6fa296ce1f240a2ea03f6556dd610dcc5563fce19fe42f5e9acba901',
-            candidateId: 'game-0295-source-section-l3610-l3664-d45787521d',
-            reviewedBy: 'textbook-reviewer',
-            reviewedAt: '2026-05-08T00:00:00.000Z',
-            assetReferences: [
-              {
-                assetId: '0295-source-section-l3610-l3664-d45787521d-asset-01',
-                sourceLineNumber: 3651
-              },
-              {
-                assetId: '0295-source-section-l3610-l3664-d45787521d-asset-02',
-                sourceLineNumber: 3654
-              }
-            ],
-            assetId: 'pep-g9-2024-up-figure-6-4-c60-formula',
-            note: 'Reviewed promotion manifest entry promote-g9-carbon-allotropes-comparison-game supplemental C60 evidence'
-          }
-        ]
-      }
-  }
+  // collector game permanently removed per user requirement
 };
 
 export const TEXTBOOK_CHALLENGE_METADATA = [
@@ -33184,7 +33080,6 @@ export const GAME_LABELS = {
   [GAME_KEYS.drag]: GAME_META.drag.title,
   [GAME_KEYS.memory]: GAME_META.memory.title,
   [GAME_KEYS.reaction]: GAME_META.reaction.title,
-  [GAME_KEYS.collector]: GAME_META.collector.title,
   'quiz-full': '完整测验挑战'
 };
 
