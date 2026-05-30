@@ -23,7 +23,7 @@
     "textbook:promote": "node scripts/textbook/promote-topic.mjs",
     "validate:textbook-runtime-boundary": "node scripts/textbook/validate-runtime-boundary.mjs && node scripts/textbook/validate-runtime-integrity.mjs",
     "validate:textbook-workflow": "node scripts/textbook/validate-workflow.mjs",
-    "validate:all:safe": "npm run validate:elements && npm run validate:supporting && npm run validate:spectral && npm run validate:curriculum && npm run validate:textbook-assets && npm run validate:textbook-runtime-boundary && npm run validate:textbook-workflow -- --all-reviewed && node scripts/audit-business-data-imports.mjs && npm run build",
+    "validate:all:safe": "npm run validate:elements && npm run validate:supporting && node scripts/validate-quiz-data.mjs && npm run validate:spectral && npm run validate:curriculum && npm run validate:textbook-assets && npm run validate:textbook-runtime-boundary && npm run validate:textbook-workflow -- --all-reviewed && node scripts/audit-business-data-imports.mjs && npm run build",
     "validate:data": "npm run validate:elements && npm run validate:story-media && npm run validate:supporting && npm run validate:spectral && node scripts/audit-business-data-imports.mjs",
     "validate:story-media": "node scripts/validate-story-media.mjs",
     "validate:chem-notation": "node scripts/validate-chem-notation.mjs",

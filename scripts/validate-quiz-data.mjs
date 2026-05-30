@@ -2,14 +2,17 @@ import { parseArgs } from 'node:util';
 import { quizData } from '../src/data/index.js';
 
 const validDifficulties = new Set(['基础', '进阶', '挑战']);
-const placeholderPattern = /待复核|TODO|请补充|待填写|依据来源片段补全标准答案|placeholder/i;
+const placeholderPattern = /待审|待复核|TODO|请补充|待填写|补全标准答案|设计一道待审题目|placeholder/i;
 const selfCheckModes = new Set([
   'duplicate-options',
   'placeholder',
+  'runtime-placeholder-short-answer',
+  'runtime-under-optioned-short-answer',
   'missing-generation-source',
   'invalid-correct-index',
   'invalid-difficulty',
-  'missing-source-references'
+  'missing-source-references',
+  'vague-textbook-fragment'
 ]);
 
 main().catch((error) => {
@@ -114,6 +117,7 @@ function validateQuizData(data) {
     }
 
     validateBasicShape(quiz, label, errors, { isGenerated });
+    validateRuntimeEligibility(quiz, label, errors);
   }
 
   if (handAuthoredMcqCount < 26) {
@@ -225,6 +229,46 @@ function validateGeneratedRecord(quiz, label, errors) {
   }
 }
 
+function validateRuntimeEligibility(quiz, label, errors) {
+  validateNoPlaceholder(quiz.question, `${label} (${quiz.id}) question`, errors);
+  validateNoPlaceholder(quiz.explanation, `${label} (${quiz.id}) explanation`, errors);
+  validateStandaloneClarity(quiz, label, errors);
+
+  if (Array.isArray(quiz.options)) {
+    if (quiz.options.length < 4) {
+      errors.push(`${label} (${quiz.id}) runtime options 必须至少包含 4 个选项，实际 ${quiz.options.length}`);
+    }
+
+    for (const [optionIndex, option] of quiz.options.entries()) {
+      validateNoPlaceholder(option, `${label} (${quiz.id}) options[${optionIndex}]`, errors);
+    }
+  }
+}
+
+function validateStandaloneClarity(quiz, label, errors) {
+  const vagueQuestionPattern = /学习[“"“"「].+[”"”"」]这一(段|片段)，?应该掌握哪条事实[？?]/;
+  const rawPassageOptionPattern = /【问题】\.{3}|【问题】…/;
+  const vagueExplanationPattern = /教材片段说明：/;
+
+  if (typeof quiz.question === 'string') {
+    if (vagueQuestionPattern.test(quiz.question) || (/(学习|应该掌握)/.test(quiz.question) && /这一(段|片段)/.test(quiz.question))) {
+      errors.push(`${label} (${quiz.id}) question 包含模糊教材片段引用`);
+    }
+  }
+
+  if (typeof quiz.explanation === 'string' && vagueExplanationPattern.test(quiz.explanation)) {
+    errors.push(`${label} (${quiz.id}) explanation 包含模糊教材片段说明`);
+  }
+
+  if (Array.isArray(quiz.options)) {
+    for (const [optionIndex, option] of quiz.options.entries()) {
+      if (typeof option === 'string' && rawPassageOptionPattern.test(option)) {
+        errors.push(`${label} (${quiz.id}) options[${optionIndex}] 包含原始教材片段标记`);
+      }
+    }
+  }
+}
+
 function validateNoPlaceholder(value, label, errors) {
   if (typeof value === 'string' && placeholderPattern.test(value)) {
     errors.push(`${label} 包含占位符文本`);
@@ -265,6 +309,28 @@ function buildInvalidFixture(sourceQuizData, mode) {
       sourceReferences: [
         { sourceVolumeId: 'test-volume', candidateId: 'test-candidate', note: 'test' }
       ]
+    });
+  } else if (mode === 'runtime-placeholder-short-answer') {
+    items.push({
+      id: 'invalid-runtime-placeholder-short-answer',
+      question: '围绕“【实验3-1】”设计一道待审题目。',
+      options: ['补全标准答案'],
+      correctIndex: 0,
+      category: 'shortAnswer',
+      difficulty: '基础',
+      curriculumTags: ['test-tag'],
+      explanation: '待复核'
+    });
+  } else if (mode === 'runtime-under-optioned-short-answer') {
+    items.push({
+      id: 'invalid-runtime-under-optioned-short-answer',
+      question: '测试运行时选项数量不足',
+      options: ['唯一选项'],
+      correctIndex: 0,
+      category: 'shortAnswer',
+      difficulty: '基础',
+      curriculumTags: ['test-tag'],
+      explanation: '测试解释'
     });
   } else if (mode === 'missing-generation-source') {
     items.push({
@@ -326,6 +392,22 @@ function buildInvalidFixture(sourceQuizData, mode) {
       generatedFromShortAnswer: true,
       generationSource: 'test-fixture',
       sourceReferences: []
+    });
+  } else if (mode === 'vague-textbook-fragment') {
+    items.push({
+      id: 'invalid-vague-textbook-fragment',
+      question: '学习“化学反应前后物质的质量关系”这一片段，应该掌握哪条事实？',
+      options: ['化学反应前后物质的质量关系【问题】...', '错误选项A', '错误选项B', '错误选项C'],
+      correctIndex: 0,
+      category: '测试',
+      difficulty: '基础',
+      curriculumTags: ['test-tag'],
+      explanation: '教材片段说明：化学反应前后物质的质量关系',
+      generatedFromShortAnswer: true,
+      generationSource: 'test-fixture',
+      sourceReferences: [
+        { sourceVolumeId: 'test-volume', candidateId: 'test-candidate', note: 'test' }
+      ]
     });
   }
 
