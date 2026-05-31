@@ -13,6 +13,7 @@ import {
 } from './storage.js';
 
 const ACHIEVEMENT_CATEGORY_META = {
+  element: { label: '元素', icon: 'sparkles' },
   learning: { label: '学习', icon: 'book-open' },
   experiment: { label: '实验', icon: 'flask-conical' },
   quiz: { label: '测验', icon: 'clipboard-check' },
@@ -177,27 +178,9 @@ function renderAchievements() {
 
   const unlockedIds = getUnlockedAchievements();
   const unlockDates = getAchievementDates();
-  const completionPercent = achievementsData.length
-    ? Math.round((unlockedIds.size / achievementsData.length) * 100)
-    : 0;
   const grouped = groupAchievementsByCategory();
 
   container.innerHTML = `
-    <section class="achievement-overview hud-shell">
-      <div class="achievement-overview-copy">
-        <p class="hud-kicker">ACHIEVEMENT ARCHIVE</p>
-        <h3>成长成就中心</h3>
-        <p>这里会自动追踪你的学习、实验、游戏和测验表现，并在达成目标时即时点亮徽章。</p>
-      </div>
-      <div class="achievement-overview-stats">
-        <article class="achievement-stat-card"><span>总成就数</span><strong>${achievementsData.length}</strong></article>
-        <article class="achievement-stat-card"><span>已解锁</span><strong>${unlockedIds.size}</strong></article>
-        <article class="achievement-stat-card"><span>完成率</span><strong>${completionPercent}%</strong></article>
-      </div>
-      <div class="progress-bar-track achievement-overview-bar">
-        <span class="progress-bar-fill" style="width:${completionPercent}%"></span>
-      </div>
-    </section>
     ${Object.entries(grouped).map(([category, achievements]) => renderCategorySection(category, achievements, unlockedIds, unlockDates)).join('')}
   `;
 }

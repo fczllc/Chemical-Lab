@@ -1,7 +1,7 @@
 export const achievementsData = [
   {
     "id": "achievement-first-element",
-    "category": "learning",
+    "category": "element",
     "title": "初识元素",
     "description": "第一次学习一个元素，正式踏入元素探索之旅。",
     "unlockText": "学习第 1 个元素",
@@ -18,7 +18,7 @@ export const achievementsData = [
   },
   {
     "id": "achievement-learning-apprentice",
-    "category": "learning",
+    "category": "element",
     "title": "初级探索者",
     "description": "累计学习 10 个元素，已经能认出许多常见元素。",
     "unlockText": "学习 10 个元素",
@@ -35,7 +35,7 @@ export const achievementsData = [
   },
   {
     "id": "achievement-element-collector",
-    "category": "learning",
+    "category": "element",
     "title": "元素收集家",
     "description": "累计学习 50 个元素，收藏墙开始变得丰富起来。",
     "unlockText": "学习 50 个元素",
@@ -52,7 +52,7 @@ export const achievementsData = [
   },
   {
     "id": "achievement-element-master",
-    "category": "learning",
+    "category": "element",
     "title": "元素大师",
     "description": "学习全部 118 个元素，完成完整的周期表探索。",
     "unlockText": "学习全部 118 个元素",

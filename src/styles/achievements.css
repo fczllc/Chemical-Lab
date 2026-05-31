@@ -18,7 +18,6 @@ body:has(#progress.active) .detail-panel.docked {
   gap: 18px;
 }
 
-.achievement-overview,
 .achievement-category-block,
 .progress-dashboard,
 .progress-learning-path,
@@ -31,7 +30,6 @@ body:has(#progress.active) .detail-panel.docked {
   box-shadow: 0 20px 52px rgba(2, 6, 23, 0.28);
 }
 
-.achievement-overview,
 .achievement-category-block,
 .progress-dashboard,
 .progress-learning-path,
@@ -39,12 +37,6 @@ body:has(#progress.active) .detail-panel.docked {
   padding: 22px;
 }
 
-.achievement-overview {
-  display: grid;
-  gap: 16px;
-}
-
-.achievement-overview-copy,
 .achievement-category-header,
 .progress-dashboard-header,
 .progress-learning-header,
@@ -56,7 +48,6 @@ body:has(#progress.active) .detail-panel.docked {
   gap: 12px;
 }
 
-.achievement-overview-copy,
 .progress-dashboard-copy,
 .progress-stage-detail-copy,
 .achievement-card p,
@@ -74,7 +65,6 @@ body:has(#progress.active) .detail-panel.docked {
   font-size: 0.8rem;
 }
 
-.achievement-overview-stats,
 .progress-stat-grid,
 .progress-metrics-grid,
 .achievement-category-grid,
@@ -83,7 +73,6 @@ body:has(#progress.active) .detail-panel.docked {
   gap: 14px;
 }
 
-.achievement-overview-stats,
 .progress-stat-grid {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
