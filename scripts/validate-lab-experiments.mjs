@@ -5,6 +5,7 @@ import process from 'node:process';
 
 const projectRoot = process.cwd();
 const evidenceRoot = path.join(projectRoot, '.sisyphus', 'evidence');
+const labTextbookCandidateInventoryPath = path.join(evidenceRoot, 'lab-textbook-candidate-inventory.json');
 
 /**
  * Runtime lab experiment schema and inclusion/content-quality predicates.
@@ -81,6 +82,14 @@ const REQUIRED_FIELDS = [
 
 const ALLOWED_SOURCE_KINDS = new Set(['textbookExperiment', 'curatedLegacy']);
 
+const ALLOWED_SOURCE_REVIEW_STATUSES = new Set([
+  'needsReview',
+  'reviewed',
+  'legacy-preserved'
+]);
+
+const FINAL_CANDIDATE_ACTIONS = new Set(['add', 'merge', 'skip']);
+
 const ALLOWED_SAFETY_LEVELS = new Set([
   'safe',
   'caution',
@@ -155,6 +164,8 @@ async function main() {
     return;
   }
 
+  const inventoryLoadResult = await loadLabTextbookCandidateInventory();
+
   const labPath = path.join(projectRoot, 'src', 'data', 'labExperiments.json');
   let labPayload = null;
   try {
@@ -176,7 +187,11 @@ async function main() {
   }
 
   const records = Array.isArray(labPayload?.labExperiments) ? labPayload.labExperiments : [];
-  const result = validateLabExperiments(records, options);
+  const result = validateLabExperiments(records, {
+    ...options,
+    inventory: inventoryLoadResult.inventory,
+    inventoryLoadError: inventoryLoadResult.error
+  });
 
   await maybeWriteReport(options.report, result);
   printResult(result);
@@ -239,6 +254,8 @@ Self-check names:
   source-reference-union Verify merged provenance fixtures retain all source references.
   safety-risk-summary     Verify Chinese safety risk summaries pass quality rules.
   safety-note-quality     Verify fallback phrases, empty notes, English notes, and step copies are rejected.
+  candidate-target-accounting Verify add/merge inventory actions require targetExperimentId.
+  duplicate-textbook-source Verify duplicate normalized titles within one textbook source are rejected.
 
 Options:
   --report <path>  Write JSON validation report under .sisyphus/evidence/.
@@ -267,6 +284,10 @@ function runSelfCheck(checkName) {
       return selfCheckSafetyRiskSummary();
     case 'safety-note-quality':
       return selfCheckSafetyNoteQuality();
+    case 'candidate-target-accounting':
+      return selfCheckCandidateTargetAccounting();
+    case 'duplicate-textbook-source':
+      return selfCheckDuplicateTextbookSource();
     default:
       throw new Error(`Unknown self-check: ${checkName}`);
   }
@@ -741,7 +762,94 @@ function selfCheckSafetyNoteQuality() {
   };
 }
 
-function validateLabExperiments(records, _options) {
+function selfCheckCandidateTargetAccounting() {
+  const representedRecord = makeValidLabRecord({
+    id: 'lab-self-check-target-accounting',
+    experimentId: 'lab-self-check-target-accounting',
+    sourceReferences: [makeSourceReference('target-accounting-candidate', 'rj-chemistry-grade9-2024-vol1', 'target-accounting-section')]
+  });
+  const inventory = {
+    volumes: [
+      {
+        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+        experimentCandidatesStatus: 'present',
+        labCandidatesCount: 1,
+        experimentCandidatesCount: 1
+      }
+    ],
+    candidates: [
+      {
+        candidateId: 'target-accounting-candidate',
+        sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+        sourcePath: 'self-check/rj-chemistry-grade9-2024-vol1.md',
+        sourceSectionId: 'target-accounting-section',
+        includeCandidate: true,
+        action: 'add'
+      }
+    ]
+  };
+
+  const result = validateLabExperiments([makeStarterLabRecord(), representedRecord], { inventory });
+  const status = result.status === 'fail' && result.counters.unrepresentedCandidates === 1 ? 'pass' : 'fail';
+
+  return {
+    schemaVersion: 1,
+    validator: 'scripts/validate-lab-experiments.mjs',
+    check: 'candidate-target-accounting',
+    status,
+    counters: result.counters,
+    errors: status === 'pass' ? [] : ['candidate-target-accounting expected add/merge inventory actions without targetExperimentId to fail even when runtime provenance exists']
+  };
+}
+
+function selfCheckDuplicateTextbookSource() {
+  const first = makeValidLabRecord({
+    id: 'lab-self-check-source-title-a',
+    experimentId: 'lab-self-check-source-title-a',
+    title: '氧气助燃实验',
+    name: '氧气助燃实验',
+    sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+    sourceReferences: [makeSourceReference('candidate-source-title-a', 'rj-chemistry-grade9-2024-vol1', 'section-a')]
+  });
+  const duplicate = makeValidLabRecord({
+    id: 'lab-self-check-source-title-b',
+    experimentId: 'lab-self-check-source-title-b',
+    title: '氧气 助燃实验#abc12345',
+    name: '氧气助燃实验',
+    textbookContent: '把带火星木条伸入另一瓶氧气中，观察复燃现象。',
+    steps: ['准备另一瓶氧气。', '把带火星木条伸入另一瓶氧气。', '观察复燃现象。'],
+    sourceVolumeId: 'rj-chemistry-grade9-2024-vol1',
+    sourceReferences: [makeSourceReference('candidate-source-title-b', 'rj-chemistry-grade9-2024-vol1', 'section-a')]
+  });
+  const separateSource = makeValidLabRecord({
+    id: 'lab-self-check-source-title-c',
+    experimentId: 'lab-self-check-source-title-c',
+    title: '氧气助燃实验',
+    name: '氧气助燃实验',
+    textbookContent: '把带火星木条伸入另一册教材的氧气集气瓶中，观察复燃现象。',
+    steps: ['准备另一册教材中的氧气。', '伸入带火星木条。', '观察复燃现象。'],
+    sourceVolumeId: 'rj-chemistry-grade8-54-2024-full',
+    sourceReferences: [makeSourceReference('candidate-source-title-c', 'rj-chemistry-grade8-54-2024-full', 'section-c')]
+  });
+
+  const acceptedResult = validateLabExperiments([makeStarterLabRecord({ id: 'lab-self-check-source-title-starter' }), first, separateSource]);
+  const rejectedResult = validateLabExperiments([makeStarterLabRecord({ id: 'lab-self-check-source-title-starter' }), first, duplicate]);
+  const status = acceptedResult.status === 'pass' && rejectedResult.status === 'fail' && rejectedResult.counters.duplicateTextbookSourceTitles === 1 ? 'pass' : 'fail';
+
+  return {
+    schemaVersion: 1,
+    validator: 'scripts/validate-lab-experiments.mjs',
+    check: 'duplicate-textbook-source',
+    status,
+    normalizedTitle: normalizedTextbookTitleForDuplicateCheck(first.title),
+    acceptedCounters: acceptedResult.counters,
+    rejectedCounters: rejectedResult.counters,
+    rejected: rejectedResult.details.duplicateTextbookSourceTitles,
+    errors: status === 'pass' ? [] : ['duplicate-textbook-source expected duplicate normalized title within one textbook source to be rejected while another source passes']
+  };
+}
+
+function validateLabExperiments(records, options = {}) {
   const errors = [];
   const details = {
     missingRequiredFields: [],
@@ -761,12 +869,24 @@ function validateLabExperiments(records, _options) {
     duplicateContentClusters: [],
     invalidSafetyNotes: [],
     invalidSourceReferences: [],
-    duplicateSourceReferences: []
+    duplicateSourceReferences: [],
+    invalidSourceReviewStatus: [],
+    invalidTextbookMetadata: [],
+    duplicateExperimentIds: [],
+    duplicateTextbookSourceTitles: [],
+    invalidInventoryVolumes: [],
+    unrepresentedCandidates: [],
+    pendingCandidateActions: []
   };
   const seenIds = new Set();
+  const seenExperimentIds = new Set();
   const contentFingerprints = new Map();
+  const textbookTitleSources = new Map();
+  const provenanceIndex = buildRuntimeProvenanceIndex(records);
   let lockedRecords = 0;
   let starterRecords = 0;
+  let textbookBackedRecords = 0;
+  let curatedLegacyRecords = 0;
 
   for (const record of records) {
     const id = record?.id || 'unknown-lab-record';
@@ -775,6 +895,12 @@ function validateLabExperiments(records, _options) {
       details.duplicateIds.push(id);
     }
     seenIds.add(id);
+
+    const experimentId = record?.experimentId || 'unknown-experiment-id';
+    if (seenExperimentIds.has(experimentId)) {
+      details.duplicateExperimentIds.push(experimentId);
+    }
+    seenExperimentIds.add(experimentId);
 
     // Required fields
     for (const field of REQUIRED_FIELDS) {
@@ -793,11 +919,22 @@ function validateLabExperiments(records, _options) {
     if (!ALLOWED_SOURCE_KINDS.has(record?.sourceKind)) {
       details.invalidSourceKind.push(`${id}: sourceKind "${record?.sourceKind}" not allowed`);
     }
+    if (!ALLOWED_SOURCE_REVIEW_STATUSES.has(record?.sourceReviewStatus)) {
+      details.invalidSourceReviewStatus.push(`${id}: sourceReviewStatus "${record?.sourceReviewStatus}" not allowed`);
+    }
     if (record?.sourceKind === 'curatedLegacy' && !ORIGINAL_CURATED_EXPERIMENT_IDS.has(id)) {
       details.invalidCuratedLegacyIds.push(`${id}: curatedLegacy is allowed only for original curated experiment IDs`);
     }
     if (record?.sourceKind !== 'curatedLegacy' && record?.sourceKind !== 'textbookExperiment') {
       details.invalidTextbookSourceKind.push(`${id}: non-curated records must use sourceKind textbookExperiment`);
+    }
+    if (record?.sourceKind === 'textbookExperiment') {
+      textbookBackedRecords += 1;
+      details.invalidTextbookMetadata.push(...textbookMetadataIssuesFor(record));
+      collectDuplicateTextbookTitleIssues(record, textbookTitleSources, details.duplicateTextbookSourceTitles);
+    }
+    if (record?.sourceKind === 'curatedLegacy') {
+      curatedLegacyRecords += 1;
     }
 
     // safetyLevel
@@ -923,6 +1060,9 @@ function validateLabExperiments(records, _options) {
   if (details.duplicateIds.length > 0) {
     errors.push(`${details.duplicateIds.length} duplicate id(s)`);
   }
+  if (details.duplicateExperimentIds.length > 0) {
+    errors.push(`${details.duplicateExperimentIds.length} duplicate experimentId(s)`);
+  }
   if (details.duplicateContentClusters.length > 0) {
     errors.push(`${details.duplicateContentClusters.length} duplicate canonical content cluster(s)`);
   }
@@ -934,6 +1074,29 @@ function validateLabExperiments(records, _options) {
   }
   if (details.duplicateSourceReferences.length > 0) {
     errors.push(`${details.duplicateSourceReferences.length} duplicate source reference(s)`);
+  }
+  if (details.invalidSourceReviewStatus.length > 0) {
+    errors.push(`${details.invalidSourceReviewStatus.length} sourceReviewStatus issue(s)`);
+  }
+  if (details.invalidTextbookMetadata.length > 0) {
+    errors.push(`${details.invalidTextbookMetadata.length} textbook metadata issue(s)`);
+  }
+  if (details.duplicateTextbookSourceTitles.length > 0) {
+    errors.push(`${details.duplicateTextbookSourceTitles.length} duplicate textbook source/title issue(s)`);
+  }
+
+  const inventoryCoverage = validateInventoryCoverage(options.inventory, provenanceIndex, details);
+  if (options.inventoryLoadError) {
+    errors.push(options.inventoryLoadError);
+  }
+  if (details.invalidInventoryVolumes.length > 0) {
+    errors.push(`${details.invalidInventoryVolumes.length} inventory volume issue(s)`);
+  }
+  if (details.unrepresentedCandidates.length > 0) {
+    errors.push(`${details.unrepresentedCandidates.length} included textbook candidate(s) are not represented by add/merge or explicit skip`);
+  }
+  if (details.pendingCandidateActions.length > 0) {
+    errors.push(`${details.pendingCandidateActions.length} included textbook candidate(s) still have pending final action`);
   }
 
   return {
@@ -959,10 +1122,24 @@ function validateLabExperiments(records, _options) {
       nonArrayFields: details.nonArrayFields.length,
       emptyArrayFields: details.emptyArrayFields.length,
       duplicateIds: details.duplicateIds.length,
+      duplicateExperimentIds: details.duplicateExperimentIds.length,
       duplicateContentClusters: details.duplicateContentClusters.length,
       invalidSafetyNotes: details.invalidSafetyNotes.length,
       invalidSourceReferences: details.invalidSourceReferences.length,
-      duplicateSourceReferences: details.duplicateSourceReferences.length
+      duplicateSourceReferences: details.duplicateSourceReferences.length,
+      invalidSourceReviewStatus: details.invalidSourceReviewStatus.length,
+      invalidTextbookMetadata: details.invalidTextbookMetadata.length,
+      duplicateTextbookSourceTitles: details.duplicateTextbookSourceTitles.length,
+      invalidInventoryVolumes: details.invalidInventoryVolumes.length,
+      unrepresentedCandidates: details.unrepresentedCandidates.length,
+      pendingCandidateActions: details.pendingCandidateActions.length,
+      textbookBackedRecords,
+      curatedLegacyRecords,
+      representedCandidates: inventoryCoverage.representedCandidates,
+      mergedCandidates: inventoryCoverage.mergedCandidates,
+      skippedCandidates: inventoryCoverage.skippedCandidates,
+      labCandidatesConsidered: inventoryCoverage.labCandidatesConsidered,
+      experimentCandidatesConsidered: inventoryCoverage.experimentCandidatesConsidered
     },
     errors,
     details
@@ -1210,6 +1387,260 @@ function sourceReferenceIssuesFor(record) {
     seen.add(key);
   }
   return { invalid, duplicates };
+}
+
+function textbookMetadataIssuesFor(record) {
+  const id = record?.id || 'unknown-lab-record';
+  const issues = [];
+  if (!hasText(record?.sourceVolumeId) || record.sourceVolumeId === 'curated-legacy') {
+    issues.push(`${id}: textbookExperiment sourceVolumeId must identify a textbook volume`);
+  }
+  if (!ALLOWED_SOURCE_REVIEW_STATUSES.has(record?.sourceReviewStatus) || record.sourceReviewStatus === 'legacy-preserved') {
+    issues.push(`${id}: textbookExperiment sourceReviewStatus must be a textbook review status`);
+  }
+  if (!Array.isArray(record?.sourceReferences) || record.sourceReferences.length === 0) {
+    issues.push(`${id}: textbookExperiment must include sourceReferences`);
+    return issues;
+  }
+
+  for (const [index, ref] of record.sourceReferences.entries()) {
+    const label = `${id}: sourceReferences[${index}]`;
+    if (!isRecord(ref)) {
+      issues.push(`${label} must be an object`);
+      continue;
+    }
+    if (!hasText(ref.candidateId) && !hasText(ref.sourceSectionId)) {
+      issues.push(`${label} must include candidateId or sourceSectionId`);
+    }
+    if (!hasText(ref.sourceVolumeId)) {
+      issues.push(`${label}.sourceVolumeId must identify the source volume`);
+    }
+    if (!hasText(ref.sourceKind) || ref.sourceKind === 'curatedLegacy') {
+      issues.push(`${label}.sourceKind must identify textbook provenance`);
+    }
+    if ('sourcePath' in ref && !hasText(ref.sourcePath)) {
+      issues.push(`${label}.sourcePath must be a non-empty string when present`);
+    }
+  }
+
+  return issues;
+}
+
+function collectDuplicateTextbookTitleIssues(record, textbookTitleSources, issues) {
+  const id = record?.id || 'unknown-lab-record';
+  const titleKey = normalizedTextbookTitleForDuplicateCheck(record?.title);
+  if (!titleKey || !Array.isArray(record?.sourceReferences)) {
+    return;
+  }
+
+  const recordKeys = new Set();
+  for (const ref of record.sourceReferences) {
+    if (!isRecord(ref)) {
+      continue;
+    }
+    const sourceKey = textbookSourceTitleKey(ref, record, titleKey);
+    if (!sourceKey || recordKeys.has(sourceKey)) {
+      continue;
+    }
+    recordKeys.add(sourceKey);
+
+    const prior = textbookTitleSources.get(sourceKey);
+    if (!prior) {
+      textbookTitleSources.set(sourceKey, { id, title: record.title, record, ref });
+      continue;
+    }
+    if (prior.id === id) {
+      continue;
+    }
+    if (hasDocumentedDistinctTextbookTitle(record, ref) || hasDocumentedDistinctTextbookTitle(prior.record, prior.ref)) {
+      continue;
+    }
+    issues.push(`${id}: duplicates normalized title "${titleKey}" from ${prior.id} within textbook source ${sourceKey}`);
+  }
+}
+
+function textbookSourceTitleKey(ref, record, titleKey) {
+  const sourceVolumeId = stringValue(ref?.sourceVolumeId || record?.sourceVolumeId);
+  const sourcePath = stringValue(ref?.sourcePath);
+  const sourceSectionId = stringValue(ref?.sourceSectionId || ref?.candidateId);
+  if (!sourceVolumeId || !sourceSectionId) {
+    return '';
+  }
+  return [sourceVolumeId, sourcePath, sourceSectionId, titleKey].map(canonicalContentText).join('|');
+}
+
+function hasDocumentedDistinctTextbookTitle(record, ref) {
+  if (!record || !ref) {
+    return false;
+  }
+  if (record.distinctTextbookSourceTitle === true || hasText(record.duplicateTitleJustification)) {
+    return true;
+  }
+  return /distinct|不同实验|独立实验|同名/u.test(stringValue(ref.note));
+}
+
+function normalizedTextbookTitleForDuplicateCheck(value) {
+  return stringValue(value)
+    .normalize('NFKC')
+    .replace(/【实验[^】\s，。；;:：]*(?:】|\s+)?/gu, ' ')
+    .replace(/\[实验[^\]\s,.，。;；:：]*(?:\]|\s+)?/gu, ' ')
+    .replace(/\b(?:sha256:)?[a-f0-9]{8,}\b/giu, ' ')
+    .replace(/[#_-]?[a-f0-9]{8,}\b/giu, ' ')
+    .replace(/[\s\p{P}\p{S}]/gu, '')
+    .toLowerCase();
+}
+
+async function loadLabTextbookCandidateInventory() {
+  try {
+    return {
+      inventory: JSON.parse(await readFile(labTextbookCandidateInventoryPath, 'utf8')),
+      error: null
+    };
+  } catch (error) {
+    return {
+      inventory: null,
+      error: `Failed to read .sisyphus/evidence/lab-textbook-candidate-inventory.json: ${error.message}`
+    };
+  }
+}
+
+function buildRuntimeProvenanceIndex(records) {
+  const candidateIds = new Set();
+  const sourceSectionIds = new Set();
+  const sourcePathLines = new Set();
+  const sourcePathSections = new Set();
+  const targetExperimentIds = new Set();
+
+  for (const record of records) {
+    if (!record || typeof record !== 'object') {
+      continue;
+    }
+    if (hasText(record.id)) targetExperimentIds.add(record.id);
+    if (hasText(record.experimentId)) targetExperimentIds.add(record.experimentId);
+    for (const ref of Array.isArray(record.sourceReferences) ? record.sourceReferences : []) {
+      if (!isRecord(ref)) {
+        continue;
+      }
+      if (hasText(ref.candidateId)) candidateIds.add(ref.candidateId);
+      if (hasText(ref.sourceSectionId)) sourceSectionIds.add(ref.sourceSectionId);
+      if (hasText(ref.sourcePath) && hasText(ref.lineRange)) sourcePathLines.add(`${ref.sourcePath}|${ref.lineRange}`);
+      if (hasText(ref.sourcePath) && hasText(ref.sourceSectionId)) sourcePathSections.add(`${ref.sourcePath}|${ref.sourceSectionId}`);
+    }
+  }
+
+  return { candidateIds, sourceSectionIds, sourcePathLines, sourcePathSections, targetExperimentIds };
+}
+
+function validateInventoryCoverage(inventory, provenanceIndex, details) {
+  const counters = {
+    representedCandidates: 0,
+    mergedCandidates: 0,
+    skippedCandidates: 0,
+    labCandidatesConsidered: 0,
+    experimentCandidatesConsidered: 0
+  };
+
+  if (!inventory) {
+    return counters;
+  }
+
+  if (!Array.isArray(inventory.volumes)) {
+    details.invalidInventoryVolumes.push('inventory.volumes must be an array');
+  } else {
+    for (const [index, volume] of inventory.volumes.entries()) {
+      const label = `inventory.volumes[${index}]`;
+      if (!hasText(volume?.sourceVolumeId)) {
+        details.invalidInventoryVolumes.push(`${label}: sourceVolumeId is required`);
+      }
+      if (!hasText(volume?.experimentCandidatesStatus) || !['present', 'absent'].includes(volume.experimentCandidatesStatus)) {
+        details.invalidInventoryVolumes.push(`${label}: experimentCandidatesStatus must record present/absent`);
+      }
+      counters.labCandidatesConsidered += Number.isInteger(volume?.labCandidatesCount) ? volume.labCandidatesCount : 0;
+      counters.experimentCandidatesConsidered += Number.isInteger(volume?.experimentCandidatesCount) ? volume.experimentCandidatesCount : 0;
+    }
+  }
+
+  if (!Array.isArray(inventory.candidates)) {
+    details.invalidInventoryVolumes.push('inventory.candidates must be an array');
+    return counters;
+  }
+
+  for (const candidate of inventory.candidates) {
+    if (candidate?.includeCandidate !== true) {
+      continue;
+    }
+
+    const action = finalCandidateActionFor(candidate);
+    const representedInRuntime = isCandidateRepresented(candidate, provenanceIndex);
+    const targetExperimentId = candidateTargetExperimentId(candidate);
+    const hasRuntimeTarget = hasText(targetExperimentId) && provenanceIndex.targetExperimentIds.has(targetExperimentId);
+
+    if (action === 'skip') {
+      counters.skippedCandidates += 1;
+      if (!hasText(candidate.inclusionSkipReason) && !hasText(candidate.skipReason)) {
+        details.unrepresentedCandidates.push(`${candidateLabel(candidate)}: skip action must include a reason`);
+      }
+      continue;
+    }
+
+    if (action === 'merge') {
+      counters.mergedCandidates += 1;
+    }
+
+    if (action === 'add' || action === 'merge' || representedInRuntime || hasRuntimeTarget) {
+      counters.representedCandidates += 1;
+    }
+
+    if (!FINAL_CANDIDATE_ACTIONS.has(action)) {
+      details.pendingCandidateActions.push(`${candidateLabel(candidate)}: final action is "${action || 'missing'}"`);
+      continue;
+    }
+
+    if ((action === 'add' || action === 'merge') && !hasText(targetExperimentId)) {
+      details.unrepresentedCandidates.push(`${candidateLabel(candidate)}: ${action} action must include targetExperimentId`);
+      continue;
+    }
+
+    if ((action === 'add' || action === 'merge') && !representedInRuntime && !hasRuntimeTarget) {
+      details.unrepresentedCandidates.push(`${candidateLabel(candidate)}: ${action} action is not represented in runtime sourceReferences or targetExperimentId`);
+    }
+  }
+
+  return counters;
+}
+
+function finalCandidateActionFor(candidate) {
+  return stringValue(candidate?.action || candidate?.finalAction || candidate?.candidateAction || candidate?.preliminaryAction);
+}
+
+function candidateTargetExperimentId(candidate) {
+  return stringValue(candidate?.targetExperimentId || candidate?.experimentId || candidate?.mergedIntoExperimentId || candidate?.runtimeExperimentId);
+}
+
+function isCandidateRepresented(candidate, provenanceIndex) {
+  if (!candidate || !provenanceIndex) {
+    return false;
+  }
+  const candidateIds = [candidate.candidateId, candidate.enrichment?.matchedExperimentCandidateId].filter(hasText);
+  if (candidateIds.some((candidateId) => provenanceIndex.candidateIds.has(candidateId))) {
+    return true;
+  }
+  if (hasText(candidate.sourceSectionId) && provenanceIndex.sourceSectionIds.has(candidate.sourceSectionId)) {
+    return true;
+  }
+  const sourcePath = stringValue(candidate.sourcePath);
+  if (sourcePath && hasText(candidate.sourceSectionId) && provenanceIndex.sourcePathSections.has(`${sourcePath}|${candidate.sourceSectionId}`)) {
+    return true;
+  }
+  const provenance = candidate.sourceProvenance;
+  if (sourcePath && Number.isInteger(provenance?.sourceLineStart) && Number.isInteger(provenance?.sourceLineEnd)) {
+    return provenanceIndex.sourcePathLines.has(`${sourcePath}|${provenance.sourceLineStart}-${provenance.sourceLineEnd}`);
+  }
+  return false;
+}
+
+function candidateLabel(candidate) {
+  return candidate?.candidateId || candidate?.sourceSectionId || 'unknown-inventory-candidate';
 }
 
 function uniqueSourceReferences(refs = []) {

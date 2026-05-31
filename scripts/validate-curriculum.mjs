@@ -42,7 +42,7 @@ const allowedReactionUnlockKeys = new Set([
   'grade',
   'chapter'
 ]);
-const expectedGameIds = ['drag', 'memory', 'reaction', 'collector'];
+const expectedGameIds = ['drag', 'memory', 'reaction'];
 const allowedGameChallengeMetadataKeys = new Set([
   'challengeId',
   'curriculumTags',
