@@ -1,6 +1,6 @@
 /** ===== 实验室模块 ===== */
 import { LAB_SAFETY_THEME, SAFETY_LABELS } from '../data/contentMeta.js';
-import { curriculumTags, learningPath, labExperiments as importedLabExperiments } from '../data/index.js';
+import { curriculumTags, learningPath, labExperiments as importedLabExperiments, textbookAssetManifest } from '../data/index.js';
 import { getCurrentSection, navigateTo } from './router.js';
 import {
   getCompletedExperiments,
@@ -103,7 +103,7 @@ let filterText = '';
 let filterSafety = 'all';
 let filterCompletion = 'all';
 let filterLock = 'all';
-let filterGrade = 'all';
+let filterTextbook = 'all';
 
 function refreshLabIcons() {
   window.requestAnimationFrame(() => createIcons({ icons }));
@@ -184,25 +184,31 @@ function renderLabShell() {
   const filteredReactions = labExperiments.filter((experiment) => {
     const isRelated = focusSymbol ? (experiment.reactants || []).some((item) => item.includes(focusSymbol)) : false;
     const isCompleted = completed.has(experiment.experimentId);
-    const unlockState = getReactionUnlockState(experiment, { completed, learned });
 
     if (filterSafety !== 'all' && experiment.safetyLevel !== filterSafety) return false;
     if (filterCompletion === 'completed' && !isCompleted) return false;
     if (filterCompletion === 'uncompleted' && isCompleted) return false;
-    if (filterLock === 'unlocked' && !unlockState.unlocked) return false;
-    if (filterLock === 'locked' && unlockState.unlocked) return false;
-    if (filterLock === 'related' && (!unlockState.unlocked || !isRelated)) return false;
-    if (filterLock === 'general' && (!unlockState.unlocked || isRelated)) return false;
+    if (filterLock === 'related' && !isRelated) return false;
+    if (filterLock === 'general' && isRelated) return false;
 
-    const grade = experiment.unlockRequirements?.grade || '';
-    if (filterGrade !== 'all' && grade !== filterGrade) return false;
+    const textbookIds = new Set();
+    if (experiment.sourceVolumeId && experiment.sourceVolumeId !== 'curated-legacy') {
+      textbookIds.add(experiment.sourceVolumeId);
+    }
+    if (Array.isArray(experiment.sourceReferences)) {
+      experiment.sourceReferences.forEach((ref) => {
+        if (ref.sourceVolumeId && ref.sourceVolumeId !== 'curated-legacy') {
+          textbookIds.add(ref.sourceVolumeId);
+        }
+      });
+    }
+    if (filterTextbook !== 'all' && !textbookIds.has(filterTextbook)) return false;
 
     if (filterText.trim()) {
       const query = filterText.trim().toLowerCase();
       const haystack = [
         experiment.name,
         experiment.description,
-        renderUnlockSummary(unlockState),
         (experiment.reactants || []).join(' '),
         (experiment.products || []).join(' ')
       ].join(' ').toLowerCase();
@@ -228,7 +234,6 @@ function renderLabShell() {
     list.innerHTML = filteredReactions.map((experiment) => {
       const isRelated = focusSymbol ? (experiment.reactants || []).some((item) => item.includes(focusSymbol)) : false;
       const isCompleted = completed.has(experiment.experimentId);
-      const unlockState = getReactionUnlockState(experiment, { completed, learned });
       const safetyTheme = getSafetyTheme(experiment.safetyLevel);
 
       const titleSource = getEffectiveExperimentTitleSource(experiment);
@@ -238,7 +243,7 @@ function renderLabShell() {
       const paddedSerial = getExperimentSerial(experiment.id, experimentIndexMap, maxIndexDigits);
 
       return `
-        <article class="lab-item-card ${experiment.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''} ${unlockState.unlocked ? '' : 'is-locked'}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
+        <article class="lab-item-card ${experiment.id === activeReaction?.id ? 'is-active' : ''} ${isRelated ? 'is-related' : ''}" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
           <div class="lab-item-card-header">
             <div class="lab-item-card-title-wrap">
               <span class="lab-card-serial" data-testid="lab-card-index" aria-label="实验序号 ${paddedSerial.replace(/^NO. /, '')}">${paddedSerial}</span>
@@ -249,10 +254,9 @@ function renderLabShell() {
           </div>
           <div class="lab-card-meta-row">
             <span class="lab-safety-pill level-${experiment.safetyLevel.replace(/\s+/g, '-')}"><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[experiment.safetyLevel] || experiment.safetyLevel}</span>
-            <span class="lab-card-status">${unlockState.unlocked ? (isRelated ? '与当前元素相关' : '通用演示实验') : '课程进度锁定'}</span>
+            <span class="lab-card-status">${isRelated ? '与当前元素相关' : '通用演示实验'}</span>
           </div>
           <p class="lab-card-description">${renderCardDescription(experiment.description)}</p>
-          <p class="lab-card-clue">${renderUnlockSummary(unlockState)}</p>
           <button class="hud-action-btn lab-card-action" data-reaction-open="${experiment.id}">查看实验</button>
         </article>
       `;
@@ -449,7 +453,44 @@ function ensureLabToolbar(section, selectedElement) {
 
   // Only rebuild toolbar HTML on first creation to avoid wiping focus/selection.
   if (!toolbar.dataset.labToolbarReady) {
-    const grades = [...new Set(labExperiments.map((r) => r.unlockRequirements?.grade).filter(Boolean))];
+    const volumeDisplayNames = new Map();
+    (textbookAssetManifest?.volumes || []).forEach((vol) => {
+      if (vol.volumeId && vol.displayName) volumeDisplayNames.set(vol.volumeId, vol.displayName);
+    });
+
+    const textbookIds = new Set();
+    labExperiments.forEach((exp) => {
+      if (exp.sourceVolumeId && exp.sourceVolumeId !== 'curated-legacy') textbookIds.add(exp.sourceVolumeId);
+      if (Array.isArray(exp.sourceReferences)) {
+        exp.sourceReferences.forEach((ref) => {
+          if (ref.sourceVolumeId && ref.sourceVolumeId !== 'curated-legacy') textbookIds.add(ref.sourceVolumeId);
+        });
+      }
+    });
+    const textbooks = [...textbookIds].sort();
+
+    const TEXTBOOK_LABEL_ALIASES = new Map([
+      ['rj-chemistry-g12-selective-3-organic-2019', '2019版人教版高中化学-选择性必修3 有机化学基础'],
+      ['rj-chemistry-grade8-54-2024-full', '2024版人教版（五·四学制）八年级化学全一册'],
+      ['rj-chemistry-grade9-2024-vol1', '2024版人教版九年级化学上册'],
+      ['rj-chemistry-grade9-2024-vol2', '2024版人教版九年级化学下册']
+    ]);
+
+    function resolveTextbookLabel(volumeId) {
+      const alias = TEXTBOOK_LABEL_ALIASES.get(volumeId);
+      if (alias) return alias;
+
+      const expWithName = labExperiments.find((e) =>
+        (e.sourceVolumeId === volumeId && e.sourceVolumeDisplayName) ||
+        (Array.isArray(e.sourceReferences) && e.sourceReferences.some((r) => r.sourceVolumeId === volumeId && r.sourceVolumeDisplayName))
+      );
+      if (expWithName) {
+        if (expWithName.sourceVolumeId === volumeId && expWithName.sourceVolumeDisplayName) return expWithName.sourceVolumeDisplayName;
+        const ref = expWithName.sourceReferences.find((r) => r.sourceVolumeId === volumeId && r.sourceVolumeDisplayName);
+        if (ref) return ref.sourceVolumeDisplayName;
+      }
+      return volumeDisplayNames.get(volumeId) || volumeId;
+    }
 
     toolbar.innerHTML = `
       <div class="lab-toolbar-top">
@@ -475,17 +516,15 @@ function ensureLabToolbar(section, selectedElement) {
             <option value="completed">已完成</option>
             <option value="uncompleted">未完成</option>
           </select>
-          <select class="lab-filter-select" data-lab-filter="lock" title="锁定状态">
+          <select class="lab-filter-select" data-lab-filter="lock" title="关联状态">
             <option value="all">全部</option>
-            <option value="unlocked">已开放</option>
-            <option value="locked">已锁定</option>
             <option value="related">当前元素相关</option>
             <option value="general">通用演示</option>
           </select>
-          ${grades.length ? `
-          <select class="lab-filter-select" data-lab-filter="grade" title="年级">
-            <option value="all">全部年级</option>
-            ${grades.map((g) => `<option value="${escapeAttr(g)}">${escapeAttr(g)}</option>`).join('')}
+          ${textbooks.length ? `
+          <select class="lab-filter-select" data-lab-filter="textbook" title="教材名称">
+            <option value="all">全部教材</option>
+            ${textbooks.map((id) => `<option value="${escapeAttr(id)}">${escapeAttr(resolveTextbookLabel(id))}</option>`).join('')}
           </select>
           ` : ''}
         </div>
@@ -499,7 +538,7 @@ function ensureLabToolbar(section, selectedElement) {
         if (key === 'safety') filterSafety = control.value;
         if (key === 'completion') filterCompletion = control.value;
         if (key === 'lock') filterLock = control.value;
-        if (key === 'grade') filterGrade = control.value;
+        if (key === 'textbook') filterTextbook = control.value;
 
         renderLabShell();
       };
@@ -524,8 +563,8 @@ function ensureLabToolbar(section, selectedElement) {
   if (completionSelect) completionSelect.value = filterCompletion;
   const lockSelect = toolbar.querySelector('[data-lab-filter="lock"]');
   if (lockSelect) lockSelect.value = filterLock;
-  const gradeSelect = toolbar.querySelector('[data-lab-filter="grade"]');
-  if (gradeSelect) gradeSelect.value = filterGrade;
+  const textbookSelect = toolbar.querySelector('[data-lab-filter="textbook"]');
+  if (textbookSelect) textbookSelect.value = filterTextbook;
   // Sync info text that may change when selectedElement changes.
   const infoStrong = toolbar.querySelector('.lab-toolbar-info strong');
   if (infoStrong) {
@@ -608,7 +647,6 @@ function exitTitleEditMode() {
 
 function renderReactionDetail(experiment, isCompleted) {
   const safetyTheme = getSafetyTheme(experiment.safetyLevel);
-  const unlockState = getReactionUnlockState(experiment);
   const chemRows = renderChemistrySummaryRows(experiment);
   const isEditingTitle = editingTitleReactionId === experiment.id;
   const titleSource = getEffectiveExperimentTitleSource(experiment);
@@ -647,14 +685,6 @@ function renderReactionDetail(experiment, isCompleted) {
         <div class="lab-summary-row">
           <span>完成状态</span>
           <strong>${isCompleted ? '已完成记录' : '等待完成'}</strong>
-        </div>
-        <div class="lab-summary-row">
-          <span>课程解锁</span>
-          <strong>${unlockState.unlocked ? '已开放' : '需继续学习'}</strong>
-        </div>
-        <div class="lab-summary-row">
-          <span>解锁要求</span>
-          <strong>${renderUnlockSummary(unlockState)}</strong>
         </div>
       </div>
       <div class="lab-stage-layout">
@@ -733,7 +763,6 @@ function hasFormulaList(value) {
 
 function renderSafetyView(experiment, isCompleted) {
   const safetyTheme = getSafetyTheme(experiment.safetyLevel);
-  const unlockState = getReactionUnlockState(experiment);
 
   return `
     <div class="lab-stage-shell hud-shell" style="--lab-accent:${safetyTheme.color}; --lab-accent-glow:${safetyTheme.glow}">
@@ -747,7 +776,7 @@ function renderSafetyView(experiment, isCompleted) {
       <div class="lab-safety-modal">
         <div class="lab-safety-alert level-${experiment.safetyLevel.replace(/\s+/g, '-')}">
           <strong><i data-lucide="${safetyTheme.icon}"></i> ${SAFETY_LABELS[experiment.safetyLevel] || experiment.safetyLevel}</strong>
-          <p>${unlockState.unlocked ? '开始前请先阅读本次实验的操作提示与实验守则。' : '该实验需要先完成对应课程进度，暂时只能查看说明。'}</p>
+          <p>开始前请先阅读本次实验的操作提示与实验守则。</p>
         </div>
         <div class="lab-stage-layout">
           <div class="lab-notebook-card">
@@ -775,37 +804,9 @@ function renderSafetyView(experiment, isCompleted) {
 }
 
 function getReactionUnlockState(experiment, state = {}) {
-  const requirements = experiment.unlockRequirements;
-  const completed = state.completed || getCompletedExperiments();
-  if (completed.has(experiment.experimentId)) {
-    return { unlocked: true, summary: '当前实验已开放。', requirements: [] };
-  }
-  if (!requirements) {
-    return { unlocked: false, summary: '需完成对应课程主题或学习阶段后开放查看。', requirements: [] };
-  }
-
-  const learned = state.learned || getLearnedElements();
-  const learnedCount = learned.size;
-  const requiredTags = Array.isArray(requirements.curriculumTags) ? requirements.curriculumTags : [];
-  const requiredSafetyLevels = Array.isArray(requirements.safetyLevels) ? requirements.safetyLevels : [];
-  const requiredStages = Array.isArray(requirements.stageIds) ? requirements.stageIds : [];
-  const minimumLearnedElements = Number.isInteger(requirements.minimumLearnedElements)
-    ? requirements.minimumLearnedElements
-    : 0;
-  const safetyMatched = requiredSafetyLevels.length === 0 || requiredSafetyLevels.includes(experiment.safetyLevel);
-  const tagsMatched = true;
-  const progressMatched = learnedCount >= minimumLearnedElements || requiredStages.some((stageId) => isLearningStageUnlocked(stageId, learnedCount));
-  const unlocked = safetyMatched && tagsMatched && progressMatched;
-
-  return {
-    unlocked,
-    requirements: [
-      ...requiredTags.map((tagId) => CURRICULUM_TAG_MAP.get(tagId)?.displayPath || tagId),
-      minimumLearnedElements > 0 ? `学习元素达到 ${minimumLearnedElements} 个` : '',
-      requirements.grade && requirements.chapter ? `${requirements.grade}/${requirements.chapter}` : ''
-    ].filter(Boolean),
-    summary: unlocked ? '课程、安全与进度要求已满足。' : '需完成对应课程主题或学习阶段后开放查看。'
-  };
+  // Unlock gating removed: all experiments are treated as unlocked.
+  // This function is kept for backward compatibility with any external callers.
+  return { unlocked: true, summary: '当前实验已开放。', requirements: [] };
 }
 
 function isLearningStageUnlocked(stageId, learnedCount) {

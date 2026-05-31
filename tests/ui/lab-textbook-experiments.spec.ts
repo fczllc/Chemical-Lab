@@ -112,21 +112,92 @@ test.describe('Lab textbook experiment content', () => {
     });
   });
 
-  test('clean state shows locked and unlocked cards', async ({ page }) => {
+  test('no locked cards or unlock hints in clean state', async ({ page }) => {
     await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
     await waitForAppReady(page);
 
     const lockedCards = page.locator('.lab-item-card.is-locked');
-    const unlockedCards = page.locator('.lab-item-card:not(.is-locked)');
     const lockedCount = await lockedCards.count();
-    const unlockedCount = await unlockedCards.count();
+    expect(lockedCount).toBe(0);
 
-    expect(lockedCount).toBeGreaterThan(0);
-    expect(unlockedCount).toBeGreaterThan(0);
+    const cards = page.locator('.lab-item-card');
+    const cardTexts = await cards.allTextContents();
+    const allText = cardTexts.join('\n');
+    expect(allText).not.toContain('课程进度锁定');
+    expect(allText).not.toContain('需继续学习');
+    expect(allText).not.toContain('学习元素达到');
 
-    await writeEvidence('task-7-lab-locked-state.json', {
+    await writeEvidence('task-7-lab-no-locked-state.json', {
       lockedCount,
-      unlockedCount
+      totalCards: await cards.count()
+    });
+  });
+
+  test('formerly locked card is clickable and shows completion button', async ({ page }) => {
+    // Seed a fixture that would have been locked under old unlock logic
+    await page.evaluate(async () => {
+      const { labExperiments } = await import('/src/data/index.js');
+      const lockedFixture = {
+        id: 'textbook-fixture-formerly-locked-exp-001',
+        name: '高阶锁定实验',
+        description: '此实验在旧逻辑中需要学习大量元素后才解锁。',
+        textbookContent: '高阶实验内容。',
+        reactants: ['U'],
+        products: ['U'],
+        equationText: 'U → U',
+        experimentId: 'textbook-fixture-formerly-locked-exp-001-experiment',
+        safetyLevel: 'safe',
+        visualDescription: '观察现象。',
+        steps: ['准备材料。', '执行实验。'],
+        safetyNotes: ['注意安全'],
+        curriculumTags: ['grade12-advanced'],
+        difficulty: '高中',
+        unlockRequirements: { curriculumTags: ['grade12-advanced'], safetyLevels: ['safe'], stageIds: [], minimumLearnedElements: 999, grade: '高中', chapter: '高阶实验' },
+        sourceVolumeId: 'test-fixture',
+        sourceReviewStatus: 'reviewed',
+        sourceReferences: []
+      };
+      const existingIndex = labExperiments.findIndex((e) => e.id === lockedFixture.id);
+      if (existingIndex >= 0) labExperiments.splice(existingIndex, 1, lockedFixture);
+      else labExperiments.push(lockedFixture);
+    });
+
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const card = page.locator('.lab-item-card', { hasText: '高阶锁定实验' });
+    await expect(card).toBeVisible({ timeout: 10000 });
+
+    // Must not have is-locked class
+    const hasLockedClass = await card.evaluate((el) => el.classList.contains('is-locked'));
+    expect(hasLockedClass).toBe(false);
+
+    // Must not show locked status text
+    await expect(card).not.toContainText('课程进度锁定');
+    await expect(card).not.toContainText('需继续学习');
+
+    // Must be clickable and open detail modal
+    await card.locator('button[data-reaction-open]').click();
+    const modal = page.locator('.lab-detail-modal');
+    await expect(modal).toBeVisible({ timeout: 10000 });
+
+    // Detail modal must not show unlock requirement hints
+    await expect(modal).not.toContainText('课程进度锁定');
+    await expect(modal).not.toContainText('需继续学习');
+    await expect(modal).not.toContainText('学习元素达到');
+    await expect(modal).not.toContainText('解锁要求');
+
+    // Must show completion button (since not completed)
+    const confirmButton = modal.locator('button[data-lab-confirm-complete]');
+    await expect(confirmButton).toBeVisible();
+    await expect(confirmButton).toHaveText('确认完成实验');
+
+    await modal.locator('button[data-lab-back]').click();
+    await expect(modal).toBeHidden({ timeout: 10000 });
+
+    await writeEvidence('task-7-lab-formerly-locked-clickable.json', {
+      hasLockedClass,
+      confirmButtonVisible: true
     });
   });
 
@@ -486,6 +557,163 @@ test.describe('Lab textbook experiment content', () => {
     test('simulation completion shows result view in detail modal', async ({ page }) => {
       test.skip(true, 'Experiment animations removed; completion is confirmed in detail modal');
     });
+
+  test('textbook filter default and options', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const textbookSelect = page.locator('select[data-lab-filter="textbook"]');
+    await expect(textbookSelect).toBeVisible({ timeout: 10000 });
+
+    const defaultValue = await textbookSelect.inputValue();
+    expect(defaultValue).toBe('all');
+
+    const defaultOption = textbookSelect.locator('option[value="all"]');
+    await expect(defaultOption).toHaveText('全部教材');
+
+    const options = await textbookSelect.locator('option').allInnerTexts();
+    const nonAllOptions = options.filter((o) => o !== '全部教材');
+    expect(nonAllOptions.length).toBeGreaterThan(0);
+
+    const gradeRemnant = options.some((o) => o.includes('全部年级'));
+    expect(gradeRemnant).toBe(false);
+
+    await writeEvidence('task-5-playwright-lab-textbook-filter.json', {
+      status: 'pass',
+      defaultValue,
+      defaultOptionText: '全部教材',
+      totalOptions: options.length,
+      nonAllOptionsCount: nonAllOptions.length,
+      sampleOptions: nonAllOptions.slice(0, 5),
+      gradeRemnantPresent: gradeRemnant
+    });
+  });
+
+  test('textbook filter options show Chinese labels for generated volume IDs', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const textbookSelect = page.locator('select[data-lab-filter="textbook"]');
+    await expect(textbookSelect).toBeVisible({ timeout: 10000 });
+
+    const optionValues = await textbookSelect.locator('option').evaluateAll((opts) =>
+      opts.map((o) => ({ text: o.textContent || '', value: o.getAttribute('value') || '' }))
+    );
+
+    const expectedMappings: Record<string, string> = {
+      'rj-chemistry-g12-selective-3-organic-2019': '2019版人教版高中化学-选择性必修3 有机化学基础',
+      'rj-chemistry-grade8-54-2024-full': '2024版人教版（五·四学制）八年级化学全一册',
+      'rj-chemistry-grade9-2024-vol1': '2024版人教版九年级化学上册',
+      'rj-chemistry-grade9-2024-vol2': '2024版人教版九年级化学下册'
+    };
+
+    for (const [value, expectedLabel] of Object.entries(expectedMappings)) {
+      const match = optionValues.find((o) => o.value === value);
+      expect(match, `expected option with value "${value}" to exist`).toBeTruthy();
+      expect(match?.text).toBe(expectedLabel);
+    }
+
+    // Ensure no raw generated IDs appear as option text
+    const rawIdPatterns = [
+      'rj-chemistry-g12-selective-3-organic-2019',
+      'rj-chemistry-grade8-54-2024-full',
+      'rj-chemistry-grade9-2024-vol1',
+      'rj-chemistry-grade9-2024-vol2'
+    ];
+    for (const raw of rawIdPatterns) {
+      const foundAsText = optionValues.some((o) => o.text === raw);
+      expect(foundAsText, `raw ID "${raw}" should not appear as option text`).toBe(false);
+    }
+
+    await writeEvidence('task-5-textbook-label-chinese.json', {
+      status: 'pass',
+      optionValues,
+      expectedMappings
+    });
+  });
+
+  test('textbook filter matching-only and reset-to-all', async ({ page }) => {
+    await page.goto('/#/lab', { waitUntil: 'domcontentloaded' });
+    await waitForAppReady(page);
+
+    const textbookSelect = page.locator('select[data-lab-filter="textbook"]');
+    await expect(textbookSelect).toBeVisible({ timeout: 10000 });
+
+    const options = await textbookSelect.locator('option').allInnerTexts();
+    const optionValues = await textbookSelect.locator('option').evaluateAll((opts) =>
+      opts.map((o) => ({ text: o.textContent || '', value: o.getAttribute('value') || '' }))
+    );
+
+    // Pick a known textbook with represented cards (pep-chemistry-g10-required-1 is well-represented)
+    const targetOption = optionValues.find((o) => o.value === 'pep-chemistry-g10-required-1');
+    expect(targetOption).toBeTruthy();
+
+    const allVisibleCount = await page.locator('.lab-item-card').count();
+    expect(allVisibleCount).toBeGreaterThan(0);
+
+    await textbookSelect.selectOption({ value: 'pep-chemistry-g10-required-1' });
+    // Wait for filtered render
+    await expect.poll(async () => page.locator('.lab-item-card').count(), {
+      timeout: 10000,
+      intervals: [100, 200, 500]
+    }).toBeLessThanOrEqual(allVisibleCount);
+
+    const filteredCount = await page.locator('.lab-item-card').count();
+    expect(filteredCount).toBeGreaterThan(0);
+    expect(filteredCount).toBeLessThanOrEqual(allVisibleCount);
+
+    const visibleCardIds = await page.locator('.lab-item-card button[data-reaction-open]').evaluateAll((buttons) =>
+      buttons.map((b) => b.getAttribute('data-reaction-open')).filter(Boolean)
+    );
+
+    // Verify every visible card matches selected textbook via runtime data
+    const mismatchIds = await page.evaluate(async (selectedVolumeId) => {
+      const { labExperiments } = await import('/src/data/index.js');
+      const mismatches: string[] = [];
+      const visibleIds = Array.from(document.querySelectorAll('.lab-item-card button[data-reaction-open]'))
+        .map((b) => b.getAttribute('data-reaction-open'))
+        .filter(Boolean);
+      for (const id of visibleIds) {
+        const exp = labExperiments.find((e) => e.id === id);
+        if (!exp) {
+          mismatches.push(id);
+          continue;
+        }
+        const ids = new Set<string>();
+        if (exp.sourceVolumeId && exp.sourceVolumeId !== 'curated-legacy') ids.add(exp.sourceVolumeId);
+        if (Array.isArray(exp.sourceReferences)) {
+          exp.sourceReferences.forEach((ref: any) => {
+            if (ref.sourceVolumeId && ref.sourceVolumeId !== 'curated-legacy') ids.add(ref.sourceVolumeId);
+          });
+        }
+        if (!ids.has(selectedVolumeId)) mismatches.push(id);
+      }
+      return mismatches;
+    }, 'pep-chemistry-g10-required-1');
+
+    expect(mismatchIds).toEqual([]);
+
+    // Reset to all and assert count returns
+    await textbookSelect.selectOption({ value: 'all' });
+    await expect.poll(async () => page.locator('.lab-item-card').count(), {
+      timeout: 10000,
+      intervals: [100, 200, 500]
+    }).toBe(allVisibleCount);
+
+    const resetCount = await page.locator('.lab-item-card').count();
+    expect(resetCount).toBe(allVisibleCount);
+
+    await writeEvidence('task-5-filter-matching.json', {
+      status: 'pass',
+      allVisibleCount,
+      filteredCount,
+      resetCount,
+      selectedTextbook: targetOption?.text,
+      selectedValue: targetOption?.value,
+      visibleCardIds,
+      mismatchIds
+    });
+  });
 });
 
 async function waitForAppReady(page) {
