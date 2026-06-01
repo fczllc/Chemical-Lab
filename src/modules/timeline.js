@@ -4,6 +4,7 @@ import {
   ELEMENT_CATEGORY_LABELS,
   ELEMENT_CATEGORY_TABLE_COLORS
 } from '../data/contentMeta.js';
+import timelineCatImage from '../images/cat-2.png';
 
 const categoryColors = ELEMENT_CATEGORY_TABLE_COLORS;
 
@@ -70,6 +71,13 @@ function renderTimelinePage() {
   container.innerHTML = `
     <div class="timeline-page-shell">
       <section class="timeline-hero glass-panel neon-border">
+        <img
+          class="module-cat timeline-cat"
+          src="${timelineCatImage}"
+          alt=""
+          aria-hidden="true"
+          data-testid="floating-timeline-cat"
+        />
         <div class="timeline-hero-copy">
           <p class="timeline-kicker">元素发现博物馆</p>
           <h3>沿着霓虹时间轴，看看 118 种元素如何一步步走进人类的视野。</h3>
