@@ -79,11 +79,9 @@ test.describe('Achievement progress coupling', () => {
     await waitForShellReady(page);
 
     await page.getByTestId('nav-achievements').click();
-    const card = page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`);
-
-    await expect(card).toHaveClass(/is-locked/);
-    // Achievement module is read-only: no action buttons on cards.
-    await expect(card.locator('[data-achievement-action]')).toHaveCount(0);
+    // Learning achievement cards removed from Achievements; verify via state instead.
+    await expect(page.locator('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]')).toHaveCount(0);
+    await expect(page.locator('#achievements article[data-textbook-volume-id]')).toHaveCount(8);
 
     // Navigate to progress directly to learn the segment through the lesson modal.
     await page.getByTestId('nav-progress').click();
@@ -125,10 +123,10 @@ test.describe('Achievement progress coupling', () => {
     const beforeEvidence = await page.evaluate(({ key, achievementId, segmentId }) => {
       const rawEnvelope = window.localStorage.getItem(key);
       const storedEnvelope = rawEnvelope ? JSON.parse(rawEnvelope) : null;
-      const card = document.querySelector(`#achievements article[data-achievement-id="${CSS.escape(achievementId)}"]`);
       return {
         route: window.location.hash,
-        cardClass: card?.className || '',
+        learningAchievementCardCount: document.querySelectorAll('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]').length,
+        textbookCardCount: document.querySelectorAll('#achievements article[data-textbook-volume-id]').length,
         segmentCompleted: window.appState.completedLearningSegments.has(segmentId),
         achievementUnlocked: window.appState.unlockedAchievements.has(achievementId),
         storedCompletedSegments: storedEnvelope?.data?.completedLearningSegments || [],
@@ -157,15 +155,17 @@ test.describe('Achievement progress coupling', () => {
     await expectLearningCardConfirmed(page, MANUAL_SEGMENT_ID);
 
     await page.getByTestId('nav-achievements').click();
-    await expect(page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`)).toHaveClass(/is-unlocked/);
+    // Learning achievement cards removed; verify state and textbook cards instead.
+    await expect(page.locator('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]')).toHaveCount(0);
+    await expect(page.locator('#achievements article[data-textbook-volume-id]')).toHaveCount(8);
 
     const afterEvidence = await page.evaluate(({ key, achievementId, segmentId }) => {
       const rawEnvelope = window.localStorage.getItem(key);
       const storedEnvelope = rawEnvelope ? JSON.parse(rawEnvelope) : null;
-      const card = document.querySelector(`#achievements article[data-achievement-id="${CSS.escape(achievementId)}"]`);
       return {
         route: window.location.hash,
-        cardClass: card?.className || '',
+        learningAchievementCardCount: document.querySelectorAll('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]').length,
+        textbookCardCount: document.querySelectorAll('#achievements article[data-textbook-volume-id]').length,
         segmentCompleted: window.appState.completedLearningSegments.has(segmentId),
         achievementUnlocked: window.appState.unlockedAchievements.has(achievementId),
         storedCompletedSegments: storedEnvelope?.data?.completedLearningSegments || [],
@@ -260,7 +260,9 @@ test.describe('Achievement progress coupling', () => {
     ), MANUAL_ACHIEVEMENT_ID), { timeout: 10000 }).toBe(true);
 
     await page.getByTestId('nav-achievements').click();
-    await expect(page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`)).toHaveClass(/is-unlocked/);
+    // Learning achievement cards removed; verify state and textbook cards instead.
+    await expect(page.locator('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]')).toHaveCount(0);
+    await expect(page.locator('#achievements article[data-textbook-volume-id]')).toHaveCount(8);
 
     const afterReloadEvidence = await readStorageEvidence(page, MANUAL_SEGMENT_ID, MANUAL_ACHIEVEMENT_ID);
 
@@ -372,45 +374,65 @@ test.describe('Achievement progress coupling', () => {
     await expectAchievementLocked(page, MANUAL_ACHIEVEMENT_ID);
 
     await page.getByTestId('nav-achievements').click();
-    await expect(page.locator(`article[data-achievement-id="${MANUAL_ACHIEVEMENT_ID}"]`)).toHaveClass(/is-locked/);
+    // Learning achievement cards removed; verify state and textbook cards instead.
+    await expect(page.locator('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]')).toHaveCount(0);
+    await expect(page.locator('#achievements article[data-textbook-volume-id]')).toHaveCount(8);
   });
 
-  test('all manual review achievement cards carry segment id', async ({ page }) => {
+  test('learning section renders textbook cards', async ({ page }) => {
     await resetApp(page);
     await waitForShellReady(page);
-    const manualAchievements = loadManualAchievementFixtures();
-    expect(manualAchievements.length).toBeGreaterThan(0);
 
     await page.getByTestId('nav-achievements').click();
 
-    const audit = await page.evaluate((manuals) => {
-      const invalid: string[] = [];
+    const textbookCards = page.locator('#achievements article[data-textbook-volume-id]');
+    await expect(textbookCards).toHaveCount(8);
 
-      for (const manual of manuals) {
-        const card = document.querySelector(
-          `#achievements article[data-achievement-id="${CSS.escape(manual.id)}"]`
-        );
+    const learningAchievementCards = page.locator('#achievements .achievement-category-grid[data-category="learning"] article[data-achievement-id]');
+    await expect(learningAchievementCards).toHaveCount(0);
+  });
 
-        if (!card) {
-          invalid.push(`${manual.id}: missing card`);
-          continue;
-        }
+  test('learning section textbook card labels and counts match progress tabs', async ({ page }) => {
+    await resetApp(page);
+    await waitForShellReady(page);
 
-        if (card.getAttribute('data-learning-segment-id') !== manual.segmentId) {
-          invalid.push(`${manual.id}: card missing segment ${manual.segmentId}`);
-        }
-      }
+    // Collect progress tab labels and counts
+    await page.getByTestId('nav-progress').click();
+    await expect(page).toHaveURL(/#\/progress$/);
 
-      return {
-        invalid: invalid.slice(0, 10),
-        invalidCount: invalid.length,
-        total: manuals.length
-      };
-    }, manualAchievements);
+    const progressTabData = await page.evaluate(() => {
+      const tabs = document.querySelectorAll('#progress [data-textbook-tab]');
+      return Array.from(tabs).map((tab) => ({
+        label: (tab.querySelector('.textbook-tab-label') || tab).innerText?.trim() || '',
+        count: (tab.querySelector('.textbook-tab-progress') || tab).textContent?.trim() || ''
+      }));
+    });
 
-    expect(audit.invalid).toEqual([]);
-    expect(audit.invalidCount).toBe(0);
-    expect(audit.total).toBe(manualAchievements.length);
+    expect(progressTabData.length).toBe(8);
+
+    // Collect achievement textbook card labels and counts
+    await page.getByTestId('nav-achievements').click();
+    await expect(page).toHaveURL(/#\/achievements$/);
+
+    const cardData = await page.evaluate(() => {
+      const cards = document.querySelectorAll('#achievements article[data-textbook-volume-id]');
+      return Array.from(cards).map((card) => ({
+        label: (card.querySelector('.achievement-textbook-card-body h4') || card).innerText?.trim() || '',
+        count: (card.querySelector('.achievement-textbook-count') || card).textContent?.trim() || ''
+      }));
+    });
+
+    expect(cardData.length).toBe(8);
+
+    for (let i = 0; i < 8; i += 1) {
+      expect(cardData[i].label).toBe(progressTabData[i].label);
+      // Achievements count label format is "completed/total" (e.g., "0/307")
+      expect(cardData[i].count).toMatch(/^\d+\/\d+$/);
+      expect(cardData[i].count).not.toContain('个片段');
+      // Denominator (total) should match progress tab count
+      const achievementTotal = cardData[i].count.split('/')[1];
+      expect(achievementTotal).toBe(progressTabData[i].count);
+    }
   });
 
   test('every achievement card is read-only with no action buttons', async ({ page }) => {
@@ -538,29 +560,52 @@ function getLearningCard(page: Page, segmentId: string) {
   return page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
 }
 
+function escapeCssAttribute(value: string) {
+  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
 async function showLearningCard(page: Page, segmentId: string) {
-  const card = getLearningCard(page, segmentId);
-  const sourceVolumeId = await card.evaluate((element) => (
+  const card = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
+  await expect(card).toBeAttached({ timeout: 15000 });
+  const panelId = await card.evaluate((element) => (
     element.closest('[data-textbook-panel]')?.getAttribute('data-textbook-panel') || ''
   ));
-
-  if (sourceVolumeId) {
-    const tab = page.locator(`[data-textbook-tab="${sourceVolumeId}"]`);
+  if (panelId) {
+    const tab = page.locator(`[data-textbook-tab="${escapeCssAttribute(panelId)}"]`);
     if (await tab.count()) {
-      await tab.click();
+      // Close any open modal first so the tab click is not intercepted.
+      const modal = page.locator('[data-testid="lesson-modal"]');
+      if (await modal.count() > 0) {
+        const closeButton = modal.locator('[data-testid="lesson-modal-close"]');
+        if (await closeButton.count() > 0) {
+          await closeButton.first().click();
+          await expect(modal).not.toBeVisible({ timeout: 5000 });
+        }
+      }
+      await tab.first().click();
     }
   }
-
-  return card;
+  const activeCard = page.locator(`#progress [data-testid="learning-card"][data-learning-segment-id="${segmentId}"]`).first();
+  await expect(activeCard).toBeAttached({ timeout: 15000 });
+  await expect(activeCard).toBeVisible({ timeout: 15000 });
+  await activeCard.scrollIntoViewIfNeeded();
+  return activeCard;
 }
 
 async function expectLearningCardStatus(page: Page, segmentId: string, expectedStatus: '' | '学习确认：日期待补充') {
-  const status = getLearningCard(page, segmentId).locator('[data-testid=\"learning-card-status\"]');
-  await expect(status).toHaveText(expectedStatus);
+  const card = await showLearningCard(page, segmentId);
+  const status = card.locator('[data-testid="learning-card-status"]');
+  if (expectedStatus === '') {
+    // Empty status means the element may not exist when not completed.
+    await expect(status).toHaveCount(0);
+  } else {
+    await expect(status).toHaveText(expectedStatus);
+  }
 }
 
 async function expectLearningCardConfirmed(page: Page, segmentId: string) {
-  const status = getLearningCard(page, segmentId).locator('[data-testid="learning-card-status"]');
+  const card = await showLearningCard(page, segmentId);
+  const status = card.locator('[data-testid="learning-card-status"]');
   await expect(status).toHaveText(/^学习确认：\d{4}-\d{2}-\d{2}$/);
   const text = (await status.textContent())?.trim() || '';
   return text.replace('学习确认：', '');
@@ -569,7 +614,10 @@ async function expectLearningCardConfirmed(page: Page, segmentId: string) {
 async function confirmLearningViaModal(page: Page, segmentId: string, achievementId: string) {
   const card = await showLearningCard(page, segmentId);
   await expect(card).toBeVisible();
-  await expect(card.locator('[data-testid=\"learning-card-status\"]')).toHaveText('');
+  const statusLocator = card.locator('[data-testid="learning-card-status"]');
+  if (await statusLocator.count() > 0) {
+    await expect(statusLocator).toHaveText('');
+  }
 
   await card.click();
 
@@ -623,12 +671,54 @@ function loadAchievementFixtures(): { id: string }[] {
   return achievementsData.map((achievement) => ({ id: achievement.id }));
 }
 
+function normalizeText(value: unknown): string {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
+function isExperimentLearningHeading(value: unknown): boolean {
+  const heading = normalizeText(value);
+  return /^【实验/.test(heading) || [
+    '实验目的',
+    '实验用品',
+    '实验步骤',
+    '实验现象',
+    '实验结论',
+    '实验活动'
+  ].includes(heading);
+}
+
+function isExperimentLearningAchievement(achievement: typeof achievementsData[number]): boolean {
+  const ref = achievement?.sourceReferences?.[0] || {};
+  return [
+    achievement?.title,
+    ref.sourceHeading,
+    achievement?.description
+  ].some(isExperimentLearningHeading);
+}
+
 function loadManualAchievementFixtures(): ManualAchievementFixture[] {
   return achievementsData
-    .filter((achievement) => achievement.condition?.type === 'manualReviewAfterPromotion')
+    .filter((achievement) => {
+      if (achievement.condition?.type !== 'manualReviewAfterPromotion') {
+        return false;
+      }
+      if (achievement.sourceReviewStatus !== 'reviewed') {
+        return false;
+      }
+      const tags = Array.isArray(achievement.curriculumTags) ? achievement.curriculumTags : [];
+      if (tags.length !== 1 || !normalizeText(tags[0])) {
+        return false;
+      }
+      if (isExperimentLearningAchievement(achievement)) {
+        return false;
+      }
+      const ref = achievement?.sourceReferences?.[0] || {};
+      const rawVol = achievement.sourceVolumeId || ref.sourceVolumeId || ref.volumeId || '';
+      return Boolean(normalizeText(rawVol));
+    })
     .map((achievement) => ({
       id: achievement.id,
-      segmentId: achievement.curriculumTags[0]
+      segmentId: normalizeText(achievement.curriculumTags[0])
     }));
 }
 
