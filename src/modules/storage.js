@@ -1099,6 +1099,21 @@ export function unlockAchievement(achievementId) {
   return true;
 }
 
+export function revokeAchievement(achievementId) {
+  if (typeof achievementId !== 'string' || !achievementId.trim() || !appState.unlockedAchievements.has(achievementId)) {
+    return false;
+  }
+
+  const oldValue = new Set(appState.unlockedAchievements);
+  appState.unlockedAchievements.delete(achievementId);
+  delete appState.achievementDates[achievementId];
+
+  emitStateChange('unlockedAchievements', oldValue, appState.unlockedAchievements, 'achievementrevoked', {
+    achievementId
+  });
+  return true;
+}
+
 export function getGameScores(gameKey) {
   if (typeof gameKey === 'string' && gameKey) {
     return appState.gameScores[gameKey] ?? null;
