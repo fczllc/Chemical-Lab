@@ -194,6 +194,12 @@
 
 /* 手机端 (767px 以下) */
 @media (max-width: 767px) {
+  .periodic-table-cat,
+  .timeline-cat,
+  .games-cat {
+    display: none;
+  }
+
   #games {
     padding: 12px;
     gap: 14px;
