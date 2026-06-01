@@ -121,6 +121,7 @@ const validGameMetaIds = new Set(expectedGameMetaIds);
 const validAchievementConditionTypes = new Set([
   'learnedElements',
   'completedExperiments',
+  'quizCorrectAnswers',
   'quizAttempts',
   'quizPerfectScore',
   'curriculumQuizComplete',
@@ -131,6 +132,7 @@ const validAchievementConditionTypes = new Set([
 const countBasedAchievementTypes = new Set([
   'learnedElements',
   'completedExperiments',
+  'quizCorrectAnswers',
   'quizAttempts',
   'gamePlays',
   'gameScore',

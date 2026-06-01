@@ -10,7 +10,7 @@
       "rarity": "common",
       "condition": {
         "type": "learnedElements",
-        "count": 1
+        "count": 24
       },
       "curriculumTags": [
         "intro-element-symbols"
@@ -21,13 +21,13 @@
       "id": "achievement-learning-apprentice",
       "category": "element",
       "title": "初级探索者",
-      "description": "累计学习 10 个元素，已经能认出许多常见元素。",
-      "unlockText": "学习 10 个元素",
+      "description": "累计学习 48 个元素，已经能认出许多常见元素。",
+      "unlockText": "学习 48 个元素",
       "icon": "compass",
       "rarity": "common",
       "condition": {
         "type": "learnedElements",
-        "count": 10
+        "count": 48
       },
       "curriculumTags": [
         "intro-element-symbols"
@@ -38,13 +38,30 @@
       "id": "achievement-element-collector",
       "category": "element",
       "title": "元素收集家",
-      "description": "累计学习 50 个元素，收藏墙开始变得丰富起来。",
-      "unlockText": "学习 50 个元素",
+      "description": "累计学习 72 个元素，收藏墙开始变得丰富起来。",
+      "unlockText": "学习 72 个元素",
       "icon": "folder-open",
       "rarity": "rare",
       "condition": {
         "type": "learnedElements",
-        "count": 50
+        "count": 72
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
+    },
+    {
+      "id": "achievement-element-expert",
+      "category": "element",
+      "title": "元素达人",
+      "description": "累计学习 96 个元素，对元素性质有了深入了解。",
+      "unlockText": "学习 96 个元素",
+      "icon": "star",
+      "rarity": "rare",
+      "condition": {
+        "type": "learnedElements",
+        "count": 96
       },
       "curriculumTags": [
         "intro-element-symbols"
@@ -54,7 +71,7 @@
     {
       "id": "achievement-element-master",
       "category": "element",
-      "title": "元素大师",
+      "title": "元素达人",
       "description": "学习全部 118 个元素，完成完整的周期表探索。",
       "unlockText": "学习全部 118 个元素",
       "icon": "crown",
@@ -157,29 +174,81 @@
       "id": "achievement-first-quiz",
       "category": "quiz",
       "title": "求知者",
-      "description": "完成第一次测验，开始用答题巩固自己的知识。",
-      "unlockText": "完成 1 次测验",
+      "description": "累计答对 1 道测验题，开始用答题巩固自己的知识。",
+      "unlockText": "累计答对 1 道测验题",
       "icon": "book-open",
       "rarity": "common",
       "condition": {
-        "type": "quizAttempts",
+        "type": "quizCorrectAnswers",
         "count": 1
       },
       "curriculumTags": [
         "intro-element-symbols"
       ],
       "difficulty": "入门"
+    },
+    {
+      "id": "achievement-quiz-star",
+      "category": "quiz",
+      "title": "答题小星星",
+      "description": "累计答对 5 道测验题，知识小星星在闪耀。",
+      "unlockText": "累计答对 5 道测验题",
+      "icon": "star",
+      "rarity": "common",
+      "condition": {
+        "type": "quizCorrectAnswers",
+        "count": 5
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-quiz-explorer",
+      "category": "quiz",
+      "title": "知识探险家",
+      "description": "累计答对 10 道测验题，探索知识的深度。",
+      "unlockText": "累计答对 10 道测验题",
+      "icon": "compass",
+      "rarity": "rare",
+      "condition": {
+        "type": "quizCorrectAnswers",
+        "count": 10
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
+    },
+    {
+      "id": "achievement-quiz-doctor",
+      "category": "quiz",
+      "title": "智慧小博士",
+      "description": "累计答对 15 道测验题，知识储备丰富。",
+      "unlockText": "累计答对 15 道测验题",
+      "icon": "graduation-cap",
+      "rarity": "rare",
+      "condition": {
+        "type": "quizCorrectAnswers",
+        "count": 15
+      },
+      "curriculumTags": [
+        "intro-element-symbols"
+      ],
+      "difficulty": "初中"
     },
     {
       "id": "achievement-perfect-quiz",
       "category": "quiz",
       "title": "满分学霸",
-      "description": "任意一次测验获得满分，知识掌握非常扎实。",
-      "unlockText": "任意一次测验获得满分",
+      "description": "累计答对 20 道测验题，知识掌握非常扎实。",
+      "unlockText": "累计答对 20 道测验题",
       "icon": "trophy",
       "rarity": "rare",
       "condition": {
-        "type": "quizPerfectScore"
+        "type": "quizCorrectAnswers",
+        "count": 20
       },
       "curriculumTags": [
         "intro-element-symbols"
@@ -187,61 +256,248 @@
       "difficulty": "初中"
     },
     {
-      "id": "achievement-first-game",
-      "category": "game",
-      "title": "游戏新手",
-      "description": "完成第一次学习游戏，用游戏巩固化学知识。",
-      "unlockText": "完成 1 次任意游戏",
+      "id": "achievement-drag-novice",
+      "category": "game-drag",
+      "title": "归位初试",
+      "description": "完成 1 次元素拖拽归位",
+      "unlockText": "完成 1 次元素拖拽归位",
       "icon": "gamepad-2",
       "rarity": "common",
       "condition": {
         "type": "gamePlays",
+        "gameKey": "game-drag",
         "count": 1
       },
-      "curriculumTags": [
-        "intro-element-symbols"
-      ],
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-drag-practiced",
+      "category": "game-drag",
+      "title": "归位熟练手",
+      "description": "完成 3 次元素拖拽归位",
+      "unlockText": "完成 3 次元素拖拽归位",
+      "icon": "gamepad-2",
+      "rarity": "common",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-drag",
+        "count": 3
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-drag-expert",
+      "category": "game-drag",
+      "title": "归位小高手",
+      "description": "完成 7 次元素拖拽归位",
+      "unlockText": "完成 7 次元素拖拽归位",
+      "icon": "gamepad-2",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-drag",
+        "count": 7
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-drag-adept",
+      "category": "game-drag",
+      "title": "归位达人",
+      "description": "完成 15 次元素拖拽归位",
+      "unlockText": "完成 15 次元素拖拽归位",
+      "icon": "gamepad-2",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-drag",
+        "count": 15
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-drag-master",
+      "category": "game-drag",
+      "title": "归位大师",
+      "description": "完成 30 次元素拖拽归位",
+      "unlockText": "完成 30 次元素拖拽归位",
+      "icon": "gamepad-2",
+      "rarity": "legendary",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-drag",
+        "count": 30
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-memory-novice",
+      "category": "game-memory",
+      "title": "翻牌初试",
+      "description": "完成 1 次元素记忆翻牌",
+      "unlockText": "完成 1 次元素记忆翻牌",
+      "icon": "brain",
+      "rarity": "common",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-memory",
+        "count": 1
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-memory-practiced",
+      "category": "game-memory",
+      "title": "翻牌熟练手",
+      "description": "完成 3 次元素记忆翻牌",
+      "unlockText": "完成 3 次元素记忆翻牌",
+      "icon": "brain",
+      "rarity": "common",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-memory",
+        "count": 3
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-memory-expert",
+      "category": "game-memory",
+      "title": "翻牌小高手",
+      "description": "完成 7 次元素记忆翻牌",
+      "unlockText": "完成 7 次元素记忆翻牌",
+      "icon": "brain",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-memory",
+        "count": 7
+      },
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-memory-adept",
+      "category": "game-memory",
+      "title": "翻牌达人",
+      "description": "完成 15 次元素记忆翻牌",
+      "unlockText": "完成 15 次元素记忆翻牌",
+      "icon": "brain",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-memory",
+        "count": 15
+      },
+      "curriculumTags": ["intro-element-symbols"],
       "difficulty": "入门"
     },
     {
       "id": "achievement-memory-master",
-      "category": "game",
-      "title": "记忆大师",
-      "description": "在元素记忆翻牌中拿到高分，说明你已经建立了牢固的元素记忆。",
-      "unlockText": "元素记忆翻牌最高分达到 120",
+      "category": "game-memory",
+      "title": "翻牌大师",
+      "description": "完成 30 次元素记忆翻牌",
+      "unlockText": "完成 30 次元素记忆翻牌",
       "icon": "brain",
-      "rarity": "rare",
+      "rarity": "legendary",
       "condition": {
-        "type": "gameScore",
+        "type": "gamePlays",
         "gameKey": "game-memory",
-        "count": 120
+        "count": 30
       },
-      "curriculumTags": [
-        "intro-element-symbols"
-      ],
-      "difficulty": "初中"
+      "curriculumTags": ["intro-element-symbols"],
+      "difficulty": "入门"
+    },
+    {
+      "id": "achievement-reaction-novice",
+      "category": "game-reaction",
+      "title": "配对初试",
+      "description": "完成 1 次反应配对",
+      "unlockText": "完成 1 次反应配对",
+      "icon": "zap",
+      "rarity": "common",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-reaction",
+        "count": 1
+      },
+      "curriculumTags": ["g10-redox-valence-change"],
+      "difficulty": "高中基础"
+    },
+    {
+      "id": "achievement-reaction-practiced",
+      "category": "game-reaction",
+      "title": "配对熟练手",
+      "description": "完成 3 次反应配对",
+      "unlockText": "完成 3 次反应配对",
+      "icon": "zap",
+      "rarity": "common",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-reaction",
+        "count": 3
+      },
+      "curriculumTags": ["g10-redox-valence-change"],
+      "difficulty": "高中基础"
     },
     {
       "id": "achievement-reaction-expert",
-      "category": "game",
-      "title": "反应专家",
-      "description": "在反应配对中稳定高分，已经能快速识别典型反应结果。",
-      "unlockText": "反应配对最高分达到 50",
+      "category": "game-reaction",
+      "title": "配对小高手",
+      "description": "完成 7 次反应配对",
+      "unlockText": "完成 7 次反应配对",
+      "icon": "zap",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-reaction",
+        "count": 7
+      },
+      "curriculumTags": ["g10-redox-valence-change"],
+      "difficulty": "高中基础"
+    },
+    {
+      "id": "achievement-reaction-adept",
+      "category": "game-reaction",
+      "title": "配对达人",
+      "description": "完成 15 次反应配对",
+      "unlockText": "完成 15 次反应配对",
+      "icon": "zap",
+      "rarity": "rare",
+      "condition": {
+        "type": "gamePlays",
+        "gameKey": "game-reaction",
+        "count": 15
+      },
+      "curriculumTags": ["g10-redox-valence-change"],
+      "difficulty": "高中基础"
+    },
+    {
+      "id": "achievement-reaction-master",
+      "category": "game-reaction",
+      "title": "配对大师",
+      "description": "完成 30 次反应配对",
+      "unlockText": "完成 30 次反应配对",
       "icon": "zap",
       "rarity": "legendary",
       "condition": {
-        "type": "gameScore",
+        "type": "gamePlays",
         "gameKey": "game-reaction",
-        "count": 50
+        "count": 30
       },
-      "curriculumTags": [
-        "g10-redox-valence-change"
-      ],
+      "curriculumTags": ["g10-redox-valence-change"],
       "difficulty": "高中基础"
     },
     {
       "id": "achievement-carbon-allotrope-comparison",
-      "category": "quiz",
+      "category": "learning",
       "title": "碳单质比较家",
       "description": "完成金刚石、石墨与 C60 的比较主题学习，能说出结构、性质与用途之间的联系。",
       "unlockText": "完成碳单质比较主题测验",
