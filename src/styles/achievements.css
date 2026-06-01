@@ -1040,10 +1040,97 @@ body:has(#progress.active) .detail-panel.docked {
   }
 }
 
+.achievement-textbook-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.achievement-textbook-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 5px;
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  height: 100%;
+  min-height: clamp(200px, calc((100vh - var(--shell-header-offset) - 260px) / 2), 320px);
+}
+
+
+.achievement-textbook-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.achievement-textbook-icon {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon-cyan);
+}
+
+.achievement-textbook-icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.achievement-textbook-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.achievement-textbook-count {
+  font-size: 1.4rem;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0;
+  border-radius: 0;
+}
+
+.achievement-textbook-count-completed {
+  color: #f8fbff;
+}
+
+.achievement-textbook-count-total {
+  color: var(--text-secondary);
+}
+
+.achievement-textbook-card-body {
+  align-self: start;
+  display: grid;
+  gap: 8px;
+}
+
+.achievement-textbook-card-body h4 {
+  margin: 0;
+  color: #f8fbff;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.achievement-textbook-card-body p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 /* Responsive: fewer columns on medium screens */
 @media (max-width: 1400px) {
   .achievement-category-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .achievement-textbook-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1051,16 +1138,28 @@ body:has(#progress.active) .detail-panel.docked {
   .achievement-category-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .achievement-textbook-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
   .achievement-category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .achievement-textbook-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 560px) {
   .achievement-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-textbook-grid {
     grid-template-columns: 1fr;
   }
 
