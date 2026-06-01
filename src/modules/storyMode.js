@@ -4,6 +4,7 @@ import { getSelectedElement, setSelectedElement } from './storage.js';
 import { restoreSelectedElementView } from './renderTable.js';
 import { getCurrentSection, navigateTo, rememberHomeSelection } from './router.js';
 import { electronConfigHTML } from './chemNotation.js';
+import storyCatImage from '../images/cat-8.png';
 
 const SAFE_COLOR_PATTERN = /^(#[0-9a-fA-F]{3,8}|rgba?\([\d\s.,%]+\)|hsla?\([\d\s.,%]+\)|[a-zA-Z-]+|var\(--[a-zA-Z0-9-]+\))$/;
 const LOCAL_STORY_MEDIA_PATTERN = /^\/assets\/elements\/(discovery|specimens)\/[\w.-]+\.webp(?:\?v=\d+)?$/;
@@ -90,6 +91,13 @@ function renderStoryShell() {
         </div>
       </div>
       <div class="story-hero">
+        <img
+          class="module-cat story-cat"
+          src="${escapeAttribute(storyCatImage)}"
+          alt=""
+          aria-hidden="true"
+          data-testid="floating-story-cat"
+        />
         <div class="story-orbital-badge">
           <span class="story-atomic-number">${escapeHTML(element.atomicNumber)}</span>
           <span class="story-symbol">${escapeHTML(element.symbol)}</span>
