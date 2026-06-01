@@ -13,6 +13,7 @@ import {
 } from './storage.js';
 import { formulaHTML, equationHTML, mixedProseFormulaHTML, plainChemText } from './chemNotation.js';
 import { createIcons, icons } from 'lucide';
+import labCatImage from '../images/cat-6.png';
 
 const EQUATION_MAP = {
   'reaction-hydrogen-combustion': '2H2 + O2 → 2H2O',
@@ -493,6 +494,7 @@ function ensureLabToolbar(section, selectedElement) {
     }
 
     toolbar.innerHTML = `
+      <img src="${labCatImage}" alt="" class="module-cat lab-cat" aria-hidden="true" data-testid="floating-lab-cat">
       <div class="lab-toolbar-top">
         <p class="hud-kicker">LAB ACCESS PANEL</p>
         <p class="lab-toolbar-meta lab-result-count">显示 ${labExperiments.length}/${labExperiments.length} 个实验</p>

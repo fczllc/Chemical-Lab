@@ -12,6 +12,16 @@ body:has(#lab.active) .detail-panel.docked {
   gap: 12px;
   padding: 16px 20px;
   margin-bottom: 18px;
+  position: relative;
+  overflow: visible;
+}
+
+.lab-cat {
+  position: absolute;
+  left: 160px;
+  top: -54px;
+  width: clamp(80px, 6.5vw, 100px);
+  z-index: 2;
 }
 
 .lab-toolbar-top {
