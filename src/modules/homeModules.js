@@ -530,10 +530,52 @@ function buildElementQuickStats() {
   ];
 }
 
+function getElementAchievements() {
+  const list = (achievementsData || [])
+    .filter((a) => a.category === 'element' && a.condition?.type === 'learnedElements')
+    .map((a) => ({
+      id: a.id,
+      threshold: Number(a.condition?.count || 0),
+      icon: a.icon || 'award',
+      title: a.title || '',
+      description: a.description || '',
+      unlockText: a.unlockText || ''
+    }))
+    .filter((a) => a.threshold > 0)
+    .sort((a, b) => a.threshold - b.threshold);
+
+  return list.length > 0 ? list : [
+    { id: 'fallback', threshold: 118, icon: 'crown', title: '元素达人', description: '学习全部元素，完成完整的周期表探索。', unlockText: '学习全部元素' }
+  ];
+}
+
+function getCurrentElementStage(learnedCount) {
+  const stages = getElementAchievements();
+  for (const stage of stages) {
+    if (learnedCount < stage.threshold) {
+      return stage;
+    }
+  }
+  return stages[stages.length - 1];
+}
+
+function renderStageIcon(icon) {
+  const known = new Set([
+    'book-open', 'flask-conical', 'clipboard-check', 'gamepad-2', 'chart-column', 'award',
+    'sparkles', 'compass', 'folder-open', 'crown', 'shield', 'microscope', 'trophy', 'brain', 'zap', 'gem',
+    'star', 'graduation-cap'
+  ]);
+  if (known.has(icon)) {
+    return `<i data-lucide="${icon}"></i>`;
+  }
+  return `<span class="stats-stage-emoji">${icon}</span>`;
+}
+
 function renderStatsPreview() {
   const learnedCount = getLearnedElements().size;
   const progressPercent = Math.round((learnedCount / TOTAL_ELEMENTS) * 100) || 0;
-  const currentStage = getCurrentLearningStage();
+  const elementStage = getCurrentElementStage(learnedCount);
+  const stageProgress = `${Math.min(learnedCount, elementStage.threshold)}/${elementStage.threshold}`;
 
   cardRefs.statsContent.innerHTML = `
     <div class="preview-card-shell preview-stats-shell">
@@ -548,9 +590,13 @@ function renderStatsPreview() {
         </div>
       </div>
       <div class="stats-stage-card">
-        <span class="stats-stage-label">当前阶段</span>
-        <strong>${currentStage.stage.name}</strong>
-        <span>${currentStage.completed}/${currentStage.total} 个关键元素已掌握</span>
+        <div class="stats-stage-info">
+          <span class="stats-stage-label">当前阶段</span>
+          <strong>${elementStage.title}</strong>
+          <p class="stats-stage-desc">${elementStage.description}</p>
+          <span class="stats-stage-progress">${stageProgress} · ${elementStage.unlockText}</span>
+        </div>
+        <div class="stats-stage-icon">${renderStageIcon(elementStage.icon)}</div>
       </div>
     </div>
   `;
