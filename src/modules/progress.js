@@ -18,6 +18,7 @@ import {
   getUnlockedAchievements,
   markLearningSegmentCompleted
 } from './storage.js';
+import learningCatImage from '../images/cat-9.png';
 
 const TOTAL_EXPERIMENTS = labExperiments.length;
 const TOTAL_ELEMENTS = 118;
@@ -950,9 +951,15 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
       <div class="progress-manual-learning-panel progress-detail-card">
         <div class="progress-panel-heading">
           <div>
-            <p class="hud-kicker">TEXTBOOK REVIEW</p>
-            <h4>教材复习确认</h4>
+            <h4 class="progress-manual-learning-title">教材复习</h4>
           </div>
+          <img
+            class="module-cat learning-cat"
+            src="${learningCatImage}"
+            alt=""
+            aria-hidden="true"
+            data-testid="floating-learning-cat"
+          />
         </div>
         <div class="progress-manual-segment-list">
           <div class="progress-learning-card is-empty" data-testid="learning-empty-fallback">
@@ -995,10 +1002,16 @@ function renderManualLearningSection(unlockedAchievements, completedLearningSegm
     <div class="progress-manual-learning-panel progress-detail-card">
       <div class="progress-panel-heading">
         <div>
-          <p class="hud-kicker">TEXTBOOK REVIEW</p>
-          <h4>教材复习确认</h4>
+          <h4 class="progress-manual-learning-title">教材复习</h4>
         </div>
         <span>${manualSegments.length} 个片段</span>
+        <img
+          class="module-cat learning-cat"
+          src="${learningCatImage}"
+          alt=""
+          aria-hidden="true"
+          data-testid="floating-learning-cat"
+        />
       </div>
       <div class="textbook-tab-bar progress-textbook-tabs">
         ${tabsHtml}
