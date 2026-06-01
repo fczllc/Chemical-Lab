@@ -1,4 +1,5 @@
 /** ===== 成就模块 ===== */
+import achievementCatImage from '../images/cat-7.png';
 import { achievementsData, labExperiments, quizData, textbookAssetManifest } from '../data/index.js';
 import {
   getAchievementDates,
@@ -66,7 +67,8 @@ const ACHIEVEMENT_RARITY_LABELS = {
 
 const LUCIDE_ICONS = new Set([
   'book-open', 'flask-conical', 'clipboard-check', 'gamepad-2', 'chart-column', 'award',
-  'sparkles', 'compass', 'folder-open', 'crown', 'shield', 'microscope', 'trophy', 'brain', 'zap', 'gem'
+  'sparkles', 'compass', 'folder-open', 'crown', 'shield', 'microscope', 'trophy', 'brain', 'zap', 'gem',
+  'star', 'graduation-cap'
 ]);
 
 const EXPERIMENT_ACHIEVEMENT_IDS = [
@@ -418,8 +420,13 @@ function renderCategorySection(category, achievements, unlockedIds, unlockDates)
 
   const unlockedCount = achievements.filter((achievement) => isAchievementUnlocked(achievement, unlockedIds)).length;
 
+  const catHtml = category === 'element'
+    ? `<img src="${achievementCatImage}" alt="" class="module-cat achievements-cat" aria-hidden="true" data-testid="floating-achievements-cat">`
+    : '';
+
   return `
     <section class="achievement-category-block hud-shell">
+      ${catHtml}
       <div class="achievement-category-header">
         <div>
           <p class="hud-kicker">${renderIcon(meta.icon)} ${meta.label}</p>
