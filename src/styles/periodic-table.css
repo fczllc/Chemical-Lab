@@ -194,6 +194,20 @@
   gap: 4px;
   width: 100%;
   max-width: 100%;
+  position: relative;
+}
+
+/* 浮动猫咪装饰图 - 周期表容器内的顶层浮动图，不干扰布局 */
+.periodic-table-cat {
+  position: absolute;
+  top: var(--cat-top, 28%);
+  left: var(--cat-left, 25%);
+  width: clamp(52px, 6.5vw, 110px);
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.95;
+  user-select: none;
+  display: block;
 }
 
 #periodic-grid {

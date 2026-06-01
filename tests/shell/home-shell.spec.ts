@@ -40,6 +40,15 @@ test.describe('Homepage Shell Contract', () => {
     await elementStatsCard.click();
     await expect.poll(async () => page.evaluate(() => window.location.hash)).toBe(initialHash);
 
+    // Floating periodic cat is present, decorative, and non-interactive
+    const cat = page.getByTestId('floating-periodic-cat');
+    await expect(cat).toBeVisible();
+    await expect(cat).toHaveAttribute('src', '/src/images/cat-8.png');
+    await expect(cat).toHaveAttribute('alt', '');
+    await expect(cat).toHaveAttribute('aria-hidden', 'true');
+    const catPointerEvents = await cat.evaluate((el) => window.getComputedStyle(el).pointerEvents);
+    expect(catPointerEvents).toBe('none');
+
     const listSizing = await elementStatsCard.locator('.element-stat-list').evaluate((element) => {
       const styles = window.getComputedStyle(element);
       return {
