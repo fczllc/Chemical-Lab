@@ -90,6 +90,9 @@ Verified application entry path:
 
 ## Source Boundaries
 - `src/data`: Canonical datasets consumed through `src/data/index.js`. Includes `elements.json`, `quizData.json`, `reactions.json`, `achievementsData.json`, `learningPath.json`, `labExperiments.json`, `spectralLines.json`, `curriculum.js`, `textbookAssets.js`, and `storyMedia/media.json`.
+  - **CRITICAL**: `src/data/achievementsData.json` is the runtime source for achievements. 
+  - **POLICY**: Forbid whole-file restore/overwrite. All updates must use block-scoped patching.
+  - **GUARD**: Use `node scripts/guard-achievements-data-scope.mjs --allow <categories>` before any commit or merge to ensure category integrity.
 - `src/modules`: Router, table renderer, detail panel, filters, search, compare, timeline, quiz, games, achievements, progress, story mode, lab, storage, home modules, chem notation, and game feedback overlay.
 - `src/three`: Three.js rendering — `scene.js`, `particles.js`, `electronModel.js`, `elementEnergy.js`.
 - `src/styles`: Component-specific CSS — base, layout, periodic-table, panel, games, lab, achievements, chem notation, responsive.
