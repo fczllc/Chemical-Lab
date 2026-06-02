@@ -35,7 +35,7 @@
     "validate:lab-boundary": "node scripts/validate-lab-data-boundary.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.60.0",
     "sharp": "^0.34.5",
     "vite": "^6.0.0"
   },
