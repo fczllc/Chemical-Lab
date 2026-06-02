@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy:local": "node scripts/deploy-local.mjs",
     "validate:elements": "node scripts/validate-elements.mjs",
     "validate:supporting": "node scripts/validate-supporting-data.mjs",
     "validate:spectral": "node scripts/validate-spectral-lines.mjs",

@@ -1,0 +1,8 @@
+name = "element-explorer-kids"
+compatibility_date = "2026-06-02"
+
+[site]
+bucket = "dist"
+
+[build]
+command = "npm run build"
