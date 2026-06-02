@@ -6,8 +6,8 @@
   <title>元素探索者 - Element Explorer</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preload" as="fetch" href="/animations/d4980_cat360.json" type="application/json" crossorigin>
-  <script type="module" crossorigin src="/assets/index-BnIWSiL2.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-upuDC_7C.css">
+  <script type="module" crossorigin src="/assets/index-CEtkSnlk.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Ck8YPjeJ.css">
 </head>
 <body>
   <!-- Three.js 背景画布 -->
@@ -22,7 +22,7 @@
     <nav class="main-nav">
       <button class="nav-btn active" data-section="periodic-table" data-testid="nav-home">
         <span class="nav-icon"><i data-lucide="layout-grid"></i></span>
-        <span>周期表</span>
+        <span>元素</span>
       </button>
       <button class="nav-btn" data-section="timeline" data-testid="nav-timeline">
         <span class="nav-icon"><i data-lucide="arrow-up-down"></i></span>
@@ -38,7 +38,7 @@
       </button>
       <button class="nav-btn" data-section="lab" data-testid="nav-lab">
         <span class="nav-icon"><i data-lucide="flask-conical"></i></span>
-        <span>实验室</span>
+        <span>实验</span>
       </button>
       <button class="nav-btn" data-section="achievements" data-testid="nav-achievements">
         <span class="nav-icon"><i data-lucide="trophy"></i></span>
@@ -94,6 +94,15 @@
           </div>
 
           <div class="periodic-table-wrapper">
+            <!-- 周期表容器内的顶层浮动图 -->
+            <img
+              class="periodic-table-cat"
+              src="/assets/cat-8-C-8TEJp6.png"
+              alt=""
+              aria-hidden="true"
+              data-testid="floating-periodic-cat"
+            />
+
             <div id="periodic-grid" class="periodic-grid"></div>
             <div class="lanthanide-actinide-labels">
               <div class="la-label">
@@ -127,9 +136,12 @@
 
         <!-- 游戏中心 -->
         <section id="games" class="page-section">
-          <div class="games-hero hud-shell">
-            <p class="hud-kicker">SCIENCE ARCADE</p>
-            <h2>游戏任务板</h2>
+          <div class="games-hero-wrap">
+            <img class="module-cat games-cat" src="/assets/cat-1-Q-GUcR1n.png" alt="" aria-hidden="true" data-testid="floating-games-cat" />
+            <div class="games-hero hud-shell">
+              <p class="hud-kicker">SCIENCE ARCADE</p>
+              <h2>游戏任务板</h2>
+            </div>
           </div>
           <div class="games-grid games-primary-grid" data-testid="games-primary-grid">
             <div class="game-card" data-game="drag">
@@ -369,6 +381,8 @@
       <div id="quiz-content"></div>
     </div>
   </div>
+
+
 
   <!-- 成就弹窗 -->
   <div id="achievement-popup" class="achievement-popup">

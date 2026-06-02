@@ -263,7 +263,7 @@ input:focus, select:focus {
 .loader-lottie {
   width: 90px;
   height: 90px;
-  border-radius: 15px;
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
